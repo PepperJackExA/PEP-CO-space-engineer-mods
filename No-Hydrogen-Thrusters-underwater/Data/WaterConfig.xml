@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<WaterConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BlockConfigs>
+	
+    <BlockConfig TypeId="Thrust" SubtypeId="LargeBlockLargeHydrogenThrust" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="Thrust" SubtypeId="LargeBlockSmallHydrogenThrust" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+	
+    <BlockConfig TypeId="Thrust" SubtypeId="SmallBlockLargeHydrogenThrust" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="Thrust" SubtypeId="SmallBlockSmallHydrogenThrust" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+	
+    <BlockConfig TypeId="Thrust" SubtypeId="LargeBlockLargeHydrogenThrustIndustrial" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="Thrust" SubtypeId="LargeBlockSmallHydrogenThrustIndustrial" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+		
+    <BlockConfig TypeId="Thrust" SubtypeId="SmallBlockLargeHydrogenThrustIndustrial" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="Thrust" SubtypeId="SmallBlockSmallHydrogenThrustIndustrial" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+
+    <BlockConfig TypeId="Thrust" SubtypeId="LargeBlockLargeRocketThrust" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="Thrust" SubtypeId="LargeBlockSmallRocketThrust" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    
+    <BlockConfig TypeId="Thrust" SubtypeId="SmallBlockLargeRocketThrust" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="Thrust" SubtypeId="SmallBlockSmallRocketThrust" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+	
+  </BlockConfigs>
+</WaterConfig>

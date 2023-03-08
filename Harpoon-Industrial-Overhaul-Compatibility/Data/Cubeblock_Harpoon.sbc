@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>HarpoonSmall</SubtypeId>
+			</Id>
+			<DisplayName>Harpoon Small</DisplayName>
+			<Description>Harpoon for towing, lifting, capturing, and other things.</Description>
+			<Icon>..\2104723957\Textures\Icons\harpoonIcon.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="5" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>..\2104723957\Models\Cubes\HarpoonSmall.mwm</Model>
+      		<Components>
+        		<Component Subtype="SteelPlate" Count="6" />
+        		<Component Subtype="Construction" Count="15" />
+        		<Component Subtype="SmallTube" Count="1" />
+        		<Component Subtype="CopperWire" Count="5" />
+				<Component Subtype="Motor" Count="2" />
+        		<Component Subtype="SteelPlate" Count="4" />
+      		</Components>
+      		<CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.18" StartY="0.0" EndX="0.82" EndY="1"/>
+				<MountPoint Side="Top" StartX="0.04" StartY="0.9" EndX="0.96" EndY="1.83"/>
+				<MountPoint Side="Bottom" StartX="0.04" StartY="1.72" EndX="0.96" EndY="3.28"/>
+			</MountPoints>
+			<BuildProgressModels>
+                <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\GatlingGunConstruction_1.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\GatlingGunConstruction_2.mwm" />
+            </BuildProgressModels>
+			<BlockPairName>Harpoon</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>6</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>10</PCU>
+			<IsAirTight>false</IsAirTight>
+			<TargetingGroups>
+                <string>Weapons</string>
+            </TargetingGroups>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>HarpoonLarge</SubtypeId>
+			</Id>
+			<DisplayName>Harpoon Large</DisplayName>
+			<Description>Harpoon for towing, lifting, capturing, and other things.</Description>
+			<Icon>..\2104723957\Textures\Icons\harpoonIcon.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>..\2104723957\Models\Cubes\Harpoon.mwm</Model>
+      		<Components>
+        		<Component Subtype="SteelPlate" Count="16" />
+        		<Component Subtype="Construction" Count="15" />
+        		<Component Subtype="SmallTube" Count="1" />
+        		<Component Subtype="CopperWire" Count="5" />
+				<Component Subtype="Motor" Count="2" />
+        		<Component Subtype="SteelPlate" Count="10" />
+      		</Components>
+      		<CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+				<MountPoint Side="Back" StartX="0.4" StartY="0.4" EndX="0.6" EndY="0.6" />
+			</MountPoints>
+			<BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\InteriorTurretConstruction_1.mwm" />
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\InteriorTurretConstruction_2.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\InteriorTurretConstruction_3.mwm" />
+            </BuildProgressModels>
+			<BlockPairName>Harpoon</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>10</PCU>
+			<IsAirTight>false</IsAirTight>
+			<TargetingGroups>
+                <string>Weapons</string>
+            </TargetingGroups>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
