@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Foam</SubtypeId>
+      </Id>
+      <DisplayName>Buoyancy Foam</DisplayName>
+      <Icon>..\2472488194\Icons\Foam.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Plastic" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="Foam" />
+      <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+      <Public>false</Public>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>BuoyancyTube</SubtypeId>
+      </Id>
+      <DisplayName>Buoyancy Tube</DisplayName>
+      <Icon>..\2472488194\Icons\BuoyancyTube.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LargeTube" />
+        <Item Amount="1" TypeId="Component" SubtypeId="SteelPlate" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="BuoyancyTube" />
+      <BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+      <Public>false</Public>
+    </Blueprint>
+  </Blueprints>
+</Definitions>

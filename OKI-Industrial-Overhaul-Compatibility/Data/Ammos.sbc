@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Ammos>
+
+<!-- =========================OKI weapons=========================== -->
+
+
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+     <Id>
+      <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>OKIObserverAMMO</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>2500</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>5000</MaxTrajectory>
+        <BackkickForce>0</BackkickForce>
+        <PhysicalMaterial>GunBullet</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileHitImpulse>0</ProjectileHitImpulse>
+        <ProjectileMassDamage>0</ProjectileMassDamage>
+        <ProjectileHealthDamage>0</ProjectileHealthDamage>
+	<ProjectileTrailScale>1</ProjectileTrailScale>
+	<ProjectileTrailColor x="1" y="0" z="0" />
+	<ProjectileTrailProbability>1.0</ProjectileTrailProbability>
+      </ProjectileProperties>
+    </Ammo>
+
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>OKI23mmAmmoPars</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>800</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>1200</MaxTrajectory>
+        <BackkickForce>165</BackkickForce>
+        <PhysicalMaterial>GunBullet</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileHitImpulse>16</ProjectileHitImpulse>
+        <ProjectileMassDamage>75</ProjectileMassDamage>
+        <ProjectileHealthDamage>66</ProjectileHealthDamage>
+	<ProjectileTrailScale>0.5</ProjectileTrailScale>
+	<ProjectileTrailColor x="1" y="0.2" z="0.1" />
+	<ProjectileTrailProbability>1</ProjectileTrailProbability>        
+	<HeadShot>true</HeadShot>
+      </ProjectileProperties>
+    </Ammo>
+
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>OKI50mmAmmoPars</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>750</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>1500</MaxTrajectory>
+        <BackkickForce>780</BackkickForce>
+        <PhysicalMaterial>GunBullet</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileHitImpulse>78</ProjectileHitImpulse>
+        <ProjectileMassDamage>350</ProjectileMassDamage>
+        <ProjectileHealthDamage>350</ProjectileHealthDamage>
+	<ProjectileTrailScale>0.7</ProjectileTrailScale>
+	<ProjectileTrailColor x="0.8" y="0.5" z="0.1" />
+	<ProjectileTrailProbability>1</ProjectileTrailProbability>
+      </ProjectileProperties>
+    </Ammo>
+
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>OKI76mmAmmoPars</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>600</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>1800</MaxTrajectory>
+        <BackkickForce>0</BackkickForce>
+        <!--PhysicalMaterial>50mmShell_Mat</PhysicalMaterial-->
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileHitImpulse>0</ProjectileHitImpulse>
+        <ProjectileMassDamage>0</ProjectileMassDamage>
+        <ProjectileHealthDamage>0</ProjectileHealthDamage>
+	<ProjectileTrailScale>1.0</ProjectileTrailScale>
+	<ProjectileTrailColor x="1" y="0.75" z="0.25" />
+	<ProjectileTrailProbability>1</ProjectileTrailProbability>
+      </ProjectileProperties>
+    </Ammo>
+
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>OKI230mmAmmoPars</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>800</DesiredSpeed>
+        <SpeedVariance>0.1</SpeedVariance>
+        <MaxTrajectory>2400</MaxTrajectory>
+        <BackkickForce>0</BackkickForce>
+	<PhysicalMaterial>50mmShell_Mat</PhysicalMaterial>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileHitImpulse>0</ProjectileHitImpulse>
+        <ProjectileMassDamage>0</ProjectileMassDamage>
+        <ProjectileHealthDamage>0</ProjectileHealthDamage>
+	<ProjectileTrailScale>1.5</ProjectileTrailScale>
+	<ProjectileTrailColor x="1" y="0.5" z="0.0" />
+	<ProjectileTrailProbability>1.0</ProjectileTrailProbability>
+      </ProjectileProperties>  
+    </Ammo>
+
+    <Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>OKI180mmHVXammo</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>1280</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>3200</MaxTrajectory> <!--Default server sync range is 3 km. Projectiles stop being visible beyond this range...-->
+        <BackkickForce>0</BackkickForce> <!--I wanted beefier kick-->
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileHitImpulse>0</ProjectileHitImpulse>
+        <ProjectileMassDamage>0</ProjectileMassDamage> <!--Set this to zero. To set penetration damage, use the configuration file in AppData\Roaming\SpaceEngineers\Storage\1431583896.sbm_Railgun\RailgunConfig.sbc-->
+        <ProjectileHealthDamage>0</ProjectileHealthDamage>
+        <ProjectileTrailScale>0.1</ProjectileTrailScale>
+        <ProjectileTrailColor x="1.88" y="1.5" z="2.55" />
+        <ProjectileTrailProbability>1.0</ProjectileTrailProbability>
+      </ProjectileProperties>
+    </Ammo>
+
+    <Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>OKI75mmHVPammo</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>1600</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>3200</MaxTrajectory> <!--Default server sync range is 3 km. Projectiles stop being visible beyond this range...-->
+        <BackkickForce>0</BackkickForce> <!--I wanted beefier kick-->
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileHitImpulse>0</ProjectileHitImpulse>
+        <ProjectileMassDamage>0</ProjectileMassDamage> <!--Set this to zero. To set penetration damage, use the configuration file in AppData\Roaming\SpaceEngineers\Storage\1431583896.sbm_Railgun\RailgunConfig.sbc-->
+        <ProjectileHealthDamage>0</ProjectileHealthDamage>
+        <ProjectileTrailScale>0.1</ProjectileTrailScale>
+        <ProjectileTrailColor x="0.0" y="1.88" z="2.55" />
+        <ProjectileTrailProbability>1.0</ProjectileTrailProbability>
+      </ProjectileProperties>
+    </Ammo>
+
+    <Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>OKI60mmHVPammo</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>1200</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>3200</MaxTrajectory> <!--Default server sync range is 3 km. Projectiles stop being visible beyond this range...-->
+        <BackkickForce>0</BackkickForce>
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileHitImpulse>0</ProjectileHitImpulse>
+        <ProjectileMassDamage>0</ProjectileMassDamage> <!--Set this to zero. To set penetration damage, use the configuration file in AppData\Roaming\SpaceEngineers\Storage\1431583896.sbm_Railgun\RailgunConfig.sbc-->
+        <ProjectileHealthDamage>0</ProjectileHealthDamage>
+        <ProjectileTrailScale>0.1</ProjectileTrailScale>
+        <ProjectileTrailColor x="0.0" y="1.88" z="2.55" />
+        <ProjectileTrailProbability>1.0</ProjectileTrailProbability>
+      </ProjectileProperties>
+    </Ammo>
+	
+	<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+      <Id>
+        <TypeId>AmmoDefinition</TypeId>
+        <SubtypeId>OKI203mmRocket</SubtypeId>
+      </Id>
+      <BasicProperties>
+        <DesiredSpeed>480</DesiredSpeed>
+        <SpeedVariance>0</SpeedVariance>
+        <MaxTrajectory>1200</MaxTrajectory>
+        <BackkickForce>0</BackkickForce>
+        <!--PhysicalMaterial>50mmShell_Mat</PhysicalMaterial-->
+      </BasicProperties>
+      <ProjectileProperties>
+        <ProjectileHitImpulse>0</ProjectileHitImpulse>
+        <ProjectileMassDamage>0</ProjectileMassDamage>
+        <ProjectileHealthDamage>0</ProjectileHealthDamage>
+	<ProjectileTrailScale>1.0</ProjectileTrailScale>
+	<ProjectileTrailColor x="1" y="0.75" z="0.25" />
+	<ProjectileTrailProbability>1</ProjectileTrailProbability>
+      </ProjectileProperties>
+    </Ammo>
+
+  </Ammos>
+</Definitions>

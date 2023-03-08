@@ -1,0 +1,1805 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+<!-- ==================================utility blocks=============================================== -->
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKIObserverSM</SubtypeId>
+      </Id>
+      <DisplayName>OKI Designator Unit</DisplayName>
+      <Icon>..\2374200567\icons\OKIObserverSM.dds</Icon>
+      <Description>An observation/designation turret with 2500m range for locating nearby grids and providing guidance for scripted weapons/turrets.  Requires OKI Designator Charges, deals no damage.</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <Model>..\2374200567\Models\Cubes\Small\Designator\Designator_Base.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="10" />
+        <Component Subtype="Construction" Count="20" />
+        <Component Subtype="CopperWire" Count="10" />
+        <Component Subtype="MetalGrid" Count="5" />
+        <Component Subtype="SmallTube" Count="1" />
+        <Component Subtype="Motor" Count="12" />
+        <Component Subtype="Detector" Count="10" />
+        <Component Subtype="Computer" Count="2" />
+        <Component Subtype="AdvancedComputer" Count="3" />
+        <Component Subtype="ArmoredPlate" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="..\2374200567\Models\Cubes\Small\Designator\Designator_Base_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Small\Designator\Designator_Base_BS2.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKIDesignator</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>10</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKIObserverWEP" />
+      <InventoryMaxVolume>0.001</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-30</MinElevationDegrees>
+      <MaxElevationDegrees>90</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.0033</RotationSpeed>
+      <ElevationSpeed>0.0033</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>2500</MaxRangeMeters>
+      <MinFov>0.1</MinFov>
+      <MaxFov>2</MaxFov>
+      <DeformationRatio>0.4</DeformationRatio>
+	  <GeneralDamageMultiplier>0.5</GeneralDamageMultiplier>
+      <PCU>25</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+    </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKIDesignator</SubtypeId>
+      </Id>
+      <DisplayName>OKI Large Designator Unit</DisplayName>
+      <Icon>..\2374200567\icons\OKIDesignator.dds</Icon>
+      <Description>An observation/designation turret with 5000m range for locating nearby grids and providing guidance for scripted weapons/turrets.  Requires OKI Designator Charges, deals no damage.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <Model>..\2374200567\Models\Cubes\Large\Designator\LG_Designator_Base.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="20" />
+        <Component Subtype="Construction" Count="55" />
+        <Component Subtype="CopperWire" Count="24" />
+        <Component Subtype="MetalGrid" Count="12" />
+        <Component Subtype="SmallTube" Count="5" />
+        <Component Subtype="Motor" Count="12" />
+        <Component Subtype="Detector" Count="15" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="AdvancedComputer" Count="12" />
+        <Component Subtype="ArmoredPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.50" File="..\2374200567\Models\Cubes\Large\Designator\LG_Designator_Base_BS1.mwm"/>
+		<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\Designator\LG_Designator_Base_BS2.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKIDesignator</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>10</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKIObserverWEP" />
+      <InventoryMaxVolume>0.01</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-30</MinElevationDegrees>
+      <MaxElevationDegrees>90</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.0033</RotationSpeed>
+      <ElevationSpeed>0.0033</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>5000</MaxRangeMeters>
+      <MinFov>0.1</MinFov>
+      <MaxFov>2</MaxFov>
+      <DeformationRatio>0.4</DeformationRatio>
+	  <GeneralDamageMultiplier>0.5</GeneralDamageMultiplier>
+      <PCU>50</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+
+
+
+
+<!-- ==================================small grid fixed weapons===================================== -->
+
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+      <Id>
+        <TypeId>SmallGatlingGun</TypeId>
+        <SubtypeId>OKI23mmDGfixed</SubtypeId>
+	</Id>
+      <DisplayName>OKI 14.5mm Fixed Machineguns</DisplayName>
+      <Icon>..\2374200567\icons\OKI14mmMG_Fixed.dds</Icon>
+      <Description>Twin heavy machineguns in a fixed mount, excels at engaging light fighters, rockets, meteors, and biologicals.  Requires 14.5mm Ammo Drums.</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="5" />
+		<Model>..\2374200567\Models\Cubes\Small\14mmFixed\14mmSGFixed.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="5" />
+        <Component Subtype="Construction" Count="1" />
+        <Component Subtype="CopperWire" Count="10" />
+		    <Component Subtype="MetalGrid" Count="2" />
+        <Component Subtype="SmallTube" Count="4" />
+        <Component Subtype="Motor" Count="1" />
+        <Component Subtype="Computer" Count="1" />
+        <Component Subtype="ArmoredPlate" Count="5" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="4" EndX="1" EndY="5" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Left" StartX="4" StartY="0" EndX="5" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.50" File="..\2374200567\Models\Cubes\Small\14mmFixed\14mmSGFixed_BS1.mwm"/>
+		<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Small\14mmFixed\14mmSGFixed_BS2.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI14mmSGFixed</BlockPairName>
+      <Center x="0" y="0" z="4" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>14</BuildTimeSeconds>
+      <EdgeType>Light</EdgeType>
+      <WeaponDefinitionId Subtype="OKI23mmFG" />
+      <InventoryMaxVolume>0.160</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.5</GeneralDamageMultiplier>
+      <DamageEffectId>213</DamageEffectId>
+      <PCU>75</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+      <Id>
+        <TypeId>SmallGatlingGun</TypeId>
+        <SubtypeId>OKI50mmSGfixed</SubtypeId>
+	</Id>
+      <DisplayName>OKI 50mm Fixed Burstcannon</DisplayName>
+      <Icon>..\2374200567\icons\OKI50mmSG_Fixed.dds</Icon>
+      <Description>Medium-caliber autocannon in a fixed mount, excels at engaging heavy fighters and light warships.  Requires 50mm Precision Shells.</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="2" z="7" />
+		<Model>..\2374200567\Models\Cubes\Small\50mmFixed\50mmFixedSmall.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="5" />
+        <Component Subtype="Construction" Count="2" />
+        <Component Subtype="CopperWire" Count="14" />
+		    <Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="SmallTube" Count="10" />
+        <Component Subtype="Motor" Count="2" />
+        <Component Subtype="Computer" Count="2" />
+        <Component Subtype="AdvancedComputer" Count="1" />
+        <Component Subtype="ArmoredPlate" Count="5" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="1" EndX="1" EndY="2" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="2" />
+        <MountPoint Side="Right" StartX="0" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Left" StartX="5" StartY="1" EndX="7" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.50" File="..\2374200567\Models\Cubes\Small\50mmFixed\50mmFixedSmall_BS1.mwm"/>
+		<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Small\50mmFixed\50mmFixedSmall_BS2.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI50mmSGFixed</BlockPairName>
+      <Center x="0" y="1" z="6" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>18</BuildTimeSeconds>
+      <EdgeType>Light</EdgeType>
+      <WeaponDefinitionId Subtype="OKI50mmSGFIXED" />
+      <InventoryMaxVolume>0.240</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.5</GeneralDamageMultiplier>
+      <PCU>75</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+      <Id>
+        <TypeId>SmallMissileLauncherReload</TypeId>
+        <SubtypeId>OKI122mmAGfixed</SubtypeId>
+	</Id>
+      <DisplayName>OKI 122mm Fixed Assault Cannon</DisplayName>
+      <Icon>..\2374200567\icons\OKI122mmASG_fixed.dds</Icon>
+      <Description>Dual-purpose cannon in a fixed mount.  Useful against all targets, but will struggle with accuracy and against heavier armor.  Requires 122mm Assault Shells.</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="3" z="11" />
+		<Model>..\2374200567\Models\Cubes\Small\122mmFixed\122mmFixed.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="15" />
+        <Component Subtype="Construction" Count="6" />
+        <Component Subtype="CopperWire" Count="24" />
+		    <Component Subtype="MetalGrid" Count="12" />
+        <Component Subtype="LargeTube" Count="10" />
+        <Component Subtype="Motor" Count="6" />
+        <Component Subtype="Detector" Count="2" />
+        <Component Subtype="Computer" Count="2" />
+        <Component Subtype="AdvancedComputer" Count="3" />
+        <Component Subtype="ArmoredPlate" Count="15" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Top" StartX="0" StartY="2" EndX="3" EndY="6" />
+        <MountPoint Side="Right" StartX="2" StartY="0" EndX="6" EndY="3" />
+        <MountPoint Side="Left" StartX="5" StartY="0" EndX="9" EndY="3" />
+        <MountPoint Side="Bottom" StartX="0" StartY="6" EndX="3" EndY="9" />
+      </MountPoints>
+      <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.50" File="..\2374200567\Models\Cubes\Small\122mmFixed\122mmFixed_BS1.mwm"/>
+		<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Small\122mmFixed\122mmFixed_BS2.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI122mmSGFixed</BlockPairName>
+      <Center x="0" y="1" z="8" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+      <EdgeType>Light</EdgeType>
+      <WeaponDefinitionId Subtype="OKI76mmASG" />
+      <InventoryMaxVolume>0.300</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <DeformationRatio>0.4</DeformationRatio>
+	  <GeneralDamageMultiplier>0.5</GeneralDamageMultiplier>
+      <PCU>125</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+
+<!-- =====================================small grid turrets============================================ -->
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI23mmSG</SubtypeId>
+      </Id>
+      <DisplayName>OKI 14.5mm Machinegun Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKI14mmMG_Turret.dds</Icon>
+      <Description>Twin heavy machineguns in a light turret, excels at engaging light fighters, rockets, meteors, and biologicals.  Requires 14.5mm Ammo Drums.</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="3" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>..\2374200567\Models\Cubes\Small\14mmTurret\14mmTurretSmall.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="20" />
+        <Component Subtype="Construction" Count="40" />
+        <Component Subtype="CopperWire" Count="12" />
+        <Component Subtype="MetalGrid" Count="6" />
+        <Component Subtype="SmallTube" Count="4" />
+        <Component Subtype="Motor" Count="4" />
+        <Component Subtype="Detector" Count="20" />
+        <Component Subtype="Computer" Count="2" />
+        <Component Subtype="AdvancedComputer" Count="3" />
+        <Component Subtype="ArmoredPlate" Count="25" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="4" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Small\14mmTurret\14mmTurretSmall_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Small\14mmTurret\14mmTurretSmall_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Small\14mmTurret\14mmTurretSmall_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI14mmLight</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI23mmSG" />
+      <InventoryMaxVolume>0.160</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-10</MinElevationDegrees>
+      <MaxElevationDegrees>90</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.002</RotationSpeed>
+      <ElevationSpeed>0.002</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1200</MaxRangeMeters>
+      <MinFov>0.1</MinFov>
+      <MaxFov>2</MaxFov>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.9</GeneralDamageMultiplier>
+      <PCU>125</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI50mmSG</SubtypeId>
+      </Id>
+      <DisplayName>OKI 50mm Burstcannon Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKI50mmSG_Turret.dds</Icon>
+      <Description>Medium-caliber autocannon in a light turret, excels at engaging heavy fighters and light warships.  Requires 50mm Precision Shells.</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="3" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>..\2374200567\Models\Cubes\Small\50mmTurret\50mmTurretSmall.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="20" />
+        <Component Subtype="Construction" Count="40" />
+        <Component Subtype="CopperWire" Count="12" />
+        <Component Subtype="MetalGrid" Count="6" />
+        <Component Subtype="SmallTube" Count="10" />
+        <Component Subtype="Motor" Count="4" />
+        <Component Subtype="Detector" Count="20" />
+        <Component Subtype="Computer" Count="2" />
+        <Component Subtype="AdvancedComputer" Count="3" />
+        <Component Subtype="ArmoredPlate" Count="25" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="4" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+		<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Small\50mmTurret\50mmTurretSmall_BS1.mwm"/>
+		<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Small\50mmTurret\50mmTurretSmall_BS2.mwm"/>
+		<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Small\50mmTurret\50mmTurretSmall_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI50mmLight</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI50mmSG" />
+      <InventoryMaxVolume>0.240</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-10</MinElevationDegrees>
+      <MaxElevationDegrees>90</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.002</RotationSpeed>
+      <ElevationSpeed>0.002</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1500</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.9</GeneralDamageMultiplier>
+      <PCU>125</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+
+<!-- ==================================small grid vehicle turrets======================================== -->
+
+
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI14mmVT</SubtypeId>
+      </Id>
+      <DisplayName>OKI Vehicle 14.5mm CIWS</DisplayName>
+      <Icon>..\2374200567\icons\OKI14mm_VehicleTurret.dds</Icon>
+      <Description>Rotary heavy machinegun in a heavy vehicle turret, excels at engaging light fighters, rockets, meteors, and biologicals.  Requires 14.5mm Ammo Drums.</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Small\Vehicle14mm\14mmBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="50" />
+        <Component Subtype="Construction" Count="104" />
+        <Component Subtype="CopperWire" Count="20" />
+        <Component Subtype="MetalGrid" Count="12" />
+        <Component Subtype="SmallTube" Count="24" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Detector" Count="40" />
+        <Component Subtype="Computer" Count="3" />
+        <Component Subtype="AdvancedComputer" Count="4" />
+        <Component Subtype="ArmoredPlate" Count="75" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="5" EndY="3" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Small\Vehicle14mm\14mmBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Small\Vehicle14mm\14mmBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Small\Vehicle14mm\14mmBase_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI14mmVT</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI23mmVT" />
+      <InventoryMaxVolume>0.720</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-15</MinElevationDegrees>
+      <MaxElevationDegrees>75</MaxElevationDegrees>
+      <MinAzimuthDegrees>-120</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>120</MaxAzimuthDegrees>
+      <RotationSpeed>0.0016</RotationSpeed>
+      <ElevationSpeed>0.0016</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1200</MaxRangeMeters>
+      <MinFov>0.1</MinFov>
+      <MaxFov>2</MaxFov>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>250</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI50mmVT</SubtypeId>
+      </Id>
+      <DisplayName>OKI Vehicle 50mm Burstcannon</DisplayName>
+      <Icon>..\2374200567\icons\OKI50mm_VehicleTurret.dds</Icon>
+      <Description>Medium-caliber autocannon with an advanced autoloader in a heavy vehicle turret, excels at engaging heavy fighters and light warships.  Requires 50mm Precision Shells.</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Small\Vehicle50mm\50mmBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="50" />
+        <Component Subtype="Construction" Count="104" />
+        <Component Subtype="CopperWire" Count="20" />
+        <Component Subtype="MetalGrid" Count="12" />
+        <Component Subtype="SmallTube" Count="10" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Detector" Count="40" />
+        <Component Subtype="Computer" Count="3" />
+        <Component Subtype="AdvancedComputer" Count="4" />
+        <Component Subtype="ArmoredPlate" Count="75" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="5" EndY="3" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Small\Vehicle50mm\50mmBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Small\Vehicle50mm\50mmBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Small\Vehicle50mm\50mmBase_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI50mmVT</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>25</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI50mmVT" />
+      <InventoryMaxVolume>0.720</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-15</MinElevationDegrees>
+      <MaxElevationDegrees>60</MaxElevationDegrees>
+      <MinAzimuthDegrees>-120</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>120</MaxAzimuthDegrees>
+      <RotationSpeed>0.0014</RotationSpeed>
+      <ElevationSpeed>0.0014</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1500</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>250</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI122mmVT</SubtypeId>
+      </Id>
+      <DisplayName>OKI Vehicle 122mm Assault Gun</DisplayName>
+      <Icon>..\2374200567\icons\OKI122mm_VehicleTurret.dds</Icon>
+      <Description>Dual-purpose cannon in a heavy vehicle turret.  Useful against all targets, but will struggle with accuracy and against heavier armor.  Requires 122mm Assault Shells.</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Small\Vehicle122mm\122mmBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="50" />
+        <Component Subtype="Construction" Count="104" />
+        <Component Subtype="CopperWire" Count="20" />
+        <Component Subtype="MetalGrid" Count="12" />
+        <Component Subtype="SmallTube" Count="12" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Detector" Count="40" />
+        <Component Subtype="Computer" Count="3" />
+        <Component Subtype="AdvancedComputer" Count="4" />
+        <Component Subtype="ArmoredPlate" Count="75" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="5" EndY="3" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Small\Vehicle122mm\122mmBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Small\Vehicle122mm\122mmBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Small\Vehicle122mm\122mmBase_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI122mmVT</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>25</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI76mmASG" />
+      <InventoryMaxVolume>0.720</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-15</MinElevationDegrees>
+      <MaxElevationDegrees>45</MaxElevationDegrees>
+      <MinAzimuthDegrees>-120</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>120</MaxAzimuthDegrees>
+      <RotationSpeed>0.001</RotationSpeed>
+      <ElevationSpeed>0.001</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1800</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>500</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeMissileTurret</TypeId>
+        <SubtypeId>OKIMLVT</SubtypeId>
+      </Id>
+      <DisplayName>OKI 203mm Vehicle Rocket Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKIMLVT.dds</Icon>
+      <Description>Six barreled rocket launcher in a heavy vehicle turret.  Provides short ranged explosive damage.  Requires 203mm Interceptor Rockets.</Description>
+      <CubeSize>Small</CubeSize>
+      <PlaceDecals>false</PlaceDecals>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Small\VehicleMissile\VehMLBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="50" />
+        <Component Subtype="Construction" Count="104" />
+        <Component Subtype="CopperWire" Count="20" />
+        <Component Subtype="MetalGrid" Count="12" />
+        <Component Subtype="LargeTube" Count="12" />
+		    <Component Subtype="GravityGenerator" Count="2" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Detector" Count="40" />
+        <Component Subtype="Computer" Count="3" />
+        <Component Subtype="AdvancedComputer" Count="4" />
+        <Component Subtype="ArmoredPlate" Count="75" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="5" EndY="3" />
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="5" EndY="3" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Small\VehicleMissile\VehMLBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Small\VehicleMissile\VehMLBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Small\VehicleMissile\VehMLBase_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKIMLVT</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>25</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI203mmMissile" />
+      <InventoryMaxVolume>0.720</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <MinElevationDegrees>-15</MinElevationDegrees>
+      <MaxElevationDegrees>45</MaxElevationDegrees>
+      <MinAzimuthDegrees>-120</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>120</MaxAzimuthDegrees>
+      <RotationSpeed>0.0012</RotationSpeed>
+      <ElevationSpeed>0.0012</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1200</MaxRangeMeters>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <MinFov>0.1</MinFov>
+      <MaxFov>1.04719755</MaxFov>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>250</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+      <IsAirTight>false</IsAirTight>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+    </Definition>
+
+<!-- =====================================large grid fixed weapons======================================= -->
+
+
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+      <Id>
+        <TypeId>SmallGatlingGun</TypeId>
+        <SubtypeId>OKI50mmFGAT</SubtypeId>
+	</Id>
+      <DisplayName>OKI Fixed 50mm Stormgun</DisplayName>
+      <Icon>..\2374200567\icons\OKI50mmGAT_Fixed.dds</Icon>
+      <Description>Medium-caliber rotary cannon in a fixed mount, excels at engaging heavy fighters and light warships.  Requires 50mm Precision Shells.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="5" />
+			<Model>..\2374200567\Models\Cubes\Large\StormGun\Stormgun.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="100" />
+        <Component Subtype="Construction" Count="120" />
+        <Component Subtype="CopperWire" Count="28" />
+        <Component Subtype="MetalGrid" Count="24" />
+        <Component Subtype="SmallTube" Count="40" />
+        <Component Subtype="Motor" Count="12" />
+        <Component Subtype="Detector" Count="0" />
+        <Component Subtype="Computer" Count="3" />
+        <Component Subtype="AdvancedComputer" Count="4" />
+        <Component Subtype="ArmoredPlate" Count="80" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="2" />
+        <MountPoint Side="Right" StartX="0" StartY="0.9" EndX="1" EndY="1" />
+		<MountPoint Side="Right" StartX="1" StartY="0" EndX="2" EndY="1" />
+        <MountPoint Side="Left" StartX="3" StartY="0" EndX="4" EndY="1" />
+		<MountPoint Side="Left" StartX="4" StartY="0.9" EndX="5" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="3" EndX="1" EndY="4" />
+		<MountPoint Side="Back" StartX="0" StartY="0.9" EndX="1" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\StormGun\Stormgun_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\StormGun\Stormgun_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\StormGun\Stormgun_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI50mmLGFixed</BlockPairName>
+      <Center x="0" y="0" z="4" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <EdgeType>Heavy</EdgeType>
+      <WeaponDefinitionId Subtype="OKI50mmLGFixed" />
+      <InventoryMaxVolume>0.960</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>500</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+      <Id>
+        <TypeId>SmallMissileLauncher</TypeId>
+        <SubtypeId>OKI230mmBCfixed</SubtypeId>
+	</Id>
+      <DisplayName>OKI Fixed 230mm Battlecannon</DisplayName>
+      <Description>Large caliber heavy cannon in fixed mount. Excels at engaging heavily armored targets, may overpenetrate fighters.  Requires 230mm Battlecannon Shells.</Description>
+      <Icon>..\2374200567\icons\OKI230mmBC_Fixed.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="5" />
+			<Model>..\2374200567\Models\Cubes\Large\BattleCannon\Battlecannon.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="100" />
+        <Component Subtype="Construction" Count="120" />
+        <Component Subtype="CopperWire" Count="28" />
+        <Component Subtype="MetalGrid" Count="24" />
+        <Component Subtype="LargeTube" Count="20" />
+        <Component Subtype="Motor" Count="4" />
+        <Component Subtype="Detector" Count="45" />
+        <Component Subtype="Computer" Count="3" />
+        <Component Subtype="AdvancedComputer" Count="4" />
+        <Component Subtype="ArmoredPlate" Count="80" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="2" />
+        <MountPoint Side="Right" StartX="0" StartY="0.9" EndX="1" EndY="1" />
+		<MountPoint Side="Right" StartX="1" StartY="0" EndX="2" EndY="1" />
+        <MountPoint Side="Left" StartX="3" StartY="0" EndX="4" EndY="1" />
+		<MountPoint Side="Left" StartX="4" StartY="0.9" EndX="5" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="3" EndX="1" EndY="4" />
+		<MountPoint Side="Back" StartX="0" StartY="0.9" EndX="1" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\BattleCannon\Battlecannon_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\BattleCannon\Battlecannon_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\BattleCannon\Battlecannon_BS3.mwm"/>
+      </BuildProgressModels>
+      <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.2</OperationalPowerConsumption>
+      <BlockPairName>OKI230mmLGFixed</BlockPairName>
+      <Center x="0" y="0" z="4" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <EdgeType>Heavy</EdgeType>
+      <WeaponDefinitionId Subtype="OKI230mmBC" />
+      <InventoryMaxVolume>0.960</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>500</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+
+
+<!-- ======================================= mass drivers ======================================= -->
+
+
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+      <Id>
+        <TypeId>SmallMissileLauncher</TypeId>
+        <SubtypeId>OKI180mmHVXfixed</SubtypeId>
+	</Id>
+      <DisplayName>OKI HV-X 180mm Railgun</DisplayName>
+      <Description>A massive electromagnetic accelerator that launches explosive shells.  Excels at engaging moderately or mixed armored targets at extreme range.  Requires 180mm HV-X Explosive Shells and up to 50 MW of power.</Description>
+      <Icon>..\2374200567\icons\OKI180HyperXfixed.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="2" z="8" />
+	  <ModelOffset x="0" y="1.275" z="0" />
+			<Model>..\2374200567\Models\Cubes\Large\180mmHyperX\180mmHyperX.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="180" />
+        <Component Subtype="Construction" Count="200" />
+        <Component Subtype="CopperWire" Count="100" />
+        <Component Subtype="MetalGrid" Count="40" />
+        <Component Subtype="Girder" Count="100" />
+		    <Component Subtype="Superconductor" Count="120" />
+		    <Component Subtype="PowerCell" Count="100" />
+		    <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Detector" Count="70" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="AdvancedComputer" Count="12" />
+        <Component Subtype="ArmoredPlate" Count="180" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="4" />
+        <MountPoint Side="Right" StartX="0" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Right" StartX="2" StartY="0" EndX="3" EndY="2" />
+        <MountPoint Side="Left" StartX="5" StartY="1" EndX="8" EndY="2" />
+        <MountPoint Side="Left" StartX="5" StartY="0" EndX="6" EndY="2" />
+        <MountPoint Side="Bottom" StartX="0" StartY="5" EndX="1" EndY="6" />
+        <MountPoint Side="Back" StartX="0" StartY="1" EndX="1" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\180mmHyperX\180mmHyperX_BS1.mwm"/>
+      </BuildProgressModels>
+      <StandbyPowerConsumption>1</StandbyPowerConsumption>
+      <OperationalPowerConsumption>2</OperationalPowerConsumption>
+      <BlockPairName>OKI180mmHVXFixed</BlockPairName>
+      <Center x="0" y="1" z="6" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <EdgeType>Heavy</EdgeType>
+      <WeaponDefinitionId Subtype="OKI180mmHVXfixed" />
+      <InventoryMaxVolume>0.960</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.6</GeneralDamageMultiplier>
+      <PCU>1000</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+      <Id>
+        <TypeId>SmallMissileLauncher</TypeId>
+        <SubtypeId>OKI75mmHVPfixed</SubtypeId>
+	</Id>
+      <DisplayName>OKI HV-P 75mm Railgun</DisplayName>
+      <Description>A massive electromagnetic accelerator that launches depleted uranium penetrators. Excels at engaging targets with even multiple layers of heavy armor. Requires 75mm HV-P Sabots and up to 50 MW of power.</Description>
+      <Icon>..\2374200567\icons\OKI75HyperPfixed.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="2" z="8" />
+	  <ModelOffset x="0" y="1.275" z="0" />
+			<Model>..\2374200567\Models\Cubes\Large\75mmHyperP\75mmHyperP.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="180" />
+        <Component Subtype="Construction" Count="200" />
+        <Component Subtype="CopperWire" Count="100" />
+        <Component Subtype="MetalGrid" Count="40" />
+        <Component Subtype="Girder" Count="100" />
+		    <Component Subtype="Superconductor" Count="120" />
+		    <Component Subtype="PowerCell" Count="100" />
+		    <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Detector" Count="70" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="AdvancedComputer" Count="12" />
+        <Component Subtype="ArmoredPlate" Count="180" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="4" />
+        <MountPoint Side="Right" StartX="0" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Right" StartX="2" StartY="0" EndX="3" EndY="2" />
+        <MountPoint Side="Left" StartX="5" StartY="1" EndX="8" EndY="2" />
+        <MountPoint Side="Left" StartX="5" StartY="0" EndX="6" EndY="2" />
+        <MountPoint Side="Bottom" StartX="0" StartY="5" EndX="1" EndY="6" />
+        <MountPoint Side="Back" StartX="0" StartY="1" EndX="1" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\75mmHyperP\75mmHyperP_BS1.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI75mmHVPFixed</BlockPairName>
+      <Center x="0" y="1" z="6" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <EdgeType>Heavy</EdgeType>
+      <WeaponDefinitionId Subtype="OKI75mmHVPfixed" />
+      <InventoryMaxVolume>0.960</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.6</GeneralDamageMultiplier>
+      <PCU>1000</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+
+<!-- =======================================large grid casemates======================================= -->
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI76mmBSD</SubtypeId>
+      </Id>
+      <DisplayName>OKI Casemate 122mm Assault Gun</DisplayName>
+      <Icon>..\2374200567\icons\OKI122mmASG_Casimate.dds</Icon>
+      <Description>Dual-purpose cannon in a casemate mount.  Useful against all targets, but will struggle with accuracy and against heavier armor.  Requires 122mm Assault Shells.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>..\2374200567\Models\Cubes\Large\122mmBroadsideTurret\122mmBroadsideBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="68" />
+        <Component Subtype="Construction" Count="132" />
+        <Component Subtype="CopperWire" Count="28" />
+        <Component Subtype="MetalGrid" Count="24" />
+        <Component Subtype="LargeTube" Count="10" />
+        <Component Subtype="Motor" Count="10" />
+        <Component Subtype="Detector" Count="40" />
+        <Component Subtype="Computer" Count="3" />
+        <Component Subtype="AdvancedComputer" Count="4" />
+        <Component Subtype="ArmoredPlate" Count="82" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="1" EndX="1" EndY="2" />
+        <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="1" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\122mmBroadsideTurret\122mmBroadsideBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\122mmBroadsideTurret\122mmBroadsideBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\122mmBroadsideTurret\122mmBroadsideBase_BS3.mwm"/>
+		</BuildProgressModels>
+      <BlockPairName>OKI22mmCasemate</BlockPairName>
+      <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.2</OperationalPowerConsumption>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI76mmASG" />
+      <InventoryMaxVolume>0.720</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-45</MinElevationDegrees>
+      <MaxElevationDegrees>45</MaxElevationDegrees>
+      <MinAzimuthDegrees>-45</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>45</MaxAzimuthDegrees>
+      <RotationSpeed>0.0014</RotationSpeed>
+      <ElevationSpeed>0.0014</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1800</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>250</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI230mmBCBRD</SubtypeId>
+      </Id>
+      <DisplayName>OKI Casemate 230mm Battlecannon</DisplayName>
+      <Description>Large caliber heavy cannon in casemate mount. Excels at engaging heavily armored targets, may overpenetrate fighters.  Requires 230mm Battlecannon Shells.</Description>
+      <Icon>..\2374200567\icons\OKI230mmBC_Casimate.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="2" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Center x="0" y="0" z="0" />
+      <Model>..\2374200567\Models\Cubes\Large\230mmBroadsideTurret\230mmBroadsideBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="130" />
+        <Component Subtype="Construction" Count="160" />
+        <Component Subtype="CopperWire" Count="40" />
+        <Component Subtype="MetalGrid" Count="30" />
+        <Component Subtype="LargeTube" Count="20" />
+        <Component Subtype="Motor" Count="12" />
+        <Component Subtype="Detector" Count="65" />
+        <Component Subtype="Computer" Count="4" />
+        <Component Subtype="AdvancedComputer" Count="5" />
+        <Component Subtype="ArmoredPlate" Count="95" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Left" StartX="1" StartY="1" EndX="2" EndY="2" />
+		<MountPoint Side="Left" StartX="1" StartY="0" EndX="1.4" EndY="1" />
+        <MountPoint Side="Right" StartX="0" StartY="1" EndX="1" EndY="2" />
+		<MountPoint Side="Right" StartX="0.6" StartY="0" EndX="1" EndY="1" />
+		<MountPoint Side="Back" StartX="0" StartY="0.6" EndX="1" EndY="2" />
+		<MountPoint Side="Bottom" StartX="0" StartY="1" EndX="1" EndY="1.4" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\230mmBroadsideTurret\230mmBroadsideBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\230mmBroadsideTurret\230mmBroadsideBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\230mmBroadsideTurret\230mmBroadsideBase_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI230mmCasemate</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>45</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI230mmBC" />
+      <InventoryMaxVolume>0.720</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-45</MinElevationDegrees>
+      <MaxElevationDegrees>45</MaxElevationDegrees>
+      <MinAzimuthDegrees>-45</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>45</MaxAzimuthDegrees>
+      <RotationSpeed>0.0008</RotationSpeed>
+      <ElevationSpeed>0.0008</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>2400</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>500</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+
+<!-- ====================================large grid turrets======================================= -->
+
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI23mmDG</SubtypeId>
+      </Id>
+      <DisplayName>OKI 14.5mm CIWS Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKI14mmCIWS_Turret.dds</Icon>
+      <Description>Rotary heavy machinegun in a standard turret, excels at engaging light fighters, rockets, meteors, and biologicals.  Requires 14.5mm Ammo Drums.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+ 			<Model>..\2374200567\Models\Cubes\Large\14mmTurret\14mmLGBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="110" />
+        <Component Subtype="Construction" Count="160" />
+        <Component Subtype="CopperWire" Count="30" />
+        <Component Subtype="MetalGrid" Count="30" />
+        <Component Subtype="SmallTube" Count="24" />
+        <Component Subtype="Motor" Count="12" />
+        <Component Subtype="Detector" Count="60" />
+        <Component Subtype="Computer" Count="4" />
+        <Component Subtype="AdvancedComputer" Count="5" />
+        <Component Subtype="ArmoredPlate" Count="90" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\14mmTurret\14mmLGBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\14mmTurret\14mmLGBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\14mmTurret\14mmLGBase_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI14mmMedium</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI23mmDG" />
+      <InventoryMaxVolume>0.360</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-15</MinElevationDegrees>
+      <MaxElevationDegrees>90</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.0016</RotationSpeed>
+      <ElevationSpeed>0.0016</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1200</MaxRangeMeters>
+      <MinFov>0.1</MinFov>
+      <MaxFov>2</MaxFov>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.8</GeneralDamageMultiplier>
+      <PCU>250</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition> 
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI50mmAG</SubtypeId>
+      </Id>
+      <DisplayName>OKI 50mm Burstcannon Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKI50mmBG_Turret.dds</Icon>
+      <Description>Medium-caliber autocannon in a standard turret, excels at engaging heavy fighters and light warships.  Requires 50mm Precision Shells.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Large\50mmTurret\50mmLGBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="110" />
+        <Component Subtype="Construction" Count="160" />
+        <Component Subtype="CopperWire" Count="30" />
+        <Component Subtype="MetalGrid" Count="30" />
+        <Component Subtype="SmallTube" Count="10" />
+        <Component Subtype="Motor" Count="12" />
+        <Component Subtype="Detector" Count="60" />
+        <Component Subtype="Computer" Count="4" />
+        <Component Subtype="AdvancedComputer" Count="5" />
+        <Component Subtype="ArmoredPlate" Count="90" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\50mmTurret\50mmLGBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\50mmTurret\50mmLGBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\50mmTurret\50mmLGBase_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI50mmMedium</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI50mmAG" />
+      <InventoryMaxVolume>0.360</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-15</MinElevationDegrees>
+      <MaxElevationDegrees>90</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.0014</RotationSpeed>
+      <ElevationSpeed>0.0014</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1500</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.8</GeneralDamageMultiplier>
+      <PCU>250</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI76mmAG</SubtypeId>
+      </Id>
+      <DisplayName>OKI 122mm Assault Gun Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKI122mmASG_Turret.dds</Icon>
+      <Description>Dual-purpose cannon in a standard turret.  Useful against all targets, but will struggle with accuracy and against heavier armor.  Requires 122mm Assault Shells.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Large\122mmTurret\122mmLGBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="110" />
+        <Component Subtype="Construction" Count="160" />
+        <Component Subtype="CopperWire" Count="30" />
+        <Component Subtype="MetalGrid" Count="30" />
+        <Component Subtype="SmallTube" Count="24" />
+        <Component Subtype="Motor" Count="12" />
+        <Component Subtype="Detector" Count="60" />
+        <Component Subtype="Computer" Count="4" />
+        <Component Subtype="AdvancedComputer" Count="5" />
+        <Component Subtype="ArmoredPlate" Count="90" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\122mmTurret\122mmLGBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\122mmTurret\122mmLGBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\122mmTurret\122mmLGBase_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI122mmMedium</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI76mmASG" />
+      <InventoryMaxVolume>0.360</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-15</MinElevationDegrees>
+      <MaxElevationDegrees>90</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.001</RotationSpeed>
+      <ElevationSpeed>0.001</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1800</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.8</GeneralDamageMultiplier>
+      <PCU>500</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeMissileTurret</TypeId>
+        <SubtypeId>OKIMissileTurret</SubtypeId>
+      </Id>
+      <DisplayName>OKI 203mm Rocket Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKIMissileTurret.dds</Icon>
+      <Description>Six barreled rocket launcher in a standard turret.  Provides short ranged explosive damage.  Requires 203mm Interceptor Rockets.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Large\Missile\LGMissileBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="110" />
+        <Component Subtype="Construction" Count="160" />
+        <Component Subtype="CopperWire" Count="30" />
+        <Component Subtype="MetalGrid" Count="30" />
+		    <Component Subtype="GravityGenerator" Count="2" />
+        <Component Subtype="LargeTube" Count="12" />
+        <Component Subtype="Motor" Count="12" />
+        <Component Subtype="Detector" Count="60" />
+        <Component Subtype="Computer" Count="4" />
+        <Component Subtype="AdvancedComputer" Count="5" />
+        <Component Subtype="ArmoredPlate" Count="90" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\Missile\LGMissileBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\Missile\LGMissileBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\Missile\LGMissileBase_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKIMissileTurretMedium</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>40</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI203mmMissile" />
+      <InventoryMaxVolume>0.360</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-15</MinElevationDegrees>
+      <MaxElevationDegrees>90</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.0014</RotationSpeed>
+      <ElevationSpeed>0.0014</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1200</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.8</GeneralDamageMultiplier>
+      <PCU>250</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>1.0</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+
+<!-- ====================================large grid capital turrets=================================== -->
+
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI50mmGat</SubtypeId>
+      </Id>
+      <DisplayName>OKI 50mm Stormgun Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKI50mmGAT_Turret.dds</Icon>
+      <Description>Medium-caliber rotary cannon in a heavy turret with limited firing arcs, excels at engaging heavy fighters and light warships.  Requires 50mm Precision Shells.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="2" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Large\StormGunTurret\Stormgun_Turret.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="200" />
+        <Component Subtype="Construction" Count="280" />
+        <Component Subtype="CopperWire" Count="40" />
+        <Component Subtype="MetalGrid" Count="40" />
+        <Component Subtype="SmallTube" Count="40" />
+        <Component Subtype="Motor" Count="24" />
+        <Component Subtype="Detector" Count="80" />
+        <Component Subtype="Computer" Count="8" />
+        <Component Subtype="AdvancedComputer" Count="10" />
+        <Component Subtype="ArmoredPlate" Count="200" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+	<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="4" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\StormGunTurret\Stormgun_Turret_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\StormGunTurret\Stormgun_Turret_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\StormGunTurret\Stormgun_Turret_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI50mmHeavy</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <StandbyPowerConsumption>0.35</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.35</OperationalPowerConsumption>
+      <BuildTimeSeconds>65</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI50mmGAT" />
+      <InventoryMaxVolume>0.960</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-10</MinElevationDegrees>
+      <MaxElevationDegrees>60</MaxElevationDegrees>
+      <MinAzimuthDegrees>-135</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>135</MaxAzimuthDegrees>
+      <RotationSpeed>0.0006</RotationSpeed>
+      <ElevationSpeed>0.0006</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1500</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>750</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeMissileTurret</TypeId>
+        <SubtypeId>OKIHvyMissileTurret</SubtypeId>
+      </Id>
+      <DisplayName>OKI 203mm Heavy Rocket Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKIHvyMissileTurret.dds</Icon>
+      <Description>Multi-barreled rocket launcher in a heavy turret with limited firing arcs.  Provides short ranged explosive damage.  Requires 203mm Interceptor Rockets.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="2" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Large\HeavyMissileTurret\HM_Turret.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="200" />
+        <Component Subtype="Construction" Count="280" />
+        <Component Subtype="CopperWire" Count="40" />
+        <Component Subtype="MetalGrid" Count="40" />
+		    <Component Subtype="GravityGenerator" Count="4" />
+        <Component Subtype="LargeTube" Count="24" />
+        <Component Subtype="Motor" Count="24" />
+        <Component Subtype="Detector" Count="80" />
+        <Component Subtype="Computer" Count="8" />
+        <Component Subtype="AdvancedComputer" Count="10" />
+        <Component Subtype="ArmoredPlate" Count="200" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+	<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="4" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\HeavyMissileTurret\HM_Turret_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\HeavyMissileTurret\HM_Turret_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\HeavyMissileTurret\HM_Turret_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKIMissileTurretHeavy</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <StandbyPowerConsumption>0.35</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.35</OperationalPowerConsumption>
+      <BuildTimeSeconds>65</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI203mmHvyMissile" />
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <InventoryMaxVolume>1.440</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-10</MinElevationDegrees>
+      <MaxElevationDegrees>60</MaxElevationDegrees>
+      <MinAzimuthDegrees>-135</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>135</MaxAzimuthDegrees>
+      <RotationSpeed>0.0006</RotationSpeed>
+      <ElevationSpeed>0.0006</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>1200</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>450</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+	  <TieredUpdateTimes>
+		<unsignedInt>10</unsignedInt>
+        <unsignedInt>0</unsignedInt>
+      </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI230mmBC</SubtypeId>
+      </Id>
+      <DisplayName>OKI 230mm Battlecannon Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKI230mmBC_Turret.dds</Icon>
+      <Description>Large caliber heavy cannon in heavy turret with limited firing arcs. Excels at engaging heavily armored targets, may overpenetrate fighters.  Requires 230mm Battlecannon Shells.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="2" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Large\BattleCannonTurret\Battlecannon_Turret.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="200" />
+        <Component Subtype="Construction" Count="280" />
+        <Component Subtype="CopperWire" Count="40" />
+        <Component Subtype="MetalGrid" Count="40" />
+        <Component Subtype="LargeTube" Count="20" />
+        <Component Subtype="Motor" Count="24" />
+        <Component Subtype="Detector" Count="80" />
+        <Component Subtype="Computer" Count="8" />
+        <Component Subtype="AdvancedComputer" Count="10" />
+        <Component Subtype="ArmoredPlate" Count="200" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+	<MountPoint Side="Bottom" StartX="1" StartY="1" EndX="4" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2374200567\Models\Cubes\Large\BattleCannonTurret\Battlecannon_Turret_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2374200567\Models\Cubes\Large\BattleCannonTurret\Battlecannon_Turret_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\BattleCannonTurret\Battlecannon_Turret_BS3.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI230mmHeavy</BlockPairName>
+      <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.2</OperationalPowerConsumption>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>65</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI230mmBC" />
+      <InventoryMaxVolume>0.960</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-10</MinElevationDegrees>
+      <MaxElevationDegrees>60</MaxElevationDegrees>
+      <MinAzimuthDegrees>-135</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>135</MaxAzimuthDegrees>
+      <RotationSpeed>0.0004</RotationSpeed>
+      <ElevationSpeed>0.0004</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>2400</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.7</GeneralDamageMultiplier>
+      <PCU>750</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI230mmBAT</SubtypeId>
+      </Id>
+      <DisplayName>OKI 230mm Battlecannon Siege Turret</DisplayName>
+      <Icon>..\2374200567\icons\OKI230mmBAT_Turret.dds</Icon>
+      <Description>A trio of heavy cannons in a superheavy turret with excellent firing arcs. Excels at engaging heavily armored targets, may overpenetrate fighters.  Requires 230mm Battlecannon Shells.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="7" y="4" z="7" />
+      <ModelOffset x="0" y="-1.25" z="0" />
+			<Model>..\2374200567\Models\Cubes\Large\230BatteryCannon\230mmBatteryCannonBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="280" />
+        <Component Subtype="Construction" Count="400" />
+        <Component Subtype="CopperWire" Count="60" />
+        <Component Subtype="MetalGrid" Count="50" />
+        <Component Subtype="LargeTube" Count="60" />
+        <Component Subtype="Motor" Count="36" />
+        <Component Subtype="Detector" Count="100" />
+        <Component Subtype="Computer" Count="12" />
+        <Component Subtype="AdvancedComputer" Count="15" />
+        <Component Subtype="ArmoredPlate" Count="270" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+	<MountPoint Side="Bottom" StartX="2" StartY="2" EndX="5" EndY="5" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.25" File="..\2374200567\Models\Cubes\Large\230BatteryCannon\230mmBatteryCannonBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.50" File="..\2374200567\Models\Cubes\Large\230BatteryCannon\230mmBatteryCannonBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="0.75" File="..\2374200567\Models\Cubes\Large\230BatteryCannon\230mmBatteryCannonBase_BS3.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2374200567\Models\Cubes\Large\230BatteryCannon\230mmBatteryCannonBase_BS4.mwm"/>
+      </BuildProgressModels>
+      <StandbyPowerConsumption>0.05</StandbyPowerConsumption>
+      <OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+      <BlockPairName>OKITriple230mmHeavy</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>100</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI230mmBAT" />
+      <InventoryMaxVolume>1.440</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-30</MinElevationDegrees>
+      <MaxElevationDegrees>90</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.0002</RotationSpeed>
+      <ElevationSpeed>0.0002</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>2400</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.6</GeneralDamageMultiplier>
+      <PCU>1000</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+	  <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeGatlingTurret</TypeId>
+        <SubtypeId>OKI60mmHVPturret</SubtypeId>
+      </Id>
+      <DisplayName>OKI 60mm HV-P Railgun Turret</DisplayName>
+      <Icon>..\2374200567\icons\60mmBase.dds</Icon>
+      <Description>An electromagnetic accelerator that launches depleted uranium penetrators in a superheavy turret. Excels at engaging targets with even multiple layers of heavy armor. Requires 60mm HV-P Sabots and up to 45 MW of power.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="7" y="4" z="7" />
+      <ModelOffset x="0" y="0" z="0" />
+			<Model>..\2374200567\Models\Cubes\Large\60mmRailgunTurret\60mmBase.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="280" />
+        <Component Subtype="Construction" Count="400" />
+        <Component Subtype="CopperWire" Count="120" />
+        <Component Subtype="MetalGrid" Count="50" />
+		    <Component Subtype="Girder" Count="60" />
+		    <Component Subtype="Superconductor" Count="80" />
+		    <Component Subtype="PowerCell" Count="60" />
+        <Component Subtype="Motor" Count="36" />
+        <Component Subtype="Detector" Count="100" />
+        <Component Subtype="Computer" Count="12" />
+        <Component Subtype="AdvancedComputer" Count="15" />
+        <Component Subtype="ArmoredPlate" Count="270" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+      <MountPoints>
+	<MountPoint Side="Bottom" StartX="2" StartY="2" EndX="4" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+				<Model BuildPercentUpperBound="0.25" File="..\2374200567\Models\Cubes\Large\60mmRailgunTurret\60mmBase_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.5" File="..\2374200567\Models\Cubes\Large\60mmRailgunTurret\60mmBase_BS2.mwm"/>
+				<Model BuildPercentUpperBound="0.75" File="..\2374200567\Models\Cubes\Large\60mmRailgunTurret\60mmBase_BS3.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="..\2374200567\Models\Cubes\Large\60mmRailgunTurret\60mmBase_BS4.mwm"/>
+      </BuildProgressModels>
+      <BlockPairName>OKI60mmHeavy</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>65</BuildTimeSeconds>
+      <OverlayTexture>Textures\GUI\Screens\turret_overlay.dds</OverlayTexture>
+      <WeaponDefinitionId Subtype="OKI60mmWEP" />
+      <InventoryMaxVolume>0.960</InventoryMaxVolume>
+      <ResourceSinkGroup>Defense</ResourceSinkGroup>
+      <DamageEffectId>213</DamageEffectId>
+      <MinElevationDegrees>-10</MinElevationDegrees>
+      <MaxElevationDegrees>60</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.0002</RotationSpeed>
+      <ElevationSpeed>0.0002</ElevationSpeed>
+      <IdleRotation>false</IdleRotation>
+      <MaxRangeMeters>3200</MaxRangeMeters>
+      <DeformationRatio>0.5</DeformationRatio>
+	  <GeneralDamageMultiplier>0.6</GeneralDamageMultiplier>
+      <PCU>750</PCU>
+	  <AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+      <InventoryFillFactorMin>.25</InventoryFillFactorMin>
+      <InventoryFillFactorMax>.5</InventoryFillFactorMax>
+        <TieredUpdateTimes>
+            <unsignedInt>10</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+	<TargetingGroups>
+        <string>Weapons</string>
+    </TargetingGroups>
+	  </Definition>
+
+  </CubeBlocks>
+</Definitions>

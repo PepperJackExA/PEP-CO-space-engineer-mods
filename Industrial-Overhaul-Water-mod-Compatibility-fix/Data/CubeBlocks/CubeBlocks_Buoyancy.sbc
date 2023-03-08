@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeFlotationTank</SubtypeId>
+      </Id>
+      <DisplayName>Flotation Tank</DisplayName>
+      <Icon>..\2472488194\Icons\FlotationTank.dds</Icon>
+      <Description>A sealed tank of air. Provides buoyancy for floating craft.
+	  
+	  SEMI-OBSOLETE WITH WATER 3.0
+	  Provides little buoyancy compared to a properly-designed hull</Description>
+	  <Public>false</Public>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>..\2472488194\Models\FlotationTank.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <PhysicalMaterial>Metal</PhysicalMaterial>
+      <Components>
+        <Component Subtype="Girder" Count="5" />
+        <Component Subtype="BuoyancyTube" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="BuoyancyTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1" File="..\2472488194\Models\Construct\FlotationTankConstruct.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>FlotationTank</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>14</BuildTimeSeconds>
+      <EdgeType>Light</EdgeType>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeFlotationCube</SubtypeId>
+      </Id>
+      <DisplayName>Flotation Cell</DisplayName>
+      <Icon>..\2472488194\Icons\FlotationCube.dds</Icon>
+      <Description>A block of low-density closed-cell foam. Better buoyancy than a Flotation Tank.
+	  
+	  SEMI-OBSOLETE WITH WATER 3.0
+	  Provides little buoyancy compared to a properly-designed hull</Description>
+	  <Public>false</Public>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>..\2472488194\Models\FlotationCube.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <PhysicalMaterial>Metal</PhysicalMaterial>
+      <Components>
+        <Component Subtype="Girder" Count="5" />
+        <Component Subtype="Foam" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Foam" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1" File="..\2472488194\Models\Construct\FlotationCubeConstruct.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>FlotationCube</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>14</BuildTimeSeconds>
+      <EdgeType>Light</EdgeType>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>SmallFlotationTank</SubtypeId>
+      </Id>
+      <DisplayName>Flotation Tank</DisplayName>
+      <Icon>..\2472488194\Icons\FlotationTank.dds</Icon>
+      <Description>A sealed tank of air. Provides buoyancy for floating craft.
+	  
+	  SEMI-OBSOLETE WITH WATER 3.0
+	  Provides little buoyancy compared to a properly-designed hull</Description>
+	  <Public>false</Public>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>..\2472488194\Models\FlotationTankSmall.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <PhysicalMaterial>Metal</PhysicalMaterial>
+      <Components>
+        <Component Subtype="Girder" Count="1" />
+        <Component Subtype="BuoyancyTube" Count="3" />
+      </Components>
+      <CriticalComponent Subtype="BuoyancyTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1" File="..\2472488194\Models\Construct\FlotationTankSmallConstruct.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>FlotationTank</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <EdgeType>Light</EdgeType>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>SmallFlotationCube</SubtypeId>
+      </Id>
+      <DisplayName>Flotation Cell</DisplayName>
+      <Icon>..\2472488194\Icons\FlotationCube.dds</Icon>
+      <Description>A block of low-density closed-cell foam. Better buoyancy than a Flotation Tank.
+	  
+	  SEMI-OBSOLETE WITH WATER 3.0
+	  Provides little buoyancy compared to a properly-designed hull</Description>
+	  <Public>false</Public>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>..\2472488194\Models\FlotationCubeSmall.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <PhysicalMaterial>Metal</PhysicalMaterial>
+      <Components>
+        <Component Subtype="Girder" Count="1" />
+        <Component Subtype="Foam" Count="3" />
+      </Components>
+      <CriticalComponent Subtype="Foam" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1" File="..\2472488194\Models\Construct\FlotationCubeSmallConstruct.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>FlotationCube</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <EdgeType>Light</EdgeType>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+    </Definition>
+		
+  </CubeBlocks>
+</Definitions>

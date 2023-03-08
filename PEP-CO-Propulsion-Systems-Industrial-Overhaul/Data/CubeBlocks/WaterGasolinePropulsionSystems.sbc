@@ -1,0 +1,105 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlockVariantGroups>
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SGGasolinePropellers" />
+            <Blocks>
+                <Block Type="Thrust" Subtype="SG3x3GasShipScrew" />
+            </Blocks>
+        </BlockVariantGroup>
+    </BlockVariantGroups>
+	<CategoryClasses>
+        <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+          <Id>
+            <TypeId>GuiBlockCategoryDefinition</TypeId>
+            <SubtypeId/>
+          </Id>
+          <DisplayName>Propulsion Systems</DisplayName>
+          <Name>PropulsionSystem</Name>
+          <ItemIds>
+            <string>Thrust/SG3x3GasShipScrew</string>
+          </ItemIds>
+        </Category>
+    </CategoryClasses>
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SG3x3GasShipScrew</SubtypeId>
+			</Id>
+			<DisplayName>Small 3x3 Gasoline Ship Screw</DisplayName>
+			<Description>Gasoline Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG3x3GasShipScrew.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG3x3GasShipScrew.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="80" />
+                <Component Subtype="Construction" Count="60" />
+                <Component Subtype="LargeTube" Count="12" />
+                <Component Subtype="SmallTube" Count="20" />
+                <Component Subtype="CopperWire" Count="30" />
+                <Component Subtype="Motor" Count="10" />
+                <Component Subtype="Computer" Count="4" />
+                <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Enabled="false"/>
+				<MountPoint Side="Back" StartX="1.00" StartY="0.00" EndX="2.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="1.00" StartY="0.00" EndX="2.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00" Enabled="false"/>
+				<MountPoint Side="Right" StartX="3.00" StartY="0.00" EndX="4.00" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="4.00" StartY="0.00" EndX="5.00" EndY="3.00" Enabled="false"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="3.00" EndX="3.00" EndY="4.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="4.00" EndX="3.00" EndY="5.00" Enabled="false"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00" Enabled="false"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="1.00" EndX="3.00" EndY="5.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG3x3GasShipScrew_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG3x3GasShipScrew_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SG3x3GasShipScrew</BlockPairName>
+			<ThrusterType>Gasoline</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+			<ForceMagnitude>216000</ForceMagnitude>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Gasoline</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>0.00125</MaxPowerConsumption>
+			<MinPowerConsumption>0.000000001</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+			<PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <FuelCapacity>10</FuelCapacity>
+			<PropellerRoundsPerSecondOnFullSpeed>1.9</PropellerRoundsPerSecondOnFullSpeed>
+			<PropellerRoundsPerSecondOnIdleSpeed>0.3</PropellerRoundsPerSecondOnIdleSpeed>
+			<PropellerAccelerationTime>3</PropellerAccelerationTime>
+			<PropellerDecelerationTime>6</PropellerDecelerationTime>
+			<PropellerMaxVisibleDistance>60</PropellerMaxVisibleDistance>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+			<NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+			<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<Public>true</Public>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<AnimationSpeed>20</AnimationSpeed>
+			<TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+			<PCU>25</PCU>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

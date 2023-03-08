@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OKIObserverMAG</SubtypeId>
+      </Id>
+      <DisplayName>OKI Designator Charges (x1000)</DisplayName>
+      <Icon>..\2374200567\icons\OKIObserverammo.dds</Icon>
+      <Prerequisites>
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Copper" />
+      </Prerequisites>
+      <Result Amount="1000" TypeId="AmmoMagazine" SubtypeId="OKIObserverMAG" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint> 
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OKI23mmAmmo</SubtypeId>
+      </Id>
+      <DisplayName>OKI 14.5mm Ammo Drum</DisplayName>
+      <Icon>..\2374200567\icons\OKI23mmDGAmmo.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="2" TypeId="Ingot" SubtypeId="Copper" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="OKI23mmAmmo" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OKI50mmAmmo</SubtypeId>
+      </Id>
+      <DisplayName>OKI 50mm Precision Shells</DisplayName>
+      <Icon>..\2374200567\icons\OKI50mmAGAmmo.dds</Icon>
+      <Prerequisites>
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="2" TypeId="Ingot" SubtypeId="Copper" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="OKI50mmAmmo" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OKI122mmAmmo</SubtypeId>
+      </Id>
+      <DisplayName>OKI 122mm Assault Shell</DisplayName>
+      <Icon>..\2374200567\icons\OKI76mmASGAmmo.dds</Icon>
+      <Prerequisites>
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="2" TypeId="Ingot" SubtypeId="Copper" />
+        <Item Amount="2" TypeId="Ingot" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="OKI122mmAmmo" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OKI180mmHVXammo</SubtypeId>
+      </Id>
+      <DisplayName>OKI 180mm HV-X Explosive Shell</DisplayName>
+      <Icon>..\2374200567\icons\OKI180HyperXammo.dds</Icon>
+      <Prerequisites>
+        <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="20" TypeId="Ingot" SubtypeId="Copper" />
+        <Item Amount="65" TypeId="Ingot" SubtypeId="Titanium" />
+        <Item Amount="2" TypeId="Ingot" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="OKI180mmHVXammo" />
+      <BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OKI75mmHVPammo</SubtypeId>
+      </Id>
+      <DisplayName>OKI 75mm HV-P Sabot</DisplayName>
+      <Icon>..\2374200567\icons\OKI75mmHPAmmo.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="50" TypeId="Ingot" SubtypeId="Copper" />
+        <Item Amount="100" TypeId="Ingot" SubtypeId="Titanium" />
+        <Item Amount="2" TypeId="Ingot" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="OKI75mmHVPammo" />
+      <BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OKI60mmHVPammo</SubtypeId>
+      </Id>
+      <DisplayName>OKI 60mm HV-P Sabot</DisplayName>
+      <Icon>..\2374200567\icons\OKI75mmHPAmmo.dds</Icon>
+      <Prerequisites>
+        <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="40" TypeId="Ingot" SubtypeId="Copper" />
+        <Item Amount="50" TypeId="Ingot" SubtypeId="Titanium" />
+        <Item Amount="2" TypeId="Ingot" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="OKI60mmHVPammo" />
+      <BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+    </Blueprint>	
+
+   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OKI230mmAmmo</SubtypeId>
+      </Id>
+      <DisplayName>OKI 230mm Battlecannon Shell</DisplayName>
+      <Icon>..\2374200567\icons\OKI230mmBCAmmo.dds</Icon>
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="OKI230mmAmmo" />
+      <BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+	   <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OKI203mmRocketMag</SubtypeId>
+      </Id>
+      <DisplayName>OKI 203mm Interceptor Rocket</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
+      <Prerequisites>
+        <Item Amount="4" TypeId="Ingot" SubtypeId="Magnesium" />
+        <Item Amount="5" TypeId="Component" SubtypeId="LargeTube" />
+        <Item Amount="1" TypeId="Component" SubtypeId="Computer" />
+		    <Item Amount="5" TypeId="Component" SubtypeId="CopperWire" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="OKI203mmRocketMag" />
+      <BaseProductionTimeInSeconds>12</BaseProductionTimeInSeconds>
+    </Blueprint>
+
+  </Blueprints>
+</Definitions>

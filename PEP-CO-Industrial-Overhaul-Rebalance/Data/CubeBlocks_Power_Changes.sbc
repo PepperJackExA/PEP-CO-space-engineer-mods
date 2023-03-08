@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+			<Id>
+				<TypeId>OxygenGenerator</TypeId>
+				<SubtypeId>LowPowerCoalFurnace</SubtypeId>
+			</Id>
+			<DisplayName>Low Power Coal Boiler</DisplayName>
+			<Icon>..\2344068716\Icons\CoalBoiler.dds</Icon>
+			<Description>BETA - MODELS WILL CHANGE: Burns Coal to produce Steam. Must be connected to a Steam Turbine.
+		Produces 20 Steam/sec</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="6" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2344068716\Models\CoalBoiler.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="16"/>
+				<Component Subtype="Construction" Count="5"/>
+				<Component Subtype="CopperWire" Count="6"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="HeatingElement" Count="2"/>
+				<Component Subtype="Computer" Count="5"/>
+				<Component Subtype="SteelPlate" Count="4"/>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="6" EndY="3" Default="true"/>
+				<MountPoint Side="Left" StartX="1" StartY="1" EndX="2" EndY="2"/>
+				<MountPoint Side="Right" StartX="1" StartY="0" EndX="2" EndY="1"/>
+			</MountPoints>
+			<IsAirTight>true</IsAirTight>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2344068716\Models\Construct\CoalBoilerConstruct1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="..\2344068716\Models\Construct\CoalBoilerConstruct2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2344068716\Models\Construct\CoalBoilerConstruct3.mwm"/>
+			</BuildProgressModels>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>25</BuildTimeSeconds>
+			<ResourceSourceGroup>Reactors</ResourceSourceGroup>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<IceConsumptionPerSecond>1</IceConsumptionPerSecond>
+			<InventoryMaxVolume>4</InventoryMaxVolume>
+			<InventorySize>
+				<X>2</X>
+				<Y>2</Y>
+				<Z>2</Z>
+			</InventorySize>
+			<StandbyPowerConsumption>0</StandbyPowerConsumption>
+			<OperationalPowerConsumption>0.05</OperationalPowerConsumption>
+			<ProducedGases>
+				<GasInfo>
+					<Id>
+						<TypeId>GasProperties</TypeId>
+						<SubtypeId>Steam</SubtypeId>
+					</Id>
+					<IceToGasRatio>20</IceToGasRatio>
+				</GasInfo>
+			</ProducedGases>
+			<BlueprintClasses>
+				<Class>CoalFurnace</Class>
+			</BlueprintClasses>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<GenerateSound>BlockOxyGenProcess</GenerateSound>
+			<IdleSound>BlockOxyGenIdle</IdleSound>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<MirroringX>Y</MirroringX>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<PCU>10</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+			<Id>
+				<TypeId>HydrogenEngine</TypeId>
+				<SubtypeId>LowPowerSteamTurbine</SubtypeId>
+			</Id>
+			<DisplayName>Low Power Steam Turbine</DisplayName>
+			<Icon>..\2344068716\Icons\SteamTurbine.dds</Icon>
+			<Description>BETA - MODELS WILL CHANGE: Pressurized Steam Turbine for generating electricity. Must be connected to a source of Steam.
+		Consumes 10 Steam/sec.
+		Max Output: 10MW</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="6"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2344068716\Models\SteamTurbine.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="16"/>
+				<Component Subtype="Construction" Count="12"/>
+				<Component Subtype="LargeTube" Count="8"/>
+				<Component Subtype="SmallTube" Count="4"/>
+				<Component Subtype="CopperWire" Count="25"/>
+				<Component Subtype="Electromagnet" Count="16"/>
+				<Component Subtype="TitaniumPlate" Count="10"/>
+				<Component Subtype="Computer" Count="10"/>
+				<Component Subtype="SteelPlate" Count="4"/>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Right" StartX="5" StartY="1" EndX="6" EndY="2"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="6" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2344068716\Models\Construct\SteamTurbineConstruct1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="..\2344068716\Models\Construct\SteamTurbineConstruct2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2344068716\Models\Construct\SteamTurbineConstruct3.mwm"/>
+			</BuildProgressModels>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>12</BuildTimeSeconds>
+			<ResourceSinkGroup>Generators</ResourceSinkGroup>
+			<ResourceSourceGroup>Reactors</ResourceSourceGroup>
+			<MaxPowerOutput>10</MaxPowerOutput>
+			<FuelCapacity>20</FuelCapacity>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<IsAirTight>false</IsAirTight>
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+			<FuelInfos>
+				<FuelInfo>
+					<Id>
+						<TypeId>GasProperties</TypeId>
+						<SubtypeId>Steam</SubtypeId>
+					</Id>
+				</FuelInfo>
+			</FuelInfos>
+			<FuelProductionToCapacityMultiplier>1</FuelProductionToCapacityMultiplier>
+			<PrimarySound>ArcBlockWindTurbine</PrimarySound>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>Explosion_Warhead_02</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>5</PCU>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<AnimationSpeed>7</AnimationSpeed>
+			<AnimationSpinUpSpeed>0.75</AnimationSpinUpSpeed>
+			<AnimationSpinDownSpeed>0.75</AnimationSpinDownSpeed>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

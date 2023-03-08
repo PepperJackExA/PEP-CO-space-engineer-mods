@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">
+			<Id>
+				<TypeId>Drill</TypeId>
+				<SubtypeId>BasicStaticDrill</SubtypeId>
+			</Id>
+			<DisplayName>Basic Static Drill</DisplayName>
+			<Icon>..\2493091475\Textures\BasicStaticDrill.dds</Icon>
+			<Description>Place this drill atop a ore deposit and power it to start mining ore</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="3" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Center x="0" y="0" z="0" />
+			<Model>..\2493091475\Models\BasicDrill\StaticDrill.mwm</Model>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="500" />
+        <Component Subtype="Construction" Count="300" />
+        <Component Subtype="CopperWire" Count="40" />
+        <Component Subtype="LargeTube" Count="50" />
+        <Component Subtype="Motor" Count="25" />
+        <Component Subtype="Computer" Count="200" />
+		<Component Subtype="AdvancedComputer" Count="10" />
+        <Component Subtype="InteriorPlate" Count="500" />
+      </Components>
+      <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.05" EndX="2.00" EndY="0.38"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.05" EndX="2.00" EndY="0.38"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.05" EndX="1.00" EndY="0.38"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.04" EndX="1.00" EndY="0.99"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2493091475\Models\BasicDrill\StaticDrill_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2493091475\Models\BasicDrill\StaticDrill_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2493091475\Models\BasicDrill\StaticDrill_BS3.mwm"/>
+			</BuildProgressModels>
+			<MirroringX>Y</MirroringX>
+			<MirroringY>X</MirroringY>
+			<PCU>100</PCU>
+			<IsAirTight>false</IsAirTight>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			
+      		<GuiVisible>false</GuiVisible>
+      		<IsPublic>false</IsPublic>
+
+			<VoxelPlacement>
+				<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+				<StaticMode>
+					<PlacementMode>Volumetric</PlacementMode>
+					<MaxAllowed>0.6</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>Volumetric</PlacementMode>
+					<MaxAllowed>0.6</MaxAllowed>
+					<MinAllowed>0</MinAllowed>
+				</DynamicMode>
+			</VoxelPlacement>
+				
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			
+			<SensorRadius>0</SensorRadius>
+			<SensorOffset>0</SensorOffset>
+			<CutOutRadius>0</CutOutRadius>
+			<CutOutOffset>0</CutOutOffset>
+			<ParticleOffset>
+				<X>0</X>
+				<Y>0</Y>
+				<Z>0</Z>
+			</ParticleOffset>
+			
+			<DeformationRatio>0.2</DeformationRatio>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<PrimarySound>ToolShipDrillIdle</PrimarySound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			
+		</Definition>
+	</CubeBlocks>
+</Definitions>

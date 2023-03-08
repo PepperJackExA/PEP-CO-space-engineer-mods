@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<WaterConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BlockConfigs>
+	
+    <BlockConfig TypeId="Thrust" SubtypeId="SmallPropellerSmall" Volume="0.025" FunctionalUnderwater="true" FunctionalAboveWater="false" />
+    <BlockConfig TypeId="Thrust" SubtypeId="SmallPropellerLarge" Volume="3" FunctionalUnderwater="true" FunctionalAboveWater="false" />
+	
+    <BlockConfig TypeId="Thrust" SubtypeId="MediumPropellerSmall" Volume="0.45" FunctionalUnderwater="true" FunctionalAboveWater="false" />
+    <BlockConfig TypeId="Thrust" SubtypeId="MediumPropellerLarge" Volume="15" FunctionalUnderwater="true" FunctionalAboveWater="false" />
+	
+    <BlockConfig TypeId="Thrust" SubtypeId="LargePropellerSmall" Volume="1.25" FunctionalUnderwater="true" FunctionalAboveWater="false" />
+    <BlockConfig TypeId="Thrust" SubtypeId="LargePropellerLarge" Volume="30" FunctionalUnderwater="true" FunctionalAboveWater="false" />
+	
+    <BlockConfig TypeId="Thrust" SubtypeId="SmallDuctedPropellerSmall" Volume="0.05" FunctionalUnderwater="true" FunctionalAboveWater="false" />
+    <BlockConfig TypeId="Thrust" SubtypeId="SmallDuctedPropellerLarge" Volume="5" FunctionalUnderwater="true" FunctionalAboveWater="false" />
+	
+    <BlockConfig TypeId="Thrust" SubtypeId="LargeDuctedPropellerSmall" Volume="0.9" FunctionalUnderwater="true" FunctionalAboveWater="false" />
+    <BlockConfig TypeId="Thrust" SubtypeId="LargeDuctedPropellerLarge" Volume="25" FunctionalUnderwater="true" FunctionalAboveWater="false" />
+
+    <BlockConfig TypeId="Wheel" SubtypeId="MetalWheel3x3" Volume="0.05" />
+	
+    <BlockConfig TypeId="CubeBlock" SubtypeId="LargeFlotationTank" Volume="20" />
+    <BlockConfig TypeId="CubeBlock" SubtypeId="LargeFlotationCube" Volume="20" />
+    <BlockConfig TypeId="CubeBlock" SubtypeId="SmallFlotationTank" Volume="1" />
+    <BlockConfig TypeId="CubeBlock" SubtypeId="SmallFlotationCube" Volume="1" />
+	
+  </BlockConfigs>
+</WaterConfig>

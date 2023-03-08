@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+    <Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
+      <Id>
+        <TypeId>TimerBlock</TypeId>
+        <SubtypeId>MicroTimer</SubtypeId>
+      </Id>
+      <PCU>25</PCU>
+      <BlockPairName>MicroTimer</BlockPairName>
+      <DisplayName>Micro Timer</DisplayName>
+      <Description>Description_Timer</Description>
+      <Icon>..\400131986\Textures\Icons\MicroTimer.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>..\400131986\Models\MicroTimer.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="2" />
+        <Component Subtype="Construction" Count="2" />
+        <Component Subtype="Computer" Count="1" />
+        <Component Subtype="Construction" Count="1" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.0" File="..\400131986\Models\MicroTimer_Construction1.mwm" />
+      </BuildProgressModels>
+      <BuildTimeSeconds>2</BuildTimeSeconds>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0.41" StartY="0.41" EndX="0.59" EndY="0.59" />
+      </MountPoints>
+      <IsAirTight>false</IsAirTight>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      
+      <EmissiveColorPreset>Timer</EmissiveColorPreset>
+      <TimerSoundStart>BlockTimerSignalA</TimerSoundStart>
+      <TimerSoundMid>BlockTimerSignalB</TimerSoundMid>
+      <TimerSoundEnd>BlockTimerSignalC</TimerSoundEnd>
+      <PrimarySound>BlockTimer</PrimarySound>
+      
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+    </Definition>
+
+    <Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
+      <Id>
+        <TypeId>TimerBlock</TypeId>
+        <SubtypeId>LargeMicroTimer</SubtypeId>
+      </Id>
+      <PCU>25</PCU>
+      <BlockPairName>MicroTimer</BlockPairName>
+      <DisplayName>Micro Timer</DisplayName>
+      <Description>Description_Timer</Description>
+      <Icon>..\400131986\Textures\Icons\MicroTimer.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>..\400131986\Models\LargeMicroTimer.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="2" />
+        <Component Subtype="Construction" Count="2" />
+        <Component Subtype="Computer" Count="1" />
+        <Component Subtype="Construction" Count="1" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.0" File="..\400131986\Models\LargeMicroTimer_Construction1.mwm" />
+      </BuildProgressModels>
+      <BuildTimeSeconds>2</BuildTimeSeconds>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0.48" StartY="0.48" EndX="0.52" EndY="0.52" />
+      </MountPoints>
+      <IsAirTight>false</IsAirTight>
+      <ResourceSinkGroup>Utility</ResourceSinkGroup>
+      
+      <EmissiveColorPreset>Timer</EmissiveColorPreset>
+      <TimerSoundStart>BlockTimerSignalA</TimerSoundStart>
+      <TimerSoundMid>BlockTimerSignalB</TimerSoundMid>
+      <TimerSoundEnd>BlockTimerSignalC</TimerSoundEnd>
+      <PrimarySound>BlockTimer</PrimarySound>
+      
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+    </Definition>
+
+  </CubeBlocks>
+</Definitions>

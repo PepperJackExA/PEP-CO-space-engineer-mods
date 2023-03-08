@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Components>
+	
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>Foam</SubtypeId>
+            </Id>
+            <DisplayName>Buoyancy Foam</DisplayName>
+			<Icon>Icons\Foam.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.1</Y>
+                <Z>0.1</Z>
+            </Size>
+            <Mass>0</Mass>
+            <Volume>25</Volume>
+            <Model>Models\Foam.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>30</MaxIntegrity>
+        </Component>
+	
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>BuoyancyTube</SubtypeId>
+            </Id>
+            <DisplayName>Buoyancy Tube</DisplayName>
+			<Icon>Icons\BuoyancyTube.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.1</Y>
+                <Z>0.1</Z>
+            </Size>
+            <Mass>0.2</Mass>
+            <Volume>25</Volume>
+            <Model>Models\BuoyancyTube.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>30</MaxIntegrity>
+        </Component>
+		
+    </Components>
+</Definitions>

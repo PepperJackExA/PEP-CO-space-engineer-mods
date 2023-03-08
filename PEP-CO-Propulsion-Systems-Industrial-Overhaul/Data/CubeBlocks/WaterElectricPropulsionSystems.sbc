@@ -1,0 +1,1082 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlockVariantGroups><!-- Windows -->
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SGElectricPropellers" />
+            <Blocks>
+                <Block Type="Thrust" Subtype="SG1x1ElectricPropeller3Blades" />
+                <Block Type="Thrust" Subtype="SG1x1ElectricPropeller4Blades" />
+                <Block Type="Thrust" Subtype="SG1x1ElectricPropeller5Blades" />
+
+                <Block Type="Thrust" Subtype="SG3x3ElectricPropeller3Blades" />
+                <Block Type="Thrust" Subtype="SG3x3ElectricPropeller4Blades" />
+                <Block Type="Thrust" Subtype="SG3x3ElectricPropeller5Blades" />
+            </Blocks>
+        </BlockVariantGroup>
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LGElectricPropellers" />
+            <Blocks>
+                <Block Type="Thrust" Subtype="LG1x1ElectricPropeller3Blades" />
+                <Block Type="Thrust" Subtype="LG1x1ElectricPropeller4Blades" />
+                <Block Type="Thrust" Subtype="LG1x1ElectricPropeller5Blades" />
+
+                <Block Type="Thrust" Subtype="LG3x3ElectricPropeller3Blades" />
+                <Block Type="Thrust" Subtype="LG3x3ElectricPropeller4Blades" />
+                <Block Type="Thrust" Subtype="LG3x3ElectricPropeller5Blades" />
+            </Blocks>
+        </BlockVariantGroup>
+    </BlockVariantGroups>
+    <CategoryClasses>
+        <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+          <Id>
+            <TypeId>GuiBlockCategoryDefinition</TypeId>
+            <SubtypeId/>
+          </Id>
+          <DisplayName>Propulsion Systems</DisplayName>
+          <Name>PropulsionSystem</Name>
+          <ItemIds>
+            <string>Thrust/SG1x1ElectricPropeller3Blades</string>
+            <string>Thrust/SG1x1ElectricPropeller4Blades</string>
+            <string>Thrust/SG1x1ElectricPropeller5Blades</string>
+
+            <string>Thrust/LG1x1ElectricPropeller3Blades</string>
+            <string>Thrust/LG1x1ElectricPropeller4Blades</string>
+            <string>Thrust/LG1x1ElectricPropeller5Blades</string>
+
+            <string>Thrust/SG3x3ElectricPropeller3Blades</string>
+            <string>Thrust/SG3x3ElectricPropeller4Blades</string>
+            <string>Thrust/SG3x3ElectricPropeller5Blades</string>
+
+            <string>Thrust/LG3x3ElectricPropeller3Blades</string>
+            <string>Thrust/LG3x3ElectricPropeller4Blades</string>
+            <string>Thrust/LG3x3ElectricPropeller5Blades</string>
+          </ItemIds>
+        </Category>
+    </CategoryClasses>
+    
+    <CubeBlocks>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>SG1x1ElectricPropeller3Blades</SubtypeId>
+			</Id>
+			<DisplayName>Small 3 Blade 1x1 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG1x1ElectricPropeller3Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="3" />
+                <Component Subtype="Construction" Count="5" />
+                <Component Subtype="SmallTube" Count="1" />
+                <Component Subtype="CopperWire" Count="2" />
+                <Component Subtype="Motor" Count="1" />
+                <Component Subtype="SteelPlate" Count="3" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG1x1ElectricPropeller3Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG1x1ElectricPropeller3Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SG1x1ElectricPropeller3Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>48000</ForceMagnitude>
+            <MaxPowerConsumption>0.2</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>LG1x1ElectricPropeller3Blades</SubtypeId>
+			</Id>
+			<DisplayName>Large 3 Blade 1x1 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+            <CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\LG1x1ElectricPropeller3Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="30" />
+                <Component Subtype="Construction" Count="28" />
+                <Component Subtype="LargeTube" Count="10" />
+                <Component Subtype="CopperWire" Count="20" />
+                <Component Subtype="Motor" Count="20" />
+                <Component Subtype="SteelPlate" Count="30" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\LG1x1ElectricPropeller3Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\LG1x1ElectricPropeller3Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG1x1ElectricPropeller3Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>364500</ForceMagnitude>
+            <MaxPowerConsumption>9.028125</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>SG1x1ElectricPropeller4Blades</SubtypeId>
+			</Id>
+			<DisplayName>Small 4 Blade 1x1 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+            <CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG1x1ElectricPropeller4Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="5" />
+                <Component Subtype="Construction" Count="8" />
+                <Component Subtype="SmallTube" Count="1" />
+                <Component Subtype="CopperWire" Count="4" />
+                <Component Subtype="Motor" Count="2" />
+                <Component Subtype="SteelPlate" Count="5" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.50" EndX="1.00" EndY="0.50"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG1x1ElectricPropeller4Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG1x1ElectricPropeller4Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>72000</ForceMagnitude>
+            <MaxPowerConsumption>0.3</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>LG1x1ElectricPropeller4Blades</SubtypeId>
+			</Id>
+			<DisplayName>Large 4 Blade 1x1 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\LG1x1ElectricPropeller4Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="50" />
+                <Component Subtype="Construction" Count="35" />
+                <Component Subtype="LargeTube" Count="10" />
+                <Component Subtype="CopperWire" Count="25" />
+                <Component Subtype="Motor" Count="40" />
+                <Component Subtype="SteelPlate" Count="50" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.50" EndX="1.00" EndY="0.50"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\LG1x1ElectricPropeller4Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\LG1x1ElectricPropeller4Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG1x1ElectricPropeller4Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>546750</ForceMagnitude>
+            <MaxPowerConsumption>13.5421875</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>SG1x1ElectricPropeller5Blades</SubtypeId>
+			</Id>
+			<DisplayName>Small 5 Blade 1x1 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG1x1ElectricPropeller5Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="8" />
+                <Component Subtype="Construction" Count="11" />
+                <Component Subtype="SmallTube" Count="1" />
+                <Component Subtype="CopperWire" Count="7" />
+                <Component Subtype="Motor" Count="3" />
+                <Component Subtype="SteelPlate" Count="8" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG1x1ElectricPropeller5Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG1x1ElectricPropeller5Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SG1x1ElectricPropeller5Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>108000</ForceMagnitude>
+            <MaxPowerConsumption>0.45</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>LG1x1ElectricPropeller5Blades</SubtypeId>
+			</Id>
+			<DisplayName>Large 5 Blade 1x1 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\LG1x1ElectricPropeller5Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="60" />
+                <Component Subtype="Construction" Count="40" />
+                <Component Subtype="LargeTube" Count="10" />
+                <Component Subtype="CopperWire" Count="25" />
+                <Component Subtype="Motor" Count="50" />
+                <Component Subtype="SteelPlate" Count="60" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\LG1x1ElectricPropeller5Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\LG1x1ElectricPropeller5Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG1x1ElectricPropeller5Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>820125</ForceMagnitude>
+            <MaxPowerConsumption>20.31328125</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>SG3x3ElectricPropeller3Blades</SubtypeId>
+			</Id>
+			<DisplayName>Small 3 Blade 3x3 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG3x3ElectricPropeller3Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="15" />
+                <Component Subtype="Construction" Count="18" />
+                <Component Subtype="LargeTube" Count="1" />
+                <Component Subtype="CopperWire" Count="14" />
+                <Component Subtype="Motor" Count="6" />
+                <Component Subtype="SteelPlate" Count="15" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG3x3ElectricPropeller3Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG3x3ElectricPropeller3Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SG3x3ElectricPropeller3Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>162000</ForceMagnitude>
+            <MaxPowerConsumption>2.675</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>LG3x3ElectricPropeller3Blades</SubtypeId>
+			</Id>
+			<DisplayName>Large 3 Blade 3x3 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\LG3x3ElectricPropeller3Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="120" />
+                <Component Subtype="Construction" Count="60" />
+                <Component Subtype="LargeTube" Count="20" />
+                <Component Subtype="CopperWire" Count="40" />
+                <Component Subtype="Motor" Count="70" />
+                <Component Subtype="SteelPlate" Count="120" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="1.00" StartY="1.00" EndX="2.00" EndY="2.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\LG3x3ElectricPropeller3Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\LG3x3ElectricPropeller3Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG3x3ElectricPropeller3Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>1230188</ForceMagnitude>
+            <MaxPowerConsumption>50.469921875</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>SG3x3ElectricPropeller4Blades</SubtypeId>
+			</Id>
+			<DisplayName>Small 4 Blade 3x3 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG3x3ElectricPropeller4Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="20" />
+                <Component Subtype="Construction" Count="22" />
+                <Component Subtype="LargeTube" Count="1" />
+                <Component Subtype="CopperWire" Count="14" />
+                <Component Subtype="Motor" Count="8" />
+                <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG3x3ElectricPropeller4Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG3x3ElectricPropeller4Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SG3x3ElectricPropeller4Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>243000</ForceMagnitude>
+            <MaxPowerConsumption>4.0125</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>LG3x3ElectricPropeller4Blades</SubtypeId>
+			</Id>
+			<DisplayName>Large 4 Blade 3x3 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\LG3x3ElectricPropeller4Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="150" />
+                <Component Subtype="Construction" Count="70" />
+                <Component Subtype="LargeTube" Count="30" />
+                <Component Subtype="CopperWire" Count="55" />
+                <Component Subtype="Motor" Count="85" />
+                <Component Subtype="SteelPlate" Count="150" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="1.00" StartY="1.00" EndX="2.00" EndY="2.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\LG3x3ElectricPropeller4Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\LG3x3ElectricPropeller4Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG3x3ElectricPropeller4Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>1845281</ForceMagnitude>
+            <MaxPowerConsumption>75.7048828125</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>SG3x3ElectricPropeller5Blades</SubtypeId>
+			</Id>
+			<DisplayName>Small 5 Blade 3x3 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG3x3ElectricPropeller5Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="25" />
+                <Component Subtype="Construction" Count="28" />
+                <Component Subtype="LargeTube" Count="1" />
+                <Component Subtype="CopperWire" Count="20" />                
+                <Component Subtype="GoldWire" Count="5" />
+                <Component Subtype="Motor" Count="10" />
+                <Component Subtype="SteelPlate" Count="25" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG3x3ElectricPropeller5Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG3x3ElectricPropeller5Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SG3x3ElectricPropeller5Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>364500</ForceMagnitude>
+            <MaxPowerConsumption>6.01875</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+		</Definition>
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+				<SubtypeId>LG3x3ElectricPropeller5Blades</SubtypeId>
+			</Id>
+			<DisplayName>Large 5 Blade 3x3 Electric Ship Screw</DisplayName>
+			<Description>Electrical Propulsion System for use under water</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG1x1ElectricPropeller3Blades.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\LG3x3ElectricPropeller5Blades.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="170" />
+                <Component Subtype="Construction" Count="80" />
+                <Component Subtype="LargeTube" Count="40" />
+                <Component Subtype="CopperWire" Count="60" />
+                <Component Subtype="GoldWire" Count="10" />
+                <Component Subtype="Motor" Count="100" />
+                <Component Subtype="SteelPlate" Count="170" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="1.00" StartY="1.00" EndX="2.00" EndY="2.00" Default="true"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\LG3x3ElectricPropeller5Blades_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\LG3x3ElectricPropeller5Blades_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG3x3ElectricPropeller5Blades</BlockPairName>
+			<ThrusterType>Screw</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>2767922</ForceMagnitude>
+            <MaxPowerConsumption>113.55732421875</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <!--Test settings -->
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>20</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

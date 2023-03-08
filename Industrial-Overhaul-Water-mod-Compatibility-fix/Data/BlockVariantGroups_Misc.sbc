@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlockVariantGroups>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Flotation" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeFlotationTank" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeFlotationCube" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallFlotationTank" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallFlotationCube" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Propellers" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_Thrust" Subtype="SmallPropellerLarge" />
+                <Block Type="MyObjectBuilder_Thrust" Subtype="SmallPropellerSmall" />
+                <Block Type="MyObjectBuilder_Thrust" Subtype="MediumPropellerSmall" />
+                <Block Type="MyObjectBuilder_Thrust" Subtype="MediumPropellerLarge" />
+                <Block Type="MyObjectBuilder_Thrust" Subtype="LargePropellerSmall" />
+                <Block Type="MyObjectBuilder_Thrust" Subtype="LargePropellerLarge" />
+                <Block Type="MyObjectBuilder_Thrust" Subtype="SmallDuctedPropellerSmall" />
+                <Block Type="MyObjectBuilder_Thrust" Subtype="SmallDuctedPropellerLarge" />
+                <Block Type="MyObjectBuilder_Thrust" Subtype="LargeDuctedPropellerSmall" />
+                <Block Type="MyObjectBuilder_Thrust" Subtype="LargeDuctedPropellerLarge" />
+            </Blocks>
+        </BlockVariantGroup>
+
+    </BlockVariantGroups>
+</Definitions>

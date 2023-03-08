@@ -1,0 +1,342 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+
+<!-- LARGE GRID SLOPED CARGO CONTAINER -->
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>SlopedIndustrialCargoContainer</SubtypeId>
+			</Id>
+			<DisplayName>Sloped Industrial Cargo Container</DisplayName>
+			<Description>A large industrial cargo container.</Description>
+			<Icon>..\2830050106\Textures\GUI\Icons\SlopedIndustrialCargoContainer.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2830050106\Models\Cubes\large\SlopedIndustrialCargoContainer.mwm</Model>
+    		<Components>
+    		  	<Component Subtype="InteriorPlate" Count="240" />
+    		  	<Component Subtype="Construction" Count="60" />
+    		  	<Component Subtype="MetalGrid" Count="24" />
+    		  	<Component Subtype="CopperWire" Count="20" />
+    		  	<Component Subtype="Motor" Count="20" />
+    		  	<Component Subtype="Display" Count="1" />
+    		  	<Component Subtype="Computer" Count="8" />
+    		  	<Component Subtype="Construction" Count="20" />
+    		  	<Component Subtype="InteriorPlate" Count="60" />
+    		</Components>
+    		<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.01" EndX="3.00" EndY="1.45"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="1.51" StartY="1.51" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.48"/>
+				<MountPoint Side="Right" StartX="0.01" StartY="1.46" EndX="1.54" EndY="2.99"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.45"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.45"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2830050106\Models\\Cubes\large\SlopedIndustrialCargoContainer_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2830050106\Models\\Cubes\large\SlopedIndustrialCargoContainer_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2830050106\Models\\Cubes\large\SlopedIndustrialCargoContainer_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SlopedIndustrialCargoContainer</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			
+			<EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>45</BuildTimeSeconds>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>10</PCU>
+		</Definition>
+
+<!-- PORTED SLOPED CONTAINER -->
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>PortedSlopedIndustrialCargoContainer</SubtypeId>
+			</Id>
+			<DisplayName>Ported Sloped Industrial Cargo Container</DisplayName>
+			<Description>A large industrial cargo container with a front facing conveyor port, made with connectors in mind!</Description>
+			<Icon>..\2830050106\Textures\GUI\Icons\PortedSlopedIndustrialCargoContainer.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2830050106\Models\Cubes\large\PortedSlopedIndustrialCargoContainer.mwm</Model>
+      		<Components>
+      		  	<Component Subtype="InteriorPlate" Count="240" />
+      		  	<Component Subtype="Construction" Count="60" />
+      		  	<Component Subtype="MetalGrid" Count="24" />
+      		  	<Component Subtype="CopperWire" Count="20" />
+      		  	<Component Subtype="Motor" Count="20" />
+      		  	<Component Subtype="Display" Count="1" />
+      		  	<Component Subtype="Computer" Count="8" />
+      		  	<Component Subtype="Construction" Count="20" />
+      		  	<Component Subtype="InteriorPlate" Count="60" />
+      		</Components>
+      		<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.01" EndX="3.00" EndY="1.45"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="1.51" StartY="1.51" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.48"/>
+				<MountPoint Side="Right" StartX="0.01" StartY="1.46" EndX="1.54" EndY="2.99"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.45"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.45"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2830050106\Models\\Cubes\large\PortedSlopedIndustrialCargoContainer_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2830050106\Models\\Cubes\large\PortedSlopedIndustrialCargoContainer_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2830050106\Models\\Cubes\large\PortedSlopedIndustrialCargoContainer_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>PortedSlopedIndustrialCargoContainer</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			
+			<EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>45</BuildTimeSeconds>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>10</PCU>
+		</Definition>
+
+
+<!-- SMALL GRID MEDIUM SLOPED CARGO CONTAINER -->
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>SlopedIndustrialCargoContainerMedium</SubtypeId>
+			</Id>
+			<DisplayName>Sloped Industrial Cargo Container Medium</DisplayName>
+			<Description>A medium industrial cargo container.</Description>
+			<Icon>..\2830050106\Textures\GUI\Icons\SlopedIndustrialCargoContainerMedium.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2830050106\Models\Cubes\small\SlopedIndustrialCargoContainerMedium.mwm</Model>
+      		<Components>
+      		  	<Component Subtype="InteriorPlate" Count="20" />
+      		  	<Component Subtype="Construction" Count="10" />
+      		  	<Component Subtype="Motor" Count="4" />
+      		  	<Component Subtype="CopperWire" Count="5" />
+      		  	<Component Subtype="Computer" Count="4" />
+      		  	<Component Subtype="InteriorPlate" Count="10" />
+      		</Components>
+      		<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.50"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="1.49" StartY="1.49" EndX="2.99" EndY="2.99"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.49"/>
+				<MountPoint Side="Right" StartX="0.01" StartY="1.49" EndX="1.51" EndY="2.99"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.01" EndX="3.00" EndY="1.50"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.01" EndX="3.00" EndY="1.51"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2830050106\Models\\Cubes\small\SlopedIndustrialCargoContainerMedium_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2830050106\Models\\Cubes\small\SlopedIndustrialCargoContainerMedium_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2830050106\Models\\Cubes\small\SlopedIndustrialCargoContainerMedium_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SlopedIndustrialCargoContainer</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			
+			<EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>45</BuildTimeSeconds>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>10</PCU>
+		</Definition>
+
+
+<!-- LARGE GRID REINFORCED CARGO CONTAINER LARGE -->
+		
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>ReinforcedCargoContainerLarge</SubtypeId>
+			</Id>
+			<DisplayName>Reinforced Cargo Container</DisplayName>
+			<Description>A cargo container with increased durability at the expense of conveyor port access.</Description>
+			<Icon>..\2830050106\Textures\GUI\Icons\ReinforcedCargoContainerLarge.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2830050106\Models\Cubes\large\ReinforcedCargoContainerLarge.mwm</Model>
+      		<Components>
+      		  	<Component Subtype="InteriorPlate" Count="600" />
+      		  	<Component Subtype="Construction" Count="120" />
+      		  	<Component Subtype="MetalGrid" Count="48" />
+      		  	<Component Subtype="CopperWire" Count="40" />
+      		  	<Component Subtype="Motor" Count="40" />
+      		  	<Component Subtype="Display" Count="1" />
+      		  	<Component Subtype="Computer" Count="8" />
+      		  	<Component Subtype="Construction" Count="40" />
+      		  	<Component Subtype="InteriorPlate" Count="120" />
+      		</Components>
+      		<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="1.05" EndX="3.00" EndY="1.95"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="1.13" StartY="1.95" EndX="2.98" EndY="2.98"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="1.05" EndX="3.00" EndY="1.95"/>
+				<MountPoint Side="Left" StartX="1.11" StartY="0.00" EndX="2.99" EndY="1.05"/>
+				<MountPoint Side="Right" StartX="0.01" StartY="1.96" EndX="1.88" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="1.05" EndX="3.00" EndY="1.95"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.01" EndX="1.87" EndY="1.04"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="0.89"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="2.11" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2830050106\Models\\Cubes\large\ReinforcedCargoContainerLarge_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2830050106\Models\\Cubes\large\ReinforcedCargoContainerLarge_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2830050106\Models\\Cubes\large\ReinforcedCargoContainerLarge_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>ReinforcedCargoContainer</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+
+			<EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>45</BuildTimeSeconds>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>10</PCU>
+
+		</Definition>
+
+
+<!-- LARGE GRID Industrial Silo XL -->
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>IndustrialSiloXL</SubtypeId>
+			</Id>
+			<DisplayName>Industrial Silo XL</DisplayName>
+			<Description>An extra large inustrial silo-style cargo container</Description>
+			<Icon>..\2830050106\Textures\GUI\Icons\IndustrialSiloXL.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="6" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2830050106\Models\Cubes\large\IndustrialSiloXL.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="500" />
+                <Component Subtype="Construction" Count="100" />
+                <Component Subtype="MetalGrid" Count="40" />
+                <Component Subtype="CopperWire" Count="40" />
+                <Component Subtype="Motor" Count="30" />
+                <Component Subtype="Display" Count="1" />
+                <Component Subtype="Computer" Count="12" />
+                <Component Subtype="Construction" Count="40" />
+                <Component Subtype="InteriorPlate" Count="80" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.75" StartY="0.00" EndX="2.25" EndY="6.00"/>
+				<MountPoint Side="Back" StartX="0.75" StartY="0.00" EndX="2.25" EndY="6.00"/>
+				<MountPoint Side="Left" StartX="0.75" StartY="0.00" EndX="2.25" EndY="6.00"/>
+				<MountPoint Side="Right" StartX="0.75" StartY="0.00" EndX="2.25" EndY="6.00"/>
+				<MountPoint Side="Top" StartX="0.15" StartY="0.15" EndX="2.85" EndY="2.85"/>
+				<MountPoint Side="Bottom" StartX="0.15" StartY="0.15" EndX="2.85" EndY="2.85"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2830050106\Models\\Cubes\large\IndustrialSiloXL_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2830050106\Models\\Cubes\large\IndustrialSiloXL_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2830050106\Models\\Cubes\large\IndustrialSiloXL_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>IndustrialSiloXL</BlockPairName>
+			<MirroringX>Y</MirroringX>
+			<MirroringY>X</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+
+			<EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>45</BuildTimeSeconds>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+		</Definition>
+
+<!-- SMALL GRID MEDIUM Reinforced CARGO CONTAINER -->
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>ReinforcedCargoContainerMedium</SubtypeId>
+			</Id>
+			<DisplayName>Reinforced Cargo Container Medium</DisplayName>
+			<Description>A cargo container with increased durability at the expense of conveyor port access.</Description>
+			<Icon>..\2830050106\Textures\GUI\Icons\ReinforcedCargoContainerMedium.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2830050106\Models\Cubes\small\ReinforcedCargoContainerMedium.mwm</Model>
+			<Components>
+      		  	<Component Subtype="InteriorPlate" Count="40" />
+      		  	<Component Subtype="Construction" Count="20" />
+      		  	<Component Subtype="Motor" Count="8" />
+      		  	<Component Subtype="CopperWire" Count="5" />
+      		  	<Component Subtype="Computer" Count="4" />
+      		  	<Component Subtype="InteriorPlate" Count="20" />
+      		</Components>
+      		<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="1.18" EndX="3.00" EndY="1.82"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="1.15" EndX="3.00" EndY="1.85"/>
+				<MountPoint Side="Left" StartX="1.30" StartY="1.85" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="1.31" StartY="0.00" EndX="3.00" EndY="1.16"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="1.85" EndX="1.70" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="1.15" EndX="3.00" EndY="1.85"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.69" EndY="1.16"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="0.61"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="2.39" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2830050106\Models\\Cubes\small\ReinforcedCargoContainerMedium_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2830050106\Models\\Cubes\small\ReinforcedCargoContainerMedium_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2830050106\Models\\Cubes\small\ReinforcedCargoContainerMedium_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>ReinforcedCargoContainer</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			
+			<EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>45</BuildTimeSeconds>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>10</PCU>
+		</Definition>
+
+	</CubeBlocks>
+</Definitions>

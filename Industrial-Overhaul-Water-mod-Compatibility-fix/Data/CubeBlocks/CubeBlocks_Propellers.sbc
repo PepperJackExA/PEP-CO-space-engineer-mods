@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+	
+	<!-- Small Propeller -->
+	
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>SmallPropellerSmall</SubtypeId>
+            </Id>
+            <DisplayName>Small Propeller</DisplayName>
+            <Icon>..\2472488194\Icons\SmallPropeller.dds</Icon>
+            <Description>Basic Propeller for ships.
+			Stops working when out of water.  Might need to get out of your seat to take a look to fix.</Description>
+            <CubeSize>Small</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="1" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2472488194\Models\SmallPropellerSmall.mwm</Model>
+            <ThrusterType>Atmospheric</ThrusterType>
+            <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+            <Components>
+                <Component Subtype="SteelPlate" Count="3" />
+                <Component Subtype="Construction" Count="3" />
+                <Component Subtype="LargeTube" Count="2" />
+                <Component Subtype="Motor" Count="5" />
+                <Component Subtype="SteelPlate" Count="2" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+            <Center x="0" y="0" z="0" />
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+			<BlockPairName>SmallPropeller</BlockPairName>
+			
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="..\2472488194\Models\Construct\SmallPropellerSmallConstruct1.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="..\2472488194\Models\Construct\SmallPropellerSmallConstruct2.mwm" />
+			</BuildProgressModels>
+			
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.3" StartY="0.3" EndX="0.7" EndY="0.7"/>
+			</MountPoints>
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>24000</ForceMagnitude>
+            <MaxPowerConsumption>0.2</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.9</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>SmallPropellerLarge</SubtypeId>
+            </Id>
+            <DisplayName>Small Propeller</DisplayName>
+            <Icon>..\2472488194\Icons\SmallPropeller.dds</Icon>
+            <Description>Basic Propeller for ships.
+			Stops working when out of water.  Might need to get out of your seat to take a look to fix.</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="1" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2472488194\Models\SmallPropellerLarge.mwm</Model>
+            <ThrusterType>Atmospheric</ThrusterType>
+            <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+            <Components>
+                <Component Subtype="SteelPlate" Count="15" />
+                <Component Subtype="Construction" Count="15" />
+                <Component Subtype="LargeTube" Count="10" />
+                <Component Subtype="Motor" Count="25" />
+                <Component Subtype="SteelPlate" Count="10" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+            <Center x="0" y="0" z="0" />
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+			<BlockPairName>SmallPropeller</BlockPairName>
+			
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="..\2472488194\Models\Construct\SmallPropellerLargeConstruct1.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="..\2472488194\Models\Construct\SmallPropellerLargeConstruct2.mwm" />
+			</BuildProgressModels>
+			
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.3" StartY="0.3" EndX="0.7" EndY="0.7"/>
+			</MountPoints>
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>120000</ForceMagnitude>
+            <MaxPowerConsumption>1</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.9</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+	
+	<!-- Medium Propeller -->
+	
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>MediumPropellerSmall</SubtypeId>
+            </Id>
+            <DisplayName>Medium Propeller</DisplayName>
+            <Icon>..\2472488194\Icons\MediumPropeller.dds</Icon>
+            <Description>Basic Propeller for ships.
+			Stops working when out of water.  Might need to get out of your seat to take a look to fix.</Description>
+            <CubeSize>Small</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="3" y="3" z="2" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2472488194\Models\MediumPropellerSmall.mwm</Model>
+            <ThrusterType>Atmospheric</ThrusterType>
+            <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+            <Components>
+                <Component Subtype="SteelPlate" Count="5" />
+                <Component Subtype="Construction" Count="10" />
+                <Component Subtype="LargeTube" Count="5" />
+                <Component Subtype="Motor" Count="10" />
+                <Component Subtype="SteelPlate" Count="3" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+            <Center x="1" y="1" z="0" />
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+			<BlockPairName>MediumPropeller</BlockPairName>
+			
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="..\2472488194\Models\Construct\MediumPropellerSmallConstruct1.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="..\2472488194\Models\Construct\MediumPropellerSmallConstruct2.mwm" />
+			</BuildProgressModels>
+			
+			<MountPoints>
+				<MountPoint Side="Back" StartX="1" StartY="1" EndX="2" EndY="2"/>
+			</MountPoints>
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>45000</ForceMagnitude>
+            <MaxPowerConsumption>0.4</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.9</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>MediumPropellerLarge</SubtypeId>
+            </Id>
+            <DisplayName>Medium Propeller</DisplayName>
+            <Icon>..\2472488194\Icons\MediumPropeller.dds</Icon>
+            <Description>Basic Propeller for ships.
+			Stops working when out of water.  Might need to get out of your seat to take a look to fix.</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="3" y="3" z="2" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2472488194\Models\MediumPropellerLarge.mwm</Model>
+            <ThrusterType>Atmospheric</ThrusterType>
+            <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+            <Components>
+                <Component Subtype="SteelPlate" Count="25" />
+                <Component Subtype="Construction" Count="50" />
+                <Component Subtype="LargeTube" Count="25" />
+                <Component Subtype="Motor" Count="50" />
+                <Component Subtype="SteelPlate" Count="15" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+            <Center x="1" y="1" z="0" />
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+			<BlockPairName>MediumPropeller</BlockPairName>
+			
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="..\2472488194\Models\Construct\MediumPropellerLargeConstruct1.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="..\2472488194\Models\Construct\MediumPropellerLargeConstruct2.mwm" />
+			</BuildProgressModels>
+			
+			<MountPoints>
+				<MountPoint Side="Back" StartX="1" StartY="1" EndX="2" EndY="2"/>
+			</MountPoints>
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>225000</ForceMagnitude>
+            <MaxPowerConsumption>2</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.9</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+	
+	<!-- Large Propeller -->
+	
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>LargePropellerSmall</SubtypeId>
+            </Id>
+            <DisplayName>Large Propeller</DisplayName>
+            <Icon>..\2472488194\Icons\LargePropeller.dds</Icon>
+            <Description>Basic Propeller for ships.
+			Stops working when out of water.  Might need to get out of your seat to take a look to fix.</Description>
+            <CubeSize>Small</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="5" y="5" z="2" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2472488194\Models\LargePropellerSmall.mwm</Model>
+            <ThrusterType>Atmospheric</ThrusterType>
+            <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+            <Components>
+                <Component Subtype="SteelPlate" Count="10" />
+                <Component Subtype="Construction" Count="15" />
+                <Component Subtype="LargeTube" Count="8" />
+                <Component Subtype="Motor" Count="15" />
+                <Component Subtype="SteelPlate" Count="7" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+            <Center x="2" y="2" z="0" />
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+			<BlockPairName>LargePropeller</BlockPairName>
+			
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="..\2472488194\Models\Construct\LargePropellerSmallConstruct1.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="..\2472488194\Models\Construct\LargePropellerSmallConstruct2.mwm" />
+			</BuildProgressModels>
+			
+			<MountPoints>
+				<MountPoint Side="Back" StartX="2" StartY="2" EndX="3" EndY="3"/>
+			</MountPoints>
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>90000</ForceMagnitude>
+            <MaxPowerConsumption>1</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.9</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>LargePropellerLarge</SubtypeId>
+            </Id>
+            <DisplayName>Large Propeller</DisplayName>
+            <Icon>..\2472488194\Icons\LargePropeller.dds</Icon>
+            <Description>Basic Propeller for ships.
+			Stops working when out of water.  Might need to get out of your seat to take a look to fix.</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="5" y="5" z="2" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2472488194\Models\LargePropellerLarge.mwm</Model>
+            <ThrusterType>Atmospheric</ThrusterType>
+            <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+            <Components>
+                <Component Subtype="SteelPlate" Count="50" />
+                <Component Subtype="Construction" Count="75" />
+                <Component Subtype="LargeTube" Count="40" />
+                <Component Subtype="Motor" Count="75" />
+                <Component Subtype="SteelPlate" Count="30" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+            <Center x="2" y="2" z="0" />
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+			<BlockPairName>LargePropeller</BlockPairName>
+			
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="..\2472488194\Models\Construct\LargePropellerLargeConstruct1.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="..\2472488194\Models\Construct\LargePropellerLargeConstruct2.mwm" />
+			</BuildProgressModels>
+			
+			<MountPoints>
+				<MountPoint Side="Back" StartX="2" StartY="2" EndX="3" EndY="3"/>
+			</MountPoints>
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>250000</ForceMagnitude>
+            <MaxPowerConsumption>5</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.9</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+	
+	<!-- Small Ducted Propeller -->
+	
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>SmallDuctedPropellerSmall</SubtypeId>
+            </Id>
+            <DisplayName>Small Ducted Propeller</DisplayName>
+            <Icon>..\2472488194\Icons\SmallDuctedPropeller.dds</Icon>
+            <Description>Ducted Propellers provide better efficiency.
+			Stops working when out of water.  Might need to get out of your seat to take a look to fix.</Description>
+            <CubeSize>Small</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="1" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2472488194\Models\SmallDuctedPropellerSmall.mwm</Model>
+            <ThrusterType>Atmospheric</ThrusterType>
+            <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+            <Components>
+                <Component Subtype="SteelPlate" Count="5" />
+                <Component Subtype="Construction" Count="3" />
+                <Component Subtype="LargeTube" Count="3" />
+                <Component Subtype="SmallTube" Count="4" />
+                <Component Subtype="Motor" Count="6" />
+                <Component Subtype="SteelPlate" Count="5" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+            <Center x="0" y="0" z="0" />
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+			<BlockPairName>SmallDuctedPropeller</BlockPairName>
+			
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2472488194\Models\Construct\SmallDuctedPropellerSmallConstruct1.mwm" />
+				<Model BuildPercentUpperBound="0.66" File="..\2472488194\Models\Construct\SmallDuctedPropellerSmallConstruct2.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="..\2472488194\Models\Construct\SmallDuctedPropellerSmallConstruct3.mwm" />
+			</BuildProgressModels>
+			
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9"/>
+			</MountPoints>
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>30000</ForceMagnitude>
+            <MaxPowerConsumption>0.2</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.9</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>SmallDuctedPropellerLarge</SubtypeId>
+            </Id>
+            <DisplayName>Small Ducted Propeller</DisplayName>
+            <Icon>..\2472488194\Icons\SmallDuctedPropeller.dds</Icon>
+            <Description>Ducted Propellers provide better efficiency.
+			Stops working when out of water.  Might need to get out of your seat to take a look to fix.</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="1" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2472488194\Models\SmallDuctedPropellerLarge.mwm</Model>
+            <ThrusterType>Atmospheric</ThrusterType>
+            <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+            <Components>
+                <Component Subtype="SteelPlate" Count="25" />
+                <Component Subtype="Construction" Count="15" />
+                <Component Subtype="LargeTube" Count="15" />
+                <Component Subtype="SmallTube" Count="20" />
+                <Component Subtype="Motor" Count="30" />
+                <Component Subtype="SteelPlate" Count="25" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+            <Center x="0" y="0" z="0" />
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+			<BlockPairName>SmallDuctedPropeller</BlockPairName>
+			
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2472488194\Models\Construct\SmallDuctedPropellerLargeConstruct1.mwm" />
+				<Model BuildPercentUpperBound="0.66" File="..\2472488194\Models\Construct\SmallDuctedPropellerLargeConstruct2.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="..\2472488194\Models\Construct\SmallDuctedPropellerLargeConstruct3.mwm" />
+			</BuildProgressModels>
+			
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9"/>
+			</MountPoints>
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>150000</ForceMagnitude>
+            <MaxPowerConsumption>1</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.9</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+	
+	<!-- Large Ducted Propeller -->
+	
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>LargeDuctedPropellerSmall</SubtypeId>
+            </Id>
+            <DisplayName>Large Ducted Propeller</DisplayName>
+            <Icon>..\2472488194\Icons\LargeDuctedPropeller.dds</Icon>
+            <Description>Ducted Propellers provide better efficiency.
+			Stops working when out of water.  Might need to get out of your seat to take a look to fix.</Description>
+            <CubeSize>Small</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="3" y="3" z="3" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2472488194\Models\LargeDuctedPropellerSmall.mwm</Model>
+            <ThrusterType>Atmospheric</ThrusterType>
+            <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+            <Components>
+                <Component Subtype="SteelPlate" Count="8" />
+                <Component Subtype="Construction" Count="15" />
+                <Component Subtype="LargeTube" Count="7" />
+                <Component Subtype="SmallTube" Count="8" />
+                <Component Subtype="Motor" Count="12" />
+                <Component Subtype="SteelPlate" Count="8" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+            <Center x="1" y="0" z="1" />
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+			<BlockPairName>LargeDuctedPropeller</BlockPairName>
+			
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2472488194\Models\Construct\LargeDuctedPropellerSmallConstruct1.mwm" />
+				<Model BuildPercentUpperBound="0.66" File="..\2472488194\Models\Construct\LargeDuctedPropellerSmallConstruct2.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="..\2472488194\Models\Construct\LargeDuctedPropellerSmallConstruct3.mwm" />
+			</BuildProgressModels>
+			
+			<MountPoints>
+				<MountPoint Side="Top" StartX="1.1" StartY="1.1" EndX="1.9" EndY="1.9"/>
+			</MountPoints>
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>60000</ForceMagnitude>
+            <MaxPowerConsumption>0.6</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.9</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>LargeDuctedPropellerLarge</SubtypeId>
+            </Id>
+            <DisplayName>Large Ducted Propeller</DisplayName>
+            <Icon>..\2472488194\Icons\LargeDuctedPropeller.dds</Icon>
+            <Description>Ducted Propellers provide better efficiency.
+			Stops working when out of water.  Might need to get out of your seat to take a look to fix.</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="3" y="3" z="3" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2472488194\Models\LargeDuctedPropellerLarge.mwm</Model>
+            <ThrusterType>Atmospheric</ThrusterType>
+            <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+            <Components>
+                <Component Subtype="SteelPlate" Count="40" />
+                <Component Subtype="Construction" Count="75" />
+                <Component Subtype="LargeTube" Count="35" />
+                <Component Subtype="SmallTube" Count="40" />
+                <Component Subtype="Motor" Count="60" />
+                <Component Subtype="SteelPlate" Count="40" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+            <Center x="1" y="0" z="1" />
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+			<BlockPairName>LargeDuctedPropeller</BlockPairName>
+			
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2472488194\Models\Construct\LargeDuctedPropellerLargeConstruct1.mwm" />
+				<Model BuildPercentUpperBound="0.66" File="..\2472488194\Models\Construct\LargeDuctedPropellerLargeConstruct2.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="..\2472488194\Models\Construct\LargeDuctedPropellerLargeConstruct3.mwm" />
+			</BuildProgressModels>
+			
+			<MountPoints>
+				<MountPoint Side="Top" StartX="1.1" StartY="1.1" EndX="1.9" EndY="1.9"/>
+			</MountPoints>
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>300000</ForceMagnitude>
+            <MaxPowerConsumption>2.5</MaxPowerConsumption>
+            <MinPowerConsumption>0</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0.9</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+            <NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+
+            <FlameDamageLengthScale>0</FlameDamageLengthScale>
+            <FlameLengthScale>0</FlameLengthScale>
+            <FlameIdleColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+                <W>0</W>
+            </FlameFullColor>
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridSmallThruster</FlameFlare>
+            <FlameVisibilityDistance>0</FlameVisibilityDistance>
+            <FlameGlareQuerySize>0</FlameGlareQuerySize>
+            <PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>1</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>10</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
+            <PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <Public>true</Public>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>3600</unsignedInt>
+                <unsignedInt>0</unsignedInt>
+            </TieredUpdateTimes>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+    </CubeBlocks>
+</Definitions>
