@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions>
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>Mafoo_Small_LongConveyorTube</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Mafoo_Small_LongConveyorTube</DisplayName>
+			<Icon>..\1124114101\Textures\Icons\Mafoo_Small_LongConveyorTube.dds</Icon>
+			<Description>Description_Mafoo_ConveyorTube</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="10"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\1124114101\Models\Mafoo_Small_LongConveyorTube.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="Motor" Count="10" />
+				<Component Subtype="Construction" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.1" StartY="0.1" EndX="0.2" EndY="0.9" Default="true"/>
+				<MountPoint Side="Back" StartX="0.8" StartY="0.1" EndX="0.9" EndY="0.9"/>
+				<MountPoint Side="Back" StartX="0.2" StartY="0.1" EndX="0.8" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0.2" StartY="0.8" EndX="0.8" EndY="0.9"/>
+				<MountPoint Side="Front" StartX="0.1" StartY="0.1" EndX="0.2" EndY="0.9"/>
+				<MountPoint Side="Front" StartX="0.8" StartY="0.1" EndX="0.9" EndY="0.9"/>
+				<MountPoint Side="Front" StartX="0.2" StartY="0.1" EndX="0.8" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0.2" StartY="0.8" EndX="0.8" EndY="0.9"/>
+			</MountPoints>
+			<CriticalComponent Subtype="Construction" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="..\1124114101\Models\Mafoo_Small_LongConveyorTube_BS1.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>Mafoo_Small_LongConveyorTube</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>3</BuildTimeSeconds>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyed_Small</DestroyEffect>
+			<DestroySound>PoofExplosionCat1</DestroySound>
+			<PCU>10</PCU>
+			<IsAirTight>false</IsAirTight>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>Mafoo_Small_MediumConveyorTube</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Mafoo_Small_MediumConveyorTube</DisplayName>
+			<Icon>..\1124114101\Textures\Icons\Mafoo_Small_MediumConveyorTube.dds</Icon>
+			<Description>Description_Mafoo_ConveyorTube</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\1124114101\Models\Mafoo_Small_MediumConveyorTube.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="5" />
+				<Component Subtype="Motor" Count="5" />
+				<Component Subtype="Construction" Count="5" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.1" StartY="0.1" EndX="0.2" EndY="0.9" Default="true"/>
+				<MountPoint Side="Back" StartX="0.8" StartY="0.1" EndX="0.9" EndY="0.9"/>
+				<MountPoint Side="Back" StartX="0.2" StartY="0.1" EndX="0.8" EndY="0.2"/>
+				<MountPoint Side="Back" StartX="0.2" StartY="0.8" EndX="0.8" EndY="0.9"/>
+				<MountPoint Side="Front" StartX="0.1" StartY="0.1" EndX="0.2" EndY="0.9"/>
+				<MountPoint Side="Front" StartX="0.8" StartY="0.1" EndX="0.9" EndY="0.9"/>
+				<MountPoint Side="Front" StartX="0.2" StartY="0.1" EndX="0.8" EndY="0.2"/>
+				<MountPoint Side="Front" StartX="0.2" StartY="0.8" EndX="0.8" EndY="0.9"/>
+			</MountPoints>
+			<CriticalComponent Subtype="Construction" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="..\1124114101\Models\Mafoo_Small_MediumConveyorTube_BS1.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>Mafoo_Small_MediumConveyorTube</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>3</BuildTimeSeconds>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyed_Small</DestroyEffect>
+			<DestroySound>PoofExplosionCat1</DestroySound>
+			<PCU>10</PCU>
+			<IsAirTight>false</IsAirTight>
+		</Definition>
+		<!-- #region Conveyor Adaptors -->
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>SmallConveyorAdaptorTypeA</SubtypeId>
+			</Id>
+			<Public>false</Public>
+			<DisplayName>Conveyor Adaptor Type A</DisplayName>
+			<Icon>..\1124114101\Textures\Icons\ConveyorAdaptorTypeA.dds</Icon>
+			<Description>Description_Mafoo_ConveyorTube</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\1124114101\Models\SmallConveyorAdaptorTypeA.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="15"/>
+				<Component Subtype="Construction" Count="55"/>
+				<Component Subtype="SmallTube" Count="25"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="Construction" Count="15"/>
+				<Component Subtype="InteriorPlate" Count="5"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="..\1124114101\Models\SmallConveyorAdaptorTypeA_Constr1.mwm"/>
+			</BuildProgressModels>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>ConveyorAdaptorTypeA</BlockPairName>
+			<MirroringZ>X</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>25</BuildTimeSeconds>
+			<DamageEffectId>212</DamageEffectId>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<PCU>10</PCU>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>SmallConveyorAdaptorTypeB</SubtypeId>
+			</Id>
+			<Public>false</Public>
+			<DisplayName>Conveyor Adaptor Type B</DisplayName>
+			<Icon>..\1124114101\Textures\Icons\ConveyorAdaptorTypeB.dds</Icon>
+			<Description>Description_Mafoo_ConveyorTube</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\1124114101\Models\SmallConveyorAdaptorTypeB.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="15"/>
+				<Component Subtype="Construction" Count="55"/>
+				<Component Subtype="SmallTube" Count="25"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="Construction" Count="15"/>
+				<Component Subtype="InteriorPlate" Count="5"/>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="..\1124114101\Models\SmallConveyorAdaptorTypeB_Constr1.mwm"/>
+			</BuildProgressModels>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>ConveyorAdaptorTypeB</BlockPairName>
+			<MirroringZ>X</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>25</BuildTimeSeconds>
+			<DamageEffectId>212</DamageEffectId>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<PCU>10</PCU>
+		</Definition>
+		<!-- #endregion -->
+		<!-- #region Conveyor Hubs -->
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>ConveyorHubMedium</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Conveyor</DisplayName>
+			<Icon>..\1124114101\Textures\Icons\ConveyorHubMedium.dds</Icon>
+			<Description>Description_Mafoo_ConveyorTube</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\1124114101\Models\ConveyorHubMedium.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="20" />
+        <Component Subtype="Construction" Count="30" />
+        <Component Subtype="SmallTube" Count="25" />
+        <Component Subtype="Motor" Count="2" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="SteelPlate" Count="5" />
+      </Components>
+			<CriticalComponent Subtype="Motor" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="..\1124114101\Models\ConveyorHubMedium_Constr1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\1124114101\Models\ConveyorHubMedium_Constr2.mwm"/>
+			</BuildProgressModels>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.25" StartY="0.25" EndX="2.75" EndY="2.75"/>
+				<MountPoint Side="Bottom" StartX="0.25" StartY="0.25" EndX="2.75" EndY="2.75"/>
+				<MountPoint Side="Front" StartX="0.25" StartY="0.25" EndX="2.75" EndY="2.75"/>
+				<MountPoint Side="Back" StartX="0.25" StartY="0.25" EndX="2.75" EndY="2.75"/>
+				<MountPoint Side="Right" StartX="0.25" StartY="0.25" EndX="2.75" EndY="2.75"/>
+				<MountPoint Side="Left" StartX="0.25" StartY="0.25" EndX="2.75" EndY="2.75"/>
+			</MountPoints>
+			<BlockPairName>ConveyorHubMedium</BlockPairName>
+			<MirroringZ>X</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>25</BuildTimeSeconds>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyed_Small</DestroyEffect>
+			<DestroySound>PoofExplosionCat1</DestroySound>
+			<PCU>10</PCU>
+		</Definition>
+		<!-- #endregion -->
+	</CubeBlocks>
+</Definitions>

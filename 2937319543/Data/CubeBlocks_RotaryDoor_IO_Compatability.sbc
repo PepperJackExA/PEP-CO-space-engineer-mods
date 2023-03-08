@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+        <Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+            <Id>
+                <TypeId>AdvancedDoor</TypeId>
+                <SubtypeId>RotaryAirlock</SubtypeId>
+            </Id>
+            <DisplayName>Rotary Airlock Door</DisplayName>
+            <Icon>..\1359954841\Textures\GUI\Icons\RotaryAirlock.dds</Icon>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="1" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\1359954841\Models\Cubes\RotaryAirlock.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="15" />
+                <Component Subtype="Construction" Count="15" />
+                <Component Subtype="Electromagnet" Count="10" />
+                <Component Subtype="Motor" Count="4" />
+                <Component Subtype="Rubber" Count="2" />
+                <Component Subtype="Computer" Count="2" />
+                <Component Subtype="Construction" Count="25" />
+                <Component Subtype="BulletproofGlass" Count="25" />
+                <Component Subtype="SteelPlate" Count="25" />
+            </Components>
+            <CriticalComponent Subtype="BulletproofGlass" Index="0" />
+            <MountPoints>
+                <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+                <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+                <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+                <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+                <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+                <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+            </MountPoints>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.66" File="..\1359954841\Models\Cubes\RotaryAirlock_BS1.mwm" />
+                <Model BuildPercentUpperBound="0.66" File="..\1359954841\Models\Cubes\RotaryAirlock_BS2.mwm" />
+            </BuildProgressModels>
+            <BlockPairName>nukeguard_rotaryDoor</BlockPairName>
+            <Description>A 100% sealed door that is never opened to vacuum. Straight passthrough.</Description>
+            <EmissiveColorPreset>Default</EmissiveColorPreset>
+            <UseNeighbourOxygenRooms>true</UseNeighbourOxygenRooms>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <IsAirTight>true</IsAirTight>
+            <BuildTimeSeconds>24</BuildTimeSeconds>
+            <DisassembleRatio>1.5</DisassembleRatio>
+            <PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+            <PowerConsumptionMoving>0.025</PowerConsumptionMoving>
+            <DamageEffectId>212</DamageEffectId>
+            <Subparts>
+                <SubpartDefinition>
+                    <Name>RotaryDoorPart_section_1</Name>
+                </SubpartDefinition>
+            </Subparts>
+            <OpeningSequence>
+                <Opening>
+                    <IDs>0</IDs>
+                    <Move>Rotate</Move>
+                    <RotationAxis>Y</RotationAxis>
+                    <MaxOpen>180</MaxOpen>
+                    <InvertRotation>true</InvertRotation>
+                    <Speed>100</Speed>
+                    <PivotPosition x="0" y="0" z="0" />
+                    <OpenSound>ParticleHeavyMech</OpenSound>
+                    <CloseSound>ParticleHeavyMech</CloseSound>
+                </Opening>
+            </OpeningSequence>
+            <GuiVisible>true</GuiVisible>
+            <PCU>115</PCU>
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+            <Id>
+                <TypeId>AdvancedDoor</TypeId>
+                <SubtypeId>RotaryAirlockSmallGrid</SubtypeId>
+            </Id>
+            <DisplayName>Rotary Airlock Door</DisplayName>
+            <Icon>..\1359954841\Textures\GUI\Icons\RotaryAirlock.dds</Icon>
+            <CubeSize>Small</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="5" y="5" z="5" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\1359954841\Models\Cubes\RotaryAirlock.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="15" />
+                <Component Subtype="Construction" Count="15" />
+                <Component Subtype="Electromagnet" Count="10" />
+                <Component Subtype="Motor" Count="4" />
+                <Component Subtype="Rubber" Count="2" />
+                <Component Subtype="Computer" Count="2" />
+                <Component Subtype="Construction" Count="25" />
+                <Component Subtype="BulletproofGlass" Count="25" />
+                <Component Subtype="SteelPlate" Count="25" />
+            </Components>
+            <CriticalComponent Subtype="BulletproofGlass" Index="0" />
+            <MountPoints>
+                <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" />
+                <MountPoint Side="Top" StartX="0" StartY="0" EndX="5" EndY="5" />
+                <MountPoint Side="Front" StartX="4" StartY="0" EndX="5" EndY="5" />
+                <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="5" />
+                <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="5" />
+                <MountPoint Side="Back" StartX="4" StartY="0" EndX="5" EndY="5" />
+                <MountPoint Side="Left" StartX="0" StartY="0" EndX="5" EndY="5" />
+                <MountPoint Side="Right" StartX="0" StartY="0" EndX="5" EndY="5" />
+            </MountPoints>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.66" File="..\1359954841\Models\Cubes\RotaryAirlock_BS1.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="..\1359954841\Models\Cubes\RotaryAirlock_BS2.mwm" />
+            </BuildProgressModels>
+            <BlockPairName>nukeguard_rotaryDoor</BlockPairName>
+            <Description>A 100% sealed door that is never opened to vacuum. Straight passthrough.</Description>
+            <EmissiveColorPreset>Default</EmissiveColorPreset>
+            <UseNeighbourOxygenRooms>true</UseNeighbourOxygenRooms>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>24</BuildTimeSeconds>
+            <DisassembleRatio>1.5</DisassembleRatio>
+            <PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+            <PowerConsumptionMoving>0.025</PowerConsumptionMoving>
+            <DamageEffectId>212</DamageEffectId>
+            <Subparts>
+                <SubpartDefinition>
+                    <Name>RotaryDoorPart_section_1</Name>
+                </SubpartDefinition>
+            </Subparts>
+            <OpeningSequence>
+                <Opening>
+                    <IDs>0</IDs>
+                    <Move>Rotate</Move>
+                    <RotationAxis>Y</RotationAxis>
+                    <MaxOpen>180</MaxOpen>
+                    <InvertRotation>true</InvertRotation>
+                    <Speed>130</Speed>
+                    <PivotPosition x="0" y="0" z="0" />
+                    <OpenSound>ParticleHeavyMech</OpenSound>
+                    <CloseSound>ParticleHeavyMech</CloseSound>
+                </Opening>
+            </OpeningSequence>
+            <IsAirTight>true</IsAirTight>
+            <PCU>115</PCU>
+        </Definition>
+        <!-- Corner Airlock -->
+        <Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+            <Id>
+                <TypeId>AdvancedDoor</TypeId>
+                <SubtypeId>RotaryAirlockCorner</SubtypeId>
+            </Id>
+            <DisplayName>Rotary Airlock Corner Door</DisplayName>
+            <Icon>..\1359954841\Textures\GUI\Icons\RotaryAirlock.dds</Icon>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="1" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\1359954841\Models\Cubes\RotaryAirlockCorner.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="15" />
+                <Component Subtype="Construction" Count="15" />
+                <Component Subtype="Electromagnet" Count="10" />
+                <Component Subtype="Motor" Count="4" />
+                <Component Subtype="Rubber" Count="2" />
+                <Component Subtype="Computer" Count="2" />
+                <Component Subtype="Construction" Count="25" />
+                <Component Subtype="BulletproofGlass" Count="25" />
+                <Component Subtype="SteelPlate" Count="25" />
+            </Components>
+            <CriticalComponent Subtype="BulletproofGlass" Index="0" />
+            <MountPoints>
+                <MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+                <MountPoint Side="Back" StartX="0.90" StartY="0.00" EndX="1.00" EndY="1.00" />
+                <MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="0.10" EndY="1.00" />
+                <MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+                <MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+                <MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
+                <MountPoint Side="Back" StartX="0.01" StartY="0.00" EndX="0.10" EndY="1.00" />
+                <MountPoint Side="Left" StartX="0.89" StartY="0.00" EndX="1.00" EndY="1.00" />
+                <MountPoint Side="Left" StartX="0.11" StartY="0.97" EndX="0.89" EndY="0.99" />
+                <MountPoint Side="Left" StartX="0.11" StartY="0.01" EndX="0.89" EndY="0.03" />
+                <MountPoint Side="Back" StartX="0.10" StartY="0.00" EndX="0.90" EndY="0.03" />
+                <MountPoint Side="Back" StartX="0.10" StartY="0.97" EndX="0.90" EndY="1.00" />
+            </MountPoints>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.66" File="..\1359954841\Models\Cubes\RotaryAirlockCorner_BS1.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="..\1359954841\Models\Cubes\RotaryAirlockCorner_BS2.mwm" />
+            </BuildProgressModels>
+            <BlockPairName>nukeguard_rotaryDoorCorner</BlockPairName>
+            <Description>A 100% sealed door that is never opened to vacuum. Angled passthrough.</Description>
+            <EmissiveColorPreset>Default</EmissiveColorPreset>
+            <UseNeighbourOxygenRooms>true</UseNeighbourOxygenRooms>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>24</BuildTimeSeconds>
+            <DisassembleRatio>1.5</DisassembleRatio>
+            <PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+            <PowerConsumptionMoving>0.025</PowerConsumptionMoving>
+            <DamageEffectId>212</DamageEffectId>
+            <Subparts>
+                <SubpartDefinition>
+                    <Name>RotaryDoorCornerPart</Name>
+                </SubpartDefinition>
+            </Subparts>
+            <OpeningSequence>
+                <Opening>
+                    <IDs>0</IDs>
+                    <Move>Rotate</Move>
+                    <RotationAxis>Y</RotationAxis>
+                    <MaxOpen>180</MaxOpen>
+                    <InvertRotation>false</InvertRotation>
+                    <Speed>100</Speed>
+                    <PivotPosition x="0" y="0" z="0" />
+                    <OpenSound>ParticleHeavyMech</OpenSound>
+                    <CloseSound>ParticleHeavyMech</CloseSound>
+                </Opening>
+            </OpeningSequence>
+            <IsAirTight>true</IsAirTight>
+            <GuiVisible>false</GuiVisible>
+            <PCU>115</PCU>
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+            <Id>
+                <TypeId>AdvancedDoor</TypeId>
+                <SubtypeId>RotaryAirlockCornerSmallGrid</SubtypeId>
+            </Id>
+            <DisplayName>Rotary Airlock Corner Door</DisplayName>
+            <Icon>..\1359954841\Textures\GUI\Icons\RotaryAirlock.dds</Icon>
+            <CubeSize>Small</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="5" y="5" z="5" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\1359954841\Models\Cubes\RotaryAirlockCorner.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="15" />
+                <Component Subtype="Construction" Count="15" />
+                <Component Subtype="Electromagnet" Count="10" />
+                <Component Subtype="Motor" Count="4" />
+                <Component Subtype="Rubber" Count="2" />
+                <Component Subtype="Computer" Count="2" />
+                <Component Subtype="Construction" Count="25" />
+                <Component Subtype="BulletproofGlass" Count="25" />
+                <Component Subtype="SteelPlate" Count="25" />
+            </Components>
+            <CriticalComponent Subtype="BulletproofGlass" Index="0" />
+            <MountPoints>
+                <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" />
+                <MountPoint Side="Top" StartX="0" StartY="0" EndX="5" EndY="5" />
+                <MountPoint Side="Back" StartX="4" StartY="0" EndX="5" EndY="5" />
+                <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="5" />
+                <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="5" />
+                <MountPoint Side="Left" StartX="4" StartY="0" EndX="5" EndY="5" />
+                <MountPoint Side="Front" StartX="0" StartY="0" EndX="5" EndY="5" />
+                <MountPoint Side="Right" StartX="0" StartY="0" EndX="5" EndY="5" />
+            </MountPoints>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.66" File="..\1359954841\Models\Cubes\RotaryAirlockCorner_BS1.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="..\1359954841\Models\Cubes\RotaryAirlockCorner_BS2.mwm" />
+            </BuildProgressModels>
+            <BlockPairName>nukeguard_rotaryDoorCorner</BlockPairName>
+            <Description>A 100% sealed door that is never opened to vacuum. Angled passthrough.</Description>
+            <EmissiveColorPreset>Default</EmissiveColorPreset>
+            <UseNeighbourOxygenRooms>true</UseNeighbourOxygenRooms>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>24</BuildTimeSeconds>
+            <DisassembleRatio>1.5</DisassembleRatio>
+            <PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+            <PowerConsumptionMoving>0.025</PowerConsumptionMoving>
+            <DamageEffectId>212</DamageEffectId>
+            <Subparts>
+                <SubpartDefinition>
+                    <Name>RotaryDoorCornerPart</Name>
+                </SubpartDefinition>
+            </Subparts>
+            <OpeningSequence>
+                <Opening>
+                    <IDs>0</IDs>
+                    <Move>Rotate</Move>
+                    <RotationAxis>Y</RotationAxis>
+                    <MaxOpen>180</MaxOpen>
+                    <InvertRotation>false</InvertRotation>
+                    <Speed>130</Speed>
+                    <PivotPosition x="0" y="0" z="0" />
+                    <OpenSound>ParticleHeavyMech</OpenSound>
+                    <CloseSound>ParticleHeavyMech</CloseSound>
+                </Opening>
+            </OpeningSequence>
+            <IsAirTight>true</IsAirTight>
+            <GuiVisible>false</GuiVisible>
+            <PCU>115</PCU>
+        </Definition>
+    </CubeBlocks>
+    <BlockPositions>
+        <BlockPosition>
+            <Name>nukeguard_rotaryDoor</Name>
+            <Position>
+                <X>7</X>
+                <Y>11</Y>
+            </Position>
+        </BlockPosition>
+    </BlockPositions>
+</Definitions>

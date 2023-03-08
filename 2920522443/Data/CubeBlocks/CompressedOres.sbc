@@ -1,0 +1,255 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+
+<!-- Small Grid Ore Compactor -->
+		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+			<Id>
+				<TypeId>Refinery</TypeId>
+				<SubtypeId>OreCompactorSmall</SubtypeId>
+			</Id>
+			<DisplayName>Ore Compactor</DisplayName>
+			<Description>A production machine that compacts ores into half their size, doubling their density</Description>
+			<Icon>..\2825470671\Textures\GUI\Icons\OreCompactor.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2825470671\Models\Cubes\small\OreCompactor.mwm</Model>
+      		<Components>
+        		<Component Subtype="SteelPlate" Count="250" />
+        		<Component Subtype="Construction" Count="300" />
+        		<Component Subtype="CopperWire" Count="30" />
+        		<Component Subtype="LargeTube" Count="20" />
+        		<Component Subtype="Motor" Count="15" />
+        		<Component Subtype="Ceramic" Count="50" />
+        		<Component Subtype="Computer" Count="10" />
+        		<Component Subtype="SteelPlate" Count="150" />
+      		</Components>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.03" StartY="0.94" EndX="2.97" EndY="2.01"/>
+				<MountPoint Side="Front" StartX="1.00" StartY="0.54" EndX="2.00" EndY="1.06"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="1.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="1.03" StartY="0.00" EndX="4.96" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="4.00" StartY="1.00" EndX="5.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.02" StartY="0.00" EndX="3.99" EndY="3.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.04" EndX="3.00" EndY="4.04"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="1.00" EndX="3.00" EndY="4.94"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.40" File="..\2825470671\Models\Cubes\small\OreCompactor_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.75" File="..\2825470671\Models\Cubes\small\OreCompactor_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2825470671\Models\Cubes\small\OreCompactor_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>OreCompactor</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>90</BuildTimeSeconds>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<InventoryMaxVolume>4.0</InventoryMaxVolume>
+			<InventorySize>
+				<X>2.0</X>
+				<Y>2.0</Y>
+				<Z>2.0</Z>
+			</InventorySize>
+
+			<InventoryFillFactorMin>0.3</InventoryFillFactorMin>
+			<InventoryFillFactorMax>0.6</InventoryFillFactorMax>
+
+			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+			<OperationalPowerConsumption>0.50</OperationalPowerConsumption>
+
+			<BlueprintClasses>
+				<Class>CompressedOres</Class>
+			</BlueprintClasses>
+
+			<RefineSpeed>7.0</RefineSpeed>
+            <MaterialEfficiency>1.0</MaterialEfficiency>
+
+			<OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<Center x="1" y="0" z="0" />
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<PrimarySound>BlockRafinery</PrimarySound>
+			<ActionSound>BlockRafineryProcess</ActionSound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>60</PCU>
+			<TieredUpdateTimes>
+				<unsignedInt>60</unsignedInt>
+				<unsignedInt>120</unsignedInt>
+				<unsignedInt>240</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>
+
+<!-- Large Ore Compcator-->
+
+		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+			<Id>
+				<TypeId>Refinery</TypeId>
+				<SubtypeId>OreCompactorLarge</SubtypeId>
+			</Id>
+			<DisplayName>Large Ore Compactor</DisplayName>
+			<Description>A production machine that compacts ores into half their size, doubling their density.</Description>
+			<Icon>..\2825470671\Textures\GUI\Icons\OreCompactorLarge.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2825470671\Models\Cubes\large\OreCompactorLarge.mwm</Model>
+      		<Components>
+        		<Component Subtype="SteelPlate" Count="500" />
+        		<Component Subtype="Construction" Count="600" />
+        		<Component Subtype="CopperWire" Count="30" />
+        		<Component Subtype="LargeTube" Count="20" />
+        		<Component Subtype="Motor" Count="15" />
+        		<Component Subtype="Ceramic" Count="50" />
+        		<Component Subtype="Computer" Count="10" />
+        		<Component Subtype="SteelPlate" Count="300" />
+      		</Components>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="3.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="..\2825470671\Models\Cubes\large\OreCompactorLarge_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2825470671\Models\Cubes\large\OreCompactorLarge_BS2.mwm"/>
+			</BuildProgressModels>
+
+			<BlockPairName>OreCompactor</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>90</BuildTimeSeconds>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<InventoryMaxVolume>6.0</InventoryMaxVolume>
+			<InventorySize>
+				<X>2.5</X>
+				<Y>2.5</Y>
+				<Z>2.5</Z>
+			</InventorySize>
+
+			<InventoryFillFactorMin>0.3</InventoryFillFactorMin>
+			<InventoryFillFactorMax>0.6</InventoryFillFactorMax>
+
+			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+			<OperationalPowerConsumption>0.50</OperationalPowerConsumption>
+
+			<BlueprintClasses>
+				<Class>CompressedOres</Class>
+			</BlueprintClasses>
+
+			<RefineSpeed>10.0</RefineSpeed>
+            <MaterialEfficiency>1.0</MaterialEfficiency>
+
+			<OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<Center x="0" y="0" z="0" />
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<PrimarySound>BlockRafinery</PrimarySound>
+			<ActionSound>BlockRafineryProcess</ActionSound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>75</PCU>
+			<TieredUpdateTimes>
+				<unsignedInt>60</unsignedInt>
+				<unsignedInt>120</unsignedInt>
+				<unsignedInt>240</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>
+
+<!-- Large Grid Ore Mill -->
+
+		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+			<Id>
+				<TypeId>Refinery</TypeId>
+				<SubtypeId>OreMill</SubtypeId>
+			</Id>
+			<DisplayName>Compressed Ore Mill</DisplayName>
+			<Description>An ore mill that grinds down compressed ore blocks back into their original form.</Description>
+			<Icon>..\2825470671\Textures\GUI\Icons\OreMill.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>..\2825470671\Models\Cubes\large\OreMill.mwm</Model>
+      		<Components>
+        		<Component Subtype="SteelPlate" Count="700" />
+      			<Component Subtype="Construction" Count="500" />
+     			<Component Subtype="CopperWire" Count="50" />
+     			<Component Subtype="LargeTube" Count="20" />
+    		    <Component Subtype="Electromagnet" Count="25" />
+    		    <Component Subtype="Motor" Count="25" />
+    		    <Component Subtype="GoldWire" Count="50" />
+    		    <Component Subtype="LaserEmitter" Count="20" />
+   			    <Component Subtype="Computer" Count="10" />
+    		    <Component Subtype="AdvancedComputer" Count="10" />
+   			    <Component Subtype="SteelPlate" Count="300" />
+   			</Components>
+            <CriticalComponent Subtype="AdvancedComputer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.00" EndY="0.66"/>
+				<MountPoint Side="Front" StartX="0.00" StartY="1.35" EndX="2.00" EndY="1.99"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="1.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="..\2825470671\Models\Cubes\large\OreMill_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="..\2825470671\Models\Cubes\large\OreMill_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="..\2825470671\Models\Cubes\large\OreMill_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>OreMill</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>90</BuildTimeSeconds>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<InventoryMaxVolume>5.0</InventoryMaxVolume>
+			<InventorySize>
+				<X>2.0</X>
+				<Y>2.0</Y>
+				<Z>2.0</Z>
+			</InventorySize>
+
+			<InventoryFillFactorMin>0.3</InventoryFillFactorMin>
+			<InventoryFillFactorMax>0.6</InventoryFillFactorMax>
+
+			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+			<OperationalPowerConsumption>0.50</OperationalPowerConsumption>
+
+			<BlueprintClasses>
+				<Class>UnCompressedOres</Class>
+			</BlueprintClasses>
+
+			<RefineSpeed>10.0</RefineSpeed>
+            <MaterialEfficiency>1.0</MaterialEfficiency>
+
+			<OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<Center x="1" y="0" z="0" />
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<PrimarySound>BlockRafinery</PrimarySound>
+			<ActionSound>BlockRafineryProcess</ActionSound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>60</PCU>
+			<TieredUpdateTimes>
+				<unsignedInt>60</unsignedInt>
+				<unsignedInt>120</unsignedInt>
+				<unsignedInt>240</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>
+
+	</CubeBlocks>
+</Definitions>
