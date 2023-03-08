@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ContainerTypes>
+        <ContainerType CountMin="20" CountMax="20">
+            <Id>
+                <TypeId>ContainerTypeDefinition</TypeId>
+                <SubtypeId>ContainerFloatingPallet</SubtypeId>
+            </Id>
+			<Items>
+                <Item AmountMin="100" AmountMax="1000">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>PhysicalObject</TypeId>
+                        <SubtypeId>SpaceCredit</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="1">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>PhysicalGunObject</TypeId>
+                        <SubtypeId>HandDrill2Item</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="1">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>PhysicalGunObject</TypeId>
+                        <SubtypeId>AngleGrinder2Item</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="1">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>PhysicalGunObject</TypeId>
+                        <SubtypeId>Welder2Item</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Cobalt</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Iron</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Gold</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Silver</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Nickel</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Silicon</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>SteelPlate</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>InteriorPlate</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>Motor</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>Display</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>Computer</SubtypeId>
+                    </Id>
+                </Item>
+                <!-- INDUSTRIAL OVERHAUL ITEMS -->
+			    <Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>Lightbulb</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>Electromagnet</SubtypeId>
+                    </Id>
+                </Item>	
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>AdvancedComputer</SubtypeId>
+                    </Id>
+                </Item>	
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>CopperWire</SubtypeId>
+                    </Id>
+                </Item>
+            <!-- Daily needs food supply drops -->
+                <Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Fertilizer</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ore</TypeId>
+                        <SubtypeId>Organic</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>VeganFood</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>ArtificialFood</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>WaterFood</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>EmergencyFood</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>CoffeeFood</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ore</TypeId>
+                        <SubtypeId>WolfMeat</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ore</TypeId>
+                        <SubtypeId>SabiroidMeat</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>GreyWater</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>PotatoSeeds</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Potatoes</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>TomatoSeeds</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Carrots</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>CarrotSeeds</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>CucumberSeeds</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Cucumbers</SubtypeId>
+                    </Id>
+                </Item>
+			</Items>
+        </ContainerType>
+     <ContainerType CountMin="2" CountMax="4">
+            <Id>
+                <TypeId>ContainerTypeDefinition</TypeId>
+                <SubtypeId>ContainerFloatingPalletRed</SubtypeId>
+            </Id>
+			<Items>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>InteriorPlate</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>MetalGrid</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>Platinum</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="1">
+                    <Frequency>0.05</Frequency>
+                    <Id>
+                        <TypeId>PhysicalGunObject</TypeId>
+                        <SubtypeId>HandDrill3Item</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="1">
+                    <Frequency>0.05</Frequency>
+                    <Id>
+                        <TypeId>PhysicalGunObject</TypeId>
+                        <SubtypeId>AngleGrinder3Item</SubtypeId>
+                    </Id>
+                </Item>
+                <Item AmountMin="1" AmountMax="1">
+                    <Frequency>0.05</Frequency>
+                    <Id>
+                        <TypeId>PhysicalGunObject</TypeId>
+                        <SubtypeId>Welder3Item</SubtypeId>
+                    </Id>
+                </Item>
+                <!-- INDUSTRIAL OVERHAUL ITEMS -->
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+						<TypeId>Component</TypeId>
+						<SubtypeId>HeatingElement</SubtypeId>
+                    </Id>
+                </Item>
+				<Item AmountMin="1" AmountMax="10">
+                    <Frequency>1</Frequency>
+                    <Id>
+                        <TypeId>Component</TypeId>
+                        <SubtypeId>GoldWire</SubtypeId>
+                    </Id>
+                </Item>
+			</Items>
+	 </ContainerType>
+	</ContainerTypes>
+</Definitions>
