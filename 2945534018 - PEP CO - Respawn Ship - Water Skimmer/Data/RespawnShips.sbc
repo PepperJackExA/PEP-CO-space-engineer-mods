@@ -1,36 +1,8 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <RespawnShips>
-    <Ship>
-      <Id>
-        <TypeId>RespawnShipDefinition</TypeId>
-        <SubtypeId>WaterSkimmerRespawnShipIOReady</SubtypeId>
-      </Id>
-
-      <DisplayName>Water Skimmer - Respawn Ship</DisplayName>
-      <Icon>Textures\GUI\Icons\RespawnShips\waterSkimmer.png</Icon>
-
-      <CooldownSeconds>900</CooldownSeconds>
-
-      <Prefab>WaterSkimmerRespawnShip</Prefab>
-	  
-	  <PlanetTypes>
-        <PlanetType>EarthLike</PlanetType>
-		<PlanetType>Planet Agaris</PlanetType>
-		<PlanetType>Planet Thora 4</PlanetType>
-    <PlanetType>Planet Agaris IO</PlanetType>
-	  </PlanetTypes>  
-      
-      <MinimalAirDensity>0.8</MinimalAirDensity>
-
-      <PlanetDeployAltitude>1400</PlanetDeployAltitude>
-      <UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
-
-      <InitialLinearVelocity x="0" y="0" z="0" />
-      <InitialAngularVelocity x="0" y="0.5" z="0" />
-      <HelpTextLocalizationId>RespawnScreeenHelpTextSpawn</HelpTextLocalizationId>
-    </Ship>
-	<Ship Enabled="false">
+    <!-- Disable Vanilla Spawns -->
+	  <Ship Enabled="false">
       <Id>
         <TypeId>RespawnShipDefinition</TypeId>
         <SubtypeId>RespawnPlanetPod</SubtypeId>
@@ -74,6 +46,34 @@
       
       <UseForSpace>true</UseForSpace>
       <HelpTextLocalizationId>RespawnScreeenHelpTextSpaceSpawn</HelpTextLocalizationId>
+    </Ship>
+
+    <!-- Spawn Water Skimmer -->
+    <Ship>
+      <Id>
+        <TypeId>RespawnShipDefinition</TypeId>
+        <SubtypeId>WaterSkimmerRespawnShipIOReady</SubtypeId>
+      </Id>
+
+      <DisplayName>Water Skimmer - Respawn Ship</DisplayName>
+      <Icon>Textures\GUI\Icons\RespawnShips\waterSkimmer.jpg</Icon>
+
+      <CooldownSeconds>900</CooldownSeconds>
+
+      <Prefab>WaterSkimmerRespawnShip</Prefab>
+	  
+	  <PlanetTypes>
+        <PlanetType>EarthLike</PlanetType>
+		    <PlanetType>Planet Agaris</PlanetType>
+		    <PlanetType>Planet Thora 4</PlanetType>
+        <PlanetType>Planet Agaris IO</PlanetType>
+	  </PlanetTypes>  
+      
+      <MinimalAirDensity>0.8</MinimalAirDensity>
+
+      <UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
+
+      <HelpTextLocalizationId>RespawnScreeenHelpTextSpawn</HelpTextLocalizationId>
     </Ship>
   </RespawnShips>
 </Definitions>
