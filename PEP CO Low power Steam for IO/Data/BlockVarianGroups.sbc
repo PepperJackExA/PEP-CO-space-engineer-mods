@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlockVariantGroups>
+		<BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SteamBoilers" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="LowPowerCoalFurnace" />
+                <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="CoalFurnace_PEPCO_Rebalance" />
+            </Blocks>
+        </BlockVariantGroup>
+		
+		<BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LowPowerSteamTurbines" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="LowPowerSteamTurbine" />
+				<Block Type="MyObjectBuilder_HydrogenEngine" Subtype="LowPowerSteamTurbineMirrored" />
+            </Blocks>
+        </BlockVariantGroup>
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SolarConcentrator" />
+            <Blocks>
+				<Block Type="MyObjectBuilder_OxygenFarm" Subtype="SolarConcentrator_PEPCO_Rebalance" />
+				<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SolarConcentratorMount" />
+				<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SolarConcentratorMountHead" />
+            </Blocks>
+        </BlockVariantGroup>
+	</BlockVariantGroups>
+</Definitions>
