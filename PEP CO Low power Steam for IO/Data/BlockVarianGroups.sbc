@@ -2,10 +2,10 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<BlockVariantGroups>
 		<BlockVariantGroup>
-            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SteamBoilers" />
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SteamBoilers_PEPCO" />
             <Blocks>
                 <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="LowPowerCoalFurnace" />
-                <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="CoalFurnace_PEPCO_Rebalance" />
+                <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="PEPCO_CoalFurnace_Rebalance" />
             </Blocks>
         </BlockVariantGroup>
 		
@@ -17,9 +17,9 @@
             </Blocks>
         </BlockVariantGroup>
         <BlockVariantGroup>
-            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SolarConcentrator" />
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SolarConcentrator_PEPCO" />
             <Blocks>
-				<Block Type="MyObjectBuilder_OxygenFarm" Subtype="SolarConcentrator_PEPCO_Rebalance" />
+				<Block Type="MyObjectBuilder_OxygenFarm" Subtype="PEPCO_SolarConcentrator_Rebalance" />
 				<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SolarConcentratorMount" />
 				<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SolarConcentratorMountHead" />
             </Blocks>
