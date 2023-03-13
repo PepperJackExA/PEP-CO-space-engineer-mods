@@ -7,83 +7,17 @@ namespace ModAdjuster
 {
     public class BlockDefinitions
     {
+        public string AdminComponent = "MyObjectBuilder_Component/admin_Fluxkondensator_Pepco"; // Component to insert into disabled blocks to prevent building from projection
+        public List<string> DisabledBlocks = new List<string>() // List of blocks to disable
+        {
+            "MyObjectBuilder_WindTurbine/LargeWindTurbine",
+            "MyObjectBuilder_OxygenGenerator/CoalFurnace",
+            "MyObjectBuilder_OxygenFarm/SolarConcentrator",
+            "MyObjectBuilder_WindTurbine/LargeBlockWindTurbine",
+        };
 
         public List<BlockDef> Definitions = new List<BlockDef>()
         {
-            // Disabled blocks
-            new BlockDef()
-            {
-                BlockName = "OxygenGenerator/CoalFurnace",
-                BlockActions = new[]
-                {
-                    new BlockAction
-                    {
-                        Action = ChangeBlockDescription, // Change the Description of the block
-                        NewText = "You should not see this block"
-                    },
-                    new BlockAction
-                    {
-                        Action = ChangeBlockPublicity // Sets <Public> to the opposite of its setting in sbc
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, // Replaces the component at the given index with a new component
-                        Component = "Component/ZoneChip",
-                        Index = 0,
-                        Count = 1 // This field is optional. If not specified or set to 0, the component count will stay the same
-                    }
-                }
-
-            },
-            new BlockDef()
-            {
-                BlockName = "WindTurbine/LargeWindTurbine",
-                BlockActions = new[]
-                {
-                    new BlockAction
-                    {
-                        Action = ChangeBlockDescription, // Change the Description of the block
-                        NewText = "You should not see this block"
-                    },
-                    new BlockAction
-                    {
-                        Action = ChangeBlockPublicity // Sets <Public> to the opposite of its setting in sbc
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, // Replaces the component at the given index with a new component
-                        Component = "Component/ZoneChip",
-                        Index = 0,
-                        Count = 1 // This field is optional. If not specified or set to 0, the component count will stay the same
-                    }
-                }
-
-            },
-            new BlockDef()
-            {
-                BlockName = "OxygenFarm/SolarConcentrator",
-                BlockActions = new[]
-                {
-                    new BlockAction
-                    {
-                        Action = ChangeBlockDescription, // Change the Description of the block
-                        NewText = "You should not see this block"
-                    },
-                    new BlockAction
-                    {
-                        Action = ChangeBlockPublicity // Sets <Public> to the opposite of its setting in sbc
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, // Replaces the component at the given index with a new component
-                        Component = "Component/ZoneChip",
-                        Index = 0,
-                        Count = 1 // This field is optional. If not specified or set to 0, the component count will stay the same
-                    },
-
-                }
-
-            },
             new BlockDef()
             {
                 BlockName = "HydrogenEngine/SteamTurbineMirrored",
@@ -98,6 +32,11 @@ namespace ModAdjuster
                     {
                         Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
                         Value = 100f
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 50
                     },
 
                 }
@@ -118,6 +57,11 @@ namespace ModAdjuster
                         Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
                         Value = 100f
                     },
+                    new BlockAction
+                    {
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 50
+                    },
 
                 }
 
@@ -136,6 +80,11 @@ namespace ModAdjuster
                     {
                         Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
                         Value = 1.5f
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 10
                     },
 
                 }
@@ -156,6 +105,11 @@ namespace ModAdjuster
                         Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
                         Value = 0.3f
                     },
+                    new BlockAction
+                    {
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 5
+                    },
 
                 }
 
@@ -174,6 +128,11 @@ namespace ModAdjuster
                     {
                         Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
                         Value = 0.5f
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 10
                     },
 
                 }
@@ -194,30 +153,10 @@ namespace ModAdjuster
                         Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
                         Value = 0.15f
                     },
-
-                }
-
-            },
-            new BlockDef()
-            {
-                BlockName = "WindTurbine/LargeBlockWindTurbine",
-                BlockActions = new[]
-                {
-                    
                     new BlockAction
                     {
-                        Action = ChangeBlockName, // Change Display Name of the block
-                        NewText = "Basic Wind Turbine"
-                    },
-                    new BlockAction
-                    {
-                        Action = ChangeBlockDescription, // Change the Description of the block
-                        NewText = "Basic Solar panel capable of generating power. Nominal Max Output: 500kW"
-                    },
-                    new BlockAction
-                    {
-                        Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
-                        Value = 0.5f
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 5
                     },
 
                 }
@@ -225,7 +164,7 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "WindTurbine/Serg_5MW_Vertical_Wind_Turbine",
+                BlockName = "WindTurbine/SergWindTurbinePart",
                 BlockActions = new[]
                 {
                     
@@ -242,7 +181,12 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
-                        Value = 0.15f
+                        Value = 1.5f
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 25
                     },
 
                 }
@@ -250,7 +194,7 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "WindTurbine/Serg_5MW_Vertical_Wind_Turbine_Top",
+                BlockName = "WindTurbine/SergWindTurbine",
                 BlockActions = new[]
                 {
                     new BlockAction
@@ -267,6 +211,11 @@ namespace ModAdjuster
                     {
                         Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
                         Value = 1.5f
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 25
                     },
 
                 }
@@ -292,6 +241,11 @@ namespace ModAdjuster
                         Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
                         Value = 3f
                     },
+                    new BlockAction
+                    {
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 50
+                    },
 
                 }
 
@@ -315,6 +269,25 @@ namespace ModAdjuster
                     {
                         Action = ChangeMaxPowerOutput, // Sets <MaxPowerOutput> for any reactor, hydrogen engine, solar panel, wind turbine, or battery
                         Value = 10f
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 100
+                    },
+
+                }
+
+            },
+            new BlockDef()
+            {
+                BlockName = "HydrogenEngine/FusionReactor",
+                BlockActions = new[]
+                {
+                    new BlockAction
+                    {
+                        Action = ChangePCU, // Sets block PCU
+                        Value = 100
                     },
 
                 }

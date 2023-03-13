@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlockVariantGroups>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SteamTurbines" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="SteamTurbine" />
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="SteamTurbineMirrored" />
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="LowPowerSteamTurbine" />
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="LowPowerSteamTurbineMirrored" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CoalFurnace" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="PEPCO_CoalFurnace_Rebalance" />
+                <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="LowPowerCoalFurnace" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <!-- This empty blockVariantGroup is needed.  Otherwise have empty spot in G menu...-->
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SolarConcentrator" />
+            <Blocks>
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EnergyRenewableGroup" />
+            <Icon>Textures\GUI\Icons\Cubes\WindTurbine.dds</Icon>
+            <DisplayName>DisplayName_BlockGroup_EnergyRenewableGroup</DisplayName>
+            <Description>Description_BlockGroup_EnergyRenewableGroup</Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_WindTurbine" Subtype="LargeBlockWindTurbine" />
+                <Block Type="MyObjectBuilder_WindTurbine" Subtype="SergWindTurbinePart" />
+                <Block Type="MyObjectBuilder_WindTurbine" Subtype="SergWindTurbine" />
+                <Block Type="MyObjectBuilder_WindTurbine" Subtype="Serg_10MW_Wind_Turbine" />
+                <Block Type="MyObjectBuilder_WindTurbine" Subtype="Serg_25MW_Wind_Turbine" />
+                <Block Type="MyObjectBuilder_WindTurbine" Subtype="SergWindTurbineCollum" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SolarPanels" />
+            <Icon>Textures\GUI\Icons\Cubes\SolarPanel.dds</Icon>
+            <DisplayName>DisplayName_BlockGroup_EnergyRenewableGroup</DisplayName>
+            <Description>Description_BlockGroup_EnergyRenewableGroup</Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanel" />
+                <Block Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockSolarPanel" />
+                <Block Type="MyObjectBuilder_SolarPanel" Subtype="LargeFullSpectrumSolarPanel" />
+                <Block Type="MyObjectBuilder_SolarPanel" Subtype="SmallFullSpectrumSolarPanel" />
+                <Block Type="MyObjectBuilder_OxygenFarm" Subtype="PEPCO_SolarConcentrator_Rebalance" />
+				<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SolarConcentratorMount" />
+				<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SolarConcentratorMountHead" />
+            </Blocks>
+        </BlockVariantGroup>
+    </BlockVariantGroups>
+</Definitions>
