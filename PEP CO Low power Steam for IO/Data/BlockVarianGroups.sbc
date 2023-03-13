@@ -8,7 +8,6 @@
                 <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="PEPCO_CoalFurnace_Rebalance" />
             </Blocks>
         </BlockVariantGroup>
-		
 		<BlockVariantGroup>
             <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LowPowerSteamTurbines" />
             <Blocks>
@@ -19,9 +18,26 @@
         <BlockVariantGroup>
             <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SolarConcentrator_PEPCO" />
             <Blocks>
-				<Block Type="MyObjectBuilder_OxygenFarm" Subtype="PEPCO_SolarConcentrator_Rebalance" />
 				<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SolarConcentratorMount" />
 				<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SolarConcentratorMountHead" />
+                <Block Type="MyObjectBuilder_OxygenFarm" Subtype="PEPCO_SolarConcentrator_Rebalance" />
+            </Blocks>
+        </BlockVariantGroup> 
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="PEPCO_SteamPower" />
+            <Icon>..\2344068716\Icons\CoalBoiler.dds</Icon>
+            <DisplayName>Steam Power Blocks</DisplayName>
+            <Description>Steam power blocks </Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SolarConcentratorMount" />
+                <Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SolarConcentratorMountHead" />
+                <Block Type="MyObjectBuilder_OxygenFarm" Subtype="PEPCO_SolarConcentrator_Rebalance" />
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="SteamTurbine" />
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="SteamTurbineMirrored" />
+                <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="PEPCO_CoalFurnace_Rebalance" />
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="LowPowerSteamTurbine" />
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="LowPowerSteamTurbineMirrored" />
+                <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="LowPowerCoalFurnace" />
             </Blocks>
         </BlockVariantGroup>
 	</BlockVariantGroups>
