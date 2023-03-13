@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+        <Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+            <Id>
+                <TypeId>OxygenGenerator</TypeId>
+                <SubtypeId>PEPCO_GeothermalWellHead_Rebalance</SubtypeId>
+            </Id>
+            <DisplayName>Test Geothermal Wellhead</DisplayName>
+            <Icon>..\2344068716\Icons\GeothermalWellHead.dds</Icon>
+            <Description>Processes geothermal heat to produce Steam. Must be connected by Geothermal Pipes to a Geothermal Well Tip.
+			Produces ~30 Steam/sec per at 250m depth and increses if you go deaper.</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="3" y="2" z="4" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>..\2344068716\Models\GeothermalWellHead.mwm</Model>
+            <Components>
+                <Component Subtype="TitaniumPlate" Count="50" />
+                <Component Subtype="Construction" Count="25" />
+                <Component Subtype="LargeTube" Count="50" />
+                <Component Subtype="Motor" Count="30" />
+                <Component Subtype="CopperWire" Count="25" />
+                <Component Subtype="AdvancedComputer" Count="5" />
+                <Component Subtype="Computer" Count="15" />
+                <Component Subtype="SteelPlate" Count="15" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+            <MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="4" />
+				<MountPoint Side="Front" StartX="1" StartY="1" EndX="2" EndY="2" />
+            </MountPoints>
+            <BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="..\2344068716\Models\Construct\GeothermalWellHeadConstruct3.mwm" />
+				<Model BuildPercentUpperBound="0.75" File="..\2344068716\Models\Construct\GeothermalWellHeadConstruct2.mwm" />
+				<Model BuildPercentUpperBound="0.50" File="..\2344068716\Models\Construct\GeothermalWellHeadConstruct1.mwm" />
+				<Model BuildPercentUpperBound="0.25" File="..\2344068716\Models\Construct\GeothermalWellHeadConstruct0.mwm" />
+            </BuildProgressModels>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>30</BuildTimeSeconds>
+            <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+            <ResourceSinkGroup>Factory</ResourceSinkGroup>
+            <IceConsumptionPerSecond>9999999999</IceConsumptionPerSecond>
+            <InventoryMaxVolume>1</InventoryMaxVolume>
+            <InventorySize>
+                <X>2</X>
+                <Y>2</Y>
+                <Z>2</Z>
+            </InventorySize>
+
+            <InventoryFillFactorMin>1</InventoryFillFactorMin>
+            <InventoryFillFactorMax>1</InventoryFillFactorMax>
+
+            <FuelPullAmountFromConveyorInMinutes>10</FuelPullAmountFromConveyorInMinutes>
+
+            <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+            <OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+            <ProducedGases>
+                <GasInfo>
+                    <Id>
+                        <TypeId>GasProperties</TypeId>
+                        <SubtypeId>Steam</SubtypeId>
+                    </Id>
+                    <IceToGasRatio>0.05</IceToGasRatio>
+                </GasInfo>
+            </ProducedGases>
+            <BlueprintClasses>
+                <Class>Heat</Class>
+            </BlueprintClasses>
+            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+            <GenerateSound>BlockOxyGenProcess</GenerateSound>
+            <IdleSound>BlockOxyGenIdle</IdleSound>
+            <EmissiveColorPreset>Extended</EmissiveColorPreset>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+			<MirroringX>None</MirroringX>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+            <PCU>50</PCU>
+            <TieredUpdateTimes>
+                <unsignedInt>100</unsignedInt>
+                <unsignedInt>500</unsignedInt>
+                <unsignedInt>750</unsignedInt>
+            </TieredUpdateTimes>
+        </Definition>
+    </CubeBlocks>
+</Definitions>

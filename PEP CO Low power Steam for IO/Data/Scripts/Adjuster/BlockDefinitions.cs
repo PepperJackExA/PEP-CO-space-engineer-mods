@@ -14,6 +14,8 @@ namespace ModAdjuster
             "MyObjectBuilder_OxygenGenerator/CoalFurnace",
             "MyObjectBuilder_OxygenFarm/SolarConcentrator",
             "MyObjectBuilder_WindTurbine/LargeBlockWindTurbine",
+            "MyObjectBuilder_OxygenGenerator/GeothermalWellHead",
+            
         };
 
         public List<BlockDef> Definitions = new List<BlockDef>()
@@ -288,6 +290,27 @@ namespace ModAdjuster
                     {
                         Action = ChangePCU, // Sets block PCU
                         Value = 100
+                    },
+
+                }
+
+            },
+            new BlockDef()
+            {
+                BlockName = "CargoContainer/GeothermalWellTip",
+                BlockActions = new[]
+                {
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent, // Replaces the component at the given index with a new component
+                        Component = "MyObjectBuilder_Component/TitaniumPlate",
+                        Index = 0,
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent, // Replaces the component at the given index with a new component
+                        Component = "MyObjectBuilder_Component/TitaniumPlate",
+                        Index = 5,
                     },
 
                 }

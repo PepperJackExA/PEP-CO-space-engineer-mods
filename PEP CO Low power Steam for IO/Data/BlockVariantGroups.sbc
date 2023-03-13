@@ -57,5 +57,14 @@
 				<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SolarConcentratorMountHead" />
             </Blocks>
         </BlockVariantGroup>
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Geothermal" />
+            <Blocks>
+				<Block Type="MyObjectBuilder_OxygenGenerator" Subtype="PEPCO_GeothermalWellHead_Rebalance" />
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="GeothermalPipe" />
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="GeothermalPipeMount" />
+				<Block Type="MyObjectBuilder_CargoContainer" Subtype="GeothermalWellTip" />
+            </Blocks>
+        </BlockVariantGroup>
     </BlockVariantGroups>
 </Definitions>
