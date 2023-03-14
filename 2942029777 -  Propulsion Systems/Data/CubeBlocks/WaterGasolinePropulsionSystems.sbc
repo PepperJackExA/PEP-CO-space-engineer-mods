@@ -99,6 +99,14 @@
 			<TargetingGroups>
                 <string>Propulsion</string>
             </TargetingGroups>
+            <VoxelPlacement>
+                <StaticMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                </StaticMode>
+                <DynamicMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                </DynamicMode>
+            </VoxelPlacement>
 			<PCU>25</PCU>
 		</Definition>
 	</CubeBlocks>
