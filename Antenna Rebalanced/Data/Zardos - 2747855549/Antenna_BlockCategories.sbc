@@ -1,0 +1,23 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryClasses>
+  
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Zardos Mods</DisplayName>
+      <Name>Zardos Mods</Name>
+      <StrictSearch>false</StrictSearch>
+      <ItemIds>
+        <string>RadioAntenna/AntennaCube</string>	
+        <string>RadioAntenna/Antenna45Corner</string>	
+        <string>RadioAntenna/AntennaSlope</string>	
+        <string>RadioAntenna/AntennaCorner</string>			
+      </ItemIds>
+    </Category>
+
+
+  </CategoryClasses>
+</Definitions>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlockVariantGroups>
+		
+		<BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CompactAntennaGroup" />
+            <Icon>Textures\GUI\Icons\Antenna Cube.png</Icon>
+            <DisplayName>Compact Antenna</DisplayName>
+            <Description>A collection of Compact Antenna</Description>
+            <Blocks>
+				<Block Type="MyObjectBuilder_RadioAntenna" Subtype="AntennaCube" />
+				<Block Type="MyObjectBuilder_RadioAntenna" Subtype="Antenna45Corner" />
+				<Block Type="MyObjectBuilder_RadioAntenna" Subtype="AntennaSlope" />
+				<Block Type="MyObjectBuilder_RadioAntenna" Subtype="AntennaCorner" />				
+            </Blocks>
+        </BlockVariantGroup>  
+		
+    </BlockVariantGroups>
+</Definitions>

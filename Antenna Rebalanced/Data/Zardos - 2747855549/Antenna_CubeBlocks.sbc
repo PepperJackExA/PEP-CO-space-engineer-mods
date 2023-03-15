@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+            <Id>
+                <TypeId>RadioAntenna</TypeId>
+                <SubtypeId>AntennaCorner</SubtypeId>
+            </Id>
+            <DisplayName>Compact Antenna Corner</DisplayName>
+            <Icon>Textures\GUI\Icons\Antenna Corner.png</Icon>
+            <Description>Description_RadioAntenna</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="3" z="1"/>
+            <ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\Antenna\Antenna Corner.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="60" />
+                <Component Subtype="LargeTube" Count="40" />
+                <Component Subtype="SmallTube" Count="60" />
+                <Component Subtype="Construction" Count="30" />
+                <Component Subtype="Computer" Count="8" />
+                <Component Subtype="RadioCommunication" Count="40" />
+                <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="RadioCommunication" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.01" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.01" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.01" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Antenna\BS\Antenna Corner_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\Antenna\BS\Antenna Corner_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Antenna\BS\Antenna Corner_BS3.mwm"/>
+			</BuildProgressModels>
+            <BlockPairName>AntennaCorner</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <ResourceSinkGroup>Utility</ResourceSinkGroup>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <DamageEffectName>Damage_Electrical_Damaged_Antenna</DamageEffectName>
+            <DamagedSound>ParticleElectrical</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>100</PCU>
+            <IsAirTight>false</IsAirTight>
+        </Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+            <Id>
+                <TypeId>RadioAntenna</TypeId>
+                <SubtypeId>AntennaSlope</SubtypeId>
+            </Id>
+            <DisplayName>Compact Antenna Slope</DisplayName>
+            <Icon>Textures\GUI\Icons\Antenna HalfSlope.png</Icon>
+            <Description>Description_RadioAntenna</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="3" z="1"/>
+            <ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\Antenna\Antenna HalfSlope.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="60" />
+                <Component Subtype="LargeTube" Count="40" />
+                <Component Subtype="SmallTube" Count="60" />
+                <Component Subtype="Construction" Count="30" />
+                <Component Subtype="Computer" Count="8" />
+                <Component Subtype="RadioCommunication" Count="40" />
+                <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="RadioCommunication" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.99"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.99"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.99"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Antenna\BS\Antenna HalfSlope_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\Antenna\BS\Antenna HalfSlope_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Antenna\BS\Antenna HalfSlope_BS3.mwm"/>
+			</BuildProgressModels>
+            <BlockPairName>AntennaSlope</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <ResourceSinkGroup>Utility</ResourceSinkGroup>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <DamageEffectName>Damage_Electrical_Damaged_Antenna</DamageEffectName>
+            <DamagedSound>ParticleElectrical</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>100</PCU>
+            <IsAirTight>false</IsAirTight>
+        </Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+            <Id>
+                <TypeId>RadioAntenna</TypeId>
+                <SubtypeId>Antenna45Corner</SubtypeId>
+            </Id>
+            <DisplayName>Compact Antenna 45Corner</DisplayName>
+            <Icon>Textures\GUI\Icons\Antenna_45 Corner.png</Icon>
+            <Description>Description_RadioAntenna</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="3"/>
+            <ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\Antenna\Antenna_45 Corner.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="60" />
+                <Component Subtype="LargeTube" Count="40" />
+                <Component Subtype="SmallTube" Count="60" />
+                <Component Subtype="Construction" Count="30" />
+                <Component Subtype="Computer" Count="8" />
+                <Component Subtype="RadioCommunication" Count="40" />
+                <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="RadioCommunication" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.08"/>
+				<MountPoint Side="Left" StartX="1.96" StartY="0.00" EndX="3.00" EndY="1.08"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.04" EndY="1.08"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="1.93" EndX="1.00" EndY="3.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Antenna\BS\Antenna_45 Corner_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\Antenna\BS\Antenna_45 Corner_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Antenna\BS\Antenna_45 Corner_BS3.mwm"/>
+			</BuildProgressModels>
+            <BlockPairName>Antenna45Corner</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <ResourceSinkGroup>Utility</ResourceSinkGroup>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <DamageEffectName>Damage_Electrical_Damaged_Antenna</DamageEffectName>
+            <DamagedSound>ParticleElectrical</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>100</PCU>
+            <IsAirTight>false</IsAirTight>
+        </Definition>	
+
+		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+            <Id>
+                <TypeId>RadioAntenna</TypeId>
+                <SubtypeId>AntennaCube</SubtypeId>
+            </Id>
+            <DisplayName>Compact Antenna Cube</DisplayName>
+            <Icon>Textures\GUI\Icons\Antenna Cube.png</Icon>
+            <Description>Description_RadioAntenna</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="3" z="1"/>
+            <ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\Antenna\Antenna Cube.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="60" />
+                <Component Subtype="LargeTube" Count="40" />
+                <Component Subtype="SmallTube" Count="60" />
+                <Component Subtype="Construction" Count="30" />
+                <Component Subtype="Computer" Count="8" />
+                <Component Subtype="RadioCommunication" Count="40" />
+                <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="RadioCommunication" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.01" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.01" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.01" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Antenna\BS\Antenna Cube_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\Antenna\BS\Antenna Cube_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Antenna\BS\Antenna Cube_BS3.mwm"/>
+			</BuildProgressModels>
+            <BlockPairName>AntennaCube</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <ResourceSinkGroup>Utility</ResourceSinkGroup>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <DamageEffectName>Damage_Electrical_Damaged_Antenna</DamageEffectName>
+            <DamagedSound>ParticleElectrical</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>100</PCU>
+            <IsAirTight>false</IsAirTight>
+        </Definition>		
+	</CubeBlocks>
+</Definitions>
