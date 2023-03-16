@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+		<Id>
+			<TypeId>OxygenTank</TypeId>
+			<SubtypeId>EnclosedGasolineTank</SubtypeId>
+		</Id>
+		<DisplayName>1Enclosed Gasoline Tank</DisplayName>
+		<Icon>..\2344068716\Icons\EnclosedTank.dds</Icon>
+		<Description>
+			Stores Gasoline. 30,000L capacity.
+			Caution: Stored fuels are extremely flammable.
+		</Description>
+		<CubeSize>Large</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+		<Size x="1" y="1" z="2" />
+		<ModelOffset x="0" y="0" z="0" />
+		<Model>..\2344068716\Models\EnclosedGasolineTank.mwm</Model>
+		<Components>
+			<Component Subtype="SteelPlate" Count="30" />
+			<Component Subtype="LargeTube" Count="20" />
+			<Component Subtype="SmallTube" Count="30" />
+			<Component Subtype="Construction" Count="25" />
+			<Component Subtype="Computer" Count="10" />
+			<Component Subtype="SteelPlate" Count="30" />
+		</Components>
+		<CriticalComponent Subtype="Computer" Index="0" />
+		<BuildProgressModels>
+			<Model BuildPercentUpperBound="0.33" File="..\2344068716\Models\Construct\EnclosedTankConstruct1.mwm" />
+			<Model BuildPercentUpperBound="0.66" File="..\2344068716\Models\Construct\EnclosedTankConstruct2.mwm" />
+			<Model BuildPercentUpperBound="1.00" File="..\2344068716\Models\Construct\EnclosedTankConstruct3.mwm" />
+		</BuildProgressModels>
+		<BlockPairName>EnclosedGasolineTank</BlockPairName>
+		<MirroringY>Z</MirroringY>
+		<MirroringZ>Y</MirroringZ>
+		<EdgeType>Light</EdgeType>
+		<ResourceSourceGroup>Reactors</ResourceSourceGroup>
+		<ResourceSinkGroup>Factory</ResourceSinkGroup>
+		<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+		<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+		<Capacity>30000</Capacity>
+		<InventoryMaxVolume>0.75</InventoryMaxVolume>
+		<InventorySize>
+			<X>2</X>
+			<Y>2</Y>
+			<Z>2</Z>
+		</InventorySize>
+		<StoredGasId>
+			<TypeId>GasProperties</TypeId>
+			<SubtypeId>Gasoline</SubtypeId>
+		</StoredGasId>
+		<BuildTimeSeconds>50</BuildTimeSeconds>
+		<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+		<DamagedSound>ParticleWeapExpl</DamagedSound>
+		<EmissiveColorPreset>Extended</EmissiveColorPreset>
+		<DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+		<DestroySound>WepLrgWarheadExpl</DestroySound>
+		<BlueprintClasses>
+			<Class>HydrogenBottles</Class>
+		</BlueprintClasses>
+		<PCU>25</PCU>
+		<LeakPercent>0.0025</LeakPercent>
+		<GasExplosionMaxRadius>10</GasExplosionMaxRadius>
+		<GasExplosionNeededVolumeToReachMaxRadius>30000</GasExplosionNeededVolumeToReachMaxRadius>
+		<GasExplosionDamageMultiplier>0.002</GasExplosionDamageMultiplier>
+		<GasExplosionSound>ArcHydrogenExplosion</GasExplosionSound>
+		<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+	</Definition>
+	</CubeBlocks>
+	<PhysicalItems>
+        <PhysicalItem xsi:type="MyObjectBuilder_OxygenContainerDefinition">
+            <Id>
+                <TypeId>GasContainerObject</TypeId>
+                <SubtypeId>GasolineBottles</SubtypeId>
+            </Id>
+            <DisplayName>1Gasoline Bottle</DisplayName>
+            <Icon>Textures\GUI\Icons\component\HydrogenBottle_Component.dds</Icon>
+            <Size>
+                <X>0.8</X>
+                <Y>0.24</Y>
+                <Z>0.08</Z>
+            </Size>
+            <Mass>30</Mass>
+            <Volume>120</Volume>
+            <Model>Models\Components\HydrogenTankItem.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <StoredGasId>
+                <TypeId>GasProperties</TypeId>
+                <SubtypeId>Gasoline</SubtypeId>
+            </StoredGasId>
+            <Capacity>1000</Capacity>
+            <MinimumOfferAmount>5</MinimumOfferAmount>
+            <MaximumOfferAmount>10</MaximumOfferAmount>
+            <MinimumOrderAmount>20</MinimumOrderAmount>
+            <MaximumOrderAmount>50</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>20</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
+        </PhysicalItem>
+     </PhysicalItems>
+
+    <BlueprintClasses>
+
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>GasolineBottles</SubtypeId>
+            </Id>
+            <DisplayName>Gasoline Bottle</DisplayName>
+            <Description>GasolineBottle</Description>
+            <Icon>Textures\GUI\Icons\ore_H2O_ice.dds</Icon>
+            <HighlightIcon>Textures\GUI\Icons\buttons\large_block.dds</HighlightIcon>
+            <FocusIcon>Textures\GUI\Icons\buttons\large_block_focus.dds</FocusIcon>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+            <OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+        </Class>
+        
+    </BlueprintClasses>
+	<Blueprints>        
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>HydrogenBottlesRefill</SubtypeId>
+            </Id>
+            <DisplayName>Gasoline Bottle</DisplayName>
+            <Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="GasContainerObject" SubtypeId="GasolineBottle" />
+            </Prerequisites>
+            <Result Amount="0.9" TypeId="Ingot" SubtypeId="Stone" />
+            <BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+        </Blueprint>
+	    <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>HydrogenBottlesRefill</SubtypeId>
+            </Id>
+            <DisplayName>Gasoline Bottle</DisplayName>
+            <Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="GasContainerObject" SubtypeId="GasolineBottle" />
+            </Prerequisites>
+            <Result Amount="0.9" TypeId="Ingot" SubtypeId="Stone" />
+            <BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+        </Blueprint>
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>HydrogenBottles</SubtypeId>
+            </Id>
+            <DisplayName>Gasoline Bottle</DisplayName>
+            <Icon>Textures\GUI\Icons\component\HydrogenBottle_Component.dds</Icon>
+            <Prerequisites>
+                <Item Amount="80" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+                <Item Amount="30" TypeId="Ingot" SubtypeId="Nickel" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="GasContainerObject" SubtypeId="GasolineBottle" />
+            <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+            <IsPrimary>true</IsPrimary>
+        </Blueprint>
+	
+	</Blueprints>
+<BlueprintClassEntries>
+
+<!-- changed Refinery/OreCompactorSmall to what is below -->
+        <Entry Class="Tools" BlueprintSubtypeId="GasolineBottle" />
+        <Entry Class="HydrogenBottles" BlueprintSubtypeId="GasolineBottlesRefill" />
+    </BlueprintClassEntries>
+</Definitions>
