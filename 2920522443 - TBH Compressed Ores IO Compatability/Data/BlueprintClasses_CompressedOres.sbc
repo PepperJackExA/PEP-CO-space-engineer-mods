@@ -63,27 +63,28 @@
         <Entry Class="CompressedOres" BlueprintSubtypeId="NiterOreToCompressed" />
         <Entry Class="CompressedOres" BlueprintSubtypeId="CarbonOreToCompressed" />
         
-<!-- Compressed Ore Smelting Blueprints -->
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedStoneOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedIronOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedNickelOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedCobaltOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedMagnesiumOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedSiliconOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedSilverOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedGoldOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedPlatinumOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedUraniumOreToIngot" />
-<!-- Compressed IO Ore Smelting Blueprints -->
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedSulfurOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedOilSandOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedCopperOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedLithiumOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedBauxiteOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedTitaniumOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedTantalumOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedNiterOreToIngot" />
-        <Entry Class="Ingots" BlueprintSubtypeId="CompressedCarbonOreToIngot" />
+<!-- Compressed Ore Crusher Blueprints -->
+        <Entry Class="Crusher" BlueprintSubtypeId="StoneOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="IronOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="NickelOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="CobaltOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="MagnesiumOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="SiliconOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="SilverOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="GoldOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="PlatinumOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="UraniumOreToCrushed" />
+<!-- Compressed IO Ore Crusher Blueprints -->
+        <Entry Class="Crusher" BlueprintSubtypeId="CoalOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="SulfurOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="OilSandOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="CopperOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="LithiumOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="BauxiteOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="TitaniumOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="TantalumOreToCrushed" />
+        <Entry Class="Crusher" BlueprintSubtypeId="NiterOreToCrushed" />
+		<Entry Class="Crusher" BlueprintSubtypeId="CarbonCompressed" />
 
 <!-- Compressed Ice to Gas -->
         <Entry Class="Ice" BlueprintSubtypeId="CompressedIceToOxygen" />
