@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+	  <Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+		  <Id>
+			  <TypeId>OxygenGenerator</TypeId>
+			  <SubtypeId>PEPCO_GasolineRefinery</SubtypeId>
+		  </Id>
+		  <DisplayName>PEPCO_Gasoline Refinery</DisplayName>
+		  <Icon>..\2344068716\Icons\FuelRefinery.dds</Icon>
+		  <Description>
+			  Refines raw Fuel Oil into useable Gasoline.
+
+			  Max Output: 80L/s
+			  Power Usage: 2MW
+		  </Description>
+		  <CubeSize>Large</CubeSize>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+		  <Size x="3" y="3" z="3" />
+		  <ModelOffset x="0" y="0" z="0" />
+		  <Model>..\2344068716\Models\GasolineRefinery.mwm</Model>
+		  <Components>
+			  <Component Subtype="SteelPlate" Count="50" />
+			  <Component Subtype="Construction" Count="35" />
+			  <Component Subtype="LargeTube" Count="25" />
+			  <Component Subtype="SmallTube" Count="15" />
+			  <Component Subtype="Motor" Count="15" />
+			  <Component Subtype="Computer" Count="10" />
+			  <Component Subtype="Computer" Count="10" />
+			  <Component Subtype="AdvancedComputer" Count="25" />
+			  <Component Subtype="Ceramic" Count="25" />
+			  <Component Subtype="SteelPlate" Count="15" />
+		  </Components>
+		  <CriticalComponent Subtype="Ceramic" Index="0" />
+		  <MountPoints>
+			  <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" Default="true" />
+			  <MountPoint Side="Back" StartX="1" StartY="0" EndX="2" EndY="1" />
+			  <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="1" />
+			  <MountPoint Side="Right" StartX="1" StartY="0" EndX="2" EndY="1" />
+		  </MountPoints>
+		  <BuildProgressModels>
+			  <Model BuildPercentUpperBound="0.33" File="..\2344068716\Models\Construct\FuelRefineryConstruct1.mwm" />
+			  <Model BuildPercentUpperBound="0.66" File="..\2344068716\Models\Construct\FuelRefineryConstruct2.mwm" />
+			  <Model BuildPercentUpperBound="1.00" File="..\2344068716\Models\Construct\FuelRefineryConstruct3.mwm" />
+		  </BuildProgressModels>
+		  <EdgeType>Light</EdgeType>
+		  <BuildTimeSeconds>25</BuildTimeSeconds>
+		  <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+		  <ResourceSinkGroup>Factory</ResourceSinkGroup>
+		  <IceConsumptionPerSecond>10</IceConsumptionPerSecond>
+		  <InventoryMaxVolume>5</InventoryMaxVolume>
+		  <InventorySize>
+			  <X>2</X>
+			  <Y>2</Y>
+			  <Z>2</Z>
+		  </InventorySize>
+
+		  <InventoryFillFactorMin>0.3</InventoryFillFactorMin>
+		  <InventoryFillFactorMax>0.6</InventoryFillFactorMax>
+
+		  <FuelPullAmountFromConveyorInMinutes>2.2</FuelPullAmountFromConveyorInMinutes>
+
+		  <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+		  <OperationalPowerConsumption>2</OperationalPowerConsumption>
+		  <ProducedGases>
+			  <GasInfo>
+				  <Id>
+					  <TypeId>GasProperties</TypeId>
+					  <SubtypeId>Gasoline</SubtypeId>
+				  </Id>
+				  <IceToGasRatio>8</IceToGasRatio>
+			  </GasInfo>
+		  </ProducedGases>
+		  <BlueprintClasses>
+			  <Class>GasolineCantRefill</Class>
+		  </BlueprintClasses>
+		  <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+		  <DamagedSound>ParticleWeapExpl</DamagedSound>
+		  <GenerateSound>BlockOxyGenProcess</GenerateSound>
+		  <IdleSound>BlockOxyGenIdle</IdleSound>
+		  <EmissiveColorPreset>Extended</EmissiveColorPreset>
+		  <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+		  <DestroySound>WepSmallWarheadExpl</DestroySound>
+		  <MirroringX>Y</MirroringX>
+		  <MirroringY>Z</MirroringY>
+		  <MirroringZ>Y</MirroringZ>
+		  <PCU>50</PCU>
+		  <TieredUpdateTimes>
+			  <unsignedInt>300</unsignedInt>
+			  <unsignedInt>600</unsignedInt>
+			  <unsignedInt>1200</unsignedInt>
+		  </TieredUpdateTimes>
+	  </Definition>
+  </CubeBlocks>
+</Definitions>
