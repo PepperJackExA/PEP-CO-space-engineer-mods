@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ 
+<!--
+****************************************************************
+*        Original Concrete Tool code, written by Digi.         *
+*        All credit for the original code goes to Digi.        *
+*..............................................................*
+*        Modified by Junrall with permission from Digi.        *
+****************************************************************
+-->
+	
+  <BlueprintClassEntries>
+
+    <Entry Class="T1Tools" BlueprintSubtypeId="Blueprint_TerrainTool" />
+    <Entry Class="T1Tools" BlueprintSubtypeId="Blueprint_SoilStoneMix" />
+	<Entry Class="T1Tools" BlueprintSubtypeId="Blueprint_SnowIceMix" />
+
+  </BlueprintClassEntries>
+</Definitions>
