@@ -4,21 +4,19 @@
 		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
 			<Id>
 				<TypeId>OxygenGenerator</TypeId>
-				<SubtypeId>LowPowerCoalFurnace</SubtypeId>
+				<SubtypeId>PEPCO_LowPowerCoalFurnace</SubtypeId>
 			</Id>
 			<DisplayName>Low Power Coal Boiler</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\LowPowerCoalBoiler.dds</Icon>
 			<Description>1/5 the efficientce as normal coal boiler. Must be connected to any Steam Turbine.
-
-		Produces 10 Steam/sec
-		[BETA] MODELS WILL CHANGE
-
-		Same Build layout as normal Coal boiler for easy upgrade!</Description>
+				Produces 10 Steam/sec
+				[BETA] MODELS WILL CHANGE
+			Same Build layout as normal Coal boiler for easy upgrade!</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="6" y="2" z="3"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\large\LowPowerCoalBoiler.mwm</Model>
+			<Model>Models\Cubes\large\PEPCO_CoalFurnace.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="30"/>
 				<Component Subtype="Construction" Count="10"/>
@@ -37,9 +35,9 @@
 			</MountPoints>
 			<IsAirTight>true</IsAirTight>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\large\LowPowerCoalBoiler_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\large\LowPowerCoalBoiler_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\LowPowerCoalBoiler_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\large\PEPCO_CoalFurnace_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\large\PEPCO_CoalFurnace_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\PEPCO_CoalFurnace_BS3.mwm"/>
 			</BuildProgressModels>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>25</BuildTimeSeconds>
@@ -81,22 +79,20 @@
 		<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
 			<Id>
 				<TypeId>HydrogenEngine</TypeId>
-				<SubtypeId>LowPowerSteamTurbine</SubtypeId>
+				<SubtypeId>PEPCO_LowPowerSteamTurbine</SubtypeId>
 			</Id>
 			<DisplayName>Low Power Steam Turbine</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\LowPowerSteamTurbine.dds</Icon>
 			<Description>Low efficiency pressurized Steam Turbine for generating electricity. Must be connected to a source of Steam.
-		
-		Consumes 100 Steam/sec.
-		Max Output: 50MW
-		[BETA] MODELS WILL CHANGE
-
-		Same Build layout as normal Coal turbine for easy upgrade!</Description>
+				Consumes 100 Steam/sec.
+				Max Output: 50MW
+				[BETA] MODELS WILL CHANGE
+			Same Build layout as normal Coal turbine for easy upgrade!</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="2" y="2" z="6"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\large\LowPowerSteamTurbine.mwm</Model>
+			<Model>Models\Cubes\large\PEPCO_LowPowerSteamTurbine.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="40"/>
 				<Component Subtype="Construction" Count="30"/>
@@ -109,15 +105,13 @@
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
-				<MountPoint Side="Right" StartX="5" StartY="1" EndX="6" EndY="2"/>
-				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="6" Default="true"/>
+				<MountPoint Side="Right" StartX="5.00" StartY="1.00" EndX="6.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="6.00"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\LowPowerSteamTurbine_BS1.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\LowPowerSteamTurbine_BS2.mwm"/>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\PEPCO_LowPowerSteamTurbine_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\PEPCO_LowPowerSteamTurbine_BS2.mwm"/>
 			</BuildProgressModels>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>12</BuildTimeSeconds>
 			<ResourceSinkGroup>Generators</ResourceSinkGroup>
@@ -154,22 +148,20 @@
 		<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
 			<Id>
 				<TypeId>HydrogenEngine</TypeId>
-				<SubtypeId>LowPowerSteamTurbineMirrored</SubtypeId>
+				<SubtypeId>PEPCO_LowPowerSteamTurbineMirrored</SubtypeId>
 			</Id>
 			<DisplayName>Low Power Steam Turbine - Mirrored</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\LowPowerSteamTurbineMirrored.dds</Icon>
 			<Description>Low efficiency pressurized Steam Turbine for generating electricity. Must be connected to a source of Steam.
-		
-		Consumes 100 Steam/sec.
-		Max Output: 50MW
-		[BETA] MODELS WILL CHANGE
-
-		Same Build layout as normal Coal turbine for easy upgrade!</Description>
-        <CubeSize>Large</CubeSize>
-        <BlockTopology>TriangleMesh</BlockTopology>
-        <Size x="2" y="2" z="6" />
-        <ModelOffset x="0" y="0" z="0" />
-        <Model>Models\Cubes\large\LowPowerSteamTurbineMirrored.mwm</Model>
+				Consumes 100 Steam/sec.
+				Max Output: 50MW
+				[BETA] MODELS WILL CHANGE
+			Same Build layout as normal Coal turbine for easy upgrade!</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="6" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\large\PEPCO_LowPowerSteamTurbineMirrored.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="40"/>
 				<Component Subtype="Construction" Count="30"/>
@@ -181,50 +173,46 @@
 				<Component Subtype="SteelPlate" Count="20"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
-        <MountPoints>
-            <MountPoint Side="Left" StartX="0" StartY="1" EndX="1" EndY="2" />
-            <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="6" Default="true" />
-        </MountPoints>
-            <BuildProgressModels>
-				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\LowPowerSteamTurbineMirrored_BS1.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\LowPowerSteamTurbineMirrored_BS2.mwm"/>
-            </BuildProgressModels>
-            <MirroringY>Z</MirroringY>
-            <MirroringZ>Y</MirroringZ>
-            <EdgeType>Light</EdgeType>
-            <BuildTimeSeconds>60</BuildTimeSeconds>
-            <ResourceSinkGroup>Generators</ResourceSinkGroup>
-            <ResourceSourceGroup>Reactors</ResourceSourceGroup>
-            <MaxPowerOutput>50</MaxPowerOutput>
-            <FuelCapacity>100</FuelCapacity>
-            <EmissiveColorPreset>Extended</EmissiveColorPreset>
-            <IsAirTight>false</IsAirTight>
-            <InventorySize>
-                <X>1</X>
-                <Y>1</Y>
-                <Z>1</Z>
-            </InventorySize>
-            <FuelInfos>
-                <FuelInfo>
-                    <Id>
-                        <TypeId>GasProperties</TypeId>
-                        <SubtypeId>Steam</SubtypeId>
-                    </Id>
-                </FuelInfo>
-            </FuelInfos>
-            <FuelProductionToCapacityMultiplier>0.5</FuelProductionToCapacityMultiplier>
-            <PrimarySound>ArcBlockWindTurbine</PrimarySound>
-
-            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
-            <DamagedSound>ParticleHeavyMech</DamagedSound>
-            <DestroyEffect>Explosion_Warhead_02</DestroyEffect>
-            <DestroySound>WepSmallWarheadExpl</DestroySound>
-            <PCU>5</PCU>
-            <EmissiveColorPreset>Extended</EmissiveColorPreset>
-
-            <AnimationSpeed>7</AnimationSpeed>
-            <AnimationSpinUpSpeed>0.75</AnimationSpinUpSpeed>
-            <AnimationSpinDownSpeed>0.75</AnimationSpinDownSpeed>
-        </Definition>
+			<MountPoints>
+				<MountPoint Side="Left" StartX="0" StartY="1" EndX="1" EndY="2" />
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="6" Default="true" />
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\PEPCO_LowPowerSteamTurbineMirrored_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\PEPCO_LowPowerSteamTurbineMirrored_BS2.mwm"/>
+			</BuildProgressModels>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>60</BuildTimeSeconds>
+			<ResourceSinkGroup>Generators</ResourceSinkGroup>
+			<ResourceSourceGroup>Reactors</ResourceSourceGroup>
+			<MaxPowerOutput>50</MaxPowerOutput>
+			<FuelCapacity>100</FuelCapacity>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<IsAirTight>false</IsAirTight>
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+			<FuelInfos>
+				<FuelInfo>
+					<Id>
+						<TypeId>GasProperties</TypeId>
+						<SubtypeId>Steam</SubtypeId>
+					</Id>
+				</FuelInfo>
+			</FuelInfos>
+			<FuelProductionToCapacityMultiplier>0.5</FuelProductionToCapacityMultiplier>
+			<PrimarySound>ArcBlockWindTurbine</PrimarySound>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>Explosion_Warhead_02</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>5</PCU>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<AnimationSpeed>7</AnimationSpeed>
+			<AnimationSpinUpSpeed>0.75</AnimationSpinUpSpeed>
+			<AnimationSpinDownSpeed>0.75</AnimationSpinDownSpeed>
+		</Definition>
 	</CubeBlocks>
 </Definitions>
