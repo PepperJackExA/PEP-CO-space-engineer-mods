@@ -13,7 +13,6 @@ namespace ModAdjuster
             "MyObjectBuilder_WindTurbine/LargeWindTurbine",
             "MyObjectBuilder_OxygenGenerator/CoalFurnace",
             "MyObjectBuilder_OxygenFarm/SolarConcentrator",
-            "MyObjectBuilder_WindTurbine/LargeBlockWindTurbine",
             "MyObjectBuilder_OxygenGenerator/GeothermalWellHead",
             
         };

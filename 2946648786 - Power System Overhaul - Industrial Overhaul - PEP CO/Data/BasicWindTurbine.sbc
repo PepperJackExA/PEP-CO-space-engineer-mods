@@ -4,7 +4,7 @@
         <Definition xsi:type="MyObjectBuilder_WindTurbineDefinition">
             <Id>
                 <TypeId>WindTurbine</TypeId>
-                <SubtypeId>BasicWindTurbine</SubtypeId>
+                <SubtypeId>LargeBlockWindTurbine</SubtypeId>
             </Id>
             <DisplayName>Basic Wind Turbine</DisplayName>
             <Description>Basic wind panel capable of generating power. Nominal Max Output: 500kW</Description>
