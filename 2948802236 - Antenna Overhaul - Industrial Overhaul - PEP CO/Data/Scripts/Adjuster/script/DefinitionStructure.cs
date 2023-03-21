@@ -42,6 +42,8 @@
                     ChangeThrustPowerConsumption,
                     ChangeGyroForce,
                     ChangeIcon,
+                    ChangeBroadcastRadius,
+                    ChangeLaserMaxRange,
                 }
             }
         }
