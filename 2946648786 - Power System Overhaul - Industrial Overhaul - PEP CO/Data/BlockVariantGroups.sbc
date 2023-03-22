@@ -15,7 +15,7 @@
         <BlockVariantGroup>
             <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CoalFurnace" />
             <Blocks>
-                <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="PEPCO_CoalFurnace_Rebalance" />
+                <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="CoalFurnace" />
                 <Block Type="MyObjectBuilder_OxygenGenerator" Subtype="PEPCO_LowPowerCoalFurnace" />
             </Blocks>
         </BlockVariantGroup>
@@ -52,7 +52,7 @@
                 <Block Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockSolarPanel" />
                 <Block Type="MyObjectBuilder_SolarPanel" Subtype="LargeFullSpectrumSolarPanel" />
                 <Block Type="MyObjectBuilder_SolarPanel" Subtype="SmallFullSpectrumSolarPanel" />
-                <Block Type="MyObjectBuilder_OxygenFarm" Subtype="PEPCO_SolarConcentrator_Rebalance" />
+                <Block Type="MyObjectBuilder_OxygenFarm" Subtype="SolarConcentrator" />
 				<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SolarConcentratorMount" />
 				<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SolarConcentratorMountHead" />
             </Blocks>
@@ -60,7 +60,7 @@
         <BlockVariantGroup>
             <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Geothermal" />
             <Blocks>
-				<Block Type="MyObjectBuilder_OxygenGenerator" Subtype="PEPCO_GeothermalWellHead_Rebalance" />
+				<Block Type="MyObjectBuilder_OxygenGenerator" Subtype="GeothermalWellHead" />
 				<Block Type="MyObjectBuilder_Conveyor" Subtype="GeothermalPipe" />
 				<Block Type="MyObjectBuilder_Conveyor" Subtype="GeothermalPipeMount" />
 				<Block Type="MyObjectBuilder_CargoContainer" Subtype="GeothermalWellTip" />

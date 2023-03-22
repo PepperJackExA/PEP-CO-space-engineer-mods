@@ -11,9 +11,6 @@ namespace ModAdjuster
         public List<string> DisabledBlocks = new List<string>() // List of blocks to disable
         {
             "MyObjectBuilder_WindTurbine/LargeWindTurbine",
-            "MyObjectBuilder_OxygenGenerator/CoalFurnace",
-            "MyObjectBuilder_OxygenFarm/SolarConcentrator",
-            "MyObjectBuilder_OxygenGenerator/GeothermalWellHead",
             
         };
 
