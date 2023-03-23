@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlueprintClasses>
+	</BlueprintClasses>
+	<BlueprintClassEntries>
+		<!-- Survival Kit Refining -->
+
+		<Entry Class="StartingIngots" BlueprintSubtypeId="NickelOreStarting" />
+		<Entry Class="StartingIngots" BlueprintSubtypeId="SiliconOreStarting" />
+		<Entry Class="StartingIngots" BlueprintSubtypeId="SilverOreStarting" />
+
+		<!-- Assembler Bench Crafting -->
+
+		<Entry Class="AssemblingBenchComponents" BlueprintSubtypeId="POMedicalComponent_Bench" />
+	</BlueprintClassEntries>
+</Definitions>

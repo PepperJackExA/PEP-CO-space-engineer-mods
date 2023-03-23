@@ -1,158 +1,65 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Blueprints>
+	<Blueprints>
 
-    <!--Smelter and Refiner Changes-->
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>StoneOreToIngotBasic</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
-      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
-      <Prerequisites>
-        <Item Amount="100" TypeId="Ore" SubtypeId="Stone" />
-      </Prerequisites>
-      <Results>
-        <Item Amount="65" TypeId="Ingot" SubtypeId="Stone" />        
-        <Item Amount="0.1" TypeId="Ore" SubtypeId="Organic" />
-      </Results>
-      <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
-    </Blueprint>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>StoneOreToIngot</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
-      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
-      <Prerequisites>
-        <Item Amount="100" TypeId="Ore" SubtypeId="Stone" />
-      </Prerequisites>
-      <Results>
-        <Item Amount="50" TypeId="Ingot" SubtypeId="Stone" />
-        <Item Amount="0.15" TypeId="Ore" SubtypeId="Organic" />
-      </Results>
-      <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
-      <IsPrimary>true</IsPrimary>
-    </Blueprint>
-    
-    <!--Survival Kit Changes-->
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>StoneOreToIngotStarting</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
-      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
-      <Prerequisites>
-        <Item Amount="100" TypeId="Ore" SubtypeId="Stone" />
-      </Prerequisites>
-      <Results>
-        <Item Amount="25" TypeId="Ingot" SubtypeId="Stone" />
-        <Item Amount="0.1" TypeId="Ore" SubtypeId="Organic" />
-        <Item Amount="15" TypeId="Ore" SubtypeId="Iron" />
-        <Item Amount="2" TypeId="Ore" SubtypeId="Nickel" />
-        <Item Amount="3" TypeId="Ore" SubtypeId="Silicon" />
-        <Item Amount="5" TypeId="Ore" SubtypeId="Copper" />
-        <Item Amount="0.1" TypeId="Ore" SubtypeId="Silver" />
-        <Item Amount="0.1" TypeId="Ore" SubtypeId="Cobalt" />
-      </Results>
-      <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
-    </Blueprint>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>IronOreToIngotStarting</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Item_IronIngot</DisplayName>
-      <Icon>Textures\GUI\Icons\ingot\Iron_ingot.dds</Icon>
-      <Prerequisites>
-        <Item Amount="3" TypeId="Ore" SubtypeId="Iron" />
-      </Prerequisites>
-      <Result Amount="1" TypeId="Ingot" SubtypeId="Iron" />
-      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
-    </Blueprint>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>CopperOreToIngotStarting</SubtypeId>
-      </Id>
-      <DisplayName>Copper Ingot</DisplayName>
-      <Icon>..\2344068716\Icons\CopperIngot.dds</Icon>
-      <Prerequisites>
-        <Item Amount="3" TypeId="Ore" SubtypeId="Copper" />
-      </Prerequisites>
-      <Result Amount="1" TypeId="Ingot" SubtypeId="Copper" />
-      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
-    </Blueprint>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>NickelOreToIngotStarting</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Item_NickelIngot</DisplayName>
-      <Icon>Textures\GUI\Icons\ingot\Nickel_ingot.dds</Icon>
-      <Prerequisites>
-        <Item Amount="1" TypeId="Ore" SubtypeId="Nickel" />
-      </Prerequisites>
-      <Result Amount="0.3" TypeId="Ingot" SubtypeId="Nickel" />
-      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
-    </Blueprint>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>SiliconOreToIngotStarting</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Item_SiliconWafer</DisplayName>
-      <Icon>Textures\GUI\Icons\ingot\Silicon_ingot.dds</Icon>
-      <Prerequisites>
-        <Item Amount="1" TypeId="Ore" SubtypeId="Silicon" />
-      </Prerequisites>
-      <Result Amount="0.3" TypeId="Ingot" SubtypeId="Silicon" />
-      <BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
-    </Blueprint>
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>SilverOreToIngotStarting</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Item_SilverIngot</DisplayName>
-      <Icon>Textures\GUI\Icons\ingot\Silver_ingot.dds</Icon>
-      <Prerequisites>
-        <Item Amount="1" TypeId="Ore" SubtypeId="Silver" />
-      </Prerequisites>
-      <Result Amount="0.3" TypeId="Ingot" SubtypeId="Silver" />
-      <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
-    </Blueprint>
+		<!--Survival Kit Changes-->
 
-    <!-- Assembler Bench Changes -->
-    <Blueprint>
-      <Id>
-        <TypeId>BlueprintDefinition</TypeId>
-        <SubtypeId>POMedicalComponent_Bench</SubtypeId>
-      </Id>
-      <DisplayName>DisplayName_Item_MedicalComponents</DisplayName>
-      <Icon>Textures\GUI\Icons\component\medical_components_component.dds</Icon>
-      <Prerequisites>
-        <Item Amount="12" TypeId="Ingot" SubtypeId="Iron" />
-        <Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
-        <Item Amount="8" TypeId="Ingot" SubtypeId="Silver" />
-      </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="Medical" />
-      <BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
-      <IsPrimary>true</IsPrimary>
-    </Blueprint>
-  </Blueprints>
-  <BlueprintClassEntries>
-	  <!-- Survival Kit Refining -->	
-    
-    <Entry Class="StartingIngots" BlueprintSubtypeId="SilverOreToIngotStarting" />
-    <Entry Class="StartingIngots" BlueprintSubtypeId="SiliconOreToIngotStarting" />
-    <Entry Class="StartingIngots" BlueprintSubtypeId="NickelOreToIngotStarting" />
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>NickelOreStarting</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Item_NickelIngot</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\Nickel_ingot.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Nickel" />
+			</Prerequisites>
+			<Result Amount="0.3" TypeId="Ingot" SubtypeId="Nickel" />
+			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SiliconOreStarting</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Item_SiliconWafer</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\Silicon_ingot.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Silicon" />
+			</Prerequisites>
+			<Result Amount="0.3" TypeId="Ingot" SubtypeId="Silicon" />
+			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SilverOreStarting</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Item_SilverIngot</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\Silver_ingot.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Silver" />
+			</Prerequisites>
+			<Result Amount="0.3" TypeId="Ingot" SubtypeId="Silver" />
+			<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+		</Blueprint>
 
-    <!-- Assembler Bench Crafting -->
-    
-    <Entry Class="AssemblingBenchComponents" BlueprintSubtypeId="POMedicalComponent_Bench" />
-  </BlueprintClassEntries>
+		<!-- Assembler Bench Changes -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>POMedicalComponent_Bench</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Item_MedicalComponents</DisplayName>
+			<Icon>Textures\GUI\Icons\component\medical_components_component.dds</Icon>
+			<Prerequisites>
+				<Item Amount="12" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
+				<Item Amount="8" TypeId="Ingot" SubtypeId="Silver" />
+			</Prerequisites>
+			<Result Amount="1" TypeId="Component" SubtypeId="Medical" />
+			<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+			<IsPrimary>true</IsPrimary>
+		</Blueprint>
+	</Blueprints>
 </Definitions>
