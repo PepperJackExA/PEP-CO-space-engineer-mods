@@ -10,7 +10,7 @@ namespace ModAdjuster
         public List<BlueprintDef> Definitions = new List<BlueprintDef>()
         {   
             
-
+         // Sotne to ore
             new BlueprintDef()
             {
                 BlueprintName = "MyObjectBuilder_BlueprintDefinition/StoneOreToIngotStarting",
@@ -58,15 +58,22 @@ namespace ModAdjuster
                     {
                         Action = InsertResult,
                         Index = 0,
-                        Item = "MyObjectBuilder_Ore/Organic",
-                        Amount = 0.1f
+                        Item = "MyObjectBuilder_Ore/Ice",
+                        Amount = 0.05f
                     },
                     new BPAction
                     {
                         Action = InsertResult,
                         Index = 0,
-                        Item = "MyObjectBuilder_Ore/Iron",
-                        Amount = 15f
+                        Item = "MyObjectBuilder_Ore/Sulfur",
+                        Amount = 0.05f
+                    },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Organic",
+                        Amount = 0.1f
                     },
                     new BPAction
                     {
@@ -103,6 +110,14 @@ namespace ModAdjuster
                         Item = "MyObjectBuilder_Ore/Cobalt",
                         Amount = 0.1f
                     },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Iron",
+                        Amount = 15f
+                    },
+
                 }
             },
             new BlueprintDef()
@@ -200,7 +215,33 @@ namespace ModAdjuster
 
                 }
             },
+        // Survival kit - Ore to Ingots 
+            new BlueprintDef()
+            {
+                BlueprintName = "MyObjectBuilder_BlueprintDefinition/IronOreToIngotStarting",
+                BPActions = new[]
+                {
+                    new BPAction
+                    {
+                        Action = ChangeProductionTime,
+                        Amount = 1f
+                    },
 
+                }
+            },
+            new BlueprintDef()
+            {
+                BlueprintName = "MyObjectBuilder_BlueprintDefinition/CopperOreToIngotStarting",
+                BPActions = new[]
+                {
+                    new BPAction
+                    {
+                        Action = ChangeProductionTime,
+                        Amount = 1f
+                    },
+
+                }
+            },
         };
     }
 }
