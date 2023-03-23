@@ -18,35 +18,90 @@ namespace ModAdjuster
                 {
                     new BPAction
                     {
-                        Action = ReplaceResult, 
+                        Action = ReplaceResult,
                         Index = 0,
-                        Item = "MyObjectBuilder_Ingot/Cobalt"
+                        Item = "MyObjectBuilder_Ingot/Stone"
                     },
                     new BPAction
                     {
-                        Action = ReplaceResult, 
-                        Index = 1,
-                        Item = "MyObjectBuilder_Ingot/Silver",
+                        Action = ChangeAmountResult,
+                        Index = 0,
+                        Amount = 25f
                     },
+
                     new BPAction
                     {
-                        Action = RemoveResult, 
-                        Index = 2,
+                        Action = RemoveResult,
+                        Index = 1
                     },
                     new BPAction
                     {
                         Action = RemoveResult,
-                        Index = 3,
+                        Index = 2
                     },
                     new BPAction
                     {
-                        Action = RemoveResult, 
-                        Index = 4,
+                        Action = RemoveResult,
+                        Index = 3
                     },
                     new BPAction
                     {
-                        Action = RemoveResult, 
-                        Index = 5,
+                        Action = RemoveResult,
+                        Index = 4
+                    },
+                    new BPAction
+                    {
+                        Action = RemoveResult,
+                        Index = 5
+                    },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Organic",
+                        Amount = 0.1f
+                    },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Iron",
+                        Amount = 15f
+                    },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Nickel",
+                        Amount = 2f
+                    },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Silicon",
+                        Amount = 3f
+                    },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Copper",
+                        Amount = 5f
+                    },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Silver",
+                        Amount = 0.1f
+                    },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Cobalt",
+                        Amount = 0.1f
                     },
                 }
             },
@@ -59,33 +114,41 @@ namespace ModAdjuster
                     {
                         Action = ReplaceResult,
                         Index = 0,
-                        Item = "MyObjectBuilder_Ingot/Cobalt"
+                        Item = "MyObjectBuilder_Ingot/Stone"
                     },
                     new BPAction
                     {
-                        Action = ReplaceResult,
-                        Index = 1,
-                        Item = "MyObjectBuilder_Ingot/Silver",
+                        Action = ChangeAmountResult,
+                        Index = 0,
+                        Amount = 65f
+                    },
+
+                    new BPAction
+                    {
+                        Action = RemoveResult,
+                        Index = 1
                     },
                     new BPAction
                     {
                         Action = RemoveResult,
-                        Index = 2,
+                        Index = 2
                     },
                     new BPAction
                     {
                         Action = RemoveResult,
-                        Index = 3,
+                        Index = 3
                     },
                     new BPAction
                     {
                         Action = RemoveResult,
-                        Index = 4,
+                        Index = 4
                     },
                     new BPAction
                     {
-                        Action = RemoveResult,
-                        Index = 5,
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Organic",
+                        Amount = 0.1f
                     },
                 }
             },
@@ -98,34 +161,43 @@ namespace ModAdjuster
                     {
                         Action = ReplaceResult,
                         Index = 0,
-                        Item = "MyObjectBuilder_Ingot/Cobalt"
+                        Item = "MyObjectBuilder_Ingot/Stone"
                     },
                     new BPAction
                     {
-                        Action = ReplaceResult,
-                        Index = 1,
-                        Item = "MyObjectBuilder_Ingot/Silver",
+                        Action = ChangeAmountResult,
+                        Index = 0,
+                        Amount = 50f
+                    },
+
+                    new BPAction
+                    {
+                        Action = RemoveResult,
+                        Index = 1
                     },
                     new BPAction
                     {
                         Action = RemoveResult,
-                        Index = 2,
+                        Index = 2
                     },
                     new BPAction
                     {
                         Action = RemoveResult,
-                        Index = 3,
+                        Index = 3
                     },
                     new BPAction
                     {
                         Action = RemoveResult,
-                        Index = 4,
+                        Index = 4
                     },
                     new BPAction
                     {
-                        Action = RemoveResult,
-                        Index = 5,
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ore/Organic",
+                        Amount = 0.15f
                     },
+
                 }
             },
 
