@@ -373,7 +373,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeBroadcastRadius, 
-                        Value = 50
+                        Value = 10000
                     },
 
 
@@ -1221,7 +1221,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeBlockDescription, 
-                        NewText = "Antenna Range = 50K",
+                        NewText = "Antenna Range = 25K",
                     },
                     new BlockAction
                     {
@@ -1316,7 +1316,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeLaserMaxRange,
-                        Value = 50000
+                        Value = 25000
                     },
 
                 }
@@ -1335,7 +1335,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeBlockDescription,
-                        NewText = "Antenna Range = 50K With Fast turning speeds",
+                        NewText = "Antenna Range = 15K With Fast turning speeds",
                     },
                     new BlockAction
                     {
@@ -1345,7 +1345,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeLaserMaxRange,
-                        Value = 50000
+                        Value = 15000
                     },
                     new BlockAction
                     {
@@ -1659,7 +1659,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeBlockDescription,
-                        NewText = "Antenna Range = 50K",
+                        NewText = "Antenna Range = 10K",
                     },
                     new BlockAction
                     {
@@ -1669,7 +1669,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeLaserMaxRange,
-                        Value = 50000
+                        Value = 10000
                     },
                     new BlockAction
                     {
@@ -1769,7 +1769,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeBlockDescription,
-                        NewText = "Antenna Range = 50K",
+                        NewText = "Antenna Range = 5K",
                     },
                     new BlockAction
                     {
@@ -1779,7 +1779,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeLaserMaxRange,
-                        Value = 50000
+                        Value = 5000
                     },
                     new BlockAction
                     {
