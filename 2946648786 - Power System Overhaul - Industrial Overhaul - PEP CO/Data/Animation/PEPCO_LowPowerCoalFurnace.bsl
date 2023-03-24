@@ -23,7 +23,6 @@ func burn() {
 	var randomv3 = 75.0 + 25.0 * math.random();
 	var red1 = 255.0 - 11.0 * randomv1
 	var yellow1 = 44.0 * randomv2
-	api.log(red1)
 	Emissive1.setcolor(red1, yellow1, 0, randomv3, false)
 }
 func off(){
