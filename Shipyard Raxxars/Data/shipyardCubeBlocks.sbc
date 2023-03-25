@@ -37,12 +37,12 @@
 				<Component Subtype="StrengthenedSteel" Count="900" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
-            <BuildProgressModels>
-                <Model BuildPercentUpperBound="0.33" File="Models\ShipyardCorner_Large_Constr1.mwm" />
-                <Model BuildPercentUpperBound="0.67" File="Models\ShipyardCorner_Large_Constr2.mwm" />
-                <Model BuildPercentUpperBound="1.00" File="Models\ShipyardCorner_Large_Constr3.mwm" />
-            </BuildProgressModels>
-			<MountPoints>   
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\ShipyardCorner_Large_Constr1.mwm" />
+				<Model BuildPercentUpperBound="0.67" File="Models\ShipyardCorner_Large_Constr2.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\ShipyardCorner_Large_Constr3.mwm" />
+			</BuildProgressModels>
+			<MountPoints>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="1.00" />
 				<MountPoint Side="Bottom" StartX="2.00" StartY="0.00" EndX="3.00" EndY="2.00" />
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" />
@@ -90,7 +90,7 @@
 				<Component Subtype="Motor" Count="6" />
 				<Component Subtype="SteelPlate" Count="4" />
 			</Components>
-			<CriticalComponent Subtype="Motor" Index="0" />        
+			<CriticalComponent Subtype="Motor" Index="0" />
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.50" File="Models\ShipyardConveyor_Large_Constr1.mwm" />
 				<Model BuildPercentUpperBound="1.00" File="Models\ShipyardConveyor_Large_Constr2.mwm" />
@@ -131,7 +131,7 @@
 				<Component Subtype="SmallTube" Count="12" />
 				<Component Subtype="Motor" Count="6" />
 				<Component Subtype="SteelPlate" Count="12" />
-		    </Components>
+			</Components>
 			<CriticalComponent Subtype="Motor" Index="0" />
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.50" File="Models\ShipyardConveyor_Large_Constr1.mwm" />
