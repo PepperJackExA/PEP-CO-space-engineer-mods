@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>TerminalBlock</TypeId>
+				<SubtypeId>PEPCO_SmallContainer</SubtypeId>
+			</Id>
+			<DisplayName>PEPCO TEST CONTAINER</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\container.dds</Icon>
+			<Description>Description_SmallCargoContainer</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\Small\CargoContainerSmall.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="2" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="Computer" Count="1" />
+				<Component Subtype="Motor" Count="1" />
+				<Component Subtype="Display" Count="1" />
+				<Component Subtype="InteriorPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+				<MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true" />
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\CargoContainerSmallConstruction_1.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\CargoContainerSmallConstruction_2.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>Biodiesel Storage</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>6</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>10</PCU>
+			<IsAirTight>true</IsAirTight>
+		</Definition>
+		
+		
+		
+		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+			<Id>
+				<TypeId>OxygenGenerator</TypeId>
+				<SubtypeId>PEPCO_BioDiesel_Jerrycan_storage</SubtypeId>
+			</Id>
+			<DisplayName>PEPCO BioDiesel Gas Tank</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\OxygenGenerator.dds</Icon>
+			<Description>Description_OxygenGenerator</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\Large\OxygenGenerator.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="110" />
+				<Component Subtype="Construction" Count="5" />
+				<Component Subtype="LargeTube" Count="2" />
+				<Component Subtype="Motor" Count="4" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+				<MountPoint Side="Front" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+				<MountPoint Side="Bottom" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" Default="true" />
+				<MountPoint Side="Top" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+				<MountPoint Side="Left" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+				<MountPoint Side="Right" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+			</MountPoints>
+			<IsAirTight>true</IsAirTight>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\OxygenGeneratorConstruction_1.mwm" />
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\OxygenGeneratorConstruction_2.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\OxygenGeneratorConstruction_3.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>OxygenGenerator</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>22</BuildTimeSeconds>
+			<ResourceSourceGroup>Reactors</ResourceSourceGroup>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<IceConsumptionPerSecond>25</IceConsumptionPerSecond>
+			<InventoryMaxVolume>4</InventoryMaxVolume>
+			<InventorySize>
+				<X>2</X>
+				<Y>2</Y>
+				<Z>2</Z>
+			</InventorySize>
+
+			<InventoryFillFactorMin>0.3</InventoryFillFactorMin>
+			<InventoryFillFactorMax>0.6</InventoryFillFactorMax>
+
+			<FuelPullAmountFromConveyorInMinutes>2.2</FuelPullAmountFromConveyorInMinutes>
+
+			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+			<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+			<ProducedGases>
+				<GasInfo>
+					<Id>
+						<TypeId>GasProperties</TypeId>
+						<SubtypeId>PEPCO_BioDiesel</SubtypeId>
+					</Id>
+					<IceToGasRatio>10</IceToGasRatio>
+				</GasInfo>
+			</ProducedGases>
+			<BlueprintClasses>
+				<Class>Ice</Class>
+			</BlueprintClasses>
+			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<GenerateSound>BlockOxyGenProcess</GenerateSound>
+			<IdleSound>BlockOxyGenIdle</IdleSound>
+			<EmissiveColorPreset>Extended</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<MirroringX>Y</MirroringX>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<PCU>50</PCU>
+			<TieredUpdateTimes>
+				<unsignedInt>300</unsignedInt>
+				<unsignedInt>600</unsignedInt>
+				<unsignedInt>1200</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<EntityComponents>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>BioDiesel Storage</SubtypeId>
+			</Id>
+			<Size x="0.1" y="0.1" z="0.1" />
+			<InputConstraint Whitelist="true" Description="BioDiesel Storage">
+				<Entry Type="Ore" Subtype="PEPCO_BioDiesel_Jerrycan"  />
+			</InputConstraint>
+		</EntityComponent>
+
+	</EntityComponents>
+
+</Definitions>

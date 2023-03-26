@@ -1,0 +1,26 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PhysicalItems>
+	
+    <PhysicalItem>
+      <Id>
+        <TypeId>Ore</TypeId>
+        <SubtypeId>PEPCO_BioDiesel_Jerrycan</SubtypeId>
+      </Id>
+      <DisplayName>BioDiesel Jerrycan</DisplayName>
+      <Icon>Textures\GUI\Icons\JerryCan.png</Icon>
+		<Size>
+			<X>0.07</X>
+			<Y>0.07</Y>
+			<Z>0.07</Z>
+		</Size>
+		<Mass>.03</Mass>
+		<Volume>0.3</Volume>
+      <Volume>0.3</Volume>
+      <Model>Models\Jerrycan.mwm</Model>
+      <PhysicalMaterial>Stone</PhysicalMaterial>
+      <IconSymbol>BioDiesel</IconSymbol>
+    </PhysicalItem>
+	
+  </PhysicalItems>
+</Definitions>
