@@ -224,7 +224,7 @@ namespace ModAdjuster
                     new BPAction
                     {
                         Action = ChangeProductionTime,
-                        Amount = 1f
+                        Amount = 0.2f
                     },
 
                 }
@@ -237,7 +237,7 @@ namespace ModAdjuster
                     new BPAction
                     {
                         Action = ChangeProductionTime,
-                        Amount = 1f
+                        Amount = 0.2f
                     },
 
                 }
