@@ -6,9 +6,9 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
-				<SubtypeId>BioDiesel Storage</SubtypeId>
+				<SubtypeId>BioDiesel_Storage</SubtypeId>
 			</Id>
-			<Size x="0.1" y="0.1" z="0.1" />
+			<Size x="1" y="1" z="1" />
 			<InputConstraint Whitelist="true" Description="BioDiesel Storage">
 				<Entry Type="Ore" Subtype="PEPCO_BioDiesel_Jerrycan"  />
 			</InputConstraint>

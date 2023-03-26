@@ -22,6 +22,14 @@
 			<DisplayName>FuelOilToFuels</DisplayName>
 			<Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
 		</Class>
+		<Class>
+			<Id>
+				<TypeId>BlueprintClassDefinition</TypeId>
+				<SubtypeId>Jerrycantogas</SubtypeId>
+			</Id>
+			<DisplayName>FuelOilToFuels</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+		</Class>
 	</BlueprintClasses>
 	<BlueprintClassEntries>
 		<!--<Entry Class="OilExtraction" BlueprintSubtypeId="OilExtractionAlgae" />
@@ -44,5 +52,6 @@
 		<Entry Class="CompressedOres" BlueprintSubtypeId="OilExtractionWheat"/>
 		<Entry Class="CompressedOres" BlueprintSubtypeId="OilExtractionSoya"/>
 		<Entry Class="OrganicOilToBioDiesel" BlueprintSubtypeId="OrganicOilToBioDiesel"/>
+		<Entry Class="Jerrycantogas" BlueprintSubtypeId="Jerrycantogas"/>
 	</BlueprintClassEntries>
 </Definitions>

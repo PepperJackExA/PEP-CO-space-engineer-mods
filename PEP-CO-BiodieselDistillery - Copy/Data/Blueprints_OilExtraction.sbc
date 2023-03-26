@@ -158,5 +158,19 @@
 			<Result Amount="10" TypeId="Ore" SubtypeId="PEPCO_BioDiesel_Jerrycan"/>
 			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
 		</Blueprint>
+		<!-- Gas generations -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Jerrycantogas</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Item_Oxygen</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="PEPCO_BioDiesel_Jerrycan"/>
+			</Prerequisites>
+			<Result Amount="0.9" TypeId="Ore" SubtypeId="Stone"/>
+			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+		</Blueprint>
 	</Blueprints>
 </Definitions>

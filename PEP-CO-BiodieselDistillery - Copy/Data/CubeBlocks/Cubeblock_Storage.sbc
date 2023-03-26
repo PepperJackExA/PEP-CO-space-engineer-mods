@@ -4,16 +4,16 @@
 		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
 			<Id>
 				<TypeId>OxygenGenerator</TypeId>
-				<SubtypeId>PEPCO_BioDiesel_Jerrycan_storage</SubtypeId>
+				<SubtypeId>PEPCO_LG_BioDiesel_SmallTankStorage</SubtypeId>
 			</Id>
 			<DisplayName>PEPCO BioDiesel Gas Tank</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\OxygenGenerator.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\largeHydrogenTankSmall.dds</Icon>
 			<Description>Description_OxygenGenerator</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="2" z="1" />
 			<ModelOffset x="0" y="0" z="0" />
-			<Model>Models\Cubes\Large\OxygenGenerator.mwm</Model>
+			<Model>Models\Cubes\Large\HydrogenTankSmall.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="110" />
 				<Component Subtype="Construction" Count="5" />
@@ -24,18 +24,17 @@
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<MountPoints>
-				<MountPoint Side="Back" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
-				<MountPoint Side="Front" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
-				<MountPoint Side="Bottom" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" Default="true" />
-				<MountPoint Side="Top" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
-				<MountPoint Side="Left" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
-				<MountPoint Side="Right" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" />
+				<MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1"/>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true"/>
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="2"/>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="2"/>
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="2"/>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="2"/>
 			</MountPoints>
 			<IsAirTight>true</IsAirTight>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\OxygenGeneratorConstruction_1.mwm" />
-				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\OxygenGeneratorConstruction_2.mwm" />
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\OxygenGeneratorConstruction_3.mwm" />
+				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Large\HydrogenTankSmallConstruction_1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\HydrogenTankSmallConstruction_2.mwm"/>
 			</BuildProgressModels>
 			<BlockPairName>OxygenGenerator</BlockPairName>
 			<EdgeType>Light</EdgeType>
@@ -67,7 +66,7 @@
 				</GasInfo>
 			</ProducedGases>
 			<BlueprintClasses>
-				<Class>Ice</Class>
+				<Class>Jerrycantogas</Class>
 			</BlueprintClasses>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>

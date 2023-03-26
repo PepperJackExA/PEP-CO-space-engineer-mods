@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<CubeBlocks>
-		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
-			<Id>
-				<TypeId>Refinery</TypeId>
-				<SubtypeId>PEPCO_BiodieselDistillery</SubtypeId>
-			</Id>
-			<DisplayName>Bio Diesel Distillery</DisplayName>
-			<Icon>Textures\GUI\Icons\cubes\PEPCO_BiodieselDistillery.dds</Icon>
+		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+            <Id>
+                <TypeId>Refinery</TypeId>
+                <SubtypeId>PEPCO_BiodieselDistillery</SubtypeId>
+            </Id>
+            <DisplayName>Bio Diesel Distillery</DisplayName>
+            <Icon>Textures\GUI\Icons\cubes\PEPCO_BiodieselDistillery.dds</Icon>
 			<Description>
 				Refines raw Organic Oil into environmental-friendly Bio Diesel.
 
@@ -15,21 +15,22 @@
 				Power Usage: 0.5MW
 			</Description>
 			<CubeSize>Large</CubeSize>
+			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="3"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\large\PEPCO_BiodieselDistillery.mwm</Model>
-			<Components>
-				<Component Subtype="SteelPlate" Count="80"/>
-				<Component Subtype="Construction" Count="5"/>
-				<Component Subtype="CopperWire" Count="20"/>
-				<Component Subtype="SmallTube" Count="2"/>
-				<Component Subtype="HeatingElement" Count="10"/>
-				<Component Subtype="Computer" Count="1"/>
-				<Component Subtype="SteelPlate" Count="20"/>
-			</Components>
-			<CriticalComponent Subtype="Computer" Index="0"/>
-			<MountPoints>
+            <Components>
+                <Component Subtype="SteelPlate" Count="100" />
+                <Component Subtype="Construction" Count="20" />
+                <Component Subtype="Motor" Count="10" />
+                <Component Subtype="Computer" Count="10" />
+                <Component Subtype="SteelPlate" Count="20" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />
+            <MirroringZ>Y</MirroringZ>
+            <MirroringY>Z</MirroringY>
+            <MountPoints>
 				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
 				<MountPoint Side="Right" StartX="2.00" StartY="0.00" EndX="3.00" EndY="1.00"/>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
@@ -40,37 +41,36 @@
 				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\large\PEPCO_BiodieselDistillery_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\PEPCO_BiodieselDistillery_BS3.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>Refinery</BlockPairName>
+            <BlockPairName>Blast Furnace</BlockPairName>
             <EdgeType>Light</EdgeType>
-            <BuildTimeSeconds>90</BuildTimeSeconds>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
             <ResourceSinkGroup>Factory</ResourceSinkGroup>
-            <InventoryMaxVolume>7.5</InventoryMaxVolume>
+            <InventoryMaxVolume>4</InventoryMaxVolume>
             <InventorySize>
-                <X>2.5</X>
-                <Y>2.5</Y>
-                <Z>2.5</Z>
+                <X>2</X>
+                <Y>2</Y>
+                <Z>2</Z>
             </InventorySize>
 
             <InventoryFillFactorMin>0.3</InventoryFillFactorMin>
             <InventoryFillFactorMax>0.6</InventoryFillFactorMax>
 
             <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
-            <OperationalPowerConsumption>0.56</OperationalPowerConsumption>
+            <OperationalPowerConsumption>0.33</OperationalPowerConsumption>
             <BlueprintClasses>
                 <Class>OrganicOilToBioDiesel</Class>
             </BlueprintClasses>
-            <RefineSpeed>1.3</RefineSpeed>
-            <MaterialEfficiency>1.0</MaterialEfficiency>
-            <OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
+            <RefineSpeed>0.65</RefineSpeed>
+            <MaterialEfficiency>0.7</MaterialEfficiency>
             <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
-            <Center x="1" y="0" z="0" />
             <DamagedSound>ParticleHeavyMech</DamagedSound>
             <PrimarySound>BlockRafinery</PrimarySound>
             <ActionSound>BlockRafineryProcess</ActionSound>
             <EmissiveColorPreset>Default</EmissiveColorPreset>
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
-            <PCU>90</PCU>
+            <OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
+            <PCU>75</PCU>
             <TieredUpdateTimes>
                 <unsignedInt>60</unsignedInt>
                 <unsignedInt>120</unsignedInt>
