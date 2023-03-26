@@ -8,7 +8,7 @@
 				<TypeId>OxygenGenerator</TypeId>
 				<SubtypeId>PEPCO_LG_BioDiesel_SmallTankStorage</SubtypeId>
 			</Id>
-			<DisplayName>PEPCO BioDiesel Gas Tank</DisplayName>
+			<DisplayName>BioDiesel Gas Tank</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\largeHydrogenTankSmall.dds</Icon>
 			<Description>Description_OxygenGenerator</Description>
 			<CubeSize>Large</CubeSize>
@@ -38,7 +38,7 @@
 				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Large\HydrogenTankSmallConstruction_1.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\HydrogenTankSmallConstruction_2.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>PEPCO_BioDiesel_TankStorage</BlockPairName>
+			<BlockPairName>PEPCO_BioDiesel_SmallTankStorage</BlockPairName>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>22</BuildTimeSeconds>
 			<ResourceSourceGroup>Reactors</ResourceSourceGroup>
@@ -46,18 +46,18 @@
 			<IceConsumptionPerSecond>25</IceConsumptionPerSecond>
 			<InventoryMaxVolume>4</InventoryMaxVolume>
 			<InventorySize>
-				<X>1.5</X>
-				<Y>1.5</Y>
-				<Z>1.5</Z>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
 			</InventorySize>
 
-			<InventoryFillFactorMin>1</InventoryFillFactorMin>
+			<InventoryFillFactorMin>0.9</InventoryFillFactorMin>
 			<InventoryFillFactorMax>1</InventoryFillFactorMax>
 
 			<FuelPullAmountFromConveyorInMinutes>2.2</FuelPullAmountFromConveyorInMinutes>
 
-			<StandbyPowerConsumption>0</StandbyPowerConsumption>
-			<OperationalPowerConsumption>0</OperationalPowerConsumption>
+			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+			<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
 			<ProducedGases>
 				<GasInfo>
 					<Id>
@@ -95,7 +95,7 @@
 				<TypeId>OxygenGenerator</TypeId>
 				<SubtypeId>PEPCO_SG_BioDiesel_LargeTankStorage</SubtypeId>
 			</Id>
-			<DisplayName>Small Bio Diesel Tank</DisplayName>
+			<DisplayName>Large BioDiesel Gas Tank</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\HydrogenTank.dds</Icon>
 			<Description>Description_OxygenGenerator</Description>
 			<CubeSize>Small</CubeSize>
@@ -151,18 +151,18 @@
 			<InventoryMaxVolume>1</InventoryMaxVolume>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<InventorySize>
-				<X>0.75</X>
-				<Y>0.75</Y>
-				<Z>0.75</Z>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
 			</InventorySize>
 
-			<InventoryFillFactorMin>0.3</InventoryFillFactorMin>
-			<InventoryFillFactorMax>0.6</InventoryFillFactorMax>
+			<InventoryFillFactorMin>0.9</InventoryFillFactorMin>
+			<InventoryFillFactorMax>1</InventoryFillFactorMax>
 
 			<FuelPullAmountFromConveyorInMinutes>2.75</FuelPullAmountFromConveyorInMinutes>
 
-			<StandbyPowerConsumption>0</StandbyPowerConsumption>
-			<OperationalPowerConsumption>0</OperationalPowerConsumption>
+			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+			<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
 			<ProducedGases>
 				<GasInfo>
 					<Id>
@@ -177,7 +177,7 @@
 			</BlueprintClasses>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<BlockPairName>PEPCO_BioDiesel_TankStorage</BlockPairName>
+			<BlockPairName>PEPCO_BioDiesel_LargeTankStorage</BlockPairName>
 			<GenerateSound>BlockOxyGenProcess</GenerateSound>
 			<IdleSound>BlockOxyGenIdle</IdleSound>
 			<DestroyEffect>Explosion_Missile</DestroyEffect>
@@ -201,7 +201,7 @@
 				<TypeId>OxygenGenerator</TypeId>
 				<SubtypeId>PEPCO_SG_BioDiesel_SmallTankStorage</SubtypeId>
 			</Id>
-			<DisplayName>Small Bio Diesel Tank</DisplayName>
+			<DisplayName>Small BioDiesel Gas Tank</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\SmallHydrogenTankSmall.dds</Icon>
 			<Description>Description_OxygenGenerator</Description>
 			<CubeSize>Small</CubeSize>
@@ -240,9 +240,9 @@
 			<InventoryMaxVolume>1</InventoryMaxVolume>
 			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
 			<InventorySize>
-				<X>0.25</X>
-				<Y>0.25</Y>
-				<Z>0.25</Z>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
 			</InventorySize>
 
 			<InventoryFillFactorMin>0.9</InventoryFillFactorMin>
@@ -250,8 +250,8 @@
 
 			<FuelPullAmountFromConveyorInMinutes>2.75</FuelPullAmountFromConveyorInMinutes>
 
-			<StandbyPowerConsumption>0</StandbyPowerConsumption>
-			<OperationalPowerConsumption>0</OperationalPowerConsumption>
+			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+			<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
 			<ProducedGases>
 				<GasInfo>
 					<Id>
@@ -266,7 +266,7 @@
 			</BlueprintClasses>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<BlockPairName>PEPCO_BioDiesel_TankStorage</BlockPairName>
+			<BlockPairName>PEPCO_BioDiesel_SmallTankStorage</BlockPairName>
 			<GenerateSound>BlockOxyGenProcess</GenerateSound>
 			<IdleSound>BlockOxyGenIdle</IdleSound>
 			<DestroyEffect>Explosion_Missile</DestroyEffect>
