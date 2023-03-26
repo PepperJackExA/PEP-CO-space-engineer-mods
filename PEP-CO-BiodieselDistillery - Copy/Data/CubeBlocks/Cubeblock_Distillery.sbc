@@ -11,8 +11,7 @@
 			<Description>
 				Refines raw Organic Oil into environmental-friendly Bio Diesel.
 
-				Max Output: ??/s
-				Power Usage: 0.5MW
+				Power Usage: 0.250MW
 			</Description>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>
@@ -41,26 +40,26 @@
 				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\large\PEPCO_BiodieselDistillery_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\PEPCO_BiodieselDistillery_BS3.mwm"/>
 			</BuildProgressModels>
-            <BlockPairName>Blast Furnace</BlockPairName>
+            <BlockPairName>PEPCO_BiodieselDistillery</BlockPairName>
             <EdgeType>Light</EdgeType>
             <BuildTimeSeconds>40</BuildTimeSeconds>
             <ResourceSinkGroup>Factory</ResourceSinkGroup>
             <InventoryMaxVolume>4</InventoryMaxVolume>
             <InventorySize>
-                <X>2</X>
-                <Y>2</Y>
-                <Z>2</Z>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
             </InventorySize>
 
-            <InventoryFillFactorMin>0.3</InventoryFillFactorMin>
-            <InventoryFillFactorMax>0.6</InventoryFillFactorMax>
+            <InventoryFillFactorMin>0.9</InventoryFillFactorMin>
+            <InventoryFillFactorMax>1</InventoryFillFactorMax>
 
             <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
-            <OperationalPowerConsumption>0.33</OperationalPowerConsumption>
+            <OperationalPowerConsumption>0.250</OperationalPowerConsumption>
             <BlueprintClasses>
                 <Class>OrganicOilToBioDiesel</Class>
             </BlueprintClasses>
-            <RefineSpeed>0.65</RefineSpeed>
+            <RefineSpeed>0.1</RefineSpeed>
             <MaterialEfficiency>0.7</MaterialEfficiency>
             <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
             <DamagedSound>ParticleHeavyMech</DamagedSound>
@@ -69,7 +68,7 @@
             <EmissiveColorPreset>Default</EmissiveColorPreset>
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
-            <OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
+            <OreAmountPerPullRequest>3</OreAmountPerPullRequest>
             <PCU>75</PCU>
             <TieredUpdateTimes>
                 <unsignedInt>60</unsignedInt>

@@ -12,7 +12,7 @@
 				<Item Amount="1" TypeId="Ingot" SubtypeId="Algaesample"/>
 			</Prerequisites>
 			<Results>
-				<Item Amount="1" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
+				<Item Amount="0.5" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
 				<Item Amount="0.25" TypeId="Ore" SubtypeId="Organic"/>
 			</Results>
 			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
@@ -28,7 +28,7 @@
 				<Item Amount="1" TypeId="Ingot" SubtypeId="HydrogenAlgaesample"/>
 			</Prerequisites>
 			<Results>
-				<Item Amount="1" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
+				<Item Amount="0.5" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
 				<Item Amount="0.25" TypeId="Ore" SubtypeId="Organic"/>
 			</Results>
 			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
@@ -44,7 +44,7 @@
 				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Mushrooms"/>
 			</Prerequisites>
 			<Results>
-				<Item Amount="0.5" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
+				<Item Amount="0.25" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
 				<Item Amount="0.125" TypeId="Ore" SubtypeId="Organic"/>
 			</Results>
 			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
@@ -60,7 +60,7 @@
 				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Apple"/>
 			</Prerequisites>
 			<Results>
-				<Item Amount="1" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
+				<Item Amount="0.5" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
 				<Item Amount="0.25" TypeId="Ore" SubtypeId="Organic"/>
 			</Results>
 			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
@@ -76,7 +76,7 @@
 				<Item Amount="1" TypeId="Ingot" SubtypeId="Pumpkin"/>
 			</Prerequisites>
 			<Results>
-				<Item Amount="1" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
+				<Item Amount="0.5" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
 				<Item Amount="0.25" TypeId="Ore" SubtypeId="Organic"/>
 			</Results>
 			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
@@ -92,7 +92,7 @@
 				<Item Amount="1" TypeId="Ingot" SubtypeId="Cabbage"/>
 			</Prerequisites>
 			<Results>
-				<Item Amount="0.75" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
+				<Item Amount="0.35" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
 				<Item Amount="0.145" TypeId="Ore" SubtypeId="Organic"/>
 			</Results>
 			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
@@ -108,7 +108,7 @@
 				<Item Amount="1" TypeId="Ingot" SubtypeId="Wheat"/>
 			</Prerequisites>
 			<Results>
-				<Item Amount="0.5" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
+				<Item Amount="0.25" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
 				<Item Amount="0.125" TypeId="Ore" SubtypeId="Organic"/>
 			</Results>
 			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
@@ -124,7 +124,7 @@
 				<Item Amount="1" TypeId="Ingot" SubtypeId="Soya"/>
 			</Prerequisites>
 			<Results>
-				<Item Amount="0.5" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
+				<Item Amount="0.25" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
 				<Item Amount="0.125" TypeId="Ore" SubtypeId="Organic"/>
 			</Results>
 			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
@@ -141,7 +141,7 @@
 				<Item Amount="1" TypeId="Ore" SubtypeId="Organic"/>
 			</Prerequisites>
 			<Results>
-				<Item Amount="0.1" TypeId="Ore" SubtypeId="PEPCO_BioDiesel_Jerrycan"/>
+				<Item Amount="0.1" TypeId="Ore" SubtypeId="PEPCO_OrganicOil"/>
 			</Results>
 			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
 		</Blueprint>

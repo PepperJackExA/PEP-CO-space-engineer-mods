@@ -11,6 +11,24 @@
                 <Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="BioDiesel_Storage" ForceCreate="true"/>
             </DefaultComponents>
         </Container>
+		<Container>
+			<Id>
+				<TypeId>OxygenGenerator</TypeId>
+				<SubtypeId>PEPCO_SG_BioDiesel_LargeTankStorage</SubtypeId>
+			</Id>
+			<DefaultComponents>
+				<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="BioDiesel_Storage" ForceCreate="true"/>
+			</DefaultComponents>
+		</Container>
+		<Container>
+			<Id>
+				<TypeId>OxygenGenerator</TypeId>
+				<SubtypeId>PEPCO_SG_BioDiesel_SmallTankStorage</SubtypeId>
+			</Id>
+			<DefaultComponents>
+				<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="BioDiesel_Storage" ForceCreate="true"/>
+			</DefaultComponents>
+		</Container>
 		
     </EntityContainers>
 </Definitions>
