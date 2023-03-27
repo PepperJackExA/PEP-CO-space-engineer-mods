@@ -117,6 +117,13 @@ namespace ModAdjuster
                         Item = "MyObjectBuilder_Ore/Iron",
                         Amount = 15f
                     },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
+                        Item = "MyObjectBuilder_Ingot/Stone",
+                        Amount = 25f
+                    },
 
                 }
             },
