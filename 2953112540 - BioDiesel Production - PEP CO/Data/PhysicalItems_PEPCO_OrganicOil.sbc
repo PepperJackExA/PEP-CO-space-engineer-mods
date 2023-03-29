@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<PhysicalItems>
+		<PhysicalItem>
+			<Id>
+				<TypeId>Ore</TypeId>
+				<SubtypeId>PEPCO_OrganicOil</SubtypeId>
+			</Id>
+			<DisplayName>Organic Oil</DisplayName>
+			<Icon>Textures\GUI\Icons\component\PEPCO_OrganicOil.dds</Icon>
+			<Size>
+				<X>0.072</X>
+				<Y>0.072</Y>
+				<Z>0.072</Z>
+			</Size>
+			<Mass>20</Mass>
+			<Volume>80</Volume>
+			<Model>Models\Cubes\small\OrganicOil.mwm</Model>
+			<PhysicalMaterial>Metal</PhysicalMaterial>
+			<IconSymbol>Organic Oil</IconSymbol>
+
+			<MinimalPricePerUnit>850</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>10000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>10000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+
+			<MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+			<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+		</PhysicalItem>
+	</PhysicalItems>
+</Definitions>

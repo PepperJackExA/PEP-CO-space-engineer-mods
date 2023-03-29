@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlueprintClasses>
+		<!--    <Class>
+      <Id>
+        <TypeId>BlueprintClassDefinition</TypeId>
+        <SubtypeId>OilExtraction</SubtypeId>
+      </Id>
+      <DisplayName>OilExtraction</DisplayName>
+      <Description>Oil Extraction</Description>
+      <Icon>..\2570427696\Textures\GUI\Icons\buttons\component.dds</Icon>
+      <HighlightIcon>..\2570427696\Textures\GUI\Icons\buttons\component.dds</HighlightIcon>
+      <FocusIcon>..\2570427696\Textures\GUI\Icons\buttons\component_focus.dds</FocusIcon>
+      <InputConstraintIcon>..\2570427696\Textures\GUI\Icons\FilterFood.dds</InputConstraintIcon>
+      <OutputConstraintIcon>Textures\GUI\Icons\component\OrganicOil.dds</OutputConstraintIcon>
+    </Class>-->
+		<Class>
+			<Id>
+				<TypeId>BlueprintClassDefinition</TypeId>
+				<SubtypeId>OrganicOilToBioDiesel</SubtypeId>
+			</Id>
+			<DisplayName>OrganicOilToBioDiesel</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+		</Class>
+		<Class>
+			<Id>
+				<TypeId>BlueprintClassDefinition</TypeId>
+				<SubtypeId>Jerrycantogas</SubtypeId>
+			</Id>
+			<DisplayName>Jerrycantogas</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+		</Class>
+	<Class>
+		<Id>
+			<TypeId>BlueprintClassDefinition</TypeId>
+			<SubtypeId>AnaerobicDigester</SubtypeId>
+		</Id>
+		<DisplayName>AnaerobicDigester</DisplayName>
+		<Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+	</Class>
+	</BlueprintClasses>
+	<BlueprintClassEntries>
+		<!--<Entry Class="OilExtraction" BlueprintSubtypeId="OilExtractionAlgae" />
+    <Entry Class="OilExtraction" BlueprintSubtypeId="OilExtractionH2Algae" />
+    <Entry Class="OilExtraction" BlueprintSubtypeId="OilExtractionMushrooms" />
+    <Entry Class="OilExtraction" BlueprintSubtypeId="OilExtractionApple" />
+    <Entry Class="OilExtraction" BlueprintSubtypeId="OilExtractionPumpkin" />
+    <Entry Class="OilExtraction" BlueprintSubtypeId="OilExtractionCabbage" />
+    <Entry Class="OilExtraction" BlueprintSubtypeId="OilExtractionWheat" />
+    <Entry Class="OilExtraction" BlueprintSubtypeId="OilExtractionSoya" />
+	-->
+
+		<Entry Class="AnaerobicDigester" BlueprintSubtypeId="OilExtractionOrganicOre"/>
+		<Entry Class="AnaerobicDigester" BlueprintSubtypeId="OilExtractionAlgae"/>
+		<Entry Class="AnaerobicDigester" BlueprintSubtypeId="OilExtractionH2Algae"/>
+		<Entry Class="AnaerobicDigester" BlueprintSubtypeId="OilExtractionMushrooms"/>
+		<Entry Class="AnaerobicDigester" BlueprintSubtypeId="OilExtractionApple"/>
+		<Entry Class="AnaerobicDigester" BlueprintSubtypeId="OilExtractionPumpkin"/>
+		<Entry Class="AnaerobicDigester" BlueprintSubtypeId="OilExtractionCabbage"/>
+		<Entry Class="AnaerobicDigester" BlueprintSubtypeId="OilExtractionWheat"/>
+		<Entry Class="AnaerobicDigester" BlueprintSubtypeId="OilExtractionSoya"/>
+		<Entry Class="OrganicOilToBioDiesel" BlueprintSubtypeId="OrganicOilToBioDiesel"/>
+		<Entry Class="Jerrycantogas" BlueprintSubtypeId="Jerrycantogas"/>
+	</BlueprintClassEntries>
+</Definitions>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<EntityComponents>
+
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>LG_SMALL_BioDiesel_Storage</SubtypeId>
+			</Id>
+			<Size x="15.625" y="2" z="2" />
+			<InputConstraint Whitelist="true" Description="LG_SMALL_BioDiesel_Storage">
+				<Entry Type="Ore" Subtype="PEPCO_BioDiesel_Jerrycan"  />
+			</InputConstraint>
+		</EntityComponent>
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>LG_LARGE_BioDiesel_Storage</SubtypeId>
+			</Id>
+			<Size x="421.827" y="2" z="1" />
+			<InputConstraint Whitelist="true" Description="LG_LARGE_BioDiesel_Storage">
+				<Entry Type="Ore" Subtype="PEPCO_BioDiesel_Jerrycan"  />
+			</InputConstraint>
+		</EntityComponent>
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>SG_SMALL_BioDiesel_Storage</SubtypeId>
+			</Id>
+			<Size x="0.125" y="2" z="4" />
+			<InputConstraint Whitelist="true" Description="SG_SMALL_BioDiesel_Storage">
+				<Entry Type="Ore" Subtype="PEPCO_BioDiesel_Jerrycan"  />
+			</InputConstraint>
+		</EntityComponent>
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>SG_LARGE_BioDiesel_Storage</SubtypeId>
+			</Id>
+			<Size x="15.625" y="2" z="1" />
+			<InputConstraint Whitelist="true" Description="SG_LARGE_BioDiesel_Storage">
+				<Entry Type="Ore" Subtype="PEPCO_BioDiesel_Jerrycan"  />
+			</InputConstraint>
+		</EntityComponent>
+
+	</EntityComponents>
+
+</Definitions>
