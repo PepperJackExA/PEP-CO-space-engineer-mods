@@ -12,13 +12,13 @@ namespace PEPCO_Limited_Voxel_Placement
 
         public override void LoadData()
         {
-            foreach (var def in MyDefinitionManager.Static.GetAllDefinitions())
+            foreach (var def in MyDefinitionManager.Static.GetAllDefinitions())                
             {
                 var blockDef = def as MyCubeBlockDefinition;
                 if (blockDef != null)
                 {
                     // ignore all CubeBlock and BatteryBlock types
-                    if (blockDef.Id.TypeId == typeof(MyObjectBuilder_CubeBlock) || blockDef.Id.TypeId == typeof(MyObjectBuilder_BatteryBlock))
+                    if (blockDef.Id.TypeId == typeof(MyObjectBuilder_CubeBlock) || blockDef.Id.TypeId == typeof(MyObjectBuilder_BatteryBlock) || blockDef.Id.SubtypeId.ToString() == "BasicStaticDrill")
                         continue;
 
                     blockDef.VoxelPlacement = new VoxelPlacementOverride()
