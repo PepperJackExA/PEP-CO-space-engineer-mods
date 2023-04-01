@@ -18,9 +18,7 @@ namespace PEPCO_Limited_Voxel_Placement
                 if (blockDef != null)
                 {
                     // ignore all CubeBlock and BatteryBlock types
-                    if (blockDef.Id.TypeId == typeof(MyObjectBuilder_CubeBlock))
-                        continue;
-                    if (blockDef.Id.TypeId == typeof(MyObjectBuilder_BatteryBlock))
+                    if (blockDef.Id.TypeId == typeof(MyObjectBuilder_CubeBlock) || blockDef.Id.TypeId == typeof(MyObjectBuilder_BatteryBlock))
                         continue;
 
                     blockDef.VoxelPlacement = new VoxelPlacementOverride()
