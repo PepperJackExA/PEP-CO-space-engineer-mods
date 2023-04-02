@@ -17,7 +17,7 @@ namespace PEPCO_Limited_Voxel_Placement
                 if (blockDef != null)
                 {
                     // ignore all CubeBlock and BatteryBlock types
-                    if (blockDef.Id.TypeId == typeof(MyObjectBuilder_CubeBlock) || blockDef.Id.TypeId == typeof(MyObjectBuilder_Battery) || blockDef.Id.SubtypeId.ToString() == "BasicStaticDrill" || blockDef.Id.SubtypeId.ToString() == "AdvancedStaticDrill" || blockDef.Id.SubtypeId.ToString() == "StaticDrill")
+                    if (blockDef.Id.TypeId == typeof(MyObjectBuilder_CubeBlock) || blockDef.Id.TypeId == typeof(MyObjectBuilder_BatteryBlock) || blockDef.Id.TypeId == typeof(MyObjectBuilder_Conveyor) || blockDef.Id.TypeId == typeof(MyObjectBuilder_ConveyorConnector) || blockDef.Id.TypeId == typeof(MyObjectBuilder_ConveyorSorter) || blockDef.Id.SubtypeId.ToString() == "BasicStaticDrill" || blockDef.Id.SubtypeId.ToString() == "AdvancedStaticDrill" || blockDef.Id.SubtypeId.ToString() == "StaticDrill")
                             continue;
 
                     blockDef.VoxelPlacement = new VoxelPlacementOverride()
