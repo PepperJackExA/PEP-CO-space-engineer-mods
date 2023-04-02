@@ -7,11 +7,8 @@
 				<SubtypeId>PEPCO_LargeBioDieselEngine</SubtypeId>
 			</Id>
 			<DisplayName>BioDiesel Engine</DisplayName>
-			<Description>
-				Description_PowerGenerator
-				Max Output: 10MW
-				Fuel Consumption: ??L/s
-			</Description>
+			<Description>Uses BioDiesel Fuel to output power.
+			Max Output: 10MW</Description>
 			<Icon>Textures\GUI\Icons\Cubes\HydrogenEngineLarge.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -94,10 +91,8 @@
 				<SubtypeId>PEPCO_SmallBioDieselEngine</SubtypeId>
 			</Id>
 			<DisplayName>Small BioDiesel Engine</DisplayName>
-			<Description>
-				Description_PowerGenerator
-				Max Output: 500kW
-			</Description>
+			<Description>Uses BioDiesel Fuel to output power.
+			Max Output: 500kW</Description>
 			<Icon>Textures\GUI\Icons\Cubes\HydrogenEngineSmall.dds</Icon>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
