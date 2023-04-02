@@ -119,7 +119,7 @@ namespace ModAdjuster
                 {
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, // Change the Description of the block
+                        Action = ChangeBlockDescription,
                         NewText = "Basic Solar panel capable of generating power. Max Output: 500kW"
                     },
                     new BlockAction
@@ -174,7 +174,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeBlockDescription, // Change the Description of the block
-                        NewText = "Basic Solar panel capable of generating power. Nominal Max Output: 1.5MW"
+                        NewText = "Wind Turbine capable of generating power. Nominal Max Output: 1.5MW"
                     },
                     new BlockAction
                     {
@@ -203,7 +203,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeBlockDescription, // Change the Description of the block
-                        NewText = "Basic Solar panel capable of generating power. Nominal Max Output: 1.5MW"
+                        NewText = "Wind Turbine capable of generating power. Nominal Max Output: 1.5MW"
                     },
                     new BlockAction
                     {
@@ -232,7 +232,7 @@ namespace ModAdjuster
                     new BlockAction
                     {
                         Action = ChangeBlockDescription, // Change the Description of the block
-                        NewText = "Basic Solar panel capable of generating power. Nominal Max Output: 3MW"
+                        NewText = "Large Wind Turbine capable of generating power. Nominal Max Output: 3MW"
                     },
                     new BlockAction
                     {
