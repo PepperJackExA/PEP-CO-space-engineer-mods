@@ -9,7 +9,7 @@
                 <SubtypeId>StoneOreToCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Stone Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="4" TypeId="Ore" SubtypeId="Stone" />
             </Prerequisites>
@@ -23,7 +23,7 @@
                 <SubtypeId>IronOreToCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Iron Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="4" TypeId="Ore" SubtypeId="Iron" />
             </Prerequisites>
@@ -37,7 +37,7 @@
                 <SubtypeId>NickelOreToCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Nickle Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\nickel_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\nickel_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="4" TypeId="Ore" SubtypeId="Nickel" />
             </Prerequisites>
@@ -50,7 +50,7 @@
                 <SubtypeId>CobaltOreToCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Cobalt Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\cobalt_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\cobalt_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="4" TypeId="Ore" SubtypeId="Cobalt" />
             </Prerequisites>
@@ -62,10 +62,10 @@
                 <TypeId>BlueprintDefinition</TypeId>
                 <SubtypeId>MagnesiumOreToCompressed</SubtypeId>
             </Id>
-            <DisplayName>Compressed Magnesium Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\magnesium_ingot.dds</Icon>
+            <DisplayName>Compressed Niter Ore</DisplayName>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\magnesium_ingot.dds</Icon>
             <Prerequisites>
-                <Item Amount="4" TypeId="Ore" SubtypeId="Magnesium" />
+                <Item Amount="4" TypeId="Ore" SubtypeId="Niter" />
             </Prerequisites>
             <Result Amount="1" TypeId="Ore" SubtypeId="CompressedMagnesium" />
             <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
@@ -76,7 +76,7 @@
                 <SubtypeId>SiliconOreToCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Silicon Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\silicon_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\silicon_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="4" TypeId="Ore" SubtypeId="Silicon" />
             </Prerequisites>
@@ -89,7 +89,7 @@
                 <SubtypeId>SilverOreToCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Silver Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\silver_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\silver_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="4" TypeId="Ore" SubtypeId="Silver" />
             </Prerequisites>
@@ -102,7 +102,7 @@
                 <SubtypeId>GoldOreToCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Gold Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\gold_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\gold_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="4" TypeId="Ore" SubtypeId="Gold" />
             </Prerequisites>
@@ -115,7 +115,7 @@
                 <SubtypeId>PlatinumOreToCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Platinum Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\platinum_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\platinum_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="4" TypeId="Ore" SubtypeId="Platinum" />
             </Prerequisites>
@@ -128,7 +128,7 @@
                 <SubtypeId>UraniumOreToCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Uranium Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="4" TypeId="Ore" SubtypeId="Uranium" />
             </Prerequisites>
@@ -141,7 +141,7 @@
                 <SubtypeId>IceToCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Ice</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
             </Prerequisites>
@@ -255,19 +255,6 @@
             <Result Amount="1" TypeId="Ore" SubtypeId="CompressedTantalum" />
             <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
         </Blueprint>
-        <Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>NiterOreToCompressed</SubtypeId>
-            </Id>
-            <DisplayName>Compressed Niter Ore</DisplayName>
-            <Icon>..\2344068716\Icons\GenericIngot.dds</Icon>
-            <Prerequisites>
-                <Item Amount="4" TypeId="Ore" SubtypeId="Niter" />
-            </Prerequisites>
-            <Result Amount="1" TypeId="Ore" SubtypeId="CompressedNiter" />
-            <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
-        </Blueprint>
 		<Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>
@@ -293,7 +280,7 @@
                 <SubtypeId>StoneOreToCrushed</SubtypeId>
             </Id>
             <DisplayName>Compressed Stone Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\ore_rock.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\ore_rock.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedStone" />
             </Prerequisites>
@@ -307,7 +294,7 @@
                 <SubtypeId>IronOreToCrushed</SubtypeId>
             </Id>
             <DisplayName>Compressed Iron Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedIron" />
             </Prerequisites>
@@ -321,7 +308,7 @@
                 <SubtypeId>NickelOreToCrushed</SubtypeId>
             </Id>
             <DisplayName>Compressed Nickle Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\nickel_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\nickel_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedNickel" />
             </Prerequisites>
@@ -334,7 +321,7 @@
                 <SubtypeId>CobaltOreToCrushed</SubtypeId>
             </Id>
             <DisplayName>Compressed Cobalt Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\cobalt_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\cobalt_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedCobalt" />
             </Prerequisites>
@@ -346,12 +333,12 @@
                 <TypeId>BlueprintDefinition</TypeId>
                 <SubtypeId>MagnesiumOreToCrushed</SubtypeId>
             </Id>
-            <DisplayName>Compressed Magnesium Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\magnesium_ingot.dds</Icon>
+            <DisplayName>Compressed Niter Ore</DisplayName>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\magnesium_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedMagnesium" />
             </Prerequisites>
-            <Result Amount="4" TypeId="Ore" SubtypeId="CrushedMagnesium" />
+            <Result Amount="4" TypeId="Ore" SubtypeId="Magnesium" />
             <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
         </Blueprint>
         <Blueprint>
@@ -360,7 +347,7 @@
                 <SubtypeId>SiliconOreToCrushed</SubtypeId>
             </Id>
             <DisplayName>Compressed Silicon Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\silicon_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\silicon_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedSilicon" />
             </Prerequisites>
@@ -373,7 +360,7 @@
                 <SubtypeId>SilverOreToCrushed</SubtypeId>
             </Id>
             <DisplayName>Compressed Silver Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\silver_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\silver_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedSilver" />
             </Prerequisites>
@@ -386,7 +373,7 @@
                 <SubtypeId>GoldOreToCrushed</SubtypeId>
             </Id>
             <DisplayName>Compressed Gold Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\gold_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\gold_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedGold" />
             </Prerequisites>
@@ -399,7 +386,7 @@
                 <SubtypeId>PlatinumOreToCrushed</SubtypeId>
             </Id>
             <DisplayName>Compressed Platinum Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\platinum_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\platinum_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedPlatinum" />
             </Prerequisites>
@@ -412,7 +399,7 @@
                 <SubtypeId>UraniumOreToCrushed</SubtypeId>
             </Id>
             <DisplayName>Compressed Uranium Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedUranium" />
             </Prerequisites>
@@ -525,32 +512,6 @@
             <Result Amount="4" TypeId="Ore" SubtypeId="CrushedTantalum" />
             <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
         </Blueprint>
-        <Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>NiterOreToCrushed</SubtypeId>
-            </Id>
-            <DisplayName>Compressed Niter Ore</DisplayName>
-            <Icon>..\2344068716\Icons\GenericIngot.dds</Icon>
-            <Prerequisites>
-                <Item Amount="1" TypeId="Ore" SubtypeId="CompressedNiter" />
-            </Prerequisites>
-            <Result Amount="4" TypeId="Ore" SubtypeId="Magnesium" />
-            <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
-        </Blueprint>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>CarbonCompressed</SubtypeId>
-            </Id>
-            <DisplayName>Compressed Carbon</DisplayName>
-            <Icon>..\2344068716\Icons\GenericIngot.dds</Icon>
-            <Prerequisites>
-                <Item Amount="1" TypeId="Ore" SubtypeId="CompressedCarbon" />
-            </Prerequisites>
-            <Result Amount="4" TypeId="Ore" SubtypeId="Carbon" />
-            <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
-        </Blueprint>
 
   <!-- COMPRESSED TO Crushed Ore END -->
 
@@ -563,7 +524,7 @@
                 <SubtypeId>CompressedIceToOxygen</SubtypeId>
             </Id>
             <DisplayName>DisplayName_Item_Oxygen</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedIce" />
             </Prerequisites>
@@ -578,7 +539,7 @@
                 <SubtypeId>StoneOreToUnCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Stone Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\ore_rock.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\ore_rock.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedStone" />
             </Prerequisites>
@@ -592,7 +553,7 @@
                 <SubtypeId>IronOreToUnCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Iron Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedIron" />
             </Prerequisites>
@@ -606,7 +567,7 @@
                 <SubtypeId>NickelOreToUnCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Nickle Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\nickel_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\nickel_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedNickel" />
             </Prerequisites>
@@ -619,7 +580,7 @@
                 <SubtypeId>CobaltOreToUnCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Cobalt Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\cobalt_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\cobalt_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedCobalt" />
             </Prerequisites>
@@ -631,12 +592,12 @@
                 <TypeId>BlueprintDefinition</TypeId>
                 <SubtypeId>MagnesiumOreToUnCompressed</SubtypeId>
             </Id>
-            <DisplayName>Compressed Magnesium Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\magnesium_ingot.dds</Icon>
+            <DisplayName>Compressed Niter Ore</DisplayName>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\magnesium_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedMagnesium" />
             </Prerequisites>
-            <Result Amount="4" TypeId="Ore" SubtypeId="Magnesium" />
+            <Result Amount="4" TypeId="Ore" SubtypeId="Niter" />
             <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
         </Blueprint>
         <Blueprint>
@@ -645,7 +606,7 @@
                 <SubtypeId>SiliconOreToUnCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Silicon Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\silicon_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\silicon_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedSilicon" />
             </Prerequisites>
@@ -658,7 +619,7 @@
                 <SubtypeId>SilverOreToUnCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Silver Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\silver_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\silver_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedSilver" />
             </Prerequisites>
@@ -671,7 +632,7 @@
                 <SubtypeId>GoldOreToUnCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Gold Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\gold_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\gold_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedGold" />
             </Prerequisites>
@@ -684,7 +645,7 @@
                 <SubtypeId>PlatinumOreToUnCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Platinum Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\platinum_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\platinum_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedPlatinum" />
             </Prerequisites>
@@ -697,7 +658,7 @@
                 <SubtypeId>UraniumOreToUnCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Uranium Ore</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedUranium" />
             </Prerequisites>
@@ -710,7 +671,7 @@
                 <SubtypeId>IceToUnCompressed</SubtypeId>
             </Id>
             <DisplayName>Compressed Ice</DisplayName>
-            <Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+            <Icon>..\2825470671\Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedIce" />
             </Prerequisites>
@@ -821,32 +782,6 @@
                 <Item Amount="1" TypeId="Ore" SubtypeId="CompressedTantalum" />
             </Prerequisites>
             <Result Amount="4" TypeId="Ore" SubtypeId="Tantalum" />
-            <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
-        </Blueprint>
-        <Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>NiterOreToUnCompressed</SubtypeId>
-            </Id>
-            <DisplayName>Compressed Niter Ore</DisplayName>
-            <Icon>..\2344068716\Icons\GenericIngot.dds</Icon>
-            <Prerequisites>
-                <Item Amount="1" TypeId="Ore" SubtypeId="CompressedNiter" />
-            </Prerequisites>
-            <Result Amount="4" TypeId="Ore" SubtypeId="Niter" />
-            <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
-        </Blueprint>
-		<Blueprint>
-            <Id>
-                <TypeId>BlueprintDefinition</TypeId>
-                <SubtypeId>CarbonCompressed</SubtypeId>
-            </Id>
-            <DisplayName>Compressed Carbon</DisplayName>
-            <Icon>..\2344068716\Icons\GenericIngot.dds</Icon>
-            <Prerequisites>
-                <Item Amount="1" TypeId="Ore" SubtypeId="CompressedCarbon" />
-            </Prerequisites>
-            <Result Amount="4" TypeId="Ore" SubtypeId="Carbon" />
             <BaseProductionTimeInSeconds>0.05</BaseProductionTimeInSeconds>
         </Blueprint>
 
