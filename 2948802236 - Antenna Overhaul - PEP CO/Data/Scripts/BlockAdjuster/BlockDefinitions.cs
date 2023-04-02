@@ -7,8 +7,8 @@ namespace ModAdjuster
 {
     public class BlockDefinitions
     {
-        public string AdminComponent = "MyObjectBuilder_Component/admin_Fluxkondensator_Pepco"; 
-        public List<string> DisabledBlocks = new List<string>() 
+        public string AdminComponent = "MyObjectBuilder_Component/admin_Fluxkondensator_Pepco";
+        public List<string> DisabledBlocks = new List<string>()
         {
         };
 
@@ -17,34 +17,39 @@ namespace ModAdjuster
             // Beacons
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_Beacon/LargeBlockBeacon", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_Beacon/LargeBlockBeacon",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
-                        NewText = "Large Beacon"
+                        Action = ChangeBlockDescription,
+                        NewText = "Beacon Range = 50K",
                     },
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
-                        NewText = "Antenna Range = 50K",
+                        Action = ChangeBlockName,
+                        NewText = "Large Beacon",
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangeBlockDescription,
+                        NewText = "Beacon Range = 50K",
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangePCU,
                         Value = 2
                     },
                     new BlockAction
                     {
                         Action = RemoveComponent,
-                        Index = 7,
+                        Index = 7
                     },
                     new BlockAction
                     {
-                        Action = RemoveComponent, 
-                        Index = 6,
+                        Action = RemoveComponent,
+                        Index = 6
                     },
                     new BlockAction
                     {
@@ -186,11 +191,11 @@ namespace ModAdjuster
                 }
             },
 
-            // Normal Antenna
+              // Normal Antenna
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/LargeBlockRadioAntennaDish", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/LargeBlockRadioAntennaDish",
+                BlockActions = new[]
                 {
 
                     new BlockAction
@@ -200,179 +205,179 @@ namespace ModAdjuster
                     },
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
+                        Action = ChangeBlockName,
                         NewText = "Large Antenna Dish"
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 50
                     },
                     new BlockAction
                     {
-                        Action = RemoveComponent, 
+                        Action = RemoveComponent,
                         Index = 8,
                     },
                     new BlockAction
                     {
-                        Action = InsertComponent, 
+                        Action = InsertComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 8,
-                        Count = 100 
+                        Count = 100
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Computer",
                         Index = 7,
-                        Count = 100 
+                        Count = 100
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/RadioCommunication",
                         Index = 6,
-                        Count = 50 
+                        Count = 50
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Electromagnet",
                         Index = 5,
-                        Count = 100 
+                        Count = 100
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 4,
-                        Count = 500 
+                        Count = 500
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 3,
-                        Count = 250 
+                        Count = 250
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/LargeTube",
                         Index = 2,
-                        Count = 30 
+                        Count = 30
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SmallTube",
                         Index = 1,
-                        Count = 50 
+                        Count = 50
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 100 
+                        Count = 100
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 7
                     },
                     new BlockAction
                     {
-                        Action = ChangeBroadcastRadius, 
+                        Action = ChangeBroadcastRadius,
                         Value = 50000
                     },
                 }
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/LargeBlockRadioAntenna", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/LargeBlockRadioAntenna",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
+                        Action = ChangeBlockName,
                         NewText = "Large Antenna Tower"
                     },
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 10K",
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 7,
-                        Count = 20 
+                        Count = 20
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Computer",
                         Index = 6,
-                        Count = 20 
+                        Count = 20
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/RadioCommunication",
                         Index = 5,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Electromagnet",
                         Index = 4,
-                        Count = 20 
+                        Count = 20
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 3,
-                        Count = 100 
+                        Count = 100
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 2,
-                        Count = 50 
+                        Count = 50
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/LargeTube",
                         Index = 1,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 20 
+                        Count = 20
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 6
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 10
                     },
                     new BlockAction
                     {
-                        Action = ChangeBroadcastRadius, 
+                        Action = ChangeBroadcastRadius,
                         Value = 10000
                     },
 
@@ -382,89 +387,89 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/OmnidirectionalAntenna", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/OmnidirectionalAntenna",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
+                        Action = ChangeBlockName,
                         NewText = "Omni Antenna Tower"
                     },
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 10K",
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 7,
-                        Count = 15 
+                        Count = 15
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Computer",
                         Index = 6,
-                        Count = 15 
+                        Count = 15
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/RadioCommunication",
                         Index = 5,
-                        Count = 8 
+                        Count = 8
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Electromagnet",
                         Index = 4,
-                        Count = 15 
+                        Count = 15
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 3,
-                        Count = 75 
+                        Count = 75
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 2,
-                        Count = 38 
+                        Count = 38
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/LargeTube",
                         Index = 1,
-                        Count = 8 
+                        Count = 8
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 15 
+                        Count = 15
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 6
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 10
                     },
                     new BlockAction
                     {
-                        Action = ChangeBroadcastRadius, 
+                        Action = ChangeBroadcastRadius,
                         Value = 7500
                     },
 
@@ -472,84 +477,84 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/AntennaCube", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/AntennaCube",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 5K",
                     },
                     new BlockAction
                     {
-                        Action = InsertComponent, 
+                        Action = InsertComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 7,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Computer",
                         Index = 6,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/RadioCommunication",
                         Index = 5,
-                        Count = 5 
+                        Count = 5
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Electromagnet",
                         Index = 4,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 3,
-                        Count = 50 
+                        Count = 50
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 2,
-                        Count = 25 
+                        Count = 25
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/LargeTube",
                         Index = 1,
-                        Count = 5 
+                        Count = 5
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 6
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 5
                     },
                     new BlockAction
                     {
-                        Action = ChangeBroadcastRadius, 
+                        Action = ChangeBroadcastRadius,
                         Value = 5000
                     },
 
@@ -557,84 +562,84 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/Antenna45Corner", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/Antenna45Corner",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 5K",
                     },
                     new BlockAction
                     {
-                        Action = InsertComponent, 
+                        Action = InsertComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 7,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Computer",
                         Index = 6,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/RadioCommunication",
                         Index = 5,
-                        Count = 5 
+                        Count = 5
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Electromagnet",
                         Index = 4,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 3,
-                        Count = 50 
+                        Count = 50
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 2,
-                        Count = 25 
+                        Count = 25
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/LargeTube",
                         Index = 1,
-                        Count = 5 
+                        Count = 5
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 6
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 5
                     },
                     new BlockAction
                     {
-                        Action = ChangeBroadcastRadius, 
+                        Action = ChangeBroadcastRadius,
                         Value = 5000
                     },
 
@@ -642,84 +647,84 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/AntennaSlope", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/AntennaSlope",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 5K",
                     },
                     new BlockAction
                     {
-                        Action = InsertComponent, 
+                        Action = InsertComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 7,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Computer",
                         Index = 6,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/RadioCommunication",
                         Index = 5,
-                        Count = 5 
+                        Count = 5
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Electromagnet",
                         Index = 4,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 3,
-                        Count = 50 
+                        Count = 50
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 2,
-                        Count = 25 
+                        Count = 25
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/LargeTube",
                         Index = 1,
-                        Count = 5 
+                        Count = 5
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 6
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 5
                     },
                     new BlockAction
                     {
-                        Action = ChangeBroadcastRadius, 
+                        Action = ChangeBroadcastRadius,
                         Value = 5000
                     },
 
@@ -727,84 +732,84 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/AntennaCorner", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/AntennaCorner",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 5K",
                     },
                     new BlockAction
                     {
-                        Action = InsertComponent, 
+                        Action = InsertComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 7,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Computer",
                         Index = 6,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/RadioCommunication",
                         Index = 5,
-                        Count = 5 
+                        Count = 5
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Electromagnet",
                         Index = 4,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 3,
-                        Count = 50 
+                        Count = 50
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 2,
-                        Count = 25 
+                        Count = 25
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/LargeTube",
                         Index = 1,
-                        Count = 5 
+                        Count = 5
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 6
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 5
                     },
                     new BlockAction
                     {
-                        Action = ChangeBroadcastRadius, 
+                        Action = ChangeBroadcastRadius,
                         Value = 5000
                     },
 
@@ -812,164 +817,79 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/LBShortRadioAntenna", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/LBShortRadioAntenna",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 2K",
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 7,
-                        Count = 4 
+                        Count = 4
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Computer",
                         Index = 6,
-                        Count = 4 
+                        Count = 4
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/RadioCommunication",
                         Index = 5,
-                        Count = 2 
+                        Count = 2
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Electromagnet",
                         Index = 4,
-                        Count = 4 
+                        Count = 4
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 3,
-                        Count = 20 
+                        Count = 20
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 2,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SmallTube",
                         Index = 1,
-                        Count = 8 
+                        Count = 8
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 4 
+                        Count = 4
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 6
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
-                        Value = 2
-                    },
-                    new BlockAction
-                    {
-                        Action = ChangeBroadcastRadius, 
-                        Value = 2000
-                    },
-
-                }
-            },
-            new BlockDef()
-            {
-                BlockName = "MyObjectBuilder_RadioAntenna/SBAngledRadioAntenna", 
-                BlockActions = new[] 
-                {
-                    
-                    new BlockAction
-                    {
-                        Action = ChangeBlockDescription, 
-                        NewText = "Antenna Range = 2K",
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, 
-                        Component = "MyObjectBuilder_Component/SteelPlate",
-                        Index = 7,
-                        Count = 4 
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, 
-                        Component = "MyObjectBuilder_Component/Computer",
-                        Index = 6,
-                        Count = 4 
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, 
-                        Component = "MyObjectBuilder_Component/RadioCommunication",
-                        Index = 5,
-                        Count = 2 
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, 
-                        Component = "MyObjectBuilder_Component/Electromagnet",
-                        Index = 4,
-                        Count = 4 
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, 
-                        Component = "MyObjectBuilder_Component/CopperWire",
-                        Index = 3,
-                        Count = 20 
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, 
-                        Component = "MyObjectBuilder_Component/Construction",
-                        Index = 2,
-                        Count = 10 
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, 
-                        Component = "MyObjectBuilder_Component/SmallTube",
-                        Index = 1,
-                        Count = 8 
-                    },
-                    new BlockAction
-                    {
-                        Action = ReplaceComponent, 
-                        Component = "MyObjectBuilder_Component/SteelPlate",
-                        Index = 0,
-                        Count = 4 
-                    },
-                    new BlockAction
-                    {
-                        Action = ChangeCriticalComponentIndex, 
-                        Index = 6
-                    },
-                    new BlockAction
-                    {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 2
                     },
                     new BlockAction
@@ -982,79 +902,79 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/SBLongRadioAntenna", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/SBAngledRadioAntenna",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 2K",
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 7,
-                        Count = 4 
+                        Count = 4
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Computer",
                         Index = 6,
-                        Count = 4 
+                        Count = 4
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/RadioCommunication",
                         Index = 5,
-                        Count = 2 
+                        Count = 2
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Electromagnet",
                         Index = 4,
-                        Count = 4 
+                        Count = 4
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 3,
-                        Count = 20 
+                        Count = 20
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 2,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SmallTube",
                         Index = 1,
-                        Count = 8 
+                        Count = 8
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 4 
+                        Count = 4
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 6
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 2
                     },
                     new BlockAction
@@ -1067,72 +987,157 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/SmallBlockRadioAntenna", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/SBLongRadioAntenna",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
+                        NewText = "Antenna Range = 2K",
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/SteelPlate",
+                        Index = 7,
+                        Count = 4
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/Computer",
+                        Index = 6,
+                        Count = 4
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/RadioCommunication",
+                        Index = 5,
+                        Count = 2
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/Electromagnet",
+                        Index = 4,
+                        Count = 4
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/CopperWire",
+                        Index = 3,
+                        Count = 20
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/Construction",
+                        Index = 2,
+                        Count = 10
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/SmallTube",
+                        Index = 1,
+                        Count = 8
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/SteelPlate",
+                        Index = 0,
+                        Count = 4
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangeCriticalComponentIndex,
+                        Index = 6
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangePCU,
+                        Value = 2
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangeBroadcastRadius,
+                        Value = 2000
+                    },
+
+                }
+            },
+            new BlockDef()
+            {
+                BlockName = "MyObjectBuilder_RadioAntenna/SmallBlockRadioAntenna",
+                BlockActions = new[]
+                {
+
+                    new BlockAction
+                    {
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 500m",
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 6,
-                        Count = 1 
+                        Count = 1
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Computer",
                         Index = 5,
-                        Count = 1 
+                        Count = 1
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Electromagnet",
                         Index = 4,
-                        Count = 1 
+                        Count = 1
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 3,
-                        Count = 10 
+                        Count = 10
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 2,
-                        Count = 5 
+                        Count = 5
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SmallTube",
                         Index = 1,
-                        Count = 2 
+                        Count = 2
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 1 
+                        Count = 1
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 6
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 1
                     },
                     new BlockAction
@@ -1144,58 +1149,58 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_RadioAntenna/OmnidirectionalAntennaSmall", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_RadioAntenna/OmnidirectionalAntennaSmall",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 200m",
                     },
                     new BlockAction
                     {
-                        Action = InsertComponent, 
+                        Action = InsertComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 4,
-                        Count = 1 
+                        Count = 1
                     },
                     new BlockAction
                     {
-                        Action = InsertComponent, 
+                        Action = InsertComponent,
                         Component = "MyObjectBuilder_Component/CopperWire",
                         Index = 3,
-                        Count = 8 
+                        Count = 8
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/Construction",
                         Index = 2,
-                        Count = 1 
+                        Count = 1
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SmallTube",
                         Index = 1,
-                        Count = 1 
+                        Count = 1
                     },
                     new BlockAction
                     {
-                        Action = ReplaceComponent, 
+                        Action = ReplaceComponent,
                         Component = "MyObjectBuilder_Component/SteelPlate",
                         Index = 0,
-                        Count = 1 
+                        Count = 1
                     },
                     new BlockAction
                     {
-                        Action = ChangeCriticalComponentIndex, 
+                        Action = ChangeCriticalComponentIndex,
                         Index = 3
                     },
                     new BlockAction
                     {
-                        Action = ChangePCU, 
+                        Action = ChangePCU,
                         Value = 1
                     },
                     new BlockAction
@@ -1209,18 +1214,18 @@ namespace ModAdjuster
             // Laser Antenna 
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_LaserAntenna/LargeBlockLaserAntenna", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_LaserAntenna/LargeBlockLaserAntenna",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
+                        Action = ChangeBlockName,
                         NewText = "Fast Laser Antenna Gimble"
                     },
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription, 
+                        Action = ChangeBlockDescription,
                         NewText = "Antenna Range = 25K",
                     },
                     new BlockAction
@@ -1435,12 +1440,12 @@ namespace ModAdjuster
             },
                         new BlockDef()
             {
-                BlockName = "MyObjectBuilder_LaserAntenna/Phoenix_LargeBlockRadioAntennaLarge", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_LaserAntenna/Phoenix_LargeBlockRadioAntennaLarge",
+                BlockActions = new[]
                 {
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
+                        Action = ChangeBlockName,
                         NewText = "Deep Space Laser Antenna Dish"
                     },
                     new BlockAction
@@ -1539,12 +1544,12 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_LaserAntenna/Phoenix_LargeBlockRadioAntennaMed", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_LaserAntenna/Phoenix_LargeBlockRadioAntennaMed",
+                BlockActions = new[]
                 {
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
+                        Action = ChangeBlockName,
                         NewText = "Planetary Laser Antenna Dish"
                     },
                     new BlockAction
@@ -1648,12 +1653,12 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_LaserAntenna/Phoenix_LargeBlockRadioAntenna", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_LaserAntenna/Phoenix_LargeBlockRadioAntenna",
+                BlockActions = new[]
                 {
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
+                        Action = ChangeBlockName,
                         NewText = "Laser Antenna Dish"
                     },
                     new BlockAction
@@ -1758,12 +1763,12 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_LaserAntenna/Phoenix_SmallBlockRadioAntenna", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_LaserAntenna/Phoenix_SmallBlockRadioAntenna",
+                BlockActions = new[]
                 {
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
+                        Action = ChangeBlockName,
                         NewText = "Laser Antenna Dish"
                     },
                     new BlockAction
@@ -1866,13 +1871,13 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_LaserAntenna/DB_LaserCommLarge", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_LaserAntenna/DB_LaserCommLarge",
+                BlockActions = new[]
                 {
                     // Large Advanced Laser Antenna Dish
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
+                        Action = ChangeBlockName,
                         NewText = "Advanced Laser Antenna Dish"
                     },
                     new BlockAction
@@ -1983,13 +1988,13 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
-                BlockName = "MyObjectBuilder_LaserAntenna/DB_LaserCommSmall", 
-                BlockActions = new[] 
+                BlockName = "MyObjectBuilder_LaserAntenna/DB_LaserCommSmall",
+                BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
-                        Action = ChangeBlockName, 
+                        Action = ChangeBlockName,
                         NewText = "Advanced Laser Antenna Dish"
                     },
                     new BlockAction
@@ -2101,7 +2106,7 @@ namespace ModAdjuster
                 BlockName = "MyObjectBuilder_LaserAntenna/DB_HumongousAntenna",
                 BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
                         Action = ChangeBlockName,
