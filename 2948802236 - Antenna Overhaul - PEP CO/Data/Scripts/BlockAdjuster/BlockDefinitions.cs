@@ -23,11 +23,6 @@ namespace ModAdjuster
 
                     new BlockAction
                     {
-                        Action = ChangeBlockDescription,
-                        NewText = "Beacon Range = 50K",
-                    },
-                    new BlockAction
-                    {
                         Action = ChangeBlockName,
                         NewText = "Large Beacon",
                     },
