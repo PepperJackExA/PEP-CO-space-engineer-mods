@@ -12,11 +12,13 @@ using Emissive1 as emissive("Emissive4")
 
 #---Functions---
 func turn() {
-	Subpart1.translate([0,-1,0], 45, Linear).delay(55).translate([0,1,0], 45, Linear)
+	Subpart1.translate([0,-1,0], 450, Linear).delay(550).translate([0,1,0], 450, Linear)
 	
 }
 func on() {
-	Emissive1.setcolor(4, 30, 0, 1, true)
+	Emissive1.setcolor(4, 30, 0, 10, true)
+	Subpart1.translate([0,1.5,0], 45, Linear)
+	Subpart1.scale([0,0.35,0],10,Linear)
 }
 
 
@@ -26,7 +28,7 @@ func on() {
 #---Actions---
 action Block() {
     create() {
-        api.startloop("turn",100,-1)
+        api.startloop("turn",1000,-1)
 		on()
     }
 }
