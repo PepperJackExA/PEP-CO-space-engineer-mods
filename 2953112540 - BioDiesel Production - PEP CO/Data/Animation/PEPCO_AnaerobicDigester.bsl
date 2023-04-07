@@ -17,6 +17,7 @@ func turn() {
 }
 func on() {
 	Emissive1.setcolor(4, 30, 0, 10, true)
+	Subpart1.reset()
 	Subpart1.translate([0,1.5,0], 45, Linear)
 	Subpart1.scale([0,0.35,0],10,Linear)
 }

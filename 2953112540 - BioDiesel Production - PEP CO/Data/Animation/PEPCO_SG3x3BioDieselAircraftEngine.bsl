@@ -12,10 +12,10 @@ using AESmoke4 as Emitter("emitter_AESmoke4")
 #---Functions---
 func burn() {
 	var temp = 0.1 + (0.1 * block.currentthrustpercent())
-	AESmoke1.playParticle("OxyVent", temp, 2, [0,0,0 ], 100,100,100)
-	AESmoke2.playParticle("OxyVent", temp, 2, [0,0,0 ], 100,100,100)
-	AESmoke3.playParticle("OxyVent", temp, 2, [0,0,0 ], 100,100,100)
-	AESmoke4.playParticle("OxyVent", temp, 2, [0,0,0 ], 100,100,100)
+	AESmoke1.playParticle("OxyVent", temp, 2, [0,0,0 ], 100,100,100).delay(200).stopparticle()
+	AESmoke2.playParticle("OxyVent", temp, 2, [0,0,0 ], 100,100,100).delay(200).stopparticle()
+	AESmoke3.playParticle("OxyVent", temp, 2, [0,0,0 ], 100,100,100).delay(200).stopparticle()
+	AESmoke4.playParticle("OxyVent", temp, 2, [0,0,0 ], 100,100,100).delay(200).stopparticle()
 }
 
 func off(){
