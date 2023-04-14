@@ -9,7 +9,7 @@
       <DisplayName>Organics Rope Kit</DisplayName>
       <Icon>Textures\GUI\Icons\component\Cartridge_Icon.dds</Icon>
       <Prerequisites>
-        <Item Amount="500" TypeId="Ore" SubtypeId="Organic" />
+        <Item Amount="10" TypeId="Ore" SubtypeId="Organic" />
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="Canvas" />
       <BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
@@ -23,7 +23,7 @@
       <DisplayName>Synthetic Rope Kit</DisplayName>
       <Icon>Textures\GUI\Icons\component\Cartridge_Icon.dds</Icon>
       <Prerequisites>
-        <Item Amount="15" TypeId="Component" SubtypeId="Fabric" />
+        <Item Amount="1" TypeId="Component" SubtypeId="Fabric" />
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="Canvas" />
       <BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
