@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using VRage.Game;
 using VRage.Game.Components;
 using VRage.Utils;
+using VRage.Network;
+using SpaceEngineers.Game;
 using static ModAdjuster.DefinitionStructure.BlockDef.BlockAction;
 
 namespace ModAdjuster
