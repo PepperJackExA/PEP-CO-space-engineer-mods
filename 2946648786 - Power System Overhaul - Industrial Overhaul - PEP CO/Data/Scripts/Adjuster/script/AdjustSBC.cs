@@ -144,6 +144,7 @@ namespace ModAdjuster
                                 break;
 
                             case BlockMod.ChangeBlockDescription:
+                                BlockDef.DescriptionEnum = null;
                                 BlockDef.DescriptionString = action.NewText;
                                 break;
 
