@@ -8,6 +8,7 @@ namespace ModAdjuster
 {
     public class BlockDefinitions
     {
+
         // Engines
         internal const int enginepower1 = 2;
         internal const int enginepower2 = 2 * enginepower1;
@@ -75,7 +76,7 @@ namespace ModAdjuster
         {
 
 // Engines            
-            
+        
             new BlockDef()
             {
                 BlockName = "HydrogenEngine/LargeHydrogenEngine",
@@ -118,12 +119,7 @@ namespace ModAdjuster
                     {
                         Action = ChangeBlockDescription,
                         NewText = "Chamge Description of Wind Turbine!"
-                    },
-                    new BlockAction
-                    { 
-                        Action = ChangeBlockName,
-                        NewText = testing + BlockDefinitions.biodieselenginepower
-                    },
+                    },                    
                     new BlockAction
                     {
                         Action = ChangeMaxPowerOutput,
@@ -148,11 +144,6 @@ namespace ModAdjuster
                     {
                         Action = ChangeBlockDescription,
                         NewText = "Chamge Description of LargeBlockBatteryBlock!"
-                    },
-                    new BlockAction
-                    {
-                        Action = ChangeBlockName,
-                        NewText = "NameChanged LargeBlockBatteryBlock"
                     },
                     new BlockAction
                     {
