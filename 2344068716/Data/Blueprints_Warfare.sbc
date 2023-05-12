@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>AutocannonClip</SubtypeId>
+            </Id>
+            <DisplayName>Autocannon Clip</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\AutoCanonShellBox.dds</Icon>
+            <Prerequisites>
+                <Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="6" TypeId="Ingot" SubtypeId="Copper" />
+                <Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="AutocannonClip" />
+            <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>AutocannonClipDUAP</SubtypeId>
+            </Id>
+            <DisplayName>Depleted Uranium Autocannon Clip</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\AutoCanonShellBox.dds</Icon>
+            <Prerequisites>
+                <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="10" TypeId="Ingot" SubtypeId="DepletedUranium" />
+                <Item Amount="6" TypeId="Ingot" SubtypeId="Copper" />
+                <Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="AutocannonClipDUAP" />
+            <BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>MediumCalibreAmmo</SubtypeId>
+            </Id>
+            <DisplayName>AP Assault Cannon Shell</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\MediumCalibreShell.dds</Icon>
+            <Prerequisites>
+				<Item Amount="4" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="1.5" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="1.5" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="MediumCalibreAmmo" />
+            <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>MediumCalibreAmmoHE</SubtypeId>
+            </Id>
+            <DisplayName>HE Assault Cannon Shell</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\MediumCalibreShell.dds</Icon>
+            <Prerequisites>
+				<Item Amount="1" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="1.5" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="4" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="MediumCalibreAmmoHE" />
+            <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>MediumCalibreAmmoDUAP</SubtypeId>
+            </Id>
+            <DisplayName>DUAP Assault Cannon Shell</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\MediumCalibreShell.dds</Icon>
+            <Prerequisites>
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="DepletedUranium" />
+				<Item Amount="1.5" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="1.5" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="MediumCalibreAmmoDUAP" />
+            <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LargeCalibreAmmo</SubtypeId>
+            </Id>
+            <DisplayName>AP Artillery Shell</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\LargeCalibreShell.dds</Icon>
+            <Prerequisites>
+				<Item Amount="8" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="3" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="3.5" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LargeCalibreAmmo" />
+            <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LargeCalibreAmmoHE</SubtypeId>
+            </Id>
+            <DisplayName>HE Artillery Shell</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\LargeCalibreShell.dds</Icon>
+            <Prerequisites>
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="3" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="10" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LargeCalibreAmmoHE" />
+            <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LargeCalibreAmmoDUAP</SubtypeId>
+            </Id>
+            <DisplayName>DUAP Artillery Shell</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\LargeCalibreShell.dds</Icon>
+            <Prerequisites>
+				<Item Amount="4" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="4" TypeId="Ingot" SubtypeId="DepletedUranium" />
+				<Item Amount="3" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="3.5" TypeId="Ingot" SubtypeId="Magnesium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LargeCalibreAmmoDUAP" />
+            <BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LargeRailgunAmmo</SubtypeId>
+            </Id>
+            <DisplayName>Large Standard Railgun Sabot</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\RailgunAmmoLarge.dds</Icon>
+            <Prerequisites>
+				<Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="10" TypeId="Ingot" SubtypeId="Aluminum" />
+				<Item Amount="10" TypeId="Ingot" SubtypeId="Titanium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LargeRailgunAmmo" />
+            <BaseProductionTimeInSeconds>14</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>LargeRailgunAmmoDUAP</SubtypeId>
+            </Id>
+            <DisplayName>Large Depleted Uranium Railgun Sabot</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\RailgunAmmoLarge.dds</Icon>
+            <Prerequisites>
+				<Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="10" TypeId="Ingot" SubtypeId="Aluminum" />
+				<Item Amount="10" TypeId="Ingot" SubtypeId="DepletedUranium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="LargeRailgunAmmoDUAP" />
+            <BaseProductionTimeInSeconds>14</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>SmallRailgunAmmo</SubtypeId>
+            </Id>
+            <DisplayName>Small Standard Railgun Sabot</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\RailgunAmmoLarge.dds</Icon>
+            <Prerequisites>
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="1" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Aluminum" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Titanium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="SmallRailgunAmmo" />
+            <BaseProductionTimeInSeconds>14</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>SmallRailgunAmmoDUAP</SubtypeId>
+            </Id>
+            <DisplayName>Small Depleted Uranium Railgun Sabot</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\RailgunAmmoLarge.dds</Icon>
+            <Prerequisites>
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="1" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Aluminum" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="DepletedUranium" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="SmallRailgunAmmoDUAP" />
+            <BaseProductionTimeInSeconds>14</BaseProductionTimeInSeconds>
+        </Blueprint>
+	
+  </Blueprints>
+</Definitions>

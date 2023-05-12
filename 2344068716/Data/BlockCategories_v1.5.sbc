@@ -1,0 +1,52 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryClasses>
+  
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <Name>CompositeArmor</Name>
+      <DisplayName>Composite Armor</DisplayName>
+      <ItemIds>
+        <string>CubeBlock/LargeCompositeArmorCube</string>
+        <string>CubeBlock/LargeCompositeArmorSlope2x1x1Base</string>
+        <string>CubeBlock/LargeCompositeArmorCorner2x1x1Base</string>
+        <string>CubeBlock/LargeSlopedCornerCompositeArmorTip</string>
+      </ItemIds>       
+    </Category>
+  
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <Name>AluminumArmor</Name>
+      <DisplayName>Aluminum Armor</DisplayName>
+      <ItemIds>
+        <string>CubeBlock/LargeAluminumCube</string>
+        <string>CubeBlock/LargeAluminumSlope2x1x1Base</string>
+        <string>CubeBlock/LargeAluminumCorner2x1x1Base</string>
+        <string>CubeBlock/LargeSlopedCornerAluminumTip</string>
+      </ItemIds>       
+    </Category>
+  
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <Name>FusionPower</Name>
+      <DisplayName>Fusion Power</DisplayName>
+      <ItemIds>
+        <string>OxygenTank/LargeDeuteriumTank</string>
+        <string>Thrust/FusionThruster</string>
+        <string>HydrogenEngine/FusionReactor</string>
+        <string>OxygenGenerator/DeuteriumExtractor</string>
+        <string>OxygenGenerator/DeuteriumRamscoop</string>
+      </ItemIds>       
+    </Category>
+
+  </CategoryClasses>
+</Definitions>

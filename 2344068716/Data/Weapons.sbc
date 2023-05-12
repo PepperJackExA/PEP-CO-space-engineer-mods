@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Weapons>
+
+        <Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>GatlingGun</SubtypeId>
+			</Id>
+			<ProjectileAmmoData RateOfFire="600" ShootSoundName="WepShipGatlingShot" ShotsInBurst="180" />
+			<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+			<DeviateShotAngle>0.4</DeviateShotAngle>
+			<DeviateShotAngleAiming>0.4</DeviateShotAngleAiming>
+			<MuzzleFlashLifeSpan>40</MuzzleFlashLifeSpan>
+			<NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+			<SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>			
+			<Effects>
+                <Effect Action="Shoot" Dummy="muzzle_projectile" Particle="Muzzle_Flash_Large" Loop="true" InstantStop="true" OffsetX="0" OffsetY="0" OffsetZ="0.5" />
+                <Effect Action="Shoot" Dummy="None" Particle="Smoke_Autocannon" Loop="true" InstantStop="false"
+				OffsetX="0.09" OffsetY="0" OffsetZ="-0.6"
+				ParticleBirthStart="40" ParticleBirthMin="0" ParticleBirthMax="50" ParticleBirthDecrease="3" ParticleBirthIncrease="20" />
+            </Effects>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="NATO_25x184mm" />
+                <AmmoMagazine Subtype="DUNATO_25x184mm" />
+            </AmmoMagazines>
+            <ReloadTime>4000</ReloadTime>
+        </Weapon>
+
+        <Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>GatlingGunWarfare</SubtypeId>
+			</Id>
+			<ProjectileAmmoData RateOfFire="600" ShootSoundName="WepShipGatlingShot" ShotsInBurst="180" />
+			<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+			<DeviateShotAngle>0.4</DeviateShotAngle>
+			<DeviateShotAngleAiming>0.4</DeviateShotAngleAiming>
+			<MuzzleFlashLifeSpan>40</MuzzleFlashLifeSpan>
+			<NoAmmoSoundName>WepShipGatlingNoAmmo</NoAmmoSoundName>
+			<SecondarySoundName>WepShipGatlingRotation</SecondarySoundName>			
+            <Effects>
+                <Effect Action="Shoot" Dummy="muzzle_projectile" Particle="Muzzle_Flash_Large" Loop="true" InstantStop="true" OffsetX="0" OffsetY="0" OffsetZ="0.5" />
+                <Effect Action="Shoot" Dummy="None" Particle="Smoke_Autocannon" Loop="true" InstantStop="false" 
+				OffsetX="0.09" OffsetY="0" OffsetZ="-1"
+				ParticleBirthStart="40" ParticleBirthMin="0" ParticleBirthMax="50" ParticleBirthDecrease="3" ParticleBirthIncrease="20" />
+            </Effects>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="NATO_25x184mm" />
+                <AmmoMagazine Subtype="DUNATO_25x184mm" />
+            </AmmoMagazines>
+            <ReloadTime>4000</ReloadTime>
+        </Weapon>
+
+        <Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>LargeGatlingTurret</SubtypeId>
+            </Id>
+			<ProjectileAmmoData RateOfFire="600" ShootSoundName="WepGatlingTurretShot" ShotsInBurst="180" />
+			<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+			<DeviateShotAngle>0.4</DeviateShotAngle>
+			<DeviateShotAngleAiming>0.4</DeviateShotAngleAiming>
+			<MuzzleFlashLifeSpan>40</MuzzleFlashLifeSpan>
+			<Effects>
+                <Effect Action="Shoot" Dummy="muzzle_projectile_001" Particle="Muzzle_Flash_Large" Loop="true" InstantStop="true" OffsetX="0" OffsetY="0" OffsetZ="-1.9"  />
+                <Effect Action="Shoot" Dummy="None" Particle="Smoke_LargeGunShot" Loop="true" InstantStop="false" OffsetX="0" OffsetY="0" OffsetZ="-1.9" 
+				ParticleBirthStart="40" ParticleBirthMin="0" ParticleBirthMax="50" ParticleBirthDecrease="3" ParticleBirthIncrease="20" />
+            </Effects>
+			<AmmoMagazines>
+				<AmmoMagazine Subtype="NATO_25x184mm" />
+				<AmmoMagazine Subtype="DUNATO_25x184mm" />
+			</AmmoMagazines>
+			<ReloadTime>6000</ReloadTime>
+        </Weapon>
+
+        <Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>SmallGatlingTurret</SubtypeId>
+            </Id>
+			<ProjectileAmmoData RateOfFire="600" ShootSoundName="WepGatlingTurretShot" ShotsInBurst="180" />
+			<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+			<DeviateShotAngle>0.4</DeviateShotAngle>
+			<DeviateShotAngleAiming>0.4</DeviateShotAngleAiming>
+			<MuzzleFlashLifeSpan>40</MuzzleFlashLifeSpan>
+			<Effects>
+                <Effect Action="Shoot" Dummy="muzzle_projectile" Particle="Muzzle_Flash_Large" Loop="true" InstantStop="true" OffsetX="0" OffsetY="0" OffsetZ="-0.9"/>
+                <Effect Action="Shoot" Dummy="None" Particle="Smoke_LargeGunShot" Loop="true" InstantStop="false" OffsetX="0" OffsetY="0" OffsetZ="-0.9" 
+				ParticleBirthStart="40" ParticleBirthMin="0" ParticleBirthMax="50" ParticleBirthDecrease="3" ParticleBirthIncrease="20" />
+            </Effects>
+			<AmmoMagazines>
+				<AmmoMagazine Subtype="NATO_25x184mm" />
+				<AmmoMagazine Subtype="DUNATO_25x184mm" />
+            </AmmoMagazines>
+            <ReloadTime>3000</ReloadTime>
+        </Weapon>
+	
+        <Weapon>
+            <Id>
+                <TypeId>WeaponDefinition</TypeId>
+                <SubtypeId>LargeInteriorTurret</SubtypeId>
+            </Id>
+            <ProjectileAmmoData RateOfFire="300" ShootSoundName="WepTurretInteriorFire" />
+            <DeviateShotAngle>0.3</DeviateShotAngle>
+            <MuzzleFlashLifeSpan>30</MuzzleFlashLifeSpan>
+            <AmmoMagazines>
+                <AmmoMagazine Subtype="InteriorTurret_Mag_50rd" />
+      </AmmoMagazines>
+    </Weapon>
+
+  </Weapons>
+</Definitions>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+  
+    <Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+      <Id>
+        <TypeId>OxygenTank</TypeId>
+        <SubtypeId>SteamTank</SubtypeId>
+      </Id>
+      <DisplayName>Steam Buffer Tank</DisplayName>
+      <Icon>Icons\SteamTank.dds</Icon>
+      <Description>Tank for storing Steam and acting as a buffer in Steam power systems.
+	  Caution: High-pressure Steam can cause explosions.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="3" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamTank.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="20" />
+        <Component Subtype="LargeTube" Count="45" />
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="Computer" Count="5" />
+        <Component Subtype="SteelPlate" Count="15" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Construct\SteamTankConstruct1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Construct\SteamTankConstruct2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamTankConstruct3.mwm" />
+      </BuildProgressModels>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <Capacity>5000</Capacity>
+      <InventoryMaxVolume>0</InventoryMaxVolume>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StoredGasId>
+        <TypeId>GasProperties</TypeId>
+        <SubtypeId>Steam</SubtypeId>
+      </StoredGasId>
+      <BuildTimeSeconds>25</BuildTimeSeconds>
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>25</PCU>      
+            <LeakPercent>0.05</LeakPercent>
+            <GasExplosionMaxRadius>20</GasExplosionMaxRadius>
+            <GasExplosionNeededVolumeToReachMaxRadius>5000</GasExplosionNeededVolumeToReachMaxRadius>
+            <GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+            <GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+            <GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect> 
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>SteamPipe</SubtypeId>
+      </Id>
+      <DisplayName>Steam Pipe</DisplayName>
+      <Icon>Icons\SteamPipe.dds</Icon>
+      <Description>Transports high-pressure Steam.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamPipe.mwm</Model>
+      <Components>
+        <Component Subtype="LargeTube" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="LargeTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamPipeConstruct.mwm" />
+      </BuildProgressModels>
+        <MountPoints>
+            <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+        </MountPoints>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <AutorotateMode>OppositeDirections</AutorotateMode>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>SteamPipeFrame</SubtypeId>
+      </Id>
+      <DisplayName>Steam Pipe w/ Frame</DisplayName>
+      <Icon>Icons\SteamPipeFrame.dds</Icon>
+      <Description>Transports high-pressure Steam. Provides a mounting point for Steam Pipe networks.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamPipeFrame.mwm</Model>
+      <Components>
+        <Component Subtype="Girder" Count="10" />
+        <Component Subtype="Construction" Count="5" />
+        <Component Subtype="LargeTube" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="LargeTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamPipeFrameConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <AutorotateMode>OppositeDirections</AutorotateMode>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>SteamPipePassthrough</SubtypeId>
+      </Id>
+      <DisplayName>Steam Pipe Passthrough</DisplayName>
+      <Icon>Icons\SteamPipeFrame.dds</Icon>
+      <Description>Transports high-pressure Steam. Provides an airtight wall passthrough for Steam Pipes.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamPipePassthrough.mwm</Model>
+      <Components>
+        <Component Subtype="Girder" Count="10" />
+        <Component Subtype="SteelPlate" Count="5" />
+        <Component Subtype="Construction" Count="5" />
+        <Component Subtype="LargeTube" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="LargeTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamPipeFrameConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <AutorotateMode>OppositeDirections</AutorotateMode>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>true</IsAirTight>      
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>SteamPipeCorner</SubtypeId>
+      </Id>
+      <DisplayName>Steam Pipe Corner</DisplayName>
+      <Icon>Icons\SteamPipeCorner.dds</Icon>
+      <Description>Transports high-pressure Steam.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamPipeCorner.mwm</Model>
+      <Components>
+        <Component Subtype="LargeTube" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="LargeTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamPipeCornerConstruct.mwm" />
+      </BuildProgressModels>
+        <MountPoints>
+            <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+        </MountPoints>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <AutorotateMode>OppositeDirections</AutorotateMode>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>SteamPipeT</SubtypeId>
+      </Id>
+      <DisplayName>Steam Pipe T</DisplayName>
+      <Icon>Icons\SteamPipeT.dds</Icon>
+      <Description>Transports high-pressure Steam.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamPipeT.mwm</Model>
+      <Components>
+        <Component Subtype="LargeTube" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="LargeTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamPipeTConstruct.mwm" />
+      </BuildProgressModels>
+        <MountPoints>
+            <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+        </MountPoints>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <AutorotateMode>OppositeDirections</AutorotateMode>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>SteamPipeCross</SubtypeId>
+      </Id>
+      <DisplayName>Steam Pipe Cross</DisplayName>
+      <Icon>Icons\SteamPipeCross.dds</Icon>
+      <Description>Transports high-pressure Steam.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamPipeCross.mwm</Model>
+      <Components>
+        <Component Subtype="LargeTube" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="LargeTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamPipeCrossConstruct.mwm" />
+      </BuildProgressModels>
+        <MountPoints>
+            <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        </MountPoints>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <AutorotateMode>OppositeDirections</AutorotateMode>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>SteamPipeElbow</SubtypeId>
+      </Id>
+      <DisplayName>Steam Pipe Elbow</DisplayName>
+      <Icon>Icons\SteamPipeElbow.dds</Icon>
+      <Description>Transports high-pressure Steam.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamPipeElbow.mwm</Model>
+      <Components>
+        <Component Subtype="LargeTube" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="LargeTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamPipeElbowConstruct.mwm" />
+      </BuildProgressModels>
+        <MountPoints>
+            <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        </MountPoints>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <AutorotateMode>OppositeDirections</AutorotateMode>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>SteamPipe4Way</SubtypeId>
+      </Id>
+      <DisplayName>Steam Pipe 4-Way</DisplayName>
+      <Icon>Icons\SteamPipe4Way.dds</Icon>
+      <Description>Transports high-pressure Steam.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamPipe4Way.mwm</Model>
+      <Components>
+        <Component Subtype="LargeTube" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="LargeTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamPipe4WayConstruct.mwm" />
+      </BuildProgressModels>
+        <MountPoints>
+            <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        </MountPoints>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <AutorotateMode>OppositeDirections</AutorotateMode>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>SteamPipe5Way</SubtypeId>
+      </Id>
+      <DisplayName>Steam Pipe 5-Way</DisplayName>
+      <Icon>Icons\SteamPipe5Way.dds</Icon>
+      <Description>Transports high-pressure Steam.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamPipe5Way.mwm</Model>
+      <Components>
+        <Component Subtype="LargeTube" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="LargeTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamPipe5WayConstruct.mwm" />
+      </BuildProgressModels>
+        <MountPoints>
+            <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        </MountPoints>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <AutorotateMode>OppositeDirections</AutorotateMode>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>SteamPipe6Way</SubtypeId>
+      </Id>
+      <DisplayName>Steam Pipe 6-Way</DisplayName>
+      <Icon>Icons\SteamPipe6Way.dds</Icon>
+      <Description>Transports high-pressure Steam.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\SteamPipe6Way.mwm</Model>
+      <Components>
+        <Component Subtype="LargeTube" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="LargeTube" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\SteamPipe6WayConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>5</BuildTimeSeconds>
+      <AutorotateMode>OppositeDirections</AutorotateMode>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+		
+  </CubeBlocks>
+</Definitions>

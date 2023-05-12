@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <PhysicalItems>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Uranium</SubtypeId>
+            </Id>
+            <DisplayName>Nuclear Fuel</DisplayName>
+            <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
+            <Size>
+                <X>0.037</X>
+                <Y>0.037</Y>
+                <Z>0.037</Z>
+            </Size>
+            <Mass>3.8</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\NuclearFuel.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Fuel</IconSymbol>
+			
+            <MinimalPricePerUnit>12500</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>SpentFuel</SubtypeId>
+            </Id>
+            <DisplayName>Spent Nuclear Fuel</DisplayName>
+            <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
+            <Size>
+                <X>0.037</X>
+                <Y>0.037</Y>
+                <Z>0.037</Z>
+            </Size>
+            <Mass>3.5</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\SpentNuclearFuel.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Spent Fuel</IconSymbol>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>NuclearWaste</SubtypeId>
+            </Id>
+            <DisplayName>Nuclear Waste</DisplayName>
+            <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
+            <Size>
+                <X>0.037</X>
+                <Y>0.037</Y>
+                <Z>0.037</Z>
+            </Size>
+            <Mass>3</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\WasteBarrel.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Waste</IconSymbol>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>DepletedUranium</SubtypeId>
+            </Id>
+            <DisplayName>Depleted Uranium</DisplayName>
+            <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
+            <Size>
+                <X>0.037</X>
+                <Y>0.037</Y>
+                <Z>0.037</Z>
+            </Size>
+            <Mass>3.8</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Ingots\uranium_ingot.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>DU</IconSymbol>
+			
+            <MinimalPricePerUnit>3125</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+    </PhysicalItems>
+</Definitions>

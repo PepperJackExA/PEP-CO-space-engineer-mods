@@ -1,0 +1,212 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CategoryClasses>
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Steam Power</DisplayName>
+      <Name>SteamPipes</Name>
+      <ItemIds>
+        <string>HydrogenEngine/SteamTurbine</string>
+        <string>OxygenGenerator/CoalFurnace</string>
+        <string>OxygenGenerator/FastNeutronReactor</string>
+        <string>OxygenGenerator/NuclearReactor</string>
+        <string>OxygenTank/SteamTank</string>
+        <string>Conveyor/SteamPipe</string>
+        <string>OxygenGenerator/GeothermalWellHead</string>
+        <string>OxygenFarm/SolarConcentrator</string>
+      </ItemIds>
+    </Category>
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Armored Windows</DisplayName>
+      <Name>ArmoredWindows</Name>
+      <ItemIds>
+        <string>CubeBlock/ArmorWindow1x2Face</string>
+        <string>CubeBlock/ArmorWindow1x1Face</string>
+        <string>CubeBlock/ArmorWindow2x3Flat</string>
+        <string>CubeBlock/ArmorWindow1x2Flat</string>
+        <string>CubeBlock/ArmorWindow1x1Flat</string>
+      </ItemIds>
+    </Category>
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Road Sections</DisplayName>
+      <Name>RoadSections</Name>
+      <ItemIds>
+        <string>CubeBlock/RoadSectionBlank</string>
+        <string>CubeBlock/RoadSectionIntersection1</string>
+        <string>CubeBlock/RoadSectionAngle</string>
+        <string>CubeBlock/RoadSectionCenterRamp</string>
+        <string>CubeBlock/RoadSectionCenterRampSupport</string>
+      </ItemIds>
+    </Category>
+
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>Concrete Blocks</DisplayName>
+      <Name>ConcreteArmor</Name>
+      <ItemIds>
+        <string>CubeBlock/ConcreteArmor</string>
+        <string>CubeBlock/ConcreteArmorSlope</string>
+        <string>CubeBlock/ConcreteArmorCorner</string>
+        <string>CubeBlock/ConcreteArmorInvertedCorner</string>
+        <string>CubeBlock/ConcreteArmorSlope2x1</string>
+        <string>CubeBlock/ConcreteArmorCorner2x1</string>
+        <string>CubeBlock/ConcreteArmorInvertedCorner2x1</string>
+      </ItemIds>
+    </Category>
+	
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_ShipTools</DisplayName>
+      <Name>ShipTools</Name>
+      <SearchBlocks>false</SearchBlocks>
+      <IsShipCategory>true</IsShipCategory>`
+      <IsBlockCategory>false</IsBlockCategory>
+      <IsToolCategory>true</IsToolCategory>
+      <ItemIds>
+        <string>Drill/LargeBlockHeavyDrill</string>
+        <string>Drill/SmallBlockHeavyDrill</string>
+        <string>Drill/LargeBlockGravDrill</string>
+        <string>Drill/SmallBlockGravDrill</string>
+        <string>ShipGrinder/LargeShipHeavyGrinder</string>
+        <string>ShipGrinder/SmallShipHeavyGrinder</string>
+        <string>ShipGrinder/LargeShipLaserGrinder</string>
+        <string>ShipGrinder/SmallShipLaserGrinder</string>
+        <string>ShipWelder/LargeShipHeavyWelder</string>
+        <string>ShipWelder/SmallShipHeavyWelder</string>
+        <string>ShipWelder/LargeShipLaserWelder</string>
+        <string>ShipWelder/SmallShipLaserWelder</string>
+      </ItemIds>
+    </Category>
+	
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_ShipTools</DisplayName>
+      <Name>Tools</Name>
+      <ItemIds>
+        <string>Drill/LargeBlockHeavyDrill</string>
+        <string>Drill/SmallBlockHeavyDrill</string>
+        <string>Drill/LargeBlockGravDrill</string>
+        <string>Drill/SmallBlockGravDrill</string>
+        <string>ShipGrinder/LargeShipHeavyGrinder</string>
+        <string>ShipGrinder/SmallShipHeavyGrinder</string>
+        <string>ShipGrinder/LargeShipLaserGrinder</string>
+        <string>ShipGrinder/SmallShipLaserGrinder</string>
+        <string>ShipWelder/LargeShipHeavyWelder</string>
+        <string>ShipWelder/SmallShipHeavyWelder</string>
+        <string>ShipWelder/LargeShipLaserWelder</string>
+        <string>ShipWelder/SmallShipLaserWelder</string>
+        <string>OreDetector/LargeOreDetector</string>
+        <string>OreDetector/SmallBlockOreDetector</string>
+        <string>OreDetector/LargeMetalDetector</string>
+        <string>OreDetector/SmallMetalDetector</string>
+      </ItemIds>
+    </Category>
+	
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_Power</DisplayName>
+      <Name>Power</Name>
+      <ItemIds>
+        <string>BatteryBlock/LargeBlockAcidBatteryBlock</string>
+        <string>BatteryBlock/SmallBlockAcidBatteryBlock</string>
+        <string>BatteryBlock/SmallBlockSmallAcidBatteryBlock</string>
+        <string>HydrogenEngine/LargeGasolineEngine</string>
+        <string>HydrogenEngine/SmallGasolineEngine</string>
+        <string>BatteryBlock/LargeBlockAlkalineBatteryBlock</string>
+        <string>BatteryBlock/SmallBlockSmallAlkalineBatteryBlock</string>
+        <string>HydrogenEngine/SteamTurbine</string>
+        <string>OxygenGenerator/CoalFurnace</string>
+        <string>OxygenGenerator/FastNeutronReactor</string>
+        <string>OxygenGenerator/NuclearReactor</string>
+        <string>Reactor/SmallRTG</string>
+        <string>Reactor/LargeRTG</string>
+        <string>Reactor/SmallCompactReactor</string>
+        <string>Reactor/LargeCompactReactor</string>
+        <string>BatteryBlock/LargeCapacitor</string>
+        <string>BatteryBlock/SmallCapacitor</string>
+        <string>BatteryBlock/LargeElectronMatrix</string>
+        <string>BatteryBlock/SmallElectronMatrix</string>
+        <string>OxygenGenerator/GeothermalWellHead</string>
+        <string>OxygenFarm/SolarConcentrator</string>
+        <string>WindTurbine/LargeBlockWindTurbine</string>
+        <string>SolarPanel/LargeBlockSolarPanel</string>
+      </ItemIds>
+    </Category>
+	
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_Production</DisplayName>
+      <Name>Production</Name>
+      <StrictSearch>true</StrictSearch>
+      <ItemIds>
+        <string>Assembler/LargeAssemblerNew</string>
+        <string>Assembler/LargeAssembler</string>
+        <string>Assembler/GravelCompressor</string>
+        <string>Assembler/Fabricator</string>
+        <string>Assembler/SiliconFuser</string>
+        <string>Assembler/CementKiln</string>
+        <string>Assembler/MicroelectronicsFactory</string>
+        <string>Assembler/WireDrawer</string>
+        <string>Assembler/AutoLoom</string>
+        <string>Assembler/PlateStamp</string>
+        <string>Assembler/Extruder</string>
+        <string>Assembler/NanoAssembler</string>
+        <string>Assembler/MunitionsFactory</string>
+        <string>Assembler/AdvancedAssembler</string>
+        <string>Assembler/PolymerFactory</string>
+        <string>Refinery/BitumenExtractor</string>
+        <string>Refinery/OilCracker</string>
+        <string>Refinery/Incinerator</string>
+        <string>Refinery/RockCrusher</string>
+        <string>Refinery/OrePurifier</string>
+        <string>Refinery/ChemicalPlant</string>
+        <string>OxygenGenerator/FuelRefinery</string>
+        <string>Refinery/Centrifuge</string>
+        <string>Refinery/Reprocessor</string>
+      </ItemIds>
+    </Category>
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_ConveyorBlocks</DisplayName>
+      <Name>Conveyors</Name>
+      <ItemIds>
+        <string>CargoContainer/LargeShippingContainer</string>
+        <string>CargoContainer/SmallShippingContainer</string>
+        <string>CargoContainer/TransportBox</string>
+      </ItemIds>
+    </Category>
+	
+  </CategoryClasses>
+</Definitions>

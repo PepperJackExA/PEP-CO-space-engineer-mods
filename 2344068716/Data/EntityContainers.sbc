@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <EntityContainers>
+
+        <Container>
+            <Id>
+                <TypeId>Refinery</TypeId>
+                <SubtypeId>Incinerator</SubtypeId>
+            </Id>
+            <DefaultComponents>
+                <Component BuilderType="MyObjectBuilder_Inventory"/>
+            </DefaultComponents>
+        </Container>
+
+    <Container>
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>LargeShippingContainer</SubtypeId>
+      </Id>
+      <DefaultComponents>
+        <Component BuilderType="MyObjectBuilder_Inventory"/>
+      </DefaultComponents>
+    </Container>
+
+    <Container>
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>SmallShippingContainer</SubtypeId>
+      </Id>
+      <DefaultComponents>
+        <Component BuilderType="MyObjectBuilder_Inventory"/>
+      </DefaultComponents>
+    </Container>
+
+    <Container>
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>TransportBox</SubtypeId>
+      </Id>
+      <DefaultComponents>
+        <Component BuilderType="MyObjectBuilder_Inventory"/>
+      </DefaultComponents>
+    </Container>
+
+    <Container>
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>AccessPoint</SubtypeId>
+      </Id>
+      <DefaultComponents>
+        <Component BuilderType="MyObjectBuilder_Inventory"/>
+      </DefaultComponents>
+    </Container>
+
+    <Container>
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>GeothermalWellTip</SubtypeId>
+      </Id>
+      <DefaultComponents>
+        <Component BuilderType="MyObjectBuilder_Inventory"/>
+      </DefaultComponents>
+    </Container>
+
+    <Container>
+      <Id>
+        <TypeId>OxygenGenerator</TypeId>
+        <SubtypeId>DeuteriumRamscoop</SubtypeId>
+      </Id>
+      <DefaultComponents>
+        <Component BuilderType="MyObjectBuilder_Inventory"/>
+      </DefaultComponents>
+    </Container>
+        
+    </EntityContainers>
+</Definitions>

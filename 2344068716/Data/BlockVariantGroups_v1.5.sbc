@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlockVariantGroups>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorCompositeCubeGroup" />
+            <Blocks>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorCube" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorSlope" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorInvCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorCornerSquare" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorCornerSquareInv" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorCube" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorSlope" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorInvCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorCornerSquare" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorCornerSquareInv" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorCompositeRampGroup" />
+            <Blocks>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorSlope2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorSlope2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfCompositeArmor" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfSlopeCompositeArmor" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfSlopeCornerCompositeArmor" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorHalfCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorHalfSlopedCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorSlope2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorSlope2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHalfCompositeArmor" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHalfSlopeCompositeArmor" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHalfSlopeCornerCompositeArmor" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorHalfCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorHalfSlopedCorner" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorCompositeRampCornerGroup" />
+            <Blocks>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorCorner2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorCorner2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorInvCorner2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorInvCorner2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfSlopeCornerInvCompositeArmor" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfSlopeInvCompositeArmor" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorCorner2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorCorner2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorInvCorner2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorInvCorner2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHalfSlopeCornerInvCompositeArmor" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHalfSlopeInvCompositeArmor" />
+            </Blocks>
+        </BlockVariantGroup>
+		
+		<BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorCompositeSlopedCorners" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSlopedCornerCompositeArmorTip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorSlopedCornerBase" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorSlopedCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCompositeArmorHalfSlopedCornerBase" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSlopedCornerCompositeArmorTip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorSlopedCornerBase" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorSlopedCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCompositeArmorHalfSlopedCornerBase" />
+            </Blocks>
+        </BlockVariantGroup>
+		
+		<BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DeuteriumTanks" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_OxygenTank" Subtype="LargeDeuteriumTank" />
+                <Block Type="MyObjectBuilder_OxygenTank" Subtype="LargeDeuteriumTankNoLegs" />
+                <Block Type="MyObjectBuilder_OxygenTank" Subtype="EnclosedDeuteriumTank" />
+                <Block Type="MyObjectBuilder_OxygenTank" Subtype="DeuteriumTankSmall" />
+                <Block Type="MyObjectBuilder_OxygenTank" Subtype="DeuteriumTankSmallFrame" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ShipToolGroup" />
+            <Icon>Textures\GUI\Icons\Cubes\Grinder.dds</Icon>
+            <DisplayName>DisplayName_BlockGroup_ShipToolGroup</DisplayName>
+            <Description>Description_BlockGroup_ShipToolGroup</Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_ShipGrinder" Subtype="LargeShipGrinder" />
+                <Block Type="MyObjectBuilder_ShipGrinder" Subtype="SmallShipGrinder" />
+                <Block Type="MyObjectBuilder_ShipGrinder" Subtype="LargeShipHeavyGrinder" />
+                <Block Type="MyObjectBuilder_ShipGrinder" Subtype="SmallShipHeavyGrinder" />
+                <Block Type="MyObjectBuilder_ShipGrinder" Subtype="LargeShipLaserGrinder" />
+                <Block Type="MyObjectBuilder_ShipGrinder" Subtype="SmallShipLaserGrinder" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Drills" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_Drill" Subtype="LargeBlockDrill" />
+                <Block Type="MyObjectBuilder_Drill" Subtype="SmallBlockDrill" />
+                <Block Type="MyObjectBuilder_Drill" Subtype="LargeBlockHeavyDrill" />
+                <Block Type="MyObjectBuilder_Drill" Subtype="SmallBlockHeavyDrill" />
+                <Block Type="MyObjectBuilder_Drill" Subtype="LargeBlockGravDrill" />
+                <Block Type="MyObjectBuilder_Drill" Subtype="SmallBlockGravDrill" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Welders" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_ShipWelder" Subtype="LargeShipWelder" />
+                <Block Type="MyObjectBuilder_ShipWelder" Subtype="SmallShipWelder" />
+                <Block Type="MyObjectBuilder_ShipWelder" Subtype="LargeShipHeavyWelder" />
+                <Block Type="MyObjectBuilder_ShipWelder" Subtype="SmallShipHeavyWelder" />
+                <Block Type="MyObjectBuilder_ShipWelder" Subtype="LargeShipLaserWelder" />
+                <Block Type="MyObjectBuilder_ShipWelder" Subtype="SmallShipLaserWelder" />
+            </Blocks>
+        </BlockVariantGroup>
+        
+    </BlockVariantGroups>
+</Definitions>

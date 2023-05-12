@@ -1,0 +1,631 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <PhysicalItems>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>Heat</SubtypeId>
+            </Id>
+            <DisplayName>Heat</DisplayName>
+            <Icon>Icons\Heat.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>0</Mass>
+            <Volume>0</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Heat</IconSymbol>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>Coal</SubtypeId>
+            </Id>
+            <DisplayName>Coal</DisplayName>
+            <Icon>Icons\OilSand.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.3</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Coal</IconSymbol>
+			
+            <MinimalPricePerUnit>250</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>Sulfur</SubtypeId>
+            </Id>
+            <DisplayName>Sulfur Ore</DisplayName>
+            <Icon>Icons\CopperOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.3</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>S</IconSymbol>
+			
+            <MinimalPricePerUnit>250</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>OilSand</SubtypeId>
+            </Id>
+            <DisplayName>Oil Sand</DisplayName>
+            <Icon>Icons\OilSand.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.3</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Tar</IconSymbol>
+			
+            <MinimalPricePerUnit>200</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>Copper</SubtypeId>
+            </Id>
+            <DisplayName>Copper Ore</DisplayName>
+            <Icon>Icons\CopperOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.3</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Cu</IconSymbol>
+			
+            <MinimalPricePerUnit>150</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>Lithium</SubtypeId>
+            </Id>
+            <DisplayName>Lithium Ore</DisplayName>
+            <Icon>Icons\GenericOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.3</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Li</IconSymbol>
+			
+            <MinimalPricePerUnit>350</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>Bauxite</SubtypeId>
+            </Id>
+            <DisplayName>Bauxite</DisplayName>
+            <Icon>Icons\BauxiteOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.3</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Al</IconSymbol>
+			
+            <MinimalPricePerUnit>250</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>Titanium</SubtypeId>
+            </Id>
+            <DisplayName>Titanium Ore</DisplayName>
+            <Icon>Icons\GenericOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.3</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Ti</IconSymbol>
+			
+            <MinimalPricePerUnit>300</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>Tantalum</SubtypeId>
+            </Id>
+            <DisplayName>Tantalum Ore</DisplayName>
+            <Icon>Icons\GenericOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.3</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Ta</IconSymbol>
+			
+            <MinimalPricePerUnit>600</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>Niter</SubtypeId>
+            </Id>
+            <DisplayName>Niter</DisplayName>
+            <Icon>Icons\NiterOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.3</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Niter</IconSymbol>
+			
+            <MinimalPricePerUnit>200</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrudeOil</SubtypeId>
+            </Id>
+            <DisplayName>Crude Oil</DisplayName>
+            <Icon>Icons\BlackBarrel.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.15</Volume>
+            <Model>Models\OilBarrel.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Oil</IconSymbol>
+			
+            <MinimalPricePerUnit>500</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Copper</SubtypeId>
+            </Id>
+            <DisplayName>Copper Ingot</DisplayName>
+            <Icon>Icons\CopperIngot.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>1.8</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\CopperIngot.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Cu</IconSymbol>
+			
+            <MinimalPricePerUnit>312</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Polymer</SubtypeId>
+            </Id>
+            <DisplayName>Polymer</DisplayName>
+            <Icon>Icons\BlueBarrel.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>0.3</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\PolymerBarrel.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Polymer</IconSymbol>
+			
+            <MinimalPricePerUnit>2082</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>FuelOil</SubtypeId>
+            </Id>
+            <DisplayName>Fuel Oil</DisplayName>
+            <Icon>Icons\BlackBarrel.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>0.16</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\OilBarrel.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Fuel Oil</IconSymbol>
+			
+            <MinimalPricePerUnit>1388</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Lithium</SubtypeId>
+            </Id>
+            <DisplayName>Lithium Paste</DisplayName>
+            <Icon>Icons\WhiteBarrel.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>0.11</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\LithiumBarrel.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Li</IconSymbol>
+			
+            <MinimalPricePerUnit>2187</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Aluminum</SubtypeId>
+            </Id>
+            <DisplayName>Aluminum Ingot</DisplayName>
+            <Icon>Icons\GenericIngot.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>0.54</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\GenericIngot.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Al</IconSymbol>
+			
+            <MinimalPricePerUnit>520</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Titanium</SubtypeId>
+            </Id>
+            <DisplayName>Titanium Ingot</DisplayName>
+            <Icon>Icons\GenericIngot.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>0.9</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\GenericIngot.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Ti</IconSymbol>
+			
+            <MinimalPricePerUnit>937</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Tantalum</SubtypeId>
+            </Id>
+            <DisplayName>Tantalum Ingot</DisplayName>
+            <Icon>Icons\GenericIngot.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>3.34</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\GenericIngot.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Ta</IconSymbol>
+			
+            <MinimalPricePerUnit>75000</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Sulfur</SubtypeId>
+            </Id>
+            <DisplayName>Sulfur</DisplayName>
+            <Icon>Icons\SulfurIngot.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>0.41</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\SulfurIngot.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>S</IconSymbol>
+			
+            <MinimalPricePerUnit>1041</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Carbon</SubtypeId>
+            </Id>
+            <DisplayName>Carbon</DisplayName>
+            <Icon>Icons\CarbonIngot.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>0.4</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\CarbonIngot.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>C</IconSymbol>
+			
+            <MinimalPricePerUnit>416</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Niter</SubtypeId>
+            </Id>
+            <DisplayName>Potassium Nitrate</DisplayName>
+            <Icon>Icons\WhiteBarrel.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>0.42</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\LithiumBarrel.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>KNO3</IconSymbol>
+			
+            <MinimalPricePerUnit>832</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ingot</TypeId>
+                <SubtypeId>Magnesium</SubtypeId>
+            </Id>
+            <DisplayName>Gunpowder</DisplayName>
+            <Icon>Icons\RedBarrel.dds</Icon>
+            <Size>
+                <X>0.072</X>
+                <Y>0.072</Y>
+                <Z>0.072</Z>
+            </Size>
+            <Mass>0.414</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\GunpowderBarrel.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <IconSymbol>Gun</IconSymbol>
+			
+            <MinimalPricePerUnit>1384</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+        </PhysicalItem>
+		
+    </PhysicalItems>
+</Definitions>

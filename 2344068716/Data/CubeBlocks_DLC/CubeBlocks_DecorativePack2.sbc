@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+	
+	<Definition xsi:type="MyObjectBuilder_JukeboxDefinition">
+      <Id>
+        <TypeId>Jukebox</TypeId>
+        <SubtypeId>Jukebox</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_Jukebox</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\Jukebox.dds</Icon>
+      <Description>Description_Jukebox</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+	  <GuiVisible>false</GuiVisible>
+      <Model>Models\Cubes\Large\Jukebox.mwm</Model>
+      <ModelOffset x="0" y="0" z="0" />
+      <Components>        
+          <Component Subtype="InteriorPlate" Count="10" />
+          <Component Subtype="Construction" Count="10" />
+          <Component Subtype="AdvancedComputer" Count="15" />
+          <Component Subtype="Display" Count="4" />
+          <Component Subtype="InteriorPlate" Count="5" />
+      </Components>
+      <CriticalComponent Subtype="Display" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0.2" EndX="0.4" EndY="0.8" Default="true" />
+        <MountPoint Side="Left" StartX="0.2" StartY="0" EndX="0.8" EndY="0.6" />
+      </MountPoints>
+      <ScreenAreas>
+          <ScreenArea Name="CockpitScreen_01" DisplayName="DisplayName_Screen_Large" TextureResolution="1024" ScreenWidth="15" ScreenHeight="9" Script="TSS_Jukebox"/>
+      </ScreenAreas>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\JukeboxConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\JukeboxConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\JukeboxConstruction_3.mwm" />
+      </BuildProgressModels>
+      <MirroringX>Y</MirroringX>
+      <MirroringY>X</MirroringY>
+      <EdgeType>Light</EdgeType>
+      <HasInventory>false</HasInventory>
+      <BuildTimeSeconds>10</BuildTimeSeconds>
+      <PCU>25</PCU>
+      <RequiredPowerInput>0.02</RequiredPowerInput>
+      <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+      <DamagedSound>ParticleElectrical</DamagedSound>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <IsAirTight>false</IsAirTight>
+      <DLC>DecorativeBlocks2</DLC>
+    </Definition>
+
+      <Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+          <Id>
+              <TypeId>ReflectorLight</TypeId>
+              <SubtypeId>RotatingLightLarge</SubtypeId>
+          </Id>
+          <DisplayName>DisplayName_Block_RotatingLight</DisplayName>
+          <Icon>Textures\GUI\Icons\Cubes\RotatingLight.dds</Icon>
+          <Description>Description_RotatingLight</Description>
+          <CubeSize>Large</CubeSize>
+          <BlockTopology>TriangleMesh</BlockTopology>
+          <Size x="1" y="1" z="1" />
+          <GuiVisible>false</GuiVisible>
+          <Model>Models\Cubes\Large\RotatingLight.mwm</Model>
+          <ModelOffset x="0" y="0" z="0" />
+          <Components>
+              <Component Subtype="Construction" Count="2" />
+              <Component Subtype="Motor" Count="1" />
+			  <Component Subtype="Lightbulb" Count="2" />
+              <Component Subtype="Construction" Count="1" />
+          </Components>
+          <CriticalComponent Subtype="Lightbulb" Index="0" />
+          <MountPoints>
+              <MountPoint Side="Back" StartX="0.4" StartY="0.4" EndX="0.6" EndY="0.6" Default="true" />
+          </MountPoints>
+          <BuildProgressModels>
+              <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\RotatingLightConstruction_1.mwm" />
+              <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\RotatingLightConstruction_2.mwm" />
+              <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\RotatingLightConstruction_3.mwm" />
+          </BuildProgressModels>
+          <MirroringZ>Y</MirroringZ>
+          <MirroringY>Z</MirroringY>
+          <EdgeType>Light</EdgeType>
+          <HasInventory>false</HasInventory>
+          <BuildTimeSeconds>4</BuildTimeSeconds>
+          <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+          <DamagedSound>ParticleElectrical</DamagedSound>
+          <BlockPairName>RotatingLight</BlockPairName>
+          <PCU>25</PCU>
+          <IsAirTight>false</IsAirTight>
+          <RotationSpeedBounds Min="0.01" Max="0.1" Default="0.08" />
+          <LightRadius Min="1" Max="5" Default="1" />
+          <LightReflectorRadius Min="10" Max="30" Default="20" />
+          <LightFalloff Min="0.1" Max="3" Default="0.5" />
+          <LightIntensity Min="0.5" Max="10" Default="6" />
+          <ResourceSinkGroup>Utility</ResourceSinkGroup>
+          <RequiredPowerInput>0.0002</RequiredPowerInput>
+          <Flare>SpotlightSmall</Flare>
+          <ReflectorThickness>5.0</ReflectorThickness>
+          <ReflectorTexture>Textures\Lights\reflector.dds</ReflectorTexture>
+          <ReflectorConeDegrees>40</ReflectorConeDegrees>
+          <ReflectorConeMaterial>ReflectorConeNarrow</ReflectorConeMaterial>
+      <DLC>DecorativeBlocks2</DLC>
+      </Definition>            
+      <Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+          <Id>
+              <TypeId>ReflectorLight</TypeId>
+              <SubtypeId>RotatingLightSmall</SubtypeId>
+          </Id>
+          <DisplayName>DisplayName_Block_RotatingLight</DisplayName>
+          <Icon>Textures\GUI\Icons\Cubes\RotatingLight.dds</Icon>
+          <Description>Description_RotatingLight</Description>
+          <CubeSize>Small</CubeSize>
+          <BlockTopology>TriangleMesh</BlockTopology>
+          <Size x="1" y="1" z="1" />
+          <GuiVisible>false</GuiVisible>
+          <Model>Models\Cubes\Large\RotatingLight.mwm</Model>
+          <ModelOffset x="0" y="0" z="-1" />
+          <Components>
+              <Component Subtype="Construction" Count="2" />
+              <Component Subtype="Motor" Count="1" />
+			  <Component Subtype="Lightbulb" Count="2" />
+              <Component Subtype="Construction" Count="1" />
+          </Components>
+          <CriticalComponent Subtype="Lightbulb" Index="0" />
+          <MountPoints>
+              <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" Default="true" />
+          </MountPoints>
+          <BuildProgressModels>
+              <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\RotatingLightConstruction_1.mwm" />
+              <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\RotatingLightConstruction_2.mwm" />
+              <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\RotatingLightConstruction_3.mwm" />
+          </BuildProgressModels>
+          <VoxelPlacement>
+              <StaticMode>
+                  <PlacementMode>OutsideVoxel</PlacementMode>
+                  <MaxAllowed>0.2</MaxAllowed>
+                  <MinAllowed>0</MinAllowed>
+              </StaticMode>
+              <DynamicMode>
+                  <PlacementMode>OutsideVoxel</PlacementMode>
+                  <MaxAllowed>0.2</MaxAllowed>
+                  <MinAllowed>0</MinAllowed>
+              </DynamicMode>
+          </VoxelPlacement>
+          <MirroringZ>Y</MirroringZ>
+          <MirroringY>Z</MirroringY>
+          <EdgeType>Light</EdgeType>
+          <HasInventory>false</HasInventory>
+          <BuildTimeSeconds>4</BuildTimeSeconds>
+          <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+          <DamagedSound>ParticleElectrical</DamagedSound>
+          <BlockPairName>RotatingLight</BlockPairName>
+          <PCU>25</PCU>
+          <IsAirTight>false</IsAirTight>
+          <RotationSpeedBounds Min="0.01" Max="0.1" Default="0.08" />
+          <LightRadius Min="1" Max="5" Default="1" />
+          <LightReflectorRadius Min="10" Max="30" Default="20" />
+          <LightFalloff Min="0.1" Max="3" Default="0.5" />
+          <LightIntensity Min="0.5" Max="10" Default="6" />
+          <ResourceSinkGroup>Utility</ResourceSinkGroup>
+          <RequiredPowerInput>0.0002</RequiredPowerInput>
+          <Flare>SpotlightSmall</Flare>
+          <ReflectorThickness>5.0</ReflectorThickness>
+          <ReflectorTexture>Textures\Lights\reflector.dds</ReflectorTexture>
+          <ReflectorConeDegrees>40</ReflectorConeDegrees>
+          <ReflectorConeMaterial>ReflectorConeNarrow</ReflectorConeMaterial>
+      <DLC>DecorativeBlocks2</DLC>
+      </Definition>
+	  
+  </CubeBlocks>
+</Definitions>

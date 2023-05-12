@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlockVariantGroups>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Geothermal" />
+            <Blocks>
+				<Block Type="MyObjectBuilder_OxygenGenerator" Subtype="GeothermalWellHead" />
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="GeothermalPipe" />
+				<Block Type="MyObjectBuilder_Conveyor" Subtype="GeothermalPipeMount" />
+				<Block Type="MyObjectBuilder_CargoContainer" Subtype="GeothermalWellTip" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SolarConcentrator" />
+            <Blocks>
+				<Block Type="MyObjectBuilder_OxygenFarm" Subtype="SolarConcentrator" />
+				<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SolarConcentratorMount" />
+				<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SolarConcentratorMountHead" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EnergyRenewableGroup" />
+            <Icon>Textures\GUI\Icons\Cubes\WindTurbine.dds</Icon>
+            <DisplayName>DisplayName_BlockGroup_EnergyRenewableGroup</DisplayName>
+            <Description>Description_BlockGroup_EnergyRenewableGroup</Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_WindTurbine" Subtype="LargeBlockWindTurbine" />
+                <Block Type="MyObjectBuilder_WindTurbine" Subtype="LargeWindTurbine" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SolarPanels" />
+            <Icon>Textures\GUI\Icons\Cubes\SolarPanel.dds</Icon>
+            <DisplayName>DisplayName_BlockGroup_EnergyRenewableGroup</DisplayName>
+            <Description>Description_BlockGroup_EnergyRenewableGroup</Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanel" />
+                <Block Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockSolarPanel" />
+                <Block Type="MyObjectBuilder_SolarPanel" Subtype="LargeFullSpectrumSolarPanel" />
+                <Block Type="MyObjectBuilder_SolarPanel" Subtype="SmallFullSpectrumSolarPanel" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorAluminumCubeGroup" />
+            <Blocks>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumCube" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumSlope" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumInvCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumCornerSquare" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumCornerSquareInv" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumCube" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumSlope" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumInvCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumCornerSquare" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumCornerSquareInv" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorAluminumRampGroup" />
+            <Blocks>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumSlope2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumSlope2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfAluminum" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfSlopeAluminum" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfSlopeCornerAluminum" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumHalfCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumHalfSlopedCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumSlope2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumSlope2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHalfAluminum" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHalfSlopeAluminum" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHalfSlopeCornerAluminum" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumHalfCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumHalfSlopedCorner" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorAluminumRampCornerGroup" />
+            <Blocks>
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumCorner2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumCorner2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumInvCorner2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumInvCorner2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfSlopeCornerInvAluminum" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfSlopeInvAluminum" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumCorner2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumCorner2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumInvCorner2x1x1Base" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumInvCorner2x1x1Tip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHalfSlopeCornerInvAluminum" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHalfSlopeInvAluminum" />
+            </Blocks>
+        </BlockVariantGroup>
+		
+		<BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorAluminumSlopedCorners" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSlopedCornerAluminumTip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumSlopedCornerBase" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumSlopedCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeAluminumHalfSlopedCornerBase" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSlopedCornerAluminumTip" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumSlopedCornerBase" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumSlopedCorner" />
+				<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallAluminumHalfSlopedCornerBase" />
+            </Blocks>
+        </BlockVariantGroup>
+        
+    </BlockVariantGroups>
+</Definitions>

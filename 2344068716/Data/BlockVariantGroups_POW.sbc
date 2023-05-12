@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlockVariantGroups>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SteamPipes" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SteamPipe" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SteamPipeFrame" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SteamPipePassthrough" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SteamPipeCorner" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SteamPipeT" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SteamPipeCross" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SteamPipeElbow" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SteamPipe4Way" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SteamPipe5Way" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SteamPipe6Way" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SteamTurbines" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="SteamTurbine" />
+                <Block Type="MyObjectBuilder_HydrogenEngine" Subtype="SteamTurbineMirrored" />
+            </Blocks>
+        </BlockVariantGroup>
+
+    </BlockVariantGroups>
+</Definitions>

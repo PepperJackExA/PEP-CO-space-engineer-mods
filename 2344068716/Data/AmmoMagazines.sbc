@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AmmoMagazines>
+
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>DUNATO_25x184mm</SubtypeId>
+            </Id>
+            <DisplayName>Depleted Uranium 25x184mm</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
+            <IconSymbol>DU</IconSymbol>
+            <Size>
+                <X>0.25</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>50</Mass>
+            <Volume>16</Volume>
+            <Model>Models\Weapons\Ammo_Box.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>140</Capacity>
+            <AmmoDefinitionId Subtype="DULargeCaliber" />
+            <MinimalPricePerUnit>352700</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+  
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>InteriorTurret_Mag_50rd</SubtypeId>
+            </Id>
+            <DisplayName>Light Turret Magazine</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
+            <Size>
+                <X>0.25</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>3</Mass>
+            <Volume>1</Volume>
+            <Model>Models\Weapons\Ammo_Box.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>50</Capacity>
+            <AmmoDefinitionId Subtype="SmallCaliber" />
+            <MinimalPricePerUnit>128515</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>SemiAutoPistolMagazine</SubtypeId>
+            </Id>
+            <DisplayName>Basic Pistol Magazine</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Pistol_Warfare_Ammo.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.05</Y>
+                <Z>0.02</Z>
+            </Size>
+            <Mass>0.15</Mass>
+            <Volume>0.1</Volume>
+            <Model>Models\Weapons\Pistol_Magazine_Warfare.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>10</Capacity>
+            <AmmoDefinitionId Subtype="BasicPistolCaliber" />
+            <MinimalPricePerUnit>468</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+<!-- economy -->
+
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>FullAutoPistolMagazine</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_FullAutoPistolMagazine</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Pistol_FullAuto_Warfare_Ammo.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.05</Y>
+                <Z>0.02</Z>
+            </Size>
+            <Mass>0.3</Mass>
+            <Volume>0.15</Volume>
+            <Model>Models\Weapons\Pistol_FullAuto_Magazine_Warfare.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>20</Capacity>
+            <AmmoDefinitionId Subtype="PistolCaliber" />
+            <MinimalPricePerUnit>2632</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>ElitePistolMagazine</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_ElitePistolMagazine</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Pistol_Elite_Warfare_Ammo.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.05</Y>
+                <Z>0.02</Z>
+            </Size>
+            <Mass>0.15</Mass>
+            <Volume>0.1</Volume>
+            <Model>Models\Weapons\Pistol_Elite_Magazine_Warfare.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>10</Capacity>
+            <AmmoDefinitionId Subtype="PistolCaliber" />
+            <MinimalPricePerUnit>2570</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+        
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>AutomaticRifleGun_Mag_20rd</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_AutomaticRifleGun_Mag_20rd</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Rifle_Ammo_SemiAuto.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.05</Y>
+                <Z>0.02</Z>
+            </Size>
+            <Mass>0.6</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Weapons\Rifle_SemiAuto_Magazine_Warfare.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>20</Capacity>
+            <AmmoDefinitionId Subtype="SmallCaliber" />
+            <MinimalPricePerUnit>3991</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>RapidFireAutomaticRifleGun_Mag_50rd</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_RapidFireAutomaticRifleGun_Mag_50rd</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Rifle_Ammo_RapidFire.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.05</Y>
+                <Z>0.02</Z>
+            </Size>
+            <Mass>1.5</Mass>
+            <Volume>0.5</Volume>
+            <Model>Models\Weapons\Rifle_RapidFire_Magazine_Warfare.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>50</Capacity>
+            <AmmoDefinitionId Subtype="SmallCaliber" />
+            <MinimalPricePerUnit>10584</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>PreciseAutomaticRifleGun_Mag_5rd</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_PreciseAutomaticRifleGun_Mag_5rd</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Rifle_Ammo_Precise.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.05</Y>
+                <Z>0.02</Z>
+            </Size>
+            <Mass>0.4</Mass>
+            <Volume>0.15</Volume>
+            <Model>Models\Weapons\Rifle_Precise_Magazine_Warfare.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>8</Capacity>
+            <AmmoDefinitionId Subtype="SmallCaliber" />
+            <MinimalPricePerUnit>3991</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>UltimateAutomaticRifleGun_Mag_30rd</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_UltimateAutomaticRifleGun_Mag_30rd</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Rifle_Ammo_Elite.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.05</Y>
+                <Z>0.02</Z>
+            </Size>
+            <Mass>0.9</Mass>
+            <Volume>0.3</Volume>
+            <Model>Models\Weapons\AutomaticRifle_Magazine.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>30</Capacity>
+            <AmmoDefinitionId Subtype="SmallCaliber" />
+            <MinimalPricePerUnit>7597</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>NATO_25x184mm</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_NATO_25x184mm</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
+            <Size>
+                <X>0.25</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>35</Mass>
+            <Volume>16</Volume>
+            <Model>Models\Weapons\Ammo_Box.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>140</Capacity>
+            <AmmoDefinitionId Subtype="LargeCaliber" />
+            <MinimalPricePerUnit>257031</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+		
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>Missile200mm</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_Missile200mm</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
+            <Size>
+                <X>1.2</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>45</Mass>
+            <Volume>60</Volume>
+            <Model>Models\Weapons\Projectile_Missile.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>1</Capacity>
+            <AmmoDefinitionId Subtype="Missile" />
+            <MinimalPricePerUnit>502758</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>1</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+
+  </AmmoMagazines>
+</Definitions>

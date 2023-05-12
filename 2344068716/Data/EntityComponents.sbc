@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <EntityComponents>
+	
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>Incinerator</SubtypeId>
+            </Id>
+            <Size x="2.5" y="2.5" z="2.5" />
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>LargeShippingContainer</SubtypeId>
+            </Id>
+            <Size x="5" y="2.5" z="2.5" />
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>SmallShippingContainer</SubtypeId>
+            </Id>
+            <Size x="5" y="2.5" z="2.5" />
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>TransportBox</SubtypeId>
+            </Id>
+            <Size x="1.5" y="1.5" z="1.5" />
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>AccessPoint</SubtypeId>
+            </Id>
+            <Size x="0.5" y="0.5" z="0.5" />
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>GeothermalWellTip</SubtypeId>
+            </Id>
+            <Size x="1" y="1" z="0.5" />
+        </EntityComponent>
+
+        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+            <Id>
+                <TypeId>Inventory</TypeId>
+                <SubtypeId>DeuteriumRamscoop</SubtypeId>
+            </Id>
+            <Size x="1" y="1" z="0.5" />
+        </EntityComponent>
+
+    </EntityComponents>
+
+</Definitions>

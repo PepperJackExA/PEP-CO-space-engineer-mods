@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+	
+        <Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+            <Id>
+                <TypeId>BatteryBlock</TypeId>
+                <SubtypeId>LargeCapacitor</SubtypeId>
+            </Id>
+            <DisplayName>Capacitor</DisplayName>
+            <Icon>Icons\Capacitor.dds</Icon>
+            <Description>Very low storage, but extremely high burst output potential.
+			Useful for evening out surges or powering high momentary-draw equipment and weapons.
+			85% charging efficiency.
+			
+			Max Output: 250MW
+			Stored Power: 100kWh</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="1" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>Models\CapacitorLarge.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="20" />
+                <Component Subtype="Construction" Count="35" />
+                <Component Subtype="Capacitor" Count="50" />
+                <Component Subtype="Computer" Count="35" />
+                <Component Subtype="CopperWire" Count="50" />
+                <Component Subtype="Ceramic" Count="40" />
+                <Component Subtype="SteelPlate" Count="25" />
+            </Components>
+            <CriticalComponent Subtype="Ceramic" Index="0" />
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Construct\CapacitorLargeConstruct1.mwm" />
+                <Model BuildPercentUpperBound="0.66" File="Models\Construct\CapacitorLargeConstruct2.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="Models\Construct\CapacitorLargeConstruct3.mwm" />
+            </BuildProgressModels>
+            <BlockPairName>Capacitor</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.1" />
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="0.1" EndY="0.6" />
+				<MountPoint Side="Back" StartX="0.9" StartY="0" EndX="1" EndY="0.6" />
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.1" />
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="0.1" EndY="0.6" />
+				<MountPoint Side="Front" StartX="0.9" StartY="0" EndX="1" EndY="0.6" />
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="0.6" />
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="0.6" />
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+			</MountPoints>
+
+            <ResourceSourceGroup>Battery</ResourceSourceGroup>
+            <MaxPowerOutput>250</MaxPowerOutput>
+
+            <ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+            <RequiredPowerInput>50</RequiredPowerInput>
+            <AdaptibleInput>true</AdaptibleInput>
+            <MaxStoredPower>0.1</MaxStoredPower>
+            <InitialStoredPowerRatio>0</InitialStoredPowerRatio>
+            <RechargeMultiplier>0.85</RechargeMultiplier>
+
+            <InventorySize>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </InventorySize>
+            <Public>true</Public>
+            <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+            <DamagedSound>ParticleElectrical</DamagedSound>
+            <EmissiveColorPreset>Extended</EmissiveColorPreset>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <IsAirTight>true</IsAirTight>
+            <MirroringZ>Y</MirroringZ>
+            <MirroringY>Z</MirroringY>
+        </Definition>
+	
+        <Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+            <Id>
+                <TypeId>BatteryBlock</TypeId>
+                <SubtypeId>SmallCapacitor</SubtypeId>
+            </Id>
+            <DisplayName>Capacitor</DisplayName>
+            <Icon>Icons\Capacitor.dds</Icon>
+            <Description>Very low storage, but extremely high burst output potential.
+			Useful for evening out surges or powering high momentary-draw equipment and weapons.
+			85% charging efficiency.
+			
+			Max Output: 25MW
+			Stored Power: 10kWh</Description>
+            <CubeSize>Small</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="2" y="4" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>Models\CapacitorSmall.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="10" />
+                <Component Subtype="Construction" Count="15" />
+                <Component Subtype="Capacitor" Count="5" />
+                <Component Subtype="Computer" Count="15" />
+                <Component Subtype="CopperWire" Count="20" />
+                <Component Subtype="Ceramic" Count="10" />
+                <Component Subtype="SteelPlate" Count="10" />
+            </Components>
+            <CriticalComponent Subtype="Ceramic" Index="0" />
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Construct\CapacitorSmallConstruct1.mwm" />
+                <Model BuildPercentUpperBound="0.66" File="Models\Construct\CapacitorSmallConstruct2.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="Models\Construct\CapacitorSmallConstruct3.mwm" />
+            </BuildProgressModels>
+            <BlockPairName>Capacitor</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="2" EndY="3" />
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="2" EndY="3" />
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="3" />
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="3" />
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="1" />
+			</MountPoints>
+
+            <ResourceSourceGroup>Battery</ResourceSourceGroup>
+            <MaxPowerOutput>25</MaxPowerOutput>
+
+            <ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+            <RequiredPowerInput>5</RequiredPowerInput>
+            <AdaptibleInput>true</AdaptibleInput>
+            <MaxStoredPower>0.01</MaxStoredPower>
+            <InitialStoredPowerRatio>0</InitialStoredPowerRatio>
+            <RechargeMultiplier>0.85</RechargeMultiplier>
+
+            <InventorySize>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </InventorySize>
+            <Public>true</Public>
+            <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+            <DamagedSound>ParticleElectrical</DamagedSound>
+            <EmissiveColorPreset>Extended</EmissiveColorPreset>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <IsAirTight>true</IsAirTight>
+            <MirroringZ>Y</MirroringZ>
+            <MirroringY>Z</MirroringY>
+        </Definition>
+	
+        <Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+            <Id>
+                <TypeId>BatteryBlock</TypeId>
+                <SubtypeId>LargeElectronMatrix</SubtypeId>
+            </Id>
+            <DisplayName>Electron-Matrix Bank</DisplayName>
+            <Icon>Icons\ElectronMatrix.dds</Icon>
+            <Description>Stores individual high-energy electrons in a nano-crystalline lattice.
+			Extremely high storage density and output potential.
+			100% charging efficiency.
+			
+			Max Output: 50MW
+			Stored Power: 250MWh</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="1" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>Models\ElectronMatrixLarge.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="25" />
+                <Component Subtype="Girder" Count="30" />
+                <Component Subtype="ElectronMatrix" Count="60" />
+                <Component Subtype="Superconductor" Count="40" />
+                <Component Subtype="Computer" Count="10" />
+                <Component Subtype="GoldWire" Count="25" />
+                <Component Subtype="QuantumComputer" Count="25" />
+                <Component Subtype="ArmorGlass" Count="15" />
+            </Components>
+            <CriticalComponent Subtype="QuantumComputer" Index="0" />
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Construct\ElectronMatrixLargeConstruct1.mwm" />
+                <Model BuildPercentUpperBound="0.66" File="Models\Construct\ElectronMatrixLargeConstruct2.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="Models\Construct\ElectronMatrixLargeConstruct3.mwm" />
+            </BuildProgressModels>
+            <BlockPairName>ElectronMatrix</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+
+            <ResourceSourceGroup>Battery</ResourceSourceGroup>
+            <MaxPowerOutput>50</MaxPowerOutput>
+
+            <ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+            <RequiredPowerInput>50</RequiredPowerInput>
+            <AdaptibleInput>true</AdaptibleInput>
+            <MaxStoredPower>250</MaxStoredPower>
+            <InitialStoredPowerRatio>0</InitialStoredPowerRatio>
+            <RechargeMultiplier>1</RechargeMultiplier>
+
+            <InventorySize>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </InventorySize>
+            <Public>true</Public>
+            <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+            <DamagedSound>ParticleElectrical</DamagedSound>
+            <EmissiveColorPreset>ElectronMatrix</EmissiveColorPreset>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <IsAirTight>true</IsAirTight>
+            <MirroringZ>Y</MirroringZ>
+            <MirroringY>Z</MirroringY>
+        </Definition>
+	
+        <Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+            <Id>
+                <TypeId>BatteryBlock</TypeId>
+                <SubtypeId>SmallElectronMatrix</SubtypeId>
+            </Id>
+            <DisplayName>Electron-Matrix Bank</DisplayName>
+            <Icon>Icons\ElectronMatrix.dds</Icon>
+            <Description>Stores individual high-energy electrons in a nano-crystalline lattice.
+			Extremely high storage density and output potential.
+			100% charging efficiency.
+			
+			Max Output: 5MW
+			Stored Power: 25MWh</Description>
+            <CubeSize>Small</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="1" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>Models\ElectronMatrixSmall.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="5" />
+                <Component Subtype="Girder" Count="10" />
+                <Component Subtype="ElectronMatrix" Count="12" />
+                <Component Subtype="Superconductor" Count="15" />
+                <Component Subtype="Computer" Count="5" />
+                <Component Subtype="GoldWire" Count="5" />
+                <Component Subtype="QuantumComputer" Count="15" />
+                <Component Subtype="ArmorGlass" Count="5" />
+            </Components>
+            <CriticalComponent Subtype="QuantumComputer" Index="0" />
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Construct\ElectronMatrixSmallConstruct1.mwm" />
+                <Model BuildPercentUpperBound="0.66" File="Models\Construct\ElectronMatrixSmallConstruct2.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="Models\Construct\ElectronMatrixSmallConstruct3.mwm" />
+            </BuildProgressModels>
+            <BlockPairName>ElectronMatrix</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+
+            <ResourceSourceGroup>Battery</ResourceSourceGroup>
+            <MaxPowerOutput>5</MaxPowerOutput>
+
+            <ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+            <RequiredPowerInput>5</RequiredPowerInput>
+            <AdaptibleInput>true</AdaptibleInput>
+            <MaxStoredPower>25</MaxStoredPower>
+            <InitialStoredPowerRatio>0</InitialStoredPowerRatio>
+            <RechargeMultiplier>1</RechargeMultiplier>
+
+            <InventorySize>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </InventorySize>
+            <Public>true</Public>
+            <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+            <DamagedSound>ParticleElectrical</DamagedSound>
+            <EmissiveColorPreset>ElectronMatrix</EmissiveColorPreset>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>15</PCU>
+            <IsAirTight>true</IsAirTight>
+            <MirroringZ>Y</MirroringZ>
+            <MirroringY>Z</MirroringY>
+        </Definition>
+    </CubeBlocks>
+</Definitions>

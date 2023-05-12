@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlueprintClasses>
+	
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>CentrifugeIngots</SubtypeId>
+            </Id>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+            <OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+        </Class>
+	
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>ReprocessorIngots</SubtypeId>
+            </Id>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+            <OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+        </Class>
+	
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>NRSteam</SubtypeId>
+            </Id>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+            <OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+        </Class>
+	
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>FNRSteam</SubtypeId>
+            </Id>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+            <OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+        </Class>
+	
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>CoalFurnace</SubtypeId>
+            </Id>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+            <OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+        </Class>
+		
+    </BlueprintClasses>
+		
+  <BlueprintClassEntries>
+    
+    <Entry Class="CentrifugeIngots" BlueprintSubtypeId="UraniumOreToIngot" />
+    <Entry Class="CentrifugeIngots" BlueprintSubtypeId="CrushedUraniumOreToIngot" />
+    <Entry Class="CentrifugeIngots" BlueprintSubtypeId="PurifiedUraniumOreToIngot" />
+	
+    <Entry Class="ReprocessorIngots" BlueprintSubtypeId="SpentFuelReprocessing" />
+	
+    <Entry Class="NRSteam" BlueprintSubtypeId="FNRSteam" />
+	
+    <Entry Class="FNRSteam" BlueprintSubtypeId="FNRSteam" />
+    <Entry Class="FNRSteam" BlueprintSubtypeId="FNRSteam2" />
+	
+    <Entry Class="CoalFurnace" BlueprintSubtypeId="CoalFurnace" />
+	
+  </BlueprintClassEntries>
+</Definitions>

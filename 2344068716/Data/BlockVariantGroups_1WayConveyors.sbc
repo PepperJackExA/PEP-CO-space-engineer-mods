@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlockVariantGroups>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LargeOneWayConveyors" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="OneWayConveyorTube" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="OneWayConveyorTubeCurved" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="OneWayConveyorTubeMedium" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="OneWayConveyorTubeCurvedMedium" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="MediumOneWayConveyorTube45" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="OneWayConveyorTube45" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SmallOneWayConveyors" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="OneWayConveyorTubeSmall" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="OneWayConveyorTubeCurvedSmall" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SmallOneWayConveyorTube45" />
+            </Blocks>
+        </BlockVariantGroup>
+
+    </BlockVariantGroups>
+</Definitions>

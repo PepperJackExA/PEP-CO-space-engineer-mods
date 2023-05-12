@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <PhysicalItems>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedSulfur</SubtypeId>
+            </Id>
+            <DisplayName>Purified Sulfur Ore</DisplayName>
+            <Icon>Icons\CopperOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>S</IconSymbol>
+			
+            <MinimalPricePerUnit>500</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedCopper</SubtypeId>
+            </Id>
+            <DisplayName>Purified Copper Ore</DisplayName>
+            <Icon>Icons\CopperOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Cu</IconSymbol>
+			
+            <MinimalPricePerUnit>300</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedLithium</SubtypeId>
+            </Id>
+            <DisplayName>Purified Lithium Ore</DisplayName>
+            <Icon>Icons\GenericOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Li</IconSymbol>
+			
+            <MinimalPricePerUnit>700</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedBauxite</SubtypeId>
+            </Id>
+            <DisplayName>Purified Bauxite</DisplayName>
+            <Icon>Icons\BauxiteOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Al</IconSymbol>
+			
+            <MinimalPricePerUnit>500</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedTitanium</SubtypeId>
+            </Id>
+            <DisplayName>Purified Titanium Ore</DisplayName>
+            <Icon>Icons\GenericOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Ti</IconSymbol>
+			
+            <MinimalPricePerUnit>600</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedTantalum</SubtypeId>
+            </Id>
+            <DisplayName>Purified Tantalum Ore</DisplayName>
+            <Icon>Icons\GenericOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Ta</IconSymbol>
+			
+            <MinimalPricePerUnit>1200</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedNiter</SubtypeId>
+            </Id>
+            <DisplayName>Purified Niter</DisplayName>
+            <Icon>Icons\NiterOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Niter</IconSymbol>
+			
+            <MinimalPricePerUnit>400</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedIron</SubtypeId>
+            </Id>
+            <DisplayName>Purified Iron Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Fe_iron.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Fe</IconSymbol>
+			
+            <MinimalPricePerUnit>200</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedNickel</SubtypeId>
+            </Id>
+            <DisplayName>Purified Nickel Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Ni_nickel.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Ni</IconSymbol>
+			
+            <MinimalPricePerUnit>200</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedCobalt</SubtypeId>
+            </Id>
+            <DisplayName>Purified Cobalt Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Co_cobalt.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Co</IconSymbol>
+			
+            <MinimalPricePerUnit>600</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedSilicon</SubtypeId>
+            </Id>
+            <DisplayName>Purified Silicon Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Si_silicon.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Si</IconSymbol>
+			
+            <MinimalPricePerUnit>200</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedSilver</SubtypeId>
+            </Id>
+            <DisplayName>Purified Silver Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Ag_silver.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Ag</IconSymbol>
+			
+            <MinimalPricePerUnit>400</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedGold</SubtypeId>
+            </Id>
+            <DisplayName>Purified Gold Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Au_gold.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Au</IconSymbol>
+			
+            <MinimalPricePerUnit>400</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedPlatinum</SubtypeId>
+            </Id>
+            <DisplayName>Purified Platinum Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Pt_platinum.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Pt</IconSymbol>
+			
+            <MinimalPricePerUnit>800</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>PurifiedUranium</SubtypeId>
+            </Id>
+            <DisplayName>Purified Uranium Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_UO2_uranite.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_U</IconSymbol>
+			
+            <MinimalPricePerUnit>1000</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+    </PhysicalItems>
+</Definitions>

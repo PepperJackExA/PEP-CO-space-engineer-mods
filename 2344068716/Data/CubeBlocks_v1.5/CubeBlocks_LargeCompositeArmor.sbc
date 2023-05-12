@@ -1,0 +1,990 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <CubeBlocks>
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorCube</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Block</DisplayName>
+      <Icon>Icons\CompositeArmorCube.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorCube.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="25" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavySquarePlateConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavySquarePlateConstruction_2.mwm" RandomOrientation="true" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavySquarePlateConstruction_3.mwm" RandomOrientation="true" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorCube</BlockPairName>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorSlope</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Slope</DisplayName>
+      <Icon>Icons\CompositeArmorSlope.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorSlope.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="13" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.5" EndY="1" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0.5" StartY="0" EndX="1" EndY="0.5" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.5" EndY="0.5" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.5" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavySlopePlateConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavySlopePlateConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavySlopePlateConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorSlope</BlockPairName>
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorCorner</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Corner</DisplayName>
+      <Icon>Icons\CompositeArmorCorner.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorCorner.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="4" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Front" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.2" EndY="1" />
+        <MountPoint Side="Front" ExclusionMask="1" PropertiesMask="2" StartX="0.2" StartY="0" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Front" ExclusionMask="1" PropertiesMask="2" StartX="0.8" StartY="0" EndX="1" EndY="0.2" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.2" EndY="0.2" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.2" StartY="0" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.8" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.2" EndY="0.2" />
+        <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0.2" StartY="0" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0.8" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavyFacePlateConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavyFacePlateConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavyFacePlateConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorCorner</BlockPairName>
+	<MirroringX>MinusHalfY</MirroringX>
+	<MirroringY>MinusHalfZ</MirroringY>
+	<MirroringZ>HalfY</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorInvCorner</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Inv. Corner</DisplayName>
+      <Icon>Icons\CompositeArmorInvCorner.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorInvCorner.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="21" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="0.2" EndY="1" />
+        <MountPoint Side="Right" StartX="0.2" StartY="0.2" EndX="0.8" EndY="1" />
+        <MountPoint Side="Right" StartX="0.8" StartY="0.8" EndX="1" EndY="1" />
+        <MountPoint Side="Front" StartX="0" StartY="0.8" EndX="0.2" EndY="1" />
+        <MountPoint Side="Front" StartX="0.2" StartY="0.2" EndX="0.8" EndY="1" />
+        <MountPoint Side="Front" StartX="0.8" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="0.2" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0.2" StartY="0.2" EndX="0.8" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0.8" StartY="0.8" EndX="1" EndY="1" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavyInvFacePlateConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavyInvFacePlateConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavyInvFacePlateConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorInvCorner</BlockPairName>
+	<MirroringX>MinusHalfY</MirroringX>
+	<MirroringY>MinusHalfZ</MirroringY>
+	<MirroringZ>HalfY</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorCornerSquare</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Corner Square</DisplayName>
+      <Icon>Icons\CompositeArmorCornerSquare.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorCornerSquare.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="7" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Left" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="1.0" Side="Left" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="0.5" Side="Front" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Front" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.0" EndY="0.0" Side="Bottom" StartX="1.0" StartY="1.0"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\CornerSquareConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\CornerSquareConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\CornerSquareConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorCornerSquare</BlockPairName>
+	<MirroringX>HalfY</MirroringX>
+	<MirroringY>XHalfY</MirroringY>
+	<MirroringZ>MinusHalfY</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorCornerSquareInv</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Corner Square Inv.</DisplayName>
+      <Icon>Icons\CompositeArmorCornerSquareInv.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorCornerSquareInv.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="19" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="0.5" EndY="1.0" Side="Back" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Back" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="0.5" Side="Right" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Right" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Left" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Front" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.0" EndY="0.0" Side="Bottom" StartX="1.0" StartY="1.0"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\CornerSquareInvertedConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\CornerSquareInvertedConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\CornerSquareInvertedConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorCornerSquareInv</BlockPairName>
+	<MirroringX>HalfY</MirroringX>
+	<MirroringY>XHalfY</MirroringY>
+	<MirroringZ>MinusHalfY</MirroringZ>
+    </Definition>
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorSlope2x1x1Base</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Slope 2x1x1 Base</DisplayName>
+      <Icon>Icons\CompositeArmorSlope2x1x1Base.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorSlope2x1x1Base.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="19" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="0.5" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="0.5" EndY="1" />
+        <MountPoint Side="Left" StartX="0.5" StartY="0" EndX="1" EndY="0.5" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="0.5" EndY="0.5" />
+        <MountPoint Side="Right" StartX="0.5" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavySlope2BaseConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavySlope2BaseConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavySlope2BaseConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorSlope2x1x1Base</BlockPairName>
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorSlope2x1x1Tip</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Slope 2x1x1 Tip</DisplayName>
+      <Icon>Icons\CompositeArmorSlope2x1x1Tip.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorSlope2x1x1Tip.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="6" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="0.5" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.2" EndY="0.5" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0.2" StartY="0" EndX="0.8" EndY="0.4" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0.8" StartY="0" EndX="1" EndY="0.1" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.2" EndY="0.1" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.2" StartY="0" EndX="0.8" EndY="0.4" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.8" StartY="0" EndX="1" EndY="0.5" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavySlope2TipConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavySlope2TipConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavySlope2TipConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorSlope2x1x1Tip</BlockPairName>
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeHalfCompositeArmor</SubtypeId>
+      </Id>
+      <DisplayName>Half Composite Armor Block</DisplayName>
+      <Icon>Icons\HalfCompositeArmor.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeHalfCompositeArmor.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="12" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="0.5" />
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="0.5" EndY="1" />
+        <MountPoint Side="Right" StartX="0.5" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Top" StartX="0" StartY="0.5" EndX="1" EndY="1" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavySquarePlateSlabConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavySquarePlateSlabConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavySquarePlateSlabConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>HalfCompositeArmor</BlockPairName>
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeHalfSlopeCompositeArmor</SubtypeId>
+      </Id>
+      <DisplayName>Half Slope Composite Armor</DisplayName>
+      <Icon>Icons\HalfSlopeCompositeArmor.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeHalfSlopeCompositeArmor.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="4" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="0.5" />
+        <MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="0.5" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.16" EndY="0.5" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0.16" StartY="0" EndX="0.33" EndY="0.33" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0.33" StartY="0" EndX="0.5" EndY="0.16" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.5" StartY="0" EndX="0.66" EndY="0.16" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.66" StartY="0" EndX="0.84" EndY="0.33" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.84" StartY="0" EndX="1.0" EndY="0.5" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavySquarePlateSlopeConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavySquarePlateSlopeConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavySquarePlateSlopeConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>HalfSlopeCompositeArmor</BlockPairName>
+	<MirroringX>None</MirroringX>
+	<MirroringY>Z</MirroringY>
+	<MirroringZ>Y</MirroringZ>
+    </Definition>
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeHalfSlopeCornerCompositeArmor</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Half Slope Corner</DisplayName>
+      <Icon>Icons\HalfSlopeCornerCompositeArmor.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeHalfSlopeCornerCompositeArmor.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="2" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="0.45" EndY="0.45" Side="Right" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.45" Side="Back" StartX="0.55" StartY="0.0"/>
+                <MountPoint EndX="0.55" EndY="0.55" Side="Bottom" StartX="1.0" StartY="1.0"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HalfSlopeCornerConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HalfSlopeCornerConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\HalfSlopeCornerConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>HalfSlopeCornerCompositeArmor</BlockPairName>
+	<MirroringX>HalfY</MirroringX>
+	<MirroringY>XHalfY</MirroringY>
+	<MirroringZ>MinusHalfY</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorHalfCorner</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Half Corner</DisplayName>
+      <Icon>Icons\CompositeArmorHalfCorner.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorHalfCorner.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="6" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="0.5" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Bottom" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Left" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Front" StartX="0.0" StartY="0.0"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HalfCornerConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HalfCornerConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\HalfCornerConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorHalfCorner</BlockPairName>
+	<MirroringX>HalfY</MirroringX>
+	<MirroringY>XHalfY</MirroringY>
+	<MirroringZ>MinusHalfY</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorHalfSlopedCorner</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Half Sloped Corner</DisplayName>
+      <Icon>Icons\CompositeArmorHalfSlopedCorner.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorHalfSlopedCorner.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="11" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="0.5" EndY="1.0" Side="Left" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Left" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="0.5" Side="Front" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Front" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Bottom" StartX="0.5" StartY="0.0"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HalfSlopedCornerConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HalfSlopedCornerConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\HalfSlopedCornerConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorHalfSlopedCorner</BlockPairName>
+	<MirroringX>HalfY</MirroringX>
+	<MirroringY>XHalfY</MirroringY>
+	<MirroringZ>MinusHalfY</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorCorner2x1x1Base</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Corner 2x1x1 Base</DisplayName>
+      <Icon>Icons\CompositeArmorCorner2x1x1Base.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorCorner2x1x1Base.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.8" StartY="0" EndX="1" EndY="0.2" />
+        <MountPoint Side="Front" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.2" EndY="0.2" />
+        <MountPoint Side="Front" ExclusionMask="1" PropertiesMask="2" StartX="0.2" StartY="0" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Front" ExclusionMask="1" PropertiesMask="2" StartX="0.8" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.2" EndY="1" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0.2" StartY="0" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Left" ExclusionMask="1" PropertiesMask="2" StartX="0.8" StartY="0" EndX="1" EndY="0.2" />
+        <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.2" EndY="1" />
+        <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0.2" StartY="0" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0.8" StartY="0" EndX="1" EndY="0.2" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavyCorner2BaseConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavyCorner2BaseConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavyCorner2BaseConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorCorner2x1x1Base</BlockPairName>
+	<MirroringX>YHalfX</MirroringX>
+	<MirroringY>MinusHalfX</MirroringY>
+	<MirroringZ>HalfX</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorCorner2x1x1Tip</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Corner 2x1x1 Tip</DisplayName>
+      <Icon>Icons\CompositeArmorCorner2x1x1Tip.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorCorner2x1x1Tip.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="3" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0.9" StartY="0.8" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0.6" StartY="0.2" EndX="1" EndY="0.8" />
+        <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0.5" StartY="0" EndX="1" EndY="0.2" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.2" EndY="0.1" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.2" StartY="0" EndX="0.8" EndY="0.4" />
+        <MountPoint Side="Right" ExclusionMask="1" PropertiesMask="2" StartX="0.8" StartY="0" EndX="1" EndY="0.5" />
+        <MountPoint Side="Front" ExclusionMask="1" PropertiesMask="2" StartX="0" StartY="0" EndX="0.5" EndY="0.5" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavyCorner2TipConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavyCorner2TipConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavyCorner2TipConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorCorner2x1x1Tip</BlockPairName>
+	<MirroringX>HalfZ</MirroringX>
+	<MirroringY>MinusHalfZ</MirroringY>
+	<MirroringZ>YHalfZ</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorInvCorner2x1x1Base</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Inv. Corner 2x1x1 Base</DisplayName>
+      <Icon>Icons\CompositeArmorInvCorner2x1x1Base.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorInvCorner2x1x1Base.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="22" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="0.5" EndY="1" />
+        <MountPoint Side="Right" StartX="0.5" StartY="0.5" EndX="0.8" EndY="1" />
+        <MountPoint Side="Right" StartX="0.8" StartY="0.8" EndX="1" EndY="1" />
+        <MountPoint Side="Front" StartX="0" StartY="0.8" EndX="0.2" EndY="1" />
+        <MountPoint Side="Front" StartX="0.2" StartY="0.5" EndX="0.8" EndY="1" />
+        <MountPoint Side="Front" StartX="0.8" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="0.5" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0.5" StartY="0.5" EndX="0.8" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0.8" StartY="0.8" EndX="1" EndY="1" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavyInvCorner2BaseConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavyInvCorner2BaseConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavyInvCorner2BaseConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorInvCorner2x1x1Base</BlockPairName>
+	<MirroringX>HalfZ</MirroringX>
+	<MirroringY>MinusHalfZ</MirroringY>
+	<MirroringZ>YHalfZ</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorInvCorner2x1x1Tip</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Inv. Corner 2x1x1 Tip</DisplayName>
+      <Icon>Icons\CompositeArmorInvCorner2x1x1Tip.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorInvCorner2x1x1Tip.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="16" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="0.2" EndY="1" />
+        <MountPoint Side="Back" StartX="0.2" StartY="0.2" EndX="0.8" EndY="1" />
+        <MountPoint Side="Back" StartX="0.8" StartY="0.5" EndX="1" EndY="1" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Right" StartX="0" StartY="0.5" EndX="0.8" EndY="1" />
+        <MountPoint Side="Right" StartX="0.8" StartY="0.8" EndX="1" EndY="1" />
+        <MountPoint Side="Front" StartX="0" StartY="0.8" EndX="0.2" EndY="1" />
+        <MountPoint Side="Front" StartX="0.2" StartY="0.2" EndX="0.8" EndY="1" />
+        <MountPoint Side="Front" StartX="0.8" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="0.2" EndY="1" />
+        <MountPoint Side="Bottom" StartX="0.2" StartY="0.5" EndX="0.5" EndY="1" />
+      </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HeavyInvCorner2TipConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HeavyInvCorner2TipConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Armor\HeavyInvCorner2TipConstruction_3.mwm" />
+      </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorInvCorner2x1x1Tip</BlockPairName>
+	<MirroringX>HalfZ</MirroringX>
+	<MirroringY>MinusHalfZ</MirroringY>
+	<MirroringZ>YHalfZ</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeHalfSlopeCornerInvCompositeArmor</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Half Slope Corner Inv.</DisplayName>
+      <Icon>Icons\HalfSlopeCornerInvCompositeArmor.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeHalfSlopeCornerInvCompositeArmor.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="23" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="0.5" EndY="1.0" Side="Front" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Front" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.6" EndY="0.6" Side="Front" StartX="0.5" StartY="0.5"/>
+                <MountPoint EndX="0.5" EndY="0.5" Side="Top" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Top" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="0.6" Side="Top" StartX="0.4" StartY="0.5"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Right" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Back" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.0" EndY="0.0" Side="Bottom" StartX="1.0" StartY="1.0"/>
+                <MountPoint EndX="0.5" EndY="0.5" Side="Left" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Left" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="0.6" Side="Left" StartX="0.4" StartY="0.5"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HalfSlopeCornerInvertedConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HalfSlopeCornerInvertedConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\HalfSlopeCornerInvertedConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>HalfSlopeCornerInvCompositeArmor</BlockPairName>
+	<MirroringX>HalfY</MirroringX>
+	<MirroringY>XHalfY</MirroringY>
+	<MirroringZ>MinusHalfY</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeHalfSlopeInvCompositeArmor</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Half Slope Inv.</DisplayName>
+      <Icon>Icons\HalfSlopeInvCompositeArmor.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeHalfSlopeInvCompositeArmor.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="22" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Right" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="1.0" Side="Top" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Left" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="0.5" Side="Front" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Front" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="0.6" Side="Front" StartX="0.4" StartY="0.5"/>
+                <MountPoint EndX="0.5" EndY="1.0" Side="Back" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Back" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.6" EndY="0.5" Side="Back" StartX="0.5" StartY="0.6"/>
+                <MountPoint EndX="0.0" EndY="0.0" Side="Bottom" StartX="1.0" StartY="1.0"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HalfSlopeInvertedConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HalfSlopeInvertedConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\HalfSlopeInvertedConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>HalfSlopeInvCompositeArmor</BlockPairName>
+	<MirroringX>Y</MirroringX>
+	<MirroringY>HalfZ</MirroringY>
+	<MirroringZ>None</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeSlopedCornerCompositeArmorTip</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Sloped Corner Tip</DisplayName>
+      <Icon>Icons\SlopedCornerCompositeArmorTip.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeSlopedCornerCompositeArmorTip.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="5" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="0.5" EndY="0.5" Side="Bottom" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.5"/>
+                <MountPoint EndX="0.2" EndY="0.5" Side="Back" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.2" EndY="0.4" Side="Back" StartX="0.8" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.1" Side="Back" StartX="0.8" StartY="0.0"/>
+                <MountPoint EndX="0.2" EndY="0.1" Side="Left" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.8" EndY="0.4" Side="Left" StartX="0.2" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Left" StartX="0.8" StartY="0.0"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\SlopedCornerTipConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\SlopedCornerTipConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\SlopedCornerTipConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>SlopedCornerCompositeArmorTip</BlockPairName>
+	<MirroringX>MinusHalfY</MirroringX>
+	<MirroringY>ZHalfY</MirroringY>
+	<MirroringZ>HalfY</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorSlopedCornerBase</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Sloped Corner Base</DisplayName>
+      <Icon>Icons\CompositeArmorSlopedCornerBase.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorSlopedCornerBase.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="0.0" EndY="0.0" Side="Bottom" StartX="1.0" StartY="1.0"/>
+                <MountPoint EndX="0.5" EndY="0.5" Side="Back" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Back" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Right" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Front" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="1.0" Side="Left" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Left" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="0.5" Side="Top" StartX="0.0" StartY="1.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Top" StartX="0.5" StartY="0.0"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\SlopedCornerBaseConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\SlopedCornerBaseConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\SlopedCornerBaseConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorSlopedCornerBase</BlockPairName>
+	<MirroringX>MinusHalfY</MirroringX>
+	<MirroringY>ZHalfY</MirroringY>
+	<MirroringZ>HalfY</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorSlopedCorner</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Sloped Corner</DisplayName>
+      <Icon>Icons\CompositeArmorSlopedCorner.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorSlopedCorner.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="13" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Bottom" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.2" EndY="0.5" Side="Back" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.8" EndY="0.4" Side="Back" StartX="0.2" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.1" Side="Back" StartX="0.8" StartY="0.0"/>
+                <MountPoint EndX="0.2" EndY="0.1" Side="Right" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.8" EndY="0.4" Side="Right" StartX="0.2" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Right" StartX="0.8" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="0.5" Side="Front" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="1.0" Side="Front" StartX="0.5" StartY="0.0"/>
+                <MountPoint EndX="0.5" EndY="1.0" Side="Left" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Left" StartX="0.5" StartY="0.0"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\SlopedCornerConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\SlopedCornerConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\SlopedCornerConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorSlopedCorner</BlockPairName>
+	<MirroringX>HalfY</MirroringX>
+	<MirroringY>XHalfY</MirroringY>
+	<MirroringZ>MinusHalfY</MirroringZ>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>LargeCompositeArmorHalfSlopedCornerBase</SubtypeId>
+      </Id>
+      <DisplayName>Composite Armor Half Sloped Corner Base</DisplayName>
+      <Icon>Icons\CompositeArmorHalfSlopedCornerBase.dds</Icon>
+      <Description>Lighter and more durable than Heavy Armor</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\CompositeArmor\LargeCompositeArmorHalfSlopedCornerBase.mwm</Model>
+      <Components>
+        <Component Subtype="CompositeArmor" Count="11" />
+      </Components>
+      <CriticalComponent Subtype="CompositeArmor" Index="0" />
+            <MountPoints>
+                <MountPoint EndX="0.0" EndY="0.0" Side="Bottom" StartX="1.0" StartY="1.0"/>
+                <MountPoint EndX="0.2" EndY="0.5" Side="Back" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.8" EndY="0.4" Side="Back" StartX="0.2" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.1" Side="Back" StartX="0.8" StartY="0.0"/>
+                <MountPoint EndX="0.2" EndY="0.1" Side="Right" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="0.8" EndY="0.4" Side="Right" StartX="0.2" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Right" StartX="0.8" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Front" StartX="0.0" StartY="0.0"/>
+                <MountPoint EndX="1.0" EndY="0.5" Side="Left" StartX="0.0" StartY="0.0"/>
+            </MountPoints>
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Armor\HalfSlopedCornerBaseConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Armor\HalfSlopedCornerBaseConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.0" File="Models\Cubes\Large\Armor\HalfSlopedCornerBaseConstruction_3.mwm"/>
+            </BuildProgressModels>
+      <DisassembleRatio>3</DisassembleRatio>
+      <PCU>1</PCU>
+      <IsAirTight>true</IsAirTight>
+	  <BlockPairName>CompositeArmorHalfSlopedCornerBase</BlockPairName>
+	<MirroringX>HalfY</MirroringX>
+	<MirroringY>XHalfY</MirroringY>
+	<MirroringZ>MinusHalfY</MirroringZ>
+    </Definition>
+   </CubeBlocks>
+</Definitions>

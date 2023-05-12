@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+  <!-- Deuterium Extractor -->
+
+    <Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+      <Id>
+        <TypeId>OxygenGenerator</TypeId>
+        <SubtypeId>DeuteriumExtractor</SubtypeId>
+      </Id>
+      <DisplayName>Deuterium Extractor</DisplayName>
+      <Icon>Icons\DeuteriumExtractor.dds</Icon>
+	  <Description>Extracts trace Deuterium from common water ice.
+	  Max Output: 5L/s</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="2" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\DeuteriumExtractor.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="80" />
+        <Component Subtype="Construction" Count="5" />
+        <Component Subtype="CopperWire" Count="20" />
+        <Component Subtype="SmallTube" Count="20" />
+        <Component Subtype="LargeTube" Count="50" />
+        <Component Subtype="Motor" Count="10" />
+        <Component Subtype="HeatingElement" Count="35" />
+        <Component Subtype="Computer" Count="15" />
+        <Component Subtype="SteelPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="2" EndY="3" Default="true" />
+        <MountPoint Side="Top" StartX="1" StartY="1" EndX="2" EndY="2" />
+        <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Construct\DeuteriumExtractorConstruct1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Construct\DeuteriumExtractorConstruct2.mwm" />
+        <Model BuildPercentUpperBound="1.0" File="Models\Construct\DeuteriumExtractorConstruct3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>DeuteriumExtractor</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <IceConsumptionPerSecond>100</IceConsumptionPerSecond>
+      <InventoryMaxVolume>4</InventoryMaxVolume>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+      <OperationalPowerConsumption>10</OperationalPowerConsumption>
+      <ProducedGases>
+        <GasInfo>
+          <Id>
+            <TypeId>GasProperties</TypeId>
+            <SubtypeId>Deuterium</SubtypeId>
+          </Id>
+          <IceToGasRatio>0.05</IceToGasRatio>
+        </GasInfo>
+      </ProducedGases>
+      <BlueprintClasses>
+        <Class>Deuterium</Class>
+      </BlueprintClasses>
+      <DamageEffectId>214</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <GenerateSound>BlockOxyGenProcess</GenerateSound>
+      <IdleSound>BlockOxyGenIdle</IdleSound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Missile</DestroyEffect>
+      <DestroySound>WepSmallMissileExpl</DestroySound>
+            <TieredUpdateTimes>
+                <unsignedInt>30</unsignedInt>
+                <unsignedInt>60</unsignedInt>
+                <unsignedInt>120</unsignedInt>
+            </TieredUpdateTimes>
+    </Definition>
+	
+  <!-- Ramscoop -->
+
+    <Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+      <Id>
+        <TypeId>OxygenGenerator</TypeId>
+        <SubtypeId>DeuteriumRamscoop</SubtypeId>
+      </Id>
+      <DisplayName>Deuterium Ramscoop</DisplayName>
+      <Icon>Icons\DeuteriumRamscoop.dds</Icon>
+	  <Description>Uses shaped magnetic and gravitational fields to collect, separate, and compress small amounts of Deuterium from the interstellar medium.
+	  Collection rate increases with forward velocity. Collection funnel must be open to space. Natural gravity will interfere with scoop fields.
+	  Max Output at 100m/s: 2.25L/s</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="15" y="15" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\LargeDeuteriumRamscoop.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="150" />
+        <Component Subtype="Construction" Count="75" />
+        <Component Subtype="LargeTube" Count="25" />
+        <Component Subtype="Girder" Count="50" />
+        <Component Subtype="Motor" Count="25" />
+        <Component Subtype="CopperWire" Count="40" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="GoldWire" Count="50" />
+        <Component Subtype="SuperMagnet" Count="25" />
+        <Component Subtype="Cryocooler" Count="15" />
+        <Component Subtype="AdvancedComputer" Count="10" />
+        <Component Subtype="GravityGenerator" Count="30" />
+        <Component Subtype="QuantumComputer" Count="40" />
+        <Component Subtype="SteelPlate" Count="50" />
+      </Components>
+      <CriticalComponent Subtype="QuantumComputer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="7" StartY="7" EndX="8" EndY="8" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Construct\LargeDeuteriumRamscoopConstruct1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Construct\LargeDeuteriumRamscoopConstruct2.mwm" />
+        <Model BuildPercentUpperBound="1.0" File="Models\Construct\LargeDeuteriumRamscoopConstruct3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>DeuteriumRamscoop</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <IceConsumptionPerSecond>1000</IceConsumptionPerSecond>
+      <InventoryMaxVolume>100</InventoryMaxVolume>
+      <InventorySize>
+        <X>10</X>
+        <Y>10</Y>
+        <Z>10</Z>
+      </InventorySize>
+      <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+      <OperationalPowerConsumption>25</OperationalPowerConsumption>
+      <ProducedGases>
+        <GasInfo>
+          <Id>
+            <TypeId>GasProperties</TypeId>
+            <SubtypeId>Deuterium</SubtypeId>
+          </Id>
+          <IceToGasRatio>0.1</IceToGasRatio>
+        </GasInfo>
+      </ProducedGases>
+      <BlueprintClasses>
+        <Class>Deuterium</Class>
+      </BlueprintClasses>
+      <DamageEffectId>214</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <GenerateSound>BlockOxyGenProcess</GenerateSound>
+      <IdleSound>BlockOxyGenIdle</IdleSound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Missile</DestroyEffect>
+      <DestroySound>WepSmallMissileExpl</DestroySound>
+            <TieredUpdateTimes>
+                <unsignedInt>30</unsignedInt>
+                <unsignedInt>60</unsignedInt>
+                <unsignedInt>120</unsignedInt>
+            </TieredUpdateTimes>
+    </Definition>
+
+  <!-- Reactor -->
+
+    <Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+      <Id>
+        <TypeId>HydrogenEngine</TypeId>
+        <SubtypeId>FusionReactor</SubtypeId>
+      </Id>
+      <DisplayName>Fusion Reactor</DisplayName>
+      <Icon>Icons\LargeFusionReactor.dds</Icon>
+	  <Description>Laser-initiated, magnetic confinement fusion reactor.
+	  Consumes Deuterium fuel.
+	  Max Output: 1GW
+	  Max Deuterium Consumption: 20L/s</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="3" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Tokamak.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="50" />
+        <Component Subtype="Construction" Count="100" />
+        <Component Subtype="MetalGrid" Count="50" />
+        <Component Subtype="LargeTube" Count="50" />
+        <Component Subtype="Cryocooler" Count="100" />
+        <Component Subtype="Thermocouple" Count="150" />
+        <Component Subtype="Superconductor" Count="600" />
+        <Component Subtype="SuperMagnet" Count="250" />
+        <Component Subtype="TokamakBlanket" Count="300" />
+        <Component Subtype="Motor" Count="50" />
+        <Component Subtype="GoldWire" Count="50" />
+        <Component Subtype="Detector" Count="25" />
+        <Component Subtype="AdvancedComputer" Count="75" />
+        <Component Subtype="Computer" Count="25" />
+        <Component Subtype="SteelPlate" Count="100" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Left" StartX="1.5" StartY="1" EndX="3.5" EndY="2" />
+        <MountPoint Side="Right" StartX="1.5" StartY="1" EndX="3.5" EndY="2" />
+        <MountPoint Side="Front" StartX="1.5" StartY="1" EndX="3.5" EndY="2" />
+        <MountPoint Side="Back" StartX="1.5" StartY="1" EndX="3.5" EndY="2" />
+        <MountPoint Side="Top" StartX="2" StartY="2" EndX="3" EndY="3" />
+        <MountPoint Side="Bottom" StartX="2" StartY="2" EndX="3" EndY="3" Default="true" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.15" File="Models\Construct\TokamakConstruct0.mwm" />
+        <Model BuildPercentUpperBound="0.30" File="Models\Construct\TokamakConstruct1.mwm" />
+        <Model BuildPercentUpperBound="0.50" File="Models\Construct\TokamakConstruct2.mwm" />
+        <Model BuildPercentUpperBound="0.70" File="Models\Construct\TokamakConstruct3.mwm" />
+        <Model BuildPercentUpperBound="0.85" File="Models\Construct\TokamakConstruct4.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\TokamakConstruct5.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>FusionReactor</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>180</BuildTimeSeconds>
+      <ResourceSinkGroup>Generators</ResourceSinkGroup>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <MaxPowerOutput>1000</MaxPowerOutput>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <FuelInfos>
+        <FuelInfo>
+          <Id>
+            <TypeId>GasProperties</TypeId>
+            <SubtypeId>Deuterium</SubtypeId>
+          </Id>
+        </FuelInfo>
+      </FuelInfos>
+      <FuelProductionToCapacityMultiplier>50</FuelProductionToCapacityMultiplier>
+      <PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+      <DamageEffectId>214</DamageEffectId>
+      <DamagedSound>ParticleReactor</DamagedSound>
+      <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+      <DestroySound>WepLrgWarheadExpl</DestroySound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+    </Definition>
+
+  <!-- Tanks -->
+	
+    <Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+      <Id>
+        <TypeId>OxygenTank</TypeId>
+        <SubtypeId>LargeDeuteriumTank</SubtypeId>
+      </Id>
+      <DisplayName>Deuterium Tank</DisplayName>
+      <Icon>Icons\LargeDeuteriumTank.dds</Icon>
+	  <Description>Stores cryogenic Deuterium. 500,000L capacity.
+	  Caution: Cryogenically compressed gases are highly volatile.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\LargeDeuteriumTank.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="160" />
+        <Component Subtype="LargeTube" Count="80" />
+        <Component Subtype="SmallTube" Count="60" />
+        <Component Subtype="Construction" Count="40" />
+        <Component Subtype="Motor" Count="20" />
+        <Component Subtype="Cryocooler" Count="50" />
+        <Component Subtype="CopperWire" Count="75" />
+        <Component Subtype="AdvancedComputer" Count="50" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="SteelPlate" Count="120" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Top" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="5" EndY="5" />
+        <MountPoint Side="Right" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+        <MountPoint Side="Left" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+        <MountPoint Side="Front" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+        <MountPoint Side="Back" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Construct\LargeRocketFuelTankConstruct1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Construct\LargeRocketFuelTankConstruct2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\LargeRocketFuelTankConstruct3.mwm" />
+      </BuildProgressModels>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+      <StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+      <Capacity>500000</Capacity>
+      <InventoryMaxVolume>0.75</InventoryMaxVolume>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StoredGasId>
+        <TypeId>GasProperties</TypeId>
+        <SubtypeId>Deuterium</SubtypeId>
+      </StoredGasId>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+      <DestroySound>WepLrgWarheadExpl</DestroySound>
+      <PCU>25</PCU>     
+            <LeakPercent>0.05</LeakPercent>
+            <GasExplosionMaxRadius>30</GasExplosionMaxRadius>
+            <GasExplosionNeededVolumeToReachMaxRadius>500000</GasExplosionNeededVolumeToReachMaxRadius>
+            <GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+            <GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+            <GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect> 
+    </Definition>
+	
+    <Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+      <Id>
+        <TypeId>OxygenTank</TypeId>
+        <SubtypeId>LargeDeuteriumTankNoLegs</SubtypeId>
+      </Id>
+      <DisplayName>Deuterium Tank - Sphere</DisplayName>
+      <Icon>Icons\LargeDeuteriumTankNoLegs.dds</Icon>
+	  <Description>Stores cryogenic Deuterium. 500,000L capacity.
+	  Caution: Cryogenically compressed gases are highly volatile.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\LargeDeuteriumTankNoLegs.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="160" />
+        <Component Subtype="LargeTube" Count="80" />
+        <Component Subtype="SmallTube" Count="60" />
+        <Component Subtype="Construction" Count="40" />
+        <Component Subtype="Motor" Count="20" />
+        <Component Subtype="Cryocooler" Count="50" />
+        <Component Subtype="CopperWire" Count="75" />
+        <Component Subtype="AdvancedComputer" Count="50" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="SteelPlate" Count="120" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Top" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+        <MountPoint Side="Bottom" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+        <MountPoint Side="Right" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+        <MountPoint Side="Left" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+        <MountPoint Side="Front" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+        <MountPoint Side="Back" StartX="2.0" StartY="2.0" EndX="3.0" EndY="3.0" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Construct\LargeRocketFuelTankNoLegsConstruct1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Construct\LargeRocketFuelTankNoLegsConstruct2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\LargeRocketFuelTankNoLegsConstruct3.mwm" />
+      </BuildProgressModels>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+      <StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+      <Capacity>500000</Capacity>
+      <InventoryMaxVolume>0.75</InventoryMaxVolume>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StoredGasId>
+        <TypeId>GasProperties</TypeId>
+        <SubtypeId>Deuterium</SubtypeId>
+      </StoredGasId>
+      <BuildTimeSeconds>15</BuildTimeSeconds>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+      <DestroySound>WepLrgWarheadExpl</DestroySound>
+      <PCU>25</PCU>    
+            <LeakPercent>0.05</LeakPercent>
+            <GasExplosionMaxRadius>30</GasExplosionMaxRadius>
+            <GasExplosionNeededVolumeToReachMaxRadius>500000</GasExplosionNeededVolumeToReachMaxRadius>
+            <GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+            <GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+            <GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>   
+    </Definition>
+	
+    <Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+      <Id>
+        <TypeId>OxygenTank</TypeId>
+        <SubtypeId>EnclosedDeuteriumTank</SubtypeId>
+      </Id>
+      <DisplayName>Enclosed Deuterium Tank</DisplayName>
+      <Icon>Icons\EnclosedDeuteriumTank.dds</Icon>
+	  <Description>Stores cryogenic Deuterium. 20,000L capacity.
+	  Caution: Cryogenically compressed gases are highly volatile.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\EnclosedDeuteriumTank.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="50" />
+        <Component Subtype="LargeTube" Count="30" />
+        <Component Subtype="SmallTube" Count="50" />
+        <Component Subtype="Construction" Count="40" />
+        <Component Subtype="Motor" Count="10" />
+        <Component Subtype="Cryocooler" Count="20" />
+        <Component Subtype="CopperWire" Count="35" />
+        <Component Subtype="AdvancedComputer" Count="20" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="SteelPlate" Count="25" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Construct\EnclosedDeuteriumTankConstruct1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Construct\EnclosedDeuteriumTankConstruct2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\EnclosedDeuteriumTankConstruct3.mwm" />
+      </BuildProgressModels>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+      <StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+      <Capacity>20000</Capacity>
+      <InventoryMaxVolume>0.75</InventoryMaxVolume>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StoredGasId>
+        <TypeId>GasProperties</TypeId>
+        <SubtypeId>Deuterium</SubtypeId>
+      </StoredGasId>
+      <BuildTimeSeconds>10</BuildTimeSeconds>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+      <DestroySound>WepLrgWarheadExpl</DestroySound>
+      <PCU>25</PCU>      
+            <LeakPercent>0.05</LeakPercent>
+            <GasExplosionMaxRadius>13</GasExplosionMaxRadius>
+            <GasExplosionNeededVolumeToReachMaxRadius>20000</GasExplosionNeededVolumeToReachMaxRadius>
+            <GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+            <GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+            <GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect> 
+    </Definition>
+	
+    <Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+      <Id>
+        <TypeId>OxygenTank</TypeId>
+        <SubtypeId>DeuteriumTankSmallFrame</SubtypeId>
+      </Id>
+      <DisplayName>Small Deuterium Tank - w/ Frame</DisplayName>
+      <Icon>Icons\DeuteriumTankSmallFrame.dds</Icon>
+	  <Description>Stores cryogenic Deuterium. 5000L capacity.
+	  Caution: Cryogenically compressed gases are highly volatile.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\LargeDeuteriumTankSmallFrame.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="10" />
+        <Component Subtype="LargeTube" Count="5" />
+        <Component Subtype="SmallTube" Count="10" />
+        <Component Subtype="Girder" Count="15" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="Motor" Count="10" />
+        <Component Subtype="Cryocooler" Count="4" />
+        <Component Subtype="CopperWire" Count="15" />
+        <Component Subtype="AdvancedComputer" Count="5" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="SteelPlate" Count="5" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Construct\LargeDeuteriumTankSmallFrameConstruct1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Construct\LargeDeuteriumTankSmallFrameConstruct2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\LargeDeuteriumTankSmallFrameConstruct3.mwm" />
+      </BuildProgressModels>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+      <StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+      <Capacity>5000</Capacity>
+      <InventoryMaxVolume>0.75</InventoryMaxVolume>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StoredGasId>
+        <TypeId>GasProperties</TypeId>
+        <SubtypeId>Deuterium</SubtypeId>
+      </StoredGasId>
+      <BuildTimeSeconds>10</BuildTimeSeconds>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+      <DestroySound>WepLrgWarheadExpl</DestroySound>
+      <PCU>25</PCU>      
+            <LeakPercent>0.05</LeakPercent>
+            <GasExplosionMaxRadius>7</GasExplosionMaxRadius>
+            <GasExplosionNeededVolumeToReachMaxRadius>5000</GasExplosionNeededVolumeToReachMaxRadius>
+            <GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+            <GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+            <GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect> 
+    </Definition>
+	
+    <Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+      <Id>
+        <TypeId>OxygenTank</TypeId>
+        <SubtypeId>DeuteriumTankSmall</SubtypeId>
+      </Id>
+      <DisplayName>Small Deuterium Tank</DisplayName>
+      <Icon>Icons\DeuteriumTankSmall.dds</Icon>
+	  <Description>Stores cryogenic Deuterium. 5000L capacity.
+	  Caution: Cryogenically compressed gases are highly volatile.</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\LargeDeuteriumTankSmall.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="10" />
+        <Component Subtype="LargeTube" Count="5" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="Motor" Count="10" />
+        <Component Subtype="Cryocooler" Count="4" />
+        <Component Subtype="CopperWire" Count="15" />
+        <Component Subtype="AdvancedComputer" Count="5" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="SteelPlate" Count="5" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Construct\LargeDeuteriumTankSmallConstruct1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Construct\LargeDeuteriumTankSmallConstruct2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\LargeDeuteriumTankSmallConstruct3.mwm" />
+      </BuildProgressModels>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+      <ResourceSinkGroup>Factory</ResourceSinkGroup>
+      <OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+      <StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+      <Capacity>5000</Capacity>
+      <InventoryMaxVolume>0.75</InventoryMaxVolume>
+      <InventorySize>
+        <X>2</X>
+        <Y>2</Y>
+        <Z>2</Z>
+      </InventorySize>
+      <StoredGasId>
+        <TypeId>GasProperties</TypeId>
+        <SubtypeId>Deuterium</SubtypeId>
+      </StoredGasId>
+      <BuildTimeSeconds>10</BuildTimeSeconds>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+      <DestroySound>WepLrgWarheadExpl</DestroySound>
+      <PCU>25</PCU>      
+            <LeakPercent>0.05</LeakPercent>
+            <GasExplosionMaxRadius>7</GasExplosionMaxRadius>
+            <GasExplosionNeededVolumeToReachMaxRadius>5000</GasExplosionNeededVolumeToReachMaxRadius>
+            <GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+            <GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+            <GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect> 
+    </Definition>
+
+  <!-- Thruster -->
+
+    <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>FusionThruster</SubtypeId>
+      </Id>
+      <DisplayName>Fusion Thruster</DisplayName>
+      <Icon>Icons\LargeFusionThruster.dds</Icon>
+	  <Description>Uses a modified tokamak to initiate a fusion reaction, and magnetically focuses the plasma output to produce thrust.
+	  Consumes Deuterium fuel.
+	  
+	  Thrust Output: 50MN
+	  Fuel Consumption: 12L/s</Description>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="10" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\FusionThruster.mwm</Model>
+      <ThrusterType>Hydrogen</ThrusterType>
+      <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+      <Components>
+        <Component Subtype="SteelPlate" Count="50" />
+        <Component Subtype="Construction" Count="100" />
+        <Component Subtype="MetalGrid" Count="50" />
+        <Component Subtype="LargeTube" Count="50" />
+        <Component Subtype="Cryocooler" Count="100" />
+        <Component Subtype="Superconductor" Count="500" />
+        <Component Subtype="SuperMagnet" Count="300" />
+        <Component Subtype="TokamakBlanket" Count="300" />
+        <Component Subtype="Motor" Count="50" />
+        <Component Subtype="GoldWire" Count="50" />
+        <Component Subtype="Detector" Count="25" />
+        <Component Subtype="AdvancedComputer" Count="75" />
+        <Component Subtype="Computer" Count="25" />
+        <Component Subtype="SteelPlate" Count="100" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Top" StartX="1.5" StartY="1" EndX="3.5" EndY="2" />
+        <MountPoint Side="Bottom" StartX="1.5" StartY="8" EndX="3.5" EndY="9" />
+        <MountPoint Side="Right" StartX="1" StartY="1.5" EndX="2" EndY="3.5" />
+        <MountPoint Side="Left" StartX="8" StartY="1.5" EndX="9" EndY="3.5" />
+        <MountPoint Side="Back" StartX="2" StartY="2" EndX="3" EndY="3" Default="true"/>
+        <MountPoint Side="Top" StartX="0" StartY="3" EndX="5" EndY="3.5" />
+        <MountPoint Side="Bottom" StartX="0" StartY="6.5" EndX="5" EndY="7" />
+        <MountPoint Side="Right" StartX="3" StartY="0" EndX="3.5" EndY="5" />
+        <MountPoint Side="Left" StartX="6.5" StartY="0" EndX="7" EndY="5" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.2" File="Models\Construct\FusionThrusterConstruct1.mwm" />
+        <Model BuildPercentUpperBound="0.4" File="Models\Construct\FusionThrusterConstruct2.mwm" />
+        <Model BuildPercentUpperBound="0.6" File="Models\Construct\FusionThrusterConstruct3.mwm" />
+        <Model BuildPercentUpperBound="0.8" File="Models\Construct\FusionThrusterConstruct4.mwm" />
+        <Model BuildPercentUpperBound="1.0" File="Models\Construct\FusionThrusterConstruct5.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>FusionThruster</BlockPairName>
+      <Center x="2" y="2" z="8" />
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>200</BuildTimeSeconds>
+      <FuelConverter>
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Deuterium</SubtypeId>
+        </FuelId>
+        <Efficiency>0.00025</Efficiency>
+      </FuelConverter>
+      <MaxPowerConsumption>15</MaxPowerConsumption>
+      <MinPowerConsumption>0.000000001</MinPowerConsumption>     
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>50000000</ForceMagnitude>
+      <SlowdownFactor>1</SlowdownFactor>
+      <FlameDamageLengthScale>3.5</FlameDamageLengthScale>
+      <FlameLengthScale>4</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0.8</Y>
+        <Z>1</Z>
+        <W>0.1</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+        <X>0</X>
+        <Y>0.8</Y>
+        <Z>1</Z>
+        <W>0.9</W>
+      </FlameFullColor>
+      <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridLargeThruster</FlameFlare>
+      <FlameVisibilityDistance>5000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>6</FlameGlareQuerySize>
+      <PrimarySound>LrgShipLrgJetHydrogen</PrimarySound>
+      <DamageEffectId>214</DamageEffectId>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+    </Definition>
+
+  </CubeBlocks>
+</Definitions>

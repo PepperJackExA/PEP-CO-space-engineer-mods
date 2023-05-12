@@ -1,0 +1,1614 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>StoneOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>IronOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_IronIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Iron" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>NickelOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_NickelIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\nickel_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Nickel" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CobaltOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_CobaltIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\cobalt_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Cobalt" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>MagnesiumOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_MagnesiumPowder</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\magnesium_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SiliconOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_SiliconWafer</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\silicon_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Silicon" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SilverOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_SilverIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\silver_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Silver" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GoldOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_GoldIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\gold_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Gold" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PlatinumOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_PlatinumIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\platinum_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Platinum" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>UraniumOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_UraniumIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Uranium" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ScrapIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_IronIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\component\ScrapMetalComponent.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Scrap" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ScrapDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_IronIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\component\ScrapMetalComponent.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Scrap" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>IceDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Oxygen</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OilSandDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="OilSand" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CopperOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Copper" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LithiumOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Lithium" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>BauxiteOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Bauxite" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>TitaniumOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Titanium" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>TantalumOreDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="Tantalum" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>StoneIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Stone" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>IronIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_IronIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Iron" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>NickelIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_NickelIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\nickel_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Nickel" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CobaltIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_CobaltIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\cobalt_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>MagnesiumIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_MagnesiumPowder</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\magnesium_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Magnesium" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SiliconIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_SiliconWafer</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\silicon_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SilverIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_SilverIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\silver_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GoldIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_GoldIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\gold_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PlatinumIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_PlatinumIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\platinum_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Platinum" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>UraniumIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_UraniumIngot</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Uranium" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CrudeOilDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ore" SubtypeId="CrudeOil" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CopperIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Copper" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LithiumIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Lithium" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>BauxiteIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Aluminum" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>TitaniumIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Titanium" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>TantalumIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Tantalum" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>NiterIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Niter" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SulfurIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Sulfur" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PolymerIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Polymer" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PlasticIngotDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Plastic" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>FuelOilDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+      <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="FuelOil" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CopperWireDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Copper Wire</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="CopperWire" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GoldWireDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Gold Wire</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="GoldWire" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>FabricDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Synthetic Fabric</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Fabric" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>RubberDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Rubber</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Rubber" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>AdvancedComputerDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Advanced Computer</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="AdvancedComputer" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>QuantumComputerDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Quantum Computer</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="QuantumComputer" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ConcreteDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Concrete</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Concrete" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>TitaniumPlateDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Titanium Plate</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="TitaniumPlate" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ArmoredPlateDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Armored Plate</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="ArmoredPlate" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ArmorGlassDisposal</SubtypeId>
+      </Id>
+      <DisplayName>ArmorGlass</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="ArmorGlass" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ElectromagnetDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Electromagnet</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Electromagnet" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LightbulbDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Lightbulb</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Lightbulb" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>AcidPowerCellDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Acid Power Cell</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="AcidPowerCell" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>AlkalinePowerCellDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Alkaline Power Cell</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="AlkalinePowerCell" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CeramicDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Ceramic</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Ceramic" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LaserEmitterDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Laser Emitter</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LaserEmitter" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+	
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>HeatingElementDisposal</SubtypeId>
+      </Id>
+      <DisplayName>Heating Element</DisplayName>
+      <Icon>Textures\GUI\Icons\Fake.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="HeatingElement" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ConstructionComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_ConstructionComponent</DisplayName>
+      <Icon>Textures\GUI\Icons\component\construction_components_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Construction" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GirderComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Girder</DisplayName>
+      <Icon>Textures\GUI\Icons\component\girder_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Girder" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>MetalGridDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_MetalGrid</DisplayName>
+      <Icon>Textures\GUI\Icons\component\metal_grid_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="MetalGrid" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>InteriorPlateDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_InteriorPlate</DisplayName>
+      <Icon>Textures\GUI\Icons\component\interior_plate_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="InteriorPlate" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SteelPlateDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_SteelPlate</DisplayName>
+      <Icon>Textures\GUI\Icons\component\steel_plate_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="SteelPlate" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SmallTubeDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_SmallSteelTube</DisplayName>
+      <Icon>Textures\GUI\Icons\component\small_tube_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="SmallTube" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>LargeTubeDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_LargeSteelTube</DisplayName>
+      <Icon>Textures\GUI\Icons\component\large_tube_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="LargeTube" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>MotorComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Motor</DisplayName>
+      <Icon>Textures\GUI\Icons\component\motor_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Motor" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>DisplayDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Display</DisplayName>
+      <Icon>Textures\GUI\Icons\component\display_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Display" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>BulletproofGlassDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_BulletproofGlass</DisplayName>
+      <Icon>Textures\GUI\Icons\component\bulletproof_glass_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="BulletproofGlass" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ComputerComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Computer</DisplayName>
+      <Icon>Textures\GUI\Icons\component\computer_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Computer" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ReactorComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_ReactorComponents</DisplayName>
+      <Icon>Textures\GUI\Icons\component\reactor_components_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Reactor" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ThrustComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_ThrustComponents</DisplayName>
+      <Icon>Textures\GUI\Icons\component\thrust_components_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Thrust" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GravityGeneratorComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_GravityGeneratorComponents</DisplayName>
+      <Icon>Textures\GUI\Icons\component\gravity_generator_components_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="GravityGenerator" />
+       </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>MedicalComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_MedicalComponents</DisplayName>
+      <Icon>Textures\GUI\Icons\component\medical_components_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Medical" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>RadioCommunicationComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_RadioCommunicationComponents</DisplayName>
+      <Icon>Textures\GUI\Icons\component\radio_communication_components_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="RadioCommunication" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>DetectorComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_DetectorComponents</DisplayName>
+      <Icon>Textures\GUI\Icons\component\detector_components_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Detector" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CanvasDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_CanvasCartridge</DisplayName>
+      <Icon>Textures\GUI\Icons\component\Cartridge_Icon.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Canvas" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>  
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ExplosivesComponentDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Explosives</DisplayName>
+      <Icon>Textures\GUI\Icons\component\ExplosivesComponent.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Explosives" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SolarCellDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_SolarCell</DisplayName>
+      <Icon>Textures\GUI\Icons\component\SolarCellComponent.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="SolarCell" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PowerCellDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_PowerCell</DisplayName>
+      <Icon>Textures\GUI\Icons\component\BatteryComponent.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="PowerCell" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>AutomaticRifleDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_AutomaticRifle</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponAutomaticRifle.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AutomaticRifleItem" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>RapidFireAutomaticRifleDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_RapidFireAutomaticRifle</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponAutomaticRifle_RapidFire.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="RapidFireAutomaticRifleItem" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PreciseAutomaticRifleDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_PreciseAutomaticRifle</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponAutomaticRifle_Precise.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="PreciseAutomaticRifleItem" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>UltimateAutomaticRifleDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_EliteAutomaticRifle</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponAutomaticRifle_Elite.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="UltimateAutomaticRifleItem" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>WelderDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Welder</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponWelder.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="WelderItem" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Welder2Disposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Welder2</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponWelder_1.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="Welder2Item" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Welder3Disposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Welder3</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponWelder_2.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="Welder3Item" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Welder4Disposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Welder4</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponWelder_3.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="Welder4Item" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>AngleGrinderDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_AngleGrinder</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponGrinder.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AngleGrinderItem" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>AngleGrinder2Disposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_AngleGrinder2</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponGrinder_1.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AngleGrinder2Item" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>AngleGrinder3Disposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_AngleGrinder3</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponGrinder_2.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AngleGrinder3Item" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>AngleGrinder4Disposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_AngleGrinder4</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponGrinder_3.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AngleGrinder4Item" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>HandDrillDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_HandDrill</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponDrill.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="HandDrillItem" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>HandDrill2Disposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_HandDrill2</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponDrill_1.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="HandDrill2Item" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>HandDrill3Disposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_HandDrill3</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponDrill_2.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="HandDrill3Item" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>HandDrill4Disposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_HandDrill4</DisplayName>
+      <Icon>Textures\GUI\Icons\WeaponDrill_3.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="HandDrill4Item" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>NATO_5p56x45mmMagazineDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_NATO_5p56x45mm</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\Rifle_Ammo.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="NATO_5p56x45mm" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>NATO_25x184mmMagazineDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_NATO_25x184mm</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\Ammo_Box.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="NATO_25x184mm" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>Missile200mmDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Missile200mm</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="Missile200mm" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PDLaserChargeDisposal</SubtypeId>
+      </Id>
+      <DisplayName>PDLaserCharge</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="PDLaserCharge" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GravelMagDisposal</SubtypeId>
+      </Id>
+      <DisplayName>GravelMag</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="GravelMag" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GravelMagBigDisposal</SubtypeId>
+      </Id>
+      <DisplayName>GravelMagBig</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\Small_Rocket.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="AmmoMagazine" SubtypeId="GravelMagBig" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SuperconductorDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_Superconductor</DisplayName>
+      <Icon>Textures\GUI\Icons\component\superconductor_conducts_component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="Component" SubtypeId="Superconductor" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>HydrogenBottleDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_HydrogenBottle</DisplayName>
+      <Icon>Textures\GUI\Icons\component\HydrogenBottle_Component.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="GasContainerObject" SubtypeId="HydrogenBottle" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>OxygenBottleDisposal</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_OxygenBottle</DisplayName>
+      <Icon>Textures\GUI\Icons\component\OxygenBottleComponent.dds</Icon>
+      <Prerequisites>
+        <Item Amount="1" TypeId="OxygenContainerObject" SubtypeId="OxygenBottle" />
+      </Prerequisites>
+      <Results>
+        <Item Amount="0.001" TypeId="Ingot" SubtypeId="Carbon" />
+      </Results>
+      <BaseProductionTimeInSeconds>0.01</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
+    </Blueprint>
+  </Blueprints>
+</Definitions>

@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionSingleRamp</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Ramp Single</DisplayName>
+      <Icon>Icons\Ramp.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionSingleRamp.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionRamp2Construct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <PhysicalMaterial>Rock</PhysicalMaterial>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionSingleRampSupport</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Ramp Single w/ Support</DisplayName>
+      <Icon>Icons\SupportedRamp.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionSingleRampSupport.mwm</Model>
+      <Components>
+        <Component Subtype="Concrete" Count="50" />
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionSupportedRamp2Construct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionRampSupport</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Ramp Support</DisplayName>
+      <Icon>Icons\RampSupport.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionRampSupport.mwm</Model>
+      <Components>
+        <Component Subtype="Concrete" Count="50" />
+      </Components>
+      <CriticalComponent Subtype="Concrete" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionRampSupportConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionSideRampMirrorSupport</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Ramp Side Mirror w/ Support</DisplayName>
+      <Icon>Icons\SupportedRamp.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionSideRampMirrorSupport.mwm</Model>
+      <Components>
+        <Component Subtype="Concrete" Count="50" />
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionSupportedRampConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionSideRampSupport</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Ramp Side w/ Support</DisplayName>
+      <Icon>Icons\SupportedRamp.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionSideRampSupport.mwm</Model>
+      <Components>
+        <Component Subtype="Concrete" Count="50" />
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionSupportedRampConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionCenterRampSupport</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Ramp Center w/ Support</DisplayName>
+      <Icon>Icons\SupportedRamp.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionCenterRampSupport.mwm</Model>
+      <Components>
+        <Component Subtype="Concrete" Count="50" />
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionSupportedRamp2Construct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionSideRampMirror</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Ramp Side Mirror</DisplayName>
+      <Icon>Icons\Ramp.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionSideRampMirror.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionRampConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionSideRamp</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Ramp Side</DisplayName>
+      <Icon>Icons\Ramp.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionSideRamp.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionRampConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionCenterRamp</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Ramp Center</DisplayName>
+      <Icon>Icons\Ramp.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="2" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionCenterRamp.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionRamp2Construct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionAngle</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Angle</DisplayName>
+      <Icon>Icons\Angle.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionAngle.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="30" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionAngleConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionIntersection1</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Intersection 1</DisplayName>
+      <Icon>Icons\Intersection.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionIntersection1.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionIntersection2</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Intersection 2</DisplayName>
+      <Icon>Icons\Intersection.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionIntersection2.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionIntersection3</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Intersection 3</DisplayName>
+      <Icon>Icons\Intersection.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionIntersection3.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionIntersection4</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Intersection 4</DisplayName>
+      <Icon>Icons\Intersection.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionIntersection4.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionIntersection5</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Intersection 5</DisplayName>
+      <Icon>Icons\Intersection.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionIntersection5.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionIntersection6</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Intersection 6</DisplayName>
+      <Icon>Icons\Intersection.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionIntersection6.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionMergeLeft</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Merge Left</DisplayName>
+      <Icon>Icons\Merge.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="6" y="1" z="6" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionMergeLeft.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="90" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionMergeLeftConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionMergeRight</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Merge Right</DisplayName>
+      <Icon>Icons\Merge.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="6" y="1" z="6" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionMergeRight.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="90" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionMergeRightConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionBlank</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Blank</DisplayName>
+      <Icon>Icons\Road.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionBlank.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionCenter</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Center</DisplayName>
+      <Icon>Icons\Road.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionCenter.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionSide</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Side</DisplayName>
+      <Icon>Icons\Road.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionSide.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionSide2</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Side 2</DisplayName>
+      <Icon>Icons\Road.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionSide2.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+
+    <Definition>
+      <Id>
+        <TypeId>CubeBlock</TypeId>
+        <SubtypeId>RoadSectionSingle</SubtypeId>
+      </Id>
+      <DisplayName>Road Section - Single</DisplayName>
+      <Icon>Icons\Road.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="1" z="3" />
+      <Center x="1" y="0" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\RoadSectionSingle.mwm</Model>
+      <Components>
+        <Component Subtype="Asphalt" Count="40" />
+      </Components>
+      <CriticalComponent Subtype="Asphalt" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Construct\RoadSectionFlatConstruct.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <InventorySize>
+        <X>1</X>
+        <Y>1</Y>
+        <Z>1</Z>
+      </InventorySize>
+      <PCU>1</PCU>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+    </Definition>
+		
+  </CubeBlocks>
+</Definitions>

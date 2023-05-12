@@ -1,0 +1,492 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <ContractTypes>
+
+        <ContractType xsi:type="MyObjectBuilder_ContractTypeObtainAndDeliverDefinition">
+            <Id>
+                <TypeId>ContractTypeDefinition</TypeId>
+                <SubtypeId>ObtainAndDeliver</SubtypeId>
+            </Id>
+            <Icon>Textures\GUI\Icons\Contracts\AcquisitionContract.dds</Icon>
+            <Icon>Textures\GUI\Icons\Contracts\AcquisitionContractHeader.dds</Icon>
+            <MinimumReputation>4</MinimumReputation>
+            <FailReputationPrice>0</FailReputationPrice>
+            <MinimumMoney>1000</MinimumMoney>
+            <DurationMultiplier>1</DurationMultiplier>
+            <AvailableItems>
+			
+				<!-- Ore -->
+			
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Ice</SubtypeId>
+                </SerializableDefinitionId>
+			
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Iron</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Nickel</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Silicon</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Cobalt</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Niter</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Silver</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Gold</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Platinum</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Uranium</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Coal</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Sulfur</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Copper</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Lithium</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Bauxite</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Titanium</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>Tantalum</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ore</TypeId>
+                    <SubtypeId>CrudeOil</SubtypeId>
+                </SerializableDefinitionId>
+				
+				<!-- Ingots -->
+
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Iron</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Nickel</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Cobalt</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Magnesium</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Silicon</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Silver</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Gold</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Platinum</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Uranium</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Copper</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Polymer</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>FuelOil</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Lithium</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Aluminum</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Titanium</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Tantalum</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Sulfur</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Carbon</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Niter</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>Magnesium</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Ingot</TypeId>
+                    <SubtypeId>DepletedUranium</SubtypeId>
+                </SerializableDefinitionId>
+				
+				<!-- Components -->
+
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Construction</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>MetalGrid</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>InteriorPlate</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>SteelPlate</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Girder</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>SmallTube</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>LargeTube</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Motor</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Display</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>BulletproofGlass</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Superconductor</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Computer</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Reactor</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Thrust</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>GravityGenerator</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Medical</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>RadioCommunication</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Detector</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Explosives</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>SolarCell</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>PowerCell</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Canvas</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>FSSolarCell</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>ElectronMatrix</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Capacitor</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>CompositeArmor</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>TokamakBlanket</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>SuperMagnet</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Cryocooler</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Thermocouple</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>ArmorGlass</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>CopperWire</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>GoldWire</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Fabric</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Rubber</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Plastic</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>AdvancedComputer</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>QuantumComputer</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Concrete</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Asphalt</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>TitaniumPlate</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>ArmoredPlate</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Electromagnet</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Lightbulb</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>AcidPowerCell</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>AlkalinePowerCell</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>Ceramic</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>LaserEmitter</SubtypeId>
+                </SerializableDefinitionId>
+				
+                <SerializableDefinitionId>
+                    <TypeId>MyObjectBuilder_Component</TypeId>
+                    <SubtypeId>HeatingElement</SubtypeId>
+                </SerializableDefinitionId>
+				
+            </AvailableItems>
+
+            <ChancesPerFactionType>
+                <ContractChance>
+                    <DefinitionId>
+                        <TypeId>MyObjectBuilder_FactionTypeDefinition</TypeId>
+                        <SubtypeId>Miner</SubtypeId>
+                    </DefinitionId>
+                    <Value>4</Value>
+                </ContractChance>
+                <ContractChance>
+                    <DefinitionId>
+                        <TypeId>MyObjectBuilder_FactionTypeDefinition</TypeId>
+                        <SubtypeId>Trader</SubtypeId>
+                    </DefinitionId>
+                    <Value>4</Value>
+                </ContractChance>
+                <ContractChance>
+                    <DefinitionId>
+                        <TypeId>MyObjectBuilder_FactionTypeDefinition</TypeId>
+                        <SubtypeId>Builder</SubtypeId>
+                    </DefinitionId>
+                    <Value>4</Value>
+                </ContractChance>
+            </ChancesPerFactionType>
+
+        </ContractType>
+    </ContractTypes>
+</Definitions>

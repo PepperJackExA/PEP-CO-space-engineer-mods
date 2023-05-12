@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlockVariantGroups>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="FlatRoad" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionBlank" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionCenter" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionSide" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionSide2" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionSingle" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="IntersectionRoad" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionIntersection1" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionIntersection2" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionIntersection3" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionIntersection4" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionIntersection5" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionIntersection6" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AngleRoad" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionAngle" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionMergeLeft" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionMergeRight" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RampRoad" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionCenterRamp" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionSideRamp" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionSideRampMirror" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionSingleRamp" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RampSupportRoad" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionCenterRampSupport" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionSideRampSupport" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionSideRampMirrorSupport" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionSingleRampSupport" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="RoadSectionRampSupport" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BasicContainerGroup" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_CargoContainer" Subtype="LargeShippingContainer" />
+                <Block Type="MyObjectBuilder_CargoContainer" Subtype="SmallShippingContainer" />
+                <Block Type="MyObjectBuilder_CargoContainer" Subtype="TransportBox" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="PistonGroup" />
+            <Icon>Textures\GUI\Icons\Cubes\Piston.dds</Icon>
+            <DisplayName>DisplayName_Block_PistonBase</DisplayName>
+            <Description>Description_Piston</Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="LargePistonBase" />
+                <Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="MediumPistonBase" />
+                <Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="SmallPistonBase" />
+                <Block Type="MyObjectBuilder_PistonTop" Subtype="LargePistonTop" />
+                <Block Type="MyObjectBuilder_PistonTop" Subtype="MediumPistonTop" />
+                <Block Type="MyObjectBuilder_PistonTop" Subtype="SmallPistonTop" />
+                <Block Type="MyObjectBuilder_MergeBlock" Subtype="LargeShipMergeBlock" />
+                <Block Type="MyObjectBuilder_MergeBlock" Subtype="SmallShipMergeBlock" />
+                <Block Type="MyObjectBuilder_MergeBlock" Subtype="SmallShipSmallMergeBlock" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorThickGroup" />
+            <Icon>Textures\GUI\Icons\Cubes\conveyor.dds</Icon>
+            <DisplayName>DisplayName_Block_Conveyor</DisplayName>
+            <Description>Description_ConveyorTube</Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyor" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTube" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeMedium" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorFrameMedium" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeCurved" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeCurvedMedium" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SmallShipConveyorHub" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="ConveyorTubeT" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="ConveyorCross" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="ConveyorElbow" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="Conveyor4Way" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="Conveyor5Way" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="Conveyor6Way" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTube45" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="MediumConveyorTube45" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorBracketDouble" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorBracket" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeDuct" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeDuctCurved" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="ConveyorTubeDuctT" />
+                <Block Type="MyObjectBuilder_CargoContainer" Subtype="AccessPoint" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorThinGroup" />
+            <Icon>Textures\GUI\Icons\Cubes\ConveyorTubeSmall.dds</Icon>
+            <DisplayName>DisplayName_Block_ConveyorTubeSmall</DisplayName>
+            <Description>Description_ConveyorTube</Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyor" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmall" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmallT" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmallCurved" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="SmallConveyorTube45" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeDuctSmall" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeDuctSmallCurved" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="ConveyorTubeDuctSmallT" />
+            </Blocks>
+        </BlockVariantGroup>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorSorters" />
+            <Blocks>
+                <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="LargeBlockConveyorSorter" />
+                <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="MediumBlockConveyorSorter" />
+                <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="SmallBlockConveyorSorter" />
+                <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="ConveyorTubeSorter" />
+                <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="ConveyorTubeCornerSorter" />
+            </Blocks>
+        </BlockVariantGroup>
+
+    </BlockVariantGroups>
+</Definitions>

@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <PhysicalItems>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedSulfur</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Sulfur Ore</DisplayName>
+            <Icon>Icons\CopperOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>S</IconSymbol>
+			
+            <MinimalPricePerUnit>375</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedCopper</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Copper Ore</DisplayName>
+            <Icon>Icons\CopperOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Cu</IconSymbol>
+			
+            <MinimalPricePerUnit>225</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedLithium</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Lithium Ore</DisplayName>
+            <Icon>Icons\GenericOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Li</IconSymbol>
+			
+            <MinimalPricePerUnit>525</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedBauxite</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Bauxite</DisplayName>
+            <Icon>Icons\BauxiteOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Al</IconSymbol>
+			
+            <MinimalPricePerUnit>375</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedTitanium</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Titanium Ore</DisplayName>
+            <Icon>Icons\GenericOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Ti</IconSymbol>
+			
+            <MinimalPricePerUnit>450</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedTantalum</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Tantalum Ore</DisplayName>
+            <Icon>Icons\GenericOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Ta</IconSymbol>
+			
+            <MinimalPricePerUnit>900</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+	
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>Magnesium</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Niter</DisplayName>
+            <Icon>Icons\NiterOre.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>Niter</IconSymbol>
+			
+            <MinimalPricePerUnit>300</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedIron</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Iron Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Fe_iron.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Fe</IconSymbol>
+			
+            <MinimalPricePerUnit>150</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedNickel</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Nickel Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Ni_nickel.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Ni</IconSymbol>
+			
+            <MinimalPricePerUnit>150</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedCobalt</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Cobalt Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Co_cobalt.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Co</IconSymbol>
+			
+            <MinimalPricePerUnit>450</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedSilicon</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Silicon Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Si_silicon.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Si</IconSymbol>
+			
+            <MinimalPricePerUnit>150</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedSilver</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Silver Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Ag_silver.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Ag</IconSymbol>
+			
+            <MinimalPricePerUnit>300</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedGold</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Gold Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Au_gold.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Au</IconSymbol>
+			
+            <MinimalPricePerUnit>300</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedPlatinum</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Platinum Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_Pt_platinum.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_Pt</IconSymbol>
+			
+            <MinimalPricePerUnit>600</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+        <PhysicalItem>
+            <Id>
+                <TypeId>Ore</TypeId>
+                <SubtypeId>CrushedUranium</SubtypeId>
+            </Id>
+            <DisplayName>Crushed Uranium Ore</DisplayName>
+            <Icon>Textures\GUI\Icons\ore_UO2_uranite.dds</Icon>
+            <Size>
+                <X>0.07</X>
+                <Y>0.07</Y>
+                <Z>0.07</Z>
+            </Size>
+            <Mass>1</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\Sphere.mwm</Model>
+            <PhysicalMaterial>Stone</PhysicalMaterial>
+            <IconSymbol>IconSymbol_U</IconSymbol>
+			
+            <MinimalPricePerUnit>750</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>10000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>10000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		
+    </PhysicalItems>
+</Definitions>

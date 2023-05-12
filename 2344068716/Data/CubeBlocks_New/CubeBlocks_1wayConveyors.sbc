@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>OneWayConveyorTube</SubtypeId>
+      </Id>
+      <DisplayName>One-Way Conveyor Tube</DisplayName>
+      <Icon>Icons\OneWayConveyorTube.dds</Icon>
+      <Description>Only allows items to travel in the direction of the arrows.</Description>
+      <GuiVisible>true</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\OneWayConveyorTube.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="10" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="SmallTube" Count="12" />
+        <Component Subtype="Motor" Count="3" />
+        <Component Subtype="SteelPlate" Count="4" />
+      </Components>
+      <CriticalComponent Subtype="Motor" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\ConveyorTubeConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\ConveyorTubeConstruction_2.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>OneWayConveyorTube</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>7</BuildTimeSeconds>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0.2" StartY="0.2" EndX="0.8" EndY="0.3" />
+        <MountPoint Side="Bottom" StartX="0.2" StartY="0.7" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Bottom" StartX="0.2" StartY="0.3" EndX="0.3" EndY="0.7" />
+        <MountPoint Side="Bottom" StartX="0.7" StartY="0.3" EndX="0.8" EndY="0.7" />
+        <MountPoint Side="Top" StartX="0.2" StartY="0.2" EndX="0.8" EndY="0.3" />
+        <MountPoint Side="Top" StartX="0.2" StartY="0.7" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Top" StartX="0.2" StartY="0.3" EndX="0.3" EndY="0.7" />
+        <MountPoint Side="Top" StartX="0.7" StartY="0.3" EndX="0.8" EndY="0.7" />
+      </MountPoints>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+    </Definition>
+  
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>OneWayConveyorTubeCurved</SubtypeId>
+      </Id>
+      <DisplayName>One-Way Curved Conveyor Tube</DisplayName>
+      <Icon>Icons\OneWayConveyorTubeCurved.dds</Icon>
+      <Description>Only allows items to travel in the direction of the arrows.</Description>
+      <GuiVisible>false</GuiVisible>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\OneWayConveyorTubeCorner.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="10" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="SmallTube" Count="12" />
+        <Component Subtype="Motor" Count="3" />
+        <Component Subtype="SteelPlate" Count="4" />
+      </Components>
+      <CriticalComponent Subtype="Motor" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\ConveyorTubeCurvedConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\ConveyorTubeCurvedConstruction_2.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>OneWayConveyorTubeCurved</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>7</BuildTimeSeconds>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0.2" StartY="0.2" EndX="0.8" EndY="0.3" />
+        <MountPoint Side="Bottom" StartX="0.2" StartY="0.7" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Bottom" StartX="0.2" StartY="0.3" EndX="0.3" EndY="0.7" />
+        <MountPoint Side="Bottom" StartX="0.7" StartY="0.3" EndX="0.8" EndY="0.7" />
+        <MountPoint Side="Right" StartX="0.2" StartY="0.2" EndX="0.8" EndY="0.3" />
+        <MountPoint Side="Right" StartX="0.2" StartY="0.7" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Right" StartX="0.2" StartY="0.3" EndX="0.3" EndY="0.7" />
+        <MountPoint Side="Right" StartX="0.7" StartY="0.3" EndX="0.8" EndY="0.7" />
+      </MountPoints>
+      <MirroringX>Y</MirroringX>
+      <MirroringY>X</MirroringY>
+      <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+      <DestroySound>PoofExplosionCat3</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>OneWayConveyorTubeMedium</SubtypeId>
+      </Id>
+      <DisplayName>Medium One-Way Conveyor Tube</DisplayName>
+      <Icon>Icons\OneWayConveyorTube.dds</Icon>
+      <Description>Only allows items to travel in the direction of the arrows.</Description>
+      <GuiVisible>false</GuiVisible>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="3" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\OneWayConveyorTubeMedium.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="8" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="SmallTube" Count="10" />
+        <Component Subtype="Motor" Count="3" />
+        <Component Subtype="SteelPlate" Count="2" />
+      </Components>
+      <CriticalComponent Subtype="Motor" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\ConveyorTubeMediumConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\ConveyorTubeMediumConstruction_2.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>OneWayConveyorTube</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <MountPoints>
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="3" EndY="3" />
+        <MountPoint Side="Right" StartX="0" StartY="0" EndX="3" EndY="3" />
+      </MountPoints>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Medium</DestroyEffect>
+      <DestroySound>PoofExplosionCat2</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>OneWayConveyorTubeCurvedMedium</SubtypeId>
+      </Id>
+      <DisplayName>Medium One-Way Curved Conveyor Tube</DisplayName>
+      <Icon>Icons\OneWayConveyorTubeCurved.dds</Icon>
+      <Description>Only allows items to travel in the direction of the arrows.</Description>
+      <CubeSize>Small</CubeSize>
+      <GuiVisible>false</GuiVisible>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="3" z="3" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\OneWayConveyorTubeCurvedMedium.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="8" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="SmallTube" Count="10" />
+        <Component Subtype="Motor" Count="3" />
+        <Component Subtype="SteelPlate" Count="2" />
+      </Components>
+      <CriticalComponent Subtype="Motor" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\ConveyorTurnMediumConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\ConveyorTurnMediumConstruction_2.mwm" />
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
+        <MountPoint Side="Left" StartX="0" StartY="0" EndX="3" EndY="3" />
+      </MountPoints>
+      <BlockPairName>OneWayConveyorTubeCurved</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>6</BuildTimeSeconds>
+      <MirroringX>Y</MirroringX>
+      <MirroringY>X</MirroringY>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Medium</DestroyEffect>
+      <DestroySound>PoofExplosionCat2</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>OneWayConveyorTubeSmall</SubtypeId>
+      </Id>
+      <DisplayName>Small One-Way Conveyor Tube</DisplayName>
+      <Icon>Icons\SmallOneWayConveyorTube.dds</Icon>
+      <Description>Only allows items to travel in the direction of the arrows.</Description>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\OneWayConveyorTubeSmall.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="1" />
+        <Component Subtype="Motor" Count="1" />
+        <Component Subtype="Construction" Count="1" />
+      </Components>
+      <CriticalComponent Subtype="Motor" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <CriticalComponent Subtype="Construction" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\ConveyorTubeConstruction_1.mwm" />
+      </BuildProgressModels>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>3</BuildTimeSeconds>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Small</DestroyEffect>
+      <DestroySound>PoofExplosionCat1</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+	
+    <Definition>
+      <Id>
+        <TypeId>Conveyor</TypeId>
+        <SubtypeId>OneWayConveyorTubeCurvedSmall</SubtypeId>
+      </Id>
+      <DisplayName>Small One-Way Curved Conveyor Tube</DisplayName>
+      <Icon>Icons\SmallOneWayConveyorTubeCurved.dds</Icon>
+      <Description>Only allows items to travel in the direction of the arrows.</Description>
+      <GuiVisible>false</GuiVisible>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\OneWayConveyorTubeCurvedSmall.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="1" />
+        <Component Subtype="Motor" Count="1" />
+        <Component Subtype="Construction" Count="1" />
+      </Components>
+      <CriticalComponent Subtype="Motor" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\ConveyorTubeCurvedConstruction_1.mwm" />
+      </BuildProgressModels>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+        <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>3</BuildTimeSeconds>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <DestroyEffect>BlockDestroyed_Small</DestroyEffect>
+      <DestroySound>PoofExplosionCat1</DestroySound>
+      <PCU>10</PCU>
+      <IsAirTight>false</IsAirTight>      
+    </Definition>
+
+  </CubeBlocks>
+</Definitions>
