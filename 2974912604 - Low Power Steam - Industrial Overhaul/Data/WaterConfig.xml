@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<WaterConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <BlockConfigs>
+    <!--Electric Water Screws -->
+    <BlockConfig TypeId="SolarPanel" SubtypeId="LargeFullSpectrumSolarPanel" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="SolarPanel" SubtypeId="SmallFullSpectrumSolarPanel" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="SolarPanel" SubtypeId="LargeBlockSolarPanel" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+	  <BlockConfig TypeId="SolarPanel" SubtypeId="SmallBlockSolarPanel" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    
+    <BlockConfig TypeId="WindTurbine" SubtypeId="SergWindTurbinePart" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="WindTurbine" SubtypeId="SergWindTurbine" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="WindTurbine" SubtypeId="Serg_10MW_Wind_Turbine" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="WindTurbine" SubtypeId="Serg_25MW_Wind_Turbine" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+    <BlockConfig TypeId="WindTurbine" SubtypeId="BasicWindTurbine" FunctionalUnderwater="false" FunctionalAboveWater="true" />
+
+  </BlockConfigs>
+</WaterConfig>
