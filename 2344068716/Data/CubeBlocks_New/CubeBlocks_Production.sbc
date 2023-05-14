@@ -125,7 +125,6 @@
         <Class>T1Tools</Class>
         <Class>T2Tools</Class>
         <Class>Bottles</Class>
-        <Class>Consumables</Class>
       </BlueprintClasses>
       <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
       <DamagedSound>ParticleHeavyMech</DamagedSound>
@@ -295,6 +294,7 @@
 				<Component Subtype="SmallTube" Count="15" />
 				<Component Subtype="Motor" Count="15" />
 				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="Computer" Count="10" />
 				<Component Subtype="AdvancedComputer" Count="25" />
 				<Component Subtype="Ceramic" Count="25" />
 				<Component Subtype="SteelPlate" Count="15" />
@@ -382,6 +382,7 @@
 				<Component Subtype="LargeTube" Count="25" />
 				<Component Subtype="SmallTube" Count="15" />
 				<Component Subtype="Motor" Count="15" />
+				<Component Subtype="Computer" Count="10" />
 				<Component Subtype="Computer" Count="10" />
 				<Component Subtype="AdvancedComputer" Count="25" />
 				<Component Subtype="Ceramic" Count="25" />
@@ -1110,7 +1111,8 @@
         <Component Subtype="CopperWire" Count="25" />
         <Component Subtype="Motor" Count="20" />
         <Component Subtype="TitaniumPlate" Count="40" />
-        <Component Subtype="Computer" Count="20" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="Computer" Count="10" />
         <Component Subtype="AdvancedComputer" Count="30" />
         <Component Subtype="SteelPlate" Count="20" />
       </Components>
@@ -1133,6 +1135,8 @@
       <OperationalPowerConsumption>1</OperationalPowerConsumption>
       <BlueprintClasses>
         <Class>MunitionsFactory</Class>
+        <Class>Consumables</Class>
+        <Class>EliteConsumables</Class>
         <Class>Ammo</Class>
       </BlueprintClasses>
       <AssemblySpeed>0.8</AssemblySpeed>
@@ -1171,6 +1175,7 @@
         <Component Subtype="Motor" Count="20" />
         <Component Subtype="MetalGrid" Count="10" />
         <Component Subtype="GoldWire" Count="15" />
+        <Component Subtype="Computer" Count="10" />
         <Component Subtype="Computer" Count="10" />
         <Component Subtype="AdvancedComputer" Count="80" />
         <Component Subtype="SteelPlate" Count="20" />
@@ -1214,7 +1219,6 @@
         <Class>AdvancedAssemblerComponents</Class>
         <Class>T3Tools</Class>
         <Class>T4Tools</Class>
-        <Class>EliteConsumables</Class>
       </BlueprintClasses>
       <AssemblySpeed>0.8</AssemblySpeed>
       <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
