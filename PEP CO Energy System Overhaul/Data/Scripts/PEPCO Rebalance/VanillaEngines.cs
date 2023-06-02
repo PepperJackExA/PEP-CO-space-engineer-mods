@@ -3,19 +3,20 @@ using Sandbox.Definitions;
 using VRage.Game;
 using VRage.Game.Components;
 
-namespace PEPCO_VanillaEnginesRebalance
+namespace PEPCO.VanillaEnginesRebalance
 {
 
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
-    public class GasChanges_Session : MySessionComponentBase
+    public class PEPCO_Session : MySessionComponentBase
 
     {
+        
         public override void LoadData()
         {
 
             LGVanillaEngines(new MyDefinitionId(typeof(MyObjectBuilder_HydrogenEngine), "LargeHydrogenEngine"));
             SGVanillaEngines(new MyDefinitionId(typeof(MyObjectBuilder_HydrogenEngine), "SmallHydrogenEngine"));
-           
+         
         }
 
         private void LGVanillaEngines(MyDefinitionId definitionId)

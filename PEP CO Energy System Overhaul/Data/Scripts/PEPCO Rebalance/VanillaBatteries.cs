@@ -4,10 +4,10 @@ using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.ObjectBuilders.Definitions;
 
-namespace PEPCO_VanillaBatteriesRebalance
+namespace PEPCO.VanillaBatteriesRebalance
 {
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
-    public class GasChanges_Session : MySessionComponentBase
+    public class PEPCO_Session : MySessionComponentBase
     {
         public override void LoadData()
         {
@@ -58,6 +58,7 @@ namespace PEPCO_VanillaBatteriesRebalance
             definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
                                         "Max Input Power: " + definition.RequiredPowerInput + "MW";
+
         }
                 
     }
