@@ -24,10 +24,10 @@ namespace PEPCO.VanillaBatteriesRebalance
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
             definition.PCU *= 1; //15
-            definition.MaxStoredPower = 3; //3
-            definition.MaxPowerOutput = 1.2f; //12
-            definition.RequiredPowerInput = 1.2f; //12
-            definition.InitialStoredPowerRatio = 0;
+            definition.MaxStoredPower *= 1; //3
+            definition.MaxPowerOutput *= 1; //12
+            definition.RequiredPowerInput *= 1; //12
+            definition.InitialStoredPowerRatio = 50;
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
@@ -37,10 +37,10 @@ namespace PEPCO.VanillaBatteriesRebalance
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
             definition.PCU *= 1; //15
-            definition.MaxStoredPower = 1; //1
-            definition.MaxPowerOutput = 0.4f; //4
-            definition.RequiredPowerInput = 0.4f; //4
-            definition.InitialStoredPowerRatio = 0;
+            definition.MaxStoredPower *= 1; //1
+            definition.MaxPowerOutput *= 1; //4
+            definition.RequiredPowerInput *= 1; //4
+            definition.InitialStoredPowerRatio = 50;
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
@@ -50,10 +50,10 @@ namespace PEPCO.VanillaBatteriesRebalance
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
             definition.PCU *= 1; //15
-            definition.MaxStoredPower = 0.05f; //0.05
-            definition.MaxPowerOutput = 0.02f; //0.2
-            definition.RequiredPowerInput = 0.02f; //0.2
-            definition.InitialStoredPowerRatio = 0;
+            definition.MaxStoredPower *= 1; //0.05
+            definition.MaxPowerOutput *= 1; //0.2
+            definition.RequiredPowerInput *= 1; //0.2
+            definition.InitialStoredPowerRatio = 50;
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +

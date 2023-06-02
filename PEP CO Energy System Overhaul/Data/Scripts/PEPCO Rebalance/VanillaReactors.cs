@@ -11,6 +11,11 @@ namespace PEPCO.VanillaReactorRebalance
     public class PEPCO_Session : MySessionComponentBase
 
     {
+        public const float ReactorLGlargeUranium = ReactorLGsmallUranium / 0.15f;
+        public const float ReactorLGsmallUranium = 1080000;
+        public const float ReactorSGlargeUranium = ReactorSGsmallUranium / 0.15f;
+        public const float ReactorSGsmallUranium = 98400;
+
         public override void LoadData()
         {
 
@@ -32,7 +37,7 @@ namespace PEPCO.VanillaReactorRebalance
         private void LGVanillaLargeReactor(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyReactorDefinition;
-            definition.MaxPowerOutput *= 1; // 300 MW
+            definition.MaxPowerOutput = ReactorLGlargeUranium; // 300 MW
             definition.FuelProductionToCapacityMultiplier *= 1;// 3600
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Fuel Type: " + "\n" +
@@ -42,8 +47,9 @@ namespace PEPCO.VanillaReactorRebalance
         private void LGVanillaSmallReactor(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyReactorDefinition;
-            definition.MaxPowerOutput *= 1; // 15 MW
+            definition.MaxPowerOutput = ReactorLGsmallUranium; // 15 MW
             definition.FuelProductionToCapacityMultiplier *= 1;// 3600
+
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Fuel Type: " + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
@@ -52,7 +58,7 @@ namespace PEPCO.VanillaReactorRebalance
         private void SGVanillaLargeReactor(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyReactorDefinition;
-            definition.MaxPowerOutput *= 1; // 14.75 MW
+            definition.MaxPowerOutput = ReactorSGlargeUranium; // 14.75 MW
             definition.FuelProductionToCapacityMultiplier *= 1;// 3600
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Fuel Type: " + "\n" +
@@ -62,7 +68,7 @@ namespace PEPCO.VanillaReactorRebalance
         private void SGVanillaSmallReactor(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyReactorDefinition;
-            definition.MaxPowerOutput *= 1; // 0.5 MW
+            definition.MaxPowerOutput = ReactorSGsmallUranium; // 0.5 MW
             definition.FuelProductionToCapacityMultiplier *= 1;// 3600
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Fuel Type: " + "\n" +
