@@ -13,8 +13,8 @@ namespace PEPCO.VanillaReactorRebalance
     {
         public const float ReactorLGlargeUranium = ReactorLGsmallUranium / 0.05f; //300
         public const float ReactorLGsmallUranium = 15; //15
-        public const float ReactorSGlargeUranium = ReactorSGsmallUranium / 0.05f;
-        public const float ReactorSGsmallUranium = 0.5f;
+        public const float ReactorSGlargeUranium = ReactorSGsmallUranium / 0.0338983050847458f; //14.75
+        public const float ReactorSGsmallUranium = 0.5f; //0.5
 
         public override void LoadData()
         {
@@ -45,7 +45,7 @@ namespace PEPCO.VanillaReactorRebalance
             definition.DescriptionString = "Fuel Type: " + fueldef.FuelDefinition.Id.SubtypeId + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + " MW" + "\n" +
                                         "Fuel Use: " + (perSec * 1000).ToString("0.##") + " grams/s" + "\n" +
-                                        "Output per Ingot: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
+                                        "Output per kg: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
         }
         private void LGVanillaSmallReactor(MyDefinitionId definitionId)
         {
@@ -58,7 +58,7 @@ namespace PEPCO.VanillaReactorRebalance
             definition.DescriptionString = "Fuel Type: " + fueldef.FuelDefinition.Id.SubtypeId + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + " MW" + "\n" +
                                         "Fuel Use: " + (perSec * 1000).ToString("0.##") + " grams/s" + "\n" +
-                                        "Output per Ingot: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
+                                        "Output per kg: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
         }
         private void SGVanillaLargeReactor(MyDefinitionId definitionId)
         {
@@ -70,7 +70,7 @@ namespace PEPCO.VanillaReactorRebalance
             definition.DescriptionString = "Fuel Type: " + fueldef.FuelDefinition.Id.SubtypeId + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + " MW" + "\n" +
                                         "Fuel Use: " + (perSec * 1000).ToString("0.##") + " grams/s" + "\n" +
-                                        "Output per Ingot: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
+                                        "Output per kg: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
         }
         private void SGVanillaSmallReactor(MyDefinitionId definitionId)
         {
@@ -83,7 +83,7 @@ namespace PEPCO.VanillaReactorRebalance
             definition.DescriptionString = "Fuel Type: " + fueldef.FuelDefinition.Id.SubtypeId + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + " MW" + "\n" +
                                         "Fuel Use: " + (perSec * 1000).ToString("0.##") + " grams/s" + "\n" +
-                                        "Output per Ingot: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
+                                        "Output per kg: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
         }
     }
 }
