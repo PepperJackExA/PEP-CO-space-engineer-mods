@@ -11,10 +11,10 @@ namespace PEPCO.VanillaReactorRebalance
     public class PEPCO_Session : MySessionComponentBase
 
     {
-        public const float ReactorLGlargeUranium = ReactorLGsmallUranium / 0.15f;
-        public const float ReactorLGsmallUranium = 1080000;
-        public const float ReactorSGlargeUranium = ReactorSGsmallUranium / 0.15f;
-        public const float ReactorSGsmallUranium = 98400;
+        public const float ReactorLGlargeUranium = ReactorLGsmallUranium / 0.05f; //300
+        public const float ReactorLGsmallUranium = 15; //15
+        public const float ReactorSGlargeUranium = ReactorSGsmallUranium / 0.05f;
+        public const float ReactorSGsmallUranium = 0.5f;
 
         public override void LoadData()
         {
@@ -38,42 +38,52 @@ namespace PEPCO.VanillaReactorRebalance
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyReactorDefinition;
             definition.MaxPowerOutput = ReactorLGlargeUranium; // 300 MW
-            definition.FuelProductionToCapacityMultiplier *= 1;// 3600
+            MyReactorDefinition.FuelInfo fueldef = definition.FuelInfos[0];
+            float perSec = fueldef.ConsumptionPerSecond_Items;
+
             definition.DescriptionEnum = null;
-            definition.DescriptionString = "Fuel Type: " + "\n" +
-                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
-                                        "Fuel Pro to Cap Mult: " + definition.FuelProductionToCapacityMultiplier;
+            definition.DescriptionString = "Fuel Type: " + fueldef.FuelDefinition.Id.SubtypeId + "\n" +
+                                        "Maxed Power Output: " + definition.MaxPowerOutput + " MW" + "\n" +
+                                        "Fuel Use: " + (perSec * 1000).ToString("0.##") + " grams/s" + "\n" +
+                                        "Output per Ingot: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
         }
         private void LGVanillaSmallReactor(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyReactorDefinition;
             definition.MaxPowerOutput = ReactorLGsmallUranium; // 15 MW
-            definition.FuelProductionToCapacityMultiplier *= 1;// 3600
+            MyReactorDefinition.FuelInfo fueldef = definition.FuelInfos[0];
+            float perSec = fueldef.ConsumptionPerSecond_Items;
 
             definition.DescriptionEnum = null;
-            definition.DescriptionString = "Fuel Type: " + "\n" +
-                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
-                                        "Fuel Pro to Cap Mult: " + definition.FuelProductionToCapacityMultiplier;
+            definition.DescriptionString = "Fuel Type: " + fueldef.FuelDefinition.Id.SubtypeId + "\n" +
+                                        "Maxed Power Output: " + definition.MaxPowerOutput + " MW" + "\n" +
+                                        "Fuel Use: " + (perSec * 1000).ToString("0.##") + " grams/s" + "\n" +
+                                        "Output per Ingot: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
         }
         private void SGVanillaLargeReactor(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyReactorDefinition;
             definition.MaxPowerOutput = ReactorSGlargeUranium; // 14.75 MW
-            definition.FuelProductionToCapacityMultiplier *= 1;// 3600
+            MyReactorDefinition.FuelInfo fueldef = definition.FuelInfos[0];
+            float perSec = fueldef.ConsumptionPerSecond_Items;
             definition.DescriptionEnum = null;
-            definition.DescriptionString = "Fuel Type: " + "\n" +
-                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
-                                        "Fuel Pro to Cap Mult: " + definition.FuelProductionToCapacityMultiplier;
+            definition.DescriptionString = "Fuel Type: " + fueldef.FuelDefinition.Id.SubtypeId + "\n" +
+                                        "Maxed Power Output: " + definition.MaxPowerOutput + " MW" + "\n" +
+                                        "Fuel Use: " + (perSec * 1000).ToString("0.##") + " grams/s" + "\n" +
+                                        "Output per Ingot: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
         }
         private void SGVanillaSmallReactor(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyReactorDefinition;
             definition.MaxPowerOutput = ReactorSGsmallUranium; // 0.5 MW
             definition.FuelProductionToCapacityMultiplier *= 1;// 3600
+            MyReactorDefinition.FuelInfo fueldef = definition.FuelInfos[0];
+            float perSec = fueldef.ConsumptionPerSecond_Items;
             definition.DescriptionEnum = null;
-            definition.DescriptionString = "Fuel Type: " + "\n" +
-                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
-                                        "Fuel Pro to Cap Mult: " + definition.FuelProductionToCapacityMultiplier;
+            definition.DescriptionString = "Fuel Type: " + fueldef.FuelDefinition.Id.SubtypeId + "\n" +
+                                        "Maxed Power Output: " + definition.MaxPowerOutput + " MW" + "\n" +
+                                        "Fuel Use: " + (perSec * 1000).ToString("0.##") + " grams/s" + "\n" +
+                                        "Output per Ingot: " + ((1000 / (perSec * 1000)) * definition.MaxPowerOutput).ToString("0.##") + " MW";
         }
     }
 }
