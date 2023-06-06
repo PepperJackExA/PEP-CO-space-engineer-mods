@@ -44,6 +44,23 @@
 			<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
 		</Blueprint>
 
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>PEPCO_AlkalinePowerCellStarting</SubtypeId>
+			</Id>
+			<DisplayName>Alkaline Power Cell</DisplayName>
+			<Icon>..\2344068716\Icons\AlkalineCell.dds</Icon>
+			<Prerequisites>
+				<Item Amount="3" TypeId="Ingot" SubtypeId="Copper" />
+				<Item Amount="3" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="1" TypeId="Component" SubtypeId="CopperWire" />
+				<Item Amount="2" TypeId="Ore" SubtypeId="Ice" />
+			</Prerequisites>
+			<Result Amount="1" TypeId="Component" SubtypeId="AlkalinePowerCell" />
+			<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+		</Blueprint>
+
 		<!-- Assembler Bench Changes -->
 		<Blueprint>
 			<Id>

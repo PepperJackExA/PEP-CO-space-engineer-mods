@@ -4,11 +4,11 @@ using VRage;
 using VRage.Game;
 using VRage.Game.Components;
 using VRage.Utils;
-using static ModAdjuster.DefinitionStructure.BlockDef.BlockAction;
-using static ModAdjuster.DefinitionStructure.BlueprintDef.BPAction;
-using static ModAdjuster.DefinitionStructure.PhysicalItemDef.ItemAction;
+using static PepCo_OresFirst.DefinitionStructure.BlockDef.BlockAction;
+using static PepCo_OresFirst.DefinitionStructure.BlueprintDef.BPAction;
+using static PepCo_OresFirst.DefinitionStructure.PhysicalItemDef.ItemAction;
 
-namespace ModAdjuster
+namespace PepCo_OresFirst
 {
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class AdjustSBC : MySessionComponentBase

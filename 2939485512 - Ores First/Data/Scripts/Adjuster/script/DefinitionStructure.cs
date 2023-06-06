@@ -1,4 +1,4 @@
-﻿namespace ModAdjuster
+﻿namespace PepCo_OresFirst
 {
     public class DefinitionStructure
     {

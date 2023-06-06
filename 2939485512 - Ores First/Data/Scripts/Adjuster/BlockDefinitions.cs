@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using static ModAdjuster.DefinitionStructure;
-using static ModAdjuster.DefinitionStructure.BlockDef;
-using static ModAdjuster.DefinitionStructure.BlockDef.BlockAction.BlockMod;
+using static PepCo_OresFirst.DefinitionStructure;
+using static PepCo_OresFirst.DefinitionStructure.BlockDef;
+using static PepCo_OresFirst.DefinitionStructure.BlockDef.BlockAction.BlockMod;
 
-namespace ModAdjuster
+namespace PepCo_OresFirst
 {
     public class BlockDefinitions
     {
@@ -16,7 +16,38 @@ namespace ModAdjuster
         public List<BlockDef> Definitions = new List<BlockDef>()
         {
             // List of blocks to modify. Can be as many or few as desired
-            
+            new BlockDef()
+            {
+                BlockName = "BatteryBlock/SmallBlockSmallAlkalineBatteryBlock", // Name of the block to modify. Format is "MyObjectBuilder_Type/Subtype" in the same format as BlockVariantGroups
+                BlockActions = new[] // List of modifications to make. Can be as many or few as desired
+                {
+                    // The following modifications can be used on any type of block
+
+                    new BlockAction
+                    {
+                        Action = ChangeComponentCount,
+                        Index = 3,
+                        Count = 1
+                    },
+
+                }
+            },
+            new BlockDef()
+            {
+                BlockName = "BatteryBlock/LargeBlockAlkalineBatteryBlock", // Name of the block to modify. Format is "MyObjectBuilder_Type/Subtype" in the same format as BlockVariantGroups
+                BlockActions = new[] // List of modifications to make. Can be as many or few as desired
+                {
+                    // The following modifications can be used on any type of block
+
+                    new BlockAction
+                    {
+                        Action = ChangeComponentCount,
+                        Index = 3,
+                        Count = 20
+                    },
+
+                }
+            }
 
         };
 

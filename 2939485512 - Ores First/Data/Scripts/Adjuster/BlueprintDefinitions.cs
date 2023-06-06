@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using static ModAdjuster.DefinitionStructure;
-using static ModAdjuster.DefinitionStructure.BlueprintDef;
-using static ModAdjuster.DefinitionStructure.BlueprintDef.BPAction.BPMod;
+using static PepCo_OresFirst.DefinitionStructure;
+using static PepCo_OresFirst.DefinitionStructure.BlueprintDef;
+using static PepCo_OresFirst.DefinitionStructure.BlueprintDef.BPAction.BPMod;
 
-namespace ModAdjuster
+namespace PepCo_OresFirst
 {
     public class BlueprintDefinitions
     {
@@ -59,7 +59,7 @@ namespace ModAdjuster
                         Action = InsertResult,
                         Index = 0,
                         Item = "MyObjectBuilder_Ore/Ice",
-                        Amount = 0.05f
+                        Amount = 0.25f
                     },
                     new BPAction
                     {
@@ -73,7 +73,7 @@ namespace ModAdjuster
                         Action = InsertResult,
                         Index = 0,
                         Item = "MyObjectBuilder_Ore/Organic",
-                        Amount = 0.1f
+                        Amount = 0.375f
                     },
                     new BPAction
                     {
@@ -169,8 +169,15 @@ namespace ModAdjuster
                     {
                         Action = InsertResult,
                         Index = 0,
+                        Item = "MyObjectBuilder_Ore/Ice",
+                        Amount = 0.5f
+                    },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
                         Item = "MyObjectBuilder_Ore/Organic",
-                        Amount = 0.1f
+                        Amount = 0.75f
                     },
                 }
             },
@@ -189,7 +196,7 @@ namespace ModAdjuster
                     {
                         Action = ChangeAmountResult,
                         Index = 0,
-                        Amount = 50f
+                        Amount = 65f
                     },
 
                     new BPAction
@@ -216,8 +223,15 @@ namespace ModAdjuster
                     {
                         Action = InsertResult,
                         Index = 0,
+                        Item = "MyObjectBuilder_Ore/Ice",
+                        Amount = 1
+                    },
+                    new BPAction
+                    {
+                        Action = InsertResult,
+                        Index = 0,
                         Item = "MyObjectBuilder_Ore/Organic",
-                        Amount = 0.15f
+                        Amount = 1.25f
                     },
 
                 }

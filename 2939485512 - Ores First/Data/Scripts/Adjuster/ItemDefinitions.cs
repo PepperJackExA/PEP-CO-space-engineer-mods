@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using static ModAdjuster.DefinitionStructure;
-using static ModAdjuster.DefinitionStructure.PhysicalItemDef;
-using static ModAdjuster.DefinitionStructure.PhysicalItemDef.ItemAction.ItemMod;
+using static PepCo_OresFirst.DefinitionStructure;
+using static PepCo_OresFirst.DefinitionStructure.PhysicalItemDef;
+using static PepCo_OresFirst.DefinitionStructure.PhysicalItemDef.ItemAction.ItemMod;
 
-namespace ModAdjuster
+namespace PepCo_OresFirst
 {
     public class ItemDefinitions
     {
