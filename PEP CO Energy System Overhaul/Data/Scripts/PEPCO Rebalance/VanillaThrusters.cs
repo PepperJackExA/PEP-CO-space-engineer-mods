@@ -29,8 +29,9 @@ namespace PEPCO.VanillaThrustersRebalance
 
         public override void LoadData()
         {
-            //Vanilla Hydrogen
-            LGVanillaLargeHydrogenThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "LargeBlockLargeHydrogenThrust"));
+            
+                //Vanilla Hydrogen
+                LGVanillaLargeHydrogenThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "LargeBlockLargeHydrogenThrust"));
             LGVanillaLargeHydrogenThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "LargeBlockLargeHydrogenThrustIndustrial"));
 
             LGVanillaSmallHydrogenThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "LargeBlockSmallHydrogenThrust"));

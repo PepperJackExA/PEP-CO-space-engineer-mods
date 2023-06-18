@@ -3,45 +3,79 @@ using Sandbox.Definitions;
 using VRage.Game;
 using VRage.Game.Components;
 
-namespace PEPCO_IndustrialOverhaulEnginesRebalance
+namespace PEPCO.IndustrialOverhaulEnginesRebalance
 {
 
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
-    public class GasChanges_Session : MySessionComponentBase
+    public class PEPCO_Session : MySessionComponentBase
 
     {
+        
         public override void LoadData()
         {
-            
-            LGGasolineIOEngines(new MyDefinitionId(typeof(MyObjectBuilder_HydrogenEngine), "LargeGasolineEngine"));
-            SGGasolineIOEngines(new MyDefinitionId(typeof(MyObjectBuilder_HydrogenEngine), "SmallGasolineEngine"));
+            // Gasoline
+            LGIndustiralOverhaulGasolineEngines(new MyDefinitionId(typeof(MyObjectBuilder_HydrogenEngine), "LargeGasolineEngine"));
+            SGIndustiralOverhaulGasolineEngines(new MyDefinitionId(typeof(MyObjectBuilder_HydrogenEngine), "SmallGasolineEngine"));
+
+            // Steam
+            LGIndustiralOverhaulSteamEngines(new MyDefinitionId(typeof(MyObjectBuilder_HydrogenEngine), "SteamTurbine"));
+            LGIndustiralOverhaulSteamEngines(new MyDefinitionId(typeof(MyObjectBuilder_HydrogenEngine), "SteamTurbineMirrored"));
+
+            // Fusion Reactor
+            LGIndustiralOverhaulFusionReactorEngines(new MyDefinitionId(typeof(MyObjectBuilder_HydrogenEngine), "FusionReactor"));
+
 
         }
-
-        private void LGGasolineIOEngines(MyDefinitionId definitionId)
+        // Gasoline
+        private void LGIndustiralOverhaulGasolineEngines(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyHydrogenEngineDefinition;
-            definition.MaxPowerOutput *= 1; //15
-            definition.FuelProductionToCapacityMultiplier *= 1; //10
-            definition.FuelCapacity *=  1; //10
+            definition.MaxPowerOutput *= 1; //5
+            definition.FuelProductionToCapacityMultiplier *= 1;//0.025
+            definition.FuelCapacity *= 1; //100
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Fuel Type: " + definition.Fuel.FuelId.SubtypeId + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
                                         "Fuel Pro to Cap Mult: " + definition.FuelProductionToCapacityMultiplier + "\n" +
                                         "Max Fuel Capacity: " + definition.FuelCapacity + "L";
         }
-        private void SGGasolineIOEngines(MyDefinitionId definitionId)
+        private void SGIndustiralOverhaulGasolineEngines(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyHydrogenEngineDefinition;
-            definition.MaxPowerOutput *= 1; //1.5
-            definition.FuelProductionToCapacityMultiplier *= 1; //10
-            definition.FuelCapacity *= 1; //10
+            definition.MaxPowerOutput *= 1; //0.5
+            definition.FuelProductionToCapacityMultiplier *= 1; //0.025
+            definition.FuelCapacity *= 1; //100
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Fuel Type: " + definition.Fuel.FuelId.SubtypeId + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
                                         "Fuel Pro to Cap Mult: " + definition.FuelProductionToCapacityMultiplier + "\n" +
                                         "Max Fuel Capacity: " + definition.FuelCapacity + "L";
         }
-
+        // Steam
+        private void LGIndustiralOverhaulSteamEngines(MyDefinitionId definitionId)
+        {
+            var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyHydrogenEngineDefinition;
+            definition.MaxPowerOutput *= 1; //5
+            definition.FuelProductionToCapacityMultiplier *= 1;//0.025
+            definition.FuelCapacity *= 1; //100
+            definition.DescriptionEnum = null;
+            definition.DescriptionString = "Fuel Type: " + definition.Fuel.FuelId.SubtypeId + "\n" +
+                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
+                                        "Fuel Pro to Cap Mult: " + definition.FuelProductionToCapacityMultiplier + "\n" +
+                                        "Max Fuel Capacity: " + definition.FuelCapacity + "L";
+        }
+        // Fusion
+        private void LGIndustiralOverhaulFusionReactorEngines(MyDefinitionId definitionId)
+        {
+            var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyHydrogenEngineDefinition;
+            definition.MaxPowerOutput *= 1; //5
+            definition.FuelProductionToCapacityMultiplier *= 1;//0.025
+            definition.FuelCapacity *= 1; //100
+            definition.DescriptionEnum = null;
+            definition.DescriptionString = "Fuel Type: " + definition.Fuel.FuelId.SubtypeId + "\n" +
+                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
+                                        "Fuel Pro to Cap Mult: " + definition.FuelProductionToCapacityMultiplier + "\n" +
+                                        "Max Fuel Capacity: " + definition.FuelCapacity + "L";
+        }
     }
 }

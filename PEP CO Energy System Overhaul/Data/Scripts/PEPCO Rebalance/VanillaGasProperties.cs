@@ -28,7 +28,7 @@ namespace PEPCO.VanillaGasPropertiesRebalance
         private void VanillaOxygenGas(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyGasProperties;
-            definition.EnergyDensity *= 1; //0
+            definition.EnergyDensity = 1; //0
         }
     }
 }

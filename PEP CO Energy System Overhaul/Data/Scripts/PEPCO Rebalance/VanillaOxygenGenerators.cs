@@ -11,7 +11,7 @@ namespace PEPCO.VanillaOxygenGeneratorRebalance
     {
         public override void LoadData()
         {
-
+            // H2O2 Generators
             LGVanillaOxygenGenerator(new MyDefinitionId(typeof(MyObjectBuilder_OxygenGenerator), ""));
             SGVanillaOxygenGenerator(new MyDefinitionId(typeof(MyObjectBuilder_OxygenGenerator), "OxygenGeneratorSmall"));
             

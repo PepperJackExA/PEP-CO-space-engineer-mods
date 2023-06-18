@@ -4,147 +4,163 @@ using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.ObjectBuilders.Definitions;
 
-namespace PEPCO_IndustrialOverhaulBatteriesRebalance
+namespace PEPCO.IndustrialOverhaulBatteriesRebalance
 {
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
-    public class GasChanges_Session : MySessionComponentBase
+    public class PEPCO_Session : MySessionComponentBase
     {
         public override void LoadData()
         {
+            // Alkaline
+            LGIndustiralOverhaulAlkalineBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "LargeBlockAlkalineBatteryBlock"));
 
-            LGAcidIOBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "LargeBlockAcidBatteryBlock"));
-            SGAcidIOBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockAcidBatteryBlock"));
-            SGAcidIOSmallBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockSmallAcidBatteryBlock"));
+            SGVIndustrialOverhaulSmallAlkalineBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockSmallAlkalineBatteryBlock"));
 
-            LGAlkalineIOBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "LargeBlockAlkalineBatteryBlock"));
-            SGAlkalineIOSmallBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockSmallAlkalineBatteryBlock"));
+            // Acid
+            LGIndustiralOverhaulAcidBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "LargeBlockAcidBatteryBlock"));
 
-            LGIOCapacitor(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "LargeCapacitor"));
-            SGIOCapacitor(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallCapacitor"));
+            SGVIndustrialOverhaulAcidBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockAcidBatteryBlock"));
+            
+            SGVIndustrialOverhaulSmallAcidBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockSmallAcidBatteryBlock"));
 
-            LGIOElectronMatrix(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "LargeElectronMatrix"));
-            SGIOElectronMatrix(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallElectronMatrix"));
+            // Capacitor
 
+            LGIndustiralOverhaulCapacitorBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "LargeCapacitor"));
 
+            SGVIndustrialOverhaulCapacitorBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallCapacitor"));
 
+            // Electron-Matrix Bank
+
+            LGIndustiralOverhaulElectronMatrixBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "LargeElectronMatrix"));
+
+            SGVIndustrialOverhaulElectronMatrixBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallElectronMatrix"));
         }
 
-        private void LGAcidIOBattery(MyDefinitionId definitionId)
+        // Alkaline
+        private void LGIndustiralOverhaulAlkalineBattery(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
             definition.PCU *= 1; //15
-            definition.MaxStoredPower *= 1; //1.5
-            definition.MaxPowerOutput *= 1; //6
-            definition.RequiredPowerInput *= 1; //6
-            definition.InitialStoredPowerRatio = 0;
+            definition.MaxStoredPower *= 1; //3
+            definition.MaxPowerOutput *= 1; //12
+            definition.RequiredPowerInput *= 1; //12
+            definition.InitialStoredPowerRatio *= 1;
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
                                         "Max Input Power: " + definition.RequiredPowerInput + "MW";
         }
-        private void SGAcidIOBattery(MyDefinitionId definitionId)
-        {
-            var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
-            definition.PCU *= 1; //15
-            definition.MaxStoredPower *= 1; //0.5
-            definition.MaxPowerOutput *= 1; //2
-            definition.RequiredPowerInput *= 1; //2
-            definition.InitialStoredPowerRatio = 0;
-            definition.DescriptionEnum = null;
-            definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
-                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
-                                        "Max Input Power: " + definition.RequiredPowerInput + "MW";
-        }
-        private void SGAcidIOSmallBattery(MyDefinitionId definitionId)
+        private void SGVIndustrialOverhaulSmallAlkalineBattery(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
             definition.PCU *= 1; //15
             definition.MaxStoredPower *= 1; //0.05
-            definition.MaxPowerOutput *= 1; //0.1
-            definition.RequiredPowerInput *= 1; //0.1
-            definition.InitialStoredPowerRatio = 0;
+            definition.MaxPowerOutput *= 1; //0.2
+            definition.RequiredPowerInput *= 1; //0.2
+            definition.InitialStoredPowerRatio *= 1;
+            definition.DescriptionEnum = null;
+            definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
+                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
+                                        "Max Input Power: " + definition.RequiredPowerInput + "MW";
+
+        }
+
+        // Acid
+        private void LGIndustiralOverhaulAcidBattery(MyDefinitionId definitionId)
+        {
+            var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
+            definition.PCU *= 1; //15
+            definition.MaxStoredPower *= 1; //3
+            definition.MaxPowerOutput *= 1; //12
+            definition.RequiredPowerInput *= 1; //12
+            definition.InitialStoredPowerRatio *= 1;
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
                                         "Max Input Power: " + definition.RequiredPowerInput + "MW";
         }
-        private void LGAlkalineIOBattery(MyDefinitionId definitionId)
+        private void SGVIndustrialOverhaulAcidBattery(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
             definition.PCU *= 1; //15
             definition.MaxStoredPower *= 1; //1
-            definition.MaxPowerOutput *= 1; //6
-            definition.RequiredPowerInput *= 1; //0
-            definition.InitialStoredPowerRatio = 100;
+            definition.MaxPowerOutput *= 1; //4
+            definition.RequiredPowerInput *= 1; //4
+            definition.InitialStoredPowerRatio *= 1;
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
                                         "Max Input Power: " + definition.RequiredPowerInput + "MW";
         }
-        private void SGAlkalineIOSmallBattery(MyDefinitionId definitionId)
+        private void SGVIndustrialOverhaulSmallAcidBattery(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
             definition.PCU *= 1; //15
-            definition.MaxStoredPower *= 1; //0.02
-            definition.MaxPowerOutput *= 1; //0.1
-            definition.RequiredPowerInput *= 1; //0
-            definition.InitialStoredPowerRatio = 100;
+            definition.MaxStoredPower *= 1; //0.05
+            definition.MaxPowerOutput *= 1; //0.2
+            definition.RequiredPowerInput *= 1; //0.2
+            definition.InitialStoredPowerRatio *= 1;
+            definition.DescriptionEnum = null;
+            definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
+                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
+                                        "Max Input Power: " + definition.RequiredPowerInput + "MW";
+
+        }
+        // Capacitor
+        private void LGIndustiralOverhaulCapacitorBattery(MyDefinitionId definitionId)
+        {
+            var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
+            definition.PCU *= 1; //15
+            definition.MaxStoredPower *= 1; //3
+            definition.MaxPowerOutput *= 1; //12
+            definition.RequiredPowerInput *= 1; //12
+            definition.InitialStoredPowerRatio *= 1;
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
                                         "Max Input Power: " + definition.RequiredPowerInput + "MW";
         }
-        private void LGIOCapacitor(MyDefinitionId definitionId)
+        private void SGVIndustrialOverhaulCapacitorBattery(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
             definition.PCU *= 1; //15
-            definition.MaxStoredPower *= 1; //0.1
-            definition.MaxPowerOutput *= 1; //250
-            definition.RequiredPowerInput *= 1; //50
-            definition.InitialStoredPowerRatio = 0;
+            definition.MaxStoredPower *= 1; //0.05
+            definition.MaxPowerOutput *= 1; //0.2
+            definition.RequiredPowerInput *= 1; //0.2
+            definition.InitialStoredPowerRatio *= 1;
+            definition.DescriptionEnum = null;
+            definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
+                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
+                                        "Max Input Power: " + definition.RequiredPowerInput + "MW";
+
+        }
+        // ElectronMatrix
+        private void LGIndustiralOverhaulElectronMatrixBattery(MyDefinitionId definitionId)
+        {
+            var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
+            definition.PCU *= 1; //15
+            definition.MaxStoredPower *= 1; //3
+            definition.MaxPowerOutput *= 1; //12
+            definition.RequiredPowerInput *= 1; //12
+            definition.InitialStoredPowerRatio *= 1;
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
                                         "Max Input Power: " + definition.RequiredPowerInput + "MW";
         }
-        private void SGIOCapacitor(MyDefinitionId definitionId)
+        private void SGVIndustrialOverhaulElectronMatrixBattery(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
             definition.PCU *= 1; //15
-            definition.MaxStoredPower *= 1; //0.01
-            definition.MaxPowerOutput *= 1; //25
-            definition.RequiredPowerInput *= 1; //5
-            definition.InitialStoredPowerRatio = 0;
+            definition.MaxStoredPower *= 1; //0.05
+            definition.MaxPowerOutput *= 1; //0.2
+            definition.RequiredPowerInput *= 1; //0.2
+            definition.InitialStoredPowerRatio *= 1;
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
                                         "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
                                         "Max Input Power: " + definition.RequiredPowerInput + "MW";
-        }
-        private void LGIOElectronMatrix(MyDefinitionId definitionId)
-        {
-            var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
-            definition.PCU *= 1; //15
-            definition.MaxStoredPower *= 1; //250
-            definition.MaxPowerOutput *= 1; //50
-            definition.RequiredPowerInput *= 1; //50
-            definition.InitialStoredPowerRatio = 0;
-            definition.DescriptionEnum = null;
-            definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
-                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
-                                        "Max Input Power: " + definition.RequiredPowerInput + "MW";
-        }
-        private void SGIOElectronMatrix(MyDefinitionId definitionId)
-        {
-            var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyBatteryBlockDefinition;
-            definition.PCU *= 1; //15
-            definition.MaxStoredPower *= 1; //25
-            definition.MaxPowerOutput *= 1; //5
-            definition.RequiredPowerInput *= 1; //5
-            definition.InitialStoredPowerRatio = 0;
-            definition.DescriptionEnum = null;
-            definition.DescriptionString = "Maxed Stored Power: " + definition.MaxStoredPower + "MWh" + "\n" +
-                                        "Maxed Power Output: " + definition.MaxPowerOutput + "MW" + "\n" +
-                                        "Max Input Power: " + definition.RequiredPowerInput + "MW";
+
         }
     }
 }
