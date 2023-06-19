@@ -7,7 +7,7 @@ using VRage;
 using VRage.Utils;
 using System;
 
-namespace PEPCO.VanillaBlueprintDefinitionsRebalance
+namespace PEPCO.IndustrialOverhaulBlueprintDefinitionsRebalance
 {
 
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]

@@ -29,7 +29,7 @@ namespace PEPCO.VanillaBlueprintDefinitionsRebalance
             // Add more Prerequisites
             var newPrerequisite = new MyBlueprintDefinitionBase.Item[definition.Prerequisites.Length + 1];
             newPrerequisite[1] = new MyBlueprintDefinitionBase.Item();
-            newPrerequisite[1].Id = MyDefinitionId.Parse("MyObjectBuilder_Ore/Gold");
+            newPrerequisite[1].Id = MyDefinitionId.Parse("MyObjectBuilder_Ingot/Gold");
             newPrerequisite[1].Amount = 10;
             definition.Prerequisites = newPrerequisite;
             // Prerequisites

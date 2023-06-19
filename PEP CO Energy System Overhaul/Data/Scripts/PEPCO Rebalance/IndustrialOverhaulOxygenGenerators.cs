@@ -64,7 +64,7 @@ namespace PEPCO.IndustrialOverhaulOxygenGeneratorRebalance
             definition.IceConsumptionPerSecond *= 1; // 10
             
             definition.OperationalPowerConsumption *= 1; // 2 MW
-            definition.BlueprintClasses.;
+
             string gas1 = "Gasoline";
             int gas1ratio = 8; //8
 

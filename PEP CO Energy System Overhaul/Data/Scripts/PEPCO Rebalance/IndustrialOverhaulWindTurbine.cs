@@ -3,7 +3,7 @@ using Sandbox.Definitions;
 using VRage.Game;
 using VRage.Game.Components;
 
-namespace PEPCO.VanillaEnginesRebalance
+namespace PEPCO.IndustrialOverhaulWindTurbineRebalance
 {
 
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
