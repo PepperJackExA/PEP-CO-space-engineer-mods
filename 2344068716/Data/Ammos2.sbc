@@ -70,6 +70,9 @@
                 <MissileHealthPool>10000</MissileHealthPool>
                 <MissileTrailEffect>LargeCalibreGun_TracerAP</MissileTrailEffect>
                 <MissileGravityEnabled>true</MissileGravityEnabled>
+                <MissileRicochetAngle>70</MissileRicochetAngle>
+                <MissileRicochetDamage>7000</MissileRicochetDamage>
+                <MissileRicochetProbability>0.5</MissileRicochetProbability>
             </MissileProperties>
         </Ammo>
 
@@ -124,6 +127,9 @@
                 <MissileHealthPool>15000</MissileHealthPool>
                 <MissileTrailEffect>LargeCalibreGun_TracerDUAP</MissileTrailEffect>
                 <MissileGravityEnabled>true</MissileGravityEnabled>
+                <MissileRicochetAngle>70</MissileRicochetAngle>
+                <MissileRicochetDamage>7000</MissileRicochetDamage>
+                <MissileRicochetProbability>0.25</MissileRicochetProbability>
             </MissileProperties>
         </Ammo>
 
@@ -151,6 +157,9 @@
                 <MissileHealthPool>4000</MissileHealthPool>
                 <MissileTrailEffect>MediumCalibreGun_TracerAP</MissileTrailEffect>
                 <MissileGravityEnabled>true</MissileGravityEnabled>
+                <MissileRicochetAngle>65</MissileRicochetAngle>
+                <MissileRicochetDamage>2000</MissileRicochetDamage>
+                <MissileRicochetProbability>0.5</MissileRicochetProbability>
             </MissileProperties>
         </Ammo>
 
@@ -205,6 +214,9 @@
                 <MissileHealthPool>6000</MissileHealthPool>
                 <MissileTrailEffect>MediumCalibreGun_TracerDUAP</MissileTrailEffect>
                 <MissileGravityEnabled>true</MissileGravityEnabled>
+                <MissileRicochetAngle>65</MissileRicochetAngle>
+                <MissileRicochetDamage>2000</MissileRicochetDamage>
+                <MissileRicochetProbability>0.25</MissileRicochetProbability>
             </MissileProperties>
         </Ammo>
 

@@ -62,7 +62,7 @@
                         <TypeId>GasProperties</TypeId>
                         <SubtypeId>Steam</SubtypeId>
                     </Id>
-                    <IceToGasRatio>0.025</IceToGasRatio>
+                    <IceToGasRatio>1.25</IceToGasRatio>
                 </GasInfo>
             </ProducedGases>
             <BlueprintClasses>
@@ -80,9 +80,9 @@
 			<MirroringZ>Y</MirroringZ>
             <PCU>50</PCU>
             <TieredUpdateTimes>
-                <unsignedInt>100</unsignedInt>
-                <unsignedInt>500</unsignedInt>
-                <unsignedInt>750</unsignedInt>
+                <unsignedInt>10</unsignedInt>
+                <unsignedInt>60</unsignedInt>
+                <unsignedInt>240</unsignedInt>
             </TieredUpdateTimes>
         </Definition>
   
@@ -194,6 +194,15 @@
       <CriticalComponent Subtype="Computer" Index="0" />
         <MountPoints>
             <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
+            <MountPoint Side="Bottom" StartX="0.35" StartY="0.35" EndX="0.65" EndY="0.65" />
+            <MountPoint Side="Front" StartX="0.1" StartY="0.1" EndX="0.2" EndY="1.5" />
+            <MountPoint Side="Back" StartX="0.1" StartY="0.1" EndX="0.2" EndY="1.5" />
+            <MountPoint Side="Left" StartX="0.1" StartY="0.1" EndX="0.2" EndY="1.5" />
+            <MountPoint Side="Right" StartX="0.1" StartY="0.1" EndX="0.2" EndY="1.5" />
+            <MountPoint Side="Front" StartX="0.8" StartY="0.1" EndX="0.9" EndY="1.5" />
+            <MountPoint Side="Back" StartX="0.8" StartY="0.1" EndX="0.9" EndY="1.5" />
+            <MountPoint Side="Left" StartX="0.8" StartY="0.1" EndX="0.9" EndY="1.5" />
+            <MountPoint Side="Right" StartX="0.8" StartY="0.1" EndX="0.9" EndY="1.5" />
         </MountPoints>
       <BuildProgressModels>
 		<Model BuildPercentUpperBound="1.00" File="Models\Construct\GeothermalWellTipConstruct3.mwm" />
