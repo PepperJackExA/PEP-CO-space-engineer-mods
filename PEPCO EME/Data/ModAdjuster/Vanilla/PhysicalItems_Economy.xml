@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<PhysicalItems>
+		<PhysicalItem xsi:type="MyObjectBuilder_DatapadDefinition">
+			<Id>
+				<TypeId>Datapad</TypeId>
+				<SubtypeId>Datapad</SubtypeId>
+			</Id>
+			<Public>false</Public>
+			<DisplayName>zzVanilla_Datapad</DisplayName>
+		</PhysicalItem>
+
+		<PhysicalItem xsi:type="MyObjectBuilder_PackageDefinition">
+			<Id>
+				<TypeId>Package</TypeId>
+				<SubtypeId>Package</SubtypeId>
+			</Id>
+			<Public>false</Public>
+			<DisplayName>zzVanilla_Package</DisplayName>
+		</PhysicalItem>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Medkit</SubtypeId>
+			</Id>
+			<Public>false</Public>
+			<DisplayName>zzVanilla_Medkit</DisplayName>
+		</PhysicalItem>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Powerkit</SubtypeId>
+			</Id>
+			<Public>false</Public>
+			<DisplayName>zzVanilla_Powerkit</DisplayName>
+		</PhysicalItem>
+		<PhysicalItem xsi:type="MyObjectBuilder_PhysicalItemDefinition">
+			<Id>
+				<TypeId>PhysicalObject</TypeId>
+				<SubtypeId>SpaceCredit</SubtypeId>
+			</Id>
+			<Public>false</Public>
+			<DisplayName>zzVanilla_SpaceCredit</DisplayName>
+		</PhysicalItem>
+	</PhysicalItems>
+</Definitions>

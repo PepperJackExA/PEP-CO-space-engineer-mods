@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<!-- Decorative Blocks -->
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>LargeBlockWeaponRack</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>SmallBlockWeaponRack</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>FireCover</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>FireCoverCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>HalfWindow</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>HalfWindowInv</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>HalfWindowCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>HalfWindowCornerInv</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>HalfWindowDiagonal</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>HalfWindowRound</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Embrasure</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>PassageSciFi</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>PassageSciFiWall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>PassageSciFiIntersection</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>PassageSciFiGate</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>PassageSciFiLight</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>PassageScifiCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>PassageSciFiTjunction</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>PassageSciFiWindow</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+
+		<!-- End of Decorative Blocks -->
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

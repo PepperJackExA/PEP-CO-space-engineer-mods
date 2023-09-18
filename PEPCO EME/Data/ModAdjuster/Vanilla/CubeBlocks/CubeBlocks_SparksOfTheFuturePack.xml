@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+
+		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+			<Id>
+				<TypeId>TextPanel</TypeId>
+				<SubtypeId>LargeLCDPanel5x5</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+			<Id>
+				<TypeId>TextPanel</TypeId>
+				<SubtypeId>LargeLCDPanel5x3</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+			<Id>
+				<TypeId>TextPanel</TypeId>
+				<SubtypeId>LargeLCDPanel3x3</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeBlockSciFiWall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesStraight1</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesStraight2</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesBendUp</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesBendDown</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesStraightEnd1</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesStraightEnd2</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesStraightDown</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesU</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesT</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>LargeNeonTubesCircle</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>SmallNeonTubesStraight1</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>SmallNeonTubesStraight2</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>SmallNeonTubesCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>SmallNeonTubesBendUp</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>SmallNeonTubesBendDown</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>SmallNeonTubesStraightDown</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>SmallNeonTubesStraightEnd1</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>SmallNeonTubesU</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>SmallNeonTubesT</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>EmissiveBlock</TypeId>
+				<SubtypeId>SmallNeonTubesCircle</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>TerminalBlock</TypeId>
+				<SubtypeId>LargeBlockSciFiTerminal</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+			<Id>
+				<TypeId>ButtonPanel</TypeId>
+				<SubtypeId>LargeSciFiButtonTerminal</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+			<Id>
+				<TypeId>Door</TypeId>
+				<SubtypeId>SmallSideDoor</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_PlanterDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeBlockBarCounter</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_PlanterDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeBlockBarCounterCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+			<Id>
+				<TypeId>ButtonPanel</TypeId>
+				<SubtypeId>LargeSciFiButtonPanel</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<!-- Region Thrusters-->
+
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockSmallThrustSciFi</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockLargeThrustSciFi</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockSmallThrustSciFi</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockLargeThrustSciFi</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<!--Atmospheric Thrusters-->
+
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockLargeAtmosphericThrustSciFi</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockSmallAtmosphericThrustSciFi</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockLargeAtmosphericThrustSciFi</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockSmallAtmosphericThrustSciFi</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<!-- End Region Thrust-->
+
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

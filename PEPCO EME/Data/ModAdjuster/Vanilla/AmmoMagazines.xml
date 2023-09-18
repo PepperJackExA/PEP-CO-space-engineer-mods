@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<AmmoMagazines>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>SemiAutoPistolMagazine</SubtypeId>
+			</Id><Public>false</Public>
+			<DisplayName>zzVanilla_SemiAutoPistolMagazine</DisplayName>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>FullAutoPistolMagazine</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>ElitePistolMagazine</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>AutomaticRifleGun_Mag_20rd</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>RapidFireAutomaticRifleGun_Mag_50rd</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>PreciseAutomaticRifleGun_Mag_5rd</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>UltimateAutomaticRifleGun_Mag_30rd</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+		<!--
+        <AmmoMagazine>
+            <Id>
+                <TypeId>AmmoMagazine</TypeId>
+                <SubtypeId>InteriorTurret_Mag_100rd</SubtypeId>
+            </Id><Public>false</Public>
+            <DisplayName>zzVanilla_InteriorTurret_Mag_100rd</DisplayName>
+            <Icon>Textures\GUI\Icons\ammo\ammo\Ammo_Box.dds</Icon>
+            <Size>
+                <X>0.25</X>
+                <Y>0.2</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>3</Mass>
+            <Volume>1</Volume>
+            <Model>Models\Weapons\Ammo_Box.mwm</Model>
+            <PhysicalMaterial>Ammo</PhysicalMaterial>
+            <Capacity>100</Capacity>
+            <AmmoDefinitionId Subtype="SmallCaliber" />
+
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>2000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </AmmoMagazine>
+        -->
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>NATO_5p56x45mm</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>AutocannonClip</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>NATO_25x184mm</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>Missile200mm</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>LargeCalibreAmmo</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>MediumCalibreAmmo</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>LargeRailgunAmmo</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>SmallRailgunAmmo</SubtypeId>
+			</Id><Public>false</Public>
+		</AmmoMagazine>
+
+	</AmmoMagazines>
+</Definitions>

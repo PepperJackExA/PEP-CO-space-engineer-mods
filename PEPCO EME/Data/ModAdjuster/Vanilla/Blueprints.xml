@@ -1,0 +1,691 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Blueprints>
+		<!-- Resource Processing -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>StoneOreToIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0010_StoneOreToIngotBasic</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>StoneOreToIngot_Deconstruction</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>IronOreToIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>NickelOreToIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>CobaltOreToIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>MagnesiumOreToIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SiliconOreToIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SilverOreToIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>GoldOreToIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>PlatinumOreToIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>UraniumOreToIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>ScrapIngotToIronIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>ScrapToIronIngot</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>IceToOxygen</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>OxygenBottlesRefill</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>HydrogenBottlesRefill</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+
+		<!-- Components -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>ConstructionComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+
+
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>GirderComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>MetalGrid</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>InteriorPlate</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SteelPlate</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SmallTube</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>LargeTube</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>MotorComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Display</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>BulletproofGlass</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>ComputerComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>ReactorComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>ThrustComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>GravityGeneratorComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>MedicalComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>RadioCommunicationComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>DetectorComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>ExplosivesComponent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SolarCell</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>PowerCell</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Superconductor</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+
+		<!-- Equipment -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0010_OxygenBottle</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0020_HydrogenBottle</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0030_Canvas</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<!-- Datapad blueprint is in Blueprints_Economy.sbc -->
+
+
+		<!-- Weapons -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0010_SemiAutoPistol</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0020_FullAutoPistol</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0030_EliteAutoPistol</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0040_AutomaticRifle</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0050_RapidFireAutomaticRifle</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0060_PreciseAutomaticRifle</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0070_UltimateAutomaticRifle</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0080_BasicHandHeldLauncher</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0090_AdvancedHandHeldLauncher</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+
+		<!-- Tools -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0010_AngleGrinder</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0020_AngleGrinder2</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0030_AngleGrinder3</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0040_AngleGrinder4</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0050_HandDrill</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0060_HandDrill2</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0070_HandDrill3</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0080_HandDrill4</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0090_Welder</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0100_Welder2</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0110_Welder3</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0120_Welder4</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+
+		<!-- Ammo -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0010_SemiAutoPistolMagazine</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0020_FullAutoPistolMagazine</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0030_ElitePistolMagazine</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0040_AutomaticRifleGun_Mag_20rd</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0050_RapidFireAutomaticRifleGun_Mag_50rd</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0060_PreciseAutomaticRifleGun_Mag_5rd</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0070_UltimateAutomaticRifleGun_Mag_30rd</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<!--
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>InteriorTurret_Mag_100rd</SubtypeId>
+			</Id><Public>false</Public>
+			<DisplayName>DisplayName_Item_InteriorTurret_Mag_100rd</DisplayName>
+			<Icon>Textures\GUI\Icons\ammo\Rifle_Ammo.dd</Icon>
+			<Prerequisites>
+				<Item Amount="4" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="1" TypeId="Ingot" SubtypeId="Nickel" />
+				<Item Amount="0.75" TypeId="Ingot" SubtypeId="Magnesium" />
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="InteriorTurret_Mag_100rd" />
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+		-->
+
+		<!--
+		<Blueprint>
+		  <Id>
+			<TypeId>BlueprintDefinition</TypeId>
+			<SubtypeId>NATO_5p56x45mmMagazine</SubtypeId>
+		  </Id><Public>false</Public>
+		  <DisplayName>DisplayName_Item_NATO_5p56x45mm</DisplayName>
+		  <Icon>Textures\GUI\Icons\ammo\Rifle_Ammo.dds</Icon>
+		  <Prerequisites>
+			<Item Amount="0.8" TypeId="Ingot" SubtypeId="Iron" />
+			<Item Amount="0.2" TypeId="Ingot" SubtypeId="Nickel" />
+			<Item Amount="0.15" TypeId="Ingot" SubtypeId="Magnesium" />
+		  </Prerequisites>
+		  <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="NATO_5p56x45mm" />
+		  <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+		-->
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0080_NATO_25x184mmMagazine</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0090_AutocannonClip</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0100_Missile200mm</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0110_MediumCalibreAmmo</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0120_LargeCalibreAmmo</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0130_SmallRailgunAmmo</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Position0140_LargeRailgunAmmo</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+
+		<!-- Special Items -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>ZoneChip</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EngineerPlushie</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SabiroidPlushie</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Blueprint>
+
+	</Blueprints>
+</Definitions>

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<!-- Decorative Blocks -->
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>LargeBlockDesk</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>LargeBlockDeskCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>LargeBlockDeskCornerInv</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeBlockDeskChairless</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeBlockDeskChairlessCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeBlockDeskChairlessCornerInv</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_KitchenDefinition">
+			<Id>
+				<TypeId>Kitchen</TypeId>
+				<SubtypeId>LargeBlockKitchen</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+			<Id>
+				<TypeId>CryoChamber</TypeId>
+				<SubtypeId>LargeBlockBed</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>LargeBlockLockerRoom</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>LargeBlockLockerRoomCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_PlanterDefinition">
+			<Id>
+				<TypeId>Planter</TypeId>
+				<SubtypeId>LargeBlockPlanters</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>LargeBlockCouch</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>LargeBlockCouchCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>LargeBlockLockers</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>LargeBlockBathroomOpen</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>LargeBlockBathroom</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>LargeBlockToilet</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ProjectorDefinition">
+			<Id>
+				<TypeId>Projector</TypeId>
+				<SubtypeId>LargeBlockConsole</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>SmallBlockCockpitIndustrial</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>LargeBlockCockpitIndustrial</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<!-- End of Decorative Blocks -->
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+			<Id>
+				<TypeId>Door</TypeId>
+				<SubtypeId />
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+			<Id>
+				<TypeId>Door</TypeId>
+				<SubtypeId>SmallDoor</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+			<Id>
+				<TypeId>AirtightHangarDoor</TypeId>
+				<SubtypeId />
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_AirtightSlideDoorDefinition">
+			<Id>
+				<TypeId>AirtightSlideDoor</TypeId>
+				<SubtypeId>LargeBlockSlideDoor</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<!-- Region Blast Doors -->
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>ArmorCenter</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>ArmorCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>ArmorInvCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>ArmorSide</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SmallArmorCenter</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SmallArmorCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SmallArmorInvCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SmallArmorSide</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<!-- Region Blast Doors End -->
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

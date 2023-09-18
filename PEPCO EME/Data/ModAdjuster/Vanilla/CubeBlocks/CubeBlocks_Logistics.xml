@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+			<Id>
+				<TypeId>OxygenTank</TypeId>
+				<SubtypeId>OxygenTankSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+			<Id>
+				<TypeId>OxygenTank</TypeId>
+				<SubtypeId />
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+			<Id>
+				<TypeId>OxygenTank</TypeId>
+				<SubtypeId>LargeHydrogenTank</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+			<Id>
+				<TypeId>OxygenTank</TypeId>
+				<SubtypeId>LargeHydrogenTankSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+			<Id>
+				<TypeId>OxygenTank</TypeId>
+				<SubtypeId>SmallHydrogenTank</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+			<Id>
+				<TypeId>OxygenTank</TypeId>
+				<SubtypeId>SmallHydrogenTankSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
+			<Id>
+				<TypeId>AirVent</TypeId>
+				<SubtypeId />
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
+			<Id>
+				<TypeId>AirVent</TypeId>
+				<SubtypeId>AirVentFull</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
+			<Id>
+				<TypeId>AirVent</TypeId>
+				<SubtypeId>SmallAirVent</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
+			<Id>
+				<TypeId>AirVent</TypeId>
+				<SubtypeId>SmallAirVentFull</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<!-- Region Cargo Container-->
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>SmallBlockSmallContainer</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>SmallBlockMediumContainer</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>SmallBlockLargeContainer</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>LargeBlockSmallContainer</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>LargeBlockLargeContainer</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<!-- End Region Cargo Container-->
+
+		<!-- Region Conveyor system -->
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>SmallBlockConveyor</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>SmallBlockConveyorConverter</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>LargeBlockConveyor</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_PoweredCargoContainerDefinition">
+			<Id>
+				<TypeId>Collector</TypeId>
+				<SubtypeId>Collector</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition  xsi:type="MyObjectBuilder_PoweredCargoContainerDefinition">
+			<Id>
+				<TypeId>Collector</TypeId>
+				<SubtypeId>CollectorSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+			<Id>
+				<TypeId>ShipConnector</TypeId>
+				<SubtypeId>Connector</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+			<Id>
+				<TypeId>ShipConnector</TypeId>
+				<SubtypeId>ConnectorSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+			<Id>
+				<TypeId>ShipConnector</TypeId>
+				<SubtypeId>ConnectorMedium</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorTube</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorTubeDuct</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorTubeDuctCurved</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>ConveyorTubeDuctT</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorTubeSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorTubeDuctSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorTubeDuctSmallCurved</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>ConveyorTubeDuctSmallT</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorTubeMedium</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorFrameMedium</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorTubeCurved</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorTubeSmallCurved</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>ConveyorTubeCurvedMedium</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>SmallShipConveyorHub</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>ConveyorTubeSmallT</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>Conveyor</TypeId>
+				<SubtypeId>ConveyorTubeT</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>LargeBlockConveyorSorter</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>MediumBlockConveyorSorter</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>SmallBlockConveyorSorter</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeBlockConveyorCap</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SmallBlockConveyorCapMedium</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SmallBlockConveyorCap</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+
+		<!-- End Region Conveyor system -->
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

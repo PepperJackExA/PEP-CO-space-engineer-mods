@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlueprintClasses>
+
+	
+
+		<!-- Basic Assembler -->
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>EME_SimpleComponents</SubtypeId>
+            </Id>
+            <DisplayName>EME Components</DisplayName>
+            <Description>Description_BlueprintClass_Components</Description>
+            <Icon>Textures\GUI\Icons\buttons\component.dds</Icon>
+            <FocusIcon>Textures\GUI\Icons\buttons\component.dds</FocusIcon>
+            <HighlightIcon>Textures\GUI\Icons\buttons\component_focus.dds</HighlightIcon>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
+        </Class>
+
+    </BlueprintClasses>	
+
+    <BlueprintClassEntries>
+
+		<!-- Basic Assembler -->
+        <Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoBrick" />
+		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoPlates" />
+		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoFasteners" />
+		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoScrews" />
+		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoRod" />
+		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoStruts" />
+		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoTies" />
+		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoRope" />
+		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoWire" />
+
+	</BlueprintClassEntries>
+</Definitions>

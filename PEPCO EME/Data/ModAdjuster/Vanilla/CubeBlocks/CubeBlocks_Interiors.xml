@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>Passage</TypeId>
+				<SubtypeId />
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Passage2</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Passage2Wall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeStairs</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeRamp</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeSteelCatwalk</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeSteelCatwalk2Sides</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeSteelCatwalkCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeSteelCatwalkPlate</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeCoverWall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeCoverWallHalf</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeCoverWallHalfMirrored</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeBlockInteriorWall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeInteriorPillar</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>PassengerSeatLarge</SubtypeId>
+				<!-- Large block passenger seat -->
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>PassengerSeatSmall</SubtypeId>
+				<!-- Small block passenger seat -->
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>PassengerSeatSmallNew</SubtypeId>
+				<!-- Small block passenger seat -->
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>PassengerSeatSmallOffset</SubtypeId>
+				<!-- Small block passenger seat -->
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>Ladder2</TypeId>
+				<SubtypeId />
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>Ladder2</TypeId>
+				<SubtypeId>LadderShaft</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>Ladder2</TypeId>
+				<SubtypeId>LadderSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>AirDuct1</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>AirDuct2</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>AirDuctLight</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>AirDuctCorner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>AirDuctT</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>AirDuctX</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>AirDuctRamp</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>AirDuctGrate</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

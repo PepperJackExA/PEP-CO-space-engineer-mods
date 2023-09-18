@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+			<Id>
+				<TypeId>Refinery</TypeId>
+				<SubtypeId>LargeRefinery</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+			<Id>
+				<TypeId>Refinery</TypeId>
+				<SubtypeId>Blast Furnace</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+			<Id>
+				<TypeId>OxygenGenerator</TypeId>
+				<SubtypeId></SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+			<Id>
+				<TypeId>OxygenGenerator</TypeId>
+				<SubtypeId>OxygenGeneratorSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+			<Id>
+				<TypeId>Assembler</TypeId>
+				<SubtypeId>LargeAssembler</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+			<Id>
+				<TypeId>Assembler</TypeId>
+				<SubtypeId>BasicAssembler</SubtypeId>
+			</Id>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_SurvivalKitDefinition">
+			<Id>
+				<TypeId>SurvivalKit</TypeId>
+				<SubtypeId>SurvivalKitLarge</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_SurvivalKitDefinition">
+			<Id>
+				<TypeId>SurvivalKit</TypeId>
+				<SubtypeId>SurvivalKit</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_OxygenFarmDefinition">
+			<Id>
+				<TypeId>OxygenFarm</TypeId>
+				<SubtypeId>LargeBlockOxygenFarm</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+			<Id>
+				<TypeId>UpgradeModule</TypeId>
+				<SubtypeId>LargeProductivityModule</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+			<Id>
+				<TypeId>UpgradeModule</TypeId>
+				<SubtypeId>LargeEffectivenessModule</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+			<Id>
+				<TypeId>UpgradeModule</TypeId>
+				<SubtypeId>LargeEnergyModule</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

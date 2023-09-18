@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+			<Id>
+				<TypeId>ReflectorLight</TypeId>
+				<SubtypeId>LargeBlockFrontLight</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+			<Id>
+				<TypeId>ReflectorLight</TypeId>
+				<SubtypeId>SmallBlockFrontLight</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>SmallLight</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>SmallBlockSmallLight</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>LargeBlockLight_1corner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>LargeBlockLight_2corner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>SmallBlockLight_1corner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>SmallBlockLight_2corner</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

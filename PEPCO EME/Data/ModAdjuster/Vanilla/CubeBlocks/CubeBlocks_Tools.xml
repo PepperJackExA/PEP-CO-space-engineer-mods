@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">
+			<Id>
+				<TypeId>Drill</TypeId>
+				<SubtypeId>SmallBlockDrill</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">
+			<Id>
+				<TypeId>Drill</TypeId>
+				<SubtypeId>LargeBlockDrill</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ShipGrinderDefinition">
+			<Id>
+				<TypeId>ShipGrinder</TypeId>
+				<SubtypeId>LargeShipGrinder</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ShipGrinderDefinition">
+			<Id>
+				<TypeId>ShipGrinder</TypeId>
+				<SubtypeId>SmallShipGrinder</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ShipWelderDefinition">
+			<Id>
+				<TypeId>ShipWelder</TypeId>
+				<SubtypeId>LargeShipWelder</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ShipWelderDefinition">
+			<Id>
+				<TypeId>ShipWelder</TypeId>
+				<SubtypeId>SmallShipWelder</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+			<Id>
+				<TypeId>OreDetector</TypeId>
+				<SubtypeId>LargeOreDetector</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+			<Id>
+				<TypeId>OreDetector</TypeId>
+				<SubtypeId>SmallBlockOreDetector</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

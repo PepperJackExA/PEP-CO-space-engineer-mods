@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Blueprints>
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>EME_StoneOretoBrick</SubtypeId>
+            </Id>
+            <DisplayName>Stone Brick</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+            <Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+            </Prerequisites>
+            <Results>
+                <Item Amount="10" TypeId="Component" SubtypeId="EME_Brick" />
+            </Results>
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_StoneOretoPlates</SubtypeId>
+			</Id>
+			<DisplayName>Stone Plate</DisplayName>
+			<Icon>Textures\GUI\Icons\component\steel_plate_component.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Plates" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_StoneOretoFasteners</SubtypeId>
+			</Id>
+			<DisplayName>Stone Fasteners</DisplayName>
+			<Icon>Textures\GUI\Icons\component\ExplosivesComponent.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Fasteners" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_StoneOretoScrews</SubtypeId>
+			</Id>
+			<DisplayName>Stone Screws</DisplayName>
+			<Icon>Textures\GUI\Icons\component\ExplosivesComponent.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Screws" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_StoneOretoRod</SubtypeId>
+			</Id>
+			<DisplayName>Stone Rod</DisplayName>
+			<Icon>Textures\GUI\Icons\component\small_tube_component.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Rod" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_StoneOretoStruts</SubtypeId>
+			</Id>
+			<DisplayName>Stone Struts</DisplayName>
+			<Icon>Textures\GUI\Icons\component\small_tube_component.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Struts" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_StoneOretoTies</SubtypeId>
+			</Id>
+			<DisplayName>Stone Ties</DisplayName>
+			<Icon>Textures\GUI\Icons\component\construction_components_component.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Ties" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_StoneOretoRope</SubtypeId>
+			</Id>
+			<DisplayName>Stone Rope</DisplayName>
+			<Icon>Textures\GUI\Icons\component\superconductor_conducts_component.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Rope" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_StoneOretoWire</SubtypeId>
+			</Id>
+			<DisplayName>Stone Wire</DisplayName>
+			<Icon>Textures\GUI\Icons\component\superconductor_conducts_component.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Wire" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

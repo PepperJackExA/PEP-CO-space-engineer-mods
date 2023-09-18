@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_MedicalRoomDefinition">
+			<Id>
+				<TypeId>MedicalRoom</TypeId>
+				<SubtypeId>LargeMedicalRoom</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+			<Id>
+				<TypeId>CryoChamber</TypeId>
+				<SubtypeId>LargeBlockCryoChamber</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+			<Id>
+				<TypeId>CryoChamber</TypeId>
+				<SubtypeId>SmallBlockCryoChamber</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

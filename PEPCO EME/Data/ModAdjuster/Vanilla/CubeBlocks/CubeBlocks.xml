@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>LargeRailStraight</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_DebugSphere1Definition">
+			<Id>
+				<TypeId>DebugSphere1</TypeId>
+				<SubtypeId>DebugSphereLarge</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_DebugSphere2Definition">
+			<Id>
+				<TypeId>DebugSphere2</TypeId>
+				<SubtypeId>DebugSphereLarge</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_DebugSphere3Definition">
+			<Id>
+				<TypeId>DebugSphere3</TypeId>
+				<SubtypeId>DebugSphereLarge</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

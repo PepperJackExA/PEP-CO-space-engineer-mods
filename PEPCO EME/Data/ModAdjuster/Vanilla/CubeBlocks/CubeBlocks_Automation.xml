@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
+			<Id>
+				<TypeId>MyProgrammableBlock</TypeId>
+				<SubtypeId>SmallProgrammableBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ProjectorDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Projector</TypeId>
+				<SubtypeId>LargeProjector</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ProjectorDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Projector</TypeId>
+				<SubtypeId>SmallProjector</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_SensorBlockDefinition">
+			<Id>
+				<TypeId>SensorBlock</TypeId>
+				<SubtypeId>SmallBlockSensor</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_SensorBlockDefinition">
+			<Id>
+				<TypeId>SensorBlock</TypeId>
+				<SubtypeId>LargeBlockSensor</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_TargetDummyBlockDefinition">
+			<Id>
+				<TypeId>TargetDummyBlock</TypeId>
+				<SubtypeId>TargetDummy</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_SoundBlockDefinition">
+			<Id>
+				<TypeId>SoundBlock</TypeId>
+				<SubtypeId>SmallBlockSoundBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_SoundBlockDefinition">
+			<Id>
+				<TypeId>SoundBlock</TypeId>
+				<SubtypeId>LargeBlockSoundBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<!--Region Buttons-->
+		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+			<Id>
+				<TypeId>ButtonPanel</TypeId>
+				<SubtypeId>ButtonPanelLarge</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+			<Id>
+				<TypeId>ButtonPanel</TypeId>
+				<SubtypeId>ButtonPanelSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+			<Id>
+				<TypeId>ButtonPanel</TypeId>
+				<SubtypeId>LargeButtonPanelPedestal</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+			<Id>
+				<TypeId>ButtonPanel</TypeId>
+				<SubtypeId>SmallButtonPanelPedestal</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<!--End Region Buttons-->
+
+		<Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
+			<Id>
+				<TypeId>TimerBlock</TypeId>
+				<SubtypeId>TimerBlockLarge</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
+			<Id>
+				<TypeId>TimerBlock</TypeId>
+				<SubtypeId>TimerBlockSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
+			<Id>
+				<TypeId>MyProgrammableBlock</TypeId>
+				<SubtypeId>LargeProgrammableBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_TurretControlBlockDefinition">
+			<Id>
+				<TypeId>TurretControlBlock</TypeId>
+				<SubtypeId>LargeTurretControlBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_TurretControlBlockDefinition">
+			<Id>
+				<TypeId>TurretControlBlock</TypeId>
+				<SubtypeId>SmallTurretControlBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_EventControllerBlockDefinition">
+			<Id>
+				<TypeId>EventControllerBlock</TypeId>
+				<SubtypeId>EventControllerLarge</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_EventControllerBlockDefinition">
+			<Id>
+				<TypeId>EventControllerBlock</TypeId>
+				<SubtypeId>EventControllerSmall</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<!-- AI Blocks -->
+
+		<Definition xsi:type="MyObjectBuilder_PathRecorderBlockDefinition">
+			<Id>
+				<TypeId>PathRecorderBlock</TypeId>
+				<SubtypeId>LargePathRecorderBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_PathRecorderBlockDefinition">
+			<Id>
+				<TypeId>PathRecorderBlock</TypeId>
+				<SubtypeId>SmallPathRecorderBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_BasicMissionBlockDefinition">
+			<Id>
+				<TypeId>BasicMissionBlock</TypeId>
+				<SubtypeId>LargeBasicMission</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_BasicMissionBlockDefinition">
+			<Id>
+				<TypeId>BasicMissionBlock</TypeId>
+				<SubtypeId>SmallBasicMission</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_FlightMovementBlockDefinition">
+			<Id>
+				<TypeId>FlightMovementBlock</TypeId>
+				<SubtypeId>LargeFlightMovement</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_FlightMovementBlockDefinition">
+			<Id>
+				<TypeId>FlightMovementBlock</TypeId>
+				<SubtypeId>SmallFlightMovement</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_DefensiveCombatBlockDefinition">
+			<Id>
+				<TypeId>DefensiveCombatBlock</TypeId>
+				<SubtypeId>LargeDefensiveCombat</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_DefensiveCombatBlockDefinition">
+			<Id>
+				<TypeId>DefensiveCombatBlock</TypeId>
+				<SubtypeId>SmallDefensiveCombat</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_OffensiveCombatBlockDefinition">
+			<Id>
+				<TypeId>OffensiveCombatBlock</TypeId>
+				<SubtypeId>LargeOffensiveCombat</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_OffensiveCombatBlockDefinition">
+			<Id>
+				<TypeId>OffensiveCombatBlock</TypeId>
+				<SubtypeId>SmallOffensiveCombat</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<!-- END AI Blocks -->
+
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

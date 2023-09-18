@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+        <Definition xsi:type="MyObjectBuilder_GravityGeneratorDefinition">
+            <Id>
+                <TypeId>GravityGenerator</TypeId>
+                <SubtypeId />
+            </Id> 
+        <Public>false</Public></Definition>
+        <Definition xsi:type="MyObjectBuilder_GravityGeneratorSphereDefinition">
+            <Id>
+                <TypeId>GravityGeneratorSphere</TypeId>
+                <SubtypeId />
+            </Id> 
+        <Public>false</Public></Definition>
+        <Definition xsi:type="MyObjectBuilder_VirtualMassDefinition">
+            <Id>
+                <TypeId>VirtualMass</TypeId>
+                <SubtypeId>VirtualMassLarge</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+        <Definition xsi:type="MyObjectBuilder_VirtualMassDefinition">
+            <Id>
+                <TypeId>VirtualMass</TypeId>
+                <SubtypeId>VirtualMassSmall</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+        <Definition xsi:type="MyObjectBuilder_SpaceBallDefinition">
+            <Id>
+                <TypeId>SpaceBall</TypeId>
+                <SubtypeId>SpaceBallLarge</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+        <Definition xsi:type="MyObjectBuilder_SpaceBallDefinition">
+            <Id>
+                <TypeId>SpaceBall</TypeId>
+                <SubtypeId>SpaceBallSmall</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+    </CubeBlocks>
+<Public>false</Public></Definitions>

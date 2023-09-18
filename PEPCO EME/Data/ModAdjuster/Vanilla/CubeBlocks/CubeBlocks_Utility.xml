@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_LandingGearDefinition">
+			<Id>
+				<TypeId>LandingGear</TypeId>
+				<SubtypeId>LargeBlockLandingGear</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LandingGearDefinition">
+			<Id>
+				<TypeId>LandingGear</TypeId>
+				<SubtypeId>SmallBlockLandingGear</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_LandingGearDefinition">
+			<Id>
+				<TypeId>LandingGear</TypeId>
+				<SubtypeId>LargeBlockSmallMagneticPlate</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_LandingGearDefinition">
+			<Id>
+				<TypeId>LandingGear</TypeId>
+				<SubtypeId>SmallBlockSmallMagneticPlate</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_JumpDriveDefinition">
+			<Id>
+				<TypeId>JumpDrive</TypeId>
+				<SubtypeId>LargeJumpDrive</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CameraBlock</TypeId>
+				<SubtypeId>SmallCameraBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CameraBlock</TypeId>
+				<SubtypeId>LargeCameraBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_MergeBlockDefinition">
+			<Id>
+				<TypeId>MergeBlock</TypeId>
+				<SubtypeId>LargeShipMergeBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_MergeBlockDefinition">
+			<Id>
+				<TypeId>MergeBlock</TypeId>
+				<SubtypeId>SmallShipMergeBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_MergeBlockDefinition">
+			<Id>
+				<TypeId>MergeBlock</TypeId>
+				<SubtypeId>SmallShipSmallMergeBlock</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_ParachuteDefinition">
+			<Id>
+				<TypeId>Parachute</TypeId>
+				<SubtypeId>LgParachute</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ParachuteDefinition">
+			<Id>
+				<TypeId>Parachute</TypeId>
+				<SubtypeId>SmParachute</SubtypeId>
+			</Id>
+			<Public>false</Public>
+		</Definition>
+	</CubeBlocks>
+	<Public>false</Public>
+</Definitions>

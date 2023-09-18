@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+        <Definition>
+            <Id>
+                <TypeId>CubeBlock</TypeId>
+                <SubtypeId>BridgeWindow1x1Slope</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition>
+            <Id>
+                <TypeId>CubeBlock</TypeId>
+                <SubtypeId>BridgeWindow1x1Face</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition>
+            <Id>
+                <TypeId>CubeBlock</TypeId>
+                <SubtypeId>BridgeWindow1x1FaceInverted</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+            <Id>
+                <TypeId>Cockpit</TypeId>
+                <SubtypeId>PassengerBench</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+            <Id>
+                <TypeId>InteriorLight</TypeId>
+                <SubtypeId>LargeLightPanel</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+            <Id>
+                <TypeId>InteriorLight</TypeId>
+                <SubtypeId>SmallLightPanel</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+            <Id>
+                <TypeId>Reactor</TypeId>
+                <SubtypeId>LargeBlockSmallGeneratorWarfare2</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+            <Id>
+                <TypeId>Reactor</TypeId>
+                <SubtypeId>LargeBlockLargeGeneratorWarfare2</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+            <Id>
+                <TypeId>Reactor</TypeId>
+                <SubtypeId>SmallBlockSmallGeneratorWarfare2</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+            <Id>
+                <TypeId>Reactor</TypeId>
+                <SubtypeId>SmallBlockLargeGeneratorWarfare2</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+            <Id>
+                <TypeId>AirtightHangarDoor</TypeId>
+                <SubtypeId>AirtightHangarDoorWarfare2A</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+            <Id>
+                <TypeId>AirtightHangarDoor</TypeId>
+                <SubtypeId>AirtightHangarDoorWarfare2B</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+            <Id>
+                <TypeId>AirtightHangarDoor</TypeId>
+                <SubtypeId>AirtightHangarDoorWarfare2C</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+            <Id>
+                <TypeId>SmallMissileLauncher</TypeId>
+                <SubtypeId>SmallMissileLauncherWarfare2</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+            <Id>
+                <TypeId>SmallGatlingGun</TypeId>
+                <SubtypeId>SmallGatlingGunWarfare2</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+            <Id>
+                <TypeId>BatteryBlock</TypeId>
+                <SubtypeId>LargeBlockBatteryBlockWarfare2</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+            <Id>
+                <TypeId>BatteryBlock</TypeId>
+                <SubtypeId>SmallBlockBatteryBlockWarfare2</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_DoorDefinition">
+            <Id>
+                <TypeId>Door</TypeId>
+                <SubtypeId>SlidingHatchDoor</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_DoorDefinition">
+            <Id>
+                <TypeId>Door</TypeId>
+                <SubtypeId>SlidingHatchDoorHalf</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_SearchlightDefinition">
+            <Id>
+                <TypeId>Searchlight</TypeId>
+                <SubtypeId>SmallSearchlight</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_SearchlightDefinition">
+            <Id>
+                <TypeId>Searchlight</TypeId>
+                <SubtypeId>LargeSearchlight</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_HeatVentBlockDefinition">
+            <Id>
+                <TypeId>HeatVentBlock</TypeId>
+                <SubtypeId>LargeHeatVentBlock</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_HeatVentBlockDefinition">
+            <Id>
+                <TypeId>HeatVentBlock</TypeId>
+                <SubtypeId>SmallHeatVentBlock</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+            <Id>
+                <TypeId>Cockpit</TypeId>
+                <SubtypeId>SmallBlockStandingCockpit</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+            <Id>
+                <TypeId>Cockpit</TypeId>
+                <SubtypeId>LargeBlockStandingCockpit</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>SmallBlockSmallModularThruster</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>SmallBlockLargeModularThruster</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>LargeBlockSmallModularThruster</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>
+
+        <Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+            <Id>
+                <TypeId>Thrust</TypeId>
+                <SubtypeId>LargeBlockLargeModularThruster</SubtypeId>
+            </Id> 
+        <Public>false</Public></Definition>          
+
+    </CubeBlocks>
+<Public>false</Public></Definitions>
