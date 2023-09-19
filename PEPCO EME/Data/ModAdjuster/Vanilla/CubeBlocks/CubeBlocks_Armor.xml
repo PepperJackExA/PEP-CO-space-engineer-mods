@@ -7,7 +7,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorBlock</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
                 <Component Subtype="EME_Plate" Count="1" />
             </Components>
@@ -18,7 +18,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorSlope</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -29,7 +29,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorCorner</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -40,7 +40,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorCornerInv</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -51,7 +51,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeRoundArmor_Slope</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -62,7 +62,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeRoundArmor_Corner</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -73,7 +73,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeRoundArmor_CornerInv</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
                 <Component Subtype="EME_Plate" Count="1" />
             </Components>
@@ -84,7 +84,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorBlock</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -95,28 +95,28 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorSlope</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorCornerInv</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorBlock</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -127,7 +127,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorSlope</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -138,7 +138,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorCorner</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
                 <Component Subtype="EME_Plate" Count="1" />
             </Components>
@@ -149,7 +149,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorCornerInv</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -160,28 +160,28 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorSlope</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorCornerInv</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -189,7 +189,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHalfArmorBlock</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -200,7 +200,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyHalfArmorBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -208,7 +208,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHalfSlopeArmorBlock</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -220,7 +220,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyHalfSlopeArmorBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<!-- Small half blocks -->
@@ -229,7 +229,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>HalfArmorBlock</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -240,7 +240,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>HeavyHalfArmorBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -248,7 +248,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>HalfSlopeArmorBlock</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -260,7 +260,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>HeavyHalfSlopeArmorBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<!-- End region ARMOR -->
@@ -271,7 +271,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorRoundSlope</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -282,7 +282,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorRoundCorner</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -293,7 +293,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorRoundCornerInv</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -306,21 +306,21 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorRoundSlope</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorRoundCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorRoundCornerInv</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!--    End region LARGE HEAVY -->
 		<!--    Region SMALL LIGHT -->
@@ -329,7 +329,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorRoundSlope</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -340,7 +340,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorRoundCorner</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -351,7 +351,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorRoundCornerInv</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -364,21 +364,21 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorRoundSlope</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorRoundCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorRoundCornerInv</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!--    End region SMALL HEAVY-->
 		<!-- End region ROUND ARMOR -->
@@ -391,7 +391,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorSlope2Base</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -402,7 +402,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorSlope2Tip</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
                 <Component Subtype="EME_Plate" Count="1" />
             </Components>
@@ -414,7 +414,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorCorner2Base</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -425,7 +425,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorCorner2Tip</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -437,7 +437,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorInvCorner2Base</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -448,7 +448,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockArmorInvCorner2Tip</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -462,14 +462,14 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorSlope2Base</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorSlope2Tip</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!--    2x1x1 CORNER-->
 		<Definition>
@@ -477,14 +477,14 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorCorner2Base</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorCorner2Tip</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!--    2x1x1 INV. CORNER-->
 		<Definition>
@@ -492,14 +492,14 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorInvCorner2Base</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeHeavyBlockArmorInvCorner2Tip</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<!--    Small Light    -->
@@ -509,7 +509,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorSlope2Base</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -520,7 +520,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorSlope2Tip</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -532,7 +532,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorCorner2Base</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -543,7 +543,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorCorner2Tip</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -555,7 +555,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorInvCorner2Base</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -566,7 +566,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallBlockArmorInvCorner2Tip</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 			<Components>
 				<Component Subtype="EME_Plate" Count="1" />
 			</Components>
@@ -580,14 +580,14 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorSlope2Base</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorSlope2Tip</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!--    2x1x1 CORNER-->
 		<Definition>
@@ -595,14 +595,14 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorCorner2Base</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorCorner2Tip</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!--    2x1x1 INV. CORNER-->
 		<Definition>
@@ -610,16 +610,16 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorInvCorner2Base</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallHeavyBlockArmorInvCorner2Tip</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!-- Region NON-DEFORMING SLOPED ARMOR -->
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

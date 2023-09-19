@@ -7,42 +7,42 @@
 				<TypeId>PistonBase</TypeId>
 				<SubtypeId>LargePistonBase</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
 			<Id>
 				<TypeId>ExtendedPistonBase</TypeId>
 				<SubtypeId>LargePistonBase</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>PistonTop</TypeId>
 				<SubtypeId>LargePistonTop</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
 			<Id>
 				<TypeId>PistonBase</TypeId>
 				<SubtypeId>SmallPistonBase</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
 			<Id>
 				<TypeId>ExtendedPistonBase</TypeId>
 				<SubtypeId>SmallPistonBase</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>PistonTop</TypeId>
 				<SubtypeId>SmallPistonTop</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!-- End Region Piston-->
 		<!-- Region MotorStator-->
@@ -51,28 +51,28 @@
 				<TypeId>MotorStator</TypeId>
 				<SubtypeId>LargeStator</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>MotorRotor</TypeId>
 				<SubtypeId>LargeRotor</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
 			<Id>
 				<TypeId>MotorStator</TypeId>
 				<SubtypeId>SmallStator</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>MotorRotor</TypeId>
 				<SubtypeId>SmallRotor</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!-- End Region MotorStator-->
 		<!-- Region AdvMotorStator-->
@@ -81,28 +81,28 @@
 				<TypeId>MotorAdvancedStator</TypeId>
 				<SubtypeId>LargeAdvancedStator</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>MotorAdvancedRotor</TypeId>
 				<SubtypeId>LargeAdvancedRotor</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
 			<Id>
 				<TypeId>MotorAdvancedStator</TypeId>
 				<SubtypeId>SmallAdvancedStator</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>MotorAdvancedRotor</TypeId>
 				<SubtypeId>SmallAdvancedRotor</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
@@ -110,14 +110,14 @@
 				<TypeId>MotorAdvancedStator</TypeId>
 				<SubtypeId>SmallAdvancedStatorSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>MotorAdvancedRotor</TypeId>
 				<SubtypeId>SmallAdvancedRotorSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<!-- End Region AdvMotorStator-->
@@ -128,7 +128,7 @@
 				<TypeId>MotorAdvancedStator</TypeId>
 				<SubtypeId>LargeHinge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -136,7 +136,7 @@
 				<TypeId>MotorAdvancedRotor</TypeId>
 				<SubtypeId>LargeHingeHead</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
@@ -144,7 +144,7 @@
 				<TypeId>MotorAdvancedStator</TypeId>
 				<SubtypeId>MediumHinge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -152,7 +152,7 @@
 				<TypeId>MotorAdvancedRotor</TypeId>
 				<SubtypeId>MediumHingeHead</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
@@ -160,7 +160,7 @@
 				<TypeId>MotorAdvancedStator</TypeId>
 				<SubtypeId>SmallHinge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -168,9 +168,9 @@
 				<TypeId>MotorAdvancedRotor</TypeId>
 				<SubtypeId>SmallHingeHead</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

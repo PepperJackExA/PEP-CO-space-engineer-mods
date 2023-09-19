@@ -6,7 +6,7 @@
 				<TypeId>Door</TypeId>
 				<SubtypeId />
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_DoorDefinition">
@@ -14,7 +14,7 @@
 				<TypeId>Door</TypeId>
 				<SubtypeId>SmallDoor</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
@@ -22,14 +22,14 @@
 				<TypeId>AirtightHangarDoor</TypeId>
 				<SubtypeId />
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_AirtightSlideDoorDefinition">
 			<Id>
 				<TypeId>AirtightSlideDoor</TypeId>
 				<SubtypeId>LargeBlockSlideDoor</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<!-- Region Blast Doors -->
@@ -38,58 +38,58 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>ArmorCenter</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>ArmorCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>ArmorInvCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>ArmorSide</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallArmorCenter</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallArmorCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallArmorInvCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallArmorSide</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!-- Region Blast Doors End -->
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

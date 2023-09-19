@@ -7,7 +7,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>AngledInteriorWallA</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -15,7 +15,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>AngledInteriorWallB</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
@@ -23,7 +23,7 @@
 				<TypeId>InteriorLight</TypeId>
 				<SubtypeId>LargeBlockInsetLight</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
@@ -31,7 +31,7 @@
 				<TypeId>InteriorLight</TypeId>
 				<SubtypeId>SmallBlockInsetLight</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -39,7 +39,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>PipeWorkBlockA</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -47,7 +47,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>PipeWorkBlockB</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!-- End of Decorative Blocks -->
 
@@ -57,7 +57,7 @@
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>LargeBlockAccessPanel1</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -65,7 +65,7 @@
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>LargeBlockAccessPanel2</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
@@ -73,7 +73,7 @@
 				<TypeId>ButtonPanel</TypeId>
 				<SubtypeId>LargeBlockAccessPanel3</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -81,7 +81,7 @@
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>LargeBlockAccessPanel4</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -89,7 +89,7 @@
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>SmallBlockAccessPanel1</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -97,7 +97,7 @@
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>SmallBlockAccessPanel2</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -105,7 +105,7 @@
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>SmallBlockAccessPanel3</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -113,7 +113,7 @@
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>SmallBlockAccessPanel4</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!-- End of Maintainance Panels -->
 
@@ -122,7 +122,7 @@
 				<TypeId>AirVent</TypeId>
 				<SubtypeId>AirVentFan</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
@@ -130,7 +130,7 @@
 				<TypeId>AirVent</TypeId>
 				<SubtypeId>AirVentFanFull</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
@@ -138,7 +138,7 @@
 				<TypeId>AirVent</TypeId>
 				<SubtypeId>SmallAirVentFan</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
@@ -146,7 +146,7 @@
 				<TypeId>AirVent</TypeId>
 				<SubtypeId>SmallAirVentFanFull</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
@@ -154,7 +154,7 @@
 				<TypeId>CameraBlock</TypeId>
 				<SubtypeId>LargeCameraTopMounted</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
@@ -162,7 +162,7 @@
 				<TypeId>CameraBlock</TypeId>
 				<SubtypeId>SmallCameraTopMounted</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -170,7 +170,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign1</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -178,7 +178,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign2</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -186,7 +186,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign3</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -194,7 +194,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign4</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -202,7 +202,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign5</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -210,7 +210,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign6</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -218,7 +218,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign7</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -226,7 +226,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign8</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -234,7 +234,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign9</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -242,7 +242,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign10</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -250,7 +250,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign11</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -258,7 +258,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign12</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -266,7 +266,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeWarningSign13</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -274,7 +274,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign1</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -282,7 +282,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign2</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -290,7 +290,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign3</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -298,7 +298,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign4</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -306,7 +306,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign5</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -314,7 +314,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign6</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -322,7 +322,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign7</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -330,7 +330,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign8</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -338,7 +338,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign9</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -346,7 +346,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign10</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -354,7 +354,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign11</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -362,7 +362,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign12</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -370,7 +370,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>SmallWarningSign13</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_SensorBlockDefinition">
@@ -378,7 +378,7 @@
 				<TypeId>SensorBlock</TypeId>
 				<SubtypeId>SmallBlockSensorReskin</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_SensorBlockDefinition">
@@ -386,7 +386,7 @@
 				<TypeId>SensorBlock</TypeId>
 				<SubtypeId>LargeBlockSensorReskin</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
@@ -394,7 +394,7 @@
 				<TypeId>MyProgrammableBlock</TypeId>
 				<SubtypeId>LargeProgrammableBlockReskin</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
@@ -402,7 +402,7 @@
 				<TypeId>MyProgrammableBlock</TypeId>
 				<SubtypeId>SmallProgrammableBlockReskin</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
@@ -410,7 +410,7 @@
 				<TypeId>TimerBlock</TypeId>
 				<SubtypeId>TimerBlockReskinLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
@@ -418,7 +418,7 @@
 				<TypeId>TimerBlock</TypeId>
 				<SubtypeId>TimerBlockReskinSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
@@ -426,7 +426,7 @@
 				<TypeId>Cockpit</TypeId>
 				<SubtypeId>SpeederCockpit</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
@@ -434,7 +434,7 @@
 				<TypeId>Cockpit</TypeId>
 				<SubtypeId>SpeederCockpitCompact</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_EmotionControllerBlockDefinition">
@@ -442,7 +442,7 @@
 				<TypeId>EmotionControllerBlock</TypeId>
 				<SubtypeId>EmotionControllerLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_EmotionControllerBlockDefinition">
@@ -450,8 +450,8 @@
 				<TypeId>EmotionControllerBlock</TypeId>
 				<SubtypeId>EmotionControllerSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

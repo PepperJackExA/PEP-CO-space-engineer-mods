@@ -7,6 +7,10 @@
                 <TypeId>Assembler</TypeId>
                 <SubtypeId>EMEBasicAssembler</SubtypeId>
             </Id>
+			<Enabled>false</Enabled>
+			<Public>false</Public>
+			<ShowInCreative>false</ShowInCreative>
+			<AvailableInSurvival>false</AvailableInSurvival>
             <DisplayName>Stone Assembler</DisplayName>
             <Icon>Textures\GUI\Icons\Cubes\basicAssembler.dds</Icon>
             <Description>Description_AssemblerBasic</Description>
@@ -17,9 +21,9 @@
             <ModelOffset x="0" y="0" z="0" />
             <Model>Models\Cubes\Large\BasicAssembler.mwm</Model>
             <Components>
-                <Component Subtype="EME_Brick" Count="60" />
+                <Component Subtype="EME_Plate" Count="60" />
             </Components>
-            <CriticalComponent Subtype="EME_Brick" Index="0" />
+            <CriticalComponent Subtype="EME_Plate" Index="0" />
             <MountPoints>
                 <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="1" />
                 <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" />
@@ -33,7 +37,6 @@
                 <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\BasicAssembler_Construction2.mwm" />
                 <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\BasicAssembler_Construction3.mwm" />
             </BuildProgressModels>
-            <BlockPairName>BasicAssembler</BlockPairName>
             <EdgeType>Light</EdgeType>
             <BuildTimeSeconds>40</BuildTimeSeconds>
             <ResourceSinkGroup>Factory</ResourceSinkGroup>
@@ -46,7 +49,8 @@
             <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
             <OperationalPowerConsumption>0.28</OperationalPowerConsumption>
             <BlueprintClasses>
-				<Class>EME_SimpleComponents</Class>
+				<Class>EME_TestComponents</Class>
+				<Class>EME_SimpleIngotProduction</Class>
             </BlueprintClasses>
             <AssemblySpeed>0.7</AssemblySpeed>
             <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>

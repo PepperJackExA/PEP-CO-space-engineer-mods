@@ -6,35 +6,35 @@
 				<TypeId>MyProgrammableBlock</TypeId>
 				<SubtypeId>SmallProgrammableBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ProjectorDefinition">
 			<Id>
 				<TypeId>MyObjectBuilder_Projector</TypeId>
 				<SubtypeId>LargeProjector</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ProjectorDefinition">
 			<Id>
 				<TypeId>MyObjectBuilder_Projector</TypeId>
 				<SubtypeId>SmallProjector</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_SensorBlockDefinition">
 			<Id>
 				<TypeId>SensorBlock</TypeId>
 				<SubtypeId>SmallBlockSensor</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_SensorBlockDefinition">
 			<Id>
 				<TypeId>SensorBlock</TypeId>
 				<SubtypeId>LargeBlockSensor</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_TargetDummyBlockDefinition">
@@ -42,7 +42,7 @@
 				<TypeId>TargetDummyBlock</TypeId>
 				<SubtypeId>TargetDummy</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_SoundBlockDefinition">
@@ -50,14 +50,14 @@
 				<TypeId>SoundBlock</TypeId>
 				<SubtypeId>SmallBlockSoundBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_SoundBlockDefinition">
 			<Id>
 				<TypeId>SoundBlock</TypeId>
 				<SubtypeId>LargeBlockSoundBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!--Region Buttons-->
 		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
@@ -65,14 +65,14 @@
 				<TypeId>ButtonPanel</TypeId>
 				<SubtypeId>ButtonPanelLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
 			<Id>
 				<TypeId>ButtonPanel</TypeId>
 				<SubtypeId>ButtonPanelSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
@@ -80,7 +80,7 @@
 				<TypeId>ButtonPanel</TypeId>
 				<SubtypeId>LargeButtonPanelPedestal</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
@@ -88,7 +88,7 @@
 				<TypeId>ButtonPanel</TypeId>
 				<SubtypeId>SmallButtonPanelPedestal</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!--End Region Buttons-->
 
@@ -97,21 +97,21 @@
 				<TypeId>TimerBlock</TypeId>
 				<SubtypeId>TimerBlockLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
 			<Id>
 				<TypeId>TimerBlock</TypeId>
 				<SubtypeId>TimerBlockSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
 			<Id>
 				<TypeId>MyProgrammableBlock</TypeId>
 				<SubtypeId>LargeProgrammableBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_TurretControlBlockDefinition">
@@ -119,7 +119,7 @@
 				<TypeId>TurretControlBlock</TypeId>
 				<SubtypeId>LargeTurretControlBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_TurretControlBlockDefinition">
@@ -127,7 +127,7 @@
 				<TypeId>TurretControlBlock</TypeId>
 				<SubtypeId>SmallTurretControlBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_EventControllerBlockDefinition">
@@ -135,7 +135,7 @@
 				<TypeId>EventControllerBlock</TypeId>
 				<SubtypeId>EventControllerLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_EventControllerBlockDefinition">
@@ -143,7 +143,7 @@
 				<TypeId>EventControllerBlock</TypeId>
 				<SubtypeId>EventControllerSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<!-- AI Blocks -->
@@ -153,7 +153,7 @@
 				<TypeId>PathRecorderBlock</TypeId>
 				<SubtypeId>LargePathRecorderBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_PathRecorderBlockDefinition">
@@ -161,7 +161,7 @@
 				<TypeId>PathRecorderBlock</TypeId>
 				<SubtypeId>SmallPathRecorderBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_BasicMissionBlockDefinition">
@@ -169,7 +169,7 @@
 				<TypeId>BasicMissionBlock</TypeId>
 				<SubtypeId>LargeBasicMission</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_BasicMissionBlockDefinition">
@@ -177,7 +177,7 @@
 				<TypeId>BasicMissionBlock</TypeId>
 				<SubtypeId>SmallBasicMission</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_FlightMovementBlockDefinition">
@@ -185,7 +185,7 @@
 				<TypeId>FlightMovementBlock</TypeId>
 				<SubtypeId>LargeFlightMovement</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_FlightMovementBlockDefinition">
@@ -193,7 +193,7 @@
 				<TypeId>FlightMovementBlock</TypeId>
 				<SubtypeId>SmallFlightMovement</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_DefensiveCombatBlockDefinition">
@@ -201,7 +201,7 @@
 				<TypeId>DefensiveCombatBlock</TypeId>
 				<SubtypeId>LargeDefensiveCombat</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_DefensiveCombatBlockDefinition">
@@ -209,7 +209,7 @@
 				<TypeId>DefensiveCombatBlock</TypeId>
 				<SubtypeId>SmallDefensiveCombat</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_OffensiveCombatBlockDefinition">
@@ -217,7 +217,7 @@
 				<TypeId>OffensiveCombatBlock</TypeId>
 				<SubtypeId>LargeOffensiveCombat</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_OffensiveCombatBlockDefinition">
@@ -225,11 +225,11 @@
 				<TypeId>OffensiveCombatBlock</TypeId>
 				<SubtypeId>SmallOffensiveCombat</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<!-- END AI Blocks -->
 
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

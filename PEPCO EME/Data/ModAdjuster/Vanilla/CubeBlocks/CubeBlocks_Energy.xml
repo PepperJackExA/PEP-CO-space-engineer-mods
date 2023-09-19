@@ -7,21 +7,21 @@
 				<TypeId>BatteryBlock</TypeId>
 				<SubtypeId>LargeBlockBatteryBlock</SubtypeId>
 			</Id>
-			<Public>true</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
 			<Id>
 				<TypeId>BatteryBlock</TypeId>
 				<SubtypeId>SmallBlockBatteryBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
 			<Id>
 				<TypeId>BatteryBlock</TypeId>
 				<SubtypeId>SmallBlockSmallBatteryBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!-- End Region BatteryBlock-->
 
@@ -31,42 +31,42 @@
 				<TypeId>Reactor</TypeId>
 				<SubtypeId>SmallBlockSmallGenerator</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
 			<Id>
 				<TypeId>Reactor</TypeId>
 				<SubtypeId>SmallBlockLargeGenerator</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
 			<Id>
 				<TypeId>Reactor</TypeId>
 				<SubtypeId>LargeBlockSmallGenerator</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
 			<Id>
 				<TypeId>Reactor</TypeId>
 				<SubtypeId>LargeBlockLargeGenerator</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
 			<Id>
 				<TypeId>HydrogenEngine</TypeId>
 				<SubtypeId>LargeHydrogenEngine</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
 			<Id>
 				<TypeId>HydrogenEngine</TypeId>
 				<SubtypeId>SmallHydrogenEngine</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<!-- End Region Reactor-->
 
@@ -75,22 +75,22 @@
 				<TypeId>WindTurbine</TypeId>
 				<SubtypeId>LargeBlockWindTurbine</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_SolarPanelDefinition">
 			<Id>
 				<TypeId>SolarPanel</TypeId>
 				<SubtypeId>LargeBlockSolarPanel</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_SolarPanelDefinition">
 			<Id>
 				<TypeId>SolarPanel</TypeId>
 				<SubtypeId>SmallBlockSolarPanel</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

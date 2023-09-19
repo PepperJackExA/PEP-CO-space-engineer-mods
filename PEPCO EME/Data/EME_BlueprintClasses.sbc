@@ -8,30 +8,49 @@
         <Class>
             <Id>
                 <TypeId>BlueprintClassDefinition</TypeId>
-                <SubtypeId>EME_SimpleComponents</SubtypeId>
+                <SubtypeId>EME_TestComponents</SubtypeId>
             </Id>
-            <DisplayName>EME Components</DisplayName>
+            <DisplayName>EME Test Components</DisplayName>
             <Description>Description_BlueprintClass_Components</Description>
             <Icon>Textures\GUI\Icons\buttons\component.dds</Icon>
             <FocusIcon>Textures\GUI\Icons\buttons\component.dds</FocusIcon>
             <HighlightIcon>Textures\GUI\Icons\buttons\component_focus.dds</HighlightIcon>
             <InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
         </Class>
+		<Class>
+			<Id>
+				<TypeId>BlueprintClassDefinition</TypeId>
+				<SubtypeId>EME_SimpleIngotProduction</SubtypeId>
+			</Id>
+			<DisplayName>Ore Processing</DisplayName>
+			<Description>Manual Ore Processing</Description>
+			<Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+			<FocusIcon>Textures\GUI\Icons\buttons\component.dds</FocusIcon>
+			<HighlightIcon>Textures\GUI\Icons\buttons\component_focus.dds</HighlightIcon>
+			<InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
+		</Class>
 
     </BlueprintClasses>	
 
     <BlueprintClassEntries>
 
-		<!-- Basic Assembler -->
-        <Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoBrick" />
-		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoPlates" />
-		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoFasteners" />
-		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoScrews" />
-		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoRod" />
-		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoStruts" />
-		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoTies" />
-		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoRope" />
-		<Entry Class="EME_SimpleComponents" BlueprintSubtypeId="EME_StoneOretoWire" />
-
+		<!-- EME Testing -->
+        <Entry Class="EME_TestComponents" BlueprintSubtypeId="EME_StoneOretoBrick" />
+		<Entry Class="EME_TestComponents" BlueprintSubtypeId="EME_StoneOretoPlates" />
+		<Entry Class="EME_TestComponents" BlueprintSubtypeId="EME_StoneOretoFasteners" />
+		<Entry Class="EME_TestComponents" BlueprintSubtypeId="EME_StoneOretoScrews" />
+		<Entry Class="EME_TestComponents" BlueprintSubtypeId="EME_StoneOretoRod" />
+		<Entry Class="EME_TestComponents" BlueprintSubtypeId="EME_StoneOretoStruts" />
+		<Entry Class="EME_TestComponents" BlueprintSubtypeId="EME_StoneOretoTies" />
+		<Entry Class="EME_TestComponents" BlueprintSubtypeId="EME_StoneOretoRope" />
+		<Entry Class="EME_TestComponents" BlueprintSubtypeId="EME_StoneOretoWire" />
+		
+		<!-- EME_SimpleIngotProduction -->
+		<Entry Class="EME_SimpleIngotProduction" BlueprintSubtypeId="EME_SimpleStoneOretoIronIngot" />
+		<Entry Class="EME_SimpleIngotProduction" BlueprintSubtypeId="EME_SimpleStoneOretoCopperIngot" />
+		<Entry Class="EME_SimpleIngotProduction" BlueprintSubtypeId="EME_SimpleStoneOretoSiliconWafer" />
+		<Entry Class="EME_SimpleIngotProduction" BlueprintSubtypeId="EME_SimpleGravel" />
+		
+		
 	</BlueprintClassEntries>
 </Definitions>

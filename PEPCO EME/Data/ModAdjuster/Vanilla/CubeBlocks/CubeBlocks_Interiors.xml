@@ -6,7 +6,7 @@
 				<TypeId>Passage</TypeId>
 				<SubtypeId />
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -14,7 +14,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>Passage2</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -22,7 +22,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>Passage2Wall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 
@@ -31,77 +31,77 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeStairs</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeRamp</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeSteelCatwalk</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeSteelCatwalk2Sides</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeSteelCatwalkCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeSteelCatwalkPlate</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeCoverWall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeCoverWallHalf</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeCoverWallHalfMirrored</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeBlockInteriorWall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeInteriorPillar</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
 			<Id>
@@ -109,7 +109,7 @@
 				<SubtypeId>PassengerSeatLarge</SubtypeId>
 				<!-- Large block passenger seat -->
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
 			<Id>
@@ -117,7 +117,7 @@
 				<SubtypeId>PassengerSeatSmall</SubtypeId>
 				<!-- Small block passenger seat -->
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
@@ -126,7 +126,7 @@
 				<SubtypeId>PassengerSeatSmallNew</SubtypeId>
 				<!-- Small block passenger seat -->
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
@@ -135,7 +135,7 @@
 				<SubtypeId>PassengerSeatSmallOffset</SubtypeId>
 				<!-- Small block passenger seat -->
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -143,21 +143,21 @@
 				<TypeId>Ladder2</TypeId>
 				<SubtypeId />
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>Ladder2</TypeId>
 				<SubtypeId>LadderShaft</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>Ladder2</TypeId>
 				<SubtypeId>LadderSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -165,7 +165,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>AirDuct1</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -173,7 +173,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>AirDuct2</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
@@ -181,7 +181,7 @@
 				<TypeId>InteriorLight</TypeId>
 				<SubtypeId>AirDuctLight</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -189,7 +189,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>AirDuctCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -197,7 +197,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>AirDuctT</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -205,7 +205,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>AirDuctX</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -213,7 +213,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>AirDuctRamp</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -221,8 +221,8 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>AirDuctGrate</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

@@ -6,14 +6,14 @@
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>ControlPanel</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>SmallControlPanel</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -21,14 +21,14 @@
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>LargeControlPanelPedestal</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>TerminalBlock</TypeId>
 				<SubtypeId>SmallControlPanelPedestal</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<!-- Region Cockpits -->
@@ -38,7 +38,7 @@
 				<SubtypeId>LargeBlockCockpit</SubtypeId>
 				<!-- Station control seat -->
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
 			<Id>
@@ -46,7 +46,7 @@
 				<SubtypeId>LargeBlockCockpitSeat</SubtypeId>
 				<!-- Large block cockpit -->
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
 			<Id>
@@ -54,7 +54,7 @@
 				<SubtypeId>SmallBlockCockpit</SubtypeId>
 				<!-- Small block cockpit -->
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
 			<Id>
@@ -62,7 +62,7 @@
 				<SubtypeId>DBSmallBlockFighterCockpit</SubtypeId>
 				<!-- Fighter cockpit -->
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
 			<Id>
@@ -70,7 +70,7 @@
 				<SubtypeId>CockpitOpen</SubtypeId>
 				<!-- Flight seat -->
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
@@ -78,7 +78,7 @@
 				<TypeId>Cockpit</TypeId>
 				<SubtypeId>RoverCockpit</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<!-- End region Cockpits -->
@@ -88,14 +88,14 @@
 				<TypeId>Gyro</TypeId>
 				<SubtypeId>LargeBlockGyro</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_GyroDefinition">
 			<Id>
 				<TypeId>Gyro</TypeId>
 				<SubtypeId>SmallBlockGyro</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
@@ -103,7 +103,7 @@
 				<TypeId>Cockpit</TypeId>
 				<SubtypeId>OpenCockpitSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
@@ -111,9 +111,9 @@
 				<TypeId>Cockpit</TypeId>
 				<SubtypeId>OpenCockpitLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

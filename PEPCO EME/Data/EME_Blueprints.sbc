@@ -27,7 +27,7 @@
 				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
 			</Prerequisites>
 			<Results>
-				<Item Amount="10" TypeId="Component" SubtypeId="EME-Plates" />
+				<Item Amount="10" TypeId="Component" SubtypeId="EME_Plate" />
 			</Results>
 			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
 		</Blueprint>
@@ -42,7 +42,7 @@
 				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
 			</Prerequisites>
 			<Results>
-				<Item Amount="10" TypeId="Component" SubtypeId="EME-Fasteners" />
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Fastener" />
 			</Results>
 			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
 		</Blueprint>
@@ -58,7 +58,7 @@
 				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
 			</Prerequisites>
 			<Results>
-				<Item Amount="10" TypeId="Component" SubtypeId="EME-Screws" />
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Screw" />
 			</Results>
 			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
 		</Blueprint>
@@ -90,7 +90,7 @@
 				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
 			</Prerequisites>
 			<Results>
-				<Item Amount="10" TypeId="Component" SubtypeId="EME-Struts" />
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Strut" />
 			</Results>
 			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
 		</Blueprint>
@@ -106,7 +106,7 @@
 				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
 			</Prerequisites>
 			<Results>
-				<Item Amount="10" TypeId="Component" SubtypeId="EME-Ties" />
+				<Item Amount="10" TypeId="Component" SubtypeId="EME-Tie" />
 			</Results>
 			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
 		</Blueprint>
@@ -142,5 +142,69 @@
 			</Results>
 			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
 		</Blueprint>
+		
+<!-- Smiple Ingot Production -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_SimpleStoneOretoIronIngot</SubtypeId>
+			</Id>
+			<DisplayName>Iron Ingot</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Ingot" SubtypeId="emeIron" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_SimpleStoneOretoCopperIngot</SubtypeId>
+			</Id>
+			<DisplayName>Copper ingot</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Ingot" SubtypeId="emeCopper" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_SimpleStoneOretoSiliconWafer</SubtypeId>
+			</Id>
+			<DisplayName>Silicon Wafer</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Ingot" SubtypeId="emeSiliconWafer" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>EME_SimpleGravel</SubtypeId>
+			</Id>
+			<DisplayName>Bag of Gravel</DisplayName>
+			<Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="10" TypeId="Ingot" SubtypeId="emeGravel" />
+			</Results>
+			<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		
 	</Blueprints>
 </Definitions>

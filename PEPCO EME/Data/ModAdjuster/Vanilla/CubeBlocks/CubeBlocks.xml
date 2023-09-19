@@ -6,7 +6,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>LargeRailStraight</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_DebugSphere1Definition">
@@ -14,7 +14,7 @@
 				<TypeId>DebugSphere1</TypeId>
 				<SubtypeId>DebugSphereLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_DebugSphere2Definition">
@@ -22,7 +22,7 @@
 				<TypeId>DebugSphere2</TypeId>
 				<SubtypeId>DebugSphereLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_DebugSphere3Definition">
@@ -30,9 +30,9 @@
 				<TypeId>DebugSphere3</TypeId>
 				<SubtypeId>DebugSphereLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

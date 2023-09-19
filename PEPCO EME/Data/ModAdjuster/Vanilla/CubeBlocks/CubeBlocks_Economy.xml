@@ -6,7 +6,7 @@
 				<TypeId>StoreBlock</TypeId>
 				<SubtypeId>StoreBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_SafeZoneBlockDefinition">
@@ -14,7 +14,7 @@
 				<TypeId>SafeZoneBlock</TypeId>
 				<SubtypeId>SafeZoneBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 
@@ -23,7 +23,7 @@
 				<TypeId>ContractBlock</TypeId>
 				<SubtypeId>ContractBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_VendingMachineDefinition">
@@ -31,7 +31,7 @@
 				<TypeId>VendingMachine</TypeId>
 				<SubtypeId>VendingMachine</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_StoreBlockDefinition">
@@ -39,8 +39,8 @@
 				<TypeId>StoreBlock</TypeId>
 				<SubtypeId>AtmBlock</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

@@ -6,28 +6,28 @@
 				<TypeId>Warhead</TypeId>
 				<SubtypeId>LargeWarhead</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_WarheadDefinition">
 			<Id>
 				<TypeId>Warhead</TypeId>
 				<SubtypeId>SmallWarhead</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_DecoyDefinition">
 			<Id>
 				<TypeId>Decoy</TypeId>
 				<SubtypeId>LargeDecoy</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_DecoyDefinition">
 			<Id>
 				<TypeId>Decoy</TypeId>
 				<SubtypeId>SmallDecoy</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -35,7 +35,7 @@
 				<TypeId>LargeGatlingTurret</TypeId>
 				<SubtypeId/>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -43,7 +43,7 @@
 				<TypeId>LargeGatlingTurret</TypeId>
 				<SubtypeId>SmallGatlingTurret</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -51,7 +51,7 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId />
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -59,7 +59,7 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>SmallMissileTurret</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -67,7 +67,7 @@
 				<TypeId>InteriorTurret</TypeId>
 				<SubtypeId>LargeInteriorTurret</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
@@ -75,28 +75,28 @@
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId />
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId>LargeMissileLauncher</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
 				<TypeId>SmallMissileLauncherReload</TypeId>
 				<SubtypeId>SmallRocketLauncherReload</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
 			<Id>
 				<TypeId>SmallGatlingGun</TypeId>
 				<SubtypeId />
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
@@ -104,7 +104,7 @@
 				<TypeId>SmallGatlingGun</TypeId>
 				<SubtypeId>SmallBlockAutocannon</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
@@ -112,7 +112,7 @@
 				<TypeId>SmallMissileLauncherReload</TypeId>
 				<SubtypeId>SmallBlockMediumCalibreGun</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
@@ -120,7 +120,7 @@
 				<TypeId>SmallMissileLauncher</TypeId>
 				<SubtypeId>LargeBlockLargeCalibreGun</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 
@@ -130,7 +130,7 @@
 				<TypeId>SmallMissileLauncherReload</TypeId>
 				<SubtypeId>LargeRailgun</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
@@ -138,7 +138,7 @@
 				<TypeId>SmallMissileLauncherReload</TypeId>
 				<SubtypeId>SmallRailgun</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -146,7 +146,7 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>LargeCalibreTurret</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -154,7 +154,7 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>LargeBlockMediumCalibreTurret</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -162,7 +162,7 @@
 				<TypeId>LargeMissileTurret</TypeId>
 				<SubtypeId>SmallBlockMediumCalibreTurret</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
@@ -170,8 +170,8 @@
 				<TypeId>LargeGatlingTurret</TypeId>
 				<SubtypeId>AutoCannonTurret</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

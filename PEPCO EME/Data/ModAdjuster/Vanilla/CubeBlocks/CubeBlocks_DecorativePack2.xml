@@ -7,7 +7,7 @@
 				<TypeId>VendingMachine</TypeId>
 				<SubtypeId>FoodDispenser</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_JukeboxDefinition">
@@ -15,7 +15,7 @@
 				<TypeId>Jukebox</TypeId>
 				<SubtypeId>Jukebox</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 
@@ -25,7 +25,7 @@
 				<TypeId>LCDPanelsBlock</TypeId>
 				<SubtypeId>LabEquipment</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -33,7 +33,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>Shower</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 
@@ -42,21 +42,21 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>WindowWall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>WindowWallLeft</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>WindowWallRight</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 
@@ -65,7 +65,7 @@
 				<TypeId>LCDPanelsBlock</TypeId>
 				<SubtypeId>MedicalStation</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
@@ -73,14 +73,14 @@
 				<TypeId>TextPanel</TypeId>
 				<SubtypeId>TransparentLCDLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
 			<Id>
 				<TypeId>TextPanel</TypeId>
 				<SubtypeId>TransparentLCDSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 
@@ -89,49 +89,49 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>Catwalk</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>CatwalkCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>CatwalkStraight</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>CatwalkWall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>CatwalkRailingEnd</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>CatwalkRailingHalfRight</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>CatwalkRailingHalfLeft</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -139,7 +139,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>CatwalkHalf</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -147,7 +147,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>CatwalkHalfRailing</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -155,7 +155,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>CatwalkHalfCenterRailing</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -163,7 +163,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>CatwalkHalfOuterRailing</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 
@@ -172,21 +172,21 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>GratedStairs</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>GratedHalfStairs</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>GratedHalfStairsMirrored</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -194,42 +194,42 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>RailingStraight</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>RailingDouble</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>RailingCorner</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>RailingDiagonal</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>RailingHalfRight</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>RailingHalfLeft</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -237,7 +237,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>RailingCenter</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -245,7 +245,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>Railing2x1Right</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -253,7 +253,7 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>Railing2x1Left</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 
@@ -263,14 +263,14 @@
 				<TypeId>ReflectorLight</TypeId>
 				<SubtypeId>RotatingLightLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
 			<Id>
 				<TypeId>ReflectorLight</TypeId>
 				<SubtypeId>RotatingLightSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition>
@@ -278,24 +278,24 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>Freight1</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>Freight2</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>Freight3</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<!-- End of Decorative Blocks 2 -->
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>

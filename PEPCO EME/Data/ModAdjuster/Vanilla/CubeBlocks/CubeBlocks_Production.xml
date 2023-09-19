@@ -6,14 +6,14 @@
 				<TypeId>Refinery</TypeId>
 				<SubtypeId>LargeRefinery</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
 			<Id>
 				<TypeId>Refinery</TypeId>
 				<SubtypeId>Blast Furnace</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
@@ -21,7 +21,7 @@
 				<TypeId>OxygenGenerator</TypeId>
 				<SubtypeId></SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
@@ -29,7 +29,7 @@
 				<TypeId>OxygenGenerator</TypeId>
 				<SubtypeId>OxygenGeneratorSmall</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
@@ -37,7 +37,7 @@
 				<TypeId>Assembler</TypeId>
 				<SubtypeId>LargeAssembler</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
 			<Id>
@@ -50,14 +50,14 @@
 				<TypeId>SurvivalKit</TypeId>
 				<SubtypeId>SurvivalKitLarge</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_SurvivalKitDefinition">
 			<Id>
 				<TypeId>SurvivalKit</TypeId>
 				<SubtypeId>SurvivalKit</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_OxygenFarmDefinition">
@@ -65,7 +65,7 @@
 				<TypeId>OxygenFarm</TypeId>
 				<SubtypeId>LargeBlockOxygenFarm</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
@@ -73,21 +73,21 @@
 				<TypeId>UpgradeModule</TypeId>
 				<SubtypeId>LargeProductivityModule</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
 			<Id>
 				<TypeId>UpgradeModule</TypeId>
 				<SubtypeId>LargeEffectivenessModule</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
 			<Id>
 				<TypeId>UpgradeModule</TypeId>
 				<SubtypeId>LargeEnergyModule</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

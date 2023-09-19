@@ -6,7 +6,7 @@
 				<TypeId>MedicalRoom</TypeId>
 				<SubtypeId>LargeMedicalRoom</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
@@ -14,15 +14,15 @@
 				<TypeId>CryoChamber</TypeId>
 				<SubtypeId>LargeBlockCryoChamber</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
 			<Id>
 				<TypeId>CryoChamber</TypeId>
 				<SubtypeId>SmallBlockCryoChamber</SubtypeId>
 			</Id>
-			<Public>false</Public>
+			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
 	</CubeBlocks>
-	<Public>false</Public>
+	<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 </Definitions>
