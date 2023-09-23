@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Blueprints>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>emeGravelIcetoMedkit</SubtypeId>
+			</Id>
+			<!-- dont forget to update the name and Icon -->
+			<DisplayName>DisplayName_Item_Medkit</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\MedKit.dds</Icon>
+			<Prerequisites>
+				<Item Amount="10" TypeId="Ingot" SubtypeId="Stone" />
+				<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
+			</Prerequisites>
+			<Results>
+			<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Medkit" />
+			</Results>
+			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+	</Blueprints>
+</Definitions>

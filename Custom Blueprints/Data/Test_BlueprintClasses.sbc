@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlueprintClasses>
+		<Class>
+			<Id>
+				<TypeId>BlueprintClassDefinition</TypeId>
+				<SubtypeId>emeBasicMedkit</SubtypeId>
+			</Id>
+			<DisplayName>EME Test refiner</DisplayName>
+			<Description>Description_BlueprintClass_Components</Description>
+			<Icon>Textures\GUI\Icons\buttons\component.dds</Icon>
+			<FocusIcon>Textures\GUI\Icons\buttons\component.dds</FocusIcon>
+			<HighlightIcon>Textures\GUI\Icons\buttons\component_focus.dds</HighlightIcon>
+			<InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
+		</Class>
+	</BlueprintClasses>
+	<BlueprintClassEntries>
+
+		<!-- Custom Blueprints -->
+		<Entry Class="emeBasicMedkit" BlueprintSubtypeId="emeGravelIcetoMedkit" />
+		
+	</BlueprintClassEntries>
+</Definitions>
