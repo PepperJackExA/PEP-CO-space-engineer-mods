@@ -1,6 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+			<Id>
+				<TypeId>Assembler</TypeId>
+				<SubtypeId>BasicAssembler</SubtypeId>
+			</Id>
+			<DisplayName>PEPCO Prorietary Basic Assembler</DisplayName>
+			<Description>A basic assembler to produce a limited selection of proprietary parts.  
+			
+			Must purchase or loot components to build.</Description>
+		</Definition>
+		
+		
 		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
 			<Id>
 				<TypeId>Refinery</TypeId>
@@ -39,12 +51,7 @@
 			</Id>
 			<ShowInCreative>true</ShowInCreative><AvailableInSurvival>false</AvailableInSurvival>
 		</Definition>
-		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
-			<Id>
-				<TypeId>Assembler</TypeId>
-				<SubtypeId>BasicAssembler</SubtypeId>
-			</Id>
-		</Definition>
+
 		<Definition xsi:type="MyObjectBuilder_SurvivalKitDefinition">
 			<Id>
 				<TypeId>SurvivalKit</TypeId>
