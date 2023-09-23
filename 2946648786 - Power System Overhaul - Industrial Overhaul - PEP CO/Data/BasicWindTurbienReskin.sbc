@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<!-- Decorative Blocks #3-->
+		<Definition xsi:type="MyObjectBuilder_WindTurbineDefinition">
+			<Id>
+				<TypeId>WindTurbine</TypeId>
+				<SubtypeId>LargeBlockWindTurbineReskin</SubtypeId>
+			</Id>
+			<DisplayName>Basic Twin-blade Wind Turbine</DisplayName>
+			<Description>Basic wind panel capable of generating power. 
+			Nominal Max Output: 500kW</Description>
+			<Icon>Textures\GUI\Icons\Cubes\WindTurbineReskin_Large.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<PlaceDecals>false</PlaceDecals>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="5" z="5" />
+			<Center x="2" y="0" z="2" />
+			<!-- The Offset is there as the Base model had to be placed in the world origin 0,0,0. If the Base of the block was offseted like usual, it couldn't be built properly and had a lot of broken triangles-->
+			<ModelOffset x="0" y="-6.25" z="0" />
+			<Model>Models\Cubes\Large\WindTurbineBaseReskin.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="Electromagnet" Count="8" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="CopperWire" Count="24" />
+				<Component Subtype="Computer" Count="2" />
+				<Component Subtype="SteelPlate" Count="30" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="2" StartY="2" EndX="3" EndY="3" Default="true" />
+			</MountPoints>
+			<MirroringY>X</MirroringY>
+			<MirroringX>Y</MirroringX>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\WindTurbineReskin_Construction_1.mwm" />
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\WindTurbineReskin_Construction_2.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\WindTurbineReskin_Construction_3.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>WindTurbineReskin</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<DamageEffectId>214</DamageEffectId>
+			<ActionSound>ArcBlockWindTurbine</ActionSound>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<ResourceSourceGroup>SolarPanels</ResourceSourceGroup>
+			<MaxPowerOutput>0.5</MaxPowerOutput>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<IsAirTight>false</IsAirTight>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+				</DynamicMode>
+			</VoxelPlacement>
+			<RaycasterSize>20</RaycasterSize>
+			<RaycastersCount>9</RaycastersCount>
+			<MinRaycasterClearance>0.3</MinRaycasterClearance>
+			<OptimalGroundClearance>25</OptimalGroundClearance>
+			<RaycastersToFullEfficiency>7</RaycastersToFullEfficiency>
+			<OptimalWindSpeed>80</OptimalWindSpeed>
+			<TurbineSpinUpSpeed>1</TurbineSpinUpSpeed>
+			<TurbineSpinDownSpeed>0.3</TurbineSpinDownSpeed>
+			<TurbineRotationSpeed>4</TurbineRotationSpeed>
+			<PCU>55</PCU>
+			<TargetingGroups>
+				<string>PowerSystems</string>
+			</TargetingGroups>
+			<DLC>DecorativeBlocks3</DLC>
+		</Definition>
+
+	</CubeBlocks>
+</Definitions>
