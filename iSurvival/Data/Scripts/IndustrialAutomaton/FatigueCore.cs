@@ -111,15 +111,15 @@ namespace Fatigue
                     }
 
                     // This is where we remove health if applicable
-                    if (hunger.Value == 0 && fatigue.Value == 0)
+                    if (hunger.Value == 0 && fatigue.Value == 0) // Both hunger and fatigue are 0
                     {
                         IMyDestroyableObject thisPlayer = player as IMyDestroyableObject;
-                        thisPlayer.DoDamage(1, MyStringHash.GetOrCompute("Hunger AND Fatige, both?!"), false);
+                        thisPlayer.DoDamage(1, MyStringHash.GetOrCompute("Hunger AND Fatige, both?!"), false); //Double damage
                     }
-                    else if (hunger.Value == 0 || fatigue.Value == 0)
+                    else if (hunger.Value == 0 || fatigue.Value == 0) // Either hunger or fatigue are 0
                     {
                         IMyDestroyableObject thisPlayer = player as IMyDestroyableObject;
-                        thisPlayer.DoDamage(0.5f, MyStringHash.GetOrCompute("Either Hunger or Fatige, maybe both?!"), false);
+                        thisPlayer.DoDamage(0.5f, MyStringHash.GetOrCompute("Either Hunger or Fatige, maybe both?!"), false); //Basic damage
                     }
 
 
