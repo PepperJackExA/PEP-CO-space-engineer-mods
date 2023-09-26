@@ -81,6 +81,7 @@ namespace Fatigue
                     MyEntityStat hunger = GetPlayerStat(statComp, "Hunger");
                     MyEntityStat stamina = GetPlayerStat(statComp, "Stamina");
                     MyEntityStat health = GetPlayerStat(statComp, "Health");
+                    MyEntityStat speed = GetPlayerStat(statComp, "speed");
 
                     // Skip player if any of the stat's is missing
                     if (fatigue == null || hunger == null || stamina == null)
@@ -107,7 +108,12 @@ namespace Fatigue
                     MyAPIGateway.Utilities.ShowMessage("Test", "" + player.Character.CurrentMovementState + " " + "Stamina: " + teststamina);
                     teststamina = 0;
                     // Check for running state every second
-                    if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Standing)
+                    if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sitting)
+                    {
+                        stamina.Increase(2f, null);
+                        teststamina = 2f;
+                    }
+                    else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Standing)
                     {
                         stamina.Increase(0.5f, null);
                         teststamina = 0.5f;
@@ -128,13 +134,10 @@ namespace Fatigue
                         teststamina = 2.5f;
                     }
 
-                    else
+                    else if (stamina.Value > 0)
                     {
-                        if (stamina.Value > 0)
-                        {
-                            stamina.Decrease(0.1f, null);
-                            teststamina = -0.1f;
-                        }
+                        stamina.Decrease(0.1f, null);
+                        teststamina = -0.1f;
                     }
 
 
@@ -151,6 +154,16 @@ namespace Fatigue
                         MyAPIGateway.Utilities.ShowMessage("Damage", "hunger or fatigue = 0: health -1");
                         //thisPlayer.DoDamage(0.5f, MyStringHash.GetOrCompute("Either Hunger or Fatige, maybe both?!"), false); //Basic damage THIS WAS NOT WORKING
                     }
+                    // Damage from stamina level
+                    if (stamina.Value < 10)
+                    {
+                        fatigue.Decrease(1, null);
+                        MyAPIGateway.Utilities.ShowMessage("stamina", "stamina < 10: fatigue -1");
+                        if (stamina.Value == 0)
+                        {
+                            health.Decrease(5, null);
+                        }
+                    }
 
                     // Heal from food
                     if (hunger.Value > 20 && health.Value < 100)
@@ -160,41 +173,40 @@ namespace Fatigue
                         MyAPIGateway.Utilities.ShowMessage("Heal", "heal from hunger: health 1 Hunger -1");
                     }
 
+                    MyAPIGateway.Utilities.ShowMessage("Check", "hunger value: " + hunger.Value);
                     // Do remaining checks & stat updates every 5s
                     if (runCount < 300)
                         continue;
 
-                    if (stamina.Value >= 100)
+                    hunger.Decrease(((100 - fatigue.Value) / 50), null);
+                    MyAPIGateway.Utilities.ShowMessage("Check", "Normal hunger loss " + ((100 - fatigue.Value) / 50));
+                    MyAPIGateway.Utilities.ShowMessage("Check", "hunger value: " + hunger.Value);
+
+                    if (stamina.Value < 100)
                     {
-                        fatigue.Increase(1, null);
-                        MyAPIGateway.Utilities.ShowMessage("Check", "stanima = 100: fatigue 1");
+                        fatigue.Decrease((100 - hunger.Value) / 50, null);
+                        MyAPIGateway.Utilities.ShowMessage("Check", "stamina < 100: : fatigue: " + ((100 - hunger.Value) / -50));
+                        hunger.Decrease((100 - fatigue.Value)/50, null);
+                        MyAPIGateway.Utilities.ShowMessage("Check", "stamina < 100: Hunger: " + (100 - fatigue.Value) / -50);
+
                     }
 
-                    if (hunger.Value > 0)
-                    {
-                        hunger.Decrease(1, null);
-                        MyAPIGateway.Utilities.ShowMessage("Check", "hunger > 0: hunger 1");
-                    }
-                    if (hunger.Value < 90)
-                        fatigue.Decrease(((100-hunger.Value)/50), null);
-                    MyAPIGateway.Utilities.ShowMessage("Check", "hunger < 90: fatigue: " + hunger.Value + "   " + (100 - hunger.Value) + "  " + (100 - hunger.Value)/50);
+                    //if (fatigue.Value < 30)
+                    //{
+                    //    stamina.Decrease((float)fatigue.Value / 100, null);
+                    //    MyAPIGateway.Utilities.ShowMessage("Check", "fatigue < 30: Stamina " + (float)fatigue.Value / -100);
+                    //}
+                    //else if (fatigue.Value > 50)
+                    //{
+                    //    stamina.Increase((float)((fatigue.Value) / 20), null);
+                    //    MyAPIGateway.Utilities.ShowMessage("Check", "fatigue > 50: Stamina " + (fatigue.Value) / 20);
+                    //}
 
-                    if (fatigue.Value < 30)
-                    {
-                        stamina.Decrease((float)fatigue.Value / 100, null);
-                        MyAPIGateway.Utilities.ShowMessage("Check", "fatigue < 30: Stamina " + (float)fatigue.Value / -100);
-                    }
-                    else if (fatigue.Value > 50)
-                    {
-                        stamina.Increase((float)((fatigue.Value) / 20), null);
-                        MyAPIGateway.Utilities.ShowMessage("Check", "fatigue > 50: Stamina " + (fatigue.Value) / 20);
-                    }
+                    //if (hunger.Value < 30)
+                    //    fatigue.Decrease((float)Math.Min(fatigue.Value / 100, (50 - hunger.Value) / 20), null);
 
-                    if (hunger.Value < 30)
-                        fatigue.Decrease((float)Math.Min(fatigue.Value / 100, (50 - hunger.Value) / 20), null);
-
-                    if (hunger.Value > 50)
-                        fatigue.Increase((float)Math.Min(fatigue.Value / 100, (hunger.Value - 50) / 20), null);
+                    //if (hunger.Value > 50)
+                    //   fatigue.Increase((float)Math.Min(fatigue.Value / 100, (hunger.Value - 50) / 20), null);
 
                     if (fatigue.Value > 20 || rand.Next((int)fatigue.Value) > 0)
                         continue;
