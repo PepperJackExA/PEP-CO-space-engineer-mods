@@ -12,6 +12,7 @@ using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
+using VRage.Game.ModAPI.Interfaces;
 using VRage.ModAPI;
 using VRage.ObjectBuilders;
 using VRage.Utils;
@@ -67,6 +68,7 @@ namespace Fatigue
                 var players = new List<IMyPlayer>();
                 MyAPIGateway.Multiplayer.Players.GetPlayers(players, p => p.Character != null && p.Character.ToString().Contains("Astronaut"));
 
+                // Loop through all players
                 foreach (IMyPlayer player in players)
                 {
                     var statComp = player.Character?.Components.Get<MyEntityStatComponent>();
@@ -77,9 +79,11 @@ namespace Fatigue
                     MyEntityStat hunger = GetPlayerStat(statComp, "Hunger");
                     MyEntityStat stamina = GetPlayerStat(statComp, "Stamina");
 
+                    // Skip player if any of the stat's is missing
                     if (fatigue == null || hunger == null || stamina == null)
                         continue;
 
+                    // Checks if player is sitting in a block
                     var block = player.Controller?.ControlledEntity?.Entity as IMyCubeBlock;
                     if (block != null)
                     {
@@ -88,21 +92,29 @@ namespace Fatigue
                             fatigue.Increase(5f, null);
                         else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
                         {
-                            hunger.Decrease(5f, null);
-                            if (hunger.Value > 0)
+                            fatigue.Increase(2f, null); // Because the throne is a place for relaxation
+                            hunger.Decrease(5f, null); // Drains your hunger stat -> Makes you more hungry
+                            if (hunger.Value > 0) // Only gives you organic if you are above 0 hunger
                                 player.Character.GetInventory(0).AddItems((MyFixedPoint)0.05f, (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
                         }
                     }
 
-                    // Check for running state
-                    if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sprinting)
+                    // Check for running state every second
+                    if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sprinting) // @PepperJack let me know what other activities you want to be included
                     {
+                        //Drain stamina while running
                         stamina.Decrease(2, null);
-                        MyAPIGateway.Utilities.ShowMessage("Douchebag", "Stop " + player.Character.CurrentMovementState + " you will hurt yourself!");
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage("Douchebag", "Doesn't matter if you are " + player.Character.CurrentMovementState + ". You will still hurt yourself!");
+                        //Not sure we need it. I think regen is managed below so long as hunger isn't  too low.
+                    }
+
+                    // This is where we remove health if applicable
+                    if (hunger.Value == 0 || fatigue.Value == 0)
+                    {
+                        IMyDestroyableObject thisPlayer = player as IMyDestroyableObject;
+                        thisPlayer.DoDamage(0.5f, MyStringHash.GetOrCompute("Either Hunger or Fatige, maybe both?!"), false);
                     }
 
 
