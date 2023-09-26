@@ -31,6 +31,8 @@ namespace Fatigue
         public static Random rand = new Random();
         public static List<long> blinkList = new List<long>();
         public static int loadWait = 120;
+        public static float teststamina = 0;
+        public static float testfatigue = 0;
 
         protected override void UnloadData()
         {
@@ -78,6 +80,7 @@ namespace Fatigue
                     MyEntityStat fatigue = GetPlayerStat(statComp, "Fatigue");
                     MyEntityStat hunger = GetPlayerStat(statComp, "Hunger");
                     MyEntityStat stamina = GetPlayerStat(statComp, "Stamina");
+                    MyEntityStat health = GetPlayerStat(statComp, "Health");
 
                     // Skip player if any of the stat's is missing
                     if (fatigue == null || hunger == null || stamina == null)
@@ -93,60 +96,107 @@ namespace Fatigue
                         else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
                         {
                             fatigue.Increase(2f, null); // Because the throne is a place for relaxation
-                            hunger.Decrease(5f, null); // Drains your hunger stat -> Makes you more hungry
-                            if (hunger.Value > 0) // Only gives you organic if you are above 0 hunger
+                            if (hunger.Value > 20)
+                                hunger.Decrease(5f, null); // Drains your hunger stat -> Makes you more hungry
+                            else
+                                // Only gives you organic if you are above 20 hunger
                                 player.Character.GetInventory(0).AddItems((MyFixedPoint)0.05f, (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
                         }
                     }
 
+                    MyAPIGateway.Utilities.ShowMessage("Test", "" + player.Character.CurrentMovementState + " " + "Stamina: " + teststamina);
+                    teststamina = 0;
                     // Check for running state every second
-                    if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sprinting) // @PepperJack let me know what other activities you want to be included
+                    if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Standing)
+                    {
+                        stamina.Increase(0.5f, null);
+                        teststamina = 0.5f;
+                    }
+                    else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sprinting) // @PepperJack let me know what other activities you want to be included
                     {
                         //Drain stamina while running
-                        stamina.Decrease(2, null);
+                        if (stamina.Value > 0)
+                        {
+                            stamina.Decrease(5, null);
+                        }
+                        teststamina = -5;
                     }
-                    else
+                    else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Crouching)
                     {
                         //Not sure we need it. I think regen is managed below so long as hunger isn't  too low.
+                        stamina.Increase(2.5f, null);
+                        teststamina = 2.5f;
                     }
+
+                    else
+                    {
+                        if (stamina.Value > 0)
+                        {
+                            stamina.Decrease(0.1f, null);
+                            teststamina = -0.1f;
+                        }
+                    }
+
 
                     // This is where we remove health if applicable
                     if (hunger.Value == 0 && fatigue.Value == 0) // Both hunger and fatigue are 0
                     {
-                        IMyDestroyableObject thisPlayer = player as IMyDestroyableObject;
-                        thisPlayer.DoDamage(1, MyStringHash.GetOrCompute("Hunger AND Fatige, both?!"), false); //Double damage
+                        health.Decrease(2, null);
+                        MyAPIGateway.Utilities.ShowMessage("Test", "hunger and fatigue = 0: health -2");
+                        //thisPlayer.DoDamage(1, MyStringHash.GetOrCompute("Hunger AND Fatige, both?!"), false); //Double damage THIS WAS NOT WORKING
                     }
                     else if (hunger.Value == 0 || fatigue.Value == 0) // Either hunger or fatigue are 0
                     {
-                        IMyDestroyableObject thisPlayer = player as IMyDestroyableObject;
-                        thisPlayer.DoDamage(0.5f, MyStringHash.GetOrCompute("Either Hunger or Fatige, maybe both?!"), false); //Basic damage
+                        health.Decrease(1, null);
+                        MyAPIGateway.Utilities.ShowMessage("Test", "hunger or fatigue = 0: health -1");
+                        //thisPlayer.DoDamage(0.5f, MyStringHash.GetOrCompute("Either Hunger or Fatige, maybe both?!"), false); //Basic damage THIS WAS NOT WORKING
                     }
 
+                    // Heal from food
+                    if (hunger.Value > 20 && health.Value < 100)
+                    {
+                        health.Increase(1, null);
+                        hunger.Decrease(1, null);
+                        MyAPIGateway.Utilities.ShowMessage("Test", "heal from hunger: health 1 Hunger -1");
+                    }
 
                     // Do remaining checks & stat updates every 5s
                     if (runCount < 300)
                         continue;
 
-                    if (stamina.Value <= ((float)Math.Min(hunger.Value, fatigue.Value)))
-                        stamina.Increase(1, null);
-                    else
-                        stamina.Decrease(1, null);
+                    if (stamina.Value >= 100)
+                    {
+                        fatigue.Increase(1, null);
+                        MyAPIGateway.Utilities.ShowMessage("Test", "stanima = 100: fatigue 1");
+                    }
 
                     if (hunger.Value > 0)
-                        hunger.Decrease(0.1f, null);
+                    {
+                        hunger.Decrease(1, null);
+                        MyAPIGateway.Utilities.ShowMessage("Test", "hunger > 0: hunger 1");
+                    }
+                    if (hunger.Value < 90)
+                        fatigue.Decrease(((100-hunger.Value)/50), null);
+                    MyAPIGateway.Utilities.ShowMessage("Test", "hunger < 90: fatigue: " + hunger.Value + "   " + (100 - hunger.Value) + "  " + (100 - hunger.Value)/50);
+
+                    if (fatigue.Value < 30)
+                    {
+                        stamina.Decrease((float)fatigue.Value / 100, null);
+                        MyAPIGateway.Utilities.ShowMessage("Test", "fatigue < 30: Stamina " + (float)fatigue.Value / -100);
+                    }
+                    else if (fatigue.Value > 50)
+                    {
+                        stamina.Increase((float)((fatigue.Value) / 20), null);
+                        MyAPIGateway.Utilities.ShowMessage("Test", "fatigue > 50: Stamina " + (fatigue.Value) / 20);
+                    }
 
                     if (hunger.Value < 30)
                         fatigue.Decrease((float)Math.Min(fatigue.Value / 100, (50 - hunger.Value) / 20), null);
 
-                    if (hunger.Value < 30)
-                        fatigue.Decrease((float)Math.Min(fatigue.Value / 100, (50 - hunger.Value) / 20), null);
-
-                    else if (hunger.Value > 50)
+                    if (hunger.Value > 50)
                         fatigue.Increase((float)Math.Min(fatigue.Value / 100, (hunger.Value - 50) / 20), null);
-                    stamina.Increase((float)Math.Min(stamina.Value / 100, (hunger.Value - 50) / 20), null);
 
                     if (fatigue.Value > 20 || rand.Next((int)fatigue.Value) > 0)
-
                         continue;
 
                     blinkList.Add(player.IdentityId);
@@ -164,7 +214,6 @@ namespace Fatigue
                 Echo("Fatigue exception", ex.ToString());
             }
         }
-
         public void getPoke(byte[] poke)
         {
             // To call blink action on clients
