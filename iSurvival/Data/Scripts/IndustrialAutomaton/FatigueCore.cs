@@ -210,7 +210,7 @@ namespace Fatigue
                         continue;
 
 
-                    hunger.Decrease((((100 - fatigue.Value) / 100) / 2) * staminadrainmultiplier, null); // Normal hunger drain
+                    hunger.Decrease(((((100 - fatigue.Value) / 100) / 2) + 0.001f) * staminadrainmultiplier, null); // Normal hunger drain
                     MyAPIGateway.Utilities.ShowMessage("hunger", "normal drain" + (((100 - fatigue.Value) / 100) / 10) * staminadrainmultiplier);
 
                     if (stamina.Value < 100)
