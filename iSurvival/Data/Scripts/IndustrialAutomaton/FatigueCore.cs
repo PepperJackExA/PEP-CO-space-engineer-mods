@@ -132,16 +132,13 @@ namespace Fatigue
                             continue;
                         fatigue.Increase(0.05f * fatigueincreasemultiplier, null);
                         MyAPIGateway.Utilities.ShowMessage("Rest", " " + 0.05f * fatigueincreasemultiplier);
-                        if (runCount > 299)
-                            runCount = 0;
+
                     }
                     else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Flying)
                     {
                         stamina.Decrease(0.1f * staminadrainmultiplier, null);
                         MyAPIGateway.Utilities.ShowMessage("stamina", " " + 0.1f * staminadrainmultiplier);
 
-                        if (runCount > 299)
-                            runCount = 0;
                     }
                     else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Standing)
                     {
@@ -170,8 +167,7 @@ namespace Fatigue
                         fatigue.Increase(0.01f * fatigueincreasemultiplier, null);
                         MyAPIGateway.Utilities.ShowMessage("Rest", " " + 0.01f * fatigueincreasemultiplier);
                         MyAPIGateway.Utilities.ShowMessage("Fatigue", "Current Value: " + fatigue.Value);
-                        if (runCount > 299)
-                            runCount = 0;
+
                     }
 
                     else if (stamina.Value > 0)
