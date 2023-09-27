@@ -81,7 +81,6 @@ namespace Fatigue
                     MyEntityStat hunger = GetPlayerStat(statComp, "Hunger");
                     MyEntityStat stamina = GetPlayerStat(statComp, "Stamina");
                     MyEntityStat health = GetPlayerStat(statComp, "Health");
-                    MyEntityStat speed = GetPlayerStat(statComp, "speed");
 
                     // Skip player if any of the stat's is missing
                     if (fatigue == null || hunger == null || stamina == null)
