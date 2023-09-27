@@ -36,15 +36,15 @@ namespace Fatigue
 
         // changable varialbles
 
-        public static float staminadrainmultiplier  = 1;
-        public static float fatiguedrainmultiplier  = 1;
-        public static float healthdrainmultiplier  = 1;
-        public static float hungerdrainmultiplier  = 1;
+        public static float staminadrainmultiplier = 1;
+        public static float fatiguedrainmultiplier = 1;
+        public static float healthdrainmultiplier = 1;
+        public static float hungerdrainmultiplier = 1;
 
-        public static float staminaincreasemultiplier  = 1;
-        public static float fatigueincreasemultiplier  = 1;
-        public static float healthincreasemultiplier  = 1;
-        public static float hungerincreasemultiplier  = 1;
+        public static float staminaincreasemultiplier = 1;
+        public static float fatigueincreasemultiplier = 1;
+        public static float healthincreasemultiplier = 1;
+        public static float hungerincreasemultiplier = 1;
 
 
         public static float teststamina = 0; //can be removed when we remove debug text
@@ -114,7 +114,7 @@ namespace Fatigue
                         {
                             fatigue.Increase(2f, null); // Because the throne is a place for relaxation
                             if (hunger.Value > 20)
-                                hunger.Decrease(5f * hungerdrainmultiplier , null); // Drains your hunger stat -> Makes you more hungry
+                                hunger.Decrease(5f * hungerdrainmultiplier, null); // Drains your hunger stat -> Makes you more hungry
                             else
                                 // Only gives you organic if you are above 20 hunger
                                 player.Character.GetInventory(0).AddItems((MyFixedPoint)0.05f, (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
@@ -125,11 +125,27 @@ namespace Fatigue
 
                     if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sitting)
                     {
-                        stamina.Increase(2f * staminaincreasemultiplier , null);
+                        //Not sure we need it. I think regen is managed below so long as hunger isn't  too low.
+                        stamina.Increase(2.5f * staminaincreasemultiplier, null);
+                        MyAPIGateway.Utilities.ShowMessage("stamina", " " + 2.5f * staminaincreasemultiplier);
+                        if (runCount < 300)
+                            continue;
+                        fatigue.Increase(0.05f * fatigueincreasemultiplier, null);
+                        MyAPIGateway.Utilities.ShowMessage("Rest", " " + 0.05f * fatigueincreasemultiplier);
+                        if (runCount > 299)
+                            runCount = 0;
+                    }
+                    else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Flying)
+                    {
+                        stamina.Decrease(0.1f * staminadrainmultiplier, null);
+                        MyAPIGateway.Utilities.ShowMessage("stamina", " " + 0.1f * staminadrainmultiplier);
+
+                        if (runCount > 299)
+                            runCount = 0;
                     }
                     else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Standing)
                     {
-                        stamina.Increase(1 * staminaincreasemultiplier , null);
+                        stamina.Increase(1 * staminaincreasemultiplier, null);
                     }
                     else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sprinting) // @PepperJack let me know what other activities you want to be included
                     {
@@ -140,65 +156,73 @@ namespace Fatigue
                             IMyPlayer thisPlayer = player as IMyPlayer;
                             playerinventoryfillfactor = player.Character.GetInventory().VolumeFillFactor;
 
-                            stamina.Decrease((5 * playerinventoryfillfactor + 1) * staminadrainmultiplier , null);
-                            MyAPIGateway.Utilities.ShowMessage("stamina", " " + ((5 * playerinventoryfillfactor + 1) * staminadrainmultiplier ));
+                            stamina.Decrease((5 * playerinventoryfillfactor + 1) * staminadrainmultiplier, null);
+                            MyAPIGateway.Utilities.ShowMessage("stamina", " " + ((5 * playerinventoryfillfactor + 1) * staminadrainmultiplier));
                         }
 
                     }
                     else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Crouching)
                     {
-                        //Not sure we need it. I think regen is managed below so long as hunger isn't  too low.
-                        stamina.Increase(2.5f * staminaincreasemultiplier , null);
-                        MyAPIGateway.Utilities.ShowMessage("stamina", " " + 2.5f * staminaincreasemultiplier );
+                        stamina.Increase(2.5f * staminaincreasemultiplier, null);
+                        MyAPIGateway.Utilities.ShowMessage("stamina", " " + 2.5f * staminaincreasemultiplier);
+                        if (runCount < 300)
+                            continue;
+                        fatigue.Increase(0.01f * fatigueincreasemultiplier, null);
+                        MyAPIGateway.Utilities.ShowMessage("Rest", " " + 0.01f * fatigueincreasemultiplier);
+                        MyAPIGateway.Utilities.ShowMessage("Fatigue", "Current Value: " + fatigue.Value);
+                        if (runCount > 299)
+                            runCount = 0;
                     }
 
                     else if (stamina.Value > 0)
                     {
                         IMyPlayer thisPlayer = player as IMyPlayer;
                         playerinventoryfillfactor = player.Character.GetInventory().VolumeFillFactor;
-                        stamina.Decrease((playerinventoryfillfactor + 0.1f) * staminadrainmultiplier , null);
-                        MyAPIGateway.Utilities.ShowMessage("stamina", " " + (playerinventoryfillfactor + 0.1f) * staminadrainmultiplier );
+                        stamina.Decrease((playerinventoryfillfactor + 0.1f) * staminadrainmultiplier, null);
+                        MyAPIGateway.Utilities.ShowMessage("stamina", " " + (playerinventoryfillfactor + 0.1f) * staminadrainmultiplier);
                     }
 
 
                     // This is where we remove health if applicable
                     if (hunger.Value == 0 && fatigue.Value == 0) // Both hunger and fatigue are 0
                     {
-                        health.Decrease(2 * healthdrainmultiplier , null);
+                        health.Decrease(2 * healthdrainmultiplier, null);
                     }
                     else if (hunger.Value == 0 || fatigue.Value == 0) // Either hunger or fatigue are 0
                     {
-                        health.Decrease(1 * healthdrainmultiplier , null);
+                        health.Decrease(1 * healthdrainmultiplier, null);
                     }
                     // Damage from stamina level
                     if (stamina.Value < 10)
                     {
-                        fatigue.Decrease(1 * fatiguedrainmultiplier , null);
+                        fatigue.Decrease(1 * fatiguedrainmultiplier, null);
                         if (stamina.Value == 0)
                         {
-                            health.Decrease(5 * healthdrainmultiplier , null);
+                            health.Decrease(5 * healthdrainmultiplier, null);
                         }
                     }
 
                     // Heal from food
                     if (hunger.Value > 20 && health.Value < 100)
                     {
-                        health.Increase(1 * healthincreasemultiplier , null);
-                        hunger.Decrease(1 * hungerdrainmultiplier , null);
+                        health.Increase(1 * healthincreasemultiplier, null);
+                        hunger.Decrease(1 * hungerdrainmultiplier, null);
                     }
 
                     // Do remaining checks & stat updates every 5s
                     if (runCount < 300)
                         continue;
 
-                    hunger.Decrease((((100 - fatigue.Value) / 100)/10) * staminadrainmultiplier , null);
-                    MyAPIGateway.Utilities.ShowMessage("hunger", "normal drain" + (((100 - fatigue.Value) / 100) / 10) * staminadrainmultiplier );
+
+                    hunger.Decrease((((100 - fatigue.Value) / 100) / 2) * staminadrainmultiplier, null); // Normal hunger drain
+                    MyAPIGateway.Utilities.ShowMessage("hunger", "normal drain" + (((100 - fatigue.Value) / 100) / 10) * staminadrainmultiplier);
+
                     if (stamina.Value < 100)
                     {
-                        fatigue.Decrease(((100 - hunger.Value) / 100) * staminadrainmultiplier , null);
-                        MyAPIGateway.Utilities.ShowMessage("Check", "stamina < 100: : fatigue: " + ((100 - hunger.Value) / -100) * fatiguedrainmultiplier );//can be removed when we remove debug text
-                        hunger.Decrease(((100 - fatigue.Value) / 100) * staminadrainmultiplier , null);
-                        MyAPIGateway.Utilities.ShowMessage("Check", "stamina < 100: Hunger: " + ((100 - fatigue.Value) / -100) * hungerdrainmultiplier );//can be removed when we remove debug text
+                        fatigue.Decrease(((100 - hunger.Value) / 100) * staminadrainmultiplier, null);
+                        MyAPIGateway.Utilities.ShowMessage("Check", "stamina < 100: : fatigue: " + ((100 - hunger.Value) / -100) * fatiguedrainmultiplier);//can be removed when we remove debug text
+                        hunger.Decrease(((100 - fatigue.Value) / 100) * staminadrainmultiplier, null);
+                        MyAPIGateway.Utilities.ShowMessage("Check", "stamina < 100: Hunger: " + ((100 - fatigue.Value) / -100) * hungerdrainmultiplier);//can be removed when we remove debug text
 
                     }
 
