@@ -156,8 +156,8 @@ namespace Fatigue
                     {
                         IMyPlayer thisPlayer = player as IMyPlayer;
                         playerinventoryfillfactor = player.Character.GetInventory().VolumeFillFactor;
-                        stamina.Decrease((playerinventoryfillfactor + 0.5f) * staminadrainmultiplier , null);
-                        MyAPIGateway.Utilities.ShowMessage("stamina", " " + (playerinventoryfillfactor + 0.5f) * staminadrainmultiplier );
+                        stamina.Decrease((playerinventoryfillfactor + 0.1f) * staminadrainmultiplier , null);
+                        MyAPIGateway.Utilities.ShowMessage("stamina", " " + (playerinventoryfillfactor + 0.1f) * staminadrainmultiplier );
                     }
 
 
