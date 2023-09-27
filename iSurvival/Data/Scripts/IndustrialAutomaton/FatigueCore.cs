@@ -19,7 +19,6 @@ using VRage.Utils;
 using VRageMath;
 
 // Code heavily borrowed from Bačiulis' awesome Drink Water mod. Thanks so much for pointing me towards these methods dude, very much appreciated.
-
 namespace Fatigue
 {
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
@@ -59,6 +58,7 @@ namespace Fatigue
 
         public override void UpdateAfterSimulation()
         {
+
             try
             {
                 // Only run every quarter of a second
@@ -210,34 +210,17 @@ namespace Fatigue
                         continue;
 
 
-                    hunger.Decrease(((((100 - fatigue.Value) / 100) / 2) + 0.001f) * staminadrainmultiplier, null); // Normal hunger drain
-                    MyAPIGateway.Utilities.ShowMessage("hunger", "normal drain" + (((100 - fatigue.Value) / 100) / 10) * staminadrainmultiplier);
+                    hunger.Decrease(((((100 - fatigue.Value) / 100) / 2) + 0.001f) * hungerdrainmultiplier, null); // Normal hunger drain
+                    MyAPIGateway.Utilities.ShowMessage("hunger", "normal drain " + ((((100 - fatigue.Value) / 100) / 2) + 0.001f) * hungerdrainmultiplier);
 
                     if (stamina.Value < 100)
                     {
-                        fatigue.Decrease(((100 - hunger.Value) / 100) * staminadrainmultiplier, null);
+                        fatigue.Decrease(((100 - hunger.Value) / 100) * fatiguedrainmultiplier, null);
                         MyAPIGateway.Utilities.ShowMessage("Check", "stamina < 100: : fatigue: " + ((100 - hunger.Value) / -100) * fatiguedrainmultiplier);//can be removed when we remove debug text
-                        hunger.Decrease(((100 - fatigue.Value) / 100) * staminadrainmultiplier, null);
+                        hunger.Decrease(((100 - fatigue.Value) / 100) * hungerdrainmultiplier, null);
                         MyAPIGateway.Utilities.ShowMessage("Check", "stamina < 100: Hunger: " + ((100 - fatigue.Value) / -100) * hungerdrainmultiplier);//can be removed when we remove debug text
 
                     }
-
-                    //if (fatigue.Value < 30)
-                    //{
-                    //    stamina.Decrease((float)fatigue.Value / 100, null);
-                    //    MyAPIGateway.Utilities.ShowMessage("Check", "fatigue < 30: Stamina " + (float)fatigue.Value / -100);
-                    //}
-                    //else if (fatigue.Value > 50)
-                    //{
-                    //    stamina.Increase((float)((fatigue.Value) / 20), null);
-                    //    MyAPIGateway.Utilities.ShowMessage("Check", "fatigue > 50: Stamina " + (fatigue.Value) / 20);
-                    //}
-
-                    //if (hunger.Value < 30)
-                    //    fatigue.Decrease((float)Math.Min(fatigue.Value / 100, (50 - hunger.Value) / 20), null);
-
-                    //if (hunger.Value > 50)
-                    //   fatigue.Increase((float)Math.Min(fatigue.Value / 100, (hunger.Value - 50) / 20), null);
 
                     if (fatigue.Value > 20 || rand.Next((int)fatigue.Value) > 0)
                         continue;
@@ -257,7 +240,10 @@ namespace Fatigue
                 Echo("Fatigue exception", ex.ToString());
             }
         }
-        public void getPoke(byte[] poke)
+
+
+#region Background processes
+    public void getPoke(byte[] poke)
         {
             // To call blink action on clients
             try
@@ -436,3 +422,4 @@ namespace Fatigue
         public override string ToString() => string.Format("{0:0}", (float)(CurrentValue * 100.0));
     }
 }
+#endregion
