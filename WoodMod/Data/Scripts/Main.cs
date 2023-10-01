@@ -35,7 +35,7 @@
 			if (usestring.StartsWith("MyDebrisTr")) //ee
 			{
 
-				double dropammount = 100;
+				double dropammount = 3;
 				IMyEntity tree = obj as IMyEntity;
 				String treetype = tree.Model.AssetName;
 				
@@ -50,12 +50,13 @@
 				//if (treetype.Contains("Snow"))
 					//dropammount *= 2.0;
 
-				VRage.MyFixedPoint amount = ((int)(dropammount / 5.0));
 
 				int rnd = rand.Next(1, 5);
 
-				MyObjectBuilder_Component Droplog = MyObjectBuilderSerializer.CreateNewObject<MyObjectBuilder_Component>("WoodLog");
-				rand.Next(1);
+				VRage.MyFixedPoint amount = ((int)(dropammount * rnd));
+
+				MyObjectBuilder_Component Droplog = MyObjectBuilderSerializer.CreateNewObject<MyObjectBuilder_Component>("OakWoodLog");
+
 				//MyFloatingObjects.Spawn(new MyPhysicalInventoryItem(amount, Droplog), pos+(upp+3)+(fww)+((rtt)), fww, upp);
 
 				MyFloatingObjects.Spawn(new MyPhysicalInventoryItem(amount, Droplog), tree.GetPosition()+(tree.WorldMatrix.Up*rnd), tree.WorldMatrix.Forward , tree.WorldMatrix.Up); 

@@ -6,18 +6,18 @@
 				<TypeId>CubeBlock</TypeId>
 				<SubtypeId>OakWoodLog</SubtypeId>
 			</Id>
-			<DisplayName>{LOC:DisplayName_OakWoodLog}</DisplayName>
-			<Description>{LOC:Description_OakWoodLog}</Description>
-			<Icon>Textures\GUI\Icons\Items\OakWoodLog.dds</Icon>
+			<DisplayName>Oak Wood Log</DisplayName>
+			<Description>Log cut from an Oak Tree</Description>
+			<Icon>Textures\OakWoodLog.dds</Icon>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="5" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\OakWoodLog.mwm</Model>
 			<Components>
-				<Component Subtype="WoodLog" Count="1"/>
+				<Component Subtype="OakWoodLog" Count="1"/>
 			</Components>
-			<CriticalComponent Subtype="WoodLog" Index="0"/>
+			<CriticalComponent Subtype="OakWoodLog" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="5.00"/>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="5.00"/>
