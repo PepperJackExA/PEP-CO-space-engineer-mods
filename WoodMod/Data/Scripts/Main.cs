@@ -32,9 +32,9 @@
 			String usestring = obj.ToString();
 			
 			
-			if (usestring.StartsWith("MyDebrisTr")) //ee
+			if (usestring.StartsWith("MyDebrisTr")) //Tree drops
 			{
-
+				//drop this amount when a tree is destroyed
 				double dropammount = 3;
 				IMyEntity tree = obj as IMyEntity;
 				String treetype = tree.Model.AssetName;
