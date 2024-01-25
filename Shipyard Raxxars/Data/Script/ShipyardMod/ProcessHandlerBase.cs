@@ -1,5 +1,5 @@
-﻿using System;
-using Sandbox.ModAPI;
+﻿using Sandbox.ModAPI;
+using System;
 
 namespace ShipyardMod.ProcessHandlers
 {

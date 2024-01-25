@@ -1,8 +1,8 @@
 using Sandbox.Common.ObjectBuilders;
 using Sandbox.Definitions;
+using System.Collections.Generic;
 using VRage.Game;
 using VRage.Game.Components;
-using System.Collections.Generic;
 
 namespace PEPCO.IndustrialOverhaulOxygenGeneratorRebalance
 {
@@ -42,14 +42,14 @@ namespace PEPCO.IndustrialOverhaulOxygenGeneratorRebalance
 
             definition.ProducedGases = new List<MyOxygenGeneratorDefinition.MyGasGeneratorResourceInfo>
             {
-                
+
                 new MyOxygenGeneratorDefinition.MyGasGeneratorResourceInfo
                 {
                     IceToGasRatio = gas1ratio,
                     Id = MyDefinitionId.Parse("GasProperties/"+gas1),
                 },
             };
-            
+
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Produces: " + gas1 + " and " + " /1 ice" + "\n" +
                                   "Consumption: " + (definition.IceConsumptionPerSecond / 1000000).ToString("0.##") + "M heat / Second" + "\n" +
@@ -62,7 +62,7 @@ namespace PEPCO.IndustrialOverhaulOxygenGeneratorRebalance
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyOxygenGeneratorDefinition;
             definition.PCU *= 1; // 50
             definition.IceConsumptionPerSecond *= 1; // 10
-            
+
             definition.OperationalPowerConsumption *= 1; // 2 MW
 
             string gas1 = "Gasoline";

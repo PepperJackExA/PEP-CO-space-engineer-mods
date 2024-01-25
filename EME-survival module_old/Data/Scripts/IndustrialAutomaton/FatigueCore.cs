@@ -97,11 +97,11 @@ namespace Fatigue
                     // Do remaining checks & stat updates every 5s
                     if (runCount < 300)
                         continue;
-                    
+
                     if (stamina.Value <= ((float)Math.Min(hunger.Value, fatigue.Value)))
-                        stamina.Increase(1,null);
+                        stamina.Increase(1, null);
                     else
-                        stamina.Decrease(1,null);
+                        stamina.Decrease(1, null);
 
                     if (hunger.Value > 0)
                         hunger.Decrease(0.1f, null);
@@ -109,16 +109,16 @@ namespace Fatigue
                     if (hunger.Value < 30)
                         fatigue.Decrease((float)Math.Min(fatigue.Value / 100, (50 - hunger.Value) / 20), null);
 
-                    if (hunger.Value < 30) 
+                    if (hunger.Value < 30)
                         fatigue.Decrease((float)Math.Min(fatigue.Value / 100, (50 - hunger.Value) / 20), null);
 
                     else if (hunger.Value > 50)
                         fatigue.Increase((float)Math.Min(fatigue.Value / 100, (hunger.Value - 50) / 20), null);
-                        stamina.Increase((float)Math.Min(stamina.Value / 100, (hunger.Value - 50) / 20), null);
+                    stamina.Increase((float)Math.Min(stamina.Value / 100, (hunger.Value - 50) / 20), null);
 
                     if (fatigue.Value > 20 || rand.Next((int)fatigue.Value) > 0)
 
-                            continue;
+                        continue;
 
                     blinkList.Add(player.IdentityId);
                     if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())

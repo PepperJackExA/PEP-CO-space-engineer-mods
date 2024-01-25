@@ -8,7 +8,7 @@ namespace ModAdjuster
     public class BlueprintDefinitions
     {
         public List<BlueprintDef> Definitions = new List<BlueprintDef>()
-        {   
+        {
             // List of blueprints to modify. Can be as many or few as desired
 
         };

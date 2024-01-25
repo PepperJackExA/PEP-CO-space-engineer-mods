@@ -13,9 +13,9 @@ using VRage.ObjectBuilders;
 using VRageMath;
 
 [MyEntityComponentDescriptor(typeof(MyObjectBuilder_ShipWelder), false, "LargeShipHeavyWelder", "SmallShipHeavyWelder")]
-	 
+
 public class HeavyShipWelder : HeavyShipTool
-{		
+{
     public override void Init(MyObjectBuilder_EntityBase objectBuilder)
     {
         base.Init(objectBuilder);
@@ -85,13 +85,13 @@ public abstract class HeavyShipTool : MyGameLogicComponent
     protected float ToolSphereRadius = 1.6f;
 
     protected bool CanAffectOwnGrid = true;
-	
+
     protected float HeavyMultiplier;
 
     public override void Init(MyObjectBuilder_EntityBase objectBuilder)
     {
         NeedsUpdate |= MyEntityUpdateEnum.EACH_10TH_FRAME;
-        
+
         HeavyMultiplier = 0.25f;
 
     }
@@ -103,7 +103,7 @@ public abstract class HeavyShipTool : MyGameLogicComponent
             //List of grids that are in range of the grinder
             List<IMyEntity> potentialGrids;
             BoundingSphereD ToolSphere = new BoundingSphereD(Entity.GetPosition() + Entity.WorldMatrix.Forward * ToolSphereOffset, ToolSphereRadius);
-            
+
             potentialGrids = MyAPIGateway.Entities.GetTopMostEntitiesInSphere(ref ToolSphere);
 
             //If own grid is in the list, remove it.
@@ -111,14 +111,15 @@ public abstract class HeavyShipTool : MyGameLogicComponent
                 potentialGrids.Remove(((IMyCubeBlock)Entity).CubeGrid);
 
             foreach (IMyEntity e in potentialGrids)
-                if (e is IMyCubeGrid && e.Physics != null) {
-					
-					HeavyAction(HeavyMultiplier, ToolSphere, (IMyCubeGrid)e, (IMyCubeBlock)Entity);
-					
+                if (e is IMyCubeGrid && e.Physics != null)
+                {
+
+                    HeavyAction(HeavyMultiplier, ToolSphere, (IMyCubeGrid)e, (IMyCubeBlock)Entity);
+
                 }
         }
     }
-	
+
     protected abstract void HeavyAction(float HeavyMultiplier, BoundingSphereD sphere, IMyCubeGrid targetGrid, IMyCubeBlock thisBlock);
 }
 

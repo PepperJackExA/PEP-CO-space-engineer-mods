@@ -20,7 +20,7 @@ namespace ModAdjuster
             {
                 BlockName = "TimerBlock/LargeMicroTimer", // Name of the block to modify. Format is "MyObjectBuilder_Type/Subtype" in the same format as BlockVariantGroups
                 BlockActions = new[] // List of modifications to make. Can be as many or few as desired
-                {                    
+                {
                     new BlockAction
                     {
                         Action = RemoveComponent,
@@ -28,7 +28,7 @@ namespace ModAdjuster
                     },
                     new BlockAction
                     {
-                        Action = RemoveComponent, 
+                        Action = RemoveComponent,
                         Index = 7,
                     },
                     new BlockAction

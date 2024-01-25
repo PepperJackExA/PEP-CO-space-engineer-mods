@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using Sandbox.Game;
+﻿using Sandbox.Game;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using ShipyardMod.ItemClasses;
 using ShipyardMod.Utility;
+using System.Collections.Generic;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
 

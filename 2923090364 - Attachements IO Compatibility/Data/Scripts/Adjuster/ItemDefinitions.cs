@@ -9,7 +9,7 @@ namespace ModAdjuster
     {
         public List<PhysicalItemDef> Definitions = new List<PhysicalItemDef>()
         {
-            
+
         };
 
     }

@@ -149,7 +149,7 @@ namespace ModAdjuster
 
                             case BlockMod.ChangeBuildTime:
                                 BlockDef.IntegrityPointsPerSec = BlockDef.MaxIntegrity / action.Value;
-                                break;                            
+                                break;
                         }
                     }
                 }
@@ -335,7 +335,7 @@ namespace ModAdjuster
             foreach (var blockDef in Resists.Keys)
             {
                 blockDef.GeneralDamageMultiplier = Resists[blockDef];
-            } 
+            }
         }
 
     }

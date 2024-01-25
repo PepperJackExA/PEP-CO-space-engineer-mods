@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Sandbox.Definitions;
+﻿using Sandbox.Definitions;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using ShipyardMod.ItemClasses;
 using ShipyardMod.Utility;
+using System.Collections.Generic;
+using System.Linq;
 using VRage.Collections;
 using VRage.Game.ModAPI;
 using VRage.ModAPI;
@@ -197,7 +197,7 @@ namespace ShipyardMod.ProcessHandlers
 
             lineBlock.End();
         }
-        
+
         private bool WalkLine(Vector3I start, Vector3I end, IMyCubeGrid grid)
         {
             var it = new MathUtility.Vector3ILineIterator(start, end);

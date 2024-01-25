@@ -13,9 +13,9 @@ using VRage.ObjectBuilders;
 using VRageMath;
 
 [MyEntityComponentDescriptor(typeof(MyObjectBuilder_ShipWelder), false, "LargeShipLaserWelder", "SmallShipLaserWelder")]
-	 
+
 public class AdvancedShipWelder : UpgradedShipTool
-{		
+{
     public override void Init(MyObjectBuilder_EntityBase objectBuilder)
     {
         base.Init(objectBuilder);
@@ -85,13 +85,13 @@ public abstract class UpgradedShipTool : MyGameLogicComponent
     protected float ToolSphereRadius = 1.6f;
 
     protected bool CanAffectOwnGrid = true;
-	
+
     protected float AdvancedMultiplier;
 
     public override void Init(MyObjectBuilder_EntityBase objectBuilder)
     {
         NeedsUpdate |= MyEntityUpdateEnum.EACH_10TH_FRAME;
-        
+
         AdvancedMultiplier = 0.5f;
 
     }
@@ -103,7 +103,7 @@ public abstract class UpgradedShipTool : MyGameLogicComponent
             //List of grids that are in range of the welder
             List<IMyEntity> potentialGrids2;
             BoundingSphereD ToolSphere = new BoundingSphereD(Entity.GetPosition() + Entity.WorldMatrix.Forward * ToolSphereOffset, ToolSphereRadius);
-            
+
             potentialGrids2 = MyAPIGateway.Entities.GetTopMostEntitiesInSphere(ref ToolSphere);
 
             //If tool is a grinder, and own grid is in the list, remove it.
@@ -111,14 +111,15 @@ public abstract class UpgradedShipTool : MyGameLogicComponent
                 potentialGrids2.Remove(((IMyCubeBlock)Entity).CubeGrid);
 
             foreach (IMyEntity e2 in potentialGrids2)
-                if (e2 is IMyCubeGrid && e2.Physics != null) {
-					
+                if (e2 is IMyCubeGrid && e2.Physics != null)
+                {
+
                     Action(AdvancedMultiplier, ToolSphere, (IMyCubeGrid)e2, (IMyCubeBlock)Entity);
-					
+
                 }
         }
     }
-	
+
     protected abstract void Action(float AdvancedMultiplier, BoundingSphereD sphere, IMyCubeGrid targetGrid, IMyCubeBlock thisBlock);
 }
 

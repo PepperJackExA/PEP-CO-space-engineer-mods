@@ -5,13 +5,12 @@ using VRage.Game.Components;
 
 namespace PEPCO.VanillaThrustersRebalance
 {
-    
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class PEPCO_Session : MySessionComponentBase
     {
-        public const float ThrustLGlargeHydrogen = ThrustLGsmallHydrogen/0.15f;
+        public const float ThrustLGlargeHydrogen = ThrustLGsmallHydrogen / 0.15f;
         public const float ThrustLGsmallHydrogen = 1080000;
-        public const float ThrustSGlargeHydrogen = ThrustSGsmallHydrogen/0.15f;
+        public const float ThrustSGlargeHydrogen = ThrustSGsmallHydrogen / 0.15f;
         public const float ThrustSGsmallHydrogen = 98400;
 
 
@@ -29,9 +28,9 @@ namespace PEPCO.VanillaThrustersRebalance
 
         public override void LoadData()
         {
-            
-                //Vanilla Hydrogen
-                LGVanillaLargeHydrogenThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "LargeBlockLargeHydrogenThrust"));
+
+            //Vanilla Hydrogen
+            LGVanillaLargeHydrogenThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "LargeBlockLargeHydrogenThrust"));
             LGVanillaLargeHydrogenThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "LargeBlockLargeHydrogenThrustIndustrial"));
 
             LGVanillaSmallHydrogenThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "LargeBlockSmallHydrogenThrust"));
@@ -73,7 +72,7 @@ namespace PEPCO.VanillaThrustersRebalance
             SGVanillaSmallIonThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "SmallBlockSmallThrust"));
             SGVanillaSmallIonThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "SmallBlockSmallThrustSciFi"));
             SGVanillaSmallIonThrust(new MyDefinitionId(typeof(MyObjectBuilder_Thrust), "SmallBlockSmallModularThruster"));
-            
+
         }
         private void LGVanillaLargeHydrogenThrust(MyDefinitionId definitionId)
         {
@@ -102,7 +101,7 @@ namespace PEPCO.VanillaThrustersRebalance
 
             definition.PCU *= 1; //15
             definition.ForceMagnitude = ThrustLGsmallHydrogen; //1080 KN
-            definition.MaxPowerConsumption  *= 1; //1.25
+            definition.MaxPowerConsumption *= 1; //1.25
             definition.FuelConverter.Efficiency *= 1; //2
             definition.FuelConverter.FuelId.SubtypeId = "Hydrogen";
             MyGasProperties fuelDef;
@@ -173,7 +172,7 @@ namespace PEPCO.VanillaThrustersRebalance
         private void LGVanillaSmallAtmoThrust(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyThrustDefinition;
-            
+
             definition.PCU *= 1; // 15
             definition.ForceMagnitude = ThrustLGsmallAtmo; // 648 KN
             definition.MaxPowerConsumption *= 1; // 2.4
@@ -187,7 +186,7 @@ namespace PEPCO.VanillaThrustersRebalance
         private void SGVanillaLargeAtmoThrust(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyThrustDefinition;
-            
+
             definition.PCU *= 1; // 15
             definition.ForceMagnitude = ThrustSGlargeAtmo; // 576 KN
             definition.MaxPowerConsumption *= 1; // 2.4
@@ -201,7 +200,7 @@ namespace PEPCO.VanillaThrustersRebalance
         private void SGVanillaSmallAtmoThrust(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyThrustDefinition;
-            
+
             definition.PCU *= 1; // 15
             definition.ForceMagnitude = ThrustSGsmallAtmo; // 96 KN
             definition.MaxPowerConsumption *= 1; // 0.6
@@ -215,7 +214,7 @@ namespace PEPCO.VanillaThrustersRebalance
         private void LGVanillaLargeIonThrust(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyThrustDefinition;
-            
+
             definition.PCU *= 1; // 15
             definition.ForceMagnitude = ThrustLGlargeIon; // 4320 KN
             definition.MaxPowerConsumption *= 1; // 33.6
@@ -229,7 +228,7 @@ namespace PEPCO.VanillaThrustersRebalance
         private void LGVanillaSmallIonThrust(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyThrustDefinition;
-            
+
             definition.PCU *= 1; // 15
             definition.ForceMagnitude = ThrustLGsmallIon; // 345.6 KN
             definition.MaxPowerConsumption *= 1; // 3.36
@@ -243,7 +242,7 @@ namespace PEPCO.VanillaThrustersRebalance
         private void SGVanillaLargeIonThrust(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyThrustDefinition;
-            
+
             definition.PCU *= 1; // 15
             definition.ForceMagnitude = ThrustSGlargeIon; // 172.8 KN
             definition.MaxPowerConsumption *= 1; // 2.4
@@ -257,7 +256,7 @@ namespace PEPCO.VanillaThrustersRebalance
         private void SGVanillaSmallIonThrust(MyDefinitionId definitionId)
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyThrustDefinition;
-            
+
             //definition.DisplayNameEnum = null;
             //definition.DisplayNameString = "Large Oxygen Ion Thruster";
             // definition.FuelConverter = new MyFuelConverterInfo

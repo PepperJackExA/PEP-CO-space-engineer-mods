@@ -242,8 +242,8 @@ namespace Fatigue
         }
 
 
-#region Background processes
-    public void getPoke(byte[] poke)
+        #region Background processes
+        public void getPoke(byte[] poke)
         {
             // To call blink action on clients
             try

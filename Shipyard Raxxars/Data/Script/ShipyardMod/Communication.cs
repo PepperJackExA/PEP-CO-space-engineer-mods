@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Sandbox.Definitions;
+﻿using Sandbox.Definitions;
 using Sandbox.ModAPI;
 using ShipyardMod.ItemClasses;
 using ShipyardMod.ProcessHandlers;
 using ShipyardMod.Settings;
 using SpaceEngineers.Game.ModAPI;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using VRage;
 using VRage.Game.ModAPI;
 using VRage.ModAPI;
@@ -22,7 +22,7 @@ namespace ShipyardMod.Utility
         public static HashSet<LineItem> FadeList = new HashSet<LineItem>();
         public static List<ScanAnimation> ScanList = new List<ScanAnimation>();
         public static string FullName = typeof(Communication).FullName;
-        
+
         private static void Recieve(byte[] data)
         {
             try
@@ -178,11 +178,11 @@ namespace ShipyardMod.Utility
         {
             Logging.Instance.WriteLine("Sent Yard");
             var newYard = new YardStruct
-                          {
-                              GridId = item.EntityId,
-                              ToolIds = item.Tools.Select(x => x.EntityId).ToArray(),
-                              YardType = item.YardType
-                          };
+            {
+                GridId = item.EntityId,
+                ToolIds = item.Tools.Select(x => x.EntityId).ToArray(),
+                YardType = item.YardType
+            };
 
             if (item.Menu?.Buttons != null)
             {
@@ -267,12 +267,12 @@ namespace ShipyardMod.Utility
         public static void SendDialog(ulong steamId, string title, string subtitle, string message, string button = "close")
         {
             var msg = new DialogStruct
-                      {
-                          Title = title,
-                          Subtitle = subtitle,
-                          Message = message,
-                          ButtonText = button
-                      };
+            {
+                Title = title,
+                Subtitle = subtitle,
+                Message = message,
+                ButtonText = button
+            };
             string serialized = MyAPIGateway.Utilities.SerializeToXML(msg);
             byte[] data = Encoding.ASCII.GetBytes(serialized);
 
@@ -367,14 +367,14 @@ namespace ShipyardMod.Utility
                 return;
 
             var newLine = new LineItem
-                          {
-                              Start = MathUtility.CalculateEmitterOffset(tool, item.EmitterIndex),
-                              End = grid.GridIntegerToWorld(item.BlockPos),
-                              Color = new Color(item.PackedColor).ToVector4(),
-                              Pulse = item.Pulse,
-                              PulseVal = 0,
-                              Index = item.EmitterIndex
-                          };
+            {
+                Start = MathUtility.CalculateEmitterOffset(tool, item.EmitterIndex),
+                End = grid.GridIntegerToWorld(item.BlockPos),
+                Color = new Color(item.PackedColor).ToVector4(),
+                Pulse = item.Pulse,
+                PulseVal = 0,
+                Index = item.EmitterIndex
+            };
 
             if (newLine.Color == Color.OrangeRed.ToVector4())
             {
@@ -425,7 +425,7 @@ namespace ShipyardMod.Utility
                 FadeList.Add(oldLine);
             }
             else
-                LineDict[item.ToolId] = new List<LineItem>(3) {newLine};
+                LineDict[item.ToolId] = new List<LineItem>(3) { newLine };
         }
 
         private static void HandleNewShipyard(byte[] data)
@@ -542,10 +542,10 @@ namespace ShipyardMod.Utility
                         //foreach (var tool in yard.Tools)
                         //    tool.SetEmissiveParts("Emissive0", Color.OrangeRed, 0.5f);
                         //break;
-                    //default:
-                    //    throw new ArgumentOutOfRangeException();
+                        //default:
+                        //    throw new ArgumentOutOfRangeException();
                 }
-                
+
             }
         }
 
@@ -661,12 +661,12 @@ namespace ShipyardMod.Utility
 
                 yard.Settings = settings;
                 ShipyardSettings.Instance.SetYardSettings(yard.EntityId, settings);
-                
+
                 foreach (IMyCubeBlock tool in yard.Tools)
                 {
                     tool.GameLogic.GetAs<ShipyardCorner>().UpdateVisuals();
                 }
-                
+
                 found = true;
                 break;
             }

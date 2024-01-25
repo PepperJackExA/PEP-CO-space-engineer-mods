@@ -1,7 +1,7 @@
-﻿using System;
-using System.Xml.Serialization;
-using Sandbox.ModAPI;
+﻿using Sandbox.ModAPI;
 using ShipyardMod.Utility;
+using System;
+using System.Xml.Serialization;
 using VRage.Serialization;
 
 namespace ShipyardMod.Settings

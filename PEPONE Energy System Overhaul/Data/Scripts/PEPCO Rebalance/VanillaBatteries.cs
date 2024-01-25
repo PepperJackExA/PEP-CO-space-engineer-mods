@@ -17,7 +17,7 @@ namespace PEPCO.VanillaBatteriesRebalance
             SGVanillaBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockBatteryBlock"));
             SGVanillaBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockBatteryBlockWarfare2"));
             SGVanillaSmallBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockSmallBatteryBlock"));
-           
+
         }
 
         private void LGVanillaBattery(MyDefinitionId definitionId)
@@ -60,6 +60,6 @@ namespace PEPCO.VanillaBatteriesRebalance
                                         "Max Input Power: " + definition.RequiredPowerInput + "MW";
 
         }
-                
+
     }
 }

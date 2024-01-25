@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Sandbox.Definitions;
+﻿using Sandbox.Definitions;
 using Sandbox.ModAPI;
 using SpaceEngineers.Game.ModAPI;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 //Jimmacle provided the original LCD classes. These are heavily modified :P
 

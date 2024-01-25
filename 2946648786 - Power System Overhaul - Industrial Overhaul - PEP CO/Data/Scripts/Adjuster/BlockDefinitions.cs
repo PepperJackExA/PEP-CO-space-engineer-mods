@@ -11,7 +11,7 @@ namespace ModAdjuster
         public List<string> DisabledBlocks = new List<string>() // List of blocks to disable
         {
             "MyObjectBuilder_WindTurbine/LargeWindTurbine",
-            
+
         };
 
         public List<BlockDef> Definitions = new List<BlockDef>()
@@ -165,7 +165,7 @@ namespace ModAdjuster
                 BlockName = "WindTurbine/SergWindTurbinePart",
                 BlockActions = new[]
                 {
-                    
+
                     new BlockAction
                     {
                         Action = ChangeBlockName, // Change Display Name of the block

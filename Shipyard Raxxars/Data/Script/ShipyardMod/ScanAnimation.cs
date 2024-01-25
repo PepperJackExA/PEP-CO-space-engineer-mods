@@ -49,19 +49,19 @@ namespace ShipyardMod.ItemClasses
 
             //start by scanning the line on the z plane, from zmax to zmin
             _line = new ScanLine
-                    {
-                        Origin = _endpoints[0],
-                        //get half the dimensions for each face
-                        ZWidth = (float)_shipyardItem.ShipyardBox.HalfExtent.X,
-                        ZLength = (float)_shipyardItem.ShipyardBox.HalfExtent.Y,
-                        XWidth = (float)_shipyardItem.ShipyardBox.HalfExtent.X,
-                        XLength = (float)_shipyardItem.ShipyardBox.HalfExtent.Z,
-                        //we need the up and left vectors to align the billboard to the shipyard grid
-                        ZLeft = _shipyardItem.ShipyardBox.Orientation.Right,
-                        ZUp = -_shipyardItem.ShipyardBox.Orientation.Up,
-                        XLeft = -_shipyardItem.ShipyardBox.Orientation.Right,
-                        XUp = _shipyardItem.ShipyardBox.Orientation.Forward
-                    };
+            {
+                Origin = _endpoints[0],
+                //get half the dimensions for each face
+                ZWidth = (float)_shipyardItem.ShipyardBox.HalfExtent.X,
+                ZLength = (float)_shipyardItem.ShipyardBox.HalfExtent.Y,
+                XWidth = (float)_shipyardItem.ShipyardBox.HalfExtent.X,
+                XLength = (float)_shipyardItem.ShipyardBox.HalfExtent.Z,
+                //we need the up and left vectors to align the billboard to the shipyard grid
+                ZLeft = _shipyardItem.ShipyardBox.Orientation.Right,
+                ZUp = -_shipyardItem.ShipyardBox.Orientation.Up,
+                XLeft = -_shipyardItem.ShipyardBox.Orientation.Right,
+                XUp = _shipyardItem.ShipyardBox.Orientation.Forward
+            };
         }
 
         public bool Draw()

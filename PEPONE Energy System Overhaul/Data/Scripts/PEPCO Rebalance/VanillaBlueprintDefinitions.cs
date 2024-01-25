@@ -1,15 +1,14 @@
 using Sandbox.Definitions;
+using System;
+using System.Collections.Generic;
+using VRage;
 using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.ObjectBuilders.Definitions;
-using System.Collections.Generic;
-using VRage;
 using VRage.Utils;
-using System;
 
 namespace PEPCO.VanillaBlueprintDefinitionsRebalance
 {
-
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class PEPCO_Session : MySessionComponentBase
     {
@@ -22,10 +21,10 @@ namespace PEPCO.VanillaBlueprintDefinitionsRebalance
 
         private void VanillaStoneOreToIngot(MyDefinitionId definitionId)
         {
-           
+
             var definition = MyDefinitionManager.Static.GetBlueprintDefinition(definitionId);
 
-            
+
             // Add more Prerequisites
             var newPrerequisite = new MyBlueprintDefinitionBase.Item[definition.Prerequisites.Length + 1];
             newPrerequisite[1] = new MyBlueprintDefinitionBase.Item();

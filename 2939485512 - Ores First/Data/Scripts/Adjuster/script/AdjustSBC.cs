@@ -532,7 +532,7 @@ namespace PepCo_OresFirst
             foreach (var blockDef in Resists.Keys)
             {
                 blockDef.GeneralDamageMultiplier = Resists[blockDef];
-            } 
+            }
         }
 
     }
