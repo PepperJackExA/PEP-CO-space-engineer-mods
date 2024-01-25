@@ -6,9 +6,8 @@ using VRage.Game.Components;
 using VRage.Game.Entity;
 using VRage.ModAPI;
 using VRage.ObjectBuilders;
-using VRageMath;
 
-namespace emeWood 
+namespace emeWood
 {
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class Main : MySessionComponentBase
