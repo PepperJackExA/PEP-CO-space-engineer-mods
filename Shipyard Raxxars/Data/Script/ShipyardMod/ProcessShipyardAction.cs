@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Sandbox.Definitions;
+﻿using Sandbox.Definitions;
 using Sandbox.Game;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using ShipyardMod.ItemClasses;
 using ShipyardMod.Utility;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using VRage;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
@@ -100,7 +100,7 @@ namespace ShipyardMod.ProcessHandlers
                         if (item.ShipyardBox.Contains(ref gridBox) == ContainmentType.Contains)
                             item.ContainsGrids.Add(grid);
                         else
-                        //in case it was previously inside, but moved
+                            //in case it was previously inside, but moved
                             item.ContainsGrids.Remove(grid);
                     }
 
@@ -314,14 +314,14 @@ namespace ShipyardMod.ProcessHandlers
                                                  if (targetsToRedraw.Contains(target))
                                                  {
                                                      var toolLine = new Communication.ToolLineStruct
-                                                                    {
-                                                                        ToolId = tool.EntityId,
-                                                                        GridId = target.CubeGrid.EntityId,
-                                                                        BlockPos = target.GridPosition,
-                                                                        PackedColor = Color.OrangeRed.PackedValue,
-                                                                        Pulse = false,
-                                                                        EmitterIndex = (byte)b
-                                                                    };
+                                                     {
+                                                         ToolId = tool.EntityId,
+                                                         GridId = target.CubeGrid.EntityId,
+                                                         BlockPos = target.GridPosition,
+                                                         PackedColor = Color.OrangeRed.PackedValue,
+                                                         Pulse = false,
+                                                         EmitterIndex = (byte)b
+                                                     };
 
                                                      Communication.SendLine(toolLine, shipyardItem.ShipyardBox.Center);
                                                  }
@@ -499,7 +499,7 @@ namespace ShipyardMod.ProcessHandlers
                 int count = 0;
                 foreach (KeyValuePair<long, List<BlockTarget>> entry in gridTargets)
                     count += entry.Value.Count;
-                
+
                 foreach (IMyCubeBlock tool in shipyardItem.Tools)
                 {
                     shipyardItem.ProxDict.Add(tool.EntityId, new List<BlockTarget>());
@@ -523,7 +523,7 @@ namespace ShipyardMod.ProcessHandlers
             //nothing to do
             if (shipyardItem.TargetBlocks.Count == 0)
                 return false;
-            
+
             //assign blocks to our welders
             foreach (IMyCubeBlock welder in shipyardItem.Tools)
             {
@@ -590,7 +590,7 @@ namespace ShipyardMod.ProcessHandlers
                         targetsToRedraw.Add(nextTarget);
                         shipyardItem.BlocksToProcess[welder.EntityId][i] = nextTarget;
                     }
-                    
+
                     foreach (BlockTarget removeTarget in toRemove)
                     {
                         shipyardItem.ProxDict[welder.EntityId].Remove(removeTarget);
@@ -598,7 +598,7 @@ namespace ShipyardMod.ProcessHandlers
                     }
                 }
             }
-            
+
             //update lasers
             foreach (KeyValuePair<long, BlockTarget[]> entry in shipyardItem.BlocksToProcess)
             {
@@ -612,15 +612,15 @@ namespace ShipyardMod.ProcessHandlers
                     if (targetsToRedraw.Contains(targetBlock))
                     {
                         var toolLine = new Communication.ToolLineStruct
-                                       {
-                                           ToolId = entry.Key,
-                                           GridId = targetBlock.CubeGrid.EntityId,
-                                           BlockPos = targetBlock.GridPosition,
-                                           PackedColor = Color.DarkCyan.PackedValue,
-                                           Pulse = false,
-                                           EmitterIndex = (byte)i
-                                       };
-                        
+                        {
+                            ToolId = entry.Key,
+                            GridId = targetBlock.CubeGrid.EntityId,
+                            BlockPos = targetBlock.GridPosition,
+                            PackedColor = Color.DarkCyan.PackedValue,
+                            Pulse = false,
+                            EmitterIndex = (byte)i
+                        };
+
                         Communication.SendLine(toolLine, shipyardItem.ShipyardBox.Center);
                     }
                 }
@@ -642,7 +642,7 @@ namespace ShipyardMod.ProcessHandlers
                                              {
                                                  if (target == null)
                                                      continue;
-                                                 
+
                                                  if (target.CubeGrid.Physics == null || target.CubeGrid.Closed || target.CubeGrid.MarkedForClose)
                                                  {
                                                      targetsToRemove.Add(target);
@@ -675,7 +675,7 @@ namespace ShipyardMod.ProcessHandlers
 
                                                      missingComponents.Clear();
                                                      target.Block.GetMissingComponents(missingComponents);
-                                                     
+
                                                      if (missingComponents.Any() && !target.Block.HasDeformation)
                                                      {
                                                          if (_stalledTargets.Add(target))
@@ -694,7 +694,7 @@ namespace ShipyardMod.ProcessHandlers
                                              }
                                          }
                                      });
-            
+
             shipyardItem.MissingComponentsDict.Clear();
 
             foreach (KeyValuePair<long, BlockTarget[]> entry in shipyardItem.BlocksToProcess)
@@ -714,7 +714,7 @@ namespace ShipyardMod.ProcessHandlers
                         entry.Value[i] = null;
                         continue;
                     }
-                    
+
                     if (_stalledTargets.Contains(target))
                     {
                         var blockComponents = new Dictionary<string, int>();
@@ -727,16 +727,16 @@ namespace ShipyardMod.ProcessHandlers
                             else
                                 shipyardItem.MissingComponentsDict.Add(component.Key, component.Value);
                         }
-                        
+
                         var toolLine = new Communication.ToolLineStruct
-                                       {
-                                           ToolId = entry.Key,
-                                           GridId = target.CubeGrid.EntityId,
-                                           BlockPos = target.GridPosition,
-                                           PackedColor = Color.Purple.PackedValue,
-                                           Pulse = true,
-                                           EmitterIndex = (byte)i
-                                       };
+                        {
+                            ToolId = entry.Key,
+                            GridId = target.CubeGrid.EntityId,
+                            BlockPos = target.GridPosition,
+                            PackedColor = Color.Purple.PackedValue,
+                            Pulse = true,
+                            EmitterIndex = (byte)i
+                        };
 
                         if (targetsToRedraw.Contains(target))
                         {
@@ -755,10 +755,10 @@ namespace ShipyardMod.ProcessHandlers
         {
             IMyProjector projector = target.Projector;
             IMySlimBlock block = target.Block;
-            
+
             if (projector == null || block == null)
                 return false;
-            
+
             if (projector.CanBuild(block, false) != BuildCheckResult.OK)
                 return false;
 

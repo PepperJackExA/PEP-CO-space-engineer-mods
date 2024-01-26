@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Sandbox.Definitions;
+﻿using Sandbox.Definitions;
 using Sandbox.ModAPI;
 using ShipyardMod.ItemClasses;
 using ShipyardMod.Utility;
 using SpaceEngineers.Game.ModAPI;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using VRage.Game.ModAPI;
 using VRageMath;
 

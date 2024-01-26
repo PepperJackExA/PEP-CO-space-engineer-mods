@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Sandbox.ModAPI;
+using System;
 using System.IO;
 using System.Text;
-using Sandbox.ModAPI;
 
 namespace ShipyardMod.Utility
 {

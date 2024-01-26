@@ -557,7 +557,7 @@ namespace ModAdjuster
             foreach (var blockDef in Resists.Keys)
             {
                 blockDef.GeneralDamageMultiplier = Resists[blockDef];
-            } 
+            }
         }
 
     }

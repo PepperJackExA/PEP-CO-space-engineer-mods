@@ -6,7 +6,6 @@ using VRage.Game.ObjectBuilders.Definitions;
 
 namespace PEPCO.VanillaReactorRebalance
 {
-
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class PEPCO_Session : MySessionComponentBase
 

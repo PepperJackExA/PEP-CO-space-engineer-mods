@@ -5,12 +5,11 @@ using VRage.Game.Components;
 
 namespace PEPCO.IndustrialOverhaulEnginesRebalance
 {
-
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class PEPCO_Session : MySessionComponentBase
 
     {
-        
+
         public override void LoadData()
         {
             // Gasoline

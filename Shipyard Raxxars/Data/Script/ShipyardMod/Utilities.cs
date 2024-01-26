@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using ParallelTasks;
+﻿using ParallelTasks;
 using Sandbox.ModAPI;
 using ShipyardMod.ItemClasses;
 using ShipyardMod.ProcessHandlers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using VRage;
 using VRage.Collections;
 using VRage.Game.ModAPI;
@@ -44,7 +44,7 @@ namespace ShipyardMod.Utility
                                                                   var invokeBlock = Profiler.Start(FullName, nameof(InvokeBlocking));
                                                                   action();
                                                                   invokeBlock.End();
-                                                                }
+                                                              }
                                                               catch (Exception ex)
                                                               {
                                                                   Logging.Instance.WriteLine("Exception on blocking game thread invocation: " + ex);
@@ -73,7 +73,7 @@ namespace ShipyardMod.Utility
             if (!SessionClosing)
                 ThreadLocks.Remove(threadLock);
         }
-        
+
         /// <summary>
         ///     Wraps InvokeOnGameThread in lots of try/catch to reduce failure on session close
         /// </summary>

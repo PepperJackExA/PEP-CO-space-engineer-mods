@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Sandbox.Game.Entities;
+﻿using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using ShipyardMod.ItemClasses;
 using ShipyardMod.Settings;
 using ShipyardMod.Utility;
+using System.Collections.Generic;
+using System.Linq;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
 using VRage.ModAPI;
@@ -51,7 +51,7 @@ namespace ShipyardMod.ProcessHandlers
                     Logging.Instance.WriteLine("remove item tools " + item.Tools.Length);
                     item.Disable();
                     itemsToRemove.Add(item);
-                    foreach(var tool in item.Tools)
+                    foreach (var tool in item.Tools)
                         Communication.SendCustomInfo(tool.EntityId, "Invalid Shipyard: All tools must be on the same conveyor network!");
                     continue;
                 }
@@ -105,7 +105,7 @@ namespace ShipyardMod.ProcessHandlers
                 _corners.Clear();
                 var grid = entity as IMyCubeGrid;
 
-                if (grid?.Physics == null || grid.Closed || grid.MarkedForClose )
+                if (grid?.Physics == null || grid.Closed || grid.MarkedForClose)
                     continue;
 
                 if (ShipyardsList.Any(x => x.EntityId == entity.EntityId))
@@ -165,7 +165,7 @@ namespace ShipyardMod.ProcessHandlers
                 foreach (var tool in item.Tools)
                     Communication.SendCustomInfo(tool.EntityId, "");
             }
-           
+
             Communication.SendYardCount();
         }
 

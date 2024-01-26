@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Sandbox.Definitions;
+﻿using Sandbox.Definitions;
 using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using ShipyardMod.Utility;
+using System.Collections.Generic;
 using VRage.Game.ModAPI;
 using VRageMath;
 

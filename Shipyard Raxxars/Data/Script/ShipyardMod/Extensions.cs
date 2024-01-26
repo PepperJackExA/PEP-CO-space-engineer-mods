@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Sandbox.Game;
+﻿using Sandbox.Game;
 using Sandbox.Game.Entities;
 using Sandbox.Game.Entities.Cube;
 using Sandbox.ModAPI;
+using System.Collections.Generic;
+using System.Linq;
 using VRage.Collections;
 using VRage.Game;
 using VRage.Game.Entity;
@@ -82,7 +82,7 @@ namespace ShipyardMod.Utility
 
         public static bool PullAny(this MyInventory inventory, HashSet<IMyCubeBlock> sourceInventories, string component, int count)
         {
-            return PullAny(inventory, sourceInventories, new Dictionary<string, int> {{component, count}});
+            return PullAny(inventory, sourceInventories, new Dictionary<string, int> { { component, count } });
         }
 
         public static bool PullAny(this MyInventory inventory, HashSet<IMyCubeBlock> sourceInventories, Dictionary<string, int> toPull)
@@ -155,7 +155,7 @@ namespace ShipyardMod.Utility
                 return grid.IsStatic;
 #endif
             List<IMySlimBlock> blocks = new List<IMySlimBlock>();
-           grid.GetBlocks(blocks);
+            grid.GetBlocks(blocks);
 
             foreach (var block in blocks)
             {

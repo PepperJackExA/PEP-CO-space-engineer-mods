@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using ParallelTasks;
+﻿using ParallelTasks;
 using Sandbox.Common.ObjectBuilders;
 using Sandbox.Game.Entities;
 using Sandbox.Game.EntityComponents;
@@ -14,6 +9,11 @@ using ShipyardMod.ItemClasses;
 using ShipyardMod.ProcessHandlers;
 using ShipyardMod.Settings;
 using ShipyardMod.Utility;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
 using VRage.Collections;
 using VRage.Game;
 using VRage.Game.Components;
@@ -146,13 +146,13 @@ namespace ShipyardMod
                     }
 
                     BoxDict[grid.EntityId] = new BoxItem
-                                             {
-                                                 Lines = MathUtility.CalculateObbLines(MathUtility.CreateOrientedBoundingBox(grid)),
-                                                 GridId = grid.EntityId,
-                                                 //PackedColor = grid.Physics == null ? Color.Cyan.PackedValue : Color.Green.PackedValue,
-                                                 PackedColor = color,
-                                                 LastPos = grid.GetPosition()
-                                             };
+                    {
+                        Lines = MathUtility.CalculateObbLines(MathUtility.CreateOrientedBoundingBox(grid)),
+                        GridId = grid.EntityId,
+                        //PackedColor = grid.Physics == null ? Color.Cyan.PackedValue : Color.Green.PackedValue,
+                        PackedColor = color,
+                        LastPos = grid.GetPosition()
+                    };
                 }
 
                 foreach (IMyCubeGrid grid in item.IntersectsGrids)
@@ -183,13 +183,13 @@ namespace ShipyardMod
                     }
 
                     BoxDict[grid.EntityId] = new BoxItem
-                                             {
-                                                 Lines = MathUtility.CalculateObbLines(MathUtility.CreateOrientedBoundingBox(grid)),
-                                                 GridId = grid.EntityId,
-                                                 //PackedColor = grid.Physics == null ? Color.CornflowerBlue.PackedValue : Color.Yellow.PackedValue,
-                                                 PackedColor = color,
-                                                 LastPos = grid.GetPosition()
-                                             };
+                    {
+                        Lines = MathUtility.CalculateObbLines(MathUtility.CreateOrientedBoundingBox(grid)),
+                        GridId = grid.EntityId,
+                        //PackedColor = grid.Physics == null ? Color.CornflowerBlue.PackedValue : Color.Yellow.PackedValue,
+                        PackedColor = color,
+                        LastPos = grid.GetPosition()
+                    };
                 }
             }
         }
@@ -239,7 +239,7 @@ namespace ShipyardMod
                     _initialized = true;
                     Initialize();
                 }
-                
+
                 RunProcessHandlers();
 
                 foreach (ShipyardItem item in ProcessShipyardDetection.ShipyardsList.ToArray())

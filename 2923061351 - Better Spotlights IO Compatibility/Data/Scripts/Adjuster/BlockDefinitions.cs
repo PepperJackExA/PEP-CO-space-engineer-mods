@@ -23,7 +23,7 @@ namespace ModAdjuster
                 {
                     new BlockAction
                     {
-                        Action = RemoveComponent, 
+                        Action = RemoveComponent,
                         Index = 7,
                     },
                     new BlockAction

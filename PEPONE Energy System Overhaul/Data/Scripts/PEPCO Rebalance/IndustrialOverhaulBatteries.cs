@@ -20,7 +20,7 @@ namespace PEPCO.IndustrialOverhaulBatteriesRebalance
             LGIndustiralOverhaulAcidBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "LargeBlockAcidBatteryBlock"));
 
             SGVIndustrialOverhaulAcidBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockAcidBatteryBlock"));
-            
+
             SGVIndustrialOverhaulSmallAcidBattery(new MyDefinitionId(typeof(MyObjectBuilder_BatteryBlock), "SmallBlockSmallAcidBatteryBlock"));
 
             // Capacitor

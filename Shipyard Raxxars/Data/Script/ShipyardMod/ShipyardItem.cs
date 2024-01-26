@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Sandbox.Game.Entities;
+﻿using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using ShipyardMod.Settings;
 using ShipyardMod.Utility;
+using System.Collections.Generic;
+using System.Linq;
 using VRage;
 using VRage.Game.ModAPI;
 using VRage.ModAPI;
@@ -170,7 +170,7 @@ namespace ShipyardMod.ItemClasses
                                              else if (YardType == ShipyardType.Grind)
                                                  power += powerReq * Settings.GrindMultiplier;
                                          }
-                                         
+
                                          tool.GameLogic.GetAs<ShipyardCorner>().SetPowerUse(power);
                                          Communication.SendToolPower(tool.EntityId, power);
                                      }

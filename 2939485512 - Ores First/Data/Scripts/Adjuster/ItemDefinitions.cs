@@ -9,7 +9,7 @@ namespace PepCo_OresFirst
     {
         public List<PhysicalItemDef> Definitions = new List<PhysicalItemDef>()
         {
-           
+
         };
 
     }

@@ -236,7 +236,7 @@ namespace Jakaria.API
                         _GetTideData = (Func<long, MyTuple<float, float>>)ModAPIMethods["GetTideData"];
                         _GetTideDirection = (Func<long, Vector3D>)ModAPIMethods["GetTideDirection"];
                     }
-                    catch(Exception e)
+                    catch (Exception e)
                     {
                         MyAPIGateway.Utilities.ShowMessage("WaterMod", "Mod '" + ModName + "' encountered an error when registering the Water Mod API, see log for more info.");
                         MyLog.Default.WriteLine(e);

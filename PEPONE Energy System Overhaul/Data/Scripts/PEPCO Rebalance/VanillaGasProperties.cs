@@ -5,7 +5,6 @@ using VRage.Game.ObjectBuilders.Definitions;
 
 namespace PEPCO.VanillaGasPropertiesRebalance
 {
-    
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class PEPCO_Session : MySessionComponentBase
     {
@@ -22,7 +21,7 @@ namespace PEPCO.VanillaGasPropertiesRebalance
         {
             var definition = MyDefinitionManager.Static.GetDefinition(definitionId) as MyGasProperties;
             definition.EnergyDensity *= 1; //0.001556
-            
+
 
         }
         private void VanillaOxygenGas(MyDefinitionId definitionId)

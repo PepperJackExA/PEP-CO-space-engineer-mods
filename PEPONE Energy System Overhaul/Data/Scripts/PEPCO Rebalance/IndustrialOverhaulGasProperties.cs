@@ -5,7 +5,6 @@ using VRage.Game.ObjectBuilders.Definitions;
 
 namespace PEPCO.IndustrialOverhaulGasPropertiesRebalance
 {
-    
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class PEPCO_Session : MySessionComponentBase
     {

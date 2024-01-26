@@ -1,8 +1,8 @@
 using Sandbox.Common.ObjectBuilders;
 using Sandbox.Definitions;
+using System.Collections.Generic;
 using VRage.Game;
 using VRage.Game.Components;
-using System.Collections.Generic;
 
 namespace PEPCO.VanillaOxygenGeneratorRebalance
 {
@@ -14,7 +14,7 @@ namespace PEPCO.VanillaOxygenGeneratorRebalance
             // H2O2 Generators
             LGVanillaOxygenGenerator(new MyDefinitionId(typeof(MyObjectBuilder_OxygenGenerator), ""));
             SGVanillaOxygenGenerator(new MyDefinitionId(typeof(MyObjectBuilder_OxygenGenerator), "OxygenGeneratorSmall"));
-            
+
         }
         private void LGVanillaOxygenGenerator(MyDefinitionId definitionId)
         {
@@ -43,7 +43,7 @@ namespace PEPCO.VanillaOxygenGeneratorRebalance
 
                 },
             };
-            
+
             definition.DescriptionEnum = null;
             definition.DescriptionString = "Produces: " + gas1 + " and " + gas2 + " /1 ice" + "\n" +
                                   "Consumption: " + definition.IceConsumptionPerSecond * 2 + " Ice / Second" + "\n" +

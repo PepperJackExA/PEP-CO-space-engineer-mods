@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
+using Jakaria.API;
 // using ProtoBuf;
 using Sandbox.Common.ObjectBuilders;
 using Sandbox.Game;
@@ -11,14 +8,17 @@ using Sandbox.ModAPI;
 using Sandbox.ModAPI.Interfaces;
 using Sandbox.ModAPI.Interfaces.Terminal;
 using SpaceEngineers.Game.ModAPI;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Xml.Serialization;
 using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.ModAPI;
 using VRage.ModAPI;
 using VRage.ObjectBuilders;
-using VRageMath;
-using Jakaria.API;
 using VRage.Utils;
+using VRageMath;
 
 namespace Propellers
 {
@@ -26,18 +26,18 @@ namespace Propellers
     public class BoatThrust : MyGameLogicComponent
     {
         IMyThrust Propeller;
-		
+
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
-        {            
+        {
             Propeller = Entity as IMyThrust;
-            NeedsUpdate = MyEntityUpdateEnum.EACH_100TH_FRAME;            
+            NeedsUpdate = MyEntityUpdateEnum.EACH_100TH_FRAME;
         }
 
         public override void UpdateAfterSimulation100()
         {
             try
             {
-				if (Propeller.CubeGrid.Physics != null)
+                if (Propeller.CubeGrid.Physics != null)
                 {
                     if (WaterAPI.IsUnderwater(Propeller.WorldMatrix.Translation))
                     {

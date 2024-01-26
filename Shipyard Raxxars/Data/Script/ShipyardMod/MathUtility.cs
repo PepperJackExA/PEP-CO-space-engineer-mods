@@ -1,7 +1,7 @@
-﻿using System;
+﻿using ShipyardMod.ItemClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using ShipyardMod.ItemClasses;
 using VRage.Game.ModAPI;
 using VRageMath;
 
@@ -29,7 +29,7 @@ namespace ShipyardMod.Utility
             //we should only have two
             if (zVals.Length != 2)
                 return false;
-            
+
             //get a list of all points in the two Z planes
             List<Vector3I> zPlane0 = points.FindAll(p => p.Z == zVals[0]);
             List<Vector3I> zPlane1 = points.FindAll(p => p.Z == zVals[1]);
