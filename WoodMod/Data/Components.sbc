@@ -13,13 +13,13 @@
                 <Y>5</Y>
                 <Z>1</Z>
             </Size>
-            <Mass>200</Mass>
-            <Volume>200</Volume>
+            <Mass>420</Mass>
+            <Volume>500</Volume>
             <Model>Models\OakWoodLog.mwm</Model>
             <PhysicalMaterial>Wood</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
+            <MaxIntegrity>100</MaxIntegrity>
             <DropProbability>0.9</DropProbability>
-            <Health>1</Health>
+            <Health>100</Health>
             <MinimumOfferAmount>50</MinimumOfferAmount>
             <MaximumOfferAmount>500</MaximumOfferAmount>
             <MinimumOrderAmount>100</MinimumOrderAmount>
@@ -37,16 +37,17 @@
             <Icon>Textures\OakWoodPlank.dds</Icon>
             <Size>
                 <X>1</X>
-                <Y>5</Y>
+                <Y>1</Y>
                 <Z>1</Z>
             </Size>
             <Mass>50</Mass>
             <Volume>50</Volume>
             <Model>Models\OakWoodPlank.mwm</Model>
             <PhysicalMaterial>Wood</PhysicalMaterial>
-            <MaxIntegrity>1</MaxIntegrity>
+			
+            <MaxIntegrity>100</MaxIntegrity>
             <DropProbability>0.9</DropProbability>
-            <Health>1</Health>
+			<Health>100</Health>
             <MinimumOfferAmount>50</MinimumOfferAmount>
             <MaximumOfferAmount>500</MaximumOfferAmount>
             <MinimumOrderAmount>100</MinimumOrderAmount>
