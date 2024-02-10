@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+        <Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+            <Id>
+                <TypeId>RadioAntenna</TypeId>
+                <SubtypeId>LargeBlockRadioAntenna</SubtypeId>
+            </Id>
+			<MaxBroadcastRadius>100</MaxBroadcastRadius>
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_BeaconDefinition">
+            <Id>
+                <TypeId>Beacon</TypeId>
+                <SubtypeId>LargeBlockBeacon</SubtypeId>
+            </Id>
+            <MaxBroadcastRadius>100</MaxBroadcastRadius>
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_BeaconDefinition">
+            <Id>
+                <TypeId>Beacon</TypeId>
+                <SubtypeId>SmallBlockBeacon</SubtypeId>
+            </Id>
+            <MaxBroadcastRadius>100</MaxBroadcastRadius>
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+            <Id>
+                <TypeId>RadioAntenna</TypeId>
+                <SubtypeId>SmallBlockRadioAntenna</SubtypeId>
+            </Id>
+			<MaxBroadcastRadius>100</MaxBroadcastRadius>
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
+            <Id>
+                <TypeId>LaserAntenna</TypeId>
+                <SubtypeId>LargeBlockLaserAntenna</SubtypeId>
+            </Id>           
+            <MaxRange>100</MaxRange>
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
+            <Id>
+                <TypeId>LaserAntenna</TypeId>
+                <SubtypeId>SmallBlockLaserAntenna</SubtypeId>
+            </Id>          
+            <MaxRange>100</MaxRange>
+        </Definition>
+    </CubeBlocks>
+</Definitions>

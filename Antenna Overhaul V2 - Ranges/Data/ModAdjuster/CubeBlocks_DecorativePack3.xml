@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+        <!-- Decorative Blocks #3-->
+        <Definition xsi:type="MyObjectBuilder_BeaconDefinition">
+            <Id>
+                <TypeId>Beacon</TypeId>
+                <SubtypeId>LargeBlockBeaconReskin</SubtypeId>
+            </Id>
+            <MaxBroadcastRadius>50000</MaxBroadcastRadius>
+        </Definition>
+
+        <Definition xsi:type="MyObjectBuilder_BeaconDefinition">
+            <Id>
+                <TypeId>Beacon</TypeId>
+                <SubtypeId>SmallBlockBeaconReskin</SubtypeId>
+            </Id>        
+            <MaxBroadcastRadius>100</MaxBroadcastRadius>
+        </Definition>    
+    </CubeBlocks>
+</Definitions>
