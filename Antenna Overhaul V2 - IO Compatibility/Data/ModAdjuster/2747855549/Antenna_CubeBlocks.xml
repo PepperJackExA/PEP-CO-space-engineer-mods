@@ -8,20 +8,20 @@
             </Id>
             <DisplayName>Compact Antenna Corner</DisplayName>            
             <Components>
-                <Component Subtype="SteelPlate" Count="60" />
-                <Component Subtype="LargeTube" Count="40" />
-                <Component Subtype="SmallTube" Count="60" />
-                <Component Subtype="Construction" Count="30" />
-                <Component Subtype="Computer" Count="8" />
-                <Component Subtype="RadioCommunication" Count="40" />
-                <Component Subtype="SteelPlate" Count="20" />
+                <Component Subtype="SteelPlate" Count="10" />
+                <Component Subtype="LargeTube" Count="5" />
+                <Component Subtype="Construction" Count="25" />
+				<Component Subtype="CopperWire" Count="50" />
+				<Component Subtype="Electromagnet" Count="10" />
+				<Component Subtype="Computer" Count="40" />
+                <Component Subtype="RadioCommunication" Count="8" />
+                <Component Subtype="SteelPlate" Count="10" />
             </Components>
             <CriticalComponent Subtype="RadioCommunication" Index="0" />			
             <BlockPairName>AntennaCorner</BlockPairName>
             <ResourceSinkGroup>Utility</ResourceSinkGroup>
             <BuildTimeSeconds>40</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-            <PCU>100</PCU>
+            <PCU>5</PCU>
         </Definition>
 		
 		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
@@ -29,22 +29,22 @@
                 <TypeId>RadioAntenna</TypeId>
                 <SubtypeId>AntennaSlope</SubtypeId>
             </Id>
-            <DisplayName>Compact Antenna Slope</DisplayName>            
-            <Components>
-                <Component Subtype="SteelPlate" Count="60" />
-                <Component Subtype="LargeTube" Count="40" />
-                <Component Subtype="SmallTube" Count="60" />
-                <Component Subtype="Construction" Count="30" />
-                <Component Subtype="Computer" Count="8" />
-                <Component Subtype="RadioCommunication" Count="40" />
-                <Component Subtype="SteelPlate" Count="20" />
-            </Components>
+            <DisplayName>Compact Antenna Slope</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="LargeTube" Count="5" />
+				<Component Subtype="Construction" Count="25" />
+				<Component Subtype="CopperWire" Count="50" />
+				<Component Subtype="Electromagnet" Count="10" />
+				<Component Subtype="Computer" Count="40" />
+				<Component Subtype="RadioCommunication" Count="8" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
             <CriticalComponent Subtype="RadioCommunication" Index="0" />
             <BlockPairName>AntennaSlope</BlockPairName>
             <ResourceSinkGroup>Utility</ResourceSinkGroup>
             <BuildTimeSeconds>40</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-            <PCU>100</PCU>
+            <PCU>5</PCU>
         </Definition>
 		
 		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
@@ -52,22 +52,22 @@
                 <TypeId>RadioAntenna</TypeId>
                 <SubtypeId>Antenna45Corner</SubtypeId>
             </Id>
-            <DisplayName>Compact Antenna 45Corner</DisplayName>            
-            <Components>
-                <Component Subtype="SteelPlate" Count="60" />
-                <Component Subtype="LargeTube" Count="40" />
-                <Component Subtype="SmallTube" Count="60" />
-                <Component Subtype="Construction" Count="30" />
-                <Component Subtype="Computer" Count="8" />
-                <Component Subtype="RadioCommunication" Count="40" />
-                <Component Subtype="SteelPlate" Count="20" />
-            </Components>
+            <DisplayName>Compact Antenna 45Corner</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="LargeTube" Count="5" />
+				<Component Subtype="Construction" Count="25" />
+				<Component Subtype="CopperWire" Count="50" />
+				<Component Subtype="Electromagnet" Count="10" />
+				<Component Subtype="Computer" Count="40" />
+				<Component Subtype="RadioCommunication" Count="8" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
             <CriticalComponent Subtype="RadioCommunication" Index="0" />
             <BlockPairName>Antenna45Corner</BlockPairName>
             <ResourceSinkGroup>Utility</ResourceSinkGroup>
             <BuildTimeSeconds>40</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-            <PCU>100</PCU>
+            <PCU>5</PCU>
         </Definition>	
 
 		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
@@ -75,22 +75,22 @@
                 <TypeId>RadioAntenna</TypeId>
                 <SubtypeId>AntennaCube</SubtypeId>
             </Id>
-            <DisplayName>Compact Antenna Cube</DisplayName>            
-            <Components>
-                <Component Subtype="SteelPlate" Count="60" />
-                <Component Subtype="LargeTube" Count="40" />
-                <Component Subtype="SmallTube" Count="60" />
-                <Component Subtype="Construction" Count="30" />
-                <Component Subtype="Computer" Count="8" />
-                <Component Subtype="RadioCommunication" Count="40" />
-                <Component Subtype="SteelPlate" Count="20" />
-            </Components>
+            <DisplayName>Compact Antenna Cube</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="LargeTube" Count="5" />
+				<Component Subtype="Construction" Count="25" />
+				<Component Subtype="CopperWire" Count="50" />
+				<Component Subtype="Electromagnet" Count="10" />
+				<Component Subtype="Computer" Count="40" />
+				<Component Subtype="RadioCommunication" Count="8" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
             <CriticalComponent Subtype="RadioCommunication" Index="0" />			
             <BlockPairName>AntennaCube</BlockPairName>
             <ResourceSinkGroup>Utility</ResourceSinkGroup>
             <BuildTimeSeconds>40</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-            <PCU>100</PCU>
+            <PCU>5</PCU>
         </Definition>		
 		
 		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
@@ -99,21 +99,21 @@
                 <SubtypeId>LongboiArrayLG</SubtypeId>
             </Id>
             <DisplayName>Longboi Antenna Array</DisplayName>
-            <Components>
-                <Component Subtype="SteelPlate" Count="60" />
-                <Component Subtype="LargeTube" Count="40" />
-                <Component Subtype="SmallTube" Count="60" />
-                <Component Subtype="Construction" Count="30" />
-                <Component Subtype="Computer" Count="8" />
-                <Component Subtype="RadioCommunication" Count="40" />
-                <Component Subtype="SteelPlate" Count="20" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="LargeTube" Count="5" />
+				<Component Subtype="Construction" Count="25" />
+				<Component Subtype="CopperWire" Count="50" />
+				<Component Subtype="Electromagnet" Count="10" />
+				<Component Subtype="Computer" Count="40" />
+				<Component Subtype="RadioCommunication" Count="8" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
             <CriticalComponent Subtype="RadioCommunication" Index="0" />
             <BlockPairName>LongboiArray</BlockPairName>
             <ResourceSinkGroup>Utility</ResourceSinkGroup>
             <BuildTimeSeconds>40</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-            <PCU>100</PCU>
+            <PCU>5</PCU>
         </Definition>		
 		
     <!-- SG Antenna -->	
@@ -146,19 +146,20 @@
             </Id>
             <DisplayName>Compact Antenna Cube</DisplayName>
             <Components>
-                <Component Subtype="SteelPlate" Count="10" />
-                <Component Subtype="SmallTube" Count="10" />
+                <Component Subtype="SteelPlate" Count="4" />
+                <Component Subtype="SmallTube" Count="8" />
                 <Component Subtype="Construction" Count="10" />
-                <Component Subtype="Computer" Count="10" />
-                <Component Subtype="RadioCommunication" Count="4" />
-                <Component Subtype="Construction" Count="10" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="Electromagnet" Count="4" />
+                <Component Subtype="Computer" Count="4" />
+                <Component Subtype="RadioCommunication" Count="2" />
+                <Component Subtype="SteelPlate" Count="4" />
             </Components>
             <CriticalComponent Subtype="RadioCommunication" Index="0" />
             <BlockPairName>AntennaCube</BlockPairName>
             <ResourceSinkGroup>Utility</ResourceSinkGroup>
             <BuildTimeSeconds>16</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-            <PCU>100</PCU>
+            <PCU>2</PCU>
         </Definition>			
 		
         <Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
@@ -167,20 +168,21 @@
                 <SubtypeId>Antenna45CornerSG</SubtypeId>
             </Id>
             <DisplayName>Compact Antenna 45Corner SG</DisplayName>
-            <Components>
-                <Component Subtype="SteelPlate" Count="10" />
-                <Component Subtype="SmallTube" Count="10" />
-                <Component Subtype="Construction" Count="10" />
-                <Component Subtype="Computer" Count="10" />
-                <Component Subtype="RadioCommunication" Count="4" />
-                <Component Subtype="Construction" Count="10" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="Electromagnet" Count="4" />
+				<Component Subtype="Computer" Count="4" />
+				<Component Subtype="RadioCommunication" Count="2" />
+				<Component Subtype="SteelPlate" Count="4" />
+			</Components>
             <CriticalComponent Subtype="RadioCommunication" Index="0" />
             <BlockPairName>Antenna45Corner</BlockPairName>
             <ResourceSinkGroup>Utility</ResourceSinkGroup>
             <BuildTimeSeconds>16</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-            <PCU>100</PCU>
+            <PCU>2</PCU>
         </Definition>	
 
         <Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
@@ -189,20 +191,21 @@
                 <SubtypeId>AntennaSlopeSG</SubtypeId>
             </Id>
             <DisplayName>Compact Antenna Slope SG</DisplayName>
-            <Components>
-                <Component Subtype="SteelPlate" Count="10" />
-                <Component Subtype="SmallTube" Count="10" />
-                <Component Subtype="Construction" Count="10" />
-                <Component Subtype="Computer" Count="10" />
-                <Component Subtype="RadioCommunication" Count="4" />
-                <Component Subtype="Construction" Count="10" />
-            </Components>
+			<Components>
+				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="Electromagnet" Count="4" />
+				<Component Subtype="Computer" Count="4" />
+				<Component Subtype="RadioCommunication" Count="2" />
+				<Component Subtype="SteelPlate" Count="4" />
+			</Components>
             <CriticalComponent Subtype="RadioCommunication" Index="0" />
             <BlockPairName>AntennaSlope</BlockPairName>
             <ResourceSinkGroup>Utility</ResourceSinkGroup>
             <BuildTimeSeconds>16</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-            <PCU>100</PCU>
+            <PCU>2</PCU>
         </Definition>		
 
         <Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
@@ -212,19 +215,20 @@
             </Id>
             <DisplayName>Compact Antenna Corner SG</DisplayName>
             <Components>
-                <Component Subtype="SteelPlate" Count="10" />
-                <Component Subtype="SmallTube" Count="10" />
+                <Component Subtype="SteelPlate" Count="4" />
+                <Component Subtype="SmallTube" Count="8" />
                 <Component Subtype="Construction" Count="10" />
-                <Component Subtype="Computer" Count="10" />
-                <Component Subtype="RadioCommunication" Count="4" />
-                <Component Subtype="Construction" Count="10" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="Electromagnet" Count="4" />
+                <Component Subtype="Computer" Count="4" />
+                <Component Subtype="RadioCommunication" Count="2" />
+                <Component Subtype="SteelPlate" Count="4" />
             </Components>
             <CriticalComponent Subtype="RadioCommunication" Index="0" />
             <BlockPairName>AntennaCorner</BlockPairName>
             <ResourceSinkGroup>Utility</ResourceSinkGroup>
             <BuildTimeSeconds>16</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-            <PCU>100</PCU>
+            <PCU>2</PCU>
         </Definition>	
 		
 	</CubeBlocks>
