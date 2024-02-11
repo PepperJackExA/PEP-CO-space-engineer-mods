@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+			<Id>
+				<TypeId>RadioAntenna</TypeId>
+				<SubtypeId>OmnidirectionalAntenna</SubtypeId>
+			</Id>
+			<DisplayName>Compact Antenna</DisplayName>
+			<Components>
+				<Component Count="45" Subtype="SteelPlate"/>
+				<Component Count="30" Subtype="Construction"/>
+				<Component Count="60" Subtype="SmallTube"/>
+				<Component Count="40" Subtype="LargeTube"/>
+				<Component Count="8" Subtype="Computer"/>
+				<Component Count="50" Subtype="RadioCommunication"/>
+				<Component Count="10" Subtype="Construction"/>
+				<Component Count="5" Subtype="SteelPlate"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="RadioCommunication"/>
+			<BlockPairName>OmnidirectionalAntenna</BlockPairName>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<MaxBroadcastRadius>100</MaxBroadcastRadius>
+			<PCU>100</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+			<Id>
+				<TypeId>RadioAntenna</TypeId>
+				<SubtypeId>OmnidirectionalAntennaSmall</SubtypeId>
+			</Id>
+			<DisplayName>Compact Antenna</DisplayName>
+			<Components>
+				<Component Count="2" Subtype="SmallTube"/>
+				<Component Count="1" Subtype="Computer"/>
+				<Component Count="1" Subtype="Construction"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="Computer"/>
+			<BlockPairName>OmnidirectionalAntenna</BlockPairName>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<BuildTimeSeconds>16</BuildTimeSeconds>
+			<MaxBroadcastRadius>100</MaxBroadcastRadius>
+			<PCU>100</PCU>
+		</Definition>
+	</CubeBlocks>
+	<BlockPositions/>
+</Definitions>
