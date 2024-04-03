@@ -6,41 +6,41 @@
 				<TypeId>RadioAntenna</TypeId>
 				<SubtypeId>OmnidirectionalAntenna</SubtypeId>
 			</Id>
-			<DisplayName>Compact Antenna</DisplayName>
+			<DisplayName>Omni Antenna Tower</DisplayName>
 			<Components>
-				<Component Count="45" Subtype="SteelPlate"/>
-				<Component Count="30" Subtype="Construction"/>
-				<Component Count="60" Subtype="SmallTube"/>
-				<Component Count="40" Subtype="LargeTube"/>
-				<Component Count="8" Subtype="Computer"/>
-				<Component Count="50" Subtype="RadioCommunication"/>
-				<Component Count="10" Subtype="Construction"/>
-				<Component Count="5" Subtype="SteelPlate"/>
+				<Component Subtype="SteelPlate" Count="15"/>
+				<Component Subtype="LargeTube" Count="8" />
+				<Component Subtype="Construction" Count="38"/>
+				<Component Subtype="CopperWire" Count="75" />
+				<Component  Subtype="Electromagnet" Count="15"/>
+				<Component  Subtype="RadioCommunication" Count="8"/>
+				<Component  Subtype="Computer" Count="15"/>
+				<Component  Subtype="SteelPlate" Count="15"/>
 			</Components>
-			<CriticalComponent Index="0" Subtype="RadioCommunication"/>
+			<CriticalComponent Index="0" Subtype="Computer"/>
 			<BlockPairName>OmnidirectionalAntenna</BlockPairName>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<BuildTimeSeconds>40</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-			<PCU>100</PCU>
+			<PCU>10</PCU>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
 			<Id>
 				<TypeId>RadioAntenna</TypeId>
 				<SubtypeId>OmnidirectionalAntennaSmall</SubtypeId>
 			</Id>
-			<DisplayName>Compact Antenna</DisplayName>
+			<DisplayName>Omni Antenna</DisplayName>
 			<Components>
-				<Component Count="2" Subtype="SmallTube"/>
-				<Component Count="1" Subtype="Computer"/>
-				<Component Count="1" Subtype="Construction"/>
+				<Component  Subtype="SteelPlate" Count="1"/>
+				<Component  Subtype="SmallTube" Count="1"/>
+				<Component  Subtype="Construction" Count="2"/>
+				<Component  Subtype="CopperWire" Count="8"/>
+				<Component  Subtype="SteelPlate" Count="1"/>
 			</Components>
-			<CriticalComponent Index="0" Subtype="Computer"/>
+			<CriticalComponent Index="0" Subtype="CopperWire"/>
 			<BlockPairName>OmnidirectionalAntenna</BlockPairName>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<BuildTimeSeconds>16</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-			<PCU>100</PCU>
+			<PCU>1</PCU>
 		</Definition>
 	</CubeBlocks>
 	<BlockPositions/>
