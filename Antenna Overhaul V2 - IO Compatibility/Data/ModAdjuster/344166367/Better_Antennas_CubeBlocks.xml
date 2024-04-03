@@ -9,21 +9,20 @@
 			</Id>
 			<DisplayName>Ntech Short Antenna</DisplayName>
 			<Components>
-				<Component Subtype="SteelPlate" Count="65" />
-				<Component Subtype="Construction" Count="30" />
-				<Component Subtype="SmallTube" Count="60" />
-				<Component Subtype="LargeTube" Count="40" />
-				<Component Subtype="Computer" Count="8" />
-				<Component Subtype="RadioCommunication" Count="30" />
+				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="SmallTube" Count="8" />
 				<Component Subtype="Construction" Count="10" />
-				<Component Subtype="SteelPlate" Count="15" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="Electromagnet" Count="4" />
+				<Component Subtype="RadioCommunication" Count="2" />
+				<Component Subtype="Computer" Count="4" />
+				<Component Subtype="SteelPlate" Count="4" />
 			</Components>
-			<CriticalComponent Subtype="RadioCommunication" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BlockPairName>NtechAntenna</BlockPairName>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<BuildTimeSeconds>50</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-			<PCU>100</PCU>
+			<PCU>2</PCU>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
 			<Id>
@@ -32,21 +31,20 @@
 			</Id>
 			<DisplayName>Ntech Long Antenna</DisplayName>
 			<Components>
-				<Component Subtype="SteelPlate" Count="30" />
-				<Component Subtype="Construction" Count="15" />
-				<Component Subtype="SmallTube" Count="30" />
-				<Component Subtype="LargeTube" Count="20" />
+				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="Electromagnet" Count="4" />
+				<Component Subtype="RadioCommunication" Count="2" />
 				<Component Subtype="Computer" Count="4" />
-				<Component Subtype="RadioCommunication" Count="5" />
-				<Component Subtype="Construction" Count="5" />
-				<Component Subtype="SteelPlate" Count="7" />
+				<Component Subtype="SteelPlate" Count="4" />
 			</Components>
-			<CriticalComponent Subtype="RadioCommunication" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BlockPairName>NtechAntenna</BlockPairName>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<BuildTimeSeconds>50</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-			<PCU>100</PCU>
+			<PCU>2</PCU>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
 			<Id>
@@ -55,21 +53,20 @@
 			</Id>
 			<DisplayName>Ntech Angled Antenna</DisplayName>
 			<Components>
-				<Component Subtype="SteelPlate" Count="30" />
-				<Component Subtype="Construction" Count="15" />
-				<Component Subtype="SmallTube" Count="30" />
-				<Component Subtype="LargeTube" Count="20" />
+				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="Electromagnet" Count="4" />
+				<Component Subtype="RadioCommunication" Count="2" />
 				<Component Subtype="Computer" Count="4" />
-				<Component Subtype="RadioCommunication" Count="5" />
-				<Component Subtype="Construction" Count="5" />
-				<Component Subtype="SteelPlate" Count="7" />
+				<Component Subtype="SteelPlate" Count="4" />
 			</Components>
-			<CriticalComponent Subtype="RadioCommunication" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0" />
 			<BlockPairName>SBBentAntenna</BlockPairName>
 			<ResourceSinkGroup>Utility</ResourceSinkGroup>
 			<BuildTimeSeconds>50</BuildTimeSeconds>
-			<MaxBroadcastRadius>100</MaxBroadcastRadius>
-			<PCU>100</PCU>
+			<PCU>2</PCU>
 		</Definition>
 	</CubeBlocks>
 </Definitions>
