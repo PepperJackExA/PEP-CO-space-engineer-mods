@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+			<Id>
+				<TypeId>RadioAntenna</TypeId>
+				<SubtypeId>OmnidirectionalAntenna</SubtypeId>
+			</Id>
+			<Description>Max Range 1000</Description>
+			<MaxBroadcastRadius>10000</MaxBroadcastRadius>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+			<Id>
+				<TypeId>RadioAntenna</TypeId>
+				<SubtypeId>OmnidirectionalAntennaSmall</SubtypeId>
+			</Id>
+			<Description>Max Range 1000</Description>
+			<MaxBroadcastRadius>1000</MaxBroadcastRadius>
+		</Definition>
+	</CubeBlocks>
+	<BlockPositions/>
+</Definitions>
