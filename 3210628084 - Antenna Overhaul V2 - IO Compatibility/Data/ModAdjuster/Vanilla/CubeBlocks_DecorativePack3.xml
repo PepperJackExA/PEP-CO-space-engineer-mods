@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+        <!-- Decorative Blocks #3-->
+        <Definition xsi:type="MyObjectBuilder_BeaconDefinition">
+            <Id>
+                <TypeId>Beacon</TypeId>
+                <SubtypeId>LargeBlockBeaconReskin</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Block_BeaconReskin</DisplayName>          
+            <Components>
+                <Component Subtype="SteelPlate" Count="40" />
+                <Component Subtype="Construction" Count="30" />
+                <Component Subtype="LargeTube" Count="20" />
+                <Component Subtype="Computer" Count="10" />
+                <Component Subtype="RadioCommunication" Count="40" />
+                <Component Subtype="SteelPlate" Count="40" />
+            </Components>
+            <CriticalComponent Subtype="RadioCommunication" Index="0" />            
+            <BlockPairName>BeaconReskin</BlockPairName>            
+            <BuildTimeSeconds>40</BuildTimeSeconds>            
+            <ResourceSinkGroup>Utility</ResourceSinkGroup>          
+            <MaxBroadcastPowerDrainkW>1</MaxBroadcastPowerDrainkW>
+            <PCU>50</PCU>
+        </Definition>
+
+        <Definition xsi:type="MyObjectBuilder_BeaconDefinition">
+            <Id>
+                <TypeId>Beacon</TypeId>
+                <SubtypeId>SmallBlockBeaconReskin</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Block_BeaconReskin</DisplayName> 
+            <Components>
+                <Component Subtype="SteelPlate" Count="1" />
+                <Component Subtype="Construction" Count="1" />
+                <Component Subtype="SmallTube" Count="1" />
+                <Component Subtype="Computer" Count="1" />
+                <Component Subtype="RadioCommunication" Count="4" />
+                <Component Subtype="SteelPlate" Count="1" />
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0" />           
+            <BlockPairName>BeaconReskin</BlockPairName>            
+            <BuildTimeSeconds>15</BuildTimeSeconds>
+            <ResourceSinkGroup>Utility</ResourceSinkGroup>           
+            <MaxBroadcastPowerDrainkW>1</MaxBroadcastPowerDrainkW>
+            <PCU>50</PCU>
+        </Definition>    
+    </CubeBlocks>
+</Definitions>

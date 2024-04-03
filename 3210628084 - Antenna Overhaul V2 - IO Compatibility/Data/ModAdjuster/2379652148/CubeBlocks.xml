@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+
+		<Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
+			<Id>
+				<TypeId>LaserAntenna</TypeId>
+				<SubtypeId>DB_HumongousAntenna</SubtypeId>
+			</Id>
+			<DisplayName>Advanced Deep Space Laser Antenna Dish</DisplayName>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="2000" />
+				<Component Subtype="SmallTube" Count="250" />
+				<Component Subtype="LargeTube" Count="200" />
+				<Component Subtype="Construction" Count="250" />
+				<Component Subtype="CopperWire" Count="250" />
+				<Component Subtype="Electromagnet" Count="445" />
+				<Component Subtype="Motor" Count="200" />
+				<Component Subtype="Ceramic" Count="10" />
+				<Component Subtype="Superconductor" Count="20" />
+				<Component Subtype="QuantumComputer" Count="10" />
+				<Component Subtype="RadioCommunication" Count="100" />
+				<Component Subtype="SteelPlate" Count="200" />
+			</Components>
+			<CriticalComponent Subtype="RadioCommunication" Index="0" />
+			<BlockPairName>DB_HumongousAntenna</BlockPairName>
+			<BuildTimeSeconds>140</BuildTimeSeconds>
+			<PowerInputIdle>0.5</PowerInputIdle>
+			<PowerInputTurning>70</PowerInputTurning>
+			<PowerInputLasing>3</PowerInputLasing>
+			<PCU>100</PCU>
+			<RequireLineOfSight>false</RequireLineOfSight>
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+		</Definition>
+
+	</CubeBlocks>
+</Definitions>
