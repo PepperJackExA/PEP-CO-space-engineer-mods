@@ -290,6 +290,194 @@ namespace ModAdjuster
             },
             new BlockDef()
             {
+                BlockName = "MyObjectBuilder_RadioAntenna/LongboiArrayLG",
+                BlockActions = new[]
+                {
+
+                    new BlockAction
+                    {
+                        Action = ChangeBlockDescription,
+                        NewText = "Antenna Range = 50K",
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangeBlockName,
+                        NewText = "Longboi Advanced Antenna Array"
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangePCU,
+                        Value = 200
+                    },
+                    new BlockAction
+                    {
+                        Action = RemoveComponent,
+                        Index = 8,
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/Electromagnet",
+                        Index = 5,
+                        Count = 100
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/CopperWire",
+                        Index = 4,
+                        Count = 500
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/Construction",
+                        Index = 3,
+                        Count = 250
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/LargeTube",
+                        Index = 2,
+                        Count = 30
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/SmallTube",
+                        Index = 1,
+                        Count = 50
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/SteelPlate",
+                        Index = 0,
+                        Count = 100
+                    },
+                    new BlockAction
+                    {
+                        Action = InsertComponent,
+                        Component = "MyObjectBuilder_Component/QuantumComputer",
+                        Index = 7,
+                        Count = 20
+                    },
+                    new BlockAction
+                    {
+                        Action = InsertComponent,
+                        Component = "MyObjectBuilder_Component/RadioCommunication",
+                        Index = 6,
+                        Count = 50
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangeCriticalComponentIndex,
+                        Index = 7
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangeBroadcastRadius,
+                        Value = 50000
+                    },
+                }
+            },
+            new BlockDef()
+            {
+                BlockName = "MyObjectBuilder_RadioAntenna/LongboiArraySG",
+                BlockActions = new[]
+                {
+
+                    new BlockAction
+                    {
+                        Action = ChangeBlockDescription,
+                        NewText = "Antenna Range = 25K",
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangeBlockName,
+                        NewText = "Longboi Advanced Antenna Array"
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangePCU,
+                        Value = 200
+                    },
+                    new BlockAction
+                    {
+                        Action = RemoveComponent,
+                        Index = 8,
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/Electromagnet",
+                        Index = 5,
+                        Count = 50
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/CopperWire",
+                        Index = 4,
+                        Count = 250
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/Construction",
+                        Index = 3,
+                        Count = 125
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/LargeTube",
+                        Index = 2,
+                        Count = 15
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/SmallTube",
+                        Index = 1,
+                        Count = 25
+                    },
+                    new BlockAction
+                    {
+                        Action = ReplaceComponent,
+                        Component = "MyObjectBuilder_Component/SteelPlate",
+                        Index = 0,
+                        Count = 50
+                    },
+                    new BlockAction
+                    {
+                        Action = InsertComponent,
+                        Component = "MyObjectBuilder_Component/QuantumComputer",
+                        Index = 6,
+                        Count = 10
+                    },
+                    new BlockAction
+                    {
+                        Action = InsertComponent,
+                        Component = "MyObjectBuilder_Component/RadioCommunication",
+                        Index = 6,
+                        Count = 25
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangeCriticalComponentIndex,
+                        Index = 7
+                    },
+                    new BlockAction
+                    {
+                        Action = ChangeBroadcastRadius,
+                        Value = 25000
+                    },
+                }
+            },
+            new BlockDef()
+            {
                 BlockName = "MyObjectBuilder_RadioAntenna/LargeBlockRadioAntenna",
                 BlockActions = new[]
                 {
@@ -2213,6 +2401,7 @@ namespace ModAdjuster
                     },
                 }
             },
+           
         };
 
     }
