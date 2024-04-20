@@ -20,7 +20,7 @@
 				<Component Subtype="AdvancedComputer" Count="50" />
 				<Component Subtype="SteelPlate" Count="200" />
 			</Components>
-			<CriticalComponent Subtype="Computer" Index="0" />
+			<CriticalComponent Subtype="AdvancedComputer" Index="0" />
 			<BlockPairName>Phoenix_LargeRadioAntenna</BlockPairName>
 			<BuildTimeSeconds>300</BuildTimeSeconds>
 			<PowerInputIdle>0.558</PowerInputIdle>
@@ -34,27 +34,27 @@
 				<TypeId>LaserAntenna</TypeId>
 				<SubtypeId>Phoenix_LargeBlockRadioAntennaMed</SubtypeId>
 			</Id>
-			<DisplayName>Planetary Radio Antenna</DisplayName>
+			<DisplayName>Planetary Laser Antenna Dish</DisplayName>
 			<Components>
-				<Component Subtype="SteelPlate" Count="560" />
-				<Component Subtype="SmallTube" Count="840" />
-				<Component Subtype="Construction" Count="560" />
-				<Component Subtype="Motor" Count="180" />
-				<Component Subtype="Detector" Count="420" />
-				<Component Subtype="RadioCommunication" Count="140" />
-				<Component Subtype="Superconductor" Count="1400" />
-				<Component Subtype="Computer" Count="700" />
-				<Component Subtype="BulletproofGlass" Count="56" />
-				<Component Subtype="SteelPlate" Count="140" />
+				<Component Subtype="InteriorPlate" Count="3000" />
+				<Component Subtype="LargeTube" Count="300" />
+				<Component Subtype="SmallTube" Count="250" />
+				<Component Subtype="Construction" Count="250" />
+				<Component Subtype="CopperWire" Count="100" />
+				<Component Subtype="Electromagnet" Count="205" />
+				<Component Subtype="Motor" Count="100" />
+				<Component Subtype="Ceramic" Count="10" />
+				<Component Subtype="RadioCommunication" Count="100" />
+				<Component Subtype="AdvancedComputer" Count="50" />
+				<Component Subtype="SteelPlate" Count="200" />
 			</Components>
-			<CriticalComponent Subtype="Computer" Index="0" />
+			<CriticalComponent Subtype="AdvancedComputer" Index="0" />
 			<BlockPairName>Phoenix_MedRadioAntenna</BlockPairName>
 			<BuildTimeSeconds>150</BuildTimeSeconds>
 			<PowerInputIdle>0.372</PowerInputIdle>
 			<PowerInputTurning>2.50</PowerInputTurning>
 			<PowerInputLasing>32</PowerInputLasing>
 			<RequireLineOfSight>false</RequireLineOfSight>
-			<MaxRange>100</MaxRange>
 			<PCU>100</PCU>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
@@ -62,18 +62,17 @@
 				<TypeId>LaserAntenna</TypeId>
 				<SubtypeId>Phoenix_LargeBlockRadioAntenna</SubtypeId>
 			</Id>
-			<DisplayName>Radio Antenna</DisplayName>
+			<DisplayName>Laser Antenna Dish</DisplayName>
 			<Components>
-				<Component Subtype="SteelPlate" Count="40" />
-				<Component Subtype="SmallTube" Count="60" />
-				<Component Subtype="Construction" Count="40" />
-				<Component Subtype="Motor" Count="16" />
-				<Component Subtype="Detector" Count="30" />
-				<Component Subtype="RadioCommunication" Count="20" />
-				<Component Subtype="Superconductor" Count="100" />
-				<Component Subtype="Computer" Count="50" />
-				<Component Subtype="BulletproofGlass" Count="4" />
-				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="InteriorPlate" Count="20" />
+				<Component Subtype="LargeTube" Count="2" />
+				<Component Subtype="SmallTube" Count="8" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="Electromagnet" Count="20" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="SteelPlate" Count="20" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
 			<BlockPairName>Phoenix_RadioAntenna</BlockPairName>
@@ -82,7 +81,6 @@
 			<PowerInputTurning>0.50</PowerInputTurning>
 			<PowerInputLasing>2.5</PowerInputLasing>
 			<RequireLineOfSight>false</RequireLineOfSight>
-			<MaxRange>100</MaxRange>
 			<PCU>100</PCU>			
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
@@ -90,16 +88,15 @@
 				<TypeId>LaserAntenna</TypeId>
 				<SubtypeId>Phoenix_SmallBlockRadioAntenna</SubtypeId>
 			</Id>
-			<DisplayName>Radio Antenna</DisplayName>
+			<DisplayName>Laser Antenna Dish</DisplayName>
 			<Components>
-				<Component Subtype="SteelPlate" Count="6" />
-				<Component Subtype="SmallTube" Count="10" />
+				<Component Subtype="InteriorPlate" Count="4" />
+				<Component Subtype="SmallTube" Count="8" />
 				<Component Subtype="Construction" Count="10" />
-				<Component Subtype="Motor" Count="5" />
-				<Component Subtype="RadioCommunication" Count="5" />
-				<Component Subtype="Superconductor" Count="10" />
-				<Component Subtype="Computer" Count="30" />
-				<Component Subtype="BulletproofGlass" Count="2" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="Electromagnet" Count="4" />
+				<Component Subtype="Motor" Count="1" />
+				<Component Subtype="Computer" Count="50" />
 				<Component Subtype="SteelPlate" Count="4" />
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0" />
@@ -109,7 +106,6 @@
 			<PowerInputTurning>0.01</PowerInputTurning>
 			<PowerInputLasing>0.75</PowerInputLasing>
 			<RequireLineOfSight>false</RequireLineOfSight>
-			<MaxRange>100</MaxRange>
 			<PCU>100</PCU>
 		</Definition>
 	</CubeBlocks>

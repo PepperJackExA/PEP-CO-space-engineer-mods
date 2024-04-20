@@ -6,23 +6,23 @@
 				<TypeId>LaserAntenna</TypeId>
 				<SubtypeId>Phoenix_LargeBlockRadioAntennaLarge</SubtypeId>
 			</Id>
-			<Description>Max Range 10000</Description>
-			<MaxRange>10000</MaxRange>
+			<Description>Antenna Range = Infinit</Description>
+			<MaxRange>-1</MaxRange>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
 			<Id>
 				<TypeId>LaserAntenna</TypeId>
 				<SubtypeId>Phoenix_LargeBlockRadioAntennaMed</SubtypeId>
 			</Id>
-			<Description>Max Range 10000</Description>
-			<MaxRange>10000</MaxRange>
+			<Description>Antenna Range = 10M</Description>
+			<MaxRange>10000000</MaxRange>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
 			<Id>
 				<TypeId>LaserAntenna</TypeId>
 				<SubtypeId>Phoenix_LargeBlockRadioAntenna</SubtypeId>
 			</Id>
-			<Description>Max Range 10000</Description>
+			<Description>Antenna Range = 10K</Description>
 			<MaxRange>10000</MaxRange>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
@@ -30,8 +30,8 @@
 				<TypeId>LaserAntenna</TypeId>
 				<SubtypeId>Phoenix_SmallBlockRadioAntenna</SubtypeId>
 			</Id>
-			<Description>Max Range 10000</Description>
-			<MaxRange>10000</MaxRange>
+			<Description>Antenna Range = 5K</Description>
+			<MaxRange>5000</MaxRange>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

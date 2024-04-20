@@ -38,8 +38,8 @@
 				<TypeId>LaserAntenna</TypeId>
 				<SubtypeId>LargeBlockLaserAntenna</SubtypeId>
 			</Id>
-			<Description>Max Range 100000</Description>
-			<MaxRange>100000</MaxRange>
+			<Description>Max Range  25000</Description>
+			<MaxRange>25000</MaxRange>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
 			<Id>
@@ -47,7 +47,7 @@
 				<SubtypeId>SmallBlockLaserAntenna</SubtypeId>
 			</Id>
 			<Description>Max Range 10000</Description>
-			<MaxRange>10000</MaxRange>
+			<MaxRange>15000</MaxRange>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

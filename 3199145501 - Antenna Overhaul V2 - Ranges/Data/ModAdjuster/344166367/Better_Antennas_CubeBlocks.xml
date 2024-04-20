@@ -7,24 +7,24 @@
 				<TypeId>RadioAntenna</TypeId>
 				<SubtypeId>LBShortRadioAntenna</SubtypeId>
 			</Id>
-			<Description>Max Range 10000</Description>
-			<MaxBroadcastRadius>10000</MaxBroadcastRadius>
+			<Description>Max Range 2000</Description>
+			<MaxBroadcastRadius>2000</MaxBroadcastRadius>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
 			<Id>
 				<TypeId>RadioAntenna</TypeId>
 				<SubtypeId>SBLongRadioAntenna</SubtypeId>
 			</Id>
-			<Description>Max Range 1000</Description>
-			<MaxBroadcastRadius>1000</MaxBroadcastRadius>
+			<Description>Max Range 2000</Description>
+			<MaxBroadcastRadius>2000</MaxBroadcastRadius>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
 			<Id>
 				<TypeId>RadioAntenna</TypeId>
 				<SubtypeId>SBAngledRadioAntenna</SubtypeId>
 			</Id>
-			<Description>Max Range 1000</Description>
-			<MaxBroadcastRadius>1000</MaxBroadcastRadius>
+			<Description>Max Range 2000</Description>
+			<MaxBroadcastRadius>2000</MaxBroadcastRadius>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

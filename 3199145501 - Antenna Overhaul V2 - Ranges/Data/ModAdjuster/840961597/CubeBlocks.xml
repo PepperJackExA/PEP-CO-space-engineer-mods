@@ -8,8 +8,8 @@
 				<TypeId>LaserAntenna</TypeId>
 				<SubtypeId>DB_LaserCommLarge</SubtypeId>
 			</Id>
-			<Description>Max Range 100000</Description>
-			<MaxRange>100000</MaxRange>
+			<Description>Antenna Range = 300K Rotates fast</Description>
+			<MaxRange>300000</MaxRange>
 		</Definition>
 
 		<Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
@@ -17,8 +17,8 @@
 				<TypeId>LaserAntenna</TypeId>
 				<SubtypeId>DB_LaserCommSmall</SubtypeId>
 			</Id>
-			<Description>Max Range 10000</Description>
-			<MaxRange>10000</MaxRange>
+			<Description>Antenna Range = 100K Rotates fast</Description>
+			<MaxRange>100000</MaxRange>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

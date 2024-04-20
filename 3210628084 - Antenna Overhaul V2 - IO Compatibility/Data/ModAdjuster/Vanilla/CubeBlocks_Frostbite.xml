@@ -6,18 +6,19 @@
                 <TypeId>RadioAntenna</TypeId>
                 <SubtypeId>LargeBlockRadioAntennaDish</SubtypeId>
             </Id>
-            <DisplayName>DisplayName_Block_AntennaDish</DisplayName>            
-            <Description>Description_AntennaDish</Description>           
+            <DisplayName>Large Antenna Dish</DisplayName>                       
             <Components>
-                <Component Subtype="Construction" Count="10" />
-                <Component Subtype="Girder" Count="120" />
-                <Component Subtype="SteelPlate" Count="60" />
-                <Component Subtype="Construction" Count="30" />
-                <Component Subtype="Computer" Count="8" />
-                <Component Subtype="RadioCommunication" Count="40" />
-                <Component Subtype="SteelPlate" Count="20" />
+				<Component Subtype="SteelPlate" Count="100" />
+				<Component Subtype="SmallTube" Count="50" />
+				<Component Subtype="LargeTube" Count="30" />
+                <Component Subtype="Construction" Count="250" />
+                <Component Subtype="CopperWire" Count="500" />
+                <Component Subtype="Electromagnet" Count="100" />
+                <Component Subtype="RadioCommunication" Count="50" />
+                <Component Subtype="Computer" Count="100" />
+                <Component Subtype="SteelPlate" Count="100" />
             </Components>
-            <CriticalComponent Subtype="RadioCommunication" Index="0" />            
+            <CriticalComponent Subtype="Computer" Index="0" />            
             <BlockPairName>AntennaDish</BlockPairName>
             <ResourceSinkGroup>Utility</ResourceSinkGroup>
             <BuildTimeSeconds>60</BuildTimeSeconds>

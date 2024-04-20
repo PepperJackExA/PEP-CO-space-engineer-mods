@@ -6,16 +6,16 @@
 				<TypeId>RadioAntenna</TypeId>
 				<SubtypeId>OmnidirectionalAntenna</SubtypeId>
 			</Id>
-			<Description>Max Range 1000</Description>
-			<MaxBroadcastRadius>10000</MaxBroadcastRadius>
+			<Description>Max Range 7500</Description>
+			<MaxBroadcastRadius>7500</MaxBroadcastRadius>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
 			<Id>
 				<TypeId>RadioAntenna</TypeId>
 				<SubtypeId>OmnidirectionalAntennaSmall</SubtypeId>
 			</Id>
-			<Description>Max Range 1000</Description>
-			<MaxBroadcastRadius>1000</MaxBroadcastRadius>
+			<Description>Max Range 500</Description>
+			<MaxBroadcastRadius>500</MaxBroadcastRadius>
 		</Definition>
 	</CubeBlocks>
 	<BlockPositions/>
