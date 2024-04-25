@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Damage_Electrical_Damaged_Antenna" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Damage_Electrical_Damaged_SolarPanels" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Damage_Electrical_Damaged" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Damage_GravGen_Damaged" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Damage_HeavyMech_Damaged" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Damage_Reactor_Damaged" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="OxyLeakLarge" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="OxyVent" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Meteory_Fire_Atmosphere" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Meteory_Fire_Space" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Shell_Casings" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Rock" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="AlienGreenGrass" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepAlienYellow" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepGrassAlienOrange" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepFlora" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepIce" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepGrassOld" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepMarsSoil" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepSoil" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepMoonSoil" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepSand" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepSnow" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_GrassGreen" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Ice" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Sand" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_MoonSoil" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_MarsSoil" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Soil" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Metal" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Wood" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Snow" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Glass" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_GrassOrange" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_AlienGreenGrass" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_AlienYellowGrass" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_GrassYellow" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Grinder_Character" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Dummy" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Warp" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Hit_BasicAmmoSmall" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Character" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Blood_Spider" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Tree_Drill" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Metal_GatlingGun" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Rock_GatlingGun" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Tree Destruction" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Damage_WeapExpl_Damaged" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_GrassGreen" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="PlanetCrashDust" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_Autocannon" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_LargeGunShot" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_MarsSoil" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_Snow" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_Sand" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_Soil" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_Ice" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_Grass" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_GrassOld" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_Moon" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_OrangeAlienGrass" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_AlienGreenGrass" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_AlienYellowGrass" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialExplosion_Destructible" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Collision_Sparks_HandDrill" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="AngleGrinder" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Warhead_15" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_Construction" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDustStonesSparks_soft" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Meteorit_Smoke1AfterHit" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_Collector" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Landing_Jet_Ground_Dust" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Collision_Sparks_LargeGrid_Close" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Collision_Sparks_LargeGrid_Distant" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_Snow" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_Rock" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_MoonSoil" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Burrowing" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Warhead_30" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Missile" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash_Large" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_Missile" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Tree_Grind" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WelderFlame" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WelderContactPoint_soft" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Warhead_02" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Warhead_50" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_Metal" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_Sand" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_GrassOrange" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_GrassYellow" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Grid_Destruction" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Collision_Sparks" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_Metal" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Collision_Sparks_Directional" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ArmorDestroyed_Small" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="BlockDestroyed_Medium" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="BlockDestroyedExplosion_Large3X" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="BlockDestroyedExplosion_Large" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="BlockDestroyedExplosion_Small" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="BlockDestroyed_Small" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="BlockDestroyedExplosion_Tiny" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ArmorDestroyed_Large" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDustStones" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_MarsSoil" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_Snow" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_Ice" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_Sand" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_MoonSoil" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_Grass" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_GrassOld" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_OrangeAlienGrass" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_AlienGreenGrass" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_AlienYellowGrass" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Debris" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_Dirt" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Landing_Jet_Ground" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Landing_Jet_Ground_Mars" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Landing_Jet_Ground_Grass" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Landing_Jet_Ground_Snow" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WelderContactPoint" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WelderContactPoint_medium" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDustStonesSparks" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_Metal" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDustStonesSparks_strong" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="PlanetCrash" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ShipGrinder" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ShipWelderArc" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_MarsSoil" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Landing_Jet_Grid_Large" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Landing_Jet_Grid_Small" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_Container" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustCarSmoke" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustSmokeSmall" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustSmokeReactorSmall" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustSmokeWhiteSmall" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustSmokeSparks_2" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustElectric" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustSmokeElectric" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustSmokeElectricSmall" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustCarSmokeSmall" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustSmoke" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustFire" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustFireSmall" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustSmokeReactor" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustSmokeWhite" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustElectricSmall" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustFireSmoke" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="ExhaustFireSmokeSmall" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash_Pistol" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_LargeCaliberShell" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash_Autocannon" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash_RailgunLarge" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="RailGunTrail" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash_MediumCalibre" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash_LargeCalibre" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="LargeCaliberVoxelHit_Soil" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash_RailgunSmall" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_AmmunitionLarge" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_AmmunitionMedium" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_AmmunitionSmall" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_AmmunitionTiny" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="BlockDestroyed_Large3X" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="BlockDestroyed_Large" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="LargeCalibreGun_Tracer" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MediumCalibreGun_Tracer" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="RailGunTrailSmall" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_LargeCaliberShell_Backup" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_MediumCaliberShell" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash_Autocannon_Backup" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Damage_Railgun_Large" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="LargeCaliberVoxelHit_Snow" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Fish01" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Fish02" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="HoloLCD" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Bubbles01" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="BubblesTop" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="HoloLCD_Small" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Damage_Electrical_Damaged_SmallHoloLCD" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Damage_Electrical_Damaged_HoloLCD" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Firework_Rainbow" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_Firework" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Flare" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Firework_Red" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Firework_Blue" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Firework_Yellow" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Firework_Pink" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Explosion_Firework_Green" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_Flare" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+</Definitions>
+ 

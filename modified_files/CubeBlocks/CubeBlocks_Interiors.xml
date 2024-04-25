@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>Passage</TypeId>
+<SubtypeId />
+</Id>
+<DisplayName>DisplayName_Block_Passage</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="74" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="48" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>Passage</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Passage2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Passage2</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="74" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="48" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>Passage2Straight</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Passage2Wall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Passage2Side</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="50" />
+<Component Subtype="Construction" Count="14" />
+<Component Subtype="SmallTube" Count="32" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>Passage2Wall</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeStairs</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Stairs</DisplayName>
+<Description>Description_Stairs</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="40" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>Stairs</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeRamp</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Ramp</DisplayName>
+<Description>Description_Ramp</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="60" />
+<Component Subtype="Construction" Count="16" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>Ramp</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeSteelCatwalk</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SteelCatwalk</DisplayName>
+<Description>Description_SteelCatwalk</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="InteriorPlate" Count="7" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BlockPairName>SteelCatwalk</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeSteelCatwalk2Sides</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SteelCatwalkTwoSides</DisplayName>
+<Description>Description_SteelCatwalk</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="25" />
+<Component Subtype="InteriorPlate" Count="12" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BlockPairName>LargeSteelCatwalk2Sides</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeSteelCatwalkCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SteelCatwalkCorner</DisplayName>
+<Description>Description_SteelCatwalk</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="25" />
+<Component Subtype="InteriorPlate" Count="12" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BlockPairName>LargeSteelCatwalkCorner</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeSteelCatwalkPlate</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SteelCatwalkPlate</DisplayName>
+<Description>Description_SteelCatwalk</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="17" />
+<Component Subtype="InteriorPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BlockPairName>LargeSteelCatwalkPlate</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCoverWall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_FullCoverWall</DisplayName>
+<Description>Description_FullCoverWall</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>FullCoverWall</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCoverWallHalf</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HalfCoverWall</DisplayName>
+<Description>Description_FullCoverWall</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Construction" Count="6" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>HalfCoverWall</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCoverWallHalfMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HalfCoverWallMirror</DisplayName>
+<Description>Description_FullCoverWall</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Construction" Count="6" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>HalfCoverWallMirrored</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockInteriorWall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InteriorWall</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>InteriorWall</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeInteriorPillar</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InteriorPillar</DisplayName>
+<Description>Description_InteriorPillar</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="25" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>InteriorPillar</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>PassengerSeatLarge</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PassengerSeat</DisplayName>
+<Description>Description_PassengerSeat</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BlockPairName>PassengerSeat</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>PassengerSeatSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PassengerSeat</DisplayName>
+<Description>Description_PassengerSeat</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BlockPairName>PassengerSeatOld</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+<Public>false</Public>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>PassengerSeatSmallNew</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PassengerSeat</DisplayName>
+<Description>Description_PassengerSeat</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BlockPairName>PassengerSeat</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>PassengerSeatSmallOffset</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PassengerSeatOffset</DisplayName>
+<Description>Description_PassengerSeat</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BlockPairName>OffsetPassengerSeat</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Ladder2</TypeId>
+<SubtypeId />
+</Id>
+<DisplayName>DisplayName_Block_Ladder</DisplayName>
+<Description>Description_Ladder</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BlockPairName>Ladder2</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Ladder2</TypeId>
+<SubtypeId>LadderShaft</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LadderShaft</DisplayName>
+<Description>Description_Ladder</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="80" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="SmallTube" Count="50" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BlockPairName>LadderShaft</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Ladder2</TypeId>
+<SubtypeId>LadderSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Ladder</DisplayName>
+<Description>Description_Ladder</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BlockPairName>Ladder2</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AirDuct1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirDuct1</DisplayName>
+<Description>Description_AirDucts</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="1" />
+<BlockPairName>AirDuct1</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AirDuct2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirDuct2</DisplayName>
+<Description>Description_AirDucts</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="1" />
+<BlockPairName>AirDuct2</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>AirDuctLight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirDuctLight</DisplayName>
+<Description>Description_AirDucts</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="1" />
+<BlockPairName>AirDuctLight</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>25</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AirDuctCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirDuctCorner</DisplayName>
+<Description>Description_AirDucts</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="1" />
+<BlockPairName>AirDuctCorner</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AirDuctT</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirDuctT</DisplayName>
+<Description>Description_AirDucts</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="1" />
+<BlockPairName>AirDuctT</BlockPairName>
+<BuildTimeSeconds>13</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AirDuctX</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirDuctX</DisplayName>
+<Description>Description_AirDucts</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="1" />
+<BlockPairName>AirDuctX</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AirDuctRamp</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirDuctRamp</DisplayName>
+<Description>Description_AirDucts</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="1" />
+<BlockPairName>AirDuctRamp</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AirDuctGrate</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirDuctGrate</DisplayName>
+<Description>Description_AirDucts</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="5" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>AirDuctGrate</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

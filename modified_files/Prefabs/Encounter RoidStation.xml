@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Encounter RoidStation" />
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<Value>Empty</Value>
+<Value>Empty</Value>
+<Value>Empty</Value>
+<Value>Door Entrance -  Open/Closed</Value>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<Value>Spotlight - Toggle block On/Off</Value>
+<Value>Door 4 -  Open/Closed</Value>
+<Value>Hydrogen Engine - Toggle block On/Off</Value>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>RealBlockDoorSmallOpen</OpenSound>
+<CloseSound>RealBlockDoorSmallClose</CloseSound>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<PlaySound>true</PlaySound>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<Value>Airtight Hangar Door -  Open/Closed</Value>
+<Value>Air Vent - Depressurize On/Off</Value>
+<Value>Spotlight - Toggle block On/Off</Value>
+<Value>Corner Light Cabin - Toggle block On/Off</Value>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_InventoryAggregate">
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<InputInventory>
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+</InputInventory>
+<OutputInventory>
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+</OutputInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>15.625</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>RealBlockDoorSmallOpen</OpenSound>
+<CloseSound>RealBlockDoorSmallClose</CloseSound>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<Inventory>
+<Volume>4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Inventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>6.25</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<Inventory>
+<Volume>6.25</Volume>
+<Mass>9223372036854.775807</Mass>
+</Inventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<GravityAcceleration>2.500001</GravityAcceleration>
+<ShowInInventory>true</ShowInInventory>
+<PublicDescription>
+Converted with Whip's Image Converter - Version 1.1.3.1</PublicDescription>
+<ShowInInventory>true</ShowInInventory>
+<PublicDescription>
+Converted with Whip's Image Converter - Version 1.1.3.1</PublicDescription>
+<ShowInInventory>true</ShowInInventory>
+<Capacity>500000</Capacity>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+<ProjectilesCount>0</ProjectilesCount>
+</Items>
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.75</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<Inventory>
+<Volume>0.75</Volume>
+<Mass>9223372036854.775807</Mass>
+</Inventory>
+</CubeBlocks>
+<Name>Trap</Name>
+<Blocks>
+</Blocks>
+<DisplayName>Encounter RoidStation</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

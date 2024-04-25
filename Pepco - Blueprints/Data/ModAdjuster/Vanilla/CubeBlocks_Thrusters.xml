@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockSmallThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test SmallThrust</DisplayName>
+			<ThrusterType>Ion</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="LargeTube" Count="1" />
+				<Component Subtype="Thrust" Count="1" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="Thrust" Index="0" />
+			<BlockPairName>SmallThrust</BlockPairName>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<ForceMagnitude>14400</ForceMagnitude>
+			<MaxPowerConsumption>0.200</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockLargeThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test LargeThrust</DisplayName>
+			<ThrusterType>Ion</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="LargeTube" Count="5" />
+				<Component Subtype="Thrust" Count="12" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SteelPlate" Count="4" />
+			</Components>
+			<CriticalComponent Subtype="Thrust" Index="0" />
+			<BlockPairName>LargeThrust</BlockPairName>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<ForceMagnitude>172800</ForceMagnitude>
+			<MaxPowerConsumption>2.4</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockSmallThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test SmallThrust</DisplayName>
+			<ThrusterType>Ion</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="15" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="LargeTube" Count="8" />
+				<Component Subtype="Thrust" Count="80" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Thrust" Index="0" />
+			<BlockPairName>SmallThrust</BlockPairName>
+			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<ForceMagnitude>345600</ForceMagnitude>
+			<MaxPowerConsumption>3.36</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockLargeThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test LargeThrust</DisplayName>
+			<ThrusterType>Ion</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="100" />
+				<Component Subtype="Construction" Count="70" />
+				<Component Subtype="LargeTube" Count="40" />
+				<Component Subtype="Thrust" Count="960" />
+				<Component Subtype="Construction" Count="30" />
+				<Component Subtype="SteelPlate" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="Thrust" Index="0" />
+			<BlockPairName>LargeThrust</BlockPairName>
+			<BuildTimeSeconds>90</BuildTimeSeconds>
+			<ForceMagnitude>4320000</ForceMagnitude>
+			<MaxPowerConsumption>33.6</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockLargeHydrogenThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test LargeHydrogenThrust</DisplayName>
+			<ThrusterType>Hydrogen</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="100" />
+				<Component Subtype="Construction" Count="150" />
+				<Component Subtype="MetalGrid" Count="250" />
+				<Component Subtype="LargeTube" Count="40" />
+				<Component Subtype="Construction" Count="30" />
+				<Component Subtype="SteelPlate" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0" />
+			<BlockPairName>LargeHydrogenThrust</BlockPairName>
+			<BuildTimeSeconds>90</BuildTimeSeconds>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Hydrogen</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>7.5</MaxPowerConsumption>
+			<MinPowerConsumption>0.000000001</MinPowerConsumption>
+			<ForceMagnitude>7200000</ForceMagnitude>
+			<SlowdownFactor>1</SlowdownFactor>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockSmallHydrogenThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test SmallHydrogenThrust</DisplayName>
+			<ThrusterType>Hydrogen</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="15" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="MetalGrid" Count="40" />
+				<Component Subtype="LargeTube" Count="8" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0" />
+			<BlockPairName>HydrogenThrust</BlockPairName>
+			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<ForceMagnitude>1080000</ForceMagnitude>
+			<SlowdownFactor>1</SlowdownFactor>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Hydrogen</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>1.25</MaxPowerConsumption>
+			<MinPowerConsumption>0.000000001</MinPowerConsumption>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockLargeHydrogenThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test LargeHydrogenThrust</DisplayName>
+			<ThrusterType>Hydrogen</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="20" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="MetalGrid" Count="22" />
+				<Component Subtype="LargeTube" Count="10" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0" />
+			<BlockPairName>LargeHydrogenThrust</BlockPairName>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Hydrogen</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>0.6</MaxPowerConsumption>
+			<MinPowerConsumption>0.000000001</MinPowerConsumption>
+			<ForceMagnitude>480000</ForceMagnitude>
+			<SlowdownFactor>1</SlowdownFactor>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockSmallHydrogenThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test SmallHydrogenThrust</DisplayName>
+			<ThrusterType>Hydrogen</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="2" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="MetalGrid" Count="4" />
+				<Component Subtype="LargeTube" Count="2" />
+				<Component Subtype="Construction" Count="5" />
+				<Component Subtype="SteelPlate" Count="5" />
+			</Components>
+			<CriticalComponent Subtype="LargeTube" Index="0" />
+			<BlockPairName>HydrogenThrust</BlockPairName>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<ForceMagnitude>98400</ForceMagnitude>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Hydrogen</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>0.125</MaxPowerConsumption>
+			<MinPowerConsumption>0.000000001</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockLargeAtmosphericThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test LargeAtmoThrust</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="100" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="LargeTube" Count="50" />
+				<Component Subtype="MetalGrid" Count="40" />
+				<Component Subtype="Motor" Count="1100" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="SteelPlate" Count="130" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>LargeAtmoThrust</BlockPairName>
+			<BuildTimeSeconds>90</BuildTimeSeconds>
+			<ForceMagnitude>6480000</ForceMagnitude>
+			<MaxPowerConsumption>16.8</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockSmallAtmosphericThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test SmallAtmoThrust</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="15" />
+				<Component Subtype="Construction" Count="30" />
+				<Component Subtype="LargeTube" Count="8" />
+				<Component Subtype="MetalGrid" Count="10" />
+				<Component Subtype="Motor" Count="110" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="SteelPlate" Count="20" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>SmallAtmoThrust</BlockPairName>
+			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<ForceMagnitude>648000</ForceMagnitude>
+			<MaxPowerConsumption>2.4</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockLargeAtmosphericThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test LargeAtmoThrust</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="LargeTube" Count="4" />
+				<Component Subtype="MetalGrid" Count="8" />
+				<Component Subtype="Motor" Count="90" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>LargeAtmoThrust</BlockPairName>
+			<BuildTimeSeconds>20</BuildTimeSeconds>
+			<ForceMagnitude>576000</ForceMagnitude>
+			<MaxPowerConsumption>2.4</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockSmallAtmosphericThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test SmallAtmoThrust</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="2" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="LargeTube" Count="1" />
+				<Component Subtype="MetalGrid" Count="1" />
+				<Component Subtype="Motor" Count="18" />
+				<Component Subtype="Construction" Count="2" />
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>SmallAtmoThrust</BlockPairName>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<ForceMagnitude>96000</ForceMagnitude>
+			<MaxPowerConsumption>0.600</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockLargeFlatAtmosphericThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test LargeAtmoThrustFlat</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="40" />
+				<Component Subtype="Construction" Count="15" />
+				<Component Subtype="LargeTube" Count="20" />
+				<Component Subtype="MetalGrid" Count="15" />
+				<Component Subtype="Motor" Count="400" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="SteelPlate" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>LargeAtmoThrustFlat</BlockPairName>
+			<BuildTimeSeconds>50</BuildTimeSeconds>
+			<ForceMagnitude>2600000</ForceMagnitude>
+			<MaxPowerConsumption>6.7</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockLargeFlatAtmosphericThrustDShape</SubtypeId>
+			</Id>
+			<DisplayName>Test LargeAtmoThrustFlatDShape</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="40" />
+				<Component Subtype="Construction" Count="15" />
+				<Component Subtype="LargeTube" Count="20" />
+				<Component Subtype="MetalGrid" Count="15" />
+				<Component Subtype="Motor" Count="400" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="SteelPlate" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>LargeAtmoThrustFlatDShape</BlockPairName>
+			<BuildTimeSeconds>50</BuildTimeSeconds>
+			<ForceMagnitude>2600000</ForceMagnitude>
+			<MaxPowerConsumption>6.7</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockSmallFlatAtmosphericThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test SmallAtmoThrustFlat</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="5" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="LargeTube" Count="3" />
+				<Component Subtype="MetalGrid" Count="3" />
+				<Component Subtype="Motor" Count="30" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>SmallAtmoThrustFlat</BlockPairName>
+			<BuildTimeSeconds>25</BuildTimeSeconds>
+			<ForceMagnitude>200000</ForceMagnitude>
+			<MaxPowerConsumption>0.8</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockSmallFlatAtmosphericThrustDShape</SubtypeId>
+			</Id>
+			<DisplayName>Test SmallAtmoThrustFlatDShape</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="5" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="LargeTube" Count="3" />
+				<Component Subtype="MetalGrid" Count="3" />
+				<Component Subtype="Motor" Count="30" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>SmallAtmoThrustFlatDShape</BlockPairName>
+			<BuildTimeSeconds>25</BuildTimeSeconds>
+			<ForceMagnitude>200000</ForceMagnitude>
+			<MaxPowerConsumption>0.8</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockLargeFlatAtmosphericThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test LargeAtmoThrustFlat</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="LargeTube" Count="2" />
+				<Component Subtype="MetalGrid" Count="3" />
+				<Component Subtype="Motor" Count="30" />
+				<Component Subtype="Construction" Count="4" />
+				<Component Subtype="SteelPlate" Count="4" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>LargeAtmoThrustFlat</BlockPairName>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<ForceMagnitude>230000</ForceMagnitude>
+			<MaxPowerConsumption>1</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockLargeFlatAtmosphericThrustDShape</SubtypeId>
+			</Id>
+			<DisplayName>Test LargeAtmoThrustFlatDShape</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="4" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="LargeTube" Count="2" />
+				<Component Subtype="MetalGrid" Count="3" />
+				<Component Subtype="Motor" Count="30" />
+				<Component Subtype="Construction" Count="4" />
+				<Component Subtype="SteelPlate" Count="4" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>LargeAtmoThrustFlatDShape</BlockPairName>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<ForceMagnitude>230000</ForceMagnitude>
+			<MaxPowerConsumption>1</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockSmallFlatAtmosphericThrust</SubtypeId>
+			</Id>
+			<DisplayName>Test SmallAtmoThrustFlat</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="LargeTube" Count="1" />
+				<Component Subtype="MetalGrid" Count="1" />
+				<Component Subtype="Motor" Count="6" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>SmallAtmoThrustFlat</BlockPairName>
+			<BuildTimeSeconds>8</BuildTimeSeconds>
+			<ForceMagnitude>32000</ForceMagnitude>
+			<MaxPowerConsumption>0.200</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockSmallFlatAtmosphericThrustDShape</SubtypeId>
+			</Id>
+			<DisplayName>Test SmallAtmoThrustFlatDShape</DisplayName>
+			<ThrusterType>Atmospheric</ThrusterType>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="LargeTube" Count="1" />
+				<Component Subtype="MetalGrid" Count="1" />
+				<Component Subtype="Motor" Count="6" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<BlockPairName>SmallAtmoThrustFlatDShape</BlockPairName>
+			<BuildTimeSeconds>8</BuildTimeSeconds>
+			<ForceMagnitude>32000</ForceMagnitude>
+			<MaxPowerConsumption>0.200</MaxPowerConsumption>
+			<MinPowerConsumption>0.000002</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<PCU>15</PCU>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

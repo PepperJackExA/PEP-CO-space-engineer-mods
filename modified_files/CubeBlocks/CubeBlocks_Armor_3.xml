@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorRaisedSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorRaisedSlopedCorner</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="14" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorRaisedSlopedCorner</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockArmorRaisedSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorRaisedSlopedCorner</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorRaisedSlopedCorner</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorRaisedSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorRaisedSlopedCorner</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="MetalGrid" Count="30" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorRaisedSlopedCorner</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorRaisedSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorRaisedSlopedCorner</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>HeavyArmorRaisedSlopedCorner</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorSlopeTransition</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransition</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransition</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockArmorSlopeTransition</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransition</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransition</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSlopeTransition</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransition</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="48" />
+<Component Subtype="MetalGrid" Count="18" />
+<Component Subtype="SteelPlate" Count="12" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorSlopeTransition</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSlopeTransition</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransition</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>HeavyArmorSlopeTransition</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorSlopeTransitionBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransitionBase</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="13" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransitionBase</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockArmorSlopeTransitionBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransitionBase</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransitionBase</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSlopeTransitionBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransitionBase</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="75" />
+<Component Subtype="MetalGrid" Count="35" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorSlopeTransitionBase</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSlopeTransitionBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransitionBase</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>HeavyArmorSlopeTransitionBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorSlopeTransitionBaseMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransitionBaseMirrored</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="13" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransitionBaseMirrored</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockArmorSlopeTransitionBaseMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransitionBaseMirrored</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransitionBaseMirrored</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSlopeTransitionBaseMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransitionBaseMirrored</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="75" />
+<Component Subtype="MetalGrid" Count="35" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorSlopeTransitionBaseMirrored</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSlopeTransitionBaseMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransitionBaseMirrored</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>HeavyArmorSlopeTransitionBaseMirrored</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorSlopeTransitionMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransitionMirrored</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransitionMirrored</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockArmorSlopeTransitionMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransitionMirrored</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransitionMirrored</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSlopeTransitionMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransitionMirrored</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="48" />
+<Component Subtype="MetalGrid" Count="18" />
+<Component Subtype="SteelPlate" Count="12" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorSlopeTransitionMirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSlopeTransitionMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransitionMirrored</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>HeavyArmorSlopeTransitionMirrored</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorSlopeTransitionTip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransitionTip</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransitionTip</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockArmorSlopeTransitionTip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransitionTip</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransitionTip</BlockPairName>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSlopeTransitionTip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransitionTip</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="MetalGrid" Count="9" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorSlopeTransitionTip</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSlopeTransitionTip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransitionTip</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>HeavyArmorSlopeTransitionTip</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorSlopeTransitionTipMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransitionTipMirrored</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransitionTipMirrored</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockArmorSlopeTransitionTipMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSlopeTransitionTipMirrored</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSlopeTransitionTipMirrored</BlockPairName>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSlopeTransitionTipMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransitionTipMirrored</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="MetalGrid" Count="9" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorSlopeTransitionTipMirrored</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSlopeTransitionTipMirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopeTransitionTipMirrored</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>HeavyArmorSlopeTransitionTipMirrored</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorSquareSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSquareSlopedCornerBase</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="14" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSquareSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockArmorSquareSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSquareSlopedCornerBase</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSquareSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSquareSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSquareSlopedCornerBase</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="85" />
+<Component Subtype="MetalGrid" Count="35" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorSquareSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSquareSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSquareSlopedCornerBase</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>HeavyArmorSquareSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorSquareSlopedCornerTip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSquareSlopedCornerTip</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSquareSlopedCornerTip</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockArmorSquareSlopedCornerTip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSquareSlopedCornerTip</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSquareSlopedCornerTip</BlockPairName>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSquareSlopedCornerTip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSquareSlopedCornerTip</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="MetalGrid" Count="9" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorSquareSlopedCornerTip</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSquareSlopedCornerTip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSquareSlopedCornerTip</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>HeavyArmorSquareSlopedCornerTip</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorSquareSlopedCornerTipInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSquareSlopedCornerTipInv</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="7" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSquareSlopedCornerTipInv</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockArmorSquareSlopedCornerTipInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightArmorSquareSlopedCornerTipInv</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorSquareSlopedCornerTipInv</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSquareSlopedCornerTipInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSquareSlopedCornerTipInv</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="45" />
+<Component Subtype="MetalGrid" Count="18" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorSquareSlopedCornerTipInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSquareSlopedCornerTipInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSquareSlopedCornerTipInv</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>HeavyArmorSquareSlopedCornerTipInv</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

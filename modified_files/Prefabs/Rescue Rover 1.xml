@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Rescue Rover 1" />
+<DisplayName>Rescue Rover 1</DisplayName>
+<Description>Although designed for long duration rescue missions, the Rescue Rover 1 advanced refining and production capabilities and self sufficiency is favored by settlers who aim to test their luck on distant planets. </Description>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Large Grid 9383</DisplayName>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Large Grid 6483</DisplayName>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>15.625</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_InventoryAggregate">
+<Volume>4</Volume>
+<Mass>9223372036854.775807</Mass>
+<Volume>4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<InputInventory>
+<Volume>4</Volume>
+<Mass>9223372036854.775807</Mass>
+</InputInventory>
+<OutputInventory>
+<Volume>4</Volume>
+<Mass>9223372036854.775807</Mass>
+</OutputInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<Inventory>
+<Volume>4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Inventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_InventoryAggregate">
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<InputInventory>
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+</InputInventory>
+<OutputInventory>
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+</OutputInventory>
+<ShowInInventory>true</ShowInInventory>
+<Value>Air Vent cabine - Depressurize On/Off</Value>
+<Value>Refinery - Toggle block On/Off</Value>
+<Value>Assembler - Toggle block On/Off</Value>
+<Value>Ore Detector - Toggle block On/Off</Value>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.384</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<Inventory>
+<Volume>0.384</Volume>
+<Mass>9223372036854.775807</Mass>
+</Inventory>
+<TargetCharacters>true</TargetCharacters>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_InventoryAggregate">
+<Volume>7.5</Volume>
+<Mass>9223372036854.775807</Mass>
+<Volume>7.5</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<InputInventory>
+<Volume>7.5</Volume>
+<Mass>9223372036854.775807</Mass>
+</InputInventory>
+<OutputInventory>
+<Volume>7.5</Volume>
+<Mass>9223372036854.775807</Mass>
+</OutputInventory>
+</CubeBlocks>
+<Name>batteries</Name>
+<Blocks>
+</Blocks>
+<DisplayName>Rescue Rover 1</DisplayName>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Large Grid 2193</DisplayName>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Large Grid 8522</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

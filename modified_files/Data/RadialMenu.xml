@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Id Type="RadialMenu" Subtype="VoxelHand" />
+<Items>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienGreenGrass</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienGreenGrass.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienGreenGrass bare</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienGreenGrassBare.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienYellowGrass</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienYellowGrass.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienYellowGrass bare</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienYellowGrassBare.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienOrangeGrass</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienOrangeGrass.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienOrangeGrass bare</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienOrangeGrassBare.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienRockGrass</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienRockGrass.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienRockGrass bare</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienRockGrassBare.png</string>
+</Item>
+</Items>
+<Items>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienIce</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienIce.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienIce_03</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienIce3.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienRockyTerrain</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienRockyTerrain.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienRockyMountain</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienRockyMountain.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienSoil</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienSoil.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienSnow</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienSnow.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>AlienSand</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\AlienSand.png</string>
+</Item>
+</Items>
+<Items>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Grass</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Grass.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Grass</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\GrassBare.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Grass_old</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\GrassOld.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Grass_old bare</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\GrassOldBare.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Grass_02</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Grass2.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Rocks_grass</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Rocks_grass.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Woods_grass</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Woods_grass.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Woods_grass bare</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Woods_grassBare.png</string>
+</Item>
+</Items>
+<Items>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Gold_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Gold.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Iron_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Iron1.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Iron_02</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Iron2.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Nickel_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Nickel.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Cobalt_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Cobalt.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Magnesium_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Magnesium.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Silicon_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Silicon.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Silver_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Silver.png</string>
+</Item>
+</Items>
+<Items>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Snow</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Snow.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Ice</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Ice.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Ice_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Ice1.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Ice_02</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Ice2.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Ice_03</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Ice3.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>IceEuropa2</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\IceEuropa.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Platinum_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Platinum.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Uraninite_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Uraninite.png</string>
+</Item>
+</Items>
+<Items>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>MarsRocks</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\MarsRocks.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>MarsSoil</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\MarsSoil.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>MoonSoil</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\MoonSoil.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>MoonRocks</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\MoonRocks.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>SmallMoonRocks</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\MoonRocks.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Soil</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Soil.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Sand_02</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Sand02.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>DesertRocks</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\DesertRocks.png</string>
+</Item>
+</Items>
+<Items>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Stone</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Stone.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Stone_01</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Stone1.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Stone_02</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Stone2.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Stone_03</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Stone3.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Stone_04</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Stone4.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>Stone_05</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\Stone5.png</string>
+</Item>
+</Items>
+<Items>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>DustyRocks</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\DustyRocks.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>DustyRocks2</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\DustyRocks2.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>DustyRocks3</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\DustyRocks3.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>PertamSand</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\PertamSand.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>CrackedSoil</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\CrackedSoil.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>TritonStone</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\TritonStone.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>TritonBlend</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\TritonBlend.png</string>
+</Item>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>TritonIce</SubtypeId>
+<string>Textures\GUI\Icons\RadialMenu_Voxel\TritonIce.png</string>
+</Item>
+</Items>
+<Items>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>DebugMaterial</SubtypeId>
+<string>Textures\Voxels\DebugTexture_cm.dds</string>
+</Item>
+</Items>
+<Id Type="RadialMenu" Subtype="SystemDefault" />
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\SwitchCamera.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Dampeners.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\LightCenterOff.png</string>
+<string>Textures\GUI\Icons\HUD 2017\LightCenter.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ToggleHud.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ColorPicker.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Contract.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\PlayerHelmetOff.png</string>
+<string>Textures\GUI\Icons\HUD 2017\PlayerHelmetOn.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ToggleBroadcasting.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\CopyGrid.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\CutGrid.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\PasteGrid.png</string>
+</Item>
+</Item>
+</Item>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\PasteGrid.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\AdminMenu.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\HelpScreen.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\BlueprintsScreen.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ProgressionTree.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\SpawnMenu.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Respawn.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\PlayerList.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Chat.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\CameraSpectator.png</string>
+</Item>
+</Item>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\SignalMode.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Contract.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\Voxelhand_Ramp.dds</string>
+</Item>
+<string>Textures\GUI\Icons\Voxelhand_Box.dds</string>
+</Item>
+<string>Textures\GUI\Icons\Voxelhand_AutoLevel.dds</string>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\Voxelhand_Capsule.dds</string>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\Voxelhand_Sphere.dds</string>
+</Item>
+</Items>
+<Id Type="RadialMenu" Subtype="SystemBuild" />
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\PlacementMode.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Autorotate.png</string>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\SymmetrySetupRadial.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ToggleSymmetry.png</string>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\MultiBlockBuilding.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\CopyGrid.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\CutGrid.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\PasteGrid.png</string>
+</Item>
+</Item>
+</Item>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\PasteGrid.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\SwitchCamera.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Dampeners.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\LightCenterOff.png</string>
+<string>Textures\GUI\Icons\HUD 2017\LightCenter.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ToggleHud.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ColorPicker.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Contract.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\PlayerHelmetOff.png</string>
+<string>Textures\GUI\Icons\HUD 2017\PlayerHelmetOn.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ToggleBroadcasting.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\AdminMenu.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\HelpScreen.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\BlueprintsScreen.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ProgressionTree.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\SpawnMenu.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Respawn.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\PlayerList.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Chat.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\CameraSpectator.png</string>
+</Item>
+</Item>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\SignalMode.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Contract.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\Voxelhand_Ramp.dds</string>
+</Item>
+<string>Textures\GUI\Icons\Voxelhand_Box.dds</string>
+</Item>
+<string>Textures\GUI\Icons\Voxelhand_AutoLevel.dds</string>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\Voxelhand_Capsule.dds</string>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\Voxelhand_Sphere.dds</string>
+</Item>
+</Items>
+<Id Type="RadialMenu" Subtype="SystemShip" />
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\SwitchCamera.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Dampeners.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\LightCenterOff.png</string>
+<string>Textures\GUI\Icons\HUD 2017\LightCenter.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ToggleHud.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\GridPowerOnCenter.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\HandbrakeCenter.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ToggleConnectors.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ToggleBroadcasting.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\AdminMenu.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\HelpScreen.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\BlueprintsScreen.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\ProgressionTree.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\SpawnMenu.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Respawn.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\PlayerList.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Chat.png</string>
+</Item>
+</Items>
+<Items>
+<string>Textures\GUI\Icons\HUD 2017\CameraSpectator.png</string>
+</Item>
+</Item>
+</Item>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\SignalMode.png</string>
+</Item>
+<string>Textures\GUI\Icons\HUD 2017\Contract.png</string>
+</Item>
+</Items>
+<Id Type="RadialMenu" Subtype="Toolbar" />
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightCubeGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightRampGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightRampCornerGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightRoundGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightSlopedCorners" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightTransitionBlocks" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LightArmorPanelsGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyCubeGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyRampGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyRampCornerGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyRoundGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavySlopedCorners" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyTransitionBlocks" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HeavyArmorPanelsGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RefineryGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AssemblerGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="UpgradeModuleGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ProjectorGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BatteryGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EnergyRenewableGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EnergyFueledGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="MedicalGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GasGeneratorGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TankGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OxygenFarmGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AirVentGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ContainerGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorThickGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorThinGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InputOutputGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CockpitGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OpenCockpitGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GyroscopeGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterAtmoGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterHydroGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterIonGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ParachuteGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LandingGearGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WheelSuspensionRightGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WheelSuspensionLeftGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WheelStaticGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ShipToolGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OreDetectorGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ShipWeaponStaticGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TurretGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WarheadGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DecoyGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AntennaGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DoorGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="StairsGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BlastDoorGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AirtightHangarDoorGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LCDGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LCDCornerGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowSmallGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowMediumGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowLargeGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowSmallCornerGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowMediumCornerGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RoundWindowGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ShutterGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GravityGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="JumpDriveGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AIBlocksGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AutomationGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ButtonPanelGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="StoreGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SoundGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RemoteControlGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RotorGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="PistonGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HingeGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LightingGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DeskGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CouchGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InteriorStructureGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DecorativeUtilityGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LockersGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BathroomGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InteriorBlockGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CatwalkGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RailingGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DecoCatwalkGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DecorativeDeadBodiesGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ExhaustPipeGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OffroadWheelSuspensionRightGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OffroadWheelSuspensionLeftGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OffroadWheelStaticGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterSciFiAtmoGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterSciFiIonGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="NeonTubes" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LCDGroupSOTF" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EconomyGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BarredWindows" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="StorageShelves" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorPipeGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HalfWindowGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EmbrasureGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TargetDummyGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BeamGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterHydroGroupIndustrial" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BridgeWindowsGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HeatVentGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ModularThrusterGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EngineerPlushieGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SabiroidPlushieGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="StatueGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AirDuctGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WarningSignGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AccesPanelGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DecorativeStorageGroup" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ScaffoldingGroup" />
+</Item>
+</Items>
+<Items>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LettersAZ" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Numbers1" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Symbols" />
+</Item>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EmotionControllerGroup" />
+</Item>
+</Items>
+</Definitions>
+ 

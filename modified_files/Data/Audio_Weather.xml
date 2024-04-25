@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>WM_RainLight</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>200</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Loop>ARC/EVENT/Rain_Light.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>WM_RainHeavy</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>200</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Loop>ARC/EVENT/Rain_Heavy.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>WM_Sandstorm</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>200</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Loop>ARC\EVENT\Sandstorm.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>WM_Marsstorm</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>200</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Loop>ARC\EVENT\Marsstorm.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>WM_SnowLight</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>200</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Loop>ARC/EVENT/Snow_Light.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>WM_SnowHeavy</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>200</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Loop>ARC/EVENT/Snow_Heavy.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>WM_Lightning</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>5000</MaxDistance>
+<Volume>1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>ARC\EVENT\Lightning_0.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>ARC\EVENT\Lightning_1.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>ARC\EVENT\Lightning_2.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>ARC\EVENT\Lightning_3.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>WM_FogHeavy</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>200</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Loop>ARC/EVENT/Fog_Heavy.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>WM_FogLight</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>200</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Loop>ARC/EVENT/Fog_Light.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

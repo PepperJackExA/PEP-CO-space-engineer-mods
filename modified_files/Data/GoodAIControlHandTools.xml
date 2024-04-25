@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem xsi:type="MyObjectBuilder_ToolItemDefinition">
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>GoodAIRewardPunishmentTool</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>DisplayName_RewardPunishmentTool</DisplayName>
+<Mass>0.1</Mass>
+<Volume>1</Volume>
+<Name>Reward</Name>
+<Efficiency>1</Efficiency>
+<SwingSound></SwingSound>
+<Component>Reward</Component>
+<Name>Punishment</Name>
+<Efficiency>1</Efficiency>
+<SwingSound></SwingSound>
+<Component>Punishment</Component>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

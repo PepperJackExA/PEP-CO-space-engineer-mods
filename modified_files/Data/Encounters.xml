@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Debris A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Debris A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Debris B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Debris B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Ambasador A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Ambasador A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Ambasador B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Ambasador B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Blue frame" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Blue frame">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Corvette A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Corvette A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Corvette B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Corvette B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Droneyard" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Droneyard">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Ghoul Corvette A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>3.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Ghoul Corvette A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Ghoul Corvette B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>3.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Ghoul Corvette B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Ghoul Corvette C" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>3.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Ghoul Corvette C">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Homing beacon" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Homing beacon">
+<Speed>10</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Hydro Tanker" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Hydro Tanker">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Imp A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Imp A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Imp B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Imp B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter MushStation A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter MushStation A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter MushStation B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter MushStation B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Ponos-F1 A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Ponos-F1">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Ponos-F1 B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Ponos-F1">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="Raider Drone">
+<Speed>1</Speed>
+</Prefab>
+<Prefab SubtypeId="Raider Drone">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter RS-1217 Transporter A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter RS-1217 Transporter A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Section-F" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Section-F">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Skyheart A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Skyheart A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Skyheart B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Skyheart B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Stingray II A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Stingray II A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Stingray II B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Stingray II B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Vulture vessel" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Vulture vessel">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter HEC Debris A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter HEC Debris A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter HEC Debris B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter HEC Debris B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Habitat Pods" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Habitat Pods">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Haunted Section" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Haunted Section">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Pirate Raider" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Pirate Raider">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Prometheus A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Prometheus A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Prometheus B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Prometheus B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Red A" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Red A">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Red B" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Red B">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter RespawnShip" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter RespawnShip">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Salvage station" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Salvage station">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Stealth pirate station" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Stealth pirate station">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Severed Bow" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Severed Bow">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Hermit Station" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Hermit Station">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Mining Vessel" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Mining Vessel">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Mining Outpost" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Mining Outpost">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter RoidStation" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter RoidStation">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="Old Mining Drone">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Safehouse station" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Safehouse station">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Shuttle" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Shuttle">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Mercenary Wreckage" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Mercenary Wreckage">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Encounter Minefield" />
+<IsEncounter>true</IsEncounter>
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Encounter Minefield">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>AutomaticRifleGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="450" ShootSoundName="WepRifleShot" ShotsInBurst="1"/>
+<DeviateShotAngle>3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.3</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<AmmoMagazines>
+<AmmoMagazine Subtype="AutomaticRifleGun_Mag_20rd" />
+<AmmoMagazine Subtype="NATO_5p56x45mm" />
+</AmmoMagazines>
+<ReloadTime>2400</ReloadTime>
+<RecoilJetpackVertical>15</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>8</RecoilJetpackHorizontal>
+<RecoilGroundVertical>3</RecoilGroundVertical>
+<RecoilGroundHorizontal>1</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>150</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>PreciseAutomaticRifleGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="300" ShootSoundName="WepRifleShot" ShotsInBurst="1" />
+<DeviateShotAngle>3.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.48</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<AmmoMagazines>
+<AmmoMagazine Subtype="PreciseAutomaticRifleGun_Mag_5rd" />
+<AmmoMagazine Subtype="NATO_5p56x45mm" />
+</AmmoMagazines>
+<ReloadTime>2400</ReloadTime>
+<RecoilJetpackVertical>20</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>10</RecoilJetpackHorizontal>
+<RecoilGroundVertical>6</RecoilGroundVertical>
+<RecoilGroundHorizontal>2</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>RapidFireAutomaticRifleGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="550" ShootSoundName="WepRifleShot" />
+<DeviateShotAngle>3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.2</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.24</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<ReloadTime>3600</ReloadTime>
+<AmmoMagazines>
+<AmmoMagazine Subtype="RapidFireAutomaticRifleGun_Mag_50rd" />
+<AmmoMagazine Subtype="NATO_5p56x45mm" />
+</AmmoMagazines>
+<RecoilJetpackVertical>15</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>8</RecoilJetpackHorizontal>
+<RecoilGroundVertical>3</RecoilGroundVertical>
+<RecoilGroundHorizontal>1.5</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>UltimateAutomaticRifleGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="600" ShootSoundName="WepRifleShot" ShotsInBurst="3" />
+<DeviateShotAngle>3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.28</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<AmmoMagazines>
+<AmmoMagazine Subtype="UltimateAutomaticRifleGun_Mag_30rd" />
+<AmmoMagazine Subtype="NATO_5p56x45mm" />
+</AmmoMagazines>
+<ReloadTime>2400</ReloadTime>
+<RecoilJetpackVertical>12</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>6</RecoilJetpackHorizontal>
+<RecoilGroundVertical>3</RecoilGroundVertical>
+<RecoilGroundHorizontal>1</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SemiAutoPistolGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="450" ShootSoundName="WepPlayPistolShot" ShotsInBurst="1"/>
+<DeviateShotAngle>0.9</DeviateShotAngle>
+<DeviateShotAngleAiming>0.3</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.21</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<ReloadTime>1400</ReloadTime>
+<AmmoMagazines>
+<AmmoMagazine Subtype="SemiAutoPistolMagazine" />
+</AmmoMagazines>
+<RecoilJetpackVertical>10</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>5</RecoilJetpackHorizontal>
+<RecoilGroundVertical>2</RecoilGroundVertical>
+<RecoilGroundHorizontal>1</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>FullAutoPistolGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="1000" ShootSoundName="WepPlayPistolShot"/>
+<DeviateShotAngle>0.9</DeviateShotAngle>
+<DeviateShotAngleAiming>0.3</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.18</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<ReloadTime>1800</ReloadTime>
+<AmmoMagazines>
+<AmmoMagazine Subtype="FullAutoPistolMagazine" />
+</AmmoMagazines>
+<RecoilJetpackVertical>10</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>5</RecoilJetpackHorizontal>
+<RecoilGroundVertical>3</RecoilGroundVertical>
+<RecoilGroundHorizontal>1</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>ElitePistolGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="450" ShootSoundName="WepPlayPistolShot" ShotsInBurst="1"/>
+<DeviateShotAngle>0.9</DeviateShotAngle>
+<DeviateShotAngleAiming>0.2</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.26</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<ReloadTime>1400</ReloadTime>
+<AmmoMagazines>
+<AmmoMagazine Subtype="ElitePistolMagazine" />
+</AmmoMagazines>
+<RecoilJetpackVertical>10</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>5</RecoilJetpackHorizontal>
+<RecoilGroundVertical>4</RecoilGroundVertical>
+<RecoilGroundHorizontal>1</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>0</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>BasicHandHeldLauncherGun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="240" ShootSoundName="WepRocketLaunchShot" FlightSoundName="MissileFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>3</DeviateShotAngle>
+<DeviateShotAngleAiming>1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+<RecoilJetpackVertical>0</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>0</RecoilJetpackHorizontal>
+<RecoilGroundVertical>0</RecoilGroundVertical>
+<RecoilGroundHorizontal>0</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>AdvancedHandHeldLauncherGun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="240" ShootSoundName="WepRocketLaunchShot" FlightSoundName="MissileFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+<RecoilJetpackVertical>0</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>0</RecoilJetpackHorizontal>
+<RecoilGroundVertical>0</RecoilGroundVertical>
+<RecoilGroundHorizontal>0</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>FlarePistolGun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="120" ShootSoundName="WepPlayFlarePistolShot" FlightSoundName="FlareFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>5</DeviateShotAngle>
+<DeviateShotAngleAiming>2</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="FlareClip" />
+</AmmoMagazines>
+<ReloadTime>1800</ReloadTime>
+<RecoilJetpackVertical>10</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>3</RecoilJetpackHorizontal>
+<RecoilGroundVertical>3</RecoilGroundVertical>
+<RecoilGroundHorizontal>1</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>0</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallMissileLauncher</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="60" ShootSoundName="WepShipSmallMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="0" />
+<DeviateShotAngle>0.1</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+</AmmoMagazines>
+<ReloadTime>2000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeMissileLauncher</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="120" ShootSoundName="WepShipSmallMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="19" />
+<DeviateShotAngle>0.1</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeMissileTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="90" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="6" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeCalibreTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="80" ShootSoundName="WepLargeCalibreShot" FlightSoundName="HeavyShellFlightSound" RicochetSoundName="ImpMetalMetalCat3" ShotsInBurst="2" />
+<DeviateShotAngle>0.3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.3</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="LargeCalibreAmmo" />
+</AmmoMagazines>
+<ReloadTime>12000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeCalibreGun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="80" ShootSoundName="WepLargeCalibreShot" FlightSoundName="HeavyShellFlightSound" RicochetSoundName="ImpMetalMetalCat3" ShotsInBurst="1" />
+<DeviateShotAngle>0.15</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="LargeCalibreAmmo" />
+</AmmoMagazines>
+<ReloadTime>12000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>MediumCalibreTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="180" ShootSoundName="WepMediumCalibreShot" FlightSoundName="MediumShellFlightSound" RicochetSoundName="ImpMetalMetalCat3" ShotsInBurst="2" />
+<DeviateShotAngle>0.35</DeviateShotAngle>
+<DeviateShotAngleAiming>0.35</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="MediumCalibreAmmo" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallMediumCalibreTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="200" ShootSoundName="WepMediumCalibreShot" FlightSoundName="MediumShellFlightSound" RicochetSoundName="ImpMetalMetalCat3" ShotsInBurst="1" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="MediumCalibreAmmo" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallMediumCalibreGun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="200" ShootSoundName="WepMediumCalibreShot" FlightSoundName="MediumShellFlightSound" RicochetSoundName="ImpMetalMetalCat3" ShotsInBurst="1" />
+<DeviateShotAngle>0.2</DeviateShotAngle>
+<DeviateShotAngleAiming>0.2</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="MediumCalibreAmmo" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallMissileTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="90" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="2" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>GatlingGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="700" ShootSoundName="WepShipGatlingShot" ShotsInBurst="140" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.15</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_25x184mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>GatlingGunWarfare</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="700" ShootSoundName="WepShipGatlingShot" ShotsInBurst="140" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.15</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_25x184mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeGatlingTurret</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="700" ShootSoundName="WepGatlingTurretShot" ShotsInBurst="140" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.3</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_25x184mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallGatlingTurret</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="700" ShootSoundName="WepGatlingTurretShot" ShotsInBurst="140" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.3</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_25x184mm" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeInteriorTurret</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="600" ShootSoundName="WepTurretInteriorFire" />
+<DeviateShotAngle>0.1</DeviateShotAngle>
+<DamageMultiplier>0.2</DamageMultiplier>
+<RangeMultiplier>0.75</RangeMultiplier>
+<AmmoMagazines>
+<!--<AmmoMagazine Subtype="InteriorTurret_Mag_100rd" />-->
+<!--<AmmoMagazine Subtype="AutomaticRifleGun_Mag_20rd" />-->
+<!--<AmmoMagazine Subtype="PreciseAutomaticRifleGun_Mag_5rd" />-->
+<AmmoMagazine Subtype="RapidFireAutomaticRifleGun_Mag_50rd" />
+<!--<AmmoMagazine Subtype="UltimateAutomaticRifleGun_Mag_30rd" />-->
+<AmmoMagazine Subtype="NATO_5p56x45mm" />
+</AmmoMagazines>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeRailgun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="20" ShootSoundName="WepRailgunLargeShot" PreShotSoundName="WepRailgunLargeCharge" FlightSoundName="HeavyShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<DeviateShotAngleAiming>0</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="LargeRailgunAmmo" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallRailgun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="20" ShootSoundName="WepRailgunSmallShot" PreShotSoundName="WepRailgunSmallCharge" FlightSoundName="MediumShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<DeviateShotAngleAiming>0</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="SmallRailgunAmmo" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>Autocannon</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="150" ShootSoundName="WepShipAutocannonShot" ShotsInBurst="16" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.15</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="AutocannonClip" />
+</AmmoMagazines>
+<ReloadTime>2500</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>AutocannonTurret</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="150" ShootSoundName="WepShipAutocannonShot" ShotsInBurst="16" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.25</DeviateShotAngle>
+<DeviateShotAngleAiming>0.25</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="AutocannonClip" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeFlareLauncher</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="140" ShootSoundName="ArcWeFireworkShot" ShotsInBurst="32" />
+<DeviateShotAngle>12</DeviateShotAngle>
+<DeviateShotAngleAiming>12</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="FireworksBoxRainbow" />
+<AmmoMagazine Subtype="FireworksBoxBlue" />
+<AmmoMagazine Subtype="FireworksBoxGreen" />
+<AmmoMagazine Subtype="FireworksBoxRed" />
+<AmmoMagazine Subtype="FireworksBoxYellow" />
+<AmmoMagazine Subtype="FireworksBoxPink" />
+<AmmoMagazine Subtype="FlareClip" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallFlareLauncher</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="80" ShootSoundName="ArcWeFireworkShot" ShotsInBurst="9" />
+<DeviateShotAngle>12</DeviateShotAngle>
+<DeviateShotAngleAiming>12</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="FireworksBoxRainbow" />
+<AmmoMagazine Subtype="FireworksBoxBlue" />
+<AmmoMagazine Subtype="FireworksBoxGreen" />
+<AmmoMagazine Subtype="FireworksBoxRed" />
+<AmmoMagazine Subtype="FireworksBoxYellow" />
+<AmmoMagazine Subtype="FireworksBoxPink" />
+<AmmoMagazine Subtype="FlareClip" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+</Weapons>
+</Definitions>
+ 

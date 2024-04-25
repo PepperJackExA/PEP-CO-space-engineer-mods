@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeWindowSquare</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_VerticalWindow</DisplayName>
+<Description>Description_VerticalWindow</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="12" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="SmallTube" Count="4" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>VerticalWindow</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeWindowEdge</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_DiagonalWindow</DisplayName>
+<Description>Description_DiagonalWindow</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="16" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="SmallTube" Count="6" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>DiagonalWindow</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x2Slope</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2Slope</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="16" />
+<Component Subtype="BulletproofGlass" Count="40" />
+<Component Subtype="BulletproofGlass" Count="15" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x2Slope</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x2Inv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2FaceInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="BulletproofGlass" Count="30" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x2FaceInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x2Face</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2Face</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="BulletproofGlass" Count="30" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x2Face</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x2SideLeft</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2SideLeft</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="BulletproofGlass" Count="20" />
+<Component Subtype="BulletproofGlass" Count="6" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x2SideLeft</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x2SideLeftInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2SideLeftInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="BulletproofGlass" Count="20" />
+<Component Subtype="BulletproofGlass" Count="6" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x2SideLeftInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x2SideRight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2SideRight</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="BulletproofGlass" Count="20" />
+<Component Subtype="BulletproofGlass" Count="6" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x2SideRight</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x2SideRightInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2SideRightInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="BulletproofGlass" Count="20" />
+<Component Subtype="BulletproofGlass" Count="6" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x2SideRightInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x1Slope</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1Slope</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="12" />
+<Component Subtype="BulletproofGlass" Count="25" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x1Slope</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x1Face</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1Face</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="11" />
+<Component Subtype="BulletproofGlass" Count="16" />
+<Component Subtype="BulletproofGlass" Count="8" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x1Face</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x1Side</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1Side</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="9" />
+<Component Subtype="BulletproofGlass" Count="12" />
+<Component Subtype="BulletproofGlass" Count="5" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x1Side</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x1SideInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1SideInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="9" />
+<Component Subtype="BulletproofGlass" Count="12" />
+<Component Subtype="BulletproofGlass" Count="5" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x1SideInv</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x1Inv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1FaceInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="11" />
+<Component Subtype="BulletproofGlass" Count="16" />
+<Component Subtype="BulletproofGlass" Count="8" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x1FaceInv</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x2Flat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2Flat</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="BulletproofGlass" Count="40" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x2Flat</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x2FlatInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2FlatInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="BulletproofGlass" Count="35" />
+<Component Subtype="BulletproofGlass" Count="15" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x2FlatInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x1Flat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1Flat</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="BulletproofGlass" Count="15" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x1Flat</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window1x1FlatInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1FlatInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="BulletproofGlass" Count="15" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window1x1FlatInv</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window3x3Flat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window3x3Flat</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="40" />
+<Component Subtype="BulletproofGlass" Count="160" />
+<Component Subtype="BulletproofGlass" Count="36" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window3x3Flat</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window3x3FlatInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window3x3FlatInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="40" />
+<Component Subtype="BulletproofGlass" Count="160" />
+<Component Subtype="BulletproofGlass" Count="36" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window3x3FlatInv</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window2x3Flat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window2x3Flat</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="25" />
+<Component Subtype="BulletproofGlass" Count="115" />
+<Component Subtype="BulletproofGlass" Count="25" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window2x3Flat</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Window2x3FlatInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window2x3FlatInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="25" />
+<Component Subtype="BulletproofGlass" Count="115" />
+<Component Subtype="BulletproofGlass" Count="25" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window2x3FlatInv</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x2Slope</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2Slope</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x2Slope</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x2Inv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2FaceInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x2FaceInv</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x2Face</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2Face</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x2Face</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x2SideLeft</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2SideLeft</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x2SideLeft</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x2SideLeftInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2SideLeftInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x2SideLeftInv</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x2SideRight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2SideRight</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x2SideRight</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x2SideRightInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2SideRightInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x2SideRightInv</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x1Slope</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1Slope</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x1Slope</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x1Face</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1Face</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x1Face</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x1Side</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1Side</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x1Side</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x1SideInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1SideInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x1SideInv</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x1Inv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1FaceInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x1FaceInv</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x2Flat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2Flat</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x2Flat</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x2FlatInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x2FlatInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x2FlatInv</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x1Flat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1Flat</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x1Flat</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow1x1FlatInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window1x1FlatInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>Window1x1FlatInv</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow3x3Flat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window3x3Flat</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="3" />
+<Component Subtype="BulletproofGlass" Count="9" />
+<Component Subtype="BulletproofGlass" Count="3" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window3x3Flat</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow3x3FlatInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window3x3FlatInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="3" />
+<Component Subtype="BulletproofGlass" Count="9" />
+<Component Subtype="BulletproofGlass" Count="3" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window3x3FlatInv</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow2x3Flat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window2x3Flat</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="BulletproofGlass" Count="6" />
+<Component Subtype="BulletproofGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window2x3Flat</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindow2x3FlatInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Window2x3FlatInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="BulletproofGlass" Count="6" />
+<Component Subtype="BulletproofGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>Window2x3FlatInv</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowRound</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRound</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="BulletproofGlass" Count="30" />
+<Component Subtype="BulletproofGlass" Count="15" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>RoundWindow</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowRoundInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="BulletproofGlass" Count="30" />
+<Component Subtype="BulletproofGlass" Count="15" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>RoundWindowInv</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowRoundCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundCorner</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="BulletproofGlass" Count="20" />
+<Component Subtype="BulletproofGlass" Count="13" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>RoundWindowCorner</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowRoundCornerInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundCornerInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="BulletproofGlass" Count="20" />
+<Component Subtype="BulletproofGlass" Count="13" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>RoundWindowCornerInv</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowRoundFace</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundFace</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="9" />
+<Component Subtype="BulletproofGlass" Count="13" />
+<Component Subtype="BulletproofGlass" Count="8" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>RoundWindowFace</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowRoundFaceInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundFaceInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="9" />
+<Component Subtype="BulletproofGlass" Count="13" />
+<Component Subtype="BulletproofGlass" Count="8" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>RoundWindowFaceInv</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowRoundInwardsCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundInwardsCorner</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="BulletproofGlass" Count="12" />
+<Component Subtype="BulletproofGlass" Count="8" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>RoundWindowInwardsCorner</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowRoundInwardsCornerInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundInwardsCornerInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="BulletproofGlass" Count="12" />
+<Component Subtype="BulletproofGlass" Count="8" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>RoundWindowInwardsCornerInv</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowRound</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRound</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>RoundWindow</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowRoundInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>RoundWindowInv</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowRoundCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundCorner</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>RoundWindowCorner</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowRoundCornerInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundCornerInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>RoundWindowCornerInv</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowRoundFace</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundFace</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>RoundWindowFace</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowRoundFaceInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundFaceInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>RoundWindowFaceInv</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowRoundInwardsCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundInwardsCorner</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>RoundWindowInwardsCorner</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowRoundInwardsCornerInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindowRoundInwardsCornerInv</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>RoundWindowInwardsCornerInv</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

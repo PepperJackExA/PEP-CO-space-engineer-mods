@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Blue Drone MK1" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Blue Drone MK1">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Blue Drone MK2" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Blue Drone MK2">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Red Drone MK1" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Red Drone MK1">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Escord Drone" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Escord Drone">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Light patrol drone" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Light patrol drone">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Vulture Drone" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Vulture Drone">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="ProtectoBot" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="ProtectoBot">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="ProtectoBot">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Raider Drone" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Raider Drone">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Salvage Drone" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Salvage Drone">
+<Speed>1</Speed>
+</Prefab>
+<Prefab SubtypeId="Salvage Drone">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Seeker Mine" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Seeker Mine">
+<Speed>1</Speed>
+</Prefab>
+<Prefab SubtypeId="Seeker Mine">
+<Speed>1</Speed>
+</Prefab>
+<Prefab SubtypeId="Seeker Mine">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Snub Fighter" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Snub Fighter">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Stash-satellite" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Stash-satellite">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="V2-Gunboat" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="V2-Gunboat">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Hostile Miner" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Hostile Miner">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Old Mining Drone" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Old Mining Drone">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="Tusk" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Tusk_mk.1">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="DroneS 1GG_1" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="DroneS 1GG_1">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="DroneS 1GG_2" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="DroneS 1GG_2">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="DroneS 1GG_3" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="DroneS 1GG_3">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="DroneS Drill.Warhead" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="DroneS Drill.Warhead">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="DroneS 2GG.1GT" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="DroneS 2GG.1GT">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="DroneS 1MT.2GG" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="DroneS 1MT.2GG">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="DroneS 2GG.1GT.1RL" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="DroneS 2GG.1GT.1RL">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="DroneS 2GG.2GT" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="DroneS 2GG.2GT">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="DroneL 1RL.1GG.2IT" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="DroneL 1RL.1GG.2IT">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id Type="MyObjectBuilder_SpawnGroupDefinition" Subtype="BossDroneL 1RL.2GT.1MT.2IT" />
+<IsPirate>true</IsPirate>
+<Frequency>10.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="BossDroneL 1RL.2GT.1MT.2IT">
+<Speed>1</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

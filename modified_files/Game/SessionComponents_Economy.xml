@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Definition xsi:type="MyObjectbuilder_SessionComponentEconomyDefinition">
+<Id>
+<TypeId>MyObjectbuilder_SessionComponentEconomyDefinition</TypeId>
+<SubtypeId>Default</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>SpacePirates</SubtypeId>
+<TypeId>MyObjectBuilder_Datapad</TypeId>
+<SubtypeId>Datapad</SubtypeId>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SessionComponentContractSystemDefinition">
+<Id>
+<TypeId>MyObjectBuilder_SessionComponentContractSystemDefinition</TypeId>
+<SubtypeId>Default</SubtypeId>
+</Id>
+</Definition>
+</Definitions>
+ 
