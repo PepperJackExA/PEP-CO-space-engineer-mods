@@ -1,39 +1,37 @@
-﻿using Sandbox.Definitions;
+﻿using Sandbox.Common.ObjectBuilders;
+using Sandbox.Definitions;
 using Sandbox.Game;
+using Sandbox.ModAPI;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using VRage.Game.Components;
+using VRage.Game.ModAPI.Ingame.Utilities;
+using VRage.ModAPI;
+using VRage.ObjectBuilders;
+using VRage;
 using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
 using Sandbox.Game.EntityComponents;
 using Sandbox.Game.Weapons;
-using Sandbox.ModAPI;
-using System;
-using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
-using System.Text;
-using VRage;
 using VRage.Game;
-using VRage.Game.Components;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
 using VRage.Game.ModAPI.Interfaces;
-using VRage.ModAPI;
-using VRage.ObjectBuilders;
 using VRage.Utils;
 using VRageMath;
 
-// Code heavily borrowed from Bačiulis' awesome Drink Water mod. Thanks so much for pointing me towards these methods dude, very much appreciated.
-namespace Fatigue
+
+namespace PEPONE.iSurvival
 {
-    [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
-    public class Session : MySessionComponentBase
+    [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
+    public class iSurvivalSessionSettings : MySessionComponentBase
     {
-
-        public static ushort modId = 19008;
-        public static int runCount = 0;
-        public static Random rand = new Random();
-        public static List<long> blinkList = new List<long>();
-        public static int loadWait = 120;
-
-        public static float playerinventoryfillfactor = 0.0f;
+        iSurvivalSettings Settings = new iSurvivalSettings();
 
         // changable varialbles
 
@@ -46,6 +44,144 @@ namespace Fatigue
         public static float fatigueincreasemultiplier = 1;
         public static float healthincreasemultiplier = 1;
         public static float hungerincreasemultiplier = 1;
+
+        public override void LoadData()
+        {
+            Settings.Load();
+            staminadrainmultiplier = Settings.staminadrainmultiplier;
+            fatiguedrainmultiplier = Settings.fatiguedrainmultiplier;
+            healthdrainmultiplier = Settings.healthdrainmultiplier;
+            hungerdrainmultiplier = Settings.hungerdrainmultiplier;
+
+            staminaincreasemultiplier = Settings.staminaincreasemultiplier;
+            fatigueincreasemultiplier = Settings.fatigueincreasemultiplier;
+            healthincreasemultiplier = Settings.healthincreasemultiplier;
+            hungerincreasemultiplier = Settings.hungerincreasemultiplier;
+        }
+
+        class iSurvivalSettings
+        {
+            const string VariableId = nameof(iSurvivalSettings); // IMPORTANT: must be unique as it gets written in a shared space (sandbox.sbc)
+            const string FileName = "HeavyGasoline.ini"; // the file that gets saved to world storage under your mod's folder
+            const string IniSection = "Config";
+
+            public float staminadrainmultiplier = 1;
+            public float fatiguedrainmultiplier = 1;
+            public float healthdrainmultiplier = 1;
+            public float hungerdrainmultiplier = 1;
+
+            public float staminaincreasemultiplier = 1;
+            public float fatigueincreasemultiplier = 1;
+            public float healthincreasemultiplier = 1;
+            public float hungerincreasemultiplier = 1;
+
+            public iSurvivalSettings()
+            {
+
+            }
+
+            void LoadConfig(MyIni iniParser)
+            {
+                staminadrainmultiplier = (float)iniParser.Get(IniSection, nameof(staminadrainmultiplier)).ToDouble(staminadrainmultiplier);
+                fatiguedrainmultiplier = (float)iniParser.Get(IniSection, nameof(fatiguedrainmultiplier)).ToDouble(fatiguedrainmultiplier);
+                healthdrainmultiplier = (float)iniParser.Get(IniSection, nameof(healthdrainmultiplier)).ToDouble(healthdrainmultiplier);
+                hungerdrainmultiplier = (float)iniParser.Get(IniSection, nameof(hungerdrainmultiplier)).ToDouble(hungerdrainmultiplier);
+
+                staminaincreasemultiplier = (float)iniParser.Get(IniSection, nameof(staminaincreasemultiplier)).ToDouble(staminaincreasemultiplier);
+                fatigueincreasemultiplier = (float)iniParser.Get(IniSection, nameof(fatigueincreasemultiplier)).ToDouble(fatigueincreasemultiplier);
+                healthincreasemultiplier = (float)iniParser.Get(IniSection, nameof(healthincreasemultiplier)).ToDouble(healthincreasemultiplier);
+                hungerincreasemultiplier = (float)iniParser.Get(IniSection, nameof(hungerincreasemultiplier)).ToDouble(hungerincreasemultiplier);
+            }
+
+            void SaveConfig(MyIni iniParser)
+            {
+                iniParser.Set(IniSection, nameof(staminadrainmultiplier), staminadrainmultiplier);
+                iniParser.Set(IniSection, nameof(fatiguedrainmultiplier), fatiguedrainmultiplier);
+                iniParser.Set(IniSection, nameof(healthdrainmultiplier), healthdrainmultiplier);
+                iniParser.Set(IniSection, nameof(hungerdrainmultiplier), hungerdrainmultiplier);
+
+                iniParser.Set(IniSection, nameof(staminaincreasemultiplier), staminaincreasemultiplier);
+                iniParser.Set(IniSection, nameof(fatigueincreasemultiplier), fatigueincreasemultiplier);
+                iniParser.Set(IniSection, nameof(healthincreasemultiplier), healthincreasemultiplier);
+                iniParser.Set(IniSection, nameof(hungerincreasemultiplier), hungerincreasemultiplier);
+            }
+
+            public void Load()
+            {
+                if (MyAPIGateway.Session.IsServer)
+                    LoadOnHost();
+                else
+                    LoadOnClient();
+            }
+
+            void LoadOnHost()
+            {
+                MyIni iniParser = new MyIni();
+
+                // load file if exists then save it regardless so that it can be sanitized and updated
+                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(FileName, typeof(iSurvivalSettings)))
+                {
+                    using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(FileName, typeof(iSurvivalSettings)))
+                    {
+                        string text = file.ReadToEnd();
+
+                        MyIniParseResult result;
+                        if (!iniParser.TryParse(text, out result))
+                            throw new Exception($"Config error: {result.ToString()}");
+
+                        LoadConfig(iniParser);
+                    }
+                }
+
+                iniParser.Clear(); // remove any existing settings that might no longer exist
+                SaveConfig(iniParser);
+
+                string saveText = iniParser.ToString();
+                MyAPIGateway.Utilities.SetVariable<string>(VariableId, saveText);
+
+                using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(FileName, typeof(iSurvivalSettings)))
+                {
+                    file.Write(saveText);
+                }
+            }
+
+            void LoadOnClient()
+            {
+                string text;
+                if (!MyAPIGateway.Utilities.GetVariable<string>(VariableId, out text))
+                    throw new Exception("No config found in sandbox.sbc!");
+
+                MyIni iniParser = new MyIni();
+                MyIniParseResult result;
+                if (!iniParser.TryParse(text, out result))
+                    throw new Exception($"Config error: {result.ToString()}");
+
+                LoadConfig(iniParser);
+            }
+        }
+    }
+
+    [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
+    public class iSurvivalSession : MySessionComponentBase
+    {
+
+        public static ushort modId = 19008;
+        public static int runCount = 0;
+        public static Random rand = new Random();
+        public static List<long> blinkList = new List<long>();
+        public static int loadWait = 120;
+
+        public static float playerinventoryfillfactor = 0.0f;
+
+        public static float staminadrainmultiplier = iSurvivalSessionSettings.staminadrainmultiplier;
+        public static float fatiguedrainmultiplier = iSurvivalSessionSettings.fatiguedrainmultiplier;
+        public static float healthdrainmultiplier = iSurvivalSessionSettings.healthdrainmultiplier;
+        public static float hungerdrainmultiplier = iSurvivalSessionSettings.hungerdrainmultiplier;
+
+        public static float staminaincreasemultiplier = iSurvivalSessionSettings.staminaincreasemultiplier;
+        public static float fatigueincreasemultiplier = iSurvivalSessionSettings.fatigueincreasemultiplier;
+        public static float healthincreasemultiplier = iSurvivalSessionSettings.healthincreasemultiplier;
+        public static float hungerincreasemultiplier = iSurvivalSessionSettings.hungerincreasemultiplier;
 
 
         public static float teststamina = 0; //can be removed when we remove debug text
@@ -65,7 +201,7 @@ namespace Fatigue
             {
                 // Only run every quarter of a second
                 if (++runCount % 15 > 0)
-                   return;
+                    return;
 
                 // Blinking during load screen causes crash, don't load messagehandler on clients for 30s
                 if (!MyAPIGateway.Multiplayer.IsServer && loadWait > 0)
@@ -126,7 +262,7 @@ namespace Fatigue
                                 hunger.Decrease(2f * hungerdrainmultiplier, null); // Drains your hunger stat -> Makes you more hungry
                                 player.Character.GetInventory(0).AddItems((MyFixedPoint)0.1f, (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
                             }
-                                
+
                         }
                     }
 
@@ -150,7 +286,7 @@ namespace Fatigue
                     {
                         //Drain stamina while running
                         if (stamina.Value > 0)
-                        {                           
+                        {
                             IMyPlayer thisPlayer = player as IMyPlayer;
                             playerinventoryfillfactor = player.Character.GetInventory().VolumeFillFactor;
 
@@ -223,7 +359,7 @@ namespace Fatigue
                     if (fatigue.Value > 0 && stamina.Value < 90)
                     {
                         fatigue.Decrease(((100 - hunger.Value) / 100) * fatiguedrainmultiplier, null);
-                        stamina.Increase(2*((100 - hunger.Value) / 100) * staminaincreasemultiplier, null);
+                        stamina.Increase(2 * ((100 - hunger.Value) / 100) * staminaincreasemultiplier, null);
                         //MyAPIGateway.Utilities.ShowMessage("fatigue", "0 > 0" + ((100 - hunger.Value) / 100));//can be removed when we remove debug text
                         //MyAPIGateway.Utilities.ShowMessage("stamina", "&& < 90" + (2 * ((100 - hunger.Value) / 100)));//can be removed when we remove debug text
                     }
@@ -231,10 +367,10 @@ namespace Fatigue
                     if (runCount < 300)
                         continue;
 
-                    
+
                     // Normal hunger loss
-                    hunger.Decrease((((100/(100 - (stamina.Value + fatigue.Value))) / 2)/10 + 0.001f) * -1 * hungerdrainmultiplier, null); // Normal hunger drain
-                        //MyAPIGateway.Utilities.ShowMessage("hunger", "normal drain " + (((100 / (100 - (stamina.Value + fatigue.Value))) / 2) / 10 + 0.001f) * -1 * hungerdrainmultiplier);
+                    hunger.Decrease((((100 / (100 - (stamina.Value + fatigue.Value))) / 2) / 10 + 0.001f) * -1 * hungerdrainmultiplier, null); // Normal hunger drain
+                                                                                                                                               //MyAPIGateway.Utilities.ShowMessage("hunger", "normal drain " + (((100 / (100 - (stamina.Value + fatigue.Value))) / 2) / 10 + 0.001f) * -1 * hungerdrainmultiplier);
 
                     if (stamina.Value < 100 && fatigue.Value < 100)
                     {
@@ -242,7 +378,7 @@ namespace Fatigue
                         //MyAPIGateway.Utilities.ShowMessage("hunger", "stam and fatigue drain" + ((100 - fatigue.Value) / 100) * hungerdrainmultiplier);//can be removed when we remove debug text
 
                     }
-                    
+
                     if (fatigue.Value > 20 || rand.Next((int)fatigue.Value) > 0)
                         continue;
 
@@ -444,3 +580,4 @@ namespace Fatigue
     }
 }
 #endregion
+
