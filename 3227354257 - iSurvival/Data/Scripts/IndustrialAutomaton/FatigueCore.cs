@@ -62,7 +62,7 @@ namespace PEPONE.iSurvival
         class iSurvivalSettings
         {
             const string VariableId = nameof(iSurvivalSettings); // IMPORTANT: must be unique as it gets written in a shared space (sandbox.sbc)
-            const string FileName = "HeavyGasoline.ini"; // the file that gets saved to world storage under your mod's folder
+            const string FileName = "iSurvivalSettings.ini"; // the file that gets saved to world storage under your mod's folder
             const string IniSection = "Config";
 
             public float staminadrainmultiplier = 1;
