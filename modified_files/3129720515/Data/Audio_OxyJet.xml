@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ArcPlayJet</SubtypeId>
+</Id>
+<Category>JETPACK</Category>				<!--you can delete this file if you don't like the new jetpack sounds-->
+<MaxDistance>46.6797371</MaxDistance>
+<Volume>0.15</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\ARC\OxyJet\OxyJetStart2d.wav</Start>
+<Loop>Audio\ARC\OxyJet\OxyJetSilence.wav</Loop>
+<End>Audio\ARC\OxyJet\OxyJetEnd2d.wav</End>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ArcPlayJetRun</SubtypeId>
+</Id>
+<Category>JETPACK</Category>
+<MaxDistance>46.6797371</MaxDistance>
+<Volume>0.5</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\ARC\OxyJet\OxyJetRunStart3d.wav</Start>
+<Loop>Audio\ARC\OxyJet\OxyJetRunLoop3d.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>RealPlayJet</SubtypeId>
+</Id>
+<Category>JETPACK_R</Category>
+<MaxDistance>45</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\Real\OxyJet\R_OxyJetStart2d.wav</Start>
+<Loop>Audio\ARC\OxyJet\OxyJetSilence.wav</Loop>
+<End>Audio\Real\OxyJet\R_OxyJetEnd2d.wav</End>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>RealPlayJetRun</SubtypeId>
+</Id>
+<Category>JETPACK_R</Category>
+<MaxDistance>45</MaxDistance>
+<Volume>2</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\Real\OxyJet\R_OxyJetRunStart2d.wav</Start>
+<Loop>Audio\REAL\OxyJet\R_OxyJetRunLoop2d.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

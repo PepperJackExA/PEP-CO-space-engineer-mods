@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>YourSubtypeID</SubtypeId>
+</Id>
+<DisplayName>Gun In-game Name</DisplayName>
+<Description>
+</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>YourBlockPairName</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<PCU>1</PCU>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<MinElevationDegrees>-15</MinElevationDegrees>
+<MaxElevationDegrees>75</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

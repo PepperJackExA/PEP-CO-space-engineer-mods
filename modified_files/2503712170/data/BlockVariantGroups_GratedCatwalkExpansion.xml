@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<BlockPositions>
+<BlockPosition>
+<Name>GCMSquareCatwalk</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMSlopeCatwalk</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMRoundCatwalk</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHalfWidthCatwalk</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHalfWidthDiagonalCatwalk</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMSlopeBaseCatwalkLeft</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMSlopeTipCatwalkLeft</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHalfSlopeCatwalk</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMQuadrantCatwalk</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHalfSlopeInvertedCatwalk</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHalfSlopeInvertedRoundedCatwalk</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHalfStadiumCatwalk</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMLadderWithCage</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMGratedCatwalkPassageBaseless</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMGratedStairs1x2</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHalfWidthCatwalkWallWithStairsLeft</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHalfWidthStairsSteepBaseLeft</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHalfWidthStairsSteepTipLeft</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHalfWidthStairsSteepCornerLeft</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMGratedStairsWithGratedSides1x1</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>GCMHingeSupportStrut</Name>
+</BlockPosition>
+</BlockPositions>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMSquareCatwalks"/>
+<DisplayName>DisplayName_BlockGroup_SquareCatwalk</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkRaised" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkStraight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkEnd" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkHalfLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkHalfRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkHalfWidthCrossoverLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkHalfWidthCrossoverRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkHalfTJunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkHalfWidthTJunctionBalcony" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkHalfMixedCrossroad" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkHalfWidthBalcony" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkMixedTJunctionRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkMixedTJunctionLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkHalfWallLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkHalfWallRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkDiagonalBaseLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkDiagonalBaseRigh" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMSlopeCatwalks"/>
+<DisplayName>DisplayName_BlockGroup_SlopeCatwalk</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeCatwalkDiagonalWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeCatwalkEndLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeCatwalkEndRight" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMRoundCatwalks"/>
+<DisplayName>DisplayName_BlockGroup_RoundCatwalk</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMRoundCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMRoundCatwalkCurvedWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMRoundCatwalkHalfWidthCornerA" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMRoundCatwalkHalfWidthCornerB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMRoundCatwalkMixedCornerLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMRoundCatwalkMixedCornerRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMRoundCatwalkEndLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMRoundCatwalkEndRight" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMHalfWidthCatwalks"/>
+<DisplayName>DisplayName_BlockGroup_HalfWidthCatwalk</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkWallOffset" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkStraight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkCornerBaseLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkCornerBaseRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkLCornerLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkLCornerRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkMixedCornerLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkMixedCornerRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkEndLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkEndRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkSquareEnd" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkTJunctionBaseLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkTJunctionBaseRight" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMHalfWidthDiagonalCatwalks"/>
+<DisplayName>DisplayName_BlockGroup_HalfWidthDiagonalCatwalk</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthDiagonalCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthDiagonalCatwalkCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthDiagonalCatwalkCrossoverLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthDiagonalCatwalkCrossoverRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthDiagonalCatwalkCrossroad" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthDiagonalCatwalkTJunction" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMSlopeBaseCatwalks" />
+<DisplayName>DisplayName_BlockGroup_SlopeBaseCatwalkLeft</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkWallLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkWallRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkDiagonalWallLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkDiagonalWallRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkStraightLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkStraightRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkAcuteCornerLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkAcuteCornerRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkObtuseCornerLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkObtuseCornerRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkAngledEndLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkAngledEndRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkNarrowEndLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkNarrowEndRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkWideEndLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeBaseCatwalkWideEndRight" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMSlopeTipCatwalks" />
+<DisplayName>DisplayName_BlockGroup_SlopeTipCatwalkLeft</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeTipCatwalkLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeTipCatwalkRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeTipCatwalkDiagonalWallLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeTipCatwalkDiagonalWallRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeTipCatwalkEndLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSlopeTipCatwalkEndRight" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMHalfSlopeCatwalks" />
+<DisplayName>DisplayName_BlockGroup_HalfSlopeCatwalk</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeCatwalkDiagonalWall" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMHalfSlopeInvertedCatwalks" />
+<DisplayName>DisplayName_BlockGroup_HalfSlopeInvertedCatwalk</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkDiagonalWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkHalfCornerA" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkHalfCornerB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkMixedCornerLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkMixedCornerRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkDiagonalTJunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkEndLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkEndRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkMixedTJunctionRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedCatwalkMixedTJunctionLeft" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMHalfSlopeInvertedRoundedCatwalks" />
+<DisplayName>DisplayName_BlockGroup_HalfSlopeInvertedRoundedCatwalk</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkCurvedWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkHalfCornerA" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkHalfCornerB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkMixedCornerLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkMixedCornerRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkDiagonalTJunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkEndLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkEndRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkMixedTJunctionRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfSlopeInvertedRoundedCatwalkMixedTJunctionLeft" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMHalfStadiumCatwalks" />
+<DisplayName>DisplayName_BlockGroup_HalfStadiumCatwalk</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfStadiumCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfStadiumCatwalkCurvedWallLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfStadiumCatwalkCurvedWallRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfStadiumCatwalkFullCurvedWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfStadiumCatwalkStraightWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfStadiumCatwalkStraight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfStadiumCatwalkDiagonalCornerLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfStadiumCatwalkDiagonalCornerRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfStadiumCatwalkEnd" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfStadiumCatwalkHalfWidthBalcony" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMQuadrantCatwalks" />
+<DisplayName>DisplayName_BlockGroup_QuadrantCatwalk</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMQuadrantCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMQuadrantCatwalkCorner" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMLadderWithCage" />
+<DisplayName>DisplayName_BlockGroup_LadderWithCage</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Ladder2" Subtype="GCMLadderWithCage" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMLadderCap" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMLadderCapCaged" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkLadderTop" />
+<Block Type="MyObjectBuilder_Ladder2" Subtype="GCMSquareCatwalkLadderMiddle" />
+<Block Type="MyObjectBuilder_Ladder2" Subtype="GCMSquareCatwalkLadderBottom" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkEndLadderTop" />
+<Block Type="MyObjectBuilder_Ladder2" Subtype="GCMSquareCatwalkEndLadderMiddle" />
+<Block Type="MyObjectBuilder_Ladder2" Subtype="GCMSquareCatwalkEndLadderBottom" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkStraightLadderTop" />
+<Block Type="MyObjectBuilder_Ladder2" Subtype="GCMSquareCatwalkStraightLadderMiddle" />
+<Block Type="MyObjectBuilder_Ladder2" Subtype="GCMSquareCatwalkStraightLadderBottom" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMSquareCatwalkWallLadderTop" />
+<Block Type="MyObjectBuilder_Ladder2" Subtype="GCMSquareCatwalkWallLadderMiddle" />
+<Block Type="MyObjectBuilder_Ladder2" Subtype="GCMSquareCatwalkWallLadderBottom" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMShallowStairs" />
+<DisplayName>DisplayName_BlockGroup_ShallowStairs</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMGratedStairs1x2" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMHalfWidthStairs" />
+<DisplayName>DisplayName_BlockGroup_HalfWidthStairs</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkWallWithStairsLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkWallWithStairsRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkStraightWithStairsLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkStraightWithStairsRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkBranchingWithStairsLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthCatwalkBranchingWithStairsRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsCornerLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsCornerRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsUTurnLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsUTurnRight" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMHalfWidthSteepStairsBase" />
+<DisplayName>DisplayName_BlockGroup_HalfWidthSteepStairs</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepBaseLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepBaseRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepBaseWALLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepBaseWALRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepBaseSTRLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepBaseSTRRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepBaseBRALeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepBaseBRARight" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMHalfWidthSteepStairsTip" />
+<DisplayName>DisplayName_BlockGroup_HalfWidthSteepStairs</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepTipLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepTipRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepTipWALLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepTipWALRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepTipSTRLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepTipSTRRight" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMHalfWidthSteepStairsMisc" />
+<DisplayName>DisplayName_BlockGroup_HalfWidthSteepStairs</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepCornerLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepCornerRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepUTurnLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSteepUTurnRight" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMSidedStairs" />
+<DisplayName>DisplayName_BlockGroup_GCMSidedStairs</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMGratedStairsWithGratedSides1x1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMGratedStairsWithGratedSides1x2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMGratedStairsWithGratedSides1x1Stackable" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMGratedStairsWithGratedSides1x2Stackable" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMSupports" />
+<DisplayName>DisplayName_BlockGroup_Supports</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHingeSupportStrut" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHingeSupportStrutLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHingeSupportStrutRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMStairsSupport" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMStairsSupportCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSupportLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSupportRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMHalfWidthStairsSupportCorner" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GCMGratedCatwalkPassageBaseless" />
+<DisplayName>DisplayName_BlockGroup_GratedPassage</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMGratedCatwalkPassageBaseless" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMGratedCatwalkPassageBaselessStraight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMGratedCatwalkPassageSupported" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GCMGratedCatwalkPassageSupportedStraight" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

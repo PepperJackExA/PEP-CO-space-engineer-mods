@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>TOC-SpawnGroup-WanderingMerchant-EV</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>3.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-TOC) Wandering Merchant EV">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>TOC-SpawnGroup-WanderingMerchant-EA</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>3.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-TOC) Wandering Merchant EA">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

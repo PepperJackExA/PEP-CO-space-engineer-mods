@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="(NPC-SY) Rail Ballast 2D" />
+<Name>138101698981750439</Name>
+<CubeBlocks>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyAutopilotComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_AutopilotComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<DisplayName>(NPC-SY) Rail Ballast 2D</DisplayName>
+<Name>92667652517809015</Name>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<LockSound>ArcShipLandGearOn</LockSound>
+<UnlockSound>ArcShipLandGearOff</UnlockSound>
+<FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+<ShowInInventory>true</ShowInInventory>
+<LockSound>ArcShipLandGearOn</LockSound>
+<UnlockSound>ArcShipLandGearOff</UnlockSound>
+<FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+</CubeBlocks>
+<DisplayName>Small Grid 9928</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

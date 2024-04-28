@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_ShipWelder" Subtype="SmallShipSmallWelder" />
+<UnlockedByGroups>
+<GroupSubtype>16</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_ShipConnector" Subtype="ConnectorSmallExtended" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorFrameMediumPort" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubePortSmall" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubePortMedium" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_ShipConnector" Subtype="ConnectorCompact" />
+<UnlockedByGroups>
+<GroupSubtype>25</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeCurvedPort" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubePort" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_CameraBlock" Subtype="LargeOffsetCameraBlock" />
+<UnlockedByGroups>
+<GroupSubtype>22</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_AirtightSlideDoor" Subtype="LargeBlockDockingDoor" />
+<UnlockedByGroups>
+<GroupSubtype>22</GroupSubtype>
+<GroupSubtype>27</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+</Definitions>
+ 

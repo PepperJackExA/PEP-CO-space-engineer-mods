@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<RespawnShips>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>RespawnPlanetPod</SubtypeId>
+</Id>
+<DisplayName>DisplayName_PlanetaryLander</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>RespawnPlanetPod</Prefab>
+<UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
+</Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>RespawnMoonPod</SubtypeId>
+</Id>
+<DisplayName>DisplayName_PlanetaryLander</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>RespawnMoonPod</Prefab>
+</Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>RespawnSpacePod</SubtypeId>
+</Id>
+<DisplayName>DisplayName_RespawnPodSpace</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>RespawnSpacePod</Prefab>
+<UseForSpace>true</UseForSpace>
+</Ship>
+<Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>WaterSkimmerRespawnShipIOReady</SubtypeId>
+</Id>
+<DisplayName>Water Skimmer - Respawn Ship</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>WaterSkimmerRespawnShip</Prefab>
+<UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
+</Ship>
+</RespawnShips>
+</Definitions>
+ 

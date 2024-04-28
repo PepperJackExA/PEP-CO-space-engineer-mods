@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>RockCrusher</SubtypeId>
+</Id>
+<Category>BLOCK</Category>
+<MaxDistance>20</MaxDistance>
+<UpdateDistance>30</UpdateDistance>
+<Volume>1.5</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\CrusherStart.wav</Start>
+<Loop>Audio\CrusherLoop.wav</Loop>
+<End>Audio\CrusherStop.wav</End>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>RockCrusherReal</SubtypeId>
+</Id>
+<Category>R_BLOCK</Category>
+<MaxDistance>20</MaxDistance>
+<UpdateDistance>30</UpdateDistance>
+<Volume>1.5</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\CrusherStart.wav</Start>
+<Loop>Audio\CrusherLoop.wav</Loop>
+<End>Audio\CrusherStop.wav</End>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

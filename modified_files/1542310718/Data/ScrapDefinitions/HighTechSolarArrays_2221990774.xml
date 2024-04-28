@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>AVTech_Nanocrystalline_CellScrap</SubtypeId>
+</Id>
+<DisplayName>AVTech_Nanocrystalline_CellScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>AVTech_DualJunction_CellScrap</SubtypeId>
+</Id>
+<DisplayName>AVTech_DualJunction_CellScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>AVTech_MultiJunction_CellScrap</SubtypeId>
+</Id>
+<DisplayName>AVTech_MultiJunction_CellScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+</PhysicalItems>
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AVTech_Nanocrystalline_CellScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>AVTech_Nanocrystalline_CellScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="AVTech_Nanocrystalline_CellScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AVTech_DualJunction_CellScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>AVTech_DualJunction_CellScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="AVTech_DualJunction_CellScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AVTech_MultiJunction_CellScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>AVTech_MultiJunction_CellScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="AVTech_MultiJunction_CellScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

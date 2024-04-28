@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>CompressedOres</SubtypeId>
+</Id>
+<DisplayName>Compressed Ores</DisplayName>
+<Description>Compressed Ores</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>UnCompressedOres</SubtypeId>
+</Id>
+<DisplayName>UnCompressed Ores</DisplayName>
+<Description>UnCompressed Ores</Description>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="SmallBlocks" BlueprintSubtypeId="OreCompactorSmall" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OreMill" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OreCompactorLarge" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="StoneOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="IronOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="NickelOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="CobaltOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="MagnesiumOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="SiliconOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="SilverOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="GoldOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="PlatinumOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="UraniumOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="IceToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="CoalOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="SulfurOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="OilSandOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="CopperOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="LithiumOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="BauxiteOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="TitaniumOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="TantalumOreToCompressed" />
+<Entry Class="CompressedOres" BlueprintSubtypeId="NiterOreToCompressed" />
+<Entry Class="Crusher" BlueprintSubtypeId="StoneOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="IronOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="NickelOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="CobaltOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="MagnesiumOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="SiliconOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="SilverOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="GoldOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="PlatinumOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="UraniumOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="CoalOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="SulfurOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="OilSandOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="CopperOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="LithiumOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="BauxiteOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="TitaniumOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="TantalumOreToCrushed" />
+<Entry Class="Crusher" BlueprintSubtypeId="NiterOreToCrushed" />
+<Entry Class="Ice" BlueprintSubtypeId="CompressedIceToOxygen" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="StoneOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="IronOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="NickelOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="CobaltOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="MagnesiumOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="SiliconOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="SilverOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="GoldOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="PlatinumOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="UraniumOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="IceToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="CoalOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="SulfurOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="OilSandOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="CopperOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="LithiumOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="BauxiteOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="TitaniumOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="TantalumOreToUnCompressed" />
+<Entry Class="UnCompressedOres" BlueprintSubtypeId="NiterOreToUnCompressed" />
+</BlueprintClassEntries>
+</Definitions>
+ 

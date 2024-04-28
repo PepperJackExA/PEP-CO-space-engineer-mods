@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions>
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>Mafoo_Small_LongConveyorTube</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_Small_LongConveyorTube</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>Mafoo_Small_LongConveyorTube</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>Mafoo_Small_MediumConveyorTube</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_Small_MediumConveyorTube</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>Mafoo_Small_MediumConveyorTube</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>ConveyorTubeSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorTubeSmall</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>ConveyorTubeSmall</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallConveyorAdaptorTypeA</SubtypeId>
+</Id>
+<DisplayName>Conveyor Adaptor Type A</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="55" />
+<Component Subtype="SmallTube" Count="25" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorAdaptorTypeA</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallConveyorAdaptorTypeB</SubtypeId>
+</Id>
+<DisplayName>Conveyor Adaptor Type B</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="55" />
+<Component Subtype="SmallTube" Count="25" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorAdaptorTypeB</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>ConveyorHubMedium</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Conveyor</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="55" />
+<Component Subtype="SmallTube" Count="25" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorHubMedium</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

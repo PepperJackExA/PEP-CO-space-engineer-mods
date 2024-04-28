@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AdminPlate</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_ZoneChip</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="AdminPlate" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<!--    <Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>MainframeComponent</SubtypeId>
+</Id>
+<DisplayName>Mainframe</DisplayName>
+<Prerequisites>
+<Item Amount="2.5" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2.0" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="3.0" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="1.0" TypeId="Ingot" SubtypeId="Silicon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>-->
+</Blueprints>
+</Definitions>
+ 

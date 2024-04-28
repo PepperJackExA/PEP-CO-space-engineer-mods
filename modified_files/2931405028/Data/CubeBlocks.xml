@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>LargeBlockVaporator</SubtypeId>
+</Id>
+<DisplayName>Moisture Vaporator</DisplayName>
+<Description>The moisture vaporator pulls water from the surrounding air to provide ice. It requires a planetary atmosphere and a fair amount of power to function.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="22" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Moisture Vaporator</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<PCU>50</PCU>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.40</OperationalPowerConsumption>
+<MaterialEfficiency>0.9</MaterialEfficiency>
+<BlueprintClasses>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ActionSound>BlockAirVentExhale</ActionSound>
+<PrimarySound>BlockAirVentExhale</PrimarySound>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

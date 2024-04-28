@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>NextGenStorage</SubtypeId>
+</Id>
+<DisplayName>NextGen Storage Mod</DisplayName>
+<Description>Blocks from NextGen Storage mod</Description>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/NextGen_Cargo_Container_Stack" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/NextGenLarge_LargeCargoPad" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/NextGen_Cargo_Container" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/NextGen_Cargo_Crate" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OxygenTank/NextGen_Small_LargeOxyegenGasTank" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OxygenTank/NextGen_Small_LargeHydrogenGasTank" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/NextGen_Large_FreightContainer" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="NextGen_Small_Cargo_Container" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="NextGen_Small_Cargo_Crate" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="OxygenTank/NextGen_Small_SmallOxegenGasTank" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="OxygenTank/NextGen_Small_SmallHydrogenGasTank" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/NextGen_Large_FreightContainer" />
+</BlueprintClassEntries>
+</Definitions>
+ 

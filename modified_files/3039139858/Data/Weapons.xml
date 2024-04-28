@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallMissileLauncher</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="60" ShootSoundName="WepShipSmallMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="0" />
+<DeviateShotAngle>0.1</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+<AmmoMagazine Subtype="200mm_guided_missile" />
+</AmmoMagazines>
+<ReloadTime>2000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeMissileLauncher</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="120" ShootSoundName="WepShipSmallMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="19" />
+<DeviateShotAngle>0.1</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+<AmmoMagazine Subtype="200mm_guided_missile" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeMissileTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="90" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="6" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+<AmmoMagazine Subtype="200mm_guided_missile" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallMissileTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="90" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="2" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+<AmmoMagazine Subtype="200mm_guided_missile" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeRailgun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="20" ShootSoundName="WepRailgunLargeShot" PreShotSoundName="WepRailgunLargeCharge" FlightSoundName="HeavyShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<DeviateShotAngleAiming>0</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="LargeRailgunAmmo" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallRailgun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="20" ShootSoundName="WepRailgunSmallShot" PreShotSoundName="WepRailgunSmallCharge" FlightSoundName="MediumShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<DeviateShotAngleAiming>0</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="SmallRailgunAmmo" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SI_Torpedo_turret_def</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="18" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="3" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Type1_dumbfire_torpedo" />
+<AmmoMagazine Subtype="Type1_guided_torpedo" />
+<AmmoMagazine Subtype="Type2_dumbfire_torpedo" />
+<AmmoMagazine Subtype="Type2_guided_torpedo" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LG_TL</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="6" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Type1_dumbfire_torpedo" />
+<AmmoMagazine Subtype="Type1_guided_torpedo" />
+<AmmoMagazine Subtype="Type2_dumbfire_torpedo" />
+<AmmoMagazine Subtype="Type2_guided_torpedo" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SG_TL</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="6" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Type1_dumbfire_torpedo" />
+<AmmoMagazine Subtype="Type1_guided_torpedo" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>Plasma_accelerators</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="3" ShootSoundName="WepRailgunLargeShot" PreShotSoundName="WepRailgunLargeCharge" FlightSoundName="HeavyShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<DeviateShotAngleAiming>0</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Lance_chargepack" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>   <!--gatling vanilla rpm 700-->
+<SubtypeId>Light_Plasma_accelerators</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="100" ShootSoundName="WepRailgunSmallShot" FlightSoundName="HeavyShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<DeviateShotAngleAiming>0</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Small_plasma_chargepack" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>   <!--assault vanilla rpm 180-->
+<SubtypeId>Medium_Plasma_accelerators</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="50" ShootSoundName="Medium_plasma_accelerator" FlightSoundName="HeavyShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<DeviateShotAngleAiming>0</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Large_plasma_chargepack" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>   <!--artilery vanilla rpm 80-->
+<SubtypeId>Heavy_Plasma_accelerators</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="10" ShootSoundName="WepRailgunLargeShot" FlightSoundName="HeavyShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<DeviateShotAngleAiming>0</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Large_plasma_chargepack" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SI_Big_Boy</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="1" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0.1</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="BB_shell" />
+</AmmoMagazines>
+<ReloadTime>60000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>DHI_NB</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="1" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0.1</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Titan_plasma_chargepack" />
+</AmmoMagazines>
+<ReloadTime>60000</ReloadTime>
+</Weapon>
+</Weapons>
+</Definitions>
+ 

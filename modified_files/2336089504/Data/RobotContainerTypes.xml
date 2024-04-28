@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ContainerTypes>
+<ContainerType CountMin="3" CountMax="5">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>RobotLoot</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="4" AmountMax="10">
+<Frequency>5.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Motor</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="10" AmountMax="20">
+<Frequency>4.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>SmallTube</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="10" AmountMax="30">
+<Frequency>4.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Computer</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="4">
+<Frequency>5.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>PowerCell</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="10" AmountMax="30">
+<Frequency>10.0</Frequency>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+</ContainerTypes>
+</Definitions>
+ 

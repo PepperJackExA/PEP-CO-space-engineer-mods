@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Reputation-Condition-UpdateREPAHE</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Reputation-Trigger-Compromised-UpdateREPAHE</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Reputation-Action-Compromised-UpdateREPAHE</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Reputation-Command-Compromised-AHEThanksPlayer</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

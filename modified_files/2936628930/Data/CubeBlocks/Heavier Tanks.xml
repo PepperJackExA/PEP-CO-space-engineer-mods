@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>Reinforced Hydrogen Tank LL</SubtypeId>
+</Id>
+<DisplayName>Reinforced Hydrogen Tank</DisplayName>
+<Description>A reinforced hydrogen tank. Takes more materials to build and weighs more, but can take a hit!</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="LargeTube" Count="100" />
+<Component Subtype="SmallTube" Count="80" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="MetalGrid" Count="80" />
+<Component Subtype="SteelPlate" Count="200" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Reinforced Hydrogen Tank LL</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>15000000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0025</LeakPercent>
+<GasExplosionMaxRadius>20</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>15000000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>HydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>Reinforced_Hydrogen_Tank_LS</SubtypeId>
+</Id>
+<DisplayName>Small Reinforced Hydrogen Tank</DisplayName>
+<Description>A reinforced hydrogen tank. Takes more materials to build and weighs more, but can take a hit!</Description>
+<Public>true</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="70" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="SteelPlate" Count="60" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Reinforced_Hydrogen_Tank_LS</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>1000000 </Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>32</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<PCU>30</PCU>
+<LeakPercent>0.005</LeakPercent>
+<GasExplosionMaxRadius>10</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>1000000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>HydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_15</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>Drum_Hydrogen_Tank_SS</SubtypeId>
+</Id>
+<DisplayName>Drum Hydrogen Tank</DisplayName>
+<Description>Description_HydrogenTank</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Drum_Hydrogen_Tank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.0002</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.0000002</StandbyPowerConsumption>
+<Capacity>15000 </Capacity>
+<InventoryMaxVolume>0.12</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.025</LeakPercent>
+<GasExplosionMaxRadius>3</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>15000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Small</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>Drum_Hydrogen_Tank_LS</SubtypeId>
+</Id>
+<DisplayName>Drum Hydrogen Tank</DisplayName>
+<Description>Description_HydrogenTank</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Drum_Hydrogen_Tank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>1000000 </Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>32</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<PCU>25</PCU>
+<LeakPercent>0.005</LeakPercent>
+<GasExplosionMaxRadius>10</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>1000000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>HydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_15</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>Drum_Oxygen_Tank_LS</SubtypeId>
+</Id>
+<DisplayName>Drum Oxygen Tank</DisplayName>
+<Description>Description_OxygenTank</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Drum_Oxygen_Tank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>100000</Capacity>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>OxygenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>32</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.005</LeakPercent>
+<GasExplosionMaxRadius>10</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>100000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepSmallWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>Drum_Oxygen_Tank_SS</SubtypeId>
+</Id>
+<DisplayName>Drum Oxygen Tank</DisplayName>
+<Description>Description_OxygenTank</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Drum_Oxygen_Tank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.0002</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.0000002</StandbyPowerConsumption>
+<Capacity>15000 </Capacity>
+<InventoryMaxVolume>0.12</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>OxygenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0125</LeakPercent>
+<GasExplosionMaxRadius>3</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>15000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Small</GasExplosionEffect>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

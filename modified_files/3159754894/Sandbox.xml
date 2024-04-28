@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpitSeat" />
+<DefinitionId Type="MyObjectBuilder_Reactor" Subtype="LargeBlockSmallGenerator" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallAtmosphericThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<DefinitionId Type="MyObjectBuilder_MotorSuspension" Subtype="Suspension3x3" />
+<DefinitionId Type="MyObjectBuilder_AirtightSlideDoor" Subtype="LargeBlockSlideDoor" />
+<Value>
+<RealisticSound>false</RealisticSound>
+<EnableRespawnShips>true</EnableRespawnShips>
+<EnableJetpack>true</EnableJetpack>
+<EnableFriendlyFire>true</EnableFriendlyFire>
+<Factions>
+<Factions>
+<Name>Space Pirates</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon>
+</Factions>
+<Value>258961289160008772</Value>
+<IdentityId>144115188075855895</IdentityId>
+<DiscoveredFactions>
+</DiscoveredFactions>
+</Factions>
+<Name>3152436752.sbm</Name>
+<Identities>
+<IdentityId>144115188075855895</IdentityId>
+<DisplayName>Echthros</DisplayName>
+<SavedCharacters>
+</SavedCharacters>
+<IdentityId>144115188075855896</IdentityId>
+<DisplayName>Space Pirates</DisplayName>
+<Value>
+<DisplayName>Echthros</DisplayName>
+<IdentityId>144115188075855895</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpitSeat" />
+<DefinitionId Type="MyObjectBuilder_Reactor" Subtype="LargeBlockSmallGenerator" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallAtmosphericThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<DefinitionId Type="MyObjectBuilder_MotorSuspension" Subtype="Suspension3x3" />
+<DefinitionId Type="MyObjectBuilder_AirtightSlideDoor" Subtype="LargeBlockSlideDoor" />
+<Value>
+<Definition Type="MyObjectbuilder_AiRvoComponentDefinition" Subtype="Default" />
+<Definition Type="MyObjectbuilder_AutopilotPathfindingComponentDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_ContainerDropSystemDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_SessionComponentContractSystemDefinition" Subtype="Default" />
+<Name>Test1</Name>
+<Definition Type="MyObjectbuilder_SessionComponentEconomyDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_CoordinateSystemDefinition" Subtype="CoordinateSystem" />
+<Definition Type="MyObjectBuilder_BankingSystemDefinition" Subtype="BankingSystem" />
+<string>Models\Characters\Astronaut\SE_astronaut.mwm</string>
+<string>Grass</string>
+<string>Stone</string>
+<string>Soil</string>
+<string>Grass bare</string>
+<string>Woods_grass bare</string>
+<string>Woods_grass</string>
+<string>Cobalt_01</string>
+<string>Ice_01</string>
+<string>Iron_02</string>
+<string>Silicon_01</string>
+<string>Magnesium_01</string>
+<string>Nickel_01</string>
+<string>Snow</string>
+<string>Rocks_grass</string>
+ 

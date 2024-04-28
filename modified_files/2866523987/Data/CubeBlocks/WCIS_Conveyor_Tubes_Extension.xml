@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Conveyor_Tube_5x</SubtypeId>
+</Id>
+<DisplayName>Conveyor Tube 5x</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="50" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="InteriorPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>35</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Conveyor_Tube_9x</SubtypeId>
+</Id>
+<DisplayName>Conveyor Tube 9x</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="90" />
+<Component Subtype="Construction" Count="180" />
+<Component Subtype="SmallTube" Count="108" />
+<Component Subtype="Motor" Count="54" />
+<Component Subtype="InteriorPlate" Count="36" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>63</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Conveyor_Tube_15x</SubtypeId>
+</Id>
+<DisplayName>Conveyor Tube 15x</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="Construction" Count="300" />
+<Component Subtype="MetalGrid" Count="21" />
+<Component Subtype="SmallTube" Count="180" />
+<Component Subtype="Motor" Count="90" />
+<Component Subtype="InteriorPlate" Count="60" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>105</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Conveyor_Tube_21x</SubtypeId>
+</Id>
+<DisplayName>Conveyor Tube 21x</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="210" />
+<Component Subtype="Construction" Count="520" />
+<Component Subtype="MetalGrid" Count="21" />
+<Component Subtype="SmallTube" Count="252" />
+<Component Subtype="Motor" Count="126" />
+<Component Subtype="InteriorPlate" Count="84" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>147</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Reinforced_Conveyor_Tube_5x</SubtypeId>
+</Id>
+<DisplayName>Reinforced Conveyor Tube 5x</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="75" />
+<Component Subtype="InteriorPlate" Count="50" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Reinforced_Conveyor_Tube_9x</SubtypeId>
+</Id>
+<DisplayName>Reinforced Conveyor Tube 9x</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="135" />
+<Component Subtype="InteriorPlate" Count="90" />
+<Component Subtype="Construction" Count="180" />
+<Component Subtype="SmallTube" Count="108" />
+<Component Subtype="Motor" Count="54" />
+<Component Subtype="InteriorPlate" Count="36" />
+<Component Subtype="SteelPlate" Count="90" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<BuildTimeSeconds>63</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Reinforced_Conveyor_Tube_15x</SubtypeId>
+</Id>
+<DisplayName>Reinforced Conveyor Tube 15x</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="225" />
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="Construction" Count="300" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="SmallTube" Count="180" />
+<Component Subtype="Motor" Count="90" />
+<Component Subtype="InteriorPlate" Count="60" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<BuildTimeSeconds>105</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Reinforced_Conveyor_Tube_21x</SubtypeId>
+</Id>
+<DisplayName>Reinforced Conveyor Tube 21x</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="315" />
+<Component Subtype="InteriorPlate" Count="210" />
+<Component Subtype="Construction" Count="420" />
+<Component Subtype="MetalGrid" Count="21" />
+<Component Subtype="SmallTube" Count="252" />
+<Component Subtype="Motor" Count="126" />
+<Component Subtype="InteriorPlate" Count="84" />
+<Component Subtype="SteelPlate" Count="210" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<BuildTimeSeconds>147</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WCIS_Conveyor_Tubes_Group" />
+<DisplayName>WCIS Conveyor Tubes</DisplayName>
+<Description>Longer variants of the Conveyor Tubes</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Conveyor_Tube_5x" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Conveyor_Tube_9x" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Conveyor_Tube_15x" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Conveyor_Tube_21x" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WCIS_Conveyor_Ducts_Group" />
+<DisplayName>WCIS Reinforced Conveyor Tubes</DisplayName>
+<Description>Longer variants of the Reinforced Conveyor Tubes</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Reinforced_Conveyor_Tube_5x" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Reinforced_Conveyor_Tube_9x" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Reinforced_Conveyor_Tube_15x" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Reinforced_Conveyor_Tube_21x" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>WolfCraft Industries</DisplayName>
+<Name>WolfCraft Industries</Name>
+<ItemIds>
+<string>WCIS_Reinforced_Conveyor_Tube_5x</string>
+<string>WCIS_Reinforced_Conveyor_Tube_9x</string>
+<string>WCIS_Reinforced_Conveyor_Tube_15x</string>
+<string>WCIS_Reinforced_Conveyor_Tube_21x</string>
+<string>WCIS_Conveyor_Tube_5x</string>
+<string>WCIS_Conveyor_Tube_9x</string>
+<string>WCIS_Conveyor_Tube_15x</string>
+<string>WCIS_Conveyor_Tube_21x</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

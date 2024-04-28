@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Triggers-FAF</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Action-FAF</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Action-FAF2</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Triggers-GC</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Action-GC</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Action-GC2</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Triggers-COL</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Action-COL</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Action-COL2</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Condition-FAF</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Condition-GC</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Condition-COL</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Capturable-Condition-NotCOL</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

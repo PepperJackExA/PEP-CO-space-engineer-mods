@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+- replaced '<Description>Description_CSArmor</Description>' with '<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>'
+- replaced '<SubtypeId>' with '<SubtypeId>CS'
+- replaced '<BlockPairName>' with '<BlockPairName>CS'
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Carbon-Silicate Armor Corner Square</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CSArmorCornerSquare</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="5" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="2" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorCornerSquare</BlockPairName>
+<BuildTimeSeconds>3.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorCornerSquare</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Corner Square</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorCornerSquare</BlockPairName>
+<BuildTimeSeconds>1.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSLargeBlockArmorCornerSquareInverted</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Corner Square Inverted</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="15" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="4" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorCornerSquareInverted</BlockPairName>
+<BuildTimeSeconds>7.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorCornerSquareInverted</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Corner Square Inverted</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorCornerSquareInverted</BlockPairName>
+<BuildTimeSeconds>3.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSLargeBlockArmorHalfCorner</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Corner</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="5" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfCorner</BlockPairName>
+<BuildTimeSeconds>2.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorHalfCorner</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Corner</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfCorner</BlockPairName>
+<BuildTimeSeconds>1.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSLargeBlockArmorHalfSlopeCorner</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Slope Corner</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="1" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfSlopeCorner</BlockPairName>
+<BuildTimeSeconds>2.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorHalfSlopeCorner</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Slope Corner</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfSlopeCorner</BlockPairName>
+<BuildTimeSeconds>1.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSLargeBlockArmorHalfSlopeCornerInverted</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Slope Corner Inverted</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="19" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="4" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfSlopeCornerInverted</BlockPairName>
+<BuildTimeSeconds>8.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorHalfSlopeCornerInverted</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Slope Corner Inverted</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfSlopeCornerInverted</BlockPairName>
+<BuildTimeSeconds>3.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSLargeBlockArmorHalfSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Sloped Corner</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="9" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="2" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfSlopedCorner</BlockPairName>
+<BuildTimeSeconds>3.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorHalfSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Sloped Corner</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfSlopedCorner</BlockPairName>
+<BuildTimeSeconds>1.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSLargeBlockArmorHalfSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Sloped Corner Base</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="9" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="2" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>4.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorHalfSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Sloped Corner Base</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>2.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSLargeBlockArmorHalfSlopeInverted</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Slope Inverted</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="18" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="4" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfSlopeInverted</BlockPairName>
+<BuildTimeSeconds>8.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorHalfSlopeInverted</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Half Slope Inverted</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorHalfSlopeInverted</BlockPairName>
+<BuildTimeSeconds>3.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSLargeBlockArmorSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Sloped Corner</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="10" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="3" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorSlopedCorner</BlockPairName>
+<BuildTimeSeconds>4.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Sloped Corner</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorSlopedCorner</BlockPairName>
+<BuildTimeSeconds>2.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSLargeBlockArmorSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Sloped Corner Base</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="16" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="4" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>7.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Sloped Corner Base</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>3.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSLargeBlockArmorSlopedCornerTip</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Sloped Corner Tip</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="4" Subtype="CarbonSilicateLacePlate"/>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorSlopedCornerTip</BlockPairName>
+<BuildTimeSeconds>2.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CSSmallBlockArmorSlopedCornerTip</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Armor Sloped Corner Tip</DisplayName>
+<Description>Carbon-silicate lace is a ship armor technology based on protomolecule research that provides extra protection for minimal additional weight compared to standard light armor.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="CarbonSilicateLacePlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="CarbonSilicateLacePlate"/>
+<BlockPairName>CSArmorSlopedCornerTip</BlockPairName>
+<BuildTimeSeconds>1.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

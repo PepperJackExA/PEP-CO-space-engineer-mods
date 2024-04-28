@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>RetaliationTriggers</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Retaliation-Trigger-RemoveTags</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Retaliation-Condition-RemoveTags</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Retaliation-Action-RemoveTags-Chat</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Retaliation-Chat-RemoveTags</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-Retaliation-Action-RemoveTags</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

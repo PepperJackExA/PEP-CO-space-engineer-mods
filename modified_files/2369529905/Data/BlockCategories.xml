@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>+ Ravenbolt</DisplayName>
+<Name>z-mod-Ravenbolt</Name>
+<SearchBlocks>true</SearchBlocks>
+<IsToolCategory>false</IsToolCategory>
+<ItemIds>
+<string>ExtendedPistonBase/RB_Piston_1_Base_Small</string>
+<string>ExtendedPistonBase/RB_Piston_2_Base_Small</string>
+<string>ExtendedPistonBase/RB_Piston_3_Base_Small</string>
+<string>ExtendedPistonBase/RB_Piston_5_Base_Small</string>
+<string>ExtendedPistonBase/RB_Piston_10_Base_Small</string>
+<string>ExtendedPistonBase/RB_Piston_20_Base_Small</string>
+<string>ExtendedPistonBase/RB_Piston_1_Base_Large</string>
+<string>ExtendedPistonBase/RB_Piston_2_Base_Large</string>
+<string>ExtendedPistonBase/RB_Piston_3_Base_Large</string>
+<string>ExtendedPistonBase/RB_Piston_5_Base_Large</string>
+<string>ExtendedPistonBase/RB_Piston_10_Base_Large</string>
+<string>ExtendedPistonBase/RB_Piston_20_Base_Large</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+<BlockPositions>
+<BlockPosition>
+<Name>RB_Piston_1_Base_Small</Name>
+</BlockPosition>
+</BlockPositions>
+</Definitions>
+ 

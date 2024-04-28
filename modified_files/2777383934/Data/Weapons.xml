@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>PDLaser</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="720" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="PDLaserCharge" />
+</AmmoMagazines>
+<ReloadTime>0</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallMissileLauncher</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="60" ShootSoundName="WepShipSmallMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="0" />
+<DeviateShotAngle>0.1</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+<AmmoMagazine Subtype="CronyxMissile200mm" />
+</AmmoMagazines>
+<ReloadTime>2000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeMissileLauncher</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="120" ShootSoundName="WepShipSmallMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="19" />
+<DeviateShotAngle>0.1</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+<AmmoMagazine Subtype="CronyxMissile200mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeMissileTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="90" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="6" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+<AmmoMagazine Subtype="CronyxMissile200mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeCalibreTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="80" ShootSoundName="WepLargeCalibreShot" FlightSoundName="HeavyShellFlightSound" ShotsInBurst="2" />
+<DeviateShotAngle>0.3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.3</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="LargeCalibreAmmo" />
+<AmmoMagazine Subtype="CronyxLargeCalibreAmmo" />
+</AmmoMagazines>
+<ReloadTime>12000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeCalibreGun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="80" ShootSoundName="WepLargeCalibreShot" FlightSoundName="HeavyShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0.15</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="LargeCalibreAmmo" />
+<AmmoMagazine Subtype="CronyxLargeCalibreAmmo" />
+</AmmoMagazines>
+<ReloadTime>12000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>MediumCalibreTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="180" ShootSoundName="WepMediumCalibreShot" FlightSoundName="MediumShellFlightSound" ShotsInBurst="2" />
+<DeviateShotAngle>0.35</DeviateShotAngle>
+<DeviateShotAngleAiming>0.35</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="MediumCalibreAmmo" />
+<AmmoMagazine Subtype="CronyxMediumCalibreAmmo" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallMediumCalibreTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="200" ShootSoundName="WepMediumCalibreShot" FlightSoundName="MediumShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="MediumCalibreAmmo" />
+<AmmoMagazine Subtype="CronyxMediumCalibreAmmo" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallMediumCalibreGun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="200" ShootSoundName="WepMediumCalibreShot" FlightSoundName="MediumShellFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>0.2</DeviateShotAngle>
+<DeviateShotAngleAiming>0.2</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="MediumCalibreAmmo" />
+<AmmoMagazine Subtype="CronyxMediumCalibreAmmo" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallMissileTurret</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="90" ShootSoundName="WepTurretMissileShot" FlightSoundName="MissileFlightSound" ShotsInBurst="2" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+<AmmoMagazine Subtype="CronyxMissile200mm" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>GatlingGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="700" ShootSoundName="WepShipGatlingShot" ShotsInBurst="180" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.15</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_25x184mm" />
+<AmmoMagazine Subtype="CronyxNATO_25x184mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>GatlingGunWarfare</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="700" ShootSoundName="WepShipGatlingShot" ShotsInBurst="180" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.15</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_25x184mm" />
+<AmmoMagazine Subtype="CronyxNATO_25x184mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LargeGatlingTurret</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="700" ShootSoundName="WepGatlingTurretShot" ShotsInBurst="180" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.3</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_25x184mm" />
+<AmmoMagazine Subtype="CronyxNATO_25x184mm" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SmallGatlingTurret</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="700" ShootSoundName="WepGatlingTurretShot" ShotsInBurst="180" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.3</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_25x184mm" />
+<AmmoMagazine Subtype="CronyxNATO_25x184mm" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>Autocannon</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="150" ShootSoundName="WepShipAutocannonShot" ShotsInBurst="200" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.15</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="AutocannonClip" />
+<AmmoMagazine Subtype="CronyxAutocannonClip" />
+</AmmoMagazines>
+<ReloadTime>2500</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>AutocannonTurret</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="150" ShootSoundName="WepShipAutocannonShot" ShotsInBurst="200" />
+<ReleaseTimeAfterFire>204</ReleaseTimeAfterFire>
+<DeviateShotAngle>0.25</DeviateShotAngle>
+<DeviateShotAngleAiming>0.25</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="AutocannonClip" />
+<AmmoMagazine Subtype="CronyxAutocannonClip" />
+</AmmoMagazines>
+<ReloadTime>4000</ReloadTime>
+</Weapon>
+</Weapons>
+</Definitions>
+ 

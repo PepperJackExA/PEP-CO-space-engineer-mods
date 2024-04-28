@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_WindTurbine" Subtype="Serg_25MW_Wind_Turbine" />
+<UnlockedByGroups>
+<GroupSubtype>23</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_WindTurbine" Subtype="Serg_5MW_Vertical_Wind_Turbine_Top" />
+<UnlockedByGroups>
+<GroupSubtype>23</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_WindTurbine" Subtype="Serg_5MW_Vertical_Wind_Turbine" />
+<UnlockedByGroups>
+<GroupSubtype>23</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_WindTurbine" Subtype="Serg_10MW_Wind_Turbine" />
+<UnlockedByGroups>
+<GroupSubtype>23</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_WindTurbine" Subtype="Pillar" />
+<UnlockedByGroups>
+<GroupSubtype>23</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WindTurbineDefinition">
+<Id>
+<TypeId>WindTurbine</TypeId>
+<SubtypeId>Serg_25MW_Wind_Turbine</SubtypeId>
+</Id>
+<DisplayName>25MW Wind Turbine</DisplayName>
+<Description>Unlimited Power</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="200" />
+<Component Subtype="Electromagnet" Count="200" />
+<Component Subtype="Construction" Count="500" />
+<Component Subtype="CopperWire" Count="500" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="TitaniumPlate" Count="200" />
+<Component Subtype="Computer" Count="30" />
+<Component Subtype="SteelPlate" Count="1000" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Serg_25MW_Wind_Turbine</BlockPairName>
+<BuildTimeSeconds>360</BuildTimeSeconds>
+<ActionSound>ArcBlockWindTurbine</ActionSound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>false</IsAirTight>
+<TypeId>WindTurbine</TypeId>
+<SubtypeId>SergWindTurbinePart</SubtypeId>
+<TypeId>WindTurbine</TypeId>
+<SubtypeId>SergWindTurbine</SubtypeId>
+<TypeId>WindTurbine</TypeId>
+<SubtypeId>Serg_10MW_Wind_Turbine</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SergWindTurbineCollum</SubtypeId>
+<RaycastersToFullEfficiency>7</RaycastersToFullEfficiency>
+<PCU>1000</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WindTurbineDefinition">
+<Id>
+<TypeId>WindTurbine</TypeId>
+<SubtypeId>SergWindTurbine</SubtypeId>
+</Id>
+<DisplayName>5MW Vertical Wind Turbine Top</DisplayName>
+<Description>Unlimited Power</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Electromagnet" Count="80" />
+<Component Subtype="Construction" Count="200" />
+<Component Subtype="CopperWire" Count="240" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="300" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SergWindTurbine</BlockPairName>
+<BuildTimeSeconds>75</BuildTimeSeconds>
+<ActionSound>ArcBlockWindTurbine</ActionSound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>false</IsAirTight>
+<RaycastersToFullEfficiency>7</RaycastersToFullEfficiency>
+<PCU>250</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WindTurbineDefinition">
+<Id>
+<TypeId>WindTurbine</TypeId>
+<SubtypeId>SergWindTurbinePart</SubtypeId>
+</Id>
+<DisplayName>5MW Vertical Wind Turbine</DisplayName>
+<Description>Unlimited Power</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Electromagnet" Count="80" />
+<Component Subtype="Construction" Count="200" />
+<Component Subtype="CopperWire" Count="240" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="300" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SergWindTurbinePart</BlockPairName>
+<BuildTimeSeconds>75</BuildTimeSeconds>
+<ActionSound>ArcBlockWindTurbine</ActionSound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>false</IsAirTight>
+<RaycastersToFullEfficiency>7</RaycastersToFullEfficiency>
+<PCU>250</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WindTurbineDefinition">
+<Id>
+<TypeId>WindTurbine</TypeId>
+<SubtypeId>Serg_10MW_Wind_Turbine</SubtypeId>
+</Id>
+<DisplayName>10MW Vertical Wind Turbine</DisplayName>
+<Description>Unlimited Power</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Electromagnet" Count="100" />
+<Component Subtype="Construction" Count="300" />
+<Component Subtype="CopperWire" Count="300" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="InteriorPlate" Count="100" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="400" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Serg_10MW_Wind_Turbine</BlockPairName>
+<BuildTimeSeconds>120</BuildTimeSeconds>
+<ActionSound>ArcBlockWindTurbine</ActionSound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>false</IsAirTight>
+<RaycastersToFullEfficiency>7</RaycastersToFullEfficiency>
+<PCU>500</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SergWindTurbineCollum</SubtypeId>
+</Id>
+<DisplayName>Wind Turbine Pillar</DisplayName>
+<Description></Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="80" />
+<Component Subtype="Construction" Count="90" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="InteriorPlate" Count="15" />
+</Components>
+<CriticalComponent Index="0" Subtype="SmallTube"/>
+<BlockPairName>SergWindTurbineCollum</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

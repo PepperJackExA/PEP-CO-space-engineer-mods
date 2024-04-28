@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<ItemIds>
+<string>RadioAntenna/OmnidirectionalAntenna</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<ItemIds>
+<string>RadioAntenna/OmnidirectionalAntennaSmall</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>+ Kookas</DisplayName>
+<Name>z-mod-kookas</Name>
+<ItemIds>
+<string>RadioAntenna/OmnidirectionalAntenna</string>
+<string>RadioAntenna/OmnidirectionalAntennaSmall</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

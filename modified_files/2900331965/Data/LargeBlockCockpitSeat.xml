@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>LargeBlockCockpitSeat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Cockpit1</DisplayName>
+<Description>Description_Cockpit</Description>
+<CubeSize>Large</CubeSize>
+<PrimarySound>BlockCockpitLrg</PrimarySound>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Display" Count="8" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="BulletproofGlass" Count="60" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Cockpit</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<GetInSound>ShipLrgCockpitIn</GetInSound>
+<GetOutSound>ShipLrgCockpitOut</GetOutSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

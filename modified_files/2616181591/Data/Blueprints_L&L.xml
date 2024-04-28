@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CLGGMag</SubtypeId>
+</Id>
+<DisplayName>CLG Autocannon Magazine</DisplayName>
+<Prerequisites>
+<Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>155mmAPShell</SubtypeId>
+</Id>
+<DisplayName>155mm AP Shell</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>155mmDUAPShell</SubtypeId>
+</Id>
+<DisplayName>155mm DUAP Shell</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="DepletedUranium" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>155mmHEShell</SubtypeId>
+</Id>
+<DisplayName>155mm HE Shell</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>305mmAPShell</SubtypeId>
+</Id>
+<DisplayName>305mm AP Shell</DisplayName>
+<Prerequisites>
+<Item Amount="12" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>305mmDUAPShell</SubtypeId>
+</Id>
+<DisplayName>305mm DUAP Shell</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="DepletedUranium" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>305mmHEShell</SubtypeId>
+</Id>
+<DisplayName>305mm HE Shell</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="15" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>APCoilgunShell</SubtypeId>
+</Id>
+<DisplayName>AP Coilgun Shell</DisplayName>
+<Prerequisites>
+<Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Titanium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>DUAPCoilgunShell</SubtypeId>
+</Id>
+<DisplayName>DUAP Coilgun Shell</DisplayName>
+<Prerequisites>
+<Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="DepletedUranium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

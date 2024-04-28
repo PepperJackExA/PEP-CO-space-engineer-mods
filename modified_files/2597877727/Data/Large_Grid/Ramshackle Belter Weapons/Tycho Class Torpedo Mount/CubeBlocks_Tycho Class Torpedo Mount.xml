@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Tycho Class Torpedo Mount</SubtypeId>
+</Id>
+<DisplayName>Tycho Class Torpedo Mount</DisplayName>
+<Description>A single torpedo launcher meant for long range engagements. [Stores 2 torpedoes - Accepts Ramshackle Torpedoes - requires manual loading]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="150" />
+<Component Subtype="SmallTube" Count="120" />
+<Component Subtype="LargeTube" Count="135" />
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="Motor" Count="300" />
+<Component Subtype="Computer" Count="300" />
+<Component Subtype="MetalGrid" Count="300" />
+<Component Subtype="Construction" Count="210" />
+<Component Subtype="SteelPlate" Count="570" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>45</OperationalPowerConsumption>
+<BlockPairName>Tycho Class Torpedo Mount</BlockPairName>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Tycho Class Torpedo Mount MES</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>Tycho Class Torpedo Mount</DisplayName>
+<Description>A single torpedo launcher meant for long range engagements. Stores 2 torpedoes (requires manual loading).</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="150" />
+<Component Subtype="SmallTube" Count="120" />
+<Component Subtype="LargeTube" Count="135" />
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="Motor" Count="300" />
+<Component Subtype="Computer" Count="300" />
+<Component Subtype="MetalGrid" Count="300" />
+<Component Subtype="Construction" Count="210" />
+<Component Subtype="SteelPlate" Count="570" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>45</OperationalPowerConsumption>
+<BlockPairName>Tycho Class Torpedo Mount MES</BlockPairName>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

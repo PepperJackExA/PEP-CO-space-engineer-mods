@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallArmorPanelAngle2x1x1</SubtypeId>
+</Id>
+<DisplayName>Armor Panel 2x1x1 Angle</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorPanelAngle2x1x1</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorPanelAngle2x1x1</SubtypeId>
+</Id>
+<DisplayName>Armor Panel 2x1x1 Angle</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorPanelAngle2x1x1</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

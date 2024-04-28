@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorCube</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Block</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="25" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorCube</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorSlope</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Slope</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="13" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorSlope</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorCorner</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Corner</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="4" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorInvCorner</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Inv. Corner</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="21" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorInvCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorCornerSquare</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Corner Square</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="7" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorCornerSquare</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorCornerSquareInv</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Corner Square Inv.</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="19" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorCornerSquareInv</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorSlope2x1x1Base</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Slope 2x1x1 Base</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="19" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorSlope2x1x1Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorSlope2x1x1Tip</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Slope 2x1x1 Tip</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="6" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorSlope2x1x1Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHalfCompositeArmor</SubtypeId>
+</Id>
+<DisplayName>Half Composite Armor Block</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="12" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>HalfCompositeArmor</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHalfSlopeCompositeArmor</SubtypeId>
+</Id>
+<DisplayName>Half Slope Composite Armor</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="4" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>HalfSlopeCompositeArmor</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHalfSlopeCornerCompositeArmor</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Half Slope Corner</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="2" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>HalfSlopeCornerCompositeArmor</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorHalfCorner</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Half Corner</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="6" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorHalfCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorHalfSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Half Sloped Corner</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="11" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorHalfSlopedCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorCorner2x1x1Base</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Corner 2x1x1 Base</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="10" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorCorner2x1x1Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorCorner2x1x1Tip</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Corner 2x1x1 Tip</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="3" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorCorner2x1x1Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorInvCorner2x1x1Base</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Inv. Corner 2x1x1 Base</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="22" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorInvCorner2x1x1Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorInvCorner2x1x1Tip</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Inv. Corner 2x1x1 Tip</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="16" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorInvCorner2x1x1Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHalfSlopeCornerInvCompositeArmor</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Half Slope Corner Inv.</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="23" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>HalfSlopeCornerInvCompositeArmor</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHalfSlopeInvCompositeArmor</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Half Slope Inv.</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="22" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>HalfSlopeInvCompositeArmor</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeSlopedCornerCompositeArmorTip</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Sloped Corner Tip</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="5" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>SlopedCornerCompositeArmorTip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Sloped Corner Base</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="20" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorSlopedCornerBase</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Sloped Corner</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="13" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorSlopedCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeCompositeArmorHalfSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>Composite Armor Half Sloped Corner Base</DisplayName>
+<Description>Lighter and more durable than Heavy Armor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CompositeArmor" Count="11" />
+</Components>
+<CriticalComponent Subtype="CompositeArmor" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>CompositeArmorHalfSlopedCornerBase</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

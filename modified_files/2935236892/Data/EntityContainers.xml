@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_CubeBlock</TypeId>
+</Id>
+<DefaultComponents>
+<Component>MyObjectBuilder_PositionComponent</Component>
+<Component>MyObjectBuilder_RenderDebugComponent</Component>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Reactor</TypeId>
+<SubtypeId>Custom_Block_Name</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_ModStorageComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>EventControllerBlock</TypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="ObjectBuilderWeather" SubtypeId="WeatherEvent" ForceCreate="true"/>
+<Component BuilderType="ObjectBuilderProjectionBuilt" SubtypeId="ProjectionBuiltEvent" ForceCreate="true"/>
+<Component BuilderType="ObjectBuilderEventControllerTriggered" SubtypeId="EventControllerTriggeredEvent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+</Definitions>
+ 

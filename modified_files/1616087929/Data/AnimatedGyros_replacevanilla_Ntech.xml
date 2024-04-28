@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchBlock xsi:type="ResearchBlock"> <!-- put here all blocks you want in a specific group -->
+<Id Type="MyObjectBuilder_Gyro" Subtype="LargeBlockAnimGyro" />
+<UnlockedByGroups>
+<GroupSubtype>16</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_Gyro" Subtype="LBAnimGyroInside" />
+<UnlockedByGroups>
+<GroupSubtype>16</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_Gyro" Subtype="SmallBlockAnimGyro" />
+<UnlockedByGroups>
+<GroupSubtype>16</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<!-- ResearchGroups -->
+<ResearchGroups>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="AnimatedGyros" /><!-- the subtype can be anything you want, it is used in the UnlockedByGroups tag -->
+<Members>
+<BlockId Type="MyObjectBuilder_Gyro" Subtype="LBAnimGyroInside" />
+<BlockId Type="MyObjectBuilder_Gyro" Subtype="SmallBlockAnimGyro" />
+<BlockId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockAnimGyro" /> <!-- Only block that is visible in the block grouping (block variants) here, if multiple single blocks place each one here-->
+</Members>
+</ResearchGroup>
+</ResearchGroups>
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Ntech Mods</DisplayName>
+<Name>Ntech</Name>
+<ItemIds>
+<string>SmallBlockGyro</string>
+<string>LargeBlockGyro</string>
+<string>LBAnimGyroInside</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_GyroDefinition">
+<Id>
+<TypeId>Gyro</TypeId>
+<SubtypeId>LBAnimGyroInside</SubtypeId>
+</Id>
+<DisplayName>Animated Gyroscope</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="500" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>GyroscopeInside</BlockPairName>
+<Description>Gyroscopes allow ships to orientate using the mouse and stabilize rotating grids. These gyroscopes are animated and look exactly like the vanilla gyros - mostly.
+This gyroscope has a static exterior with a rotating weighted wheel inside.</Description>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<PrimarySound>BlockGyroscope</PrimarySound>
+<ResourceSinkGroup>Gyro</ResourceSinkGroup>
+<ForceMagnitude>3.36E+07</ForceMagnitude>
+<RequiredPowerInput>0.00003</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GyroDefinition">
+<Id>
+<TypeId>Gyro</TypeId>
+<SubtypeId>LargeBlockGyro</SubtypeId>
+</Id>
+<DisplayName>Animated Gyroscope</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="500" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Gyroscope</BlockPairName>
+<TypeId>Gyro</TypeId>
+<SubtypeId>LBAnimGyroInside</SubtypeId>
+<Description>Gyroscopes allow ships to orientate using the mouse and stabilize rotating grids. These gyroscopes are animated and look exactly like the vanilla gyros - mostly.
+This gyroscope has an externally rotating sphere.</Description>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<PrimarySound>BlockGyroscope</PrimarySound>
+<ResourceSinkGroup>Gyro</ResourceSinkGroup>
+<ForceMagnitude>3.36E+07</ForceMagnitude>
+<RequiredPowerInput>0.00003</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GyroDefinition">
+<Id>
+<TypeId>Gyro</TypeId>
+<SubtypeId>SmallBlockGyro</SubtypeId>
+</Id>
+<DisplayName>Animated Gyroscope</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Gyroscope</BlockPairName>
+<Description>Gyroscopes allow ships to orientate using the mouse and stabilize rotating grids.
+These gyroscopes are animated and look exactly like the vanilla gyros - mostly.</Description>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<PrimarySound>BlockGyroscope</PrimarySound>
+<ResourceSinkGroup>Gyro</ResourceSinkGroup>
+<ForceMagnitude>448000</ForceMagnitude>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+<BlockPosition>
+<Name>AnimGyroscope</Name>
+</BlockPosition>
+</BlockPositions>
+</Definitions>
+ 

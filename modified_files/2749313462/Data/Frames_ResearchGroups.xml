@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchGroups>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="Frames" />
+<Members>
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="FrameBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="FrameSlope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="FrameCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="FrameCornerInv" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="FrameBracket" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="Frame1x1Flat" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="Frame1x2Flat" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="Frame2x2Flat" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="Frame1x1Slope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="Frame2x1Slope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrameBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrameSlope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrameCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrameCornerInv" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrameBracket" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrame1x1Flat" />
+</Members>
+</ResearchGroup>
+</ResearchGroups>
+</Definitions>
+ 

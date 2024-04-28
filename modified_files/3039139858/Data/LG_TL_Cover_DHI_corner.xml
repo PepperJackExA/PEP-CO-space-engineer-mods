@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LG_TL_Cover_DHI_corner</SubtypeId>
+</Id>
+<DisplayName>LG_TL_Cover_DHI_corner</DisplayName>
+<Description>LG_TL_Cover_DHI_corner</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>LG_TL_Cover_DHI_corner</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

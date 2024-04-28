@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>WeaponPaintGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="300" ShootSoundName="" />
+<DeviateShotAngle>15</DeviateShotAngle>
+<ReleaseTimeAfterFire>500</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="PaintGunMag" />
+</AmmoMagazines>
+</Weapon>
+</Weapons>
+<PhysicalItems>
+<PhysicalItem xsi:type="MyObjectBuilder_WeaponItemDefinition">
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>PhysicalPaintGun</SubtypeId>
+</Id>
+<DisplayName>Paint Gun</DisplayName>
+<Description>[ERROR: Mod code not working!]</Description>
+<Mass>0.5</Mass>
+<Volume>2</Volume>
+</PhysicalItem>
+</PhysicalItems>
+<HandItems>
+<Id Type="MyObjectBuilder_AutomaticRifle" Subtype="PaintGun" />
+<XAmplitudeOffset>0</XAmplitudeOffset>
+<YAmplitudeOffset>0</YAmplitudeOffset>
+<ZAmplitudeOffset>0</ZAmplitudeOffset>
+<XAmplitudeScale>0.0821828842</XAmplitudeScale>
+<YAmplitudeScale>0.2191534</YAmplitudeScale>
+<ZAmplitudeScale>0.2</ZAmplitudeScale>
+<RunMultiplier>1.0</RunMultiplier>
+</HandItem>
+</HandItems>
+</Definitions>
+ 

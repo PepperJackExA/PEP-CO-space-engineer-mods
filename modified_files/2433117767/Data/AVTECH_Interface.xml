@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+<Id>
+<TypeId>CryoChamber</TypeId>
+<SubtypeId>AVTECH_Interface</SubtypeId>
+</Id>
+<DisplayName>Interface</DisplayName>
+<Description>An Engineer friendly system to access the terminal and conveyor network. With integrated LCD display and compatibility with the Build Planner system.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="Motor" Count="8" />
+<Component Subtype="Display" Count="8" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="BulletproofGlass" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AVTECH_Interface</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>false</EnableFirstPerson>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<IdlePowerConsumption>0.00003</IdlePowerConsumption>
+<!--<OutsideSound>BlockCryoOut</OutsideSound>
+<InsideSound>BlockCryoIn</InsideSound>-->
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<!--<IsAirTight>false</IsAirTight>-->
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+<Id>
+<TypeId>CryoChamber</TypeId>
+<SubtypeId>AVTECH_Interface_SG</SubtypeId>
+</Id>
+<DisplayName>Interface</DisplayName>
+<Description>An Engineer friendly system to access the terminal and conveyor network. With integrated LCD display and compatibility with the Build Planner system.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="BulletproofGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AVTECH_Interface</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>false</EnableFirstPerson>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<IdlePowerConsumption>0.00003</IdlePowerConsumption>
+<!--<OutsideSound>BlockCryoOut</OutsideSound>
+<InsideSound>BlockCryoIn</InsideSound>-->
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<!--<IsAirTight>false</IsAirTight>-->
+</Definition>
+</CubeBlocks>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AVTECH_Interface" />
+<DisplayName>Interface</DisplayName>
+<Description>An Engineer friendly system to access the terminal and conveyor network. With integrated LCD display and compatibility with the Build Planner system.</Description>
+<Blocks>
+<Block Type="CryoChamber" Subtype="AVTECH_Interface" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+<ResearchGroups>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="AVTECH_Interface" />
+<Members>
+<BlockId Type="MyObjectBuilder_CryoChamber" Subtype="AVTECH_Interface" />
+<BlockId Type="MyObjectBuilder_CryoChamber" Subtype="AVTECH_Interface_SG" />
+</Members>
+</ResearchGroup>
+</ResearchGroups>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_CryoChamber" Subtype="AVTECH_Interface" />
+<UnlockedByGroups>
+<GroupSubtype>3</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_CryoChamber" Subtype="AVTECH_Interface_SG" />
+<UnlockedByGroups>
+<GroupSubtype>3</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+</Definitions>
+ 

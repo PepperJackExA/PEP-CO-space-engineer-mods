@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_LA_Half_Corner_Inv_Base</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Half_Corner_Inv_Base}</DisplayName>
+<Description>{LOC:Description_LightArmor}</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="18" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_LA_Half_Corner_Inv_Base</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_LA_Half_Corner_Inv_Base</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Half_Corner_Inv_Base}</DisplayName>
+<Description>{LOC:Description_LightArmor}</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_LA_Half_Corner_Inv_Base</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_HA_Half_Corner_Inv_Base</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Half_Corner_Inv_Base}</DisplayName>
+<Description>{LOC:Description_HeavyArmor}</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="120" />
+<Component Subtype="MetalGrid" Count="45" />
+<Component Subtype="SteelPlate" Count="13" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_HA_Half_Corner_Inv_Base</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_HA_Half_Corner_Inv_Base</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Half_Corner_Inv_Base}</DisplayName>
+<Description>{LOC:Description_HeavyArmor}</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_HA_Half_Corner_Inv_Base</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_LA_Half_Corner_Inv_BaseMirror</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Half_Corner_Inv_BaseMirror}</DisplayName>
+<Description>{LOC:Description_LightArmor}</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="18" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_LA_Half_Corner_Inv_BaseMirror</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_LA_Half_Corner_Inv_BaseMirror</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Half_Corner_Inv_BaseMirror}</DisplayName>
+<Description>{LOC:Description_LightArmor}</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_LA_Half_Corner_Inv_BaseMirror</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_HA_Half_Corner_Inv_BaseMirror</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Half_Corner_Inv_BaseMirror}</DisplayName>
+<Description>{LOC:Description_HeavyArmor}</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="120" />
+<Component Subtype="MetalGrid" Count="45" />
+<Component Subtype="SteelPlate" Count="13" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_HA_Half_Corner_Inv_BaseMirror</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_HA_Half_Corner_Inv_BaseMirror</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Half_Corner_Inv_BaseMirror}</DisplayName>
+<Description>{LOC:Description_HeavyArmor}</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_HA_Half_Corner_Inv_BaseMirror</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

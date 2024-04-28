@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>L_Wood03_Convert</SubtypeId>
+</Id>
+<DisplayName>Make Wood Planks</DisplayName>
+<Description>Build the small block out of wood logs and grind it to obtain wood planks for construction. Build the large block in a voxel, and use your drill on it to light it up.</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="WoodLogs" Count="500">
+<DeconstructId>
+<TypeId>Component</TypeId>
+<SubtypeId>WoodPlank</SubtypeId>
+</DeconstructId>
+</Component>
+</Components>
+<CriticalComponent Subtype="WoodLogs" Index="0" />
+<BlockPairName>Wood03_Convert</BlockPairName>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>ParticleHeavyMech</DestroySound>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Wheel</TypeId>
+<SubtypeId>WheelPlankLarge</SubtypeId>
+</Id>
+<DisplayName>Wood Raft Block Large</DisplayName>
+<Description>Floats well on water. For small grids, a mixture of large and small raft blocks is suggested.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="9" />
+<Component Subtype="WoodPlank" Count="1" />
+<Component Subtype="WoodLogs" Count="990" />
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>WheelPlank</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<Public>true</Public>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>ParticleHeavyMech</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Wheel</TypeId>
+<SubtypeId>WheelPlankSmall</SubtypeId>
+</Id>
+<DisplayName>Wood Raft Block Large</DisplayName>
+<Description>Floats well on water. For small grids, a mixture of large and small raft blocks is suggested.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="9" />
+<Component Subtype="WoodPlank" Count="1" />
+<Component Subtype="WoodLogs" Count="990" />
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>WheelPlank</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<Public>true</Public>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>ParticleHeavyMech</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Wheel</TypeId>
+<SubtypeId>WheelPlankTiny</SubtypeId>
+</Id>
+<DisplayName>Wood Raft Block Small</DisplayName>
+<Description>Floats well on water. For small grids, a mixture of large and small raft blocks is suggested.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="4" />
+<Component Subtype="WoodPlank" Count="1" />
+<Component Subtype="WoodLogs" Count="20" />
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>WheelPlankTiny</BlockPairName>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<Public>true</Public>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>ParticleHeavyMech</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>L_Wood03_Campfire</SubtypeId>
+</Id>
+<DisplayName>Wood Campfire Block</DisplayName>
+<Description>Build the small block out of wood logs and grind it to obtain wood planks for construction. Build the large block in a voxel, and use your drill on it to light it up.</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="WoodLogs" Count="90" />
+<Component Subtype="WoodLogs" Count="1" />
+<Component Subtype="WoodLogs" Count="1" />
+<Component Subtype="WoodLogs" Count="1" />
+<Component Subtype="WoodLogs" Count="1" />
+<Component Subtype="WoodLogs" Count="1" />
+<Component Subtype="WoodLogs" Count="5" />
+</Components>
+<CriticalComponent Subtype="WoodLogs" Index="4" />
+<BlockPairName>Wood03_Convert</BlockPairName>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>1</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>1</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>0.125</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<PrimarySound>SmShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>ParticleWeapExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

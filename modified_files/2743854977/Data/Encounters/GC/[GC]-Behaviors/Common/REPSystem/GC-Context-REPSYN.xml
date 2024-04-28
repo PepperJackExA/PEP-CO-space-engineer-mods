@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>GC-Reputation-Condition-UpdateREPSYN</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>GC-Reputation-Trigger-Compromised-UpdateREPSYN</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>GC-Reputation-Action-Compromised-UpdateREPSYN</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>GC-Reputation-Command-Compromised-SYNThanksPlayer</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

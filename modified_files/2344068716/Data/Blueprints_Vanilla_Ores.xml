@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>StoneOreToIngotStarting</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+<Prerequisites>
+<Item Amount="100" TypeId="Ore" SubtypeId="Stone" />
+</Prerequisites>
+<Results>
+<Item Amount="75" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+</Results>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>StoneOreToIngotBasic</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+<Prerequisites>
+<Item Amount="100" TypeId="Ore" SubtypeId="Stone" />
+</Prerequisites>
+<Results>
+<Item Amount="65" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="19" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="4" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="7" TypeId="Ingot" SubtypeId="Copper" />
+</Results>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>StoneOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+<Prerequisites>
+<Item Amount="100" TypeId="Ore" SubtypeId="Stone" />
+</Prerequisites>
+<Results>
+<Item Amount="50" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="25" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="9" TypeId="Ingot" SubtypeId="Copper" />
+</Results>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>IronOreToIngotStarting</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_IronIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Iron" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>IronOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_IronIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Iron" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>NickelOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_NickelIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Nickel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CobaltOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_CobaltIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Cobalt" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SiliconOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_SiliconWafer</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Silicon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SilverOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_SilverIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Silver" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>GoldOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_GoldIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Gold" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PlatinumOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_PlatinumIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Platinum" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>UraniumOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_UraniumIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Uranium" />
+</Prerequisites>
+<Results>
+<Item Amount="0.05" TypeId="Ingot" SubtypeId="Uranium" />
+<Item Amount="0.2" TypeId="Ingot" SubtypeId="DepletedUranium" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ScrapIngotToIronIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_IronIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Scrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ScrapToIronIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_IronIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Scrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

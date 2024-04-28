@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>UN_O2GEN</SubtypeId>
+</Id>
+<DisplayName>UN Oxygen Generator</DisplayName>
+<Description>Description_OxygenGenerator</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="110" />
+<Component Subtype="UN_Filter" Count="16" />
+<Component Subtype="StructuralReinforcement" Count="120" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="UN_Scrubber" Count="3" />
+<Component Subtype="UN_Cannister" Count="1" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="UN_Drum" Count="1" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="UN_Filter" Index="0" />
+<IsAirTight>false</IsAirTight>
+<BlockPairName>UNOxygenGenerator</BlockPairName>
+<BuildTimeSeconds>22</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>50</IceConsumptionPerSecond>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>1</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</Id>
+<IceToGasRatio>2</IceToGasRatio>
+</GasInfo>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</Id>
+<IceToGasRatio>10</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Ice</Class>
+<Class>OxygenBottles</Class>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>500</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RingGate</SubtypeId>
+</Id>
+<DisplayName>Ring Gate</DisplayName>
+<Description>Ring Gate Go Brrrr</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="AdminKit" Count="1" />
+<Component Subtype="Computer" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdminKit" Index="0" />
+<BlockPairName>RingGate</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

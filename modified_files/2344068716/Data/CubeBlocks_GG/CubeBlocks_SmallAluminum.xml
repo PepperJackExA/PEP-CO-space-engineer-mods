@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumCube</SubtypeId>
+</Id>
+<DisplayName>Aluminum Block</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumCube</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumSlope</SubtypeId>
+</Id>
+<DisplayName>Aluminum Slope</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumSlope</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumCorner</SubtypeId>
+</Id>
+<DisplayName>Aluminum Corner</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumInvCorner</SubtypeId>
+</Id>
+<DisplayName>Aluminum Inv. Corner</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumInvCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumCornerSquare</SubtypeId>
+</Id>
+<DisplayName>Aluminum Corner Square</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumCornerSquare</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumCornerSquareInv</SubtypeId>
+</Id>
+<DisplayName>Aluminum Corner Square Inv.</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumCornerSquareInv</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumSlope2x1x1Base</SubtypeId>
+</Id>
+<DisplayName>Aluminum Slope 2x1x1 Base</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumSlope2x1x1Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumSlope2x1x1Tip</SubtypeId>
+</Id>
+<DisplayName>Aluminum Slope 2x1x1 Tip</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumSlope2x1x1Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallHalfAluminum</SubtypeId>
+</Id>
+<DisplayName>Half Aluminum Block</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>HalfAluminum</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallHalfSlopeAluminum</SubtypeId>
+</Id>
+<DisplayName>Half Slope Aluminum</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>HalfSlopeAluminum</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallHalfSlopeCornerAluminum</SubtypeId>
+</Id>
+<DisplayName>Half Slope Corner Aluminum</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>HalfSlopeCornerAluminum</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumHalfCorner</SubtypeId>
+</Id>
+<DisplayName>Aluminum Half Corner</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumHalfCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumHalfSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>Aluminum Half Sloped Corner</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumHalfSlopedCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumCorner2x1x1Base</SubtypeId>
+</Id>
+<DisplayName>Aluminum Corner 2x1x1 Base</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumCorner2x1x1Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumCorner2x1x1Tip</SubtypeId>
+</Id>
+<DisplayName>Aluminum Corner 2x1x1 Tip</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumCorner2x1x1Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumInvCorner2x1x1Base</SubtypeId>
+</Id>
+<DisplayName>Aluminum Inv. Corner 2x1x1 Base</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumInvCorner2x1x1Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumInvCorner2x1x1Tip</SubtypeId>
+</Id>
+<DisplayName>Aluminum Inv. Corner 2x1x1 Tip</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumInvCorner2x1x1Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallHalfSlopeCornerInvAluminum</SubtypeId>
+</Id>
+<DisplayName>Aluminum Half Slope Corner Inv.</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>HalfSlopeCornerInvAluminum</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallHalfSlopeInvAluminum</SubtypeId>
+</Id>
+<DisplayName>Aluminum Half Slope Inv.</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>HalfSlopeInvAluminum</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallSlopedCornerAluminumTip</SubtypeId>
+</Id>
+<DisplayName>Aluminum Sloped Corner Tip</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>SlopedCornerAluminumTip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>Aluminum Sloped Corner Base</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumSlopedCornerBase</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>Aluminum Sloped Corner</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumSlopedCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallAluminumHalfSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>Aluminum Half Sloped Corner Base</DisplayName>
+<Description>Lighter than Light Armor, but less durable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+<BlockPairName>AluminumHalfSlopedCornerBase</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

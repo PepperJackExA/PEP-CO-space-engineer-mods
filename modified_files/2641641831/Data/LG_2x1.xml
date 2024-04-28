@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LG_2x1 Concave Base</SubtypeId>
+</Id>
+<DisplayName>2x1 Concave Base</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="SteelPlate" Count="15"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>2x1 Concave Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LG_2x1 Concave Tip</SubtypeId>
+</Id>
+<DisplayName>2x1 Concave Tip</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+<Component Subtype="SteelPlate" Count="4"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>2x1 Concave Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LG_2x1 Convex Base</SubtypeId>
+</Id>
+<DisplayName>2x1 Convex Base</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="SteelPlate" Count="15"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>2x1 Convex Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LG_2x1 Convex Tip</SubtypeId>
+</Id>
+<DisplayName>2x1 Convex Tip</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+<Component Subtype="SteelPlate" Count="2"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>2x1 Convex Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LG_2x1 Concave Base H</SubtypeId>
+</Id>
+<DisplayName>Heavy 2x1 Concave Base</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="25"/>
+<Component Subtype="MetalGrid" Count="45"/>
+<Component Subtype="SteelPlate" Count="100"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>2x1 Concave Base Heavy</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LG_2x1 Concave Tip H</SubtypeId>
+</Id>
+<DisplayName>Heavy 2x1 Concave Tip</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15"/>
+<Component Subtype="MetalGrid" Count="15"/>
+<Component Subtype="SteelPlate" Count="30"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>2x1 Concave Tip Heavy</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LG_2x1 Convex Base H</SubtypeId>
+</Id>
+<DisplayName>Heavy 2x1 Convex Base</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="25"/>
+<Component Subtype="MetalGrid" Count="45"/>
+<Component Subtype="SteelPlate" Count="100"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>2x1 Convex Base Heavy</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LG_2x1 Convex Tip H</SubtypeId>
+</Id>
+<DisplayName>Heavy 2x1 Convex Tip</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10"/>
+<Component Subtype="MetalGrid" Count="10"/>
+<Component Subtype="SteelPlate" Count="25"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>2x1 Convex Tip Heavy</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

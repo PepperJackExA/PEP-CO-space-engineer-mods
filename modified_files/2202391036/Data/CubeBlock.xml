@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_SafeZoneBlockDefinition">
+<Id>
+<TypeId>SafeZoneBlock</TypeId>
+<SubtypeId>SafeZoneBlock</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SafeZone</DisplayName>
+<Description>Description_SafeZone</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="750" />
+<Component Subtype="Construction" Count="180" />
+<Component Subtype="GravityGenerator" Count="10" />
+<Component Subtype="ZoneChip" Count="5" />
+<Component Subtype="MetalGrid" Count="80" />
+<Component Subtype="Computer" Count="120" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SafeZone</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<ActionSound>BlockSafeZone</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>PEPCO_LowPowerCoalFurnace</SubtypeId>
+</Id>
+<DisplayName>Low Power Coal Boiler</DisplayName>
+<Description>1/5 the efficientce as normal coal boiler. Must be connected to any Steam Turbine.
+Produces 10 Steam/sec</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30"/>
+<Component Subtype="Construction" Count="10"/>
+<Component Subtype="CopperWire" Count="10"/>
+<Component Subtype="LargeTube" Count="10"/>
+<Component Subtype="Motor" Count="5"/>
+<Component Subtype="HeatingElement" Count="8"/>
+<Component Subtype="Computer" Count="10"/>
+<Component Subtype="SteelPlate" Count="8"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<IsAirTight>true</IsAirTight>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>2.5</IceConsumptionPerSecond>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.05</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<IceToGasRatio>4</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>CoalFurnace</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+<Id>
+<TypeId>HydrogenEngine</TypeId>
+<SubtypeId>PEPCO_LowPowerSteamTurbine</SubtypeId>
+</Id>
+<DisplayName>Low Power Steam Turbine</DisplayName>
+<Description>Low efficiency pressurized Steam Turbine for generating electricity. Must be connected to a source of Steam.
+Max Output: 50MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40"/>
+<Component Subtype="Construction" Count="30"/>
+<Component Subtype="LargeTube" Count="10"/>
+<Component Subtype="SmallTube" Count="8"/>
+<Component Subtype="CopperWire" Count="25"/>
+<Component Subtype="Electromagnet" Count="10"/>
+<Component Subtype="Computer" Count="10"/>
+<Component Subtype="SteelPlate" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<ResourceSinkGroup>Generators</ResourceSinkGroup>
+<IsAirTight>false</IsAirTight>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<PrimarySound>ArcBlockWindTurbine</PrimarySound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+<Id>
+<TypeId>HydrogenEngine</TypeId>
+<SubtypeId>PEPCO_LowPowerSteamTurbineMirrored</SubtypeId>
+</Id>
+<DisplayName>Low Power Steam Turbine - Mirrored</DisplayName>
+<Description>Low efficiency pressurized Steam Turbine for generating electricity. Must be connected to a source of Steam.
+</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40"/>
+<Component Subtype="Construction" Count="30"/>
+<Component Subtype="LargeTube" Count="10"/>
+<Component Subtype="SmallTube" Count="8"/>
+<Component Subtype="CopperWire" Count="25"/>
+<Component Subtype="Electromagnet" Count="10"/>
+<Component Subtype="Computer" Count="10"/>
+<Component Subtype="SteelPlate" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Generators</ResourceSinkGroup>
+<IsAirTight>false</IsAirTight>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<PrimarySound>ArcBlockWindTurbine</PrimarySound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

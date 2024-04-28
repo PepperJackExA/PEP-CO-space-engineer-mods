@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>Eikester_WeaponRack</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>WeaponRacksL</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>WeaponRacksS</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>WeaponRackL</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>WeaponRackS</SubtypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_TurretControlBlockDefinition">
+<Id>
+<TypeId>TurretControlBlock</TypeId>
+<SubtypeId>MES-NpcLargeTurretControlBlock</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>Npc Turret Control Block</DisplayName>
+<Description>Description_TurretControlBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="6" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="ProprietaryTech" Count="1">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<BlockPairName>MES-NpcTurretControlBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<PowerInputIdle>0.0005</PowerInputIdle>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TurretControlBlockDefinition">
+<Id>
+<TypeId>TurretControlBlock</TypeId>
+<SubtypeId>MES-NpcSmallTurretControlBlock</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>Npc Turret Control Block</DisplayName>
+<Description>Description_TurretControlBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Detector" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<BlockPairName>MES-NpcTurretControlBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<PowerInputIdle>0.0005</PowerInputIdle>
+<PCU>100</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SpacebarBridgeconsoles_Consoles" />
+<DisplayName>Spacebar Bridge Consoles</DisplayName>
+<Description>Spacebar Bridge Consoles</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Cockpit" Subtype="EngineerConsole" />
+<Block Type="MyObjectBuilder_Cockpit" Subtype="NavigationConsole" />
+<Block Type="MyObjectBuilder_Cockpit" Subtype="captains_chair_Large" />
+<Block Type="MyObjectBuilder_Cockpit" Subtype="generic_pilotseat" />
+<Block Type="MyObjectBuilder_Cockpit" Subtype="generic_corner" />
+<Block Type="MyObjectBuilder_Cockpit" Subtype="EngineerConsoleSmall" />
+<Block Type="MyObjectBuilder_Cockpit" Subtype="NavigationConsoleSmall" />
+<Block Type="MyObjectBuilder_Cockpit" Subtype="captains_chair_LargeSmall" />
+<Block Type="MyObjectBuilder_Cockpit" Subtype="generic_pilotseatSmall" />
+<Block Type="MyObjectBuilder_Cockpit" Subtype="generic_cornerSmall" />
+<Block Type="MyObjectBuilder_Cockpit" Subtype="SB_bridge_seat" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SpacebarBridgeconsoles_LCDs" />
+<DisplayName>Spacebar Bridge LCDs</DisplayName>
+<Description>Spacebar Bridge LCDs</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_TextPanel" Subtype="digital_linear_computer_Large" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="digital_linear_computer_Small" />
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="LCD_Wall" />
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="LCD_Wall_offset" />
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="digital_linear_medium" />
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="digital_linear_large" />
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="digital_linear_mediumSmall" />
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="digital_linear_largeSmall" />
+<Block Type="MyObjectBuilder_Projector" Subtype="holoprojector" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SpacebarBridgeconsole_Cryo" />
+<DisplayName>Spacebar Bridge Consoles Cryo</DisplayName>
+<Description>Spacebar Bridge Consoles Cryo</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="captains_chair_Large_cryo" />
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="EngineerConsole_cryo" />
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="NavigationConsole_cryo" />
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="generic_pilotseat_cryo" />
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="generic_corner_cryo" />
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="EngineerConsoleSmall_cryo" />
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="NavigationConsoleSmall_cryo" />
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="captains_chair_LargeSmall_cryo" />
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="generic_pilotseatSmall_cryo" />
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="generic_cornerSmall_cryo" />
+<Block Type="MyObjectBuilder_CryoChamber" Subtype="SB_bridge_seat_cryo" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

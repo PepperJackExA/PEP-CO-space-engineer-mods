@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchGroups>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="25" />
+<Members>
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorFrameMediumPort" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="25" />
+<Members>
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubePortSmall" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubePortMedium" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeCurvedPort" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubePort" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="28" />
+<Members>
+<BlockId Type="MyObjectBuilder_AirtightSlideDoor" Subtype="LargeBlockDockingDoor" />
+</Members>
+</ResearchGroup>
+</ResearchGroups>
+</Definitions>
+ 

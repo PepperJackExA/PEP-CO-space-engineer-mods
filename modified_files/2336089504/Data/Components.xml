@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>AdminPlate</SubtypeId>
+</Id>
+<DisplayName>AdminOnlyComponent</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.0</DropProbability>
+<Health>18</Health>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>5000</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>1000</MaximumOrderAmount>
+<CanPlayerOrder>false</CanPlayerOrder>
+<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+</Component>
+<!--        <Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Mainframe</SubtypeId>
+</Id>
+<DisplayName>Mainframe</DisplayName>
+<Mass>0.6</Mass>
+<Volume>1</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>1</MaxIntegrity>
+<DropProbability>0.1</DropProbability>
+<Health>50</Health>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>5000</MaximumOfferAmount>
+<MinimumOrderAmount>300</MinimumOrderAmount>
+<MaximumOrderAmount>1000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>300</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+</Component>-->
+</Components>
+</Definitions>
+ 

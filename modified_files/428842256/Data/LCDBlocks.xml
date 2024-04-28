@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>HelmetHUD_display</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>HelmetHUD_display</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>99999999</BuildTimeSeconds>
+<RequiredPowerInput>0.00001</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>HelmetHUD_displayLow</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>HelmetHUD_displayLow</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>99999999</BuildTimeSeconds>
+<RequiredPowerInput>0.00001</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>HelmetHUD_ghostLCD</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>HelmetHUD_ghostLCD</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>99999999</BuildTimeSeconds>
+<RequiredPowerInput>0.00001</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>HelmetHUD_battery</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>HelmetHUD_battery</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999999</BuildTimeSeconds>
+<RequiredPowerInput>0.1</RequiredPowerInput>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

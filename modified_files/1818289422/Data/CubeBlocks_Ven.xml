@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Platform</SubtypeId>
+</Id>
+<DisplayName>Scaffolding Platform +</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Platform_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Platform</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Railing</SubtypeId>
+</Id>
+<DisplayName>Scaffolding Railing +</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Railing_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Railing</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Ladder_Double</SubtypeId>
+</Id>
+<DisplayName>Scaffold Double Ladder +</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Ladder_Double_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Ladder_Double</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Stair</SubtypeId>
+</Id>
+<DisplayName>Scaffolding Staircase</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Ladder_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Ladder</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Structure</SubtypeId>
+</Id>
+<DisplayName>Scaffolding Structure</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Structure_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Structure</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Structure_Open</SubtypeId>
+</Id>
+<DisplayName>Scaffolding Structure Open</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Structure_Open_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Structure_Open</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Balcony</SubtypeId>
+</Id>
+<DisplayName>Scaffolding Balcony</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Balcony_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Balcony</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Extension</SubtypeId>
+</Id>
+<DisplayName>Scaffolding Platform Extension</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Balcony_Open_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Balcony</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Platform_Unsupported</SubtypeId>
+</Id>
+<DisplayName>Scaffolding Bridge Platform</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Platform_Unsupported_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Balcony_Open</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Ladder_Single</SubtypeId>
+</Id>
+<DisplayName>Scaffold Single Ladder </DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Ladder_Single_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Ladder_Single</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Railing_Corner</SubtypeId>
+</Id>
+<DisplayName>Scaffold Railing Interior Corner</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Railing_L_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Railing_Corner_L</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Railing_U</SubtypeId>
+</Id>
+<DisplayName>Scaffold Railing Interior U</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Railing_U_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Railing_Corner_U</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Railing_P</SubtypeId>
+</Id>
+<DisplayName>Scaffold Railing Parallel</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Railing_P_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Railing_Corner_P</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Railing_Half_A</SubtypeId>
+</Id>
+<DisplayName>Scaffold Half Railing Left</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Half_Railing_A_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Half_Railing_B</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ven_Scaffold_Railing_Half_B</SubtypeId>
+</Id>
+<DisplayName>Scaffold Half Railing Right</DisplayName>
+<Description>Will help you Build on Heights</Description><Icon>Textures\Scaffold_Half_Railing_B_Icon.dds</Icon>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<BlockPairName>Scaffold_Half_Railing_A</BlockPairName>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+</BlockPositions>
+</Definitions>
+ 

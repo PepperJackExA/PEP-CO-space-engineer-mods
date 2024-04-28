@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="(NPC-SY) Warehouse #02b" />
+<Name>104223049262404531</Name>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyAutopilotComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_AutopilotComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>ArcBlockDoorSmallOpen</OpenSound>
+<CloseSound>ArcBlockDoorSmallClose</CloseSound>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>ArcBlockDoorSmallOpen</OpenSound>
+<CloseSound>ArcBlockDoorSmallClose</CloseSound>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<LockSound>ArcShipLandGearOn</LockSound>
+<UnlockSound>ArcShipLandGearOff</UnlockSound>
+<FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>421.875008</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>6.25</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>3</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>3</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</CubeBlocks>
+<DisplayName>(NPC-SY) Warehouse #02b</DisplayName>
+<Name>102796565867500955</Name>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MySunTrackingComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_SunTrackingComponent">
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<Flags>
+<TargetCharacters>true</TargetCharacters>
+<ShowInInventory>true</ShowInInventory>
+<LockSound>ArcShipLandGearOn</LockSound>
+<UnlockSound>ArcShipLandGearOff</UnlockSound>
+<FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+</CubeBlocks>
+<DisplayName>Small Grid 9823</DisplayName>
+<Name>95729099839010066</Name>
+<CubeBlocks>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+<ProjectilesCount>0</ProjectilesCount>
+</Items>
+<Volume>0.064</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<DisplayName>Small Grid 4712</DisplayName>
+<Name>115424061573103198</Name>
+<CubeBlocks>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+<ProjectilesCount>0</ProjectilesCount>
+</Items>
+<Volume>3</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+<ProjectilesCount>0</ProjectilesCount>
+</Items>
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</CubeBlocks>
+<DisplayName>Static Grid 3083</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+<Name>ShipWeapons</Name>
+<SearchBlocks>false</SearchBlocks>
+<IsToolCategory>true</IsToolCategory>
+<ItemIds>
+<string>SmallMissileLauncher/155mmFixedCannon</string>
+<string>SmallMissileLauncher/305mmFixedCannon</string>
+<string>SmallMissileLauncher/FixedCoilgun</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+<Name>Weapons</Name>
+<ItemIds>
+<string>SmallMissileLauncher/155mmFixedCannon</string>
+<string>SmallMissileLauncher/305mmFixedCannon</string>
+<string>SmallMissileLauncher/FixedCoilgun</string>
+<string>LargeMissileTurret/CoilgunTurret</string>
+<string>LargeMissileTurret/305mmDoubleTurret</string>
+<string>LargeMissileTurret/305mmSingleTurret</string>
+<string>LargeMissileTurret/155mmSingleTurret</string>
+<string>LargeMissileTurret/155mmSingleTurretLarge</string>
+<string>LargeGatlingTurret/CLGGTurret</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

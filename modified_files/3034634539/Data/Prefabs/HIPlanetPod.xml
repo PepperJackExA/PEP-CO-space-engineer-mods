@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="HIPlanetPod" />
+<Name>134402870502261020</Name>
+<CubeBlocks>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+<ProjectilesCount>0</ProjectilesCount>
+</Items>
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyMultiTextPanelComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_MultiTextPanelComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyMultiTextPanelComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_MultiTextPanelComponent">
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_InventoryAggregate">
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>0.008</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>0.008</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<LockSound>ArcShipLandGearOn</LockSound>
+<UnlockSound>ArcShipLandGearOff</UnlockSound>
+<FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+<ShowInInventory>true</ShowInInventory>
+<LockSound>ArcShipLandGearOn</LockSound>
+<UnlockSound>ArcShipLandGearOff</UnlockSound>
+<FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+<ShowInInventory>true</ShowInInventory>
+<LockSound>ArcShipLandGearOn</LockSound>
+<UnlockSound>ArcShipLandGearOff</UnlockSound>
+<FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>0.008</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>0.008</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>0.008</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>0.008</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyLcdSurfaceComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_LcdSurfaceComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyLcdSurfaceComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_LcdSurfaceComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<Name>Primary Planetary Pod Thrusters</Name>
+<Blocks>
+</Blocks>
+<Name>Manoeuvering Planetary Pod Thrusters</Name>
+<Blocks>
+</Blocks>
+<Name>Gyroscopes</Name>
+<Blocks>
+</Blocks>
+<Name>Magnetic Plates</Name>
+<Blocks>
+</Blocks>
+<Name>Parachute Hatchs</Name>
+<Blocks>
+</Blocks>
+<DisplayName>HI Planetary Pod</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

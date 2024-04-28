@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_CraftingComponentBlockDefinition">
+<Id>
+<TypeId>MyObjectBuilder_CraftingComponentBlock</TypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>Industrial Storage</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>Stone Storage</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>Stone Storage SG</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>Industrial Storage SG</SubtypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

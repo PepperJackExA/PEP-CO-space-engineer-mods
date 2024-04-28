@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<AmmoMagazines>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>BinoAmmo</SubtypeId>
+</Id>
+<DisplayName>BinoAmmo</DisplayName>
+<Mass>0.6</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>0</Capacity>
+<AmmoDefinitionId Subtype="SmallCaliber" />
+<MinimumOfferAmount>0</MinimumOfferAmount>
+<MaximumOfferAmount>0</MaximumOfferAmount>
+<MinimumOrderAmount>0</MinimumOrderAmount>
+<MaximumOrderAmount>0</MaximumOrderAmount>
+<CanPlayerOrder>0</CanPlayerOrder>
+</AmmoMagazine>
+</AmmoMagazines>
+</Definitions>
+ 

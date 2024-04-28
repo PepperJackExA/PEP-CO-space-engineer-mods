@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-DefensiveEscortDrone-Trigger-RequestEscortSlot</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-DefensiveEscortDrone-Trigger-AggressionSwitchEscort</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-DefensiveEscortDrone-Trigger-TargetfarSwitchEscort</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-DefensiveEscortDrone-Action-RequestEscortSlot</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-DefensiveEscortDrone-Command-RequestEscortSlot</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-DefensiveEscortDrone-Action-AggressionSwitchEscort</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-DefensiveEscortDrone-Action-PassiveSwitchPatrol</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-DefensiveEscortDrone-Chat-PassiveSwitchPatrol</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>FAC-DefensiveEscortDrone-Chat-AggressionSwitchEscort</SubtypeId>
+</Id>
+<Description>
+</Description>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

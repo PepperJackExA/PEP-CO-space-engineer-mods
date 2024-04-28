@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ContainerTypes>
+<ContainerType CountMin="1" CountMax="3">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>(NPC-SY)Locker-LootContainer</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="100" AmountMax="400">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalObject</TypeId>
+<SubtypeId>SpaceCredit</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="8" AmountMax="32">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Construction</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="8" AmountMax="32">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>InteriorPlate</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="8" AmountMax="32">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Computer</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>WelderItem</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="2">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>GasContainerObject</TypeId>
+<SubtypeId>HydrogenBottle</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>SemiAutoPistolItem</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="2">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>OxygenContainerObject</TypeId>
+<SubtypeId>OxygenBottle</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>Welder2Item</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="0" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>Welder3Item</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>AngleGrinderItem</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>AngleGrinder2Item</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>HandDrill2Item</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>HandDrillItem</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="4">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>CosmicCoffee</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="2">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Medkit</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="3">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Powerkit</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="0" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>EngineerPlushie</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="1" CountMax="3">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>(NPC-SY)Armory-LootContainer</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>Welder2Item</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="0" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>Welder3Item</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>AngleGrinderItem</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>AngleGrinder2Item</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>HandDrill2Item</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>HandDrillItem</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>SemiAutoPistolItem</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>AutomaticRifleItem</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>FullAutoPistolItem</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="1">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>RapidFireAutomaticRifleItem</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="5">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>SemiAutoPistolMagazine</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="5">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>FullAutoPistolMagazine</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="5">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>AutomaticRifleGun_Mag_20rd</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="5">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>RapidFireAutomaticRifleGun_Mag_50rd</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="1" CountMax="4">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>(NPC-SY)CargoContainer-LootContainer</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="2" AmountMax="15">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Motor</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="25">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>SteelPlate</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="25">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Construction</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="25">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>InteriorPlate</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="8">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Display</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="15">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>SmallTube</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="6">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>LargeTube</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="10">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Computer</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="0" AmountMax="3">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>MetalGrid</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="15">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>BulletproofGlass</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="0" AmountMax="2">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>PowerCell</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="8">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>SemiAutoPistolMagazine</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="8">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>FullAutoPistolMagazine</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="8">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>AutomaticRifleGun_Mag_20rd</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="8">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>RapidFireAutomaticRifleGun_Mag_50rd</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="1" CountMax="3">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>(NPC-SY)O2H2-LootContainer</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="10" AmountMax="1200">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>Ice</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="1" CountMax="3">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>(NPC-SY)Cockpit-LootContainer</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="1" AmountMax="2">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Medkit</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="2">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Powerkit</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="100" AmountMax="400">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>PhysicalObject</TypeId>
+<SubtypeId>SpaceCredit</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="2">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>ClangCola</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="2">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>CosmicCoffee</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+</ContainerTypes>
+</Definitions>
+ 

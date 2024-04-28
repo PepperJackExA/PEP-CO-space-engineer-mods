@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Farm (Hahn Family)" />
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>ArcBlockDoorSmallOpen</OpenSound>
+<CloseSound>ArcBlockDoorSmallClose</CloseSound>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+<Name>[ Sunset Valley Administration ]---[ Complaint Form ]---[ Rashad &amp; Nadia Hahn ]</Name>
+</Items>
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<string>LCD_Economy_Clear</string>
+<PublicDescription>Rashad &amp; Nadia Hahn</PublicDescription>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<Name>Share With All</Name>
+<Blocks>
+</Blocks>
+<DisplayName>Farm (Hahn Family)</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

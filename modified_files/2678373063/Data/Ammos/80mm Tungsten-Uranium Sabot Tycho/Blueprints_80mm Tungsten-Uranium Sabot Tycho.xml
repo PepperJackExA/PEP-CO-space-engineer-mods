@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>80mmTungstenUraniumSabotBlueprint</SubtypeId>
+</Id>
+<DisplayName>80mm Tungsten-Uranium Sabot</DisplayName>
+<Prerequisites>
+<Item Amount="8" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="40" TypeId="Ingot" SubtypeId="TungstenIngot" />
+<Item Amount="28" TypeId="Ingot" SubtypeId="Uranium" />
+<Item Amount="24" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="LeadIngot" />
+<Item Amount="16" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="Silicon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

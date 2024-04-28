@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+<Id>
+<TypeId>Assembler</TypeId>
+<SubtypeId>NPTradeCrafter</SubtypeId>
+</Id>
+<DisplayName>NPTradeCrafter</DisplayName>
+<Description>DONT LOOK AT THIS</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CrateOApples" Count="120" />
+<Component Subtype="SteelPlate" Count="120" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Display" Count="10" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="Computer" Count="160" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>80</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.56</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>NPTradeGoods</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>40</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+<Id>
+<TypeId>Assembler</TypeId>
+<SubtypeId>NPFuelCrafter</SubtypeId>
+</Id>
+<DisplayName>NPFuelCrafter</DisplayName>
+<Description>DONT LOOK AT THIS</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="CrateOApples" Count="120" />
+<Component Subtype="SteelPlate" Count="120" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Display" Count="10" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="Computer" Count="160" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>80</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.56</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>NPFuelGoods</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>40</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>Extractor</SubtypeId>
+</Id>
+<DisplayName>Extractor</DisplayName>
+<Description>A large fuel pump designed for processing Fuel Tanks</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="110" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Extractor</BlockPairName>
+<BuildTimeSeconds>22</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>250</IceConsumptionPerSecond>
+<InventoryMaxVolume>0.400</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.75</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</Id>
+<IceToGasRatio>0</IceToGasRatio>
+</GasInfo>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</Id>
+<IceToGasRatio>2000</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Extracting</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>ExtractorSmall</SubtypeId>
+</Id>
+<DisplayName>Small Fuel Extractor</DisplayName>
+<Description>A Small fuel pump designed for processing Jerry Cants</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="6" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>5</IceConsumptionPerSecond>
+<InventoryMaxVolume>0.84</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.1</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</Id>
+<IceToGasRatio>0</IceToGasRatio>
+</GasInfo>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</Id>
+<IceToGasRatio>200</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>SGExtracting</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<BlockPairName>Extractor</BlockPairName>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

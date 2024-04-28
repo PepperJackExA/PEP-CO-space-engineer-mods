@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>TSOAutoInteriorBlock</SubtypeId>
+</Id>
+<DisplayName>Automaton Interior Wall</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TSOAutoInteriorBlockPairA</BlockPairName>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

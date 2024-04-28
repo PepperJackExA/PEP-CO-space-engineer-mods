@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="ITC - Stop n' Go" />
+<Name>116763284081198752</Name>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<string>LCD_HI_Poster1_Landscape</string>
+<string>LCD_Frozen_Poster06</string>
+<string>LCD_SoF_CosmicTeam_Landscape</string>
+<string>LCD_SoF_Exploration_Landscape</string>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>999999.995904</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyModStorageComponentBase</TypeId>
+<Component xsi:type="MyObjectBuilder_ModStorageComponent">
+<Value>;Do not activate too many objects the store has a limited number of slots
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<string>StoreBlock2</string>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>ArcBlockDoorSmallOpen</OpenSound>
+<CloseSound>ArcBlockDoorSmallClose</CloseSound>
+<ShowInInventory>true</ShowInInventory>
+<string>LCD_SoF_ThunderFleet_Portrait</string>
+<ShowInInventory>true</ShowInInventory>
+<string>LCD_HI_Poster3_Portrait</string>
+<ShowInInventory>true</ShowInInventory>
+<string>LCD_Frozen_Poster04</string>
+<ShowInInventory>true</ShowInInventory>
+<string>StoreBlock2</string>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+<ProjectilesCount>0</ProjectilesCount>
+</Items>
+<Volume>0.384</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<TargetCharacters>true</TargetCharacters>
+</CubeBlocks>
+<DisplayName>ITC - Stop n' Go</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="(NPC-SY) Cabin-A" />
+<Name>114885787278616842</Name>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<Value>TV - Toggle block On/Off</Value>
+<Value>Interior Light - Main Room - Toggle block On/Off</Value>
+<Value>Interior Light - Bedroom - Toggle block On/Off</Value>
+<Value>Doors</Value>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>ArcBlockDoorSmallOpen</OpenSound>
+<CloseSound>ArcBlockDoorSmallClose</CloseSound>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyLcdSurfaceComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_LcdSurfaceComponent">
+<string>LCD_Economy_Graph</string>
+<string>LCD_Economy_Blueprint_2</string>
+<string>LCD_Frozen_Poster02</string>
+<string>LCD_Economy_Charts</string>
+<string>LCD_Frozen_Poster06</string>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>ArcBlockDoorSmallOpen</OpenSound>
+<CloseSound>ArcBlockDoorSmallClose</CloseSound>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyAutopilotComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_AutopilotComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<Name>Doors</Name>
+<Blocks>
+</Blocks>
+<DisplayName>(NPC-SY) Cabin-A</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

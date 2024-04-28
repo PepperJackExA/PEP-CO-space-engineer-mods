@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>NextGen_Cargo_Crate</SubtypeId>
+</Id>
+<DisplayName>NextGen Cargo Crate</DisplayName>
+<Description></Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="45" />
+<Component Subtype="Construction" Count="24" />
+<Component Subtype="LargeTube" Count="18" />
+<Component Subtype="MetalGrid" Count="19" />
+<Component Subtype="SmallTube" Count="22" />
+<Component Subtype="Computer" Count="16" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Display" Count="5" />
+<Component Subtype="InteriorPlate" Count="26" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>NextGen_Cargo_Crate</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

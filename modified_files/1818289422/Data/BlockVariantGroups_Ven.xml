@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Ven_Scaffold_Platform_Group" />
+<DisplayName>Scaffolding Platform +</DisplayName>
+<Description>Scaffolding Platform Group</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Platform" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Balcony" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Extension" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Structure_Open" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Structure" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Platform_Unsupported" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Stair" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Ven_Scaffold_Railing_Group" />
+<DisplayName>Scaffolding Railing +</DisplayName>
+<Description>Scaffolding Railing Group</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Railing" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Balcony" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Extension" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Railing_Half_A" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Railing_Half_B" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Railing_U" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Railing_P" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Railing_Corner" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Ven_Scaffold_Ladder_Double_Group" />
+<DisplayName>Scaffold Double Ladder +</DisplayName>
+<Description>Scaffold Double Ladder Group</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Ladder_Double" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Ladder_Single" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Ven_Scaffold_Stair" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

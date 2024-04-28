@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>GraphenePlateScrap</SubtypeId>
+</Id>
+<DisplayName>GraphenePlateScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>GrapheneAerogelFillingScrap</SubtypeId>
+</Id>
+<DisplayName>GrapheneAerogelFillingScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>GrapheneNanotubesScrap</SubtypeId>
+</Id>
+<DisplayName>GrapheneNanotubesScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>GraphenePowerCellScrap</SubtypeId>
+</Id>
+<DisplayName>GraphenePowerCellScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+</PhysicalItems>
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>GraphenePlateScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>GraphenePlateScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="GraphenePlateScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>GrapheneAerogelFillingScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>GrapheneAerogelFillingScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="GrapheneAerogelFillingScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>GrapheneNanotubesScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>GrapheneNanotubesScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="GrapheneNanotubesScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>GraphenePowerCellScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>GraphenePowerCellScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="GraphenePowerCellScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

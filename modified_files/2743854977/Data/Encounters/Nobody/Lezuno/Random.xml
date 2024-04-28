@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>Crashed-GCScout</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Speed>0.0</Speed>
+<Frequency>2</Frequency>
+<Prefabs>
+<Prefab SubtypeId="Crashed-GCFighterMk2">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Scrap-Harvester</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Speed>0.0</Speed>
+<Frequency>2</Frequency>
+<Prefabs>
+<Prefab SubtypeId="SR - Harvester Scrap">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Scrap-Hermes1</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Speed>0.0</Speed>
+<Frequency>2</Frequency>
+<Prefabs>
+<Prefab SubtypeId="SR - Hermes Scrap Trap">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Scrap-LandLord</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Speed>0.0</Speed>
+<Frequency>2</Frequency>
+<Prefabs>
+<Prefab SubtypeId="SR - Land Lord Scrap A1">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="SR - Land Lord Scrap A2">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Scrap-LCC3</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Speed>0.0</Speed>
+<Frequency>2</Frequency>
+<Prefabs>
+<Prefab SubtypeId="SR - LCC-3 Freighter Scrap 1">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="SR - LCC-3 Freighter Scrap 2">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Scrap-PilgrimsCuriosity</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Speed>0.0</Speed>
+<Frequency>2</Frequency>
+<Prefabs>
+<Prefab SubtypeId="SR - The Pilgrims Curiosity Scrap B1">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="SR - The Pilgrims Curiosity Scrap B2">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

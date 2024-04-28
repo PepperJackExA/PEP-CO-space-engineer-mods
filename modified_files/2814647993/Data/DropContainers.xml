@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<DropContainers>
+<DropContainer>
+<Id>
+<TypeId>DropContainerDefinition</TypeId>
+<SubtypeId>Container_Floating_Pallet</SubtypeId>
+</Id>
+<Prefab>Container_Floating_Pallet</Prefab>
+<Priority>1</Priority>
+<SpawnRules>
+<CanSpawnInSpace>false</CanSpawnInSpace>
+<CanSpawnInAtmosphere>true</CanSpawnInAtmosphere>
+<CanSpawnOnMoon>false</CanSpawnOnMoon>
+<CanBePersonal>true</CanBePersonal>
+<CanBeCompetetive>true</CanBeCompetetive>
+</SpawnRules>
+</DropContainer>
+<DropContainer>
+<Id>
+<TypeId>DropContainerDefinition</TypeId>
+<SubtypeId>Container_Floating_Pallet_Red</SubtypeId>
+</Id>
+<Prefab>Container_Floating_Pallet_Red</Prefab>
+<Priority>0.2</Priority>
+<SpawnRules>
+<CanSpawnInSpace>false</CanSpawnInSpace>
+<CanSpawnInAtmosphere>true</CanSpawnInAtmosphere>
+<CanSpawnOnMoon>false</CanSpawnOnMoon>
+<CanBePersonal>true</CanBePersonal>
+<CanBeCompetetive>true</CanBeCompetetive>
+</SpawnRules>
+</DropContainer>
+</DropContainers>
+</Definitions>
+ 

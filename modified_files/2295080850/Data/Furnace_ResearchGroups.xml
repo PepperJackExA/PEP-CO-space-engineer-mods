@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchGroups>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="4" />
+<Members>
+<BlockId Type="MyObjectBuilder_Assembler" Subtype="LargeAssembler" />
+<BlockId Type="MyObjectBuilder_Assembler" Subtype="Furnace" />
+</Members>
+</ResearchGroup>
+</ResearchGroups>
+</Definitions>
+ 

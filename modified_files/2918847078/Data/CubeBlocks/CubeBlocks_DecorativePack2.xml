@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_VendingMachineDefinition">
+<Id>
+<TypeId>VendingMachine</TypeId>
+<SubtypeId>FoodDispenser</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_FoodDispenser</DisplayName>
+<Description>Description_FoodDispenser</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="Electromagnet" Count="4" />
+<Component Subtype="CopperWire" Count="8" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<BlockPairName>FoodDispenser</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<ActionSound>BlockCollect</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+<string>FoodDispenser</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_VendingMachineDefinition">
+<Id>
+<TypeId>VendingMachine</TypeId>
+<SubtypeId>FoodDispenserSmall_3223</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_FoodDispenser</DisplayName>
+<Description>Description_FoodDispenser</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="Electromagnet" Count="4" />
+<Component Subtype="CopperWire" Count="8" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<BlockPairName>FoodDispenser</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<ActionSound>BlockCollect</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+<string>FoodDispenser</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

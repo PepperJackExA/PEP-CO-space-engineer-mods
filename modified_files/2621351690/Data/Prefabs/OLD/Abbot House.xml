@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Abbot House" />
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+<Name>[ Arturo Abbot ]---[ PDA ]</Name>
+</Items>
+<Volume>3</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>ArcBlockDoorSmallOpen</OpenSound>
+<CloseSound>ArcBlockDoorSmallClose</CloseSound>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<string>LCD_Economy_Clear</string>
+<PublicDescription>[ Abbott Family ]
+[ Arturo, Angel &amp; Deborah ]</PublicDescription>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<Name>Share With All</Name>
+<Blocks>
+</Blocks>
+<DisplayName>Abbot House</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

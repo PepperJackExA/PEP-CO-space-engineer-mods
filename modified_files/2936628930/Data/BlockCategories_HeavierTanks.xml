@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>OxygenTank/Reinforced Hydrogen Tank LL</string>
+<string>OxygenTank/Reinforced_Hydrogen_Tank_LS</string>
+<string>OxygenTank/Drum_Hydrogen_Tank_LS</string>
+<string>OxygenTank/Drum_Oxygen_Tank_LS</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>OxygenTank/Drum_Hydrogen_Tank_SS</string>
+<string>OxygenTank/Drum_Oxygen_Tank_SS</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>TBH Industries Mods</DisplayName>
+<Name>TBH Industries</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>OxygenTank/Reinforced Hydrogen Tank LL</string>
+<string>OxygenTank/Reinforced_Hydrogen_Tank_LS</string>
+<string>OxygenTank/Drum_Hydrogen_Tank_LS</string>
+<string>OxygenTank/Drum_Hydrogen_Tank_SS</string>
+<string>OxygenTank/Drum_Oxygen_Tank_LS</string>
+<string>OxygenTank/Drum_Oxygen_Tank_SS</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+<Id>
+<TypeId>ShipConnector</TypeId>
+<SubtypeId>Connector_Passageway</SubtypeId>
+</Id>
+<DisplayName>Connector Passageway</DisplayName>
+<Description>Description_Connector</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="260" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="SmallTube" Count="24" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="Computer" Count="40" />
+<Component Subtype="SteelPlate" Count="40" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ConnectorPassage</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ActionSound>BlockEject</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>125</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+<Id>
+<TypeId>ShipConnector</TypeId>
+<SubtypeId>Small_Connector_Passageway_SG</SubtypeId>
+</Id>
+<DisplayName>Small Connector Passageway SG</DisplayName>
+<Description>Its like the original connector passageway- but shack sized</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="130" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SmallTube" Count="16" />
+<Component Subtype="Motor" Count="8" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SmallConnectorPassageway</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ActionSound>BlockEject</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+<Id>
+<TypeId>ShipConnector</TypeId>
+<SubtypeId>Small_Connector_Passageway_LG</SubtypeId>
+</Id>
+<DisplayName>Small Connector Passageway LG</DisplayName>
+<Description>Its like the original connector passageway- but shack sized</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="190" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Motor" Count="12" />
+<Component Subtype="Computer" Count="30" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SmallConnectorPassageway</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ActionSound>BlockEject</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

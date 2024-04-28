@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>AQD_SG_ConveyorAdapter</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_SG_ConveyorAdapter}</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<Public>false</Public>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="7" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="8" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="InteriorPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>AQD_ConveyorAdapter</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>25</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

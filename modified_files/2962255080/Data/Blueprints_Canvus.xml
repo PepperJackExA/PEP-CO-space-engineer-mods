@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>StartPOCanvas</SubtypeId>
+</Id>
+<DisplayName>Organics Fabric Rope Kit</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ore" SubtypeId="Organic" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POCanvas</SubtypeId>
+</Id>
+<DisplayName>Synthetic Fabric Rope Kit</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="Fabric" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+<BlueprintClassEntries>
+<Entry Class="AutoLoomComponents" BlueprintSubtypeId="POCanvas" />
+<Entry Class="StartingComponents" BlueprintSubtypeId="StartPOCanvas" />
+</BlueprintClassEntries>
+</Definitions>
+ 

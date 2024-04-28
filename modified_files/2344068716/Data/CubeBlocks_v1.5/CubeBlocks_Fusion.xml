@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>DeuteriumExtractor</SubtypeId>
+</Id>
+<DisplayName>Deuterium Extractor</DisplayName>
+<Description>Extracts trace Deuterium from common water ice.
+Max Output: 5L/s</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="HeatingElement" Count="35" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>DeuteriumExtractor</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>100</IceConsumptionPerSecond>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>10</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Deuterium</SubtypeId>
+</Id>
+<IceToGasRatio>0.05</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Deuterium</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>DeuteriumRamscoop</SubtypeId>
+</Id>
+<DisplayName>Deuterium Ramscoop</DisplayName>
+<Description>Uses shaped magnetic and gravitational fields to collect, separate, and compress small amounts of Deuterium from the interstellar medium.
+Max Output at 100m/s: 2.25L/s</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="Construction" Count="75" />
+<Component Subtype="LargeTube" Count="25" />
+<Component Subtype="Girder" Count="50" />
+<Component Subtype="Motor" Count="25" />
+<Component Subtype="CopperWire" Count="40" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="GoldWire" Count="50" />
+<Component Subtype="SuperMagnet" Count="25" />
+<Component Subtype="Cryocooler" Count="15" />
+<Component Subtype="AdvancedComputer" Count="10" />
+<Component Subtype="GravityGenerator" Count="30" />
+<Component Subtype="QuantumComputer" Count="40" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="QuantumComputer" Index="0" />
+<BlockPairName>DeuteriumRamscoop</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>1000</IceConsumptionPerSecond>
+<InventoryMaxVolume>100</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>25</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Deuterium</SubtypeId>
+</Id>
+<IceToGasRatio>0.1</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Deuterium</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+<Id>
+<TypeId>HydrogenEngine</TypeId>
+<SubtypeId>FusionReactor</SubtypeId>
+</Id>
+<DisplayName>Fusion Reactor</DisplayName>
+<Description>Laser-initiated, magnetic confinement fusion reactor.
+Max Deuterium Consumption: 20L/s</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Cryocooler" Count="100" />
+<Component Subtype="Thermocouple" Count="150" />
+<Component Subtype="Superconductor" Count="600" />
+<Component Subtype="SuperMagnet" Count="250" />
+<Component Subtype="TokamakBlanket" Count="300" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="GoldWire" Count="50" />
+<Component Subtype="Detector" Count="25" />
+<Component Subtype="AdvancedComputer" Count="75" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>FusionReactor</BlockPairName>
+<BuildTimeSeconds>180</BuildTimeSeconds>
+<ResourceSinkGroup>Generators</ResourceSinkGroup>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Deuterium</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>LargeDeuteriumTank</SubtypeId>
+</Id>
+<DisplayName>Deuterium Tank</DisplayName>
+<Description>Stores cryogenic Deuterium. 500,000L capacity.
+Caution: Cryogenically compressed gases are highly volatile.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="160" />
+<Component Subtype="LargeTube" Count="80" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Cryocooler" Count="50" />
+<Component Subtype="CopperWire" Count="75" />
+<Component Subtype="AdvancedComputer" Count="50" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="120" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>500000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Deuterium</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.05</LeakPercent>
+<GasExplosionMaxRadius>30</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>500000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>LargeDeuteriumTankNoLegs</SubtypeId>
+</Id>
+<DisplayName>Deuterium Tank - Sphere</DisplayName>
+<Description>Stores cryogenic Deuterium. 500,000L capacity.
+Caution: Cryogenically compressed gases are highly volatile.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="160" />
+<Component Subtype="LargeTube" Count="80" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Cryocooler" Count="50" />
+<Component Subtype="CopperWire" Count="75" />
+<Component Subtype="AdvancedComputer" Count="50" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="120" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>500000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Deuterium</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.05</LeakPercent>
+<GasExplosionMaxRadius>30</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>500000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>EnclosedDeuteriumTank</SubtypeId>
+</Id>
+<DisplayName>Enclosed Deuterium Tank</DisplayName>
+<Description>Stores cryogenic Deuterium. 20,000L capacity.
+Caution: Cryogenically compressed gases are highly volatile.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="LargeTube" Count="30" />
+<Component Subtype="SmallTube" Count="50" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Cryocooler" Count="20" />
+<Component Subtype="CopperWire" Count="35" />
+<Component Subtype="AdvancedComputer" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>20000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Deuterium</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.05</LeakPercent>
+<GasExplosionMaxRadius>13</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>20000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>DeuteriumTankSmallFrame</SubtypeId>
+</Id>
+<DisplayName>Small Deuterium Tank - w/ Frame</DisplayName>
+<Description>Stores cryogenic Deuterium. 5000L capacity.
+Caution: Cryogenically compressed gases are highly volatile.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="LargeTube" Count="5" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Cryocooler" Count="4" />
+<Component Subtype="CopperWire" Count="15" />
+<Component Subtype="AdvancedComputer" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>5000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Deuterium</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.05</LeakPercent>
+<GasExplosionMaxRadius>7</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>5000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>DeuteriumTankSmall</SubtypeId>
+</Id>
+<DisplayName>Small Deuterium Tank</DisplayName>
+<Description>Stores cryogenic Deuterium. 5000L capacity.
+Caution: Cryogenically compressed gases are highly volatile.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="LargeTube" Count="5" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Cryocooler" Count="4" />
+<Component Subtype="CopperWire" Count="15" />
+<Component Subtype="AdvancedComputer" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>5000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Deuterium</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.05</LeakPercent>
+<GasExplosionMaxRadius>7</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>5000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>FusionThruster</SubtypeId>
+</Id>
+<DisplayName>Fusion Thruster</DisplayName>
+<Description>Uses a modified tokamak to initiate a fusion reaction, and magnetically focuses the plasma output to produce thrust.
+Fuel Consumption: 12L/s</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Cryocooler" Count="100" />
+<Component Subtype="Superconductor" Count="500" />
+<Component Subtype="SuperMagnet" Count="300" />
+<Component Subtype="TokamakBlanket" Count="300" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="GoldWire" Count="50" />
+<Component Subtype="Detector" Count="25" />
+<Component Subtype="AdvancedComputer" Count="75" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>FusionThruster</BlockPairName>
+<BuildTimeSeconds>200</BuildTimeSeconds>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Deuterium</SubtypeId>
+</FuelId>
+<Efficiency>0.00025</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>15</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>50000000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<PrimarySound>LrgShipLrgJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

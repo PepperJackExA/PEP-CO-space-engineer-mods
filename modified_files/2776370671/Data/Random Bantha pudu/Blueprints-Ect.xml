@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Missile_40mm</SubtypeId>
+</Id>
+<DisplayName>Missile - 40mm Grenade</DisplayName>
+<Prerequisites>
+<Item Amount="55" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="7" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.2" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="0.1" TypeId="Ingot" SubtypeId="Uranium" />
+<Item Amount="0.04" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="1.2" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Missile_Detonater</SubtypeId>
+</Id>
+<DisplayName>Missile - Thermal Detonater</DisplayName>
+<Prerequisites>
+<Item Amount="55" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="7" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.2" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="0.1" TypeId="Ingot" SubtypeId="Uranium" />
+<Item Amount="0.04" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="1.2" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

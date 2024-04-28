@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>EStabilizerComp</SubtypeId>
+</Id>
+<DisplayName>EStabilizerComp</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="EStabilizerComp" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>TrackingComponent</SubtypeId>
+</Id>
+<DisplayName>TrackingComponent</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="TrackingComponent" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>MCRN_Fusion_Core</SubtypeId>
+</Id>
+<DisplayName>MCRN_Fusion_Core</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="MCRN_Fusion_Core" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>UN_Filter</SubtypeId>
+</Id>
+<DisplayName>UN_Filter</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="UN_Filter" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Water_Tank</SubtypeId>
+</Id>
+<DisplayName>Water_Tank</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="Water_Tank" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>IceBox</SubtypeId>
+</Id>
+<DisplayName>IceBox</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="IceBox" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>HedgeSapling</SubtypeId>
+</Id>
+<DisplayName>HedgeSapling</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="HedgeSapling" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Sapling</SubtypeId>
+</Id>
+<DisplayName>Sapling</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="Sapling" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrateOApples</SubtypeId>
+</Id>
+<DisplayName>CrateOApples</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="CrateOApples" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ReactiveDisplay</SubtypeId>
+</Id>
+<DisplayName>ReactiveDisplay</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="ReactiveDisplay" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ReactiveMotor</SubtypeId>
+</Id>
+<DisplayName>ReactiveMotor</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="ReactiveMotor" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>rockhoppermodel</SubtypeId>
+</Id>
+<DisplayName>rockhoppermodel</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="rockhoppermodel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>aspmodel</SubtypeId>
+</Id>
+<DisplayName>aspmodel</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="aspmodel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ptmodel</SubtypeId>
+</Id>
+<DisplayName>ptmodel</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="ptmodel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>LidarComponent</SubtypeId>
+</Id>
+<DisplayName>LidarComponent</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="LidarComponent" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PDCComponent</SubtypeId>
+</Id>
+<DisplayName>PDCComponent</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="PDCComponent" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>GuidanceComponent</SubtypeId>
+</Id>
+<DisplayName>GuidanceComponent</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="GuidanceComponent" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

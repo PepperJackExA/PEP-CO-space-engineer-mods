@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_WindowBlocks</DisplayName>
+<Name>WindowBlocks</Name>
+<ItemIds>
+<string>CubeBlock/WindowArmoredFlat</string>
+<string>CubeBlock/WindowArmoredFlatInv</string>
+<string>CubeBlock/WindowArmoredSlope</string>
+<string>CubeBlock/WindowArmoredFace</string>
+<string>CubeBlock/WindowArmoredFaceInv</string>
+<string>CubeBlock/WindowArmoredSide</string>
+<string>CubeBlock/WindowArmoredSideInv</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CubeBlock/WindowArmoredFlat</string>
+<string>CubeBlock/WindowArmoredFlatInv</string>
+<string>CubeBlock/WindowArmoredSlope</string>
+<string>CubeBlock/WindowArmoredFace</string>
+<string>CubeBlock/WindowArmoredFaceInv</string>
+<string>CubeBlock/WindowArmoredSide</string>
+<string>CubeBlock/WindowArmoredSideInv</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CubeBlock/SmallWindowArmoredFlat</string>
+<string>CubeBlock/SmallWindowArmoredFlatInv</string>
+<string>CubeBlock/SmallWindowArmoredSlope</string>
+<string>CubeBlock/SmallWindowArmoredFace</string>
+<string>CubeBlock/SmallWindowArmoredFaceInv</string>
+<string>CubeBlock/SmallWindowArmoredSide</string>
+<string>CubeBlock/SmallWindowArmoredSideInv</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

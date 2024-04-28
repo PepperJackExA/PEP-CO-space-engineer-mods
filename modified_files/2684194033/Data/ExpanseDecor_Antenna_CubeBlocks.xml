@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+<Id>
+<TypeId>RadioAntenna</TypeId>
+<SubtypeId>AntennaCorner</SubtypeId>
+</Id>
+<DisplayName>Compact Antenna Corner</DisplayName>
+<Description>Description_RadioAntenna</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="RadioCommunication" Count="40" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="RadioCommunication" Index="0" />
+<BlockPairName>AntennaCorner</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+<Id>
+<TypeId>RadioAntenna</TypeId>
+<SubtypeId>AntennaSlope</SubtypeId>
+</Id>
+<DisplayName>Compact Antenna Slope</DisplayName>
+<Description>Description_RadioAntenna</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="RadioCommunication" Count="40" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="RadioCommunication" Index="0" />
+<BlockPairName>AntennaSlope</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+<Id>
+<TypeId>RadioAntenna</TypeId>
+<SubtypeId>Antenna45Corner</SubtypeId>
+</Id>
+<DisplayName>Compact Antenna 45Corner</DisplayName>
+<Description>Description_RadioAntenna</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="RadioCommunication" Count="40" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="RadioCommunication" Index="0" />
+<BlockPairName>Antenna45Corner</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+<Id>
+<TypeId>RadioAntenna</TypeId>
+<SubtypeId>AntennaCube</SubtypeId>
+</Id>
+<DisplayName>Compact Antenna Cube</DisplayName>
+<Description>Description_RadioAntenna</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="RadioCommunication" Count="40" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="RadioCommunication" Index="0" />
+<BlockPairName>AntennaCube</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

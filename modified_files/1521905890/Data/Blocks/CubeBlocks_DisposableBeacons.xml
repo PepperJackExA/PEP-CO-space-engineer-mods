@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_BeaconDefinition">
+<Id>
+<TypeId>Beacon</TypeId>
+<SubtypeId>DisposableNpcBeaconLarge</SubtypeId>
+</Id>
+<DisplayName>Disposable Beacon</DisplayName>
+<Public>false</Public>
+<Description>Description_Beacon</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="RadioCommunication" Count="40" />
+<Component Subtype="SteelPlate" Count="40" />
+</Components>
+<CriticalComponent Subtype="RadioCommunication" Index="0" />
+<BlockPairName>DisposableBeacon</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<MaxBroadcastRadius>50000</MaxBroadcastRadius>
+<MaxBroadcastPowerDrainkW>20</MaxBroadcastPowerDrainkW>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BeaconDefinition">
+<Id>
+<TypeId>Beacon</TypeId>
+<SubtypeId>DisposableNpcBeaconSmall</SubtypeId>
+</Id>
+<DisplayName>Disposable Beacon</DisplayName>
+<Public>false</Public>
+<Description>Description_Beacon</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="RadioCommunication" Count="4" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>DisposableBeacon</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<MaxBroadcastRadius>50000</MaxBroadcastRadius>
+<MaxBroadcastPowerDrainkW>20</MaxBroadcastPowerDrainkW>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

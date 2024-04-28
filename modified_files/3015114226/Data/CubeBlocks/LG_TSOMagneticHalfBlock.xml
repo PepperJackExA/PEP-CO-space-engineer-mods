@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LandingGearDefinition">
+<Id>
+<TypeId>LandingGear</TypeId>
+<SubtypeId>LG_TSOMagneticHalfBlock</SubtypeId>
+</Id>
+<DisplayName>Magnetic Half Block</DisplayName>
+<Description>Description_LandingGear</Description>
+<CubeSize>Large</CubeSize>
+<LockSound>ShipLandGearOn</LockSound>
+<UnlockSound>ShipLandGearOff</UnlockSound>
+<FailedAttachSound>ShipLandGearNothing01</FailedAttachSound>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" Default="true" />
+<BlockPairName>TSOMagneticHalfBlockPair</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>35</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Factions>
+<Faction Tag="TRADE" Founder="The Board">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>TradeOperatorsCoalition</SubtypeId>
+</Id>
+<DisplayName>Trade Operators Coalition</DisplayName>
+<Description>The Trade Operators Coalition is a collective of trading organizations that have combined their resources and various connections to become one of the dominate economic forces found across several systems.</Description>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+</Faction>
+</Factions>
+</Definitions>
+ 

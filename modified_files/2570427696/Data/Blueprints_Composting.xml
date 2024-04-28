@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CompostingAlgae</SubtypeId>
+</Id>
+<DisplayName>Organics</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Algaesample" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CompostingH2Algae</SubtypeId>
+</Id>
+<DisplayName>Organics</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="HydrogenAlgaesample" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CompostingMushrooms</SubtypeId>
+</Id>
+<DisplayName>Organics</DisplayName>
+<Prerequisites>
+<Item Amount="20" TypeId="ConsumableItem" SubtypeId="Mushrooms" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>100</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CompostingApple</SubtypeId>
+</Id>
+<DisplayName>Organics</DisplayName>
+<Prerequisites>
+<Item Amount="20" TypeId="ConsumableItem" SubtypeId="Apple" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>200</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CompostingPumpkin</SubtypeId>
+</Id>
+<DisplayName>Organics</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Pumpkin" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>200</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CompostingCabbage</SubtypeId>
+</Id>
+<DisplayName>Organics</DisplayName>
+<Prerequisites>
+<Item Amount="12" TypeId="Ingot" SubtypeId="Cabbage" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>200</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CompostingWheat</SubtypeId>
+</Id>
+<DisplayName>Organics</DisplayName>
+<Prerequisites>
+<Item Amount="40" TypeId="Ingot" SubtypeId="Wheat" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>200</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CompostingSoya</SubtypeId>
+</Id>
+<DisplayName>Organics</DisplayName>
+<Prerequisites>
+<Item Amount="30" TypeId="Ingot" SubtypeId="Soya" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>200</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CompostingHerbs</SubtypeId>
+</Id>
+<DisplayName>Organics</DisplayName>
+<Prerequisites>
+<Item Amount="20" TypeId="Ingot" SubtypeId="Herbs" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>100</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

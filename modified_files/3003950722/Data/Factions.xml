@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Factions>
+<Faction Tag="SCRAP" Founder="Haircut">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>ScrapyardWreckers</SubtypeId>
+</Id>
+<DisplayName>Scrapyard Wreckers</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+</Faction>
+</Factions>
+</Definitions>
+ 

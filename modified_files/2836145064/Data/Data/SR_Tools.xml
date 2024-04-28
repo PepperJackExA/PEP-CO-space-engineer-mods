@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem xsi:type="MyObjectBuilder_OxygenContainerDefinition">
+<Id>
+<TypeId>OxygenContainerObject</TypeId>
+<SubtypeId>OxygenBottle</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_OxygenBottle</DisplayName>
+<Mass>30</Mass>
+<Volume>80</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</StoredGasId>
+<Capacity>90</Capacity>
+<MinimumOfferAmount>5</MinimumOfferAmount>
+<MaximumOfferAmount>10</MaximumOfferAmount>
+<MinimumOrderAmount>20</MinimumOrderAmount>
+<MaximumOrderAmount>50</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>20</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_OxygenContainerDefinition">
+<Id>
+<TypeId>GasContainerObject</TypeId>
+<SubtypeId>HydrogenBottle</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_HydrogenBottle</DisplayName>
+<Mass>30</Mass>
+<Volume>80</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<Capacity>180</Capacity>
+<MinimumOfferAmount>5</MinimumOfferAmount>
+<MaximumOfferAmount>10</MaximumOfferAmount>
+<MinimumOrderAmount>20</MinimumOrderAmount>
+<MaximumOrderAmount>50</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>20</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>50</MaximumAcquisitionAmount>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

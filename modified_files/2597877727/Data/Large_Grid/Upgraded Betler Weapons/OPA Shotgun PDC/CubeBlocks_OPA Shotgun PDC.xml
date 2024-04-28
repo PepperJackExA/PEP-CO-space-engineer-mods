@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>OPA Shotgun PDC</SubtypeId>
+</Id>
+<DisplayName>OPA Shotgun PDC</DisplayName>
+<Description>Another point defence cannon from the OPA, the shotgun PDC is a scrapped together point defense solution which uses advanced inner ammuntion combined with a low tech turret. The munitions split as they leave the barrels, creating a field of shrapnel that is deadly to both ships and torpedos, but is limited by low accuracy and low rate of fire. [2 km/s muzzle velocity, 3km range - Accepts 40mm Tungsten-Teflon Boxes]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="20" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="PDCComponent" Count="15" />
+<Component Subtype="UpgradedBelterComponent" Count="5" />
+<Component Subtype="Motor" Count="90" />
+<Component Subtype="Computer" Count="150" />
+<Component Subtype="MetalGrid" Count="60" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="SteelPlate" Count="220" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>15</OperationalPowerConsumption>
+<BlockPairName>OPA Shotgun PDC</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<InventoryMaxVolume>0.384</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-43</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>400</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>OPA Shotgun PDC MES</SubtypeId>
+</Id>
+<DisplayName>OPA Shotgun PDC</DisplayName>
+<Description>Another point defence cannon from the OPA, the shotgun PDC is a scrapped together point defense solution which uses advanced inner ammuntion combined with a low tech turret. The munitions split as they leave the barrels, creating a field of shrapnel that is deadly to both ships and torpedos, but is limited by low accuracy and low rate of fire. [2 km/s muzzle velocity, 3km range - Accepts 40mm Tungsten-Teflon Boxes]</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="Girder" Count="20" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="PDCComponent" Count="15" />
+<Component Subtype="UpgradedBelterComponent" Count="5">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>HighTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="90" />
+<Component Subtype="Computer" Count="150" />
+<Component Subtype="MetalGrid" Count="60" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="SteelPlate" Count="220" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>15</OperationalPowerConsumption>
+<BlockPairName>OPA Shotgun PDC MES</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<InventoryMaxVolume>0.384</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-43</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>400</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

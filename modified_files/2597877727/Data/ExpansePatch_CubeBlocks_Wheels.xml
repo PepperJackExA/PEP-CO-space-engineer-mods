@@ -1,0 +1,2159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>Suspension3x3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension3x3</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension3x3</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>Suspension5x5</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension5x5</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="SmallTube" Count="30" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension5x5</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>Suspension1x1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension1x1</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension1x1</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>Suspension2x2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension2x2</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension2x2</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.8</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallSuspension3x3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension3x3</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension3x3</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.2</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallSuspension5x5</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension5x5</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension5x5</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.3</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallSuspension1x1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension1x1</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension1x1</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallSuspension2x2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension2x2</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension2x2</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.15</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>Suspension3x3mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension3x3mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension3x3mirrored</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>Suspension5x5mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension5x5mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="SmallTube" Count="30" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension5x5mirrored</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>Suspension1x1mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension1x1mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension1x1mirrored</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>Suspension2x2Mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension2x2Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension2x2Mirrored</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.8</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallSuspension3x3mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension3x3mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension3x3mirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.2</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallSuspension5x5mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension5x5mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension5x5mirrored</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.3</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallSuspension1x1mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension1x1mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension1x1mirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallSuspension2x2Mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Suspension2x2Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>Suspension2x2Mirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.15</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>ShortSuspension3x3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension3x3</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension3x3</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>ShortSuspension5x5</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension5x5</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="SmallTube" Count="30" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension5x5</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>ShortSuspension1x1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension1x1</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension1x1</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>ShortSuspension2x2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension2x2</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension2x2</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.8</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallShortSuspension3x3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension3x3</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension3x3</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.2</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallShortSuspension5x5</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension5x5</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension5x5</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.3</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallShortSuspension1x1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension1x1</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension1x1</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallShortSuspension2x2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension2x2</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension2x2</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.15</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>ShortSuspension3x3mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension3x3mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension3x3mirrored</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>ShortSuspension5x5mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension5x5mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="SmallTube" Count="30" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension5x5mirrored</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>ShortSuspension1x1mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension1x1Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension1x1mirrored</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>ShortSuspension2x2Mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension2x2Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension2x2Mirrored</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.8</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallShortSuspension3x3mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension3x3mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension3x3mirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.2</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallShortSuspension5x5mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension5x5mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension5x5mirrored</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.3</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallShortSuspension1x1mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension1x1Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension1x1mirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SmallShortSuspension2x2Mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShortSuspension2x2Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>ShortSuspension2x2Mirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.15</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSuspension3x3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension3x3</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="15" Subtype="SteelPlate"/>
+<Component Count="15" Subtype="Construction"/>
+<Component Count="6" Subtype="LargeTube"/>
+<Component Count="12" Subtype="SmallTube"/>
+<Component Count="100" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="10" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension3x3</BlockPairName>
+<BuildTimeSeconds>20.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1.0</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSuspension5x5</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension5x5</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="40" Subtype="SteelPlate"/>
+<Component Count="40" Subtype="Construction"/>
+<Component Count="20" Subtype="LargeTube"/>
+<Component Count="30" Subtype="SmallTube"/>
+<Component Count="100" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="30" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension5x5</BlockPairName>
+<BuildTimeSeconds>30.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1.5</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSuspension1x1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension1x1</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="15" Subtype="SteelPlate"/>
+<Component Count="15" Subtype="Construction"/>
+<Component Count="6" Subtype="LargeTube"/>
+<Component Count="12" Subtype="SmallTube"/>
+<Component Count="100" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="10" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension1x1</BlockPairName>
+<BuildTimeSeconds>20.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.5</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSuspension2x2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension2x2</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadSuspension2x2</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.8</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallSuspension3x3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension3x3</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="5" Subtype="SteelPlate"/>
+<Component Count="7" Subtype="Construction"/>
+<Component Count="2" Subtype="SmallTube"/>
+<Component Count="50" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="3" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension3x3</BlockPairName>
+<BuildTimeSeconds>10.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.2</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallSuspension5x5</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension5x5</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="10" Subtype="SteelPlate"/>
+<Component Count="12" Subtype="Construction"/>
+<Component Count="4" Subtype="SmallTube"/>
+<Component Count="50" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="6" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension5x5</BlockPairName>
+<BuildTimeSeconds>15.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.3</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallSuspension1x1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension1x1</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="5" Subtype="SteelPlate"/>
+<Component Count="7" Subtype="Construction"/>
+<Component Count="2" Subtype="SmallTube"/>
+<Component Count="50" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="3" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension1x1</BlockPairName>
+<BuildTimeSeconds>10.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.1</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallSuspension2x2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension2x2</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadSuspension2x2</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.15</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSuspension3x3mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension3x3mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="15" Subtype="SteelPlate"/>
+<Component Count="15" Subtype="Construction"/>
+<Component Count="6" Subtype="LargeTube"/>
+<Component Count="12" Subtype="SmallTube"/>
+<Component Count="100" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="10" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension3x3mirrored</BlockPairName>
+<BuildTimeSeconds>20.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1.0</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSuspension5x5mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension5x5mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="40" Subtype="SteelPlate"/>
+<Component Count="40" Subtype="Construction"/>
+<Component Count="20" Subtype="LargeTube"/>
+<Component Count="30" Subtype="SmallTube"/>
+<Component Count="100" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="30" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension5x5mirrored</BlockPairName>
+<BuildTimeSeconds>30.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1.5</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSuspension1x1mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension1x1mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="15" Subtype="SteelPlate"/>
+<Component Count="15" Subtype="Construction"/>
+<Component Count="6" Subtype="LargeTube"/>
+<Component Count="12" Subtype="SmallTube"/>
+<Component Count="100" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="10" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension1x1mirrored</BlockPairName>
+<BuildTimeSeconds>20.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.5</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSuspension2x2Mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension2x2Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadSuspension2x2Mirrored</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.8</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallSuspension3x3mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension3x3mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="5" Subtype="SteelPlate"/>
+<Component Count="7" Subtype="Construction"/>
+<Component Count="2" Subtype="SmallTube"/>
+<Component Count="50" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="3" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension3x3mirrored</BlockPairName>
+<BuildTimeSeconds>10.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.2</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallSuspension5x5mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension5x5mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="10" Subtype="SteelPlate"/>
+<Component Count="12" Subtype="Construction"/>
+<Component Count="4" Subtype="SmallTube"/>
+<Component Count="50" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="6" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension5x5mirrored</BlockPairName>
+<BuildTimeSeconds>15.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.3</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallSuspension1x1mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension1x1mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="5" Subtype="SteelPlate"/>
+<Component Count="7" Subtype="Construction"/>
+<Component Count="2" Subtype="SmallTube"/>
+<Component Count="50" Subtype="HeavyMotor">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Count="3" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HeavyMotor"/>
+<BlockPairName>OffroadSuspension1x1mirrored</BlockPairName>
+<BuildTimeSeconds>10.0</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.1</RequiredPowerInput>
+<MaxForceMagnitude>1.0E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallSuspension2x2Mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadSuspension2x2Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadSuspension2x2Mirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.15</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadShortSuspension3x3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension3x3</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension3x3</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadShortSuspension5x5</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension5x5</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="SmallTube" Count="30" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension5x5</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadShortSuspension1x1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension1x1</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension1x1</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadShortSuspension2x2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension2x2</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension2x2</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.8</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallShortSuspension3x3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension3x3</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension3x3</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.2</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallShortSuspension5x5</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension5x5</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension5x5</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.3</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallShortSuspension1x1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension1x1</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension1x1</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallShortSuspension2x2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension2x2</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension2x2</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.15</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadShortSuspension3x3mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension3x3mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension3x3mirrored</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadShortSuspension5x5mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension5x5mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="SmallTube" Count="30" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension5x5mirrored</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>1.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadShortSuspension1x1mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension1x1Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension1x1mirrored</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.5</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadShortSuspension2x2Mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension2x2Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension2x2Mirrored</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.8</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallShortSuspension3x3mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension3x3mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension3x3mirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.2</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallShortSuspension5x5mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension5x5mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension5x5mirrored</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<PrimarySound>BlockWheel5x5</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.3</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallShortSuspension1x1mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension1x1Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension1x1mirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel1x1</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>OffroadSmallShortSuspension2x2Mirrored</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffroadShortSuspension2x2Mirrored</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="HeavyMotor" Index="0" />
+<BlockPairName>OffroadShortSuspension2x2Mirrored</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockWheel3x3</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.15</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>UpgradeAIModuleScrap</SubtypeId>
+</Id>
+<DisplayName>UpgradeAIModuleScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>UpgradeAIModuleDualScrap</SubtypeId>
+</Id>
+<DisplayName>UpgradeAIModuleDualScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>UpgradeAIModuleTripleScrap</SubtypeId>
+</Id>
+<DisplayName>UpgradeAIModuleTripleScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+</PhysicalItems>
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>UpgradeAIModuleScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>UpgradeAIModuleScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="UpgradeAIModuleScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>UpgradeAIModuleDualScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>UpgradeAIModuleDualScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="UpgradeAIModuleDualScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>UpgradeAIModuleTripleScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>UpgradeAIModuleTripleScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="UpgradeAIModuleTripleScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

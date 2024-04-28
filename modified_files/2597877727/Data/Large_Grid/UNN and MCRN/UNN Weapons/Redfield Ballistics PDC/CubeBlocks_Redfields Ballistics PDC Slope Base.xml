@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Redfields Ballistics PDC Slope Base</SubtypeId>
+</Id>
+<DisplayName>Redfields Ballistics PDC Angled</DisplayName>
+<Description>A point defence cannon from the Redfield Ballistics corporation. A durable weapons system in comparison with its MCRN counterparts it makes up for its innacuracies by lasting longer than its competitors and supporting a higher rate of fire. [3.0 km/s muzzle velocity, 3km range - Accepts 40mm Tungsten-Teflon Boxes]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="20" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="PDCComponent" Count="25" />
+<Component Subtype="UNNComponent" Count="5" />
+<Component Subtype="Motor" Count="90" />
+<Component Subtype="Computer" Count="200" />
+<Component Subtype="MetalGrid" Count="90" />
+<Component Subtype="Construction" Count="90" />
+<Component Subtype="SteelPlate" Count="330" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>15</OperationalPowerConsumption>
+<BlockPairName>Redfields Ballistics Angled PDC</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<InventoryMaxVolume>0.384</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-43</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>400</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Redfields Ballistics PDC Slope Base MES</SubtypeId>
+</Id>
+<DisplayName>Redfields Ballistics PDC Angled</DisplayName>
+<Description>A point defence cannon from the Redfield Ballistics corporation. A durable weapons system in comparison with its MCRN counterparts it makes up for its innacuracies by lasting longer than its competitors and supporting a higher rate of fire. Fires 40mm Tungsten-Teflon PDC rounds.</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="Girder" Count="20" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="PDCComponent" Count="25" />
+<Component Subtype="UNNComponent" Count="5">
+<DeconstructId>
+<TypeId>Ingot</TypeId>
+<SubtypeId>UNNCompTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="90" />
+<Component Subtype="Computer" Count="200" />
+<Component Subtype="MetalGrid" Count="90" />
+<Component Subtype="Construction" Count="90" />
+<Component Subtype="SteelPlate" Count="330" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>15</OperationalPowerConsumption>
+<BlockPairName>Redfields Ballistics PDC Angled MES</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<InventoryMaxVolume>0.384</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-43</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>400</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

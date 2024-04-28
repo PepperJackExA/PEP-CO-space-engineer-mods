@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>TOC-SpawnGroup-PlanetaryLogisticsOutpost</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-TOC) Planetary Logistics Outpost">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>TOC-SpawnGroup-PlanetaryTradeStationMkI</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-TOC) Planetary Trade Station Mk.I">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>TOC-SpawnGroup-TheTower</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-TOC) The Tower">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>TOC-SpawnGroup-TheHangar</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-TOC) The Hangar">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>TOC-SpawnGroup-LittleCity</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-TOC) Little City">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

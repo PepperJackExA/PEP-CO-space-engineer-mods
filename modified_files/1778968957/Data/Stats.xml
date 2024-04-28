@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<StatDefinitions>
+<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+<Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>SpaceCharacterHealth</SubtypeId>
+</Id>
+<Name>Health</Name>
+<MinValue>0</MinValue>
+<DefaultValue>300</DefaultValue>
+<MaxValue>300</MaxValue>
+</Stat>
+</StatDefinitions>
+</Definitions>
+ 

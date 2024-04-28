@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ArmorBlocks</DisplayName>
+<Name>Armorblocks</Name>
+<ItemIds>
+<string>CubeBlock/LG_3x1 Concave Base</string>
+<string>CubeBlock/LG_3x1 Concave Mid</string>
+<string>CubeBlock/LG_3x1 Concave Tip</string>
+<string>CubeBlock/LG_3x1 Convex Base</string>
+<string>CubeBlock/LG_3x1 Convex Mid</string>
+<string>CubeBlock/LG_3x1 Convex Tip</string>
+<string>CubeBlock/LG_1x1 Concave</string>
+<string>CubeBlock/LG_2x1 Concave Base</string>
+<string>CubeBlock/LG_2x1 Concave Tip</string>
+<string>CubeBlock/LG_2x1 Convex Base</string>
+<string>CubeBlock/LG_2x1 Convex Tip</string>
+<string>CubeBlock/SG_3x1 Concave Base</string>
+<string>CubeBlock/SG_3x1 Concave Mid</string>
+<string>CubeBlock/SG_3x1 Concave Tip</string>
+<string>CubeBlock/SG_3x1 Convex Base</string>
+<string>CubeBlock/SG_3x1 Convex Mid</string>
+<string>CubeBlock/SG_3x1 Convex Tip</string>
+<string>CubeBlock/SG_1x1 Concave</string>
+<string>CubeBlock/SG_2x1 Concave Base</string>
+<string>CubeBlock/SG_2x1 Concave Tip</string>
+<string>CubeBlock/SG_2x1 Convex Base</string>
+<string>CubeBlock/SG_2x1 Convex Tip</string>
+<string>CubeBlock/LG_3x1 Concave Base H</string>
+<string>CubeBlock/LG_3x1 Concave Mid H</string>
+<string>CubeBlock/LG_3x1 Concave Tip H</string>
+<string>CubeBlock/LG_3x1 Convex Base H</string>
+<string>CubeBlock/LG_3x1 Convex Mid H</string>
+<string>CubeBlock/LG_3x1 Convex Tip H</string>
+<string>CubeBlock/LG_1x1 Concave H</string>
+<string>CubeBlock/LG_2x1 Concave Base H</string>
+<string>CubeBlock/LG_2x1 Concave Tip H</string>
+<string>CubeBlock/LG_2x1 Convex Base H</string>
+<string>CubeBlock/LG_2x1 Convex Tip H</string>
+<string>CubeBlock/SG_3x1 Concave Base H</string>
+<string>CubeBlock/SG_3x1 Concave Mid H</string>
+<string>CubeBlock/SG_3x1 Concave Tip H</string>
+<string>CubeBlock/SG_3x1 Convex Base H</string>
+<string>CubeBlock/SG_3x1 Convex Mid H</string>
+<string>CubeBlock/SG_3x1 Convex Tip H</string>
+<string>CubeBlock/SG_1x1 Concave H</string>
+<string>CubeBlock/SG_2x1 Concave Base H</string>
+<string>CubeBlock/SG_2x1 Concave Tip H</string>
+<string>CubeBlock/SG_2x1 Convex Base H</string>
+<string>CubeBlock/SG_2x1 Convex Tip H</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmoredCurve" />
+<DisplayName>Armored Curve</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Mid" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Mid" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_1x1 Concave" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Mid" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Mid" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_1x1 Concave" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HeavyArmoredCurve" />
+<DisplayName>Heavy Armored Curve</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Mid H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Tip H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Mid H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Tip H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_1x1 Concave H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Mid H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Tip H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Mid H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Tip H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_1x1 Concave H" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmoredCurve3x1" />
+<DisplayName>Armored Curve 3x1</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Mid" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Mid" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Mid" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Mid" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Tip" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HeavyArmoredCurve3x1" />
+<DisplayName>Heavy Armored Curve 3x1</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Mid H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Concave Tip H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Mid H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_3x1 Convex Tip H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Mid H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Concave Tip H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Mid H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_3x1 Convex Tip H" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmoredCurve1x1" />
+<DisplayName>Armored Curve 1x1</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_1x1 Concave" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_1x1 Concave" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HeavyArmoredCurve1x1" />
+<DisplayName>Heavy Armored Curve 1x1</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_1x1 Concave H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_1x1 Concave H" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmoredCurve1x1" />
+<DisplayName>Armored Curve 1x1</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_2x1 Concave Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_2x1 Concave Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_2x1 Concave Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_2x1 Concave Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_2x1 Convex Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_2x1 Convex Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_2x1 Convex Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_2x1 Convex Tip" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HeavyArmoredCurve1x1" />
+<DisplayName>Heavy Armored Curve 1x1</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_2x1 Concave Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_2x1 Concave Tip H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_2x1 Concave Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_2x1 Concave Tip H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_2x1 Convex Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LG_2x1 Convex Tip H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_2x1 Convex Base H" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_2x1 Convex Tip H" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

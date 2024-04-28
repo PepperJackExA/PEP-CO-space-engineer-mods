@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>CentrifugeIngots</SubtypeId>
+</Id>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>ReprocessorIngots</SubtypeId>
+</Id>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>NRSteam</SubtypeId>
+</Id>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>FNRSteam</SubtypeId>
+</Id>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>CoalFurnace</SubtypeId>
+</Id>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="CentrifugeIngots" BlueprintSubtypeId="UraniumOreToIngot" />
+<Entry Class="CentrifugeIngots" BlueprintSubtypeId="CrushedUraniumOreToIngot" />
+<Entry Class="CentrifugeIngots" BlueprintSubtypeId="PurifiedUraniumOreToIngot" />
+<Entry Class="ReprocessorIngots" BlueprintSubtypeId="SpentFuelReprocessing" />
+<Entry Class="NRSteam" BlueprintSubtypeId="FNRSteam" />
+<Entry Class="FNRSteam" BlueprintSubtypeId="FNRSteam" />
+<Entry Class="FNRSteam" BlueprintSubtypeId="FNRSteam2" />
+<Entry Class="CoalFurnace" BlueprintSubtypeId="CoalFurnace" />
+</BlueprintClassEntries>
+</Definitions>
+ 

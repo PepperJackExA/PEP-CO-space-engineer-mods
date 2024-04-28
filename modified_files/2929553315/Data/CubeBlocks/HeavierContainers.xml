@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>SlopedIndustrialCargoContainer</SubtypeId>
+</Id>
+<DisplayName>Sloped Industrial Cargo Container</DisplayName>
+<Description>A large industrial cargo container.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="240" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="MetalGrid" Count="24" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="60" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SlopedIndustrialCargoContainer</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>PortedSlopedIndustrialCargoContainer</SubtypeId>
+</Id>
+<DisplayName>Ported Sloped Industrial Cargo Container</DisplayName>
+<Description>A large industrial cargo container with a front facing conveyor port, made with connectors in mind!</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="240" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="MetalGrid" Count="24" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="60" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>PortedSlopedIndustrialCargoContainer</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>SlopedIndustrialCargoContainerMedium</SubtypeId>
+</Id>
+<DisplayName>Sloped Industrial Cargo Container Medium</DisplayName>
+<Description>A medium industrial cargo container.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="CopperWire" Count="5" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SlopedIndustrialCargoContainer</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>ReinforcedCargoContainerLarge</SubtypeId>
+</Id>
+<DisplayName>Reinforced Cargo Container</DisplayName>
+<Description>A cargo container with increased durability at the expense of conveyor port access.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="600" />
+<Component Subtype="Construction" Count="120" />
+<Component Subtype="MetalGrid" Count="48" />
+<Component Subtype="CopperWire" Count="40" />
+<Component Subtype="Motor" Count="40" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="InteriorPlate" Count="120" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ReinforcedCargoContainer</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>IndustrialSiloXL</SubtypeId>
+</Id>
+<DisplayName>Industrial Silo XL</DisplayName>
+<Description>An extra large inustrial silo-style cargo container</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="500" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="CopperWire" Count="40" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="12" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="InteriorPlate" Count="80" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>IndustrialSiloXL</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>ReinforcedCargoContainerMedium</SubtypeId>
+</Id>
+<DisplayName>Reinforced Cargo Container Medium</DisplayName>
+<Description>A cargo container with increased durability at the expense of conveyor port access.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="40" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Motor" Count="8" />
+<Component Subtype="CopperWire" Count="5" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="InteriorPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ReinforcedCargoContainer</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

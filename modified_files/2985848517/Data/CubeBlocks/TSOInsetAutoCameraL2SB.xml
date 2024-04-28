@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+<Id>
+<TypeId>CameraBlock</TypeId>
+<SubtypeId>TSOInsetAutoCameraL2SB</SubtypeId>
+</Id>
+<DisplayName>Inset Camera B</DisplayName>
+<Description>Description_Camera</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>TSOInsetAutoCameraL2SB</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00003</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

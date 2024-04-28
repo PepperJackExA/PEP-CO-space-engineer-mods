@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>PEPCO_BioDiesel_Jerrycan</SubtypeId>
+</Id>
+<DisplayName>BioDiesel Jerrycan</DisplayName>
+<Mass>20</Mass>
+<Volume>200</Volume>
+<PhysicalMaterial>Stone</PhysicalMaterial>
+<MinimalPricePerUnit>1250</MinimalPricePerUnit>
+<MinimumOfferAmount>400</MinimumOfferAmount>
+<MaximumOfferAmount>12000</MaximumOfferAmount>
+<MinimumOrderAmount>200</MinimumOrderAmount>
+<MaximumOrderAmount>12000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

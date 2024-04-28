@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>CivilianProductI</SubtypeId>
+</Id>
+<DisplayName>Civilian Product tier I</DisplayName>
+<Mass>0.250</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>48</MaximumOfferAmount>
+<CanPlayerOrder>false</CanPlayerOrder>
+<MaxIntegrity>1</MaxIntegrity>
+</Component>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>CivilianProductII</SubtypeId>
+</Id>
+<DisplayName>Civilian Product tier II</DisplayName>
+<Mass>0.250</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>48</MaximumOfferAmount>
+<CanPlayerOrder>false</CanPlayerOrder>
+<MaxIntegrity>1</MaxIntegrity>
+</Component>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>CivilianProductIII</SubtypeId>
+</Id>
+<DisplayName>Civilian Product tier III</DisplayName>
+<Mass>0.250</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>48</MaximumOfferAmount>
+<CanPlayerOrder>false</CanPlayerOrder>
+<MaxIntegrity>1</MaxIntegrity>
+</Component>
+</Components>
+</Definitions>
+ 

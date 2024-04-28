@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Voltaire Collective Anti Personnel PDC</SubtypeId>
+</Id>
+<DisplayName>Voltaire Collective Anti Personnel PDC</DisplayName>
+<Description>A point defence cannon put together from scrap metal and salvaged machines. Fires 40mm Lead Steel PDC rounds to saturate an area for primarily anti personnel purposes but can be used for torpedo interception. [2.5 km/s muzzle velocity, 3km range - Accepts 40mm Lead-Steel Boxes]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="5" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Computer" Count="50" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SteelPlate" Count="55" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Voltaire Collective Anti Personnel PDC</BlockPairName>
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>15</OperationalPowerConsumption>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<InventoryMaxVolume>0.360</InventoryMaxVolume>
+<MinElevationDegrees>-15</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<PCU>400</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

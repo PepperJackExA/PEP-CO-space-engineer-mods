@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AiEnabled_BP_CombatBotMaterial</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AiE_BP_CombatBotMaterial}</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Uranium" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="AiEnabled_Comp_CombatBotMaterial" />
+</Results>
+<BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AiEnabled_BP_CrewBotMaterial</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AiE_BP_CrewBotMaterial}</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Uranium" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="AiEnabled_Comp_CrewBotMaterial" />
+</Results>
+<BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AiEnabled_BP_RepairBotMaterial</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AiE_BP_RepairBotMaterial}</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Uranium" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="AiEnabled_Comp_RepairBotMaterial" />
+</Results>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AiEnabled_BP_ScavengerBotMaterial</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AiE_BP_ScavengerBotMaterial}</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Uranium" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="AiEnabled_Comp_ScavengerBotMaterial" />
+</Results>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>MES-SpawnGroup-DebugWcRailgun</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-MES) WcRailgunTest">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>MES-SpawnGroup-DebugWcM8Homing</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-MES) WcM8HomingTest">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>MES-SpawnGroup-DebugWcSunderer</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-MES) WcSundererTest">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>MES-SpawnGroup-DebugWcHelios</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-MES) WcHeliosTest">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

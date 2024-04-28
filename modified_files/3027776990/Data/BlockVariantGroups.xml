@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightRampCornerGroup" />
+<DisplayName>DisplayName_BlockGroup_ArmorLightRampCornerGroup</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorInvCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorHalfSlopeInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorHalfSlopeCornerInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorInvCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorHalfSlopeInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorHalfSlopeCornerInverted" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyRampCornerGroup" />
+<DisplayName>DisplayName_BlockGroup_ArmorHeavyRampCornerGroup</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorInvCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopeInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopeCornerInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorInvCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopeInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopeCornerInverted" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightTransitionBlocks" />
+<DisplayName>DisplayName_BlockGroup_LightArmorTransitionBlocks</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransitionBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransitionBaseMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransition" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransitionMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransitionTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransitionTipMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransitionBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransitionBaseMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransition" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransitionMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransitionTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransitionTipMirrored" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyTransitionBlocks" />
+<DisplayName>DisplayName_BlockGroup_HeavyArmorTransitionBlocks</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionBaseMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransition" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionTipMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionBaseMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransition" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionTipMirrored" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

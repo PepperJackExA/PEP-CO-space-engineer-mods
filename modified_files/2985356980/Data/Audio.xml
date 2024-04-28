@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ChestOpening</SubtypeId>
+</Id>
+<Category>BLOCK</Category>
+<MaxDistance>50</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<UpdateDistance>110</UpdateDistance>
+<Waves>
+<Wave Type="D3">
+<Loop>Audio\ARC\BLOCK\OpeningChest.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ChestClosing</SubtypeId>
+</Id>
+<Category>BLOCK</Category>
+<MaxDistance>50</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<UpdateDistance>110</UpdateDistance>
+<Waves>
+<Wave Type="D3">
+<Loop>Audio\ARC\BLOCK\ClosingChest.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>BoxOpening</SubtypeId>
+</Id>
+<Category>BLOCK</Category>
+<MaxDistance>50</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<UpdateDistance>110</UpdateDistance>
+<Waves>
+<Wave Type="D3">
+<Loop>Audio\ARC\BLOCK\BoxOpening.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>BoxClosing</SubtypeId>
+</Id>
+<Category>BLOCK</Category>
+<MaxDistance>50</MaxDistance>
+<Volume>1</Volume>
+<Loopable>true</Loopable>
+<UpdateDistance>110</UpdateDistance>
+<Waves>
+<Wave Type="D3">
+<Loop>Audio\ARC\BLOCK\BoxClosing.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

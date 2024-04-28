@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SGGasolinePropellers" />
+<Blocks>
+<Block Type="Thrust" Subtype="SG1x1GasThruster" />
+<Block Type="Thrust" Subtype="SG3x3GasThruster" />
+<Block Type="Thrust" Subtype="SG5x5GasThruster" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Propulsion Systems</DisplayName>
+<Name>PropulsionSystem</Name>
+<ItemIds>
+<string>Thrust/SG1x1GasThruster</string>
+<string>Thrust/SG3x3GasThruster</string>
+<string>Thrust/SG5x5GasThruster</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SG1x1GasThruster</SubtypeId>
+</Id>
+<DisplayName>Small 1x1 Gasoline Atmospheric Thruster</DisplayName>
+<Description>Gasoline Propulsion System for use in Atmospher</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="CopperWire" Count="15" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="TitaniumPlate" Count="5" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>SG1x1GasThruster</BlockPairName>
+<ThrusterType>Hydrogen</ThrusterType>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>144000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Gasoline</SubtypeId>
+</FuelId>
+<Efficiency>1</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>0.0125</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SG3x3GasThruster</SubtypeId>
+</Id>
+<DisplayName>Small 3x3 Gasoline Atmospheric Thruster</DisplayName>
+<Description>Gasoline Propulsion System for use in Atmospher</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="MetalGrid" Count="8" />
+<Component Subtype="Motor" Count="80" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="TitaniumPlate" Count="25" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>SG3x3GasThruster</BlockPairName>
+<ThrusterType>Hydrogen</ThrusterType>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>864000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Gasoline</SubtypeId>
+</FuelId>
+<Efficiency>1</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>0.125</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SG5x5GasThruster</SubtypeId>
+</Id>
+<DisplayName>Small 5x5 Gasoline Atmospheric Thruster</DisplayName>
+<Description>Gasoline Propulsion System for use in Atmospher</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="CopperWire" Count="40" />
+<Component Subtype="MetalGrid" Count="16" />
+<Component Subtype="Motor" Count="160" />
+<Component Subtype="AdvancedComputer" Count="10" />
+<Component Subtype="TitaniumPlate" Count="50" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>SG5x5GasThruster</BlockPairName>
+<ThrusterType>Hydrogen</ThrusterType>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>1296000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Gasoline</SubtypeId>
+</FuelId>
+<Efficiency>1</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>0.25</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

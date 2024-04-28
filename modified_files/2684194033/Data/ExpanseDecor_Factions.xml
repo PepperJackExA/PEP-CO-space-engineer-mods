@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Factions>
+<Faction Tag="MFR" Founder="Captain Marvin">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>MFR</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>Martian Free Rebels</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>true</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+</Factions>
+</Definitions>
+ 

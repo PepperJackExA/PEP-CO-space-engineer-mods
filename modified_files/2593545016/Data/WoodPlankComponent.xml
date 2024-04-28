@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>WoodPlank</SubtypeId>
+</Id>
+<DisplayName>Wood Plank</DisplayName>
+<Mass>0.4</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Wood</PhysicalMaterial>
+<MaxIntegrity>1</MaxIntegrity>
+<DropProbability>0.9</DropProbability>
+<Health>1</Health>
+<MinimumOfferAmount>50</MinimumOfferAmount>
+<MaximumOfferAmount>500</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>1000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>100</MaximumAcquisitionAmount>
+</Component>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>WoodLogs</SubtypeId>
+</Id>
+<DisplayName>Wood Logs</DisplayName>
+<Mass>0.6</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Wood</PhysicalMaterial>
+<MaxIntegrity>1</MaxIntegrity>
+<DropProbability>0.9</DropProbability>
+<Health>1</Health>
+<MinimumOfferAmount>50</MinimumOfferAmount>
+<MaximumOfferAmount>500</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>1000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>100</MaximumAcquisitionAmount>
+</Component>
+</Components>
+<!--PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>WoodLogsI</SubtypeId>
+</Id>
+<DisplayName>Wood Logs</DisplayName>
+<Mass>5</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Wood</PhysicalMaterial>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<MinimumOrderAmount>1000</MinimumOrderAmount>
+<MaximumOrderAmount>20000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>30</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>300</MaximumAcquisitionAmount>
+</PhysicalItem>
+</Definitions>
+ 

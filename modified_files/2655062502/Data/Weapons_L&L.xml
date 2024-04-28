@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>CLGG</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="200" ShootSoundName="CLGGFire" />
+<DeviateShotAngle>0.05</DeviateShotAngle>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="CLGG" />
+</AmmoMagazines>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>155mmFixedCannon</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="25" ShootSoundName=""/>
+<DeviateShotAngle>0</DeviateShotAngle>
+<ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="155mmAPShell"/>
+<AmmoMagazine Subtype="155mmDUAPShell"/>
+<AmmoMagazine Subtype="155mmHEShell"/>
+</AmmoMagazines>
+<ReloadTime>0</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>305mmFixedCannon</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="15" ShootSoundName=""/>
+<DeviateShotAngle>0</DeviateShotAngle>
+<ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="305mmAPShell"/>
+<AmmoMagazine Subtype="305mmDUAPShell"/>
+<AmmoMagazine Subtype="305mmHEShell"/>
+</AmmoMagazines>
+<ReloadTime>0</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>305mmDoubleCannon</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="30" ShotsInBurst="2" ShootSoundName=""/>
+<DeviateShotAngle>0</DeviateShotAngle>
+<ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="305mmAPShell"/>
+<AmmoMagazine Subtype="305mmDUAPShell"/>
+<AmmoMagazine Subtype="305mmHEShell"/>
+</AmmoMagazines>
+<ReloadTime>0</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>FixedCoilgun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="8" ShootSoundName=""/>
+<DeviateShotAngle>0</DeviateShotAngle>
+<ReleaseTimeAfterFire>0</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="APCoilgunShell"/>
+<AmmoMagazine Subtype="DUAPCoilgunShell"/>
+</AmmoMagazines>
+<ReloadTime>0</ReloadTime>
+</Weapon>
+</Weapons>
+</Definitions>
+ 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LargeConcreteArmor1Group" />
+<DisplayName>Concrete Armor Block</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeConcreteArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeConcreteArmorSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeConcreteArmorCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeConcreteArmorCornerInv" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LargeConcreteArmor2Group" />
+<DisplayName>Concrete Armor Half Block</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeConcreteArmorHalfSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeConcreteArmorHalfBlock" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LargeConcreteArmor3Group" />
+<DisplayName>Concrete Armor Round</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorRoundSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorRoundCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorRoundCornerInv" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LargeConcreteArmor4Group" />
+<DisplayName>Concrete Armor Round</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorSlope2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorSlope2Tip" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LargeConcreteArmor5Group" />
+<DisplayName>Concrete Armor Round</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorCorner2Tip" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LargeConcreteArmor6Group" />
+<DisplayName>Concrete Armor Round</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorInvCorner2Tip" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

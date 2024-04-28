@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>FSDriveSmall</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>Small Frameshift Drive</DisplayName>
+<Description>The Frame Shift Drive (FSD) is a revolutionary ship hyperdrive system manufactured by Sirius Corporation. A device which allows ships to achieve faster-than-light speeds and travel through hyperspace.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="MetalGrid" Count="60" />
+<Component Subtype="GoldWire" Count="25" />
+<Component Subtype="GravityGenerator" Count="20" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="PowerCell" Count="120" />
+<Component Subtype="Superconductor" Count="1000" />
+<Component Subtype="Computer" Count="160" />
+<Component Subtype="QuantumComputer" Count="50" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="QuantumComputer" Index="0" />
+<BlockPairName>FSDrive</BlockPairName>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>32</RequiredPowerInput>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<string>Propulsion</string>
+<PCU>250</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>FSDriveLarge</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>Large Frameshift Drive</DisplayName>
+<Description>The Frame Shift Drive (FSD) is a revolutionary ship hyperdrive system manufactured by Sirius Corporation. A device which allows ships to achieve faster-than-light speeds and travel through hyperspace.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="180" />
+<Component Subtype="MetalGrid" Count="300" />
+<Component Subtype="GoldWire" Count="150" />
+<Component Subtype="GravityGenerator" Count="120" />
+<Component Subtype="Detector" Count="120" />
+<Component Subtype="PowerCell" Count="480" />
+<Component Subtype="Superconductor" Count="3000" />
+<Component Subtype="Computer" Count="400" />
+<Component Subtype="QuantumComputer" Count="300" />
+<Component Subtype="Construction" Count="140" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="QuantumComputer" Index="0" />
+<BlockPairName>FSDrive</BlockPairName>
+<BuildTimeSeconds>120</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>44</RequiredPowerInput>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<string>Propulsion</string>
+<PCU>250</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_JumpDriveDefinition">
+<Id>
+<TypeId>JumpDrive</TypeId>
+<SubtypeId>LargeJumpDrive</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_JumpDrive</DisplayName>
+<Description>Description_JumpDrive</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="ZoneChip" Count="40" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>JumpDrive</BlockPairName>
+<BuildTimeSeconds>120</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Charging</ResourceSinkGroup>
+<RequiredPowerInput>32</RequiredPowerInput>
+<PowerEfficiency>0.8</PowerEfficiency>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<string>Propulsion</string>
+<PCU>100</PCU>
+<IsAirTight>true</IsAirTight>
+<Public>false</Public>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

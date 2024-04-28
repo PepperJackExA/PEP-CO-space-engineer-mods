@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GearVariantGroup" />
+<DisplayName>Legacy Gears / Small Grid Only</DisplayName>
+<Description>A set of mechanical gears.</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear3_3_1_15t" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear1_3_1_4tline" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear1_1_1_5t" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_pinion" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Gear005VariantGroup" />
+<DisplayName>Gears 0.06m Module / Small Grid Only</DisplayName>
+<Description>A set of mechanical gears.</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_1_1_1_8t" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_3_3_1_24t_Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_3_3_1_24t_Top" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_5_5_1_40t_Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_5_5_1_40t_Top" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_1_3_1_Rack" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_1_1_1_Spur8_8" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_1_1_1_Spur8_24" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_3_3_1_Spur24_8_Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_3_3_1_Spur24_8_Top" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_005_Center" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Linear_Bearing_010" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Gear030VariantGroup" />
+<DisplayName>Gears 0.30m Module / Large Grid Only</DisplayName>
+<Description>A set of mechanical gears.</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_030_1_1_1_8t" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_030_3_3_1_24t_Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_030_3_3_1_24t_Top" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_030_5_5_1_40t_Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_030_5_5_1_40t_Top" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_030_1_3_1_Rack" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_030_1_1_1_Spur8_24" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_030_3_3_1_Spur24_8_Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_030_3_3_1_Spur24_8_Top" /-->
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Gear_030_Center" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Linear_Bearing_050" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

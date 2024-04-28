@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_LargeGunShot_WC" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_MissileNWEdit" />
+<Loop>false</Loop>
+<Priority>2</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="SmallFlakExplosionNWV" />
+<Loop>false</Loop>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash_RailgunLargeVaRe" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Muzzle_Flash_RailgunSmallVaRe" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+</Definitions>
+ 

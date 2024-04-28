@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>ConveyorTube</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorTube</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorTube</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>AQD_LG_ConveyorStraight5x1</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_ConveyorStraight5x1}</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="50" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="InteriorPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>AQD_ConveyorStraight5x1</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>AQD_LG_ConveyorStraightArmored</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_ConveyorStraightArmored}</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

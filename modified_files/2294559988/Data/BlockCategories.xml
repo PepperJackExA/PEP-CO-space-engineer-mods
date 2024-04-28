@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>MedicalRoom/Wardrobe</string>
+<string>CubeBlock/Damaged_Wardrobe</string>
+<string>CubeBlock/Kit_Locker</string>
+<string>CubeBlock/Damaged_Kit_Locker</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>MedicalRoom/SG_Wardrobe</string>
+<string>CubeBlock/SG_Damaged_Wardrobe</string>
+<string>CubeBlock/SG_Kit_Locker</string>
+<string>CubeBlock/SG_Damaged_Kit_Locker</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_DLC_DecorativeBlocks</DisplayName>
+<Name>DecorativeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>MedicalRoom/Wardrobe</string>
+<string>CubeBlock/Damaged_Wardrobe</string>
+<string>CubeBlock/Kit_Locker</string>
+<string>CubeBlock/Damaged_Kit_Locker</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

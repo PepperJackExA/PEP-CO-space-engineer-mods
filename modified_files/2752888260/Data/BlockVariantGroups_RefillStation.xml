@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RefillStation" />
+<DisplayName>Refill Station</DisplayName>
+<Description>A small hatch which allows for suit power, oxygen, and hydrogen refills.&#10;&#10;These stations are public and can be used by anyone regardless of faction standing.</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MedicalRoom" Subtype="LargeRefillStation" />
+<Block Type="MyObjectBuilder_MedicalRoom" Subtype="SmallRefillStation" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

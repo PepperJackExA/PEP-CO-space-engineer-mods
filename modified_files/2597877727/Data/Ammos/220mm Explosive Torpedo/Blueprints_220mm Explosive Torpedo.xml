@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>220mmExplosiveTorpedoBlueprint</SubtypeId>
+</Id>
+<DisplayName>220mm Explosive Torpedo</DisplayName>
+<Prerequisites>
+<Item Amount="40" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="20" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="20" TypeId="Ingot" SubtypeId="LeadIngot" />
+<Item Amount="25" TypeId="Ingot" SubtypeId="Uranium" />
+<Item Amount="60" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="20" TypeId="Ingot" SubtypeId="Gold" />
+<Item Amount="20" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="12" TypeId="Component" SubtypeId="GuidanceComponent" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

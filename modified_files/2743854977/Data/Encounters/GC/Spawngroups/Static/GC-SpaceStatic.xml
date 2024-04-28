@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>GC-DefensePlatform-Heavy</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="GC-DefensePlatform-Heavy">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>GC-LezunoStation</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="GC-SpaceStation">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>GC-BylenStation</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="GC-SpaceStation">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>GC-CraitStation</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="GC-SpaceStation">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>GC-LorusStation</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="GC-SpaceStation">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

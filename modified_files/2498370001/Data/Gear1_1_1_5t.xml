@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Gear1_1_1_5t</SubtypeId>
+</Id>
+<DisplayName>Legacy Gear 1x1 5 teeth</DisplayName>
+<Description>Legacy Gear size 1x1, 5 teeth.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="2" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="SteelPlate"/>
+<BlockPairName>Gear1_1_1_5t</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_SensorBlockDefinition">
+<Id>
+<TypeId>SensorBlock</TypeId>
+<SubtypeId>TSOInsetAutoSensorD</SubtypeId>
+</Id>
+<DisplayName>Inset Automaton Sensor D</DisplayName>
+<Description>Description_Sensor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="6" />
+<Component Subtype="RadioCommunication" Count="4" />
+<Component Subtype="Detector" Count="6" />
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>TSOInsetAutoSensorPairD</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<MaxRange>50</MaxRange>
+<ActionSound>BlockSensor</ActionSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

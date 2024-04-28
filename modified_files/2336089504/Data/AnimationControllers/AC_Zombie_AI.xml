@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Definition xsi:type="AnimationControllerDefinition">
+<Id Type="MyObjectBuilder_AnimationControllerDefinition" Subtype="Space_Zombie" />
+<Name>Body</Name>
+<Name>SMBody</Name>
+<Name>Move</Name>
+<Loop>true</Loop>
+<Speed>1</Speed>
+<Loop>true</Loop>
+<Speed>1</Speed>
+<Name>Attack</Name>
+<Loop>false</Loop>
+<Speed>1</Speed>
+<Name>Death</Name>
+<Loop>false</Loop>
+<Speed>1</Speed>
+<Name>all</Name>
+<Name>Idle</Name>
+<Name>Start</Name>
+<Priority>1</Priority>
+<Name>SMIdle</Name>
+<Name>Idle1</Name>
+<Loop>false</Loop>
+<Speed>1</Speed>
+<Name>Howling</Name>
+<Loop>false</Loop>
+<Speed>1</Speed>
+<Name>Any</Name>
+<Name>IdleToHowl</Name>
+<Loop>true</Loop>
+<Speed>1</Speed>
+<Priority>1</Priority>
+</Definition>
+</Definitions>
+ 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Linear_Bearing_010</SubtypeId>
+</Id>
+<DisplayName>Linear Bearing 10cm</DisplayName>
+<Description>Fits for 10cm large beams</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="2" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="SteelPlate"/>
+<BlockPairName>Linear_Bearing_010</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

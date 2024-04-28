@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Blueprint_TerrainTool</SubtypeId>
+</Id>
+<DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Silicon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Blueprint_SoilStoneMix</SubtypeId>
+</Id>
+<DisplayName>SoilStone Mix</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Stone" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Blueprint_SnowIceMix</SubtypeId>
+</Id>
+<DisplayName>SnowIce Mix</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+<BlueprintClassEntries>
+<Entry Class="BasicTools" BlueprintSubtypeId="Blueprint_TerrainTool" />
+<Entry Class="BasicTools" BlueprintSubtypeId="Blueprint_SoilStoneMix" />
+<Entry Class="BasicTools" BlueprintSubtypeId="Blueprint_SnowIceMix" />
+<Entry Class="Tools" BlueprintSubtypeId="Blueprint_TerrainTool" />
+<Entry Class="Consumables" BlueprintSubtypeId="Blueprint_SoilStoneMix" />
+<Entry Class="Consumables" BlueprintSubtypeId="Blueprint_SnowIceMix" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Blueprint_TerrainTool" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Blueprint_SoilStoneMix" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Blueprint_SnowIceMix" />
+</BlueprintClassEntries>
+</Definitions>
+ 

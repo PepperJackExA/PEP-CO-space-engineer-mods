@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_Flap_Straight</SubtypeId>
+</Id>
+<DisplayName>Control Surface 5x2 Flat</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.001</RequiredPowerInput>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_Rudder_Straight_Flat</SubtypeId>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_Elevator_Straight</SubtypeId>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_2x1_Control_Flat</SubtypeId>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_3x3_Angled_Flat</SubtypeId>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_3x3_Angled_Flat_Inv</SubtypeId>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_5x3_Angled_Flat</SubtypeId>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_5x3_Angled_Flat_Inv</SubtypeId>
+<BlockPairName>Flap_Straight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_Flap_Straight_Centered</SubtypeId>
+</Id>
+<DisplayName>Control Surface 5x2 Centered</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.001</RequiredPowerInput>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_Rudder_Straight</SubtypeId>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_Elevator_Straight_Centered</SubtypeId>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_2x1_Control_Centered</SubtypeId>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_3x3_Angled_Centered</SubtypeId>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_5x3_Angled_Centered</SubtypeId>
+<BlockPairName>Flap_Straight_Centered</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_Elevator_Straight</SubtypeId>
+</Id>
+<DisplayName>Control Surface 2x2 Flat</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0010</RequiredPowerInput>
+<BlockPairName>Elevator_Straight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_Rudder_Straight</SubtypeId>
+</Id>
+<DisplayName>Control Surface 3x3 Centered</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0010</RequiredPowerInput>
+<BlockPairName>Rudder_Straight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_3x3_Angled_Centered</SubtypeId>
+</Id>
+<DisplayName>Control Surface 3x3 Angled Centered</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0010</RequiredPowerInput>
+<BlockPairName>Small_3x3Angled_Centered</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_3x3_Angled_Flat</SubtypeId>
+</Id>
+<DisplayName>Control Surface 3x3 Angled Flat</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0010</RequiredPowerInput>
+<BlockPairName>Small_3x3Angled2_Flat</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_3x3_Angled_Flat_Inv</SubtypeId>
+</Id>
+<DisplayName>Control Surface 3x3 Angled Flat Inverted</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0010</RequiredPowerInput>
+<BlockPairName>Small_3x3Angled2_Flat_Inv</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_Elevator_Straight_Centered</SubtypeId>
+</Id>
+<DisplayName>Control Surface 2x2 Centered</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0010</RequiredPowerInput>
+<BlockPairName>Elevator_Straight_Centered</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_2x1_Control_Centered</SubtypeId>
+</Id>
+<DisplayName>Control Surface 2x1 Centered</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0010</RequiredPowerInput>
+<BlockPairName>2x1_Straight_Centered</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_2x1_Control_Flat</SubtypeId>
+</Id>
+<DisplayName>Control Surface 2x1 Flat</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0010</RequiredPowerInput>
+<BlockPairName>2x1_Straight_Flat</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_Rudder_Straight_Flat</SubtypeId>
+</Id>
+<DisplayName>Control Surface 3x3 Flat</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0010</RequiredPowerInput>
+<BlockPairName>Rudder_Straight_Flat</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_5x3_Angled_Centered</SubtypeId>
+</Id>
+<DisplayName>Control Surface 5x3 Angled Centered</DisplayName>
+<Description>Description_ControlSurface5x3ax1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0015</RequiredPowerInput>
+<BlockPairName>Small_5x3_Angled_Centered</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_5x3_Angled_Flat</SubtypeId>
+</Id>
+<DisplayName>Control Surface 5x3 Angled Flat</DisplayName>
+<Description>Description_ControlSurface5x3ax1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0015</RequiredPowerInput>
+<BlockPairName>Small_5x3_Angled_Flat</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_5x3_Angled_Flat_Inv</SubtypeId>
+</Id>
+<DisplayName>Control Surface 5x3 Angled Flat Inverted</DisplayName>
+<Description>Description_ControlSurface5x3ax1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<RequiredPowerInput>0.0015</RequiredPowerInput>
+<BlockPairName>Small_5x3_Angled_Flat_Inv</BlockPairName>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+</BlockPositions>
+</Definitions>
+ 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_Pillar</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_Pillar}</DisplayName>
+<Description>{LOC:Description_AQD_Pillar}</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SmallTube" Count="10"/>
+<Component Subtype="Construction" Count="5"/>
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0"/>
+<BlockPairName>AQD_Pillar</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_Pillar_Half</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_Pillar_Half}</DisplayName>
+<Description>{LOC:Description_AQD_Pillar}</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SmallTube" Count="5"/>
+<Component Subtype="Construction" Count="2"/>
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0"/>
+<BlockPairName>AQD_Pillar_Half</BlockPairName>
+<BuildTimeSeconds>2.5</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

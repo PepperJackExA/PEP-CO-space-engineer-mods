@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WardrobeLockers" />
+<DisplayName>WardrobeLockers</DisplayName>
+<Description>WardrobeLockers</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MedicalRoom" Subtype="Wardrobe" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Damaged_Wardrobe" />
+<Block Type="MyObjectBuilder_MedicalRoom" Subtype="SG_Wardrobe" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_Damaged_Wardrobe" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="KitLockers" />
+<DisplayName>KitLockers</DisplayName>
+<Description>KitLockers</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Kit_Locker" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Damaged_Kit_Locker" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_Kit_Locker" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SG_Damaged_Kit_Locker" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ATL_SlopeLCDs2" />
+<DisplayName>Slope LCD Panels</DisplayName>
+<Description>Slope LCD Panels</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_TextPanel" Subtype="ATL_ArmorBlockLCD_LG" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="ATL_ArmorBlockLCD_SG" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="ATL_SlopedArmorBlockLCD_LG" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="ATL_SlopedArmorBlockLCD_SG" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="ATL_HalfSlopeArmorBlockBaseLCD_LG" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="ATL_HalfSlopeArmorBlockBaseLCD_SG" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="ATL_HalfSlopeArmorBlockTipLCD_LG" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="ATL_HalfSlopeArmorBlockTipLCD_SG" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="ATL_SingleLCDPanel_LG" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="ATL_SingleLCDPanel_SG" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

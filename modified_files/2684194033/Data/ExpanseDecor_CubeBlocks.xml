@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>OPA_Logo</SubtypeId>
+</Id>
+<DisplayName>OPA Logo</DisplayName>
+<Description>The main logo of the Outer Planets Alliance</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="30" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="SteelPlate"/>
+<BlockPairName>OPA Logo</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>UN_Logo</SubtypeId>
+</Id>
+<DisplayName>UN Logo</DisplayName>
+<Description>The logo of the United Nations</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="30" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="SteelPlate"/>
+<BlockPairName>UN Logo</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>MCR_Logo</SubtypeId>
+</Id>
+<DisplayName>MCR Logo</DisplayName>
+<Description>The Flag of the Martian Congressional Republic</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="30" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="SteelPlate"/>
+<BlockPairName>MCR Logo</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Vandalised_MCR_Logo</SubtypeId>
+</Id>
+<DisplayName>Vandalised MCR Logo</DisplayName>
+<Description>The Flag of the Martian Congressional Republic vandalised by members of the OPA</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="30" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="SteelPlate"/>
+<BlockPairName>Vandalised MCR Logo</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Water_Tank_Block</SubtypeId>
+</Id>
+<DisplayName>Water Tank</DisplayName>
+<Description>A tank of filtered water processed from ice asteroids found in the belt at Ceres</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="4" Subtype="SteelPlate"/>
+<Component Count="10" Subtype="SmallTube"/>
+<Component Count="1" Subtype="Water_Tank"/>
+</Components>
+<CriticalComponent Index="0" Subtype="Water_Tank"/>
+<BlockPairName>Water Tank</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ice_Box_Block</SubtypeId>
+</Id>
+<DisplayName>Ice Box</DisplayName>
+<Description>A container specifically designed to keep purified ice frozen during the long journey from ceres</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="4" Subtype="SteelPlate"/>
+<Component Count="1" Subtype="IceBox"/>
+</Components>
+<CriticalComponent Index="0" Subtype="IceBox"/>
+<BlockPairName>Ice Container</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Hedge</SubtypeId>
+</Id>
+<DisplayName>The Lord Bush</DisplayName>
+<Description>If you dont know- you never will</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="10" Subtype="SteelPlate"/>
+<Component Count="10" Subtype="Compost"/>
+<Component Count="1" Subtype="HedgeSapling"/>
+</Components>
+<CriticalComponent Index="0" Subtype="HedgeSapling"/>
+<BlockPairName>Hedge</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>PineBush</SubtypeId>
+</Id>
+<DisplayName>Pine Bush</DisplayName>
+<Description>A decorative Pine Bush planter </Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="10" Subtype="SteelPlate"/>
+<Component Count="10" Subtype="Compost"/>
+<Component Count="1" Subtype="Sapling"/>
+</Components>
+<CriticalComponent Index="0" Subtype="Sapling"/>
+<BlockPairName>PineBush</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>TreePlanter</SubtypeId>
+</Id>
+<DisplayName>Tree Planter</DisplayName>
+<Description>A decorative slice of earth for those long journeys </Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="20" Subtype="SteelPlate"/>
+<Component Count="20" Subtype="Compost"/>
+<Component Count="1" Subtype="Sapling"/>
+</Components>
+<CriticalComponent Index="0" Subtype="Sapling"/>
+<BlockPairName>Tree</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Planter1x2Flat</SubtypeId>
+</Id>
+<DisplayName>Wall Planter</DisplayName>
+<Description>A decorative and practical planter</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Count="1" Subtype="Sapling"/>
+</Components>
+<CriticalComponent Subtype="Sapling" Index="0" />
+<BlockPairName>Wall Planter</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>OffsetPlanter1x2Flat</SubtypeId>
+</Id>
+<DisplayName>Wall Planter Offset</DisplayName>
+<Description>A decorative and practical planter</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Count="1" Subtype="Sapling"/>
+</Components>
+<CriticalComponent Subtype="Sapling" Index="0" />
+<BlockPairName>Wall Planter Offset</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>Armoured_Light_HalfBlock</SubtypeId>
+</Id>
+<DisplayName>Light Half Block</DisplayName>
+<Description>Description_InteriorLight</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="65" />
+<Component Subtype="MetalGrid" Count="25" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HalfBlockLight</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>Armoured_Light_Block</SubtypeId>
+</Id>
+<DisplayName>Light Block</DisplayName>
+<Description>Description_InteriorLight</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="135" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>BlockLight</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AdminBiodome</SubtypeId>
+</Id>
+<DisplayName>Biodome</DisplayName>
+<Description>Biodome used for NPC stations</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Count="1" Subtype="CrateOApples"/>
+<Component Count="135" Subtype="SteelPlate" />
+</Components>
+<CriticalComponent Index="0" Subtype="CrateOApples"/>
+<BlockPairName>Biodome</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GanymedeRoundedWindow</SubtypeId>
+</Id>
+<DisplayName>Rounded Admin 1x1</DisplayName>
+<Description>Decorative block only used for stations at this time</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Count="1" Subtype="CrateOApples"/>
+<Component Count="135" Subtype="SteelPlate" />
+</Components>
+<CriticalComponent Index="0" Subtype="CrateOApples"/>
+<BlockPairName>Admin Window 1x1</BlockPairName>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+<Id>
+<TypeId>CameraBlock</TypeId>
+<SubtypeId>InnerArmouredCamera</SubtypeId>
+</Id>
+<DisplayName>Armoured Camera</DisplayName>
+<Description>Description_Camera</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="135" />
+<Component Subtype="ReactiveDisplay" Count="1" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="Computer" Count="30" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>InnerArmouredCamera</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00003</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+<Id>
+<TypeId>CameraBlock</TypeId>
+<SubtypeId>InnerArmouredCamera+</SubtypeId>
+</Id>
+<DisplayName>Zoom Armoured Camera</DisplayName>
+<Description>This Camera has a 2 times greater zoom than vanilla.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="135" />
+<Component Subtype="ReactiveDisplay" Count="1" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="Computer" Count="30" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>InnerZoomPlusCamera</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00003</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

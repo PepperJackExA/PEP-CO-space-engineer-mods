@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Aerodynamic Blocks</DisplayName>
+<Name>Aerodynamics</Name>
+<ItemIds>
+<string>Small_Flap_Straight</string>
+<string>Small_Rudder_Straight</string>
+<string>Small_Elevator_Straight</string>
+<string>Small_Flap_Straight_Centered</string>
+<string>Small_Rudder_Straight_Flat</string>
+<string>Small_Elevator_Straight_Centered</string>
+<string>Small_2x1_Control_Centered</string>
+<string>Small_2x1_Control_Flat</string>
+<string>Small_3x3Angled_Centered</string>
+<string>Small_3x3Angled_Flat</string>
+<string>Small_3x3Angled_Flat_Inv</string>
+<string>Small_5x3Angled_Centered</string>
+<string>Small_5x3Angled_Flat</string>
+<string>Small_5x3Angled_Flat_Inv</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

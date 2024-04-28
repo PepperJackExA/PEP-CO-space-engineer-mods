@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Ares 220mm Torpedo Magazine</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_Ares 220mm Torpedo Magazine}</DisplayName>
+<Description>{LOC:Description_Ares 220mm Torpedo Magazine}</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>Ares 220mm Torpedo Magazine</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>redSG_LSCR</SubtypeId>
+</Id>
+<DisplayName>SG_LSCR</DisplayName>
+<Description>Standart Issue Light Plasma Accelerator</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Superconductor" Count="5" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>redSG_LSCR</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.24</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>425</PCU>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>greenSG_LSCR</SubtypeId>
+</Id>
+<DisplayName>SG_LSCR</DisplayName>
+<Description>Standart Issue Light Plasma Accelerator</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Superconductor" Count="5" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>greenSG_LSCR</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.24</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>425</PCU>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>blueSG_LSCR</SubtypeId>
+</Id>
+<DisplayName>SG_LSCR</DisplayName>
+<Description>Standart Issue Light Plasma Accelerator</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Superconductor" Count="5" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>blueSG_LSCR</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.24</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>425</PCU>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>purpleSG_LSCR</SubtypeId>
+</Id>
+<DisplayName>SG_LSCR</DisplayName>
+<Description>Standart Issue Light Plasma Accelerator</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Superconductor" Count="5" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>purpleSG_LSCR</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.24</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>425</PCU>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>yellowSG_LSCR</SubtypeId>
+</Id>
+<DisplayName>SG_LSCR</DisplayName>
+<Description>Standart Issue Light Plasma Accelerator</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Superconductor" Count="5" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>yellowSG_LSCR</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.24</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>425</PCU>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>orangeSG_LSCR</SubtypeId>
+</Id>
+<DisplayName>SG_LSCR</DisplayName>
+<Description>Standart Issue Light Plasma Accelerator</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Superconductor" Count="5" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>orangeSG_LSCR</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.24</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>425</PCU>
+<string>Weapons</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

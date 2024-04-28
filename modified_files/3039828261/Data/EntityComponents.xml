@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_CraftingComponentBlockDefinition">
+<Id>
+<TypeId>MyObjectBuilder_CraftingComponentBlock</TypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>ModName</SubtypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_OffensiveCombatCircleOrbitDefinition">
+<Id>
+<TypeId>OffensiveCombatCircleOrbit</TypeId>
+<SubtypeId>OffensiveCombatBlock</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_OffensiveCombatHitAndRunDefinition">
+<Id>
+<TypeId>OffensiveCombatHitAndRun</TypeId>
+<SubtypeId>OffensiveCombatBlock</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_SearchEnemyComponentDefinition">
+<Id>
+<TypeId>SearchEnemyComponent</TypeId>
+<SubtypeId>DefaultEnemySearch</SubtypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

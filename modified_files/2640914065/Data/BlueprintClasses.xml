@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Farming</SubtypeId>
+</Id>
+<DisplayName>Farming</DisplayName>
+<Description>Farming</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Cooking</SubtypeId>
+</Id>
+<DisplayName>Cooking</DisplayName>
+<Description>Cooking</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>MushroomsFarm</SubtypeId>
+</Id>
+<DisplayName>MushroomsFarm</DisplayName>
+<Description>MushroomsFarm</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>AppleFarm</SubtypeId>
+</Id>
+<DisplayName>AppleFarm</DisplayName>
+<Description>AppleFarm</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>WheatFarm</SubtypeId>
+</Id>
+<DisplayName>WheatFarm</DisplayName>
+<Description>WheatFarm</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Soya_Farm</SubtypeId>
+</Id>
+<DisplayName>Soya_Farm</DisplayName>
+<Description>Soya_Farm</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>HerbsFarm</SubtypeId>
+</Id>
+<DisplayName>HerbsFarm</DisplayName>
+<Description>HerbsFarm</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>VegetablesFarm</SubtypeId>
+</Id>
+<DisplayName>VegetablesFarm</DisplayName>
+<Description>VegetablesFarm</Description>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="Farming" BlueprintSubtypeId="Soya" />
+<Entry Class="Farming" BlueprintSubtypeId="Herbs" />
+<Entry Class="Cooking" BlueprintSubtypeId="AppleJuice" />
+<Entry Class="Cooking" BlueprintSubtypeId="ApplePie" />
+<Entry Class="Cooking" BlueprintSubtypeId="Tofu" />
+<Entry Class="Cooking" BlueprintSubtypeId="MeatRoasted" />
+<Entry Class="Cooking" BlueprintSubtypeId="ShroomSteak" />
+<Entry Class="Cooking" BlueprintSubtypeId="Bread" />
+<Entry Class="Cooking" BlueprintSubtypeId="Burger" />
+<Entry Class="Cooking" BlueprintSubtypeId="Soup" />
+<Entry Class="Cooking" BlueprintSubtypeId="EuropaTea" />
+<Entry Class="MushroomsFarm" BlueprintSubtypeId="FarmedMushrooms" />
+<Entry Class="AppleFarm" BlueprintSubtypeId="FarmedApples" />
+<Entry Class="WheatFarm" BlueprintSubtypeId="FarmedWheat" />
+<Entry Class="HerbsFarm" BlueprintSubtypeId="FarmedHerbs" />
+<Entry Class="Soya_Farm" BlueprintSubtypeId="FarmedSoya" />
+<Entry Class="HerbsFarm" BlueprintSubtypeId="FarmedHerbs" />
+<Entry Class="VegetablesFarm" BlueprintSubtypeId="FarmedPumpkin" />
+<Entry Class="VegetablesFarm" BlueprintSubtypeId="FarmedCabbage" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="EmptyTinCan" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="EmptyTinCan" />
+<Entry Class="Components" BlueprintSubtypeId="EmptyTinCan" />
+</BlueprintClassEntries>
+</Definitions>
+ 

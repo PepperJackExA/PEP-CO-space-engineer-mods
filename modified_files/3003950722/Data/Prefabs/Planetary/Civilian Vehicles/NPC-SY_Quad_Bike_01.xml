@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="(NPC-SY) Quad Bike 01" />
+<Name>91744612558518584</Name>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.064</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyMultiTextPanelComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_MultiTextPanelComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyAutopilotComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_AutopilotComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<Name>Quad - Lights</Name>
+<Blocks>
+</Blocks>
+<DisplayName>(NPC-SY) Quad Bike 01</DisplayName>
+<Name>131206829072853306</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 6831</DisplayName>
+<Name>72158845196829922</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 7272</DisplayName>
+<Name>137954027845327704</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 3730</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>TSOInsetLightBlockHalfB</SubtypeId>
+</Id>
+<DisplayName>Inset Light Half B</DisplayName>
+<Description>Description_InteriorLight</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="3" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TSOInsetLightBlockHalfB</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

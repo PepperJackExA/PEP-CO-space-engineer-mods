@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LandingGearGroup" />
+<DisplayName>DisplayName_Block_LandingGear</DisplayName>
+<Description>Description_LandingGear</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LargeBlockLandingGear" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SmallBlockLandingGear" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LargeBlockMagneticPlate" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SmallBlockMagneticPlate" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LargeBlockSmallMagneticPlate" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SmallBlockSmallMagneticPlate" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LG_TSOMagneticHalfBlock" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SG_TSOMagneticHalfBlock" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LG_TSOMagneticPlateHalf" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SG_TSOMagneticPlateHalf" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="TSOMagneticPlateCenterSmall" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="TSOMagneticPlateCenterSmallSG" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LG_TSOMagneticPlate3x3" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SG_TSOMagneticPlate3x3" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LG_TSOMagneticPlate5x5" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SG_TSOMagneticPlate5x5" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="MagneticPlateGroup" />
+<DisplayName>DisplayName_Block_MagneticPlateSmall</DisplayName>
+<Description>Description_LandingGear</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LargeBlockSmallMagneticPlate" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SmallBlockSmallMagneticPlate" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LG_TSOMagneticPlateHalf" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SG_TSOMagneticPlateHalf" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="TSOMagneticPlateCenterSmall" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="TSOMagneticPlateCenterSmallSG" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LG_TSOMagneticPlate5x5" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SG_TSOMagneticPlate5x5" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="LG_TSOMagneticPlate3x3" />
+<Block Type="MyObjectBuilder_LandingGear" Subtype="SG_TSOMagneticPlate3x3" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

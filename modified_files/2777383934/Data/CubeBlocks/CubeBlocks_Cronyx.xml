@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeCronyxReactor</SubtypeId>
+</Id>
+<DisplayName>Cronyx Reactor</DisplayName>
+<Description>Heavy-duty Reactor chamber, capable of containing and controlling the massive energy output of Cronyx combustion.
+Fuel: Stabilized Cronyx - 3.3/min</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="Construction" Count="150" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="LargeTube" Count="25" />
+<Component Subtype="Reactor" Count="2500" />
+<Component Subtype="Superconductor" Count="1000" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="Computer" Count="150" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>CronyxReactor</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>StabilizedCronyx</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallCronyxReactor</SubtypeId>
+</Id>
+<DisplayName>Cronyx Reactor</DisplayName>
+<Description>Heavy-duty Reactor chamber, capable of containing and controlling the massive energy output of Cronyx combustion.
+Fuel: Stabilized Cronyx - 0.167/min</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="Reactor" Count="200" />
+<Component Subtype="Superconductor" Count="100" />
+<Component Subtype="Detector" Count="10" />
+<Component Subtype="Computer" Count="75" />
+<Component Subtype="Motor" Count="15" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>CronyxReactor</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>StabilizedCronyx</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+<Id>
+<TypeId>Assembler</TypeId>
+<SubtypeId>CronyxMunitionsFactory</SubtypeId>
+</Id>
+<DisplayName>Cronyx Munitions Factory</DisplayName>
+<Description>Produces powerful Cronyx ammunition.
+Power Usage: 1 MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="120" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Display" Count="10" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="Computer" Count="160" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>80</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>1</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>CronyxAmmo</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>40</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>MES-HostileJumpIn</SubtypeId>
+</Id>
+<Category>HUD</Category>
+<MaxDistance>4000</MaxDistance>
+<Volume>1</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\HostileJumpIn.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>MES-ShipyardConstruct</SubtypeId>
+</Id>
+<Category>HUD</Category>
+<MaxDistance>250</MaxDistance>
+<Volume>1</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\ShipyardConstruct.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>MES-ShipyardSell</SubtypeId>
+</Id>
+<Category>HUD</Category>
+<MaxDistance>250</MaxDistance>
+<Volume>1</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\ShipyardSell.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_Tarp_3x3_Net</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_Tarp_3x3_Net}</DisplayName>
+<Description>{LOC:Description_AQD_Tarp}</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Canvas" Count="45"/>
+<Component Subtype="Construction" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Canvas" Index="0"/>
+<BlockPairName>AQD_Tarp_3x3_Net</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_Tarp_3x3_Net_Offset</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_Tarp_3x3_Net_Offset}</DisplayName>
+<Description>{LOC:Description_AQD_Tarp}</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Canvas" Count="45"/>
+<Component Subtype="Construction" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Canvas" Index="0"/>
+<BlockPairName>AQD_Tarp_3x3_Net_Offset</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

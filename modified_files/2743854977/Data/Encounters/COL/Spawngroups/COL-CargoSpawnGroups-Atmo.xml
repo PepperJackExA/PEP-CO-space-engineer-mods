@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>COL-SpawnGroup-AtmoCargo</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="COL-B980 ">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="COL-BuddyMiner">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="COL-MiniHauler">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="COL-TT15">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="COL-TT420">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

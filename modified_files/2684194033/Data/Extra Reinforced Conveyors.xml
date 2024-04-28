@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>Conveyor4WayDuct</SubtypeId>
+</Id>
+<DisplayName>Conveyor 4 Way Duct</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="24" />
+<Component Subtype="SmallTube" Count="14" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Conveyor4WayDuct</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>ConveyorElbowDuct</SubtypeId>
+</Id>
+<DisplayName>Conveyor Elbow Duct</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="24" />
+<Component Subtype="SmallTube" Count="14" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorElbowDuct</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>Conveyor4WayAltDuct</SubtypeId>
+</Id>
+<DisplayName>Conveyor 4 Way Alt Duct</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="24" />
+<Component Subtype="SmallTube" Count="14" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Conveyor4WayAltDuct</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>Conveyor5WayDuct</SubtypeId>
+</Id>
+<DisplayName>Conveyor 5 Way Duct</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="24" />
+<Component Subtype="SmallTube" Count="14" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Conveyor5WayDuct</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

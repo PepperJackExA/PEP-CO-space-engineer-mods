@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LargeLightingGroup" />
+<DisplayName>DisplayName_BlockGroup_LightingGroup</DisplayName>
+<Description>Description_BlockGroup_LightingGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="LargeBlockFrontLight" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="SmallBlockFrontLight" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="CleanSpotlight_LB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="CleanSpotlight_SB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="CleanSpotlightSlanted_LB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="CleanSpotlightSlanted_SB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="CleanSpotlightSlope_LB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="CleanSpotlightSlope_SB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="SlimSpotlight_LB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="SlimSpotlight_SB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="CleanSpotlightSlope2_LB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="CleanSpotlightSlope2_SB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="CleanSpotlightSlanted2_LB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="CleanSpotlightSlanted2_SB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="SmallFloodLight_LB" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="SmallFloodLight_SB" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SmallLightingGroup" />
+<DisplayName>DisplayName_BlockGroup_LightingGroup</DisplayName>
+<Description>Description_BlockGroup_LightingGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallLight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockSmallLight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="RoundInteriorLight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="RoundInteriorLight_SB" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="RoundInteriorLightOffset" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="InteriorLightBulb" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="MediumLightPole" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallLightPole" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallLightPoleCorner" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallLightPoleDouble" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="LargeLightPole" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="LargeWorkLight" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="RotatingLightLarge" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="RotatingLightSmall" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="OffsetLight" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="OffsetSpotlight" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CornerLightingGroup" />
+<DisplayName>DisplayName_BlockGroup_LightingGroup</DisplayName>
+<Description>Description_BlockGroup_LightingGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="LargeBlockLight_1corner" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockLight_1corner" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="LargeBlockLight_2corner" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockLight_2corner" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="Long_Interior_Light_Center" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="Long_Interior_Light_SB" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="Long_Interior_Light_Corner" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="Long_Interior_Light_Double" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="Long_Interior_Light_Diagonal" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

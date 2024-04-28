@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>SuperCargo9002</SubtypeId>
+</Id>
+<DisplayName>Super Cargo 9002</DisplayName>
+<Description>It's a bird! It's a plane! No, it's Super Cargo!</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="AdminKit" Count="1" />
+<Component Subtype="Computer" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdminKit" Index="0" />
+<BlockPairName>SuperStoreCargo9002</BlockPairName>
+<BuildTimeSeconds>3.402823E+38</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>SuperRefinery</SubtypeId>
+</Id>
+<DisplayName>Super_Refinery</DisplayName>
+<Description>Fastest refinery in the West.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="AdminKit" Count="1" />
+<Component Subtype="Computer" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdminKit" Index="0" />
+<BlockPairName>SuperRefinery</BlockPairName>
+<BuildTimeSeconds>3.402823E+38</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>250</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.56</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>Ingots</Class>
+<Class>AdminIngots</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1.0</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+<Id>
+<TypeId>Assembler</TypeId>
+<SubtypeId>SuperAssembler</SubtypeId>
+</Id>
+<DisplayName>Super_Assembler</DisplayName>
+<Description>Don't mess with Texas. Assembles before you even knew you needed to!</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="AdminKit" Count="1" />
+<Component Subtype="Computer" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdminKit" Index="0" />
+<BlockPairName>SuperAssembler</BlockPairName>
+<BuildTimeSeconds>3.402823E+38</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>200</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.56</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>LargeBlocks</Class>
+<Class>SmallBlocks</Class>
+<Class>Components</Class>
+<Class>EliteTools</Class>
+<Class>BuildPlanner</Class>
+<Class>EliteConsumables</Class>
+<Class>Fuel</Class>
+<Class>AdminComponents</Class>
+<Class>NPTradeGoods</Class>
+<Class>TradeGoods</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SuperLargeOxygenTankSmall</SubtypeId>
+</Id>
+<DisplayName>SuperOxygenTank</DisplayName>
+<Description>Super Oxygen Tank</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="AdminKit" Count="1" />
+<Component Subtype="Computer" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdminKit" Index="0" />
+<BlockPairName>SuperOxygenTank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>999999990</Capacity>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>OxygenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>32</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>1</PCU>
+<LeakPercent>0.005</LeakPercent>
+<GasExplosionMaxRadius>10</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>100000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepSmallWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SuperLargeHydrogenTankSmall</SubtypeId>
+</Id>
+<DisplayName>SuperHydrogenTankSmall</DisplayName>
+<Description>Super Hydrogen Tank</Description>
+<Public>true</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="AdminKit" Count="1" />
+<Component Subtype="Computer" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdminKit" Index="0" />
+<BlockPairName>SuperHydrogenTankSmall</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>999999990</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<PCU>1</PCU>
+<LeakPercent>0.005</LeakPercent>
+<GasExplosionMaxRadius>10</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>1000000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>HydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_15</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+<Id>
+<TypeId>ShipConnector</TypeId>
+<SubtypeId>Vacuum9k2</SubtypeId>
+</Id>
+<DisplayName>Super Vacuum</DisplayName>
+<Description>A connector digsuised as cargo. Used primarily for it's massive "suck" factor with collect all</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="AdminKit" Count="1" />
+<Component Subtype="Computer" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdminKit" Index="0" />
+<BlockPairName>SuperVacuum9k2</BlockPairName>
+<BuildTimeSeconds>3.402823E+38</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

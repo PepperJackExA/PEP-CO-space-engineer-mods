@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_CubeBlock</TypeId>
+</Id>
+<DefaultComponents>
+<Component>MyObjectBuilder_PositionComponent</Component>
+<Component>MyObjectBuilder_RenderDebugComponent</Component>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Reactor</TypeId>
+<SubtypeId>Custom_Block_Name</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_ModStorageComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Default_Astronaut</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Default_Astronaut" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_AssetModifierComponent" SubtypeId="Default_Astronaut" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_CharacterDiscoveryComponent" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_TargetFocusComponent" SubtypeId="Character" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_TargetLockingComponent" SubtypeId="Character" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Default_Astronaut_Female</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Default_Astronaut_Female" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_AssetModifierComponent" SubtypeId="Default_Astronaut_Female" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_CharacterDiscoveryComponent" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_TargetFocusComponent" SubtypeId="Character" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_TargetLockingComponent" SubtypeId="Character" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Engineer_suit_no_helmet</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Default_Astronaut" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_CharacterDiscoveryComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Space_spider</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Space_spider" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Space_spider_black</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Space_spider" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Space_spider_brown</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Space_spider" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Space_spider_green</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Space_spider" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Space_Wolf</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Space_Wolf" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>InventoryBagEntity</TypeId>
+<SubtypeId>AstronautBackpack</SubtypeId>
+</Id>
+<Flags>Default NeedsDraw Sync</Flags>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_TimerComponent"/>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+<Component BuilderType="MyObjectBuilder_UseObjectsComponent"/>
+<Component BuilderType="MyObjectBuilder_ModelComponent" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_PhysicsBodyComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>SmallBlockSmallContainer</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>SmallBlockMediumContainer</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>SmallBlockLargeContainer</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>LargeBlockSmallContainer</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>LargeBlockLargeContainer</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>LargeBlockLargeIndustrialContainer</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>LargeBlockLockers</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>LargeBlockLockerRoomCorner</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>LargeBlockLockerRoom</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>LargeBlockWeaponRack</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>SmallBlockWeaponRack</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_CubeBlock</TypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_ModStorageComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>SafeZoneBlock</TypeId>
+<SubtypeId>SafeZoneBlock</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="SafeZoneBlock" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>StoreBlock</TypeId>
+<SubtypeId>StoreBlock</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="StoreBlock" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>VendingMachine</TypeId>
+<SubtypeId>VendingMachine</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="VendingMachine" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CryoChamber</TypeId>
+<SubtypeId>LargeBlockBed</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="LargeBlockBed" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Freight1</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="Freight1" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Freight2</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="Freight2" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Freight3</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="Freight3" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>DeadBody01</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="DeadBody01" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>DeadBody02</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="DeadBody02" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>DeadBody03</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="DeadBody03" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>DeadBody04</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="DeadBody04" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>DeadBody05</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="DeadBody05" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>DeadBody06</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="DeadBody06" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>SmallMissileLauncher</TypeId>
+<SubtypeId>FixedCoilgun</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_EntityCapacitorComponent" SubtypeId="FixedCoilgun" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>CoilgunTurret</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_EntityCapacitorComponent" SubtypeId="CoilgunTurret" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+</Definitions>
+ 

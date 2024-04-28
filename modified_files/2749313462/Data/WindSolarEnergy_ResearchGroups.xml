@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchGroups>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="27" />
+<Members>
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanel" />
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockSolarPanel" />
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanelUnstackable" />
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockSolarPanelUnstackable" />
+<BlockId Type="MyObjectBuilder_WindTurbine" Subtype="LargeBlockWindTurbine" />
+<BlockId Type="MyObjectBuilder_WindTurbine" Subtype="LargeBlockWindTurbineStackable" />
+</Members>
+</ResearchGroup>
+</ResearchGroups>
+</Definitions>
+ 

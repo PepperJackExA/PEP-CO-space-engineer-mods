@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelLarge_2b</SubtypeId>
+</Id>
+<DisplayName>2 Button panel</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel_2b</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelSmall_2b</SubtypeId>
+</Id>
+<DisplayName>2 Button panel</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel_2b</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelSmall_2b_45_H</SubtypeId>
+</Id>
+<DisplayName>2 Button Slope H</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel_2b_45_H</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelSmall_2b_45_V</SubtypeId>
+</Id>
+<DisplayName>2 Button Slope V</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel_2b_45_V</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelSmall_2b_30_tip_H</SubtypeId>
+</Id>
+<DisplayName>2 Button RampTip H</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel_2b_30_tip_H</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelSmall_2b_30_tip_V</SubtypeId>
+</Id>
+<DisplayName>2 Button RampTip V</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel_2b_30_tip_V</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelSmall_2b_30_base_H</SubtypeId>
+</Id>
+<DisplayName>2 Button RampBase H</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel_2b_30_base_H</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelSmall_2b_30_base_V</SubtypeId>
+</Id>
+<DisplayName>2 Button RampBase V</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel_2b_30_base_V</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

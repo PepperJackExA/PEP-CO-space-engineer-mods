@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Federal Industrial</DisplayName>
+<Name>Federal Industrial</Name>
+<ItemIds>
+<string>CargoContainer/Industrial Storage</string>
+<string>CargoContainer/Stone Storage</string>
+<string>Conveyor/Small Ship Conveyor 1-5</string>
+<string>Conveyor/Small Ship Conveyor 2-4</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ConveyorBlocks</DisplayName>
+<Name>Conveyors</Name>
+<ItemIds>
+<string>CargoContainer/SmallBlockLargeContainer</string>
+<string>CargoContainer/SmallBlockMediumContainer</string>
+<string>CargoContainer/SmallBlockSmallContainer</string>
+<string>CargoContainer/LargeBlockLargeContainer</string>
+<string>CargoContainer/LargeBlockSmallContainer</string>
+<string>CargoContainer/Industrial Storage</string>
+<string>CargoContainer/Stone Storage</string>
+<string>Conveyor/Small Ship Conveyor 1-5</string>
+<string>Conveyor/Small Ship Conveyor 2-4</string>
+<string>SmallBlockConveyor</string>
+<string>LargeBlockConveyor</string>
+<string>ConveyorTube</string>
+<string>ConveyorTubeSmall</string>
+<string>ConveyorTubeMedium</string>
+<string>ConveyorFrameMedium</string>
+<string>ConveyorTubeCurved</string>
+<string>ConveyorTubeSmallCurved</string>
+<string>ConveyorTubeCurvedMedium</string>
+<!--<string>SmallShipConveyorHub</string>-->
+<string>ConveyorSorter/LargeBlockConveyorSorter</string>
+<string>ConveyorSorter/MediumBlockConveyorSorter</string>
+<string>ConveyorSorter/SmallBlockConveyorSorter</string>
+<string>ShipConnector/ConnectorMedium</string>
+<string>ShipConnector/ConnectorSmall</string>
+<string>ShipConnector/Connector</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

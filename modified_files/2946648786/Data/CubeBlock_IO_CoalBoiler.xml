@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>CoalFurnace</SubtypeId>
+</Id>
+<DisplayName>Coal Boiler</DisplayName>
+<Description>Burns Coal to produce Steam. Must be connected to a Steam Turbine.
+Produces 20 Steam/sec</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="CopperWire" Count="30" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="HeatingElement" Count="10" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<IsAirTight>true</IsAirTight>
+<BlockPairName>PEPCO_CoalFurnace_Rebalance</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>2.5</IceConsumptionPerSecond>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.25</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<IceToGasRatio>8</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>CoalFurnace</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

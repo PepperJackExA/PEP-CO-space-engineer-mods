@@ -1,0 +1,2296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalk</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="6"/>
+<Component Subtype="SmallTube" Count="20"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="10"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalk</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkRaised</SubtypeId>
+</Id>
+<DisplayName>Square Catwalk Raised</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="6"/>
+<Component Subtype="Construction" Count="10"/>
+<Component Subtype="SmallTube" Count="20"/>
+<Component Subtype="Girder" Count="4"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="0"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkRaised</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkCorner</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk Corner</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="SmallTube" Count="32"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkEnd</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk End</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="18"/>
+<Component Subtype="SmallTube" Count="38"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="22"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkEnd</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkHalfLeft</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk Half Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="16"/>
+<Component Subtype="SmallTube" Count="35"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkHalfLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkHalfRight</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk Half Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="16"/>
+<Component Subtype="SmallTube" Count="35"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkHalfRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkHalfTJunction</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk Half Width T-Junction</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="SmallTube" Count="32"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkHalfTJunction</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkHalfWidthTJunctionBalcony</SubtypeId>
+</Id>
+<DisplayName>Square Catwalk Half Width T-Junction Balcony</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="10"/>
+<Component Subtype="SmallTube" Count="26"/>
+<Component Subtype="Girder" Count="14"/>
+<Component Subtype="Construction" Count="4"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkHalfWidthTJunctionBalcony</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkHalfWidthBalcony</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk Half Width Balcony</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="18"/>
+<Component Subtype="SmallTube" Count="38"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="22"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkHalfWidthBalcony</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkHalfWidthCrossoverLeft</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk Half Width Crossover Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="18"/>
+<Component Subtype="SmallTube" Count="38"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="22"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkHalfWidthCrossoverLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkHalfWidthCrossoverRight</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk Half Width Crossover Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="18"/>
+<Component Subtype="SmallTube" Count="38"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="22"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkHalfWidthCrossoverRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkStraight</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk Straight</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="SmallTube" Count="32"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkStraight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkWall</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk Wall</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="10"/>
+<Component Subtype="SmallTube" Count="26"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="14"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkWall</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkHalfMixedCrossroad</SubtypeId>
+</Id>
+<DisplayName>Square Grated Catwalk Mixed Crossroad</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="10"/>
+<Component Subtype="SmallTube" Count="26"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="14"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkHalfMixedCrossroad</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkMixedTJunctionLeft</SubtypeId>
+</Id>
+<DisplayName>Square Catwalk Mixed T-Junction Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="12"/> <!--Place-->
+<Component Subtype="SmallTube" Count="29"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="16"/> <!--Build-->
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkMixedTJunctionLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkMixedTJunctionRight</SubtypeId>
+</Id>
+<DisplayName>Square Catwalk Mixed T-Junction Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="12"/> <!--Place-->
+<Component Subtype="SmallTube" Count="29"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="16"/> <!--Build-->
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkMixedTJunctionRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkHalfWallRight</SubtypeId>
+</Id>
+<DisplayName>Square Catwalk Half Wall Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SmallTube" Count="23"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="12"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkHalfWallRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkHalfWallLeft</SubtypeId>
+</Id>
+<DisplayName>Square Catwalk Half Wall Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SmallTube" Count="23"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="12"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkHalfWallLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkDiagonalBaseRight</SubtypeId>
+</Id>
+<DisplayName>Square Catwalk Diagonal Base Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="12"/>
+<Component Subtype="SmallTube" Count="29"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkDiagonalBaseRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSquareCatwalkDiagonalBaseLeft</SubtypeId>
+</Id>
+<DisplayName>Square Catwalk Diagonal Base Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="12"/>
+<Component Subtype="SmallTube" Count="29"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSquareCatwalkDiagonalBaseLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeCatwalk</SubtypeId>
+</Id>
+<DisplayName>Slope Grated Catwalk</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="3"/>
+<Component Subtype="SmallTube" Count="10"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="5"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeCatwalk</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeCatwalkDiagonalWall</SubtypeId>
+</Id>
+<DisplayName>Slope Grated Catwalk Diagonal Wall</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="19"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="11"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeCatwalkDiagonalWall</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeCatwalkEndLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Grated Catwalk End Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="15"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeCatwalkEndLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeCatwalkEndRight</SubtypeId>
+</Id>
+<DisplayName>Slope Grated Catwalk End Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="15"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeCatwalkEndRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMRoundCatwalk</SubtypeId>
+</Id>
+<DisplayName>Round Grated Catwalk</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="SmallTube" Count="16"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="8"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMRoundCatwalk</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMRoundCatwalkCurvedWall</SubtypeId>
+</Id>
+<DisplayName>Round Grated Catwalk Curved Wall</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/>
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="14"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMRoundCatwalkCurvedWall</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMRoundCatwalkEndLeft</SubtypeId>
+</Id>
+<DisplayName>Round Grated Catwalk End Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="15"/>
+<Component Subtype="SmallTube" Count="31"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMRoundCatwalkEndLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMRoundCatwalkEndRight</SubtypeId>
+</Id>
+<DisplayName>Round Grated Catwalk End Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="15"/>
+<Component Subtype="SmallTube" Count="31"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMRoundCatwalkEndRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMRoundCatwalkHalfWidthCornerA</SubtypeId>
+</Id>
+<DisplayName>Round Grated Catwalk Half Width Corner A</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="SmallTube" Count="30"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMRoundCatwalkHalfWidthCornerA</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMRoundCatwalkHalfWidthCornerB</SubtypeId>
+</Id>
+<DisplayName>Round Grated Catwalk Half Width Corner B</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="SmallTube" Count="30"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMRoundCatwalkHalfWidthCornerB</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMRoundCatwalkMixedCornerLeft</SubtypeId>
+</Id>
+<DisplayName>Round Grated Catwalk Mixed Corner Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="28"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMRoundCatwalkMixedCornerLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMRoundCatwalkMixedCornerRight</SubtypeId>
+</Id>
+<DisplayName>Round Grated Catwalk Mixed Corner Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="28"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMRoundCatwalkMixedCornerRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalk</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="3"/>
+<Component Subtype="SmallTube" Count="10"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="5"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalk</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkCornerBaseLeft</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk Corner Base Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="19"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="11"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkCornerBaseLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkCornerBaseRight</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk Corner Base Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="19"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="11"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkCornerBaseRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkEndLeft</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk End Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="15"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkEndLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkEndRight</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk End Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="15"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkEndRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkLCornerLeft</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk L-Corner Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkLCornerLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkLCornerRight</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk L-Corner Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkLCornerRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkMixedCornerLeft</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk Mixed Corner Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="19"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="11"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkMixedCornerLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkMixedCornerRight</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk Mixed Corner Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="19"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="11"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkMixedCornerRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkSquareEnd</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk Square End</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkSquareEnd</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkStraight</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk Straight</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkStraight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkTJunctionBaseLeft</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk T-Junction Base Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkTJunctionBaseLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkTJunctionBaseRight</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk T-Junction Base Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkTJunctionBaseRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkWall</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk Wall</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="7"/>
+<Component Subtype="SmallTube" Count="16"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="9"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkWall</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthCatwalkWallOffset</SubtypeId>
+</Id>
+<DisplayName>Half Width Grated Catwalk Wall Offset</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="7"/>
+<Component Subtype="SmallTube" Count="16"/>
+<Component Subtype="Girder" Count="2"/>
+<Component Subtype="Construction" Count="9"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthCatwalkWallOffset</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthDiagonalCatwalk</SubtypeId>
+</Id>
+<DisplayName>Half Width Diagonal Grated Catwalk</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="SmallTube" Count="15"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="8"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthDiagonalCatwalk</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthDiagonalCatwalkCorner</SubtypeId>
+</Id>
+<DisplayName>Half Width Diagonal Grated Catwalk Corner</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="SmallTube" Count="30"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="17"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthDiagonalCatwalkCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthDiagonalCatwalkCrossoverLeft</SubtypeId>
+</Id>
+<DisplayName>Half Width Diagonal Grated Catwalk Crossover Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="SmallTube" Count="30"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="17"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthDiagonalCatwalkCrossoverLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthDiagonalCatwalkCrossoverRight</SubtypeId>
+</Id>
+<DisplayName>Half Width Diagonal Grated Catwalk Crossover Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="SmallTube" Count="30"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="17"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthDiagonalCatwalkCrossoverRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthDiagonalCatwalkCrossroad</SubtypeId>
+</Id>
+<DisplayName>Half Width Diagonal Grated Catwalk Crossroad</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="10"/>
+<Component Subtype="SmallTube" Count="24"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthDiagonalCatwalkCrossroad</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfWidthDiagonalCatwalkTJunction</SubtypeId>
+</Id>
+<DisplayName>Half Width Diagonal Grated Catwalk T-Junction</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/>
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="14"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfWidthDiagonalCatwalkTJunction</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkAcuteCornerLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Acute Corner Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="28"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkAcuteCornerLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkAcuteCornerRight</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Acute Corner Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="28"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkAcuteCornerRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkAngledEndLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Angled End Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="15"/>
+<Component Subtype="SmallTube" Count="31"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkAngledEndLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkAngledEndRight</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Angled End Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="15"/>
+<Component Subtype="SmallTube" Count="31"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkAngledEndRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkDiagonalWallLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Diagonal Wall Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="12"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkDiagonalWallLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkDiagonalWallRight</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Diagonal Wall Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="12"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkDiagonalWallRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="SmallTube" Count="15"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="8"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkNarrowEndLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Narrow End Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="15"/>
+<Component Subtype="SmallTube" Count="31"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkNarrowEndLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkNarrowEndRight</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Narrow End Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="15"/>
+<Component Subtype="SmallTube" Count="31"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkNarrowEndRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkObtuseCornerLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Obtuse Corner Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/>
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="14"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkObtuseCornerLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkObtuseCornerRight</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Obtuse Corner Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/>
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="14"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkObtuseCornerRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkRight</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="SmallTube" Count="15"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="8"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkStraightLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Straight Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="28"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkStraightLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkStraightRight</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Straight Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="28"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkStraightRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkWallLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Wall Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="21"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="12"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkWallLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkWallRight</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Wall Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="21"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="12"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkWallRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkWideEndLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Wide End Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="17"/>
+<Component Subtype="SmallTube" Count="34"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkWideEndLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeBaseCatwalkWideEndRight</SubtypeId>
+</Id>
+<DisplayName>Slope Base Grated Catwalk Wide End Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="17"/>
+<Component Subtype="SmallTube" Count="34"/>
+<Component Subtype="Girder" Count="3"/>
+<Component Subtype="Construction" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeBaseCatwalkWideEndRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeTipCatwalkDiagonalWallLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Tip Grated Catwalk Diagonal Wall Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="6"/>
+<Component Subtype="SmallTube" Count="12"/>
+<Component Subtype="Construction" Count="7"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeTipCatwalkDiagonalWallLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeTipCatwalkDiagonalWallRight</SubtypeId>
+</Id>
+<DisplayName>Slope Tip Grated Catwalk Diagonal Wall Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="6"/>
+<Component Subtype="SmallTube" Count="12"/>
+<Component Subtype="Construction" Count="7"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeTipCatwalkDiagonalWallRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeTipCatwalkEndLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Tip Grated Catwalk End Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SmallTube" Count="15"/>
+<Component Subtype="Construction" Count="9"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeTipCatwalkEndLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeTipCatwalkEndRight</SubtypeId>
+</Id>
+<DisplayName>Slope Tip Grated Catwalk End Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SmallTube" Count="15"/>
+<Component Subtype="Construction" Count="9"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeTipCatwalkEndRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeTipCatwalkLeft</SubtypeId>
+</Id>
+<DisplayName>Slope Tip Grated Catwalk Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2"/>
+<Component Subtype="SmallTube" Count="5"/>
+<Component Subtype="Construction" Count="3"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeTipCatwalkLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMSlopeTipCatwalkRight</SubtypeId>
+</Id>
+<DisplayName>Slope Tip Grated Catwalk Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2"/>
+<Component Subtype="SmallTube" Count="5"/>
+<Component Subtype="Construction" Count="3"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMSlopeTipCatwalkRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeCatwalk</SubtypeId>
+</Id>
+<DisplayName>Half Slope Grated Catwalk</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="1"/>
+<Component Subtype="SmallTube" Count="2"/>
+<Component Subtype="Construction" Count="1"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeCatwalk</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeCatwalkDiagonalWall</SubtypeId>
+</Id>
+<DisplayName>Half Slope Grated Catwalk Diagonal Wall</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="4"/>
+<Component Subtype="SmallTube" Count="7"/>
+<Component Subtype="Construction" Count="4"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeCatwalkDiagonalWall</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalk</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Grated Catwalk</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="SmallTube" Count="18"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="9"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalk</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkCorner</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Grated Catwalk Corner</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="12"/>
+<Component Subtype="SmallTube" Count="28"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkDiagonalTJunction</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Grated Catwalk Diagonal T-Junction</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="24"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkDiagonalTJunction</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkDiagonalWall</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Grated Catwalk Diagonal Wall</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="12"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkDiagonalWall</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkEndLeft</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Grated Catwalk End Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="16"/>
+<Component Subtype="SmallTube" Count="34"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkEndLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkEndRight</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Grated Catwalk End Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="16"/>
+<Component Subtype="SmallTube" Count="34"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkEndRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkHalfCornerA</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Grated Catwalk Half Corner A</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="16"/>
+<Component Subtype="SmallTube" Count="34"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkHalfCornerA</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkHalfCornerB</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Grated Catwalk Half Corner B</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="16"/>
+<Component Subtype="SmallTube" Count="34"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="20"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkHalfCornerB</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkMixedCornerLeft</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Grated Catwalk Mixed Corner Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="SmallTube" Count="31"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkMixedCornerLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkMixedCornerRight</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Grated Catwalk Mixed Corner Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="SmallTube" Count="31"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="18"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkMixedCornerRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkMixedTJunctionLeft</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Catwalk Mixed T-Junction Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="10"/> <!--Place-->
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="14"/> <!--Build-->
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkMixedTJunctionLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedCatwalkMixedTJunctionRight</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Catwalk Mixed T-Junction Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="10"/> <!--Place-->
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="14"/> <!--Build-->
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedCatwalkMixedTJunctionRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalk</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Grated Catwalk</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="6"/>
+<Component Subtype="SmallTube" Count="19"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="10"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalk</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkCorner</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Grated Catwalk Corner</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="13"/>
+<Component Subtype="SmallTube" Count="30"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="17"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkCurvedWall</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Grated Catwalk Curved Wall</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="24"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkCurvedWall</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkDiagonalTJunction</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Grated Catwalk Diagonal T-Junction</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="10"/>
+<Component Subtype="SmallTube" Count="25"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="14"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkDiagonalTJunction</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkEndLeft</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Grated Catwalk End Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="17"/>
+<Component Subtype="SmallTube" Count="36"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="21"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkEndLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkEndRight</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Grated Catwalk End Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="17"/>
+<Component Subtype="SmallTube" Count="36"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="21"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkEndRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkHalfCornerA</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Grated Catwalk Half Corner A</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="17"/>
+<Component Subtype="SmallTube" Count="36"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="21"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkHalfCornerA</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkHalfCornerB</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Grated Catwalk Half Corner B</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="17"/>
+<Component Subtype="SmallTube" Count="36"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="21"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkHalfCornerB</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkMixedCornerLeft</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Grated Catwalk Mixed Corner Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="15"/>
+<Component Subtype="SmallTube" Count="33"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="19"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkMixedCornerLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkMixedCornerRight</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Grated Catwalk Mixed Corner Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="15"/>
+<Component Subtype="SmallTube" Count="33"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="19"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkMixedCornerRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkMixedTJunctionLeft</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Catwalk Mixed T-Junction Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/> <!--Place-->
+<Component Subtype="SmallTube" Count="27"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="15"/> <!--Build-->
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkMixedTJunctionLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfSlopeInvertedRoundedCatwalkMixedTJunctionRight</SubtypeId>
+</Id>
+<DisplayName>Half Slope Inverted Rounded Catwalk Mixed T-Junction Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="11"/> <!--Place-->
+<Component Subtype="SmallTube" Count="27"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="15"/> <!--Build-->
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfSlopeInvertedRoundedCatwalkMixedTJunctionRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfStadiumCatwalk</SubtypeId>
+</Id>
+<DisplayName>Half Stadium Grated Catwalk</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="SmallTube" Count="18"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="9"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfStadiumCatwalk</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfStadiumCatwalkCurvedWallLeft</SubtypeId>
+</Id>
+<DisplayName>Half Stadium Grated Catwalk Curved Wall Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="12"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfStadiumCatwalkCurvedWallLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfStadiumCatwalkCurvedWallRight</SubtypeId>
+</Id>
+<DisplayName>Half Stadium Grated Catwalk Curved Wall Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SmallTube" Count="22"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="12"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfStadiumCatwalkCurvedWallRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfStadiumCatwalkDiagonalCornerLeft</SubtypeId>
+</Id>
+<DisplayName>Half Stadium Grated Catwalk Diagonal Corner Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="12"/>
+<Component Subtype="SmallTube" Count="28"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfStadiumCatwalkDiagonalCornerLeft</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfStadiumCatwalkDiagonalCornerRight</SubtypeId>
+</Id>
+<DisplayName>Half Stadium Grated Catwalk Diagonal Corner Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="12"/>
+<Component Subtype="SmallTube" Count="28"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="16"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfStadiumCatwalkDiagonalCornerRight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfStadiumCatwalkEnd</SubtypeId>
+</Id>
+<DisplayName>Half Stadium Grated Catwalk End</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="16"/>
+<Component Subtype="SmallTube" Count="33"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="19"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfStadiumCatwalkEnd</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfStadiumCatwalkFullCurvedWall</SubtypeId>
+</Id>
+<DisplayName>Half Stadium Grated Catwalk Full Curved Wall</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="12"/>
+<Component Subtype="SmallTube" Count="27"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="15"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfStadiumCatwalkFullCurvedWall</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfStadiumCatwalkHalfWidthBalcony</SubtypeId>
+</Id>
+<DisplayName>Half Stadium Grated Catwalk Half Width Balcony</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="16"/>
+<Component Subtype="SmallTube" Count="33"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="19"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfStadiumCatwalkHalfWidthBalcony</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfStadiumCatwalkStraight</SubtypeId>
+</Id>
+<DisplayName>Half Stadium Grated Catwalk Straight</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="24"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfStadiumCatwalkStraight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMHalfStadiumCatwalkStraightWall</SubtypeId>
+</Id>
+<DisplayName>Half Stadium Grated Catwalk Straight Wall</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="9"/>
+<Component Subtype="SmallTube" Count="24"/>
+<Component Subtype="Girder" Count="4"/>
+<Component Subtype="Construction" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMHalfStadiumCatwalkStraightWall</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMQuadrantCatwalk</SubtypeId>
+</Id>
+<DisplayName>Quadrant Catwalk</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2"/>
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="SmallTube" Count="3"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMQuadrantCatwalk</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMQuadrantCatwalkCorner</SubtypeId>
+</Id>
+<DisplayName>Quadrant Catwalk Corner</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="6"/>
+<Component Subtype="SmallTube" Count="11"/>
+<Component Subtype="Construction" Count="7"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="1"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<BlockPairName>GCMQuadrantCatwalkCorner</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>SmallBlockWeaponRack</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WeaponRack</DisplayName>
+<Description>Description_WeaponRack</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="1" />
+<BlockPairName>WeaponRack</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>LargeBlockWeaponRack</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WeaponRack</DisplayName>
+<Description>Description_WeaponRack</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="1" />
+<BlockPairName>WeaponRack</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

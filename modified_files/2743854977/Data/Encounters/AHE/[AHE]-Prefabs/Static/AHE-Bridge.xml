@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="AHE-Bridge" />
+<Name>127277144437895283</Name>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyModStorageComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_ModStorageComponent">
+<Value>CAAQABiAgAgiD1NvdXRoZXJuIEJyaWRnZSgAMAE6D1NvdXRoZXJuIEJyaWRnZUIOTUVTLVByZWZhYi0xLTJKAFUAAHpEWhsJqzWlxQ7iMcEht5hDBOFj+EA5AIEbqj80NEFiGwmrNaXFDuIxwSG3mEME4WP4QDkAgRuqPzQ0QWoKCNCi4+7yywEQBHIDQ09MeAGAAQGIAQGQAQCZAQAAAAAAAAAAqAEBsAEAugEbCXpAcWW7z9u/IaS/DuaQ9M6/OSrJbkUhw+u/wgEbCco5nypFh+e/IWxyh6z3gd2/OWcgWFCmy98/ygEKCJC/4+7yywEQBNIBTggBEAEYACABKAAwATgAQABIAFAAWABgAGgBcAB4AIABAIgBAJABAZgBAKABAKgBALABALgBAMABAMgBANABANgBAOABAOgBAPABAPgBAdoBTggBEAEYACABKAAwATgAQABIAFAAWABgAGgBcAB4AIABAIgBAJABAZgBAKABAagBAbABAbgBAcABAcgBAdABANgBAOABAegBAPABAPgBAeIBEzIwODEwMTAxMDQxMzQxOTI4LTLqAQZCcmlkZ2WAAoCACIoCAJICA0NPTJgCmoCAgICAgIAC</Value>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.384</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<TargetCharacters>true</TargetCharacters>
+<Flags>
+<TargetCharacters>true</TargetCharacters>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyAutopilotComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_AutopilotComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyModStorageComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_ModStorageComponent">
+<Value>geraveoyomama was here</Value>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<Value>Doors</Value>
+<Value>Interior Light - Toggle block On/Off</Value>
+<Value>Bridge Lights</Value>
+<Value>Antenna 3 - Enable broadcasting On/Off</Value>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<TargetCharacters>true</TargetCharacters>
+<Flags>
+<TargetCharacters>true</TargetCharacters>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<Name>Doors</Name>
+<Blocks>
+</Blocks>
+<Name>Bridge Lights</Name>
+<Blocks>
+</Blocks>
+<DisplayName>AHE-Bridge</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

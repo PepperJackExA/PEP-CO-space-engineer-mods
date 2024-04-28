@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Id>
+<TypeId>WeatherEffectDefinition</TypeId>
+<SubtypeId>SnowWind</SubtypeId>
+</Id>
+<DisplayName>DisplayName_TSS_Weather_Snow</DisplayName>
+<AmbientSound>WM_Sandstorm</AmbientSound>
+<Id>
+<TypeId>WeatherEffectDefinition</TypeId>
+<SubtypeId>Blizard</SubtypeId>
+</Id>
+<DisplayName>DisplayName_TSS_Weather_SnowStorm</DisplayName>
+<Public>true</Public>
+<AmbientSound>WM_Sandstorm</AmbientSound>
+<Id>
+<TypeId>WeatherEffectDefinition</TypeId>
+<SubtypeId>P_FogLight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_TSS_Weather_Fog</DisplayName>
+<AmbientSound>WM_FogLight</AmbientSound>
+<Id>
+<TypeId>WeatherEffectDefinition</TypeId>
+<SubtypeId>P_FogHeavy</SubtypeId>
+</Id>
+<DisplayName>DisplayName_TSS_Weather_Fog</DisplayName>
+<AmbientSound>WM_FogHeavy</AmbientSound>
+<Id>
+<TypeId>WeatherEffectDefinition</TypeId>
+<SubtypeId>AshSnow</SubtypeId>
+</Id>
+<DisplayName>DisplayName_TSS_Weather_Snow</DisplayName>
+<AmbientSound>WM_SnowLight</AmbientSound>
+</Definitions>
+ 

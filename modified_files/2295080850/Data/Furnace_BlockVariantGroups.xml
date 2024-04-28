@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AssemblerGroup" />
+<DisplayName>DisplayName_Block_Assembler</DisplayName>
+<Description>Description_Assembler</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_SurvivalKit" Subtype="SurvivalKitLarge" />
+<Block Type="MyObjectBuilder_SurvivalKit" Subtype="SurvivalKit" />
+<Block Type="MyObjectBuilder_Assembler" Subtype="LargeAssembler" />
+<Block Type="MyObjectBuilder_Assembler" Subtype="BasicAssembler" />
+<Block Type="MyObjectBuilder_Assembler" Subtype="Furnace" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

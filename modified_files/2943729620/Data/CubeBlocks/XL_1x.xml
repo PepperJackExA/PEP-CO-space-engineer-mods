@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>XL_1x</SubtypeId>
+</Id>
+<DisplayName>XL 1x</DisplayName>
+<Description>A 5x5x1 large grid block that does not deform.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="400"/>
+<Component Subtype="Girder" Count="16"/>
+<Component Subtype="SteelPlate" Count="100"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>XL_1x</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

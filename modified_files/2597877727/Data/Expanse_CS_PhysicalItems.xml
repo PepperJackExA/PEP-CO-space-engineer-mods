@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions
+<PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>Graphite</SubtypeId>
+</Id>
+<DisplayName>Graphite Ore</DisplayName>
+<Mass>7.811</Mass>
+<Volume>0.37</Volume>
+<PhysicalMaterial>Stone</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<MinimumOrderAmount>1000</MinimumOrderAmount>
+<MaximumOrderAmount>20000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>500</MaximumAcquisitionAmount>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Carbon</SubtypeId>
+</Id>
+<DisplayName>Carbon Ingot</DisplayName>
+<Mass>1.0</Mass>
+<Volume>0.098</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<MinimumOrderAmount>1000</MinimumOrderAmount>
+<MaximumOrderAmount>20000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>30</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>300</MaximumAcquisitionAmount>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_1_Base_Small</SubtypeId>
+</Id>
+<DisplayName>Piston Small [1]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+<Component Subtype="Construction" Count="2"/>
+<Component Subtype="CopperWire" Count="2"/>
+<Component Subtype="SmallTube" Count="2"/>
+<Component Subtype="Motor" Count="1"/>
+<Component Subtype="Computer" Count="1"/>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_1_Base</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_2_Base_Small</SubtypeId>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_3_Base_Small</SubtypeId>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_5_Base_Small</SubtypeId>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_10_Base_Small</SubtypeId>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_20_Base_Small</SubtypeId>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_2_Base_Small</SubtypeId>
+</Id>
+<DisplayName>Piston Small [2]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2"/>
+<Component Subtype="Construction" Count="3"/>
+<Component Subtype="CopperWire" Count="4"/>
+<Component Subtype="SmallTube" Count="3"/>
+<Component Subtype="Motor" Count="2"/>
+<Component Subtype="Computer" Count="1"/>
+<Component Subtype="SteelPlate" Count="2"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_2_Base</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_3_Base_Small</SubtypeId>
+</Id>
+<DisplayName>Piston Small [3]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2"/>
+<Component Subtype="Construction" Count="4"/>
+<Component Subtype="CopperWire" Count="5"/>
+<Component Subtype="SmallTube" Count="4"/>
+<Component Subtype="Motor" Count="2"/>
+<Component Subtype="Computer" Count="1"/>
+<Component Subtype="SteelPlate" Count="2"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_3_Base</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_5_Base_Small</SubtypeId>
+</Id>
+<DisplayName>Piston Small [5]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4"/>
+<Component Subtype="Construction" Count="7"/>
+<Component Subtype="CopperWire" Count="9"/>
+<Component Subtype="SmallTube" Count="7"/>
+<Component Subtype="Motor" Count="4"/>
+<Component Subtype="Computer" Count="2"/>
+<Component Subtype="SteelPlate" Count="4"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_5_Base</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_10_Base_Small</SubtypeId>
+</Id>
+<DisplayName>Piston Small [10]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7"/>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="CopperWire" Count="17"/>
+<Component Subtype="SmallTube" Count="14"/>
+<Component Subtype="Motor" Count="7"/>
+<Component Subtype="Computer" Count="4"/>
+<Component Subtype="SteelPlate" Count="7"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_10_Base</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_20_Base_Small</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>Piston Small [20]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7"/>
+<Component Subtype="Construction" Count="14"/>
+<Component Subtype="CopperWire" Count="17"/>
+<Component Subtype="SmallTube" Count="14"/>
+<Component Subtype="Motor" Count="7"/>
+<Component Subtype="Computer" Count="4"/>
+<Component Subtype="SteelPlate" Count="7"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_20_Base</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

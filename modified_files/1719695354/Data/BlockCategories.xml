@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<ItemIds>
+<string>ConveyorConnector/ConveyorTubeCurvedPort</string>
+<string>ConveyorConnector/ConveyorTubePort</string>
+<string>AirtightSlideDoor/LargeBlockDockingDoor</string>
+<string>CameraBlock/LargeOffsetCameraBlock</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<ItemIds>
+<string>ShipWelder/SmallShipSmallWelder</string>
+<string>ShipConnector/ConnectorCompact</string>
+<string>ShipConnector/ConnectorSmall</string>
+<string>ShipConnector/ConnectorSmallExtended</string>
+<string>ConveyorConnector/ConveyorFrameMediumPort</string>
+<string>ConveyorConnector/ConveyorTubePortMedium</string>
+<string>ConveyorConnector/ConveyorTubePortSmall</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>+theimmersion</DisplayName>
+<Name>ztheimmersion</Name>
+<ItemIds>
+<string>ShipWelder/SmallShipSmallWelder</string>
+<string>ShipConnector/ConnectorSmall</string>
+<string>ShipConnector/ConnectorSmallExtended</string>
+<string>ConveyorConnector/ConveyorFrameMediumPort</string>
+<string>ConveyorConnector/ConveyorTubePortSmall</string>
+<string>ConveyorConnector/ConveyorTubePortMedium</string>
+<string>ShipConnector/ConnectorCompact</string>
+<string>ConveyorConnector/ConveyorTubeCurvedPort</string>
+<string>ConveyorConnector/ConveyorTubePort</string>
+<string>CameraBlock/LargeOffsetCameraBlock</string>
+<string>AirtightSlideDoor/LargeBlockDockingDoor</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>+theimmersion VR</DisplayName>
+<Name>ztheimmersionvr</Name>
+<ItemIds>
+<string>ShipConnector/Connector</string>
+<string>ShipConnector/ConnectorSmall</string>
+<string>ShipConnector/ConnectorMedium</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

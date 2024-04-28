@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Wood03ArmorBlastCenter</SubtypeId>
+</Id>
+<DisplayName>Wood03 Armor Blast Door</DisplayName>
+<Description>Wooden blast doors are heavier than wooden blocks. They require construction components to be built at full strength.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="450" />
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="WoodPlank" Count="50" />
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>Wood03ArmorBlastCenter</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<Public>true</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Wood03ArmorBlastCorner</SubtypeId>
+</Id>
+<DisplayName>Wood03 Armor Blast Corner</DisplayName>
+<Description>Wooden blast doors are heavier than wooden blocks. They require construction components to be built at full strength.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="370" />
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="WoodPlank" Count="50" />
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>Wood03ArmorBlastCorner</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<Public>true</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Wood03ArmorBlastInvCorner</SubtypeId>
+</Id>
+<DisplayName>Wood03 Armor Blast Inv. Corner</DisplayName>
+<Description>Wooden blast doors are heavier than wooden blocks. They require construction components to be built at full strength.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="400" />
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="WoodPlank" Count="50" />
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>Wood03ArmorBlastInvCorner</BlockPairName>
+<BuildTimeSeconds>9</BuildTimeSeconds>
+<Public>true</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Wood03ArmorBlastSide</SubtypeId>
+</Id>
+<DisplayName>Wood03 Armor Blast Side</DisplayName>
+<Description>Wooden blast doors are heavier than wooden blocks. They require construction components to be built at full strength.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="380" />
+<Component Subtype="Construction" Count="5"/>
+<Component Subtype="WoodPlank" Count="50" />
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>Wood03ArmorBlastSide</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<Public>true</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>S_Wood03ArmorBlastCenter</SubtypeId>
+</Id>
+<DisplayName>Wood03 Armor Blast Door</DisplayName>
+<Description>Wooden blast doors are heavier than wooden blocks. They require construction components to be built at full strength.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="20" />
+<Component Subtype="Construction" Count="1"/>
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>Wood03ArmorBlastCenter</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<Public>true</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>S_Wood03ArmorBlastCorner</SubtypeId>
+</Id>
+<DisplayName>Wood03 Armor Blast Corner</DisplayName>
+<Description>Wooden blast doors are heavier than wooden blocks. They require construction components to be built at full strength.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="10" />
+<Component Subtype="Construction" Count="1"/>
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>Wood03ArmorBlastCorner</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<Public>true</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>S_Wood03ArmorBlastInvCorner</SubtypeId>
+</Id>
+<DisplayName>Wood03 Armor Blast Inv. Corner</DisplayName>
+<Description>Wooden blast doors are heavier than wooden blocks. They require construction components to be built at full strength.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="15" />
+<Component Subtype="Construction" Count="1"/>
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>Wood03ArmorBlastInvCorner</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<Public>true</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>S_Wood03ArmorBlastSide</SubtypeId>
+</Id>
+<DisplayName>Wood03 Armor Blast Side</DisplayName>
+<Description>Wooden blast doors are heavier than wooden blocks. They require construction components to be built at full strength.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="12" />
+<Component Subtype="Construction" Count="1"/>
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>Wood03ArmorBlastSide</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<Public>true</Public>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+<BlockPosition>
+<Name>Wood03_Armor_Block</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>Wood03_Armor_Slope</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>Wood03_Armor_Corner</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>Wood03_Armor_InvCorner</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>ArmorCenter</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>ArmorSide</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>ArmorCorner</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>ArmorInvCorner</Name>
+</BlockPosition>
+<BlockPosition>
+<Name>Wood03_Wood03Ramp</Name>
+</BlockPosition>
+</BlockPositions>
+</Definitions>
+ 

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeConcreteArmorBlock</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Block</DisplayName>
+<Description>Concrete Block</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="ConcreteSlab" Count="25" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeConcreteArmorSlope</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Slope</DisplayName>
+<Description>Concrete Slope</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="ConcreteSlab" Count="13" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeConcreteArmorCorner</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Corner</DisplayName>
+<Description>Concrete Corner</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="ConcreteSlab" Count="5" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeConcreteArmorCornerInv</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Inv. Corner</DisplayName>
+<Description>Concrete Inv. Corner</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="3" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="ConcreteSlab" Count="21" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeConcreteArmorHalfBlock</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Half Block</DisplayName>
+<Description>Concrete Half Block</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="ConcreteSlab" Count="13" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeConcreteArmorHalfSlope</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Half Slope</DisplayName>
+<Description>Concrete Half Slope</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="ConcreteSlab" Count="7" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ConcreteArmorRoundSlope</SubtypeId>
+</Id>
+<DisplayName>Concrete Round Armor Slope</DisplayName>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="ConcreteSlab" Count="10" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ConcreteArmorRoundCorner</SubtypeId>
+</Id>
+<DisplayName>Concrete Round Armor Corner</DisplayName>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="0" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="ConcreteSlab" Count="5" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ConcreteArmorRoundCornerInv</SubtypeId>
+</Id>
+<DisplayName>Concrete Round Armor Inv. Corner</DisplayName>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="ConcreteSlab" Count="21" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ConcreteArmorSlope2Base</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Slope2 Base</DisplayName>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="ConcreteSlab" Count="15" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ConcreteArmorSlope2Tip</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Slope2 Tip</DisplayName>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="ConcreteSlab" Count="5" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ConcreteArmorCorner2Base</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Corner2 Base</DisplayName>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="ConcreteSlab" Count="8" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ConcreteArmorCorner2Tip</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Corner2 Tip</DisplayName>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="ConcreteSlab" Count="3" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ConcreteArmorInvCorner2Base</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Inv. Corner2 Base</DisplayName>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="ConcreteSlab" Count="18" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ConcreteArmorInvCorner2Tip</SubtypeId>
+</Id>
+<DisplayName>Concrete Armor Inv. Corner2 Tip</DisplayName>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="ConcreteSlab" Count="13" />
+</Components>
+<CriticalComponent Subtype="ConcreteSlab" Index="0" />
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

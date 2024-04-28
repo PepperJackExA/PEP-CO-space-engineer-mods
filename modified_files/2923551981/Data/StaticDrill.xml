@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">
+<Id>
+<TypeId>Drill</TypeId>
+<SubtypeId>StaticDrill</SubtypeId>
+</Id>
+<DisplayName>Static Drill</DisplayName>
+<Description>Place this drill atop a ore deposit and power it to start mining ore</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="750" />
+<Component Subtype="Construction" Count="400" />
+<Component Subtype="GoldWire" Count="40" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Motor" Count="25" />
+<Component Subtype="AdvancedComputer" Count="50" />
+<Component Subtype="Ceramic" Count="15" />
+<Component Subtype="Detector" Count="50" />
+<Component Subtype="QuantumComputer" Count="10" />
+<Component Subtype="TitaniumPlate" Count="500" />
+</Components>
+<CriticalComponent Subtype="QuantumComputer" Index="0" />
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<IsPublic>false</IsPublic>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>ToolShipDrillIdle</PrimarySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

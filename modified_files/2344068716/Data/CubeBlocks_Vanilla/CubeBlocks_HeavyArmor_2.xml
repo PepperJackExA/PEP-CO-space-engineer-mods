@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?><Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorCornerSquare</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorCornerSquare</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="7" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorCornerSquare</BlockPairName>
+<BuildTimeSeconds>8.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorCornerSquare</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorCornerSquare</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorCornerSquare</BlockPairName>
+<BuildTimeSeconds>2.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorCornerSquareInverted</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorCornerSquareInverted</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="19" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorCornerSquareInverted</BlockPairName>
+<BuildTimeSeconds>16.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorCornerSquareInverted</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorCornerSquareInverted</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorCornerSquareInverted</BlockPairName>
+<BuildTimeSeconds>5.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorHalfCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfCorner</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="6" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfCorner</BlockPairName>
+<BuildTimeSeconds>5.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorHalfCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfCorner</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfCorner</BlockPairName>
+<BuildTimeSeconds>2.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorHalfSlopeCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfSlopeCorner</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="2" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfSlopeCorner</BlockPairName>
+<BuildTimeSeconds>5.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorHalfSlopeCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfSlopeCorner</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfSlopeCorner</BlockPairName>
+<BuildTimeSeconds>2.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorHalfSlopeCornerInverted</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfSlopeCornerInverted</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="23" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfSlopeCornerInverted</BlockPairName>
+<BuildTimeSeconds>20.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorHalfSlopeCornerInverted</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfSlopeCornerInverted</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfSlopeCornerInverted</BlockPairName>
+<BuildTimeSeconds>6.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorHalfSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfSlopedCorner</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="11" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfSlopedCorner</BlockPairName>
+<BuildTimeSeconds>8.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorHalfSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfSlopedCorner</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfSlopedCorner</BlockPairName>
+<BuildTimeSeconds>2.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorHalfSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfSlopedCornerBase</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="11" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>10.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorHalfSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfSlopedCornerBase</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>3.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorHalfSlopeInverted</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfSlopeInverted</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="22" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfSlopeInverted</BlockPairName>
+<BuildTimeSeconds>20.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorHalfSlopeInverted</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorHalfSlopeInverted</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorHalfSlopeInverted</BlockPairName>
+<BuildTimeSeconds>6.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopedCorner</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="13" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorSlopedCorner</BlockPairName>
+<BuildTimeSeconds>10.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopedCorner</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorSlopedCorner</BlockPairName>
+<BuildTimeSeconds>4.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopedCornerBase</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="20" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>16.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopedCornerBase</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorSlopedCornerBase</BlockPairName>
+<BuildTimeSeconds>5.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockHeavyArmorSlopedCornerTip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopedCornerTip</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="5" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorSlopedCornerTip</BlockPairName>
+<BuildTimeSeconds>5.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockHeavyArmorSlopedCornerTip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyArmorSlopedCornerTip</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Count="1" Subtype="ArmoredPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="ArmoredPlate"/>
+<BlockPairName>HeavyArmorSlopedCornerTip</BlockPairName>
+<BuildTimeSeconds>2.0</BuildTimeSeconds>
+<Public>true</Public>
+<InventoryMaxVolume>1.0</InventoryMaxVolume>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

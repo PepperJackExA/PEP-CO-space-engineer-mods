@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LaserAntennaDefinition">
+<Id>
+<TypeId>LaserAntenna</TypeId>
+<SubtypeId>DB_HumongousAntenna</SubtypeId>
+</Id>
+<DisplayName>Deep Space Transceiver</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="120" />
+<Component Subtype="SmallTube" Count="200" />
+<Component Subtype="SteelPlate" Count="400" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="Motor" Count="120" />
+<Component Subtype="RadioCommunication" Count="150" />
+<Component Subtype="Computer" Count="170" />
+<Component Subtype="SteelPlate" Count="500" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>DB_HumongousAntenna</BlockPairName>
+<BuildTimeSeconds>140</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PowerInputIdle>0.5</PowerInputIdle>
+<PowerInputTurning>70</PowerInputTurning>
+<PowerInputLasing>3</PowerInputLasing>
+<RotationRate>0.00005</RotationRate>
+<MaxRange>100000000</MaxRange>
+<MinElevationDegrees>33</MinElevationDegrees>
+<MaxElevationDegrees>180</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<RequireLineOfSight>false</RequireLineOfSight>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+</BlockPositions>
+</Definitions>
+ 

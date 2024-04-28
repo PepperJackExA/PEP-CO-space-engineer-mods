@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Frames</DisplayName>
+<Name>Frames</Name>
+<ItemIds>
+<string>CubeBlock/FrameBlock</string>
+<string>CubeBlock/FrameSlope</string>
+<string>CubeBlock/FrameCorner</string>
+<string>CubeBlock/FrameCornerInv</string>
+<string>CubeBlock/FrameBracket</string>
+<string>CubeBlock/Frame1x1Flat</string>
+<string>CubeBlock/Frame1x2Flat</string>
+<string>CubeBlock/Frame2x2Flat</string>
+<string>CubeBlock/Frame1x1Slope</string>
+<string>CubeBlock/Frame2x1Slope</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<ItemIds>
+<string>CubeBlock/FrameBlock</string>
+<string>CubeBlock/FrameSlope</string>
+<string>CubeBlock/FrameCorner</string>
+<string>CubeBlock/FrameCornerInv</string>
+<string>CubeBlock/FrameBracket</string>
+<string>CubeBlock/Frame1x1Flat</string>
+<string>CubeBlock/Frame1x2Flat</string>
+<string>CubeBlock/Frame2x2Flat</string>
+<string>CubeBlock/Frame1x1Slope</string>
+<string>CubeBlock/Frame2x1Slope</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<ItemIds>
+<string>CubeBlock/SmallFrameBlock</string>
+<string>CubeBlock/SmallFrameSlope</string>
+<string>CubeBlock/SmallFrameCorner</string>
+<string>CubeBlock/SmallFrameCornerInv</string>
+<string>CubeBlock/SmallFrameBracket</string>
+<string>CubeBlock/SmallFrame1x1Flat</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

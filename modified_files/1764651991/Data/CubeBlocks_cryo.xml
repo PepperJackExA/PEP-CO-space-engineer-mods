@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+<Id>
+<TypeId>CryoChamber</TypeId>
+<SubtypeId>EngineerConsole_cryo</SubtypeId>
+</Id>
+<DisplayName>Engineer Console Cryo</DisplayName>
+<Description>Description_FlightSeat</Description>
+<CubeSize>Large</CubeSize>
+<PrimarySound>BlockCockpitFlightSeat</PrimarySound>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>engineerconsole_Large_cryo</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+<Id>
+<TypeId>CryoChamber</TypeId>
+<SubtypeId>NavigationConsole_cryo</SubtypeId>
+</Id>
+<DisplayName>Navigation Console Cryo</DisplayName>
+<Description>Description_FlightSeat</Description>
+<CubeSize>Large</CubeSize>
+<PrimarySound>BlockCockpitFlightSeat</PrimarySound>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>navigation_console_Large_cryo</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+<Id>
+<TypeId>CryoChamber</TypeId>
+<SubtypeId>captains_chair_Large_cryo</SubtypeId>
+</Id>
+<DisplayName>Captains Chair Console Cryo</DisplayName>
+<Description>Description_FlightSeat</Description>
+<CubeSize>Large</CubeSize>
+<PrimarySound>BlockCockpitFlightSeat</PrimarySound>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>captains_chair_Large_cryo</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+<Id>
+<TypeId>CryoChamber</TypeId>
+<SubtypeId>generic_pilotseat_cryo</SubtypeId>
+</Id>
+<DisplayName>Standard Control Console Cryo</DisplayName>
+<Description>Description_FlightSeat</Description>
+<CubeSize>Large</CubeSize>
+<PrimarySound>BlockCockpitFlightSeat</PrimarySound>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>generic_pilotseat_cryo</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+<Id>
+<TypeId>CryoChamber</TypeId>
+<SubtypeId>generic_pilotseat_cyro</SubtypeId>
+</Id>
+<DisplayName>Standard Control Console Cryo</DisplayName>
+<Description>Description_FlightSeat</Description>
+<CubeSize>Large</CubeSize>
+<PrimarySound>BlockCockpitFlightSeat</PrimarySound>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>generic_pilotseat_cyro_cryo</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+<Id>
+<TypeId>CryoChamber</TypeId>
+<SubtypeId>generic_corner_cryo</SubtypeId>
+</Id>
+<DisplayName>Standard Corner Console Cryo</DisplayName>
+<Description>Description_FlightSeat</Description>
+<CubeSize>Large</CubeSize>
+<PrimarySound>BlockCockpitFlightSeat</PrimarySound>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>generic_corner_cryo</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+</BlockPositions>
+</Definitions>
+ 

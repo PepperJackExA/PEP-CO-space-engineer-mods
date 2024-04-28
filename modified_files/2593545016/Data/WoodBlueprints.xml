@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>WoodGasification2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Oxygen</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="WoodLogs" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>WoodGasification1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Oxygen</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="WoodPlank" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>WoodPlank</SubtypeId>
+</Id>
+<DisplayName>Cut wood logs into wood planks</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="WoodLogs" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>WoodLogs</SubtypeId>
+</Id>
+<DisplayName>Synthesize Wood</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Organic" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.5</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

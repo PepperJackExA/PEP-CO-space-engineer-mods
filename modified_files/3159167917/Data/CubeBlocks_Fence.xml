@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeFence</SubtypeId>
+</Id>
+<DisplayName>Fence</DisplayName>
+<Description>A simple fence</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="CharacterStepCrystal" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="WheelDust_Crystal" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_Crystal" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_HandDrillDust_Crystal" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="MaterialHit_BigCrystal" />
+<Loop>false</Loop>
+<Priority>1</Priority>
+<Id Type="MyObjectBuilder_ParticleEffect" Subtype="Smoke_DrillDust_Crystal" />
+<Loop>true</Loop>
+<Priority>1</Priority>
+</Definitions>
+ 

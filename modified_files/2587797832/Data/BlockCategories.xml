@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId />
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CubeBlock/LargeConcreteArmorBlock</string>
+<string>CubeBlock/LargeConcreteArmorSlope</string>
+<string>CubeBlock/LargeConcreteArmorCorner</string>
+<string>CubeBlock/LargeConcreteArmorCornerInv</string>
+<string>CubeBlock/LargeConcreteArmorHalfBlock</string>
+<string>CubeBlock/LargeConcreteArmorHalfSlope</string>
+<string>CubeBlock/ConcreteArmorRoundSlope</string>
+<string>CubeBlock/ConcreteArmorRoundCorner</string>
+<string>CubeBlock/ConcreteArmorRoundCornerInv</string>
+<string>CubeBlock/ConcreteArmorSlope2Base</string>
+<string>CubeBlock/ConcreteArmorSlope2Tip</string>
+<string>CubeBlock/ConcreteArmorCorner2Base</string>
+<string>CubeBlock/ConcreteArmorCorner2Tip</string>
+<string>CubeBlock/ConcreteArmorInvCorner2Base</string>
+<string>CubeBlock/ConcreteArmorInvCorner2Tip</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

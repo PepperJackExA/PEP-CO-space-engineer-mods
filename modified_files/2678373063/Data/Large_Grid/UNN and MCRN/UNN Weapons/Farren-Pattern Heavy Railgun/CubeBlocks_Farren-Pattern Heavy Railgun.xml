@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>Farren-Pattern Heavy Railgun</SubtypeId>
+</Id>
+<DisplayName>Farren-Pattern Heavy Railgun</DisplayName>
+<Description>One of the most powerful and accurate weapon systems available to the UNN, matched only by the most advanced MCRN railguns and the UNN's fixed orbital railgun platforms. Fires 120mm Tungsten-Uranium Slug UNN variant.</Description>
+<CubeSize>Large</CubeSize>
+<BuildTimeSeconds>180</BuildTimeSeconds>
+<InventoryMaxVolume>0.276</InventoryMaxVolume>
+<Components>
+<Component Subtype="GravityGenerator" Count="330" />
+<Component Subtype="PowerCell" Count="1240" />
+<Component Subtype="Superconductor" Count="800" />
+<Component Subtype="Girder" Count="1210" />
+<Component Subtype="SmallTube" Count="990" />
+<Component Subtype="LargeTube" Count="1210" />
+<Component Subtype="InteriorPlate" Count="1650" />
+<Component Subtype="TrackingComponent" Count="25" />
+<Component Subtype="UNNExpComponent" Count="190" />
+<Component Subtype="Motor" Count="1540" />
+<Component Subtype="Computer" Count="2850" />
+<Component Subtype="MetalGrid" Count="3190" />
+<Component Subtype="Construction" Count="2200" />
+<Component Subtype="SteelPlate" Count="6830" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<BlockPairName>Farren-Pattern Heavy Railgun</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>40</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<PCU>6000</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>Farren-Pattern Heavy Railgun MES</SubtypeId>
+</Id>
+<DisplayName>Farren-Pattern Heavy Railgun</DisplayName>
+<Description>One of the most powerful and accurate weapon systems available to the UNN, matched only by the most advanced MCRN railguns and the UNN's fixed orbital railgun platforms. Fires 120mm Tungsten-Uranium Slug UNN variant.</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<BuildTimeSeconds>180</BuildTimeSeconds>
+<InventoryMaxVolume>0.276</InventoryMaxVolume>
+<Components>
+<Component Subtype="GravityGenerator" Count="330" />
+<Component Subtype="PowerCell" Count="1240" />
+<Component Subtype="Superconductor" Count="800" />
+<Component Subtype="Girder" Count="1210" />
+<Component Subtype="SmallTube" Count="990" />
+<Component Subtype="LargeTube" Count="1210" />
+<Component Subtype="InteriorPlate" Count="1650" />
+<Component Subtype="TrackingComponent" Count="25" />
+<Component Subtype="UNNExpComponent" Count="190" >
+<DeconstructId>
+<TypeId>Ingot</TypeId>
+<SubtypeId>UNNExpCompTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="1540" />
+<Component Subtype="Computer" Count="2850" />
+<Component Subtype="MetalGrid" Count="3190" />
+<Component Subtype="Construction" Count="2200" />
+<Component Subtype="SteelPlate" Count="6830" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<BlockPairName>Farren-Pattern Heavy Railgun MES</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>40</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<PCU>6000</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

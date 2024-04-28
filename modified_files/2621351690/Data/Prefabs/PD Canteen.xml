@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="PD Canteen" />
+<Name>133966614321748276</Name>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyModStorageComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_ModStorageComponent">
+<Value>CAAQABiAgBAiHFBsYW5ldGFyeSBEZXJlbGljdCBFIENhbnRlZW4oADD///////////8BOgdDYW50ZWVuQg5NRVMtUHJlZmFiLTEtMUoAVQAAekRaGwlw0xVvpM4GwSE4XZZDWMRBwTlJFg11L3ccQWIbCXDTFW+kzgbBIThdlkNYxEHBOUkWDXUvdxxBagoI0ODP7fLLARAEcgRTUFJUeAGAAQGIAQGQAQCZAQAAAAAAAAAAqAEBsAEAugEbCQrHOe1wmtu/ITMUsHg7lNW/ORt0/5lbx+o/wgEbCWxV/JAzRKs/IcTUK7o7U+0/Of8nVAo6Y9k/ygEKCLCw9fDyywEQBNIBTggAEAAYACABKAAwATgAQABIAFAAWABgAGgBcAB4AIABAIgBAJABAJgBAKABAKgBALABALgBAMABAMgBANABANgBAOABAOgBAPABAPgBAdoBTggAEAAYACABKAAwATgAQABIAFAAWABgAGgBcAB4AIABAIgBAJABAJgBAKABAagBAbABAbgBAcABAcgBAdABANgBAOABAegBAPABAPgBAeIBEzIwODEwMTAxMDM1MzMzNDgwLTXqARYgQWJhbmRvbmVkIENhbnRlZW4gM0U0gAKAgBCKAgCSAgRTUFJUmAKWgICAgICAgAI=</Value>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<string>LCD_Economy_Clear</string>
+<PublicDescription>Canteen</PublicDescription>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>ArcBlockDoorSmallOpen</OpenSound>
+<CloseSound>ArcBlockDoorSmallClose</CloseSound>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<DisplayName>PD Canteen</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

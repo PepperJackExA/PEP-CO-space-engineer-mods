@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ConcreteSlabBP</SubtypeId>
+</Id>
+<DisplayName>Concrete Slab</DisplayName>
+<Prerequisites>
+<Item Amount="50" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="120" TypeId="Ingot" SubtypeId="Stone" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

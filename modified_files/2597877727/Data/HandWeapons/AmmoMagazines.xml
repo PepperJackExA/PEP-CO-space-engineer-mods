@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<AmmoMagazines>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>SemiAutoPistolMagazine</SubtypeId>
+</Id>
+<DisplayName>12 Round Pistol Magazine</DisplayName>
+<Mass>0.15</Mass>
+<Volume>0.1</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>12</Capacity>
+<AmmoDefinitionId Subtype="PistolCaliber" />
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>FullAutoPistolMagazine</SubtypeId>
+</Id>
+<DisplayName>30 Round Pistol Magazine</DisplayName>
+<Mass>0.3</Mass>
+<Volume>0.15</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>30</Capacity>
+<AmmoDefinitionId Subtype="PistolCaliber" />
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>ElitePistolMagazine</SubtypeId>
+</Id>
+<DisplayName>18 Round Pistol Magazine</DisplayName>
+<Mass>0.15</Mass>
+<Volume>0.1</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>18</Capacity>
+<AmmoDefinitionId Subtype="PistolCaliber" />
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>FlareClip</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_FlareClip</DisplayName>
+<Mass>0.05</Mass>
+<Volume>0.05</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>5</Capacity>
+<AmmoDefinitionId Subtype="Flare" />
+<MinimumOfferAmount>4</MinimumOfferAmount>
+<MaximumOfferAmount>10</MaximumOfferAmount>
+<MinimumOrderAmount>10</MinimumOrderAmount>
+<MaximumOrderAmount>1000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>PreciseAutomaticRifleGun_Mag_5rd</SubtypeId>
+</Id>
+<DisplayName>20 Round 5.7x28 Magazine</DisplayName>
+<Mass>0.4</Mass>
+<Volume>0.10</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>20</Capacity>
+<AmmoDefinitionId Subtype="SmallCaliber" />
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>AutomaticRifleGun_Mag_20rd</SubtypeId>
+</Id>
+<DisplayName>30 Round 5.7x28 Rifle Magazine</DisplayName>
+<Mass>0.6</Mass>
+<Volume>0.15</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>30</Capacity>
+<AmmoDefinitionId Subtype="SmallCaliber" />
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>UltimateAutomaticRifleGun_Mag_30rd</SubtypeId>
+</Id>
+<DisplayName>40 Round 5.7x28 Rifle Magazine</DisplayName>
+<Mass>0.8</Mass>
+<Volume>0.20</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>40</Capacity>
+<AmmoDefinitionId Subtype="SmallCaliber" />
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>RapidFireAutomaticRifleGun_Mag_50rd</SubtypeId>
+</Id>
+<DisplayName>50 Round 5.7x28 Rifle Magazine</DisplayName>
+<Mass>1.0</Mass>
+<Volume>0.25</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>50</Capacity>
+<AmmoDefinitionId Subtype="SmallCaliber" />
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>NATO_5p56x45mm</SubtypeId>
+</Id>
+<DisplayName>5.7x28 Magazine</DisplayName>
+<Mass>0.45</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>50</Capacity>
+<AmmoDefinitionId Subtype="SmallCaliber" />
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>false</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>Missile200mm</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Missile200mm</DisplayName>
+<Mass>25</Mass>
+<Volume>60</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="Missile" />
+<MinimumOfferAmount>50</MinimumOfferAmount>
+<MaximumOfferAmount>500</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+</AmmoMagazines>
+</Definitions>
+ 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>WoodContainerLargeGrid</SubtypeId>
+</Id>
+<DisplayName>Wooden Cargo Box</DisplayName>
+<Description>A simple cargo box with a wooden structure. Not very robust, but features standard cargo capacity. LARGE GRID</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="50" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="WoodPlank" Count="50" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>WoodContainer</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>WoodContainerSmallGrid</SubtypeId>
+</Id>
+<DisplayName>Wooden Cargo Box</DisplayName>
+<Description>A simple cargo box with a wooden structure. Not very robust, but features standard cargo capacity. SMALL GRID</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="50" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="WoodPlank" Count="50" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>WoodContainer</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>LargeRefinery</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Refinery</DisplayName>
+<Description>Refineries can refine Bauxite, Titanium, Coal, Silver, Gold, Platinum, and Tantalum.
+Power Usage: 3MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="250" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="Electromagnet" Count="25" />
+<Component Subtype="HeatingElement" Count="50" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Refinery</BlockPairName>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>7.5</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>3</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>RefineryIngots</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1.0</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>90</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>Blast Furnace</SubtypeId>
+</Id>
+<DisplayName>Smelter</DisplayName>
+<Description>Smelters can refine scrap metal, Silicon, Iron, Copper, Nickel, and Cobalt.
+Power Usage: 2MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="HeatingElement" Count="25" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="HeatingElement" Index="0" />
+<BlockPairName>Blast Furnace</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>2</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>SmelterIngots</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1.0</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>75</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId></SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OxygenGenerator</DisplayName>
+<Description>Melts and electroyzes water ice into Oxygen and Hydrogen.
+Power Usage: 1MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="HeatingElement" Count="10" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<IsAirTight>true</IsAirTight>
+<BlockPairName>OxygenGenerator</BlockPairName>
+<BuildTimeSeconds>22</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>50</IceConsumptionPerSecond>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>1</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</Id>
+<IceToGasRatio>5</IceToGasRatio>
+</GasInfo>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</Id>
+<IceToGasRatio>10</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Ice</Class>
+<Class>OxygenBottles</Class>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>OxygenGeneratorSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OxygenGenerator</DisplayName>
+<Description>Melts and electroyzes water ice into Oxygen and Hydrogen.
+Power Usage: 250kW</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="6" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="CopperWire" Count="10" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="HeatingElement" Count="5" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>10</IceConsumptionPerSecond>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.25</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</Id>
+<IceToGasRatio>5</IceToGasRatio>
+</GasInfo>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</Id>
+<IceToGasRatio>10</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Ice</Class>
+<Class>OxygenBottles</Class>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<BlockPairName>OxygenGenerator</BlockPairName>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+<Id>
+<TypeId>Assembler</TypeId>
+<SubtypeId>LargeAssembler</SubtypeId>
+</Id>
+<DisplayName>Mod Compatibility Assembler</DisplayName>
+<Description>Assembles components and items from other mods.
+Power Usage: 1.5MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="120" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>80</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>1.5</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>Components</Class>
+<Class>EliteTools</Class>
+<Class>BasicTools</Class>
+<Class>Tools</Class>
+<Class>Consumables</Class>
+<Class>EliteConsumables</Class>
+<Class>Ammo</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>40</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+<Id>
+<TypeId>Assembler</TypeId>
+<SubtypeId>BasicAssembler</SubtypeId>
+</Id>
+<DisplayName>Assembling Bench</DisplayName>
+<Description>Starter equipment for assembling basic components by hand. Manually loaded and operated.
+Power Usage: 100kW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="CopperWire" Count="10" />
+</Components>
+<CriticalComponent Subtype="CopperWire" Index="0" />
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>2</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.1</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>AssemblingBenchComponents</Class>
+<Class>T1Tools</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>40</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SurvivalKitDefinition">
+<Id>
+<TypeId>SurvivalKit</TypeId>
+<SubtypeId>SurvivalKitLarge</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SurvivalKit</DisplayName>
+<Description>Description_SurvivalKit</Description>
+<CubeSize>Large</CubeSize>
+<ResearchGroup>Tier00Basics</ResearchGroup>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="Medical" Count="3" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SurvivalKit</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<BlueprintClasses>
+<Class>StartingComponents</Class>
+<Class>StartingIngots</Class>
+<Class>T1Tools</Class>
+</BlueprintClasses>
+<StandbyPowerConsumption>0.015</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.1</OperationalPowerConsumption>
+<InventoryMaxVolume>2</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<ProgressSound>BlockMedicalProgress</ProgressSound>
+<PCU>140</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SurvivalKitDefinition">
+<Id>
+<TypeId>SurvivalKit</TypeId>
+<SubtypeId>SurvivalKit</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SurvivalKit</DisplayName>
+<Description>Description_SurvivalKit</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="Medical" Count="3" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SurvivalKit</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<BlueprintClasses>
+<Class>StartingComponents</Class>
+<Class>StartingIngots</Class>
+<Class>T1Tools</Class>
+</BlueprintClasses>
+<StandbyPowerConsumption>0.015</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.1</OperationalPowerConsumption>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<ProgressSound>BlockMedicalProgress</ProgressSound>
+<PCU>140</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>LargeProductivityModule</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ProductivityModule</DisplayName>
+<Description>Description_ProductivityModule</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Computer" Count="60" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ProductivityModule</BlockPairName>
+<PrimarySound>BlockModuleProductivity</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>LargeEffectivenessModule</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_EffectivenessModule</DisplayName>
+<Description>Description_EffectivenessModule</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="SmallTube" Count="15" />
+<Component Subtype="Superconductor" Count="20" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>EffectivenessModule</BlockPairName>
+<PrimarySound>BlockModuleEffectiveness</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>LargeEnergyModule</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PowerEfficiencyModule</DisplayName>
+<Description>Description_PowerEfficiencyModule</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="PowerCell" Count="20" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>EnergyModule</BlockPairName>
+<PrimarySound>BlockModuleEfficiency</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

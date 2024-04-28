@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>AQD_LG_ConveyorAccess</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_ConveyorAccess}</DisplayName>
+<Description>{LOC:Description_AQD_LG_ConveyorAccess}</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

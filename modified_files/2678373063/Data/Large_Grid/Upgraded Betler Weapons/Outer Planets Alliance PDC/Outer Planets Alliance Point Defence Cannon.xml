@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeGatlingTurret</TypeId>
+<SubtypeId>Outer Planets Alliance Point Defence Cannon</SubtypeId>
+</Id>
+<DisplayName>OPA Point Defence Cannon</DisplayName>
+<Description>After many iterations the Outer Planets Alliance has finally unveiled their own PDC system. While inferior to the inner variants it is a major step up from the Ostman-Jazinski PDC. Walk tall and carry a big stick beltalowda.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="20" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="PDCComponent" Count="15" />
+<Component Subtype="UpgradedBelterComponent" Count="5" />
+<Component Subtype="Motor" Count="90" />
+<Component Subtype="Computer" Count="150" />
+<Component Subtype="MetalGrid" Count="60" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="SteelPlate" Count="220" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>15</OperationalPowerConsumption>
+<BlockPairName>Outer Planets Alliance Point Defence Cannon</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<InventoryMaxVolume>0.384</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-43</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>400</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

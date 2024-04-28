@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<ItemIds>
+<string>CubeBlock/LargeGridXBeamBlockSlope</string>
+<string>CubeBlock/LargeGridXBeamBlockRound</string>
+<string>CubeBlock/LargeGridXBeamBlockSlope2x1Base</string>
+<string>CubeBlock/LargeGridXBeamBlockSlope2x1Tip</string>
+<string>CubeBlock/LargeGridXBeamBlockSlope2x1Corner</string>
+<string>CubeBlock/LargeGridXBeamBlockCube</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CubeBlock/SmallGridXBeamBlockSlope</string>
+<string>CubeBlock/SmallGridXBeamBlockRound</string>
+<string>CubeBlock/SmallGridXBeamBlockSlope2x1Base</string>
+<string>CubeBlock/SmallGridXBeamBlockSlope2x1Tip</string>
+<string>CubeBlock/SmallGridXBeamBlockSlope2x1Corner</string>
+<string>CubeBlock/SmallGridXBeamBlockCube</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_DLC_IndustrialPackDLC</DisplayName>
+<Name>IndustrialPack</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CubeBlock/LargeGridXBeamBlockSlope</string>
+<string>CubeBlock/LargeGridXBeamBlockRound</string>
+<string>CubeBlock/LargeGridXBeamBlockSlope2x1Base</string>
+<string>CubeBlock/LargeGridXBeamBlockSlope2x1Tip</string>
+<string>CubeBlock/LargeGridXBeamBlockSlope2x1Corner</string>
+<string>CubeBlock/LargeGridXBeamBlockCube</string>
+<string>CubeBlock/SmallGridXBeamBlockSlope</string>
+<string>CubeBlock/SmallGridXBeamBlockRound</string>
+<string>CubeBlock/SmallGridXBeamBlockSlope2x1Base</string>
+<string>CubeBlock/SmallGridXBeamBlockSlope2x1Tip</string>
+<string>CubeBlock/SmallGridXBeamBlockSlope2x1Corner</string>
+<string>CubeBlock/SmallGridXBeamBlockCube</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

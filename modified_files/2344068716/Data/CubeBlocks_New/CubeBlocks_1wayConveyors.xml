@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>OneWayConveyorTube</SubtypeId>
+</Id>
+<DisplayName>One-Way Conveyor Tube</DisplayName>
+<Description>Only allows items to travel in the direction of the arrows.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="3" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>OneWayConveyorTube</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>OneWayConveyorTubeCurved</SubtypeId>
+</Id>
+<DisplayName>One-Way Curved Conveyor Tube</DisplayName>
+<Description>Only allows items to travel in the direction of the arrows.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="3" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>OneWayConveyorTubeCurved</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>OneWayConveyorTubeMedium</SubtypeId>
+</Id>
+<DisplayName>Medium One-Way Conveyor Tube</DisplayName>
+<Description>Only allows items to travel in the direction of the arrows.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="3" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>OneWayConveyorTube</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>OneWayConveyorTubeCurvedMedium</SubtypeId>
+</Id>
+<DisplayName>Medium One-Way Curved Conveyor Tube</DisplayName>
+<Description>Only allows items to travel in the direction of the arrows.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="3" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>OneWayConveyorTubeCurved</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>OneWayConveyorTubeSmall</SubtypeId>
+</Id>
+<DisplayName>Small One-Way Conveyor Tube</DisplayName>
+<Description>Only allows items to travel in the direction of the arrows.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<CriticalComponent Subtype="Construction" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>OneWayConveyorTubeCurvedSmall</SubtypeId>
+</Id>
+<DisplayName>Small One-Way Curved Conveyor Tube</DisplayName>
+<Description>Only allows items to travel in the direction of the arrows.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

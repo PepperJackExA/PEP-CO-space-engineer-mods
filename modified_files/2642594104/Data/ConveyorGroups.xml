@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorPipeGroup" />
+<DisplayName>DisplayName_Block_ConveyorPipes</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeJunction" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipe5-Way" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeElbowJunction" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeIntersection" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeT" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeElbow" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeSeamless" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeFlange" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeEnd" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeCorner" />
+<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="LargeBlockConveyorSorterIndustrial" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyorPipeJunction" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyorPipe5-Way" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyorPipeElbowJunction" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyorPipeIntersection" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyorPipeTJunction" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyorPipeElbow" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="SmallBlockConveyorPipeSeamless" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="SmallBlockConveyorPipeFlange" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="SmallBlockConveyorPipeEnd" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="SmallBlockConveyorPipeCorner" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

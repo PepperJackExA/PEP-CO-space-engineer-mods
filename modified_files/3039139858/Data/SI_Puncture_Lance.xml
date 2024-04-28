@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncher</TypeId>
+<SubtypeId>SI_Puncture_Lance</SubtypeId>
+</Id>
+<DisplayName>SI_Puncture_Lance</DisplayName>
+<Description>SI_Puncture_Lance</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="180" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="MetalGrid" Count="250" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="Superconductor" Count="100" />
+<Component Subtype="SteelPlate" Count="180" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>white_Lance</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>8</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>1500</PCU>
+<string>Weapons</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

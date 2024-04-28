@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_RZB_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>Destrier-4 "SUNFLARE" Epstein Drive</DisplayName>
+<Description>A compact fusion drive designed for a sleek racing pinnace. Provides unrivalled impulse and requires little fuel. [UNN] </Description>
+<Description>Description_SG_ARYLNX_RZ_Esptein_Drive</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Superconductor" Count="24" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="8" />
+<Component Subtype="PowerCell" Count="12" />
+<Component Subtype="Thrust" Count="48" />
+<Component Subtype="Construction" Count="16" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>LG_ARYLNX_RZ_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.0001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>7500000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2.142</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.5</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>75</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYXLNX_YACHT_EPSTEIN_DRIVE</SubtypeId>
+</Id>
+<DisplayName>M55-G "Originem" Epstein Drive</DisplayName>
+<Description>The drive that started it all; a modified magnetic coil fusion drive designed by Solomon Epstein himself. Warranty void if used on yachts with no off button. [CIVILIAN] </Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="MetalGrid" Count="25" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="4" />
+<Component Subtype="Thrust" Count="30" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>LG_ARYX_YACHT_DRIVE</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.0001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>2500000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>7.712</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.25</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>75</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>Silverfish_RCS</SubtypeId>
+</Id>
+<DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+<Description>Hydrazine thrusters are powerful maneuvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>rcsThruster1</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>200000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>10</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>AryxRCSRamp_S</SubtypeId>
+</Id>
+<DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+<Description>Hydrazine thrusters are powerful maneuvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>AryxRCSRamp</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>200000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>10</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>AryxRCSHalfRamp_S</SubtypeId>
+</Id>
+<DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+<Description>Hydrazine thrusters are powerful maneuvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>AryxRCSHalfRamp</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>200000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>10</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>AryxRCSSlant_S</SubtypeId>
+</Id>
+<DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+<Description>Hydrazine thrusters are powerful maneuvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>AryxRCSSlant</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>200000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>10</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>AryxRCS_S</SubtypeId>
+</Id>
+<DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+<Description>Hydrazine thrusters are powerful maneuvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>AryxRCS</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>200000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>10</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>FuseCrystal</SubtypeId>
+</Id>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Crystal" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.25</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>RefineDorium</SubtypeId>
+</Id>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Dorium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>StabilizeCronyx</SubtypeId>
+</Id>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Cronyx" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>RefineSpice</SubtypeId>
+</Id>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Spice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.2</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

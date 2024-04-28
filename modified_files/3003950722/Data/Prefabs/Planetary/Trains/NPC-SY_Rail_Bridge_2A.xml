@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="(NPC-SY) Rail Bridge 2A" />
+<Name>116318586106856770</Name>
+<CubeBlocks>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyAutopilotComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_AutopilotComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<DisplayName>(NPC-SY) Rail Bridge 2A</DisplayName>
+<Name>92455129615365494</Name>
+<CubeBlocks>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyMaintenancePanelComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_MaintenancePanelComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyMaintenancePanelComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_MaintenancePanelComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>ArcBlockDoorSmallOpen</OpenSound>
+<CloseSound>ArcBlockDoorSmallClose</CloseSound>
+<ShowInInventory>true</ShowInInventory>
+<OpenSound>ArcBlockDoorSmallOpen</OpenSound>
+<CloseSound>ArcBlockDoorSmallClose</CloseSound>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyMultiTextPanelComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_MultiTextPanelComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<RequiredPowerInput>0.6</RequiredPowerInput>
+<ShowInInventory>true</ShowInInventory>
+<RequiredPowerInput>0.6</RequiredPowerInput>
+<ShowInInventory>true</ShowInInventory>
+<RequiredPowerInput>0.6</RequiredPowerInput>
+<ShowInInventory>true</ShowInInventory>
+<RequiredPowerInput>0.6</RequiredPowerInput>
+<ShowInInventory>true</ShowInInventory>
+<RequiredPowerInput>0.6</RequiredPowerInput>
+<ShowInInventory>true</ShowInInventory>
+<RequiredPowerInput>0.6</RequiredPowerInput>
+<ShowInInventory>true</ShowInInventory>
+<Capacity>5000</Capacity>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.12</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.12</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.12</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.12</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.12</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>0.12</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<Capacity>5000</Capacity>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<LockSound>ArcShipLandGearOn</LockSound>
+<UnlockSound>ArcShipLandGearOff</UnlockSound>
+<FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+</CubeBlocks>
+<DisplayName>Engine - Diesel class 08</DisplayName>
+<Name>93146695078605571</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 1528</DisplayName>
+<Name>110632847263248064</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 4096</DisplayName>
+<Name>88273316442429992</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 8987</DisplayName>
+<Name>121542360338213257</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 7257</DisplayName>
+<Name>122545189074419634</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 2749</DisplayName>
+<Name>140938520353270350</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 2527</DisplayName>
+<Name>109082412855631365</Name>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<LockSound>ArcShipLandGearOn</LockSound>
+<UnlockSound>ArcShipLandGearOff</UnlockSound>
+<FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+</CubeBlocks>
+<DisplayName>Small Grid 5962</DisplayName>
+<Name>123503123683186985</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 5625</DisplayName>
+<Name>103633356125013355</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 4273</DisplayName>
+<Name>136218952295296570</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 4816</DisplayName>
+<Name>108516964534546379</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 6110</DisplayName>
+<Name>101708681374957486</Name>
+<CubeBlocks>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<LockSound>ArcShipLandGearOn</LockSound>
+<UnlockSound>ArcShipLandGearOff</UnlockSound>
+<FailedAttachSound>ArcShipLandGearNothing01</FailedAttachSound>
+</CubeBlocks>
+<DisplayName>Small Grid 5962</DisplayName>
+<Name>139812038711333758</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 5625</DisplayName>
+<Name>132872569713305030</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 4273</DisplayName>
+<Name>90206418153600979</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 4816</DisplayName>
+<Name>113515823093781238</Name>
+<CubeBlocks>
+</CubeBlocks>
+<DisplayName>Small Grid 6110</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

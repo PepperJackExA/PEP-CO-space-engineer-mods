@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition> <!-- Cube -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeGridXBeamBlockCube</SubtypeId>
+</Id>
+<DisplayName>Beam Block Cube</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockCube</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- Slope -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeGridXBeamBlockSlope</SubtypeId>
+</Id>
+<DisplayName>Beam Block Slope Alt.</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockSlope</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- Round -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeGridXBeamBlockRound</SubtypeId>
+</Id>
+<DisplayName>Beam Block Round Alt.</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockRound</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- 2x1 Base -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeGridXBeamBlockSlope2x1Base</SubtypeId>
+</Id>
+<DisplayName>Beam Block 2x1 Base Alt.</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockSlope2x1Base</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- 2x1 Tip -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeGridXBeamBlockSlope2x1Tip</SubtypeId>
+</Id>
+<DisplayName>Beam 2x1 Tip Alt.</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockSlope2x1Tip</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- 2x1 Corner -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeGridXBeamBlockSlope2x1Corner</SubtypeId>
+</Id>
+<DisplayName>Beam Block 2x1 Corner Alt.</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockSlope2x1Corner</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- Cube -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallGridXBeamBlockCube</SubtypeId>
+</Id>
+<DisplayName>Beam Block Cube</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockCube</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- Slope -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallGridXBeamBlockSlope</SubtypeId>
+</Id>
+<DisplayName>Beam Block Slope Alt.</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockSlope</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- Round -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallGridXBeamBlockRound</SubtypeId>
+</Id>
+<DisplayName>Beam Block Round Alt.</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockRound</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- 2x1 Base -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallGridXBeamBlockSlope2x1Base</SubtypeId>
+</Id>
+<DisplayName>Beam Block 2x1 Base Alt.</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockSlope2x1Base</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- 2x1 Tip -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallGridXBeamBlockSlope2x1Tip</SubtypeId>
+</Id>
+<DisplayName>Beam Block 2x1 Tip Alt.</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockSlope2x1Tip</BlockPairName>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition> <!-- 2x1 Corner -->
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallGridXBeamBlockSlope2x1Corner</SubtypeId>
+</Id>
+<DisplayName>Beam Block 2x1 Corner Alt.</DisplayName>
+<Description>Description_BeamBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>XBeamBlockSlope2x1Corner</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

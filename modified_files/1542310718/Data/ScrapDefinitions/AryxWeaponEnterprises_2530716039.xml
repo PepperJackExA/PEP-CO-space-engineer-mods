@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>ElectromagnetAWEScrap</SubtypeId>
+</Id>
+<DisplayName>ElectromagnetAWEScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>SuperchargerAWEScrap</SubtypeId>
+</Id>
+<DisplayName>SuperchargerAWEScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>MilitaryPlateAWEScrap</SubtypeId>
+</Id>
+<DisplayName>MilitaryPlateAWEScrap</DisplayName>
+<Mass>1</Mass>
+<Volume>0.254</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+</PhysicalItems>
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ElectromagnetAWEScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>ElectromagnetAWEScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="ElectromagnetAWEScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SuperchargerAWEScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>SuperchargerAWEScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="SuperchargerAWEScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>MilitaryPlateAWEScrapToIngot</SubtypeId>
+</Id>
+<DisplayName>MilitaryPlateAWEScrapToIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="MilitaryPlateAWEScrap" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

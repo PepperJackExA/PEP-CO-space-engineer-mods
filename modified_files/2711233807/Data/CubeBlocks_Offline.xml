@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_DecoyDefinition">
+<Id>
+<TypeId>Decoy</TypeId>
+<SubtypeId>Offline</SubtypeId>
+</Id>
+<DisplayName>Faction Offline Protection</DisplayName>
+<Description>Protects the static grid it is on, and all other grids connected to it with the connector.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="BulletproofGlass" Count="20" />
+<Component Subtype="Computer" Count="50" />
+<Component Subtype="SteelPlate" Count="40" />
+</Components>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<CriticalComponent Subtype="Computer" Index="0" />
+<Public>true</Public>
+<BlockPairName>Offline</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

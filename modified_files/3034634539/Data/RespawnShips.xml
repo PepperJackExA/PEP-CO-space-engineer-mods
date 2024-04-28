@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<RespawnShips>
+<Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>HIPlanetPod</SubtypeId>
+</Id>
+<DisplayName>HI Planetary Pod</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>HIPlanetPod</Prefab>
+<UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
+</Ship>
+<Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>HIMoonPod</SubtypeId>
+</Id>
+<DisplayName>HI Moon Pod</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>HIMoonPod</Prefab>
+</Ship>
+<Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>HISpacePod</SubtypeId>
+</Id>
+<DisplayName>HI Space Pod</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>HISpacePod</Prefab>
+<UseForSpace>true</UseForSpace>
+</Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>RespawnPlanetPod</SubtypeId>
+</Id>
+<DisplayName>DisplayName_PlanetaryLander</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>RespawnPlanetPod</Prefab>
+<UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
+</Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>RespawnMoonPod</SubtypeId>
+</Id>
+<DisplayName>DisplayName_PlanetaryLander</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>RespawnMoonPod</Prefab>
+</Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>RespawnSpacePod</SubtypeId>
+</Id>
+<DisplayName>DisplayName_RespawnPodSpace</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>RespawnSpacePod</Prefab>
+<UseForSpace>true</UseForSpace>
+</Ship>
+</RespawnShips>
+</Definitions>
+ 

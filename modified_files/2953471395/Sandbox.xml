@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="WelderItem" />
+<DefinitionId Type="MyObjectBuilder_WindTurbine" Subtype="Serg_10MW_Wind_Turbine" />
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Assembler" Subtype="BasicAssembler" />
+<DefinitionId Type="MyObjectBuilder_LaserAntenna" Subtype="DB_LaserCommLarge" />
+<DefinitionId Type="MyObjectBuilder_LaserAntenna" Subtype="Phoenix_LargeBlockRadioAntenna" />
+<DefinitionId Type="MyObjectBuilder_TextPanel" Subtype="LargeLCDPanel" />
+<DefinitionId Type="MyObjectBuilder_LandingGear" Subtype="LargeBlockLandingGear" />
+<Value>
+<RealisticSound>true</RealisticSound>
+<EnableRespawnShips>true</EnableRespawnShips>
+<EnableJetpack>true</EnableJetpack>
+<EnableFriendlyFire>true</EnableFriendlyFire>
+<Factions>
+<Factions>
+<Name>Space Pirates</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon>
+<Name>Nomads</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Bots Incorporated</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Suicide Squad</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Outfitters Inc</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>The Unit</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Black Bots</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Legion</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Obsidian</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Flames of Wrath</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Azure</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Rust Bucket</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Engineers Inc</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Assimilators</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Alpha Bots</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>The Damaged</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Battle Bots</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Mech Bots</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>The Prime</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Perceptive Encoding</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>The Sentient</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Junk Heap</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Recon Droids</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>The Operators</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Metal Mates</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Cartographers</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Fiber Optics</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>The Peacekeepers</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Fighters Incorporated</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Future Bots</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Clang Bots</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>Builders Inc</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>The Collectors</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+<Name>The Observers</Name>
+<Members>
+</Members>
+<AutoAcceptMember>true</AutoAcceptMember>
+<AcceptHumans>false</AcceptHumans>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<FactionIcon>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2596208372\Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Factions>
+<Value>258961289160008772</Value>
+<Value>271845000904486157</Value>
+<Value>237631694086969724</Value>
+<Value>252365508349796059</Value>
+<Value>263228241471949522</Value>
+<Value>223041673531184767</Value>
+<Value>264572627417102490</Value>
+<Value>270867113263046290</Value>
+<Value>229369117645562925</Value>
+<Value>222334777830328562</Value>
+<Value>221624268660987141</Value>
+<Value>247508634031893406</Value>
+<Value>282545565294294931</Value>
+<Value>238758029224258761</Value>
+<Value>242810840897416712</Value>
+<Value>253780000361994064</Value>
+<Value>270568550800399448</Value>
+<Value>267247497780751593</Value>
+<Value>216753353723061210</Value>
+<Value>227175736078003225</Value>
+<Value>217434353817784487</Value>
+<Value>261051882166162732</Value>
+<Value>259142873045945121</Value>
+<Value>222901502253787545</Value>
+<Value>287148656933807940</Value>
+<Value>261844957276389791</Value>
+<Value>224117981259016396</Value>
+<Value>219487532578242040</Value>
+<Value>264869242220553470</Value>
+<Value>265335216809089871</Value>
+<Value>266911043583743046</Value>
+<Value>261069368860231434</Value>
+<Value>250931398220868533</Value>
+<Value>217523998194777851</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<Value>258961289160008772</Value>
+<IdentityId>144115188075855895</IdentityId>
+<DiscoveredFactions>
+</DiscoveredFactions>
+</Factions>
+<Name>2960620561.sbm</Name>
+<Name>2917005091.sbm</Name>
+<Name>2917069836.sbm</Name>
+<Name>2916505000.sbm</Name>
+<Name>2916437712.sbm</Name>
+<Name>2916485389.sbm</Name>
+<Identities>
+<IdentityId>144115188075855895</IdentityId>
+<DisplayName>PepperJack</DisplayName>
+<SavedCharacters>
+</SavedCharacters>
+<RespawnShips>
+</RespawnShips>
+<IdentityId>144115188075855896</IdentityId>
+<DisplayName>Space Pirates</DisplayName>
+<IdentityId>144115188075855897</IdentityId>
+<DisplayName>The Wanderer</DisplayName>
+<IdentityId>144115188075855898</IdentityId>
+<DisplayName>The Tinkerer</DisplayName>
+<IdentityId>144115188075855899</IdentityId>
+<DisplayName>The Martyr</DisplayName>
+<IdentityId>144115188075855900</IdentityId>
+<DisplayName>The Tailor</DisplayName>
+<IdentityId>144115188075855901</IdentityId>
+<DisplayName>The Soldier</DisplayName>
+<IdentityId>144115188075855902</IdentityId>
+<DisplayName>The Infiltrator</DisplayName>
+<IdentityId>144115188075855903</IdentityId>
+<DisplayName>The Legionnaire</DisplayName>
+<IdentityId>144115188075855904</IdentityId>
+<DisplayName>The Obsidianborn</DisplayName>
+<IdentityId>144115188075855905</IdentityId>
+<DisplayName>Flamesoul</DisplayName>
+<IdentityId>144115188075855906</IdentityId>
+<DisplayName>Azure's Gift</DisplayName>
+<IdentityId>144115188075855907</IdentityId>
+<DisplayName>The Rusted</DisplayName>
+<IdentityId>144115188075855908</IdentityId>
+<DisplayName>The Architect</DisplayName>
+<IdentityId>144115188075855909</IdentityId>
+<DisplayName>The Modifier</DisplayName>
+<IdentityId>144115188075855910</IdentityId>
+<DisplayName>The Alpha</DisplayName>
+<IdentityId>144115188075855911</IdentityId>
+<DisplayName>Short Circuit</DisplayName>
+<IdentityId>144115188075855912</IdentityId>
+<DisplayName>Iron Hide</DisplayName>
+<IdentityId>144115188075855913</IdentityId>
+<DisplayName>The Mechanic</DisplayName>
+<IdentityId>144115188075855914</IdentityId>
+<DisplayName>Optimus</DisplayName>
+<IdentityId>144115188075855915</IdentityId>
+<DisplayName>The Coder</DisplayName>
+<IdentityId>144115188075855916</IdentityId>
+<DisplayName>Reboot</DisplayName>
+<IdentityId>144115188075855917</IdentityId>
+<DisplayName>Scrap</DisplayName>
+<IdentityId>144115188075855918</IdentityId>
+<DisplayName>The Analyst</DisplayName>
+<IdentityId>144115188075855919</IdentityId>
+<DisplayName>The Hacker</DisplayName>
+<IdentityId>144115188075855920</IdentityId>
+<DisplayName>Tin</DisplayName>
+<IdentityId>144115188075855921</IdentityId>
+<DisplayName>The Map Maker</DisplayName>
+<IdentityId>144115188075855922</IdentityId>
+<DisplayName>Fiber</DisplayName>
+<IdentityId>144115188075855923</IdentityId>
+<DisplayName>The General</DisplayName>
+<IdentityId>144115188075855924</IdentityId>
+<DisplayName>The Brute</DisplayName>
+<IdentityId>144115188075855925</IdentityId>
+<DisplayName>The Experiment</DisplayName>
+<IdentityId>144115188075855926</IdentityId>
+<DisplayName>Ratchet</DisplayName>
+<IdentityId>144115188075855927</IdentityId>
+<DisplayName>Socket</DisplayName>
+<IdentityId>144115188075855928</IdentityId>
+<DisplayName>Cylinder</DisplayName>
+<IdentityId>144115188075855929</IdentityId>
+<DisplayName>Telescope</DisplayName>
+<IdentityId>144115188075855930</IdentityId>
+<IdentityId>144115188075855931</IdentityId>
+<IdentityId>144115188075855932</IdentityId>
+<IdentityId>144115188075855933</IdentityId>
+<IdentityId>144115188075855934</IdentityId>
+<IdentityId>144115188075855950</IdentityId>
+<IdentityId>144115188075855951</IdentityId>
+<IdentityId>144115188075855952</IdentityId>
+<IdentityId>144115188075855953</IdentityId>
+<IdentityId>144115188075855954</IdentityId>
+<IdentityId>144115188075855955</IdentityId>
+<IdentityId>144115188075855956</IdentityId>
+<IdentityId>144115188075855957</IdentityId>
+<IdentityId>144115188075855958</IdentityId>
+<IdentityId>144115188075855959</IdentityId>
+<IdentityId>144115188075855960</IdentityId>
+<IdentityId>144115188075855961</IdentityId>
+<IdentityId>144115188075855962</IdentityId>
+<IdentityId>144115188075855963</IdentityId>
+<IdentityId>144115188075855964</IdentityId>
+<Value>
+<DisplayName>PepperJack</DisplayName>
+<IdentityId>144115188075855895</IdentityId>
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="WelderItem" />
+<DefinitionId Type="MyObjectBuilder_WindTurbine" Subtype="Serg_10MW_Wind_Turbine" />
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Assembler" Subtype="BasicAssembler" />
+<DefinitionId Type="MyObjectBuilder_LaserAntenna" Subtype="DB_LaserCommLarge" />
+<DefinitionId Type="MyObjectBuilder_LaserAntenna" Subtype="Phoenix_LargeBlockRadioAntenna" />
+<DefinitionId Type="MyObjectBuilder_TextPanel" Subtype="LargeLCDPanel" />
+<DefinitionId Type="MyObjectBuilder_LandingGear" Subtype="LargeBlockLandingGear" />
+<Value>
+<IdentityId>144115188075855961</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855960</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855963</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855962</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855964</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855953</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855952</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855955</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855954</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855957</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855956</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855959</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855958</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855930</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855932</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855931</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855934</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855933</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855951</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<IdentityId>144115188075855950</IdentityId>
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Value>
+<Value>
+<DisplayName>Unknown signal</DisplayName>
+<Value>
+<Definition Type="MyObjectBuilder_ContainerDropSystemDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_SessionComponentContractSystemDefinition" Subtype="Default" />
+<Id>959055236518389438</Id>
+<FailReputationPrice>24</FailReputationPrice>
+<Id>1044354722649931503</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a rusted timing collimator. This is an extreme-risk cargo, so you will need an armed ship. Route: 583 km</ContractDescription>
+<Id>999664994271045479</Id>
+<FailReputationPrice>6</FailReputationPrice>
+<Id>1034854468156823607</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a matter throttle disassembler. Route: 1,326 km</ContractDescription>
+<Id>968523353659682366</Id>
+<FailReputationPrice>86</FailReputationPrice>
+<Id>1028998342643620419</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver [CLASSIFIED]. This is an extreme-risk cargo, so you will need an armed ship. You will also need a ship with a huge cargo hold. Route: 14,602 km</ContractDescription>
+<Id>952825105607995808</Id>
+<FailReputationPrice>36</FailReputationPrice>
+<Id>1080695170158844999</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a radial resonance resonator. This is a high-risk cargo, so you will need an armed ship. You will also need a ship with a huge cargo hold. This is an URGENT delivery, so don't waste time. Route: 15,704 km</ContractDescription>
+<Id>986758625484095906</Id>
+<FailReputationPrice>24</FailReputationPrice>
+<Id>1062973524589259958</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a quantum disassembler spring. This is an extreme-risk cargo, so you will need an armed ship. This is an URGENT delivery, so don't waste time. Route: 7,313 km</ContractDescription>
+<Id>965947030977872209</Id>
+<FailReputationPrice>21</FailReputationPrice>
+<Id>1060140412021003765</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver [CLASSIFIED]. You will need a ship with a huge cargo hold. Route: 15,008 km</ContractDescription>
+<Id>970349468363609882</Id>
+<FailReputationPrice>48</FailReputationPrice>
+<Id>1040137264210465024</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a quasi interface coupler. This is an extreme-risk cargo, so you will need an armed ship. You will also need a ship with a large cargo hold. Route: 583 km</ContractDescription>
+<Id>986579822249398427</Id>
+<FailReputationPrice>2</FailReputationPrice>
+<Id>1039823670143543257</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a tachyon disassembler counter-lever. Route: 6,720 km</ContractDescription>
+<Id>993175261708021238</Id>
+<FailReputationPrice>6</FailReputationPrice>
+<Id>1066422724646490634</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a timed encabulation matrix. Handle with care. Route: 8,952 km</ContractDescription>
+<Id>989858032242636262</Id>
+<FailReputationPrice>72</FailReputationPrice>
+<Id>1069058921491064230</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a tachyon decompression regulator. This is an extreme-risk cargo, so you will need an armed ship. You will also need a ship with a huge cargo hold. This is an URGENT delivery, so don't waste time. Route: 386 km</ContractDescription>
+<Id>951382669931811811</Id>
+<FailReputationPrice>24</FailReputationPrice>
+<Id>1014803142304123784</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a pulse well matrix. This is a high-risk cargo, so you will need an armed ship. You will also need a ship with a large cargo hold. Route: 14,602 km</ContractDescription>
+<Id>987600376838573083</Id>
+<FailReputationPrice>6</FailReputationPrice>
+<Id>1046519602907627056</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a gravitational resonance teleporter. Route: 15,008 km</ContractDescription>
+<Id>947557957929739899</Id>
+<FailReputationPrice>57</FailReputationPrice>
+<Id>1080001562039598977</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver [CLASSIFIED]. This is an extreme-risk cargo, so you will need an armed ship. You will also need a ship with a large cargo hold. Route: 15,008 km</ContractDescription>
+<Id>972335026759813071</Id>
+<FailReputationPrice>18</FailReputationPrice>
+<Id>1016536101247351007</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a molecular desequencing flange. You will need a ship with a huge cargo hold. Route: 8,816 km</ContractDescription>
+<Id>952185659275149638</Id>
+<FailReputationPrice>12</FailReputationPrice>
+<Id>1050989546418182182</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver a timed flux flange. You will need a ship with a large cargo hold. This is an URGENT delivery, so don't waste time. Route: 6,720 km</ContractDescription>
+<Id>967540875300008642</Id>
+<FailReputationPrice>48</FailReputationPrice>
+<Id>1060146021161387431</Id>
+<DefinitionId Type="MyObjectBuilder_ContractTypeDefinition" Subtype="FreightContract" />
+<ContractDescription>The client needs someone to deliver an amplified disassembler flange. This is an extreme-risk cargo, so you will need an armed ship. You will also need a ship with a large cargo hold. This is an URGENT delivery, so don't waste time. Route: 7,313 km</ContractDescription>
+<Definition Type="MyObjectbuilder_SessionComponentEconomyDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_CoordinateSystemDefinition" Subtype="CoordinateSystem" />
+<Id>2</Id>
+<Definition Type="MyObjectBuilder_BankingSystemDefinition" Subtype="BankingSystem" />
+<string>Models\Cubes\Small\LightArmorPanel.mwm</string>
+<string>Models\Cubes\Small\ConveyorTube.mwm</string>
+<string>Models\Cubes\Small\LightArmorSlopedSidePanel.mwm</string>
+<string>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2344068716\Models\SmallAlkalineBatterySmall.mwm</string>
+<string>Models\Cubes\Small\gyroscope.mwm</string>
+<string>Models\Cubes\Small\beacon.mwm</string>
+<string>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2344068716\Models\SmallCylinderGasolineTank.mwm</string>
+<string>Models\Cubes\Small\OxygenPressurizer.mwm</string>
+<string>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\450637217\178289287097967729_legacy.bin\Models\Small\RadioComBase.mwm</string>
+<string>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2942029777\Models\Cubes\small\SG3x3GasShipScrew.mwm</string>
+<string>Models\Cubes\Small\conveyor.mwm</string>
+<string>Models\Cubes\Small\SurvivalKit.mwm</string>
+<string>Models\Cubes\Small\TextPanel.mwm</string>
+<string>Models\Cubes\Small\Button.mwm</string>
+<string>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2344068716\Models\TransportBox.mwm</string>
+<string>Models\Cubes\Small\OpenCockpitSmall.mwm</string>
+<string>Models\Cubes\Small\TimerBlock.mwm</string>
+<string>Models\Cubes\Small\MotorStator.mwm</string>
+<string>Models\Cubes\Small\ProgrammingBlock.mwm</string>
+<string>Models\Cubes\Large\InteriorLight.mwm</string>
+<string>Models\Cubes\Small\MotorRotorConstruction_1.mwm</string>
+<string>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\1818289422\Models\Scaffold_Platform_Large.mwm</string>
+<string>Models\Cubes\Large\GratedStairs.mwm</string>
+<string>Models\Cubes\Large\CylindricalColumn.mwm</string>
+<string>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2719328710\Models\Cubes\Large\Serg_10MW_Wind_Turbine.mwm</string>
+<string>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\2344068716\Models\AssemblingBench.mwm</string>
+<string>C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\450637217\178289287097967729_legacy.bin\Models\Large\RadioComBase.mwm</string>
+<string>Models\Cubes\Large\LCDPanel.mwm</string>
+<string>Models\Characters\Astronaut\SE_astronaut.mwm</string>
+<string>Models\Cubes\Small\Armor\InvFaceTrianglePlate.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavySquarePlateSlope2BaseFront.mwm</string>
+<string>Models\Cubes\Small\Armor\SlopePlate.mwm</string>
+<string>Models\Cubes\Small\Armor\SquarePlateCenter.mwm</string>
+<string>Models\Cubes\Small\Armor\CornerTriangleRightPlate.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavySquarePlateCenter.mwm</string>
+<string>Models\Cubes\Small\Armor\SquarePlate.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavySquarePlateSlope2TipBack.mwm</string>
+<string>Models\Cubes\Small\Armor\CornerTriangleLeftPlate.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavySquarePlateSlope2BaseRight.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavySlopePlateSlope2Tip.mwm</string>
+<string>Models\Cubes\Small\Armor\SlopePlateSlab.mwm</string>
+<string>Models\Cubes\Small\Armor\CornerTriangleRightPlateSlope2Tip.mwm</string>
+<string>Models\Cubes\Small\Armor\SquarePlateSlope2BaseFront.mwm</string>
+<string>Models\Cubes\Small\Armor\LightArmorSquareSlopedCornerTipInvTop.mwm</string>
+<string>Models\Cubes\Small\Armor\SlopedCornerTipRight.mwm</string>
+<string>Models\Cubes\Small\Armor\SlopePlateSlope2Tip.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavyHalfCornerDiagonal.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavySquarePlate.mwm</string>
+<string>Models\Cubes\Small\Armor\HalfCornerLeft.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavySquarePlateSlope2BaseTop.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavyCornerTriangleLeftPlateCorner2TipFront.mwm</string>
+<string>Models\Cubes\Small\Armor\LightArmorSquareSlopedCornerTipInvTopRight.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavyCornerTriangleRightPlateSlope2Tip.mwm</string>
+<string>Models\Cubes\Small\Armor\CornerTriangleLeftPlateSlope2Tip.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavySlopePlateSlab.mwm</string>
+<string>Models\Cubes\Small\Armor\SquarePlateSlope2TipBack.mwm</string>
+<string>Models\Cubes\Small\Armor\CornerTriangleLeftPlateCorner2TipFront.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavySquarePlateSlope2BaseLeft.mwm</string>
+<string>Models\Cubes\Small\Armor\FaceTrianglePlate.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavyCornerTriangleLeftPlate.mwm</string>
+<string>Models\Cubes\Small\Armor\SquarePlateSlope2BaseLeft.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavyHalfSlopedCornerBaseTop.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavyCornerTriangleLeftPlateSlope2Tip.mwm</string>
+<string>Models\Cubes\Small\Armor\SquarePlateSlope2BaseTop.mwm</string>
+<string>Models\Cubes\Small\Armor\HalfCornerRight.mwm</string>
+<string>Models\Cubes\Small\Armor\SlopedCornerTipLeft.mwm</string>
+<string>Models\Cubes\Small\Armor\HeavyHalfSlopeCornerTriangle.mwm</string>
+<string>Models\Cubes\Small\Armor\SquarePlateSlope2BaseRight.mwm</string>
+<string>Models\Cubes\Small\Armor\HalfSlopeCornerTriangle.mwm</string>
+<string>AlienSandSea</string>
+<string>Soil</string>
+<string>Stone</string>
+<string>DOC Sand_02</string>
+<string>Grass bare</string>
+<string>Grass</string>
+ 

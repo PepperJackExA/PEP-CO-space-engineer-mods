@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorRampCorner2x2x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Armor Ramp Corner 2x2x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="26" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorRampCorner2x2x1Mirror</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorRampCornerInv2x2x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Armor Ramp Corner Inv 2x2x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="26" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorRampCornerInv2x2x1Mirror</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorRampCornerSplit2x2x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Armor Ramp Corner Split 2x2x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="26" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorRampCornerSplit2x2x1Mirror</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorRampCornerSplit2x1x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Armor Ramp Corner Split Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="13" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorRampCornerSplit2x1x1Mirror</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorRampCornerDouble2x2x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Armor Ramp Corner Double 2x2x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="26" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorRampCornerDouble2x2x1Mirror</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorRampCornerHalfSplit2x2x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Armor Ramp Corner Half Split 2x2x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="26" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorRampCornerHalfSplit2x2x1Mirror</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorRampCornerSplit3x1x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Armor Ramp Corner Split 3x1x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorRampCornerSplit3x1x1Mirror</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHeavyArmorRampCorner2x2x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Ramp Corner 2x2x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="270" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorRampCorner2x2x1Mirror</BlockPairName>
+<BuildTimeSeconds>48</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHeavyArmorRampCornerInv2x2x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Ramp Corner Inv 2x2x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="270" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorRampCornerInv2x2x1Mirror</BlockPairName>
+<BuildTimeSeconds>48</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHeavyArmorRampCornerSplit2x2x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Ramp Corner Split 2x2x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="270" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorRampCornerSplit2x2x1Mirror</BlockPairName>
+<BuildTimeSeconds>48</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHeavyArmorRampCornerSplit2x1x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Ramp Corner Split Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="135" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorRampCornerSplit2x1x1Mirror</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHeavyArmorRampCornerDouble2x2x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Ramp Corner Double 2x2x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="270" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorRampCornerDouble2x2x1Mirror</BlockPairName>
+<BuildTimeSeconds>48</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHeavyArmorRampCornerHalfSplit2x2x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Ramp Corner Half Split 2x2x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="270" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorRampCornerHalfSplit2x2x1Mirror</BlockPairName>
+<BuildTimeSeconds>48</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeHeavyArmorRampCornerSplit3x1x1Mirror</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Ramp Corner Split 3x1x1 Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="202" />
+<Component Subtype="SteelPlate" Count="22" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorRampCornerSplit3x1x1Mirror</BlockPairName>
+<BuildTimeSeconds>36</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

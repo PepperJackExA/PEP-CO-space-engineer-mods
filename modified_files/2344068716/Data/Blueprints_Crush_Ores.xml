@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushSulfurOre</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Sulfur" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedSulfur" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushStoneOre</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Stone" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Stone" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushIronOre</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_IronIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Iron" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushNickelOre</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_NickelIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Nickel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushCobaltOre</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_CobaltIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Cobalt" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushSiliconOre</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_SiliconWafer</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Silicon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushSilverOre</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_SilverIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Silver" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushGoldOre</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_GoldIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Gold" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushPlatinumOre</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_PlatinumIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Platinum" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushUraniumOre</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_UraniumIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Uranium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushCopperOre</SubtypeId>
+</Id>
+<DisplayName>Copper Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Copper" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushLithiumOre</SubtypeId>
+</Id>
+<DisplayName>Lithium Paste</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Lithium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushBauxiteOre</SubtypeId>
+</Id>
+<DisplayName>Aluminum Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Bauxite" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushTitaniumOre</SubtypeId>
+</Id>
+<DisplayName>Titanium Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Titanium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushTantalumOre</SubtypeId>
+</Id>
+<DisplayName>Tantalum Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Tantalum" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushNiterOre</SubtypeId>
+</Id>
+<DisplayName>Potassium Nitrate</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Niter" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedSulfurOreToIngot</SubtypeId>
+</Id>
+<DisplayName>Sulfur</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedSulfur" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedIronOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_IronIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedIron" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedNickelOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_NickelIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedNickel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedCobaltOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_CobaltIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedCobalt" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedSiliconOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_SiliconWafer</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedSilicon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedSilverOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_SilverIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedSilver" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedGoldOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_GoldIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedGold" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedPlatinumOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_PlatinumIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedPlatinum" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedUraniumOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_UraniumIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedUranium" />
+</Prerequisites>
+<Results>
+<Item Amount="0.075" TypeId="Ingot" SubtypeId="Uranium" />
+<Item Amount="0.3" TypeId="Ingot" SubtypeId="DepletedUranium" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedCopperOreToIngot</SubtypeId>
+</Id>
+<DisplayName>Copper Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedCopper" />
+</Prerequisites>
+<Results>
+<Item Amount="1.2" TypeId="Ingot" SubtypeId="Copper" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedLithiumOreToIngot</SubtypeId>
+</Id>
+<DisplayName>Lithium Paste</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedLithium" />
+</Prerequisites>
+<Results>
+<Item Amount="0.3" TypeId="Ingot" SubtypeId="Lithium" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedBauxiteOreToIngot</SubtypeId>
+</Id>
+<DisplayName>Aluminum Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedBauxite" />
+</Prerequisites>
+<Results>
+<Item Amount="0.9" TypeId="Ingot" SubtypeId="Aluminum" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedTitaniumOreToIngot</SubtypeId>
+</Id>
+<DisplayName>Titanium Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedTitanium" />
+</Prerequisites>
+<Results>
+<Item Amount="0.6" TypeId="Ingot" SubtypeId="Titanium" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedTantalumOreToIngot</SubtypeId>
+</Id>
+<DisplayName>Tantalum Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="CrushedTantalum" />
+</Prerequisites>
+<Results>
+<Item Amount="0.015" TypeId="Ingot" SubtypeId="Tantalum" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrushedNiterOreToIngot</SubtypeId>
+</Id>
+<DisplayName>Potassium Nitrate</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Magnesium" />
+</Prerequisites>
+<Results>
+<Item Amount="0.45" TypeId="Ingot" SubtypeId="Niter" />
+</Results>
+<BaseProductionTimeInSeconds>0.04</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

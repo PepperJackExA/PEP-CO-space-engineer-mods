@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>shangar3</SubtypeId>
+</Id>
+<DisplayName>HangarDoor 3x</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockRotor</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="250" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="HeavyMotor" Count="25" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="StructuralReinforcement" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>shangar3n</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>shangar4</SubtypeId>
+</Id>
+<DisplayName>HangarDoor 4x</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockRotor</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="300" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="HeavyMotor" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="StructuralReinforcement" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>shangar4n</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>shangar5</SubtypeId>
+</Id>
+<DisplayName>HangarDoor 5x</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockRotor</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="350" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="HeavyMotor" Count="75" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="StructuralReinforcement" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>shangar5n</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>shangar6</SubtypeId>
+</Id>
+<DisplayName>HangarDoor 6x</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockRotor</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="400" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="HeavyMotor" Count="100" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="StructuralReinforcement" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>shangar6n</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>shangar7</SubtypeId>
+</Id>
+<DisplayName>HangarDoor 7x</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockRotor</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="450" />
+<Component Subtype="Construction" Count="35" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="HeavyMotor" Count="125" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="StructuralReinforcement" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>shangar7n</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>shangar8</SubtypeId>
+</Id>
+<DisplayName>HangarDoor 8x</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockRotor</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="500" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="HeavyMotor" Count="150" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="StructuralReinforcement" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>shangar8n</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>shangar9</SubtypeId>
+</Id>
+<DisplayName>HangarDoor 9x</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockRotor</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="550" />
+<Component Subtype="Construction" Count="45" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="HeavyMotor" Count="175" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="StructuralReinforcement" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>shangar9n</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>shangar10</SubtypeId>
+</Id>
+<DisplayName>HangarDoor 10x</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockRotor</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="600" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="HeavyMotor" Count="200" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="StructuralReinforcement" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>shangar10n</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+</CubeBlocks>
+<BlockPositions></BlockPositions>
+</Definitions>
+ 

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefabs>
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="PD Barn (Weaver Family)" />
+<Name>99543743589710112</Name>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyModStorageComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_ModStorageComponent">
+<Value>CAAQABiAgBAiGVBsYW5ldGFyeSBEZXJlbGljdCBCIEJhcm4oADD///////////8BOhRCYXJuIChXZWF2ZXIgRmFtaWx5KUIOTUVTLVByZWZhYi0xLTFKAFUAAHpEWhsJ2/OFXFfnBcEhFfXfuDfNQcE5mzwsQ9VrHEFiGwnb84VcV+cFwSEV9d+4N81BwTmbPCxD1WscQWoKCJDS7+nyywEQBHIEU1BSVHgBgAEBiAEBkAEAmQEAAAAAAAAAAKgBAbABALoBGwmJiX6pyebgPyEu6E6fkL3ovzka1CND0XjWv8IBGwn8LkxjMwDrPyHUsXtbHp3bPzmmf+Ajn23UP8oBCgiwsPXw8ssBEATSAU4IABAAGAAgASgAMAE4AEAASABQAFgAYABoAXAAeACAAQCIAQCQAQCYAQCgAQCoAQCwAQC4AQDAAQDIAQDQAQDYAQDgAQDoAQDwAQD4AQHaAU4IABAAGAAgASgAMAE4AEAASABQAFgAYABoAXAAeACAAQCIAQCQAQCYAQCgAQGoAQGwAQG4AQHAAQHIAQHQAQDYAQDgAQHoAQDwAQD4AQHiARMyMDgxMDEwMTAyNDgwMDM5Mi0y6gETIEFiYW5kb25lZCBCYXJuIDVCMYACgIAQigIAkgIEU1BSVJgCloCAgICAgIAC</Value>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<CubeBlocks>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>8</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+<ProjectilesCount>0</ProjectilesCount>
+</Items>
+<Volume>0.4</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<Value>Basic Assembler - On/Off</Value>
+<Value>Connector - On/Off</Value>
+<Value>Connector - Switch lock</Value>
+<Value>Lights - On/Off</Value>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Volume>3</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_InventoryAggregate">
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+<Volume>2</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+<ComponentData>
+<TypeId>MyTimerComponent</TypeId>
+<Component xsi:type="MyObjectBuilder_TimerComponent">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+</Items>
+<Volume>15.625</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+<Items>
+<Name>[ Ismael Weaver ]---[ PDA ]</Name>
+</Items>
+<Volume>1</Volume>
+<Mass>9223372036854.775807</Mass>
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<ShowInInventory>false</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+<ShowInInventory>true</ShowInInventory>
+</CubeBlocks>
+<Name>Lights</Name>
+<Blocks>
+</Blocks>
+<Name>Share With All</Name>
+<Blocks>
+</Blocks>
+<DisplayName>PD Barn (Weaver Family)</DisplayName>
+</Prefab>
+</Prefabs>
+</Definitions>
+ 

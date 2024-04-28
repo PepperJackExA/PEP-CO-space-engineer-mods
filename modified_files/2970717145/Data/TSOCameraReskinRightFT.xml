@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+<Id>
+<TypeId>CameraBlock</TypeId>
+<SubtypeId>TSOCameraReskinRightFT</SubtypeId>
+</Id>
+<DisplayName>Camera Left Side View - Right Mounted Front Top</DisplayName>
+<Description>A Right Mounted Camera with a Left Side forward view</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>TSOCameraReskinRightFT</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00003</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

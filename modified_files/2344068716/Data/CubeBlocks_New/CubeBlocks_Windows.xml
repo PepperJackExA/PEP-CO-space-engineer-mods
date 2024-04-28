@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x2Slope</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Slope</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="16" />
+<Component Subtype="ArmorGlass" Count="40" />
+<Component Subtype="ArmorGlass" Count="15" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x2Slope</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x2Inv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Face Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="ArmorGlass" Count="30" />
+<Component Subtype="ArmorGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x2FaceInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x2Face</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Face</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="ArmorGlass" Count="30" />
+<Component Subtype="ArmorGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x2Face</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x2SideLeft</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Side Left</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="ArmorGlass" Count="20" />
+<Component Subtype="ArmorGlass" Count="6" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x2SideLeft</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x2SideLeftInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Side Left Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="ArmorGlass" Count="20" />
+<Component Subtype="ArmorGlass" Count="6" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x2SideLeftInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x2SideRight</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Side Right</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="ArmorGlass" Count="20" />
+<Component Subtype="ArmorGlass" Count="6" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x2SideRight</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x2SideRightInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Side Right Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="13" />
+<Component Subtype="ArmorGlass" Count="20" />
+<Component Subtype="ArmorGlass" Count="6" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x2SideRightInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x1Slope</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Slope</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="12" />
+<Component Subtype="ArmorGlass" Count="25" />
+<Component Subtype="ArmorGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x1Slope</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x1Face</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Face</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="11" />
+<Component Subtype="ArmorGlass" Count="16" />
+<Component Subtype="ArmorGlass" Count="8" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x1Face</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x1Side</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Side</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="9" />
+<Component Subtype="ArmorGlass" Count="12" />
+<Component Subtype="ArmorGlass" Count="5" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x1Side</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x1SideInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Side Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="9" />
+<Component Subtype="ArmorGlass" Count="12" />
+<Component Subtype="ArmorGlass" Count="5" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x1SideInv</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x1Inv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Face Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="11" />
+<Component Subtype="ArmorGlass" Count="16" />
+<Component Subtype="ArmorGlass" Count="8" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x1FaceInv</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x2Flat</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Flat</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="ArmorGlass" Count="40" />
+<Component Subtype="ArmorGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x2Flat</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x2FlatInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Flat Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="ArmorGlass" Count="35" />
+<Component Subtype="ArmorGlass" Count="15" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x2FlatInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x1Flat</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Flat</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="ArmorGlass" Count="15" />
+<Component Subtype="ArmorGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x1Flat</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow1x1FlatInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Flat Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="ArmorGlass" Count="15" />
+<Component Subtype="ArmorGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow1x1FlatInv</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow3x3Flat</SubtypeId>
+</Id>
+<DisplayName>Armored Window 3x3 Flat</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="40" />
+<Component Subtype="ArmorGlass" Count="160" />
+<Component Subtype="ArmorGlass" Count="36" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow3x3Flat</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow3x3FlatInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 3x3 Flat Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="40" />
+<Component Subtype="ArmorGlass" Count="160" />
+<Component Subtype="ArmorGlass" Count="36" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow3x3FlatInv</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow2x3Flat</SubtypeId>
+</Id>
+<DisplayName>Armored Window 2x3 Flat</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="25" />
+<Component Subtype="ArmorGlass" Count="115" />
+<Component Subtype="ArmorGlass" Count="25" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow2x3Flat</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorWindow2x3FlatInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 2x3 Flat Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="25" />
+<Component Subtype="ArmorGlass" Count="115" />
+<Component Subtype="ArmorGlass" Count="25" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow2x3FlatInv</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x2Slope</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Slope</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="2" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x2Slope</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x2Inv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Face Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="2" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x2FaceInv</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x2Face</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Face</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="2" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x2Face</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x2SideLeft</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Side Left</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="2" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x2SideLeft</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x2SideLeftInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Side Left Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="2" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x2SideLeftInv</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x2SideRight</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Side Right</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="2" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x2SideRight</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x2SideRightInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Side Right Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="2" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x2SideRightInv</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x1Slope</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Slope</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x1Slope</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x1Face</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Face</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x1Face</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x1Side</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Side</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x1Side</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x1SideInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Side Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x1SideInv</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x1Inv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Face Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x1FaceInv</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x2Flat</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Flat</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="2" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x2Flat</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x2FlatInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x2 Flat Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="2" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x2FlatInv</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x1Flat</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Flat</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x1Flat</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow1x1FlatInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 1x1 Flat Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+<Component Subtype="ArmorGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="1" />
+<BlockPairName>ArmorWindow1x1FlatInv</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow3x3Flat</SubtypeId>
+</Id>
+<DisplayName>Armored Window 3x3 Flat</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="3" />
+<Component Subtype="ArmorGlass" Count="9" />
+<Component Subtype="ArmorGlass" Count="3" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow3x3Flat</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow3x3FlatInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 3x3 Flat Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="3" />
+<Component Subtype="ArmorGlass" Count="9" />
+<Component Subtype="ArmorGlass" Count="3" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow3x3FlatInv</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow2x3Flat</SubtypeId>
+</Id>
+<DisplayName>Armored Window 2x3 Flat</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="ArmorGlass" Count="6" />
+<Component Subtype="ArmorGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow2x3Flat</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ArmorSmallWindow2x3FlatInv</SubtypeId>
+</Id>
+<DisplayName>Armored Window 2x3 Flat Inv</DisplayName>
+<Description>Made from reinforced transparent aluminum ceramic, for massively increased durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="ArmorGlass" Count="6" />
+<Component Subtype="ArmorGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="ArmorGlass" Index="0" />
+<BlockPairName>ArmorWindow2x3FlatInv</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

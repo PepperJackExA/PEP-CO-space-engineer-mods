@@ -1,0 +1,1682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>LargeWidePistonBase</SubtypeId>
+</Id>
+<DisplayName>Wide Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="200" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="LargeTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="80" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>WidePistonBase</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepLargeWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>LargeWidePistonBase</SubtypeId>
+</Id>
+<DisplayName>Wide Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="200" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="LargeTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="80" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedWidePistonBase</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepLargeWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>LargeShortPistonBase</SubtypeId>
+</Id>
+<DisplayName>Short Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ShortPistonBase</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepLargeWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>LargeShortPistonBase</SubtypeId>
+</Id>
+<DisplayName>Short Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedShortPistonBase</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepLargeWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>LargeShortWidePistonBase</SubtypeId>
+</Id>
+<DisplayName>Short Wide Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ShortWidePistonBase</BlockPairName>
+<BuildTimeSeconds>32</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepLargeWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>LargeShortWidePistonBase</SubtypeId>
+</Id>
+<DisplayName>Short Wide Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedShortWidePistonBase</BlockPairName>
+<BuildTimeSeconds>32</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepLargeWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>LargeShortSidePistonBase</SubtypeId>
+</Id>
+<DisplayName>Short Side Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ShortSidePistonBase</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>LargeShortSidePistonBase</SubtypeId>
+</Id>
+<DisplayName>Short Side Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedShortSidePistonBase</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>PistonTop</TypeId>
+<SubtypeId>LargeWidePistonTopOffset</SubtypeId>
+</Id>
+<DisplayName>Offset Wide Piston Top</DisplayName>
+<Description>Description_PistonTop</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="16" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>WidePistonTopOffset</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>PistonTop</TypeId>
+<SubtypeId>LargePistonTop</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PistonTop</DisplayName>
+<Description>Description_PistonTop</Description>
+<Public>true</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="LargeTube" Count="8" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>PistonTop</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>SmallWidePistonBase</SubtypeId>
+</Id>
+<DisplayName>Wide Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="16" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>WidePistonBase</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>SmallWidePistonBase</SubtypeId>
+</Id>
+<DisplayName>Wide Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="16" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedWidePistonBase</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>SmallShortPistonBase</SubtypeId>
+</Id>
+<DisplayName>Short Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ShortPistonBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>SmallShortPistonBase</SubtypeId>
+</Id>
+<DisplayName>Short Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedShortPistonBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>SmallShortWidePistonBase</SubtypeId>
+</Id>
+<DisplayName>ShortWide Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ShortWidePistonBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>SmallShortWidePistonBase</SubtypeId>
+</Id>
+<DisplayName>ShortWide Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedShortWidePistonBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>SmallShortSidePistonBase</SubtypeId>
+</Id>
+<DisplayName>Short Side Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ShortSidePistonBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>SmallShortSidePistonBase</SubtypeId>
+</Id>
+<DisplayName>Short Side Piston Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedShortSidePistonBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>PistonTop</TypeId>
+<SubtypeId>SmallWidePistonTopOffset</SubtypeId>
+</Id>
+<DisplayName>Offset Wide Piston Top</DisplayName>
+<Description>Description_PistonTop</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="LargeTube" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>WidePistonTopOffset</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>PistonTop</TypeId>
+<SubtypeId>SmallPistonTop</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PistonTop</DisplayName>
+<Description>Description_PistonTop</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>PistonTop</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallJunctionMotorStatorSmall</SubtypeId>
+</Id>
+<DisplayName>Advanced Rotor Junction</DisplayName>
+<Description>Description_AdvancedRotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>JunctionMotorStator</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E10</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallWideJunctionMotorStatorSmall</SubtypeId>
+</Id>
+<DisplayName>Advanced Wide Rotor Junction</DisplayName>
+<Description>Description_AdvancedRotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="9" />
+<Component Subtype="Computer" Count="9" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>WideJunctionMotorStator</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E10</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallRightMotorStatorSmall</SubtypeId>
+</Id>
+<DisplayName>Advanced Right Rotor</DisplayName>
+<Description>Description_AdvancedRotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="7" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="3" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>RightMotorStator</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E10</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallWideRightMotorStatorSmall</SubtypeId>
+</Id>
+<DisplayName>Advanced Wide Right Rotor</DisplayName>
+<Description>Description_AdvancedRotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="6" />
+<Component Subtype="Construction" Count="14" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>WideRightMotorStator</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E10</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallAxleMotorStatorSmall</SubtypeId>
+</Id>
+<DisplayName>Advanced Axle Rotor</DisplayName>
+<Description>Description_AdvancedRotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="7" />
+<Component Subtype="Computer" Count="6" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>AxleMotorStator</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E10</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallWideAxleMotorStatorSmall</SubtypeId>
+</Id>
+<DisplayName>Advanced Wide Axle Rotor</DisplayName>
+<Description>Description_AdvancedRotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="7" />
+<Component Subtype="Computer" Count="6" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>WideAxleMotorStator</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E10</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>MotorRotor</TypeId>
+<SubtypeId>SmallAxleMotorRotorSmall</SubtypeId>
+</Id>
+<DisplayName>Advanced Axle Rotor Head</DisplayName>
+<Description>Description_RotorPart</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SmallTube" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AxleMotorRotor</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>MotorRotor</TypeId>
+<SubtypeId>SmallWideAxleMotorRotorSmall</SubtypeId>
+</Id>
+<DisplayName>Advanced Wide Axle Rotor Head</DisplayName>
+<Description>Description_RotorPart</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SmallTube" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>WideAxleMotorRotor</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallWideHinge</SubtypeId>
+</Id>
+<DisplayName>Wide Hinge</DisplayName>
+<Description>Description_Hinge</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>WideHinge</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<MaxForceMagnitude>1E10</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRotor</PrimarySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallLongHinge</SubtypeId>
+</Id>
+<DisplayName>Long Hinge</DisplayName>
+<Description>Description_Hinge</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LongHinge</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<MaxForceMagnitude>1E10</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRotor</PrimarySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallCornerHinge</SubtypeId>
+</Id>
+<DisplayName>Corner Hinge</DisplayName>
+<Description>Description_Hinge</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>CornerHinge</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<MaxForceMagnitude>1E10</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRotor</PrimarySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallCenterHinge</SubtypeId>
+</Id>
+<DisplayName>Center Hinge</DisplayName>
+<Description>Description_Hinge</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>CenterHinge</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<MaxForceMagnitude>1E10</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRotor</PrimarySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorStator</TypeId>
+<SubtypeId>SuspensionHingeBase</SubtypeId>
+</Id>
+<DisplayName>Suspension Hinge Base</DisplayName>
+<Description>Description_Hinge</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>SuspensionHingeBase</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<MaxForceMagnitude>1E7</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRotor</PrimarySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorStator</TypeId>
+<SubtypeId>SuspensionHingeBaseOffsetA</SubtypeId>
+</Id>
+<DisplayName>Suspension Hinge Base Offset A</DisplayName>
+<Description>Description_Hinge</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>SuspensionHingeBaseOffsetA</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<MaxForceMagnitude>1E7</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRotor</PrimarySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorStator</TypeId>
+<SubtypeId>SuspensionHingeBaseOffsetB</SubtypeId>
+</Id>
+<DisplayName>Suspension Hinge Base Offset B</DisplayName>
+<Description>Description_Hinge</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>SuspensionHingeBaseOffsetB</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<MaxForceMagnitude>1E7</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRotor</PrimarySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorStator</TypeId>
+<SubtypeId>SuspensionHingeBaseOffsetAInv</SubtypeId>
+</Id>
+<DisplayName>Suspension Hinge Base Offset A Inv</DisplayName>
+<Description>Description_Hinge</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>SuspensionHingeBaseOffsetAInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<MaxForceMagnitude>1E7</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRotor</PrimarySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorStator</TypeId>
+<SubtypeId>SuspensionHingeBaseOffsetBInv</SubtypeId>
+</Id>
+<DisplayName>Suspension Hinge Base Offset B Inv</DisplayName>
+<Description>Description_Hinge</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>SuspensionHingeBaseOffsetBInv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<MaxForceMagnitude>1E7</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRotor</PrimarySound>
+<PCU>100</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>MotorRotor</TypeId>
+<SubtypeId>SuspensionHingeTop</SubtypeId>
+</Id>
+<DisplayName>Suspension Hinge Head</DisplayName>
+<Description>Description_HingeHead</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>SuspensionHingeTop</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>MotorAdvancedRotor</TypeId>
+<SubtypeId>SmallSlimHingeHead</SubtypeId>
+</Id>
+<DisplayName>Custom Small Hinge Head</DisplayName>
+<Description>Description_HingeHead</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>SmallSlimHingeHead</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorStator</TypeId>
+<SubtypeId>TrackRailHingeBase</SubtypeId>
+</Id>
+<DisplayName>Tank Track Base</DisplayName>
+<Description>Description_Rotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="16" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrackRailHingeBase</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0</RequiredPowerInput>
+<MaxForceMagnitude>1E6</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRotor</PrimarySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>MotorRotor</TypeId>
+<SubtypeId>TrackRailHingeHead</SubtypeId>
+</Id>
+<DisplayName>Tank Track Part</DisplayName>
+<Description>Description_RotorPart</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrackRailHingeHead</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SpaceBallDefinition">
+<Id>
+<TypeId>SpaceBall</TypeId>
+<SubtypeId>TrackWheel1x1</SubtypeId>
+</Id>
+<DisplayName>1x1 Track Wheel</DisplayName>
+<Description>Description_RotorPart</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="Canvas" Count="8" />
+<Component Subtype="SmallTube" Count="3" />
+<Component Subtype="InteriorPlate" Count="32" />
+<Component Subtype="SteelPlate" Count="16" />
+<Component Subtype="Construction" Count="12" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrackWheel1x1</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<MaxVirtualMass>0</MaxVirtualMass>
+<RequiredPowerInput>0.0</RequiredPowerInput>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Wheel</PhysicalMaterial>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SpaceBallDefinition">
+<Id>
+<TypeId>SpaceBall</TypeId>
+<SubtypeId>TrackWheel2x1</SubtypeId>
+</Id>
+<DisplayName>2x1 Track Wheel</DisplayName>
+<Description>Description_RotorPart</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="Canvas" Count="12" />
+<Component Subtype="SmallTube" Count="6" />
+<Component Subtype="InteriorPlate" Count="64" />
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="12" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrackWheel2x1</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<MaxVirtualMass>0</MaxVirtualMass>
+<RequiredPowerInput>0.0</RequiredPowerInput>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Wheel</PhysicalMaterial>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SpaceBallDefinition">
+<Id>
+<TypeId>SpaceBall</TypeId>
+<SubtypeId>TrackWheel3x1</SubtypeId>
+</Id>
+<DisplayName>3x1 Track Wheel</DisplayName>
+<Description>Description_RotorPart</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="Canvas" Count="16" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="InteriorPlate" Count="96" />
+<Component Subtype="SteelPlate" Count="24" />
+<Component Subtype="Construction" Count="12" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrackWheel3x1</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<MaxVirtualMass>0</MaxVirtualMass>
+<RequiredPowerInput>0.0</RequiredPowerInput>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Wheel</PhysicalMaterial>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SpaceBallDefinition">
+<Id>
+<TypeId>SpaceBall</TypeId>
+<SubtypeId>TrackWheel4x1</SubtypeId>
+</Id>
+<DisplayName>4x1 Track Wheel</DisplayName>
+<Description>Description_RotorPart</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="Canvas" Count="24" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="InteriorPlate" Count="128" />
+<Component Subtype="SteelPlate" Count="28" />
+<Component Subtype="Construction" Count="12" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrackWheel4x1</BlockPairName>
+<BuildTimeSeconds>18</BuildTimeSeconds>
+<MaxVirtualMass>0</MaxVirtualMass>
+<RequiredPowerInput>0.0</RequiredPowerInput>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Wheel</PhysicalMaterial>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SpaceBallDefinition">
+<Id>
+<TypeId>SpaceBall</TypeId>
+<SubtypeId>TrackWheel5x1</SubtypeId>
+</Id>
+<DisplayName>5x1 Track Wheel</DisplayName>
+<Description>Description_RotorPart</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="Canvas" Count="36" />
+<Component Subtype="LargeTube" Count="6" />
+<Component Subtype="SmallTube" Count="6" />
+<Component Subtype="InteriorPlate" Count="160" />
+<Component Subtype="SteelPlate" Count="32" />
+<Component Subtype="Construction" Count="12" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrackWheel5x1</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<MaxVirtualMass>0</MaxVirtualMass>
+<RequiredPowerInput>0.0</RequiredPowerInput>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Wheel</PhysicalMaterial>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>SuspensionDamperBase</SubtypeId>
+</Id>
+<DisplayName>Suspension Damper</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="16" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="LargeTube" Count="1" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>SuspensionDamperBase</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<MaxForceMagnitude>3.402823466E+19</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Wheel</TypeId>
+<SubtypeId>SuspensionDamperTop</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>Suspension Damper Piston Rod</DisplayName>
+<Description>Description_Wheel</Description>
+<CubeSize>Small</CubeSize>
+<PhysicalMaterial>Wheel</PhysicalMaterial>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="SmallTube" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>SuspensionDamperTop</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorSuspensionDefinition">
+<Id>
+<TypeId>MotorSuspension</TypeId>
+<SubtypeId>HeavyDutySuspensionDamperBase</SubtypeId>
+</Id>
+<DisplayName>Heavy Duty Suspension Damper</DisplayName>
+<Description>Description_Suspension</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="64" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="LargeTube" Count="4" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>HeavyDutySuspensionDamperBase</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.1</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Wheel</TypeId>
+<SubtypeId>HeavyDutySuspensionDamperTop</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>Heavy Duty Suspension Damper Piston Rod</DisplayName>
+<Description>Description_Wheel</Description>
+<CubeSize>Small</CubeSize>
+<PhysicalMaterial>Wheel</PhysicalMaterial>
+<Components>
+<Component Subtype="SteelPlate" Count="16" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="LargeTube" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>HeavyDutySuspensionDamperTop</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>HeavyDutySuspensionSpringBase</SubtypeId>
+</Id>
+<DisplayName>Heavy Duty Suspension Spring Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedHeavyDutySuspensionSpringBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.001</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>HeavyDutySuspensionSpringBase</SubtypeId>
+</Id>
+<DisplayName>Heavy Duty Suspension Spring Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>HeavyDutySuspensionSpringBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.001</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>PistonTop</TypeId>
+<SubtypeId>HeavyDutySuspensionSpringTop</SubtypeId>
+</Id>
+<DisplayName>Heavy Duty Suspension Spring Top</DisplayName>
+<Description>Description_PistonTop</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="LargeTube" Count="2" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>HeavyDutySuspensionSpringTop</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>SideHardpointBase</SubtypeId>
+</Id>
+<DisplayName>Side Hardpoint Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedSideHardpointBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.001</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>SideHardpointBase</SubtypeId>
+</Id>
+<DisplayName>Side Hardpoint Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SideHardpointBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.001</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>PistonTop</TypeId>
+<SubtypeId>SideHardpointTop</SubtypeId>
+</Id>
+<DisplayName>Side Hardpoint Top</DisplayName>
+<Description>Description_PistonTop</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>SideHardpointTop</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>HardpointBase</SubtypeId>
+</Id>
+<DisplayName>Hardpoint Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedHardpointBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.001</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PistonBaseDefinition">
+<Id>
+<TypeId>PistonBase</TypeId>
+<SubtypeId>HardpointBase</SubtypeId>
+</Id>
+<DisplayName>Hardpoint Base</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>HardpointBase</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.001</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>PistonTop</TypeId>
+<SubtypeId>HardpointTop</SubtypeId>
+</Id>
+<DisplayName>Hardpoint Top</DisplayName>
+<Description>Description_PistonTop</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>HardpointTop</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorStator</TypeId>
+<SubtypeId>LandingGearMotorLeft</SubtypeId>
+</Id>
+<DisplayName>Landing Gear Rotor Left</DisplayName>
+<Description>Description_Rotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>LandingGearMotorLeft</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorStator</TypeId>
+<SubtypeId>LandingGearMotorRight</SubtypeId>
+</Id>
+<DisplayName>Landing Gear Rotor Right</DisplayName>
+<Description>Description_Rotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>LandingGearMotorRight</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorStator</TypeId>
+<SubtypeId>InvertedLandingGearMotorLeft</SubtypeId>
+</Id>
+<DisplayName>Inverted Landing Gear Rotor Left</DisplayName>
+<Description>Description_Rotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>InvertedLandingGearMotorLeft</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorStator</TypeId>
+<SubtypeId>InvertedLandingGearMotorRight</SubtypeId>
+</Id>
+<DisplayName>Inverted Landing Gear Rotor Right</DisplayName>
+<Description>Description_Rotor</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>InvertedLandingGearMotorRight</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>MotorRotor</TypeId>
+<SubtypeId>RealLandingGearWheel</SubtypeId>
+</Id>
+<DisplayName>Landing Gear Primary Wheel</DisplayName>
+<Description>Description_RotorPart</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="16" />
+<Component Subtype="SteelPlate" Count="6" />
+<Component Subtype="Canvas" Count="16" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>RealLandingGearWheel</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+<PhysicalMaterial>Wheel</PhysicalMaterial>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SpaceBallDefinition">
+<Id>
+<TypeId>SpaceBall</TypeId>
+<SubtypeId>LandingGearWheel</SubtypeId>
+</Id>
+<DisplayName>Landing Gear Secondary Wheel</DisplayName>
+<Description>Description_Wheel</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="Canvas" Count="16" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="16" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LandingGearWheel</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<MaxVirtualMass>0</MaxVirtualMass>
+<RequiredPowerInput>0.0</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>1</PCU>
+<PhysicalMaterial>Wheel</PhysicalMaterial>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

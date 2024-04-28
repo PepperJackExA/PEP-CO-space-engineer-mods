@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Ammos>
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+<Id>
+<TypeId>AmmoDefinition</TypeId>
+<SubtypeId>155mmAPShell</SubtypeId>
+</Id>
+<BasicProperties>
+<DesiredSpeed>1000</DesiredSpeed>
+<SpeedVariance>0</SpeedVariance>
+<MaxTrajectory>2000</MaxTrajectory>
+<BackkickForce>50</BackkickForce>
+<PhysicalMaterial>RifleBullet</PhysicalMaterial>
+</BasicProperties>
+<ProjectileProperties>
+<ProjectileTrailColor x="1" y="0.1" z="0.1" />
+<ProjectileTrailScale>1</ProjectileTrailScale>
+<ProjectileHitImpulse>100</ProjectileHitImpulse>
+<ProjectileMassDamage>1</ProjectileMassDamage>
+<ProjectileHealthDamage>500</ProjectileHealthDamage>
+</ProjectileProperties>
+</Ammo>
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+<Id>
+<TypeId>AmmoDefinition</TypeId>
+<SubtypeId>155mmDUAPShell</SubtypeId>
+</Id>
+<BasicProperties>
+<DesiredSpeed>1000</DesiredSpeed>
+<SpeedVariance>0</SpeedVariance>
+<MaxTrajectory>2000</MaxTrajectory>
+<BackkickForce>50</BackkickForce>
+<PhysicalMaterial>RifleBullet</PhysicalMaterial>
+</BasicProperties>
+<ProjectileProperties>
+<ProjectileTrailColor x="1" y="0.1" z="0.1" />
+<ProjectileTrailScale>1</ProjectileTrailScale>
+<ProjectileHitImpulse>100</ProjectileHitImpulse>
+<ProjectileMassDamage>1</ProjectileMassDamage>
+<ProjectileHealthDamage>500</ProjectileHealthDamage>
+</ProjectileProperties>
+</Ammo>
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+<Id>
+<TypeId>AmmoDefinition</TypeId>
+<SubtypeId>155mmHEShell</SubtypeId>
+</Id>
+<BasicProperties>
+<DesiredSpeed>1000</DesiredSpeed>
+<SpeedVariance>0</SpeedVariance>
+<MaxTrajectory>2000</MaxTrajectory>
+<BackkickForce>50</BackkickForce>
+<PhysicalMaterial>RifleBullet</PhysicalMaterial>
+</BasicProperties>
+<ProjectileProperties>
+<ProjectileTrailColor x="1" y="0.1" z="0.1" />
+<ProjectileTrailScale>1</ProjectileTrailScale>
+<ProjectileHitImpulse>100</ProjectileHitImpulse>
+<ProjectileMassDamage>1</ProjectileMassDamage>
+<ProjectileHealthDamage>500</ProjectileHealthDamage>
+</ProjectileProperties>
+</Ammo>
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+<Id>
+<TypeId>AmmoDefinition</TypeId>
+<SubtypeId>305mmAPShell</SubtypeId>
+</Id>
+<BasicProperties>
+<DesiredSpeed>1750</DesiredSpeed>
+<SpeedVariance>0</SpeedVariance>
+<MaxTrajectory>3500</MaxTrajectory>
+<BackkickForce>150</BackkickForce>
+<PhysicalMaterial>RifleBullet</PhysicalMaterial>
+</BasicProperties>
+<ProjectileProperties>
+<ProjectileTrailColor x="1" y="0.1" z="0.1" />
+<ProjectileTrailScale>3</ProjectileTrailScale>
+<ProjectileHitImpulse>500</ProjectileHitImpulse>
+<ProjectileMassDamage>1</ProjectileMassDamage>
+<ProjectileHealthDamage>500</ProjectileHealthDamage>
+</ProjectileProperties>
+</Ammo>
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+<Id>
+<TypeId>AmmoDefinition</TypeId>
+<SubtypeId>305mmDUAPShell</SubtypeId>
+</Id>
+<BasicProperties>
+<DesiredSpeed>1750</DesiredSpeed>
+<SpeedVariance>0</SpeedVariance>
+<MaxTrajectory>3500</MaxTrajectory>
+<BackkickForce>150</BackkickForce>
+<PhysicalMaterial>RifleBullet</PhysicalMaterial>
+</BasicProperties>
+<ProjectileProperties>
+<ProjectileTrailColor x="1" y="0.1" z="0.1" />
+<ProjectileTrailScale>3</ProjectileTrailScale>
+<ProjectileHitImpulse>500</ProjectileHitImpulse>
+<ProjectileMassDamage>1</ProjectileMassDamage>
+<ProjectileHealthDamage>500</ProjectileHealthDamage>
+</ProjectileProperties>
+</Ammo>
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+<Id>
+<TypeId>AmmoDefinition</TypeId>
+<SubtypeId>305mmHEShell</SubtypeId>
+</Id>
+<BasicProperties>
+<DesiredSpeed>1750</DesiredSpeed>
+<SpeedVariance>0</SpeedVariance>
+<MaxTrajectory>3500</MaxTrajectory>
+<BackkickForce>150</BackkickForce>
+<PhysicalMaterial>RifleBullet</PhysicalMaterial>
+</BasicProperties>
+<ProjectileProperties>
+<ProjectileTrailColor x="1" y="0.1" z="0.1" />
+<ProjectileTrailScale>3</ProjectileTrailScale>
+<ProjectileHitImpulse>500</ProjectileHitImpulse>
+<ProjectileMassDamage>1</ProjectileMassDamage>
+<ProjectileHealthDamage>500</ProjectileHealthDamage>
+</ProjectileProperties>
+</Ammo>
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+<Id>
+<TypeId>AmmoDefinition</TypeId>
+<SubtypeId>APCoilgunShell</SubtypeId>
+</Id>
+<BasicProperties>
+<DesiredSpeed>5000</DesiredSpeed>
+<SpeedVariance>0</SpeedVariance>
+<MaxTrajectory>3500</MaxTrajectory>
+<BackkickForce>150</BackkickForce>
+<PhysicalMaterial>RifleBullet</PhysicalMaterial>
+</BasicProperties>
+<ProjectileProperties>
+<ProjectileTrailColor x="1" y="0.1" z="0.1" />
+<ProjectileTrailScale>3</ProjectileTrailScale>
+<ProjectileHitImpulse>500</ProjectileHitImpulse>
+<ProjectileMassDamage>1</ProjectileMassDamage>
+<ProjectileHealthDamage>500</ProjectileHealthDamage>
+</ProjectileProperties>
+</Ammo>
+<Ammo xsi:type="MyObjectBuilder_ProjectileAmmoDefinition">
+<Id>
+<TypeId>AmmoDefinition</TypeId>
+<SubtypeId>DUAPCoilgunShell</SubtypeId>
+</Id>
+<BasicProperties>
+<DesiredSpeed>5000</DesiredSpeed>
+<SpeedVariance>0</SpeedVariance>
+<MaxTrajectory>3500</MaxTrajectory>
+<BackkickForce>150</BackkickForce>
+<PhysicalMaterial>RifleBullet</PhysicalMaterial>
+</BasicProperties>
+<ProjectileProperties>
+<ProjectileTrailColor x="1" y="0.1" z="0.1" />
+<ProjectileTrailScale>3</ProjectileTrailScale>
+<ProjectileHitImpulse>500</ProjectileHitImpulse>
+<ProjectileMassDamage>1</ProjectileMassDamage>
+<ProjectileHealthDamage>500</ProjectileHealthDamage>
+</ProjectileProperties>
+</Ammo>
+</Ammos>
+</Definitions>
+ 

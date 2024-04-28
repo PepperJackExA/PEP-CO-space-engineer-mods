@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="NextGenCargoPadGroup" />
+<DisplayName>NextGen Storage Cargo Pad</DisplayName>
+<Description>Blocks from NextGen Storage mod</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="NextGenLarge_LargeCargoPad" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="NextGen_Cargo_Container_Stack" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="NextGenCargoContainerGroup" />
+<DisplayName>NextGen Storage Cargo Container</DisplayName>
+<Description>Blocks from NextGen Storage mod</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="NextGen_Cargo_Container" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="NextGen_Small_Cargo_Container" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="NextGen_Cargo_Crate" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="NextGen_Small_Cargo_Crate" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="NextGenFrightBoxGroup" />
+<DisplayName>NextGen Storage Freight Box</DisplayName>
+<Description>Blocks from NextGen Storage mod</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="NextGen_Large_FreightContainer" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="NextGenTanksGroup" />
+<DisplayName>NextGen tanks</DisplayName>
+<Description>Blocks from NextGen Storage mod</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="NextGen_Small_LargeOxyegenGasTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="NextGen_Small_LargeHydrogenGasTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="NextGen_Small_SmallOxyegenGasTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="NextGen_Small_SmallHydrogenGasTank" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

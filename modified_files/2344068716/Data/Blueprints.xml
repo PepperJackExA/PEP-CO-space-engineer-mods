@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Heat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Oxygen</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Heat" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Stone" />
+</Results>
+<BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>IceToDeuterium</SubtypeId>
+</Id>
+<DisplayName>Deuterium</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>FuelOilToFuels</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Oxygen</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="FuelOil" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

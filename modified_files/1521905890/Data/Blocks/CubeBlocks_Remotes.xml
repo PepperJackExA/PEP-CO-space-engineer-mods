@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_RemoteControlDefinition">
+<Id>
+<TypeId>RemoteControl</TypeId>
+<SubtypeId>RivalAIRemoteControlLarge</SubtypeId>
+</Id>
+<DisplayName>AI Control Module</DisplayName>
+<Public>false</Public>
+<Description>Description_RemoteControl</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>RivalAIRemoteControl</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<EnableFirstPerson>false</EnableFirstPerson>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RemoteControlDefinition">
+<Id>
+<TypeId>RemoteControl</TypeId>
+<SubtypeId>RivalAIRemoteControlSmall</SubtypeId>
+</Id>
+<DisplayName>AI Control Module</DisplayName>
+<Public>false</Public>
+<Description>Description_RemoteControl</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>RivalAIRemoteControl</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<EnableFirstPerson>false</EnableFirstPerson>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

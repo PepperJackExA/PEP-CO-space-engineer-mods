@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>SI_Torpedo_turret</SubtypeId>
+</Id>
+<DisplayName>SI_Torpedo_turret</DisplayName>
+<Description>SI_Torpedo_turret</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="200" />
+<Component Subtype="Construction" Count="200" />
+<Component Subtype="MetalGrid" Count="120" />
+<Component Subtype="LargeTube" Count="100" />
+<Component Subtype="Motor" Count="100" />
+<Component Subtype="Computer" Count="40" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="SteelPlate" Count="600" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SI_Torpedo_turret</BlockPairName>
+<BuildTimeSeconds>120</BuildTimeSeconds>
+<IdleRotation>false</IdleRotation>
+<InventoryMaxVolume>0.384</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-15</MinElevationDegrees>
+<MaxElevationDegrees>45</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>500</PCU>
+<IsAirTight>true</IsAirTight>
+<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+<string>Weapons</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

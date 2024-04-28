@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+<Id>
+<TypeId>ReflectorLight</TypeId>
+<SubtypeId>OffsetSpotlight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffsetSpotlight</DisplayName>
+<Description>Description_OffsetLight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>OffsetSpotlight</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

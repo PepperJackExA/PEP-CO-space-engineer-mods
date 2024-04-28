@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Emergency</SubtypeId>
+</Id>
+<DisplayName>Emergency</DisplayName>
+<Description>Emergency</Description>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="Consumables" BlueprintSubtypeId="SparklingWater" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="SparklingWater" />
+<Entry Class="Emergency" BlueprintSubtypeId="SparklingWater" />
+<Entry Class="Emergency" BlueprintSubtypeId="Emergency_Ration" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Assembler/Emergency_Foodproduction" />
+</BlueprintClassEntries>
+</Definitions>
+ 

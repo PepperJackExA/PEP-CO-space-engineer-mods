@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>GraphiteOreToIngot</SubtypeId>
+</Id>
+<DisplayName>Carbon Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ore" SubtypeId="Graphite" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CarbonSilicateLacePlate</SubtypeId>
+</Id>
+<DisplayName>Carbon-Silicate Lace Plate</DisplayName>
+<Prerequisites>
+<Item Amount="24" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="24" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="15" TypeId="Ingot" SubtypeId="Carbon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

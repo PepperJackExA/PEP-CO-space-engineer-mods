@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncher</TypeId>
+<SubtypeId>SI_Big_Boy</SubtypeId>
+</Id>
+<DisplayName>The Bye Bye Cannon</DisplayName>
+<Description>Damn she thicc  "[Principality of Zeon EF] Esryn"</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="720" />
+<Component Subtype="Construction" Count="400" />
+<Component Subtype="MetalGrid" Count="1000" />
+<Component Subtype="LargeTube" Count="250" />
+<Component Subtype="Motor" Count="150" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="SteelPlate" Count="720" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SI_Big_Boy</BlockPairName>
+<BuildTimeSeconds>600</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>8</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>1500</PCU>
+<string>Weapons</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

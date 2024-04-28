@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Id>
+<TypeId>WeatherEffectDefinition</TypeId>
+<SubtypeId>ExampleWeather</SubtypeId>	Name used to set weather EX: /weather ExampleWeather
+</Id>
+<DisplayName>Example</DisplayName>	Name shown on LCD Panel Script
+<AmbientSound>WM_SnowLight</AmbientSound>	Sound of weather
+<Sound>WM_Lightning</Sound>				   What the lightning soumds like
+<ExplosionRadius>1</ExplosionRadius>		Size of explosion in meters
+<Id>
+<TypeId>WeatherEffectDefinition</TypeId>
+<SubtypeId>AlienRainLight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_TSS_Weather_Rain</DisplayName>
+<Public>true</Public>
+<AmbientSound>WM_RainLight</AmbientSound>
+<Id>
+<TypeId>WeatherEffectDefinition</TypeId>
+<SubtypeId>AshRain</SubtypeId>
+</Id>
+<DisplayName>DisplayName_TSS_Weather_Rain</DisplayName>
+<Public>true</Public>
+<AmbientSound>WM_RainHeavy</AmbientSound>
+<Sound>WM_Lightning</Sound>
+<ExplosionRadius>3</ExplosionRadius>
+</Definitions>
+ 

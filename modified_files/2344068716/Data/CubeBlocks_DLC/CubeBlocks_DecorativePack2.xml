@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_JukeboxDefinition">
+<Id>
+<TypeId>Jukebox</TypeId>
+<SubtypeId>Jukebox</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Jukebox</DisplayName>
+<Description>Description_Jukebox</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PCU>25</PCU>
+<RequiredPowerInput>0.02</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+<Id>
+<TypeId>ReflectorLight</TypeId>
+<SubtypeId>RotatingLightLarge</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_RotatingLight</DisplayName>
+<Description>Description_RotatingLight</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Lightbulb" Count="2" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Lightbulb" Index="0" />
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BlockPairName>RotatingLight</BlockPairName>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+<Id>
+<TypeId>ReflectorLight</TypeId>
+<SubtypeId>RotatingLightSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_RotatingLight</DisplayName>
+<Description>Description_RotatingLight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Lightbulb" Count="2" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Lightbulb" Index="0" />
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BlockPairName>RotatingLight</BlockPairName>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

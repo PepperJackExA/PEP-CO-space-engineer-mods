@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ShipWelderDefinition">
+<Id>
+<TypeId>ShipWelder</TypeId>
+<SubtypeId>Large_MCRN_Welder</SubtypeId>
+</Id>
+<DisplayName>MCRN Field Welder</DisplayName>
+<Description>A welder with expanded range developed by the MCRN to help print large cruiser class ships. Model by Akiad.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="MCRNComponent" Count="5"/>
+<Component Subtype="Construction" Count="32"/>
+<Component Subtype="LargeTube" Count="3"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="Computer" Count="2"/>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SteelPlate" Count="35"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>MCRN_Welder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>270</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<Speed>2</Speed>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipWelderDefinition">
+<Id>
+<TypeId>ShipWelder</TypeId>
+<SubtypeId>Small_MCRN_Welder</SubtypeId>
+</Id>
+<DisplayName>Small MCRN Field Welder</DisplayName>
+<Description>A welder with expanded range developed by the MCRN to help print large cruiser class ships. Model by Akiad.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="MCRNComponent" Count="1"/>
+<Component Subtype="Construction" Count="23"/>
+<Component Subtype="SmallTube" Count="9"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="Computer" Count="3"/>
+<Component Subtype="Construction" Count="3"/>
+<Component Subtype="SteelPlate" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<BlockPairName>MCRN_Welder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>18</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<IsAirTight>false</IsAirTight>
+<Speed>2</Speed>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipWelderDefinition">
+<Id>
+<TypeId>ShipWelder</TypeId>
+<SubtypeId>Large_UNN_Welder</SubtypeId>
+</Id>
+<DisplayName>UNN Deep Welder</DisplayName>
+<Description>An advanced distance welder developed by Bush Naval Shipyards on Luna mainly used for repairing damage from railgun rounds. Model by Akiad.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="UNNComponent" Count="5"/>
+<Component Subtype="Construction" Count="32"/>
+<Component Subtype="LargeTube" Count="3"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="StructuralReinforcement" Count="10" />
+<Component Subtype="Computer" Count="2"/>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SteelPlate" Count="35"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>UNN_Welder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>270</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipWelderDefinition">
+<Id>
+<TypeId>ShipWelder</TypeId>
+<SubtypeId>Small_UNN_Welder</SubtypeId>
+</Id>
+<DisplayName>Small UNN Deep Welder</DisplayName>
+<Description>An advanced distance welder developed by Bush Naval Shipyards on Luna mainly used for repairing damage from railgun rounds. Model by Akiad.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="UNNComponent" Count="1"/>
+<Component Subtype="Construction" Count="23"/>
+<Component Subtype="SmallTube" Count="9"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="StructuralReinforcement" Count="2" />
+<Component Subtype="Computer" Count="3"/>
+<Component Subtype="Construction" Count="3"/>
+<Component Subtype="SteelPlate" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>UNN_Welder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>18</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<IsAirTight>false</IsAirTight>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Large_UNN_Welder_ToolCore</SubtypeId>
+</Id>
+<DisplayName>UNN Deep Welder ToolCore</DisplayName>
+<Description>An advanced distance welder developed by Bush Naval Shipyards on Luna mainly used for repairing damage from railgun rounds. Model by Akiad.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="UNNComponent" Count="5"/>
+<Component Subtype="Construction" Count="32"/>
+<Component Subtype="LargeTube" Count="3"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="StructuralReinforcement" Count="10" />
+<Component Subtype="Computer" Count="2"/>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SteelPlate" Count="35"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>UNN_WelderToolCore</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>270</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Large_MCRN_Welder_ToolCore</SubtypeId>
+</Id>
+<DisplayName>MCRN Field Welder ToolCore</DisplayName>
+<Description>A welder with expanded range developed by the MCRN to help print large cruiser class ships. Model by Akiad.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="MCRNComponent" Count="5"/>
+<Component Subtype="Construction" Count="32"/>
+<Component Subtype="LargeTube" Count="3"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="Computer" Count="2"/>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SteelPlate" Count="35"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>MCRN_WelderToolCore</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>270</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<Speed>2</Speed>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">
+<Id>
+<TypeId>Drill</TypeId>
+<SubtypeId>Small_UNN_Drill_Base</SubtypeId>
+</Id>
+<DisplayName>Small Inner Tech Drill</DisplayName>
+<Description>An advanced drill developed by Anderson-Hyosung Cooperative Industries Group from Earth. Model by Akiad.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="InnerComponent" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="LargeTube" Count="11" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Computer" Count="6" />
+<Component Subtype="SteelPlate" Count="160" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>UNN_Drill_Base</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>ToolShipDrillIdle</PrimarySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>190</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">
+<Id>
+<TypeId>Drill</TypeId>
+<SubtypeId>Large_UNN_Drill_Base</SubtypeId>
+</Id>
+<DisplayName>Inner Tech Drill</DisplayName>
+<Description>An advanced drill developed by Anderson-Hyosung Cooperative Industries Group from Earth. Model by Akiad.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="120" />
+<Component Subtype="InnerComponent" Count="20" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="22" />
+<Component Subtype="Motor" Count="15" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="SteelPlate" Count="280" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>UNN_Drill_Base</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>ToolShipDrillIdle</PrimarySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>190</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>LargeProductivityModule_Inner</SubtypeId>
+</Id>
+<DisplayName>Upgraded Inner Tech Speed Module</DisplayName>
+<Description>Advanced algorithms from the inner planet speed up industrial production.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="InnerComponent" Count="10" />
+<Component Subtype="StructuralReinforcement" Count="40" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="Computer" Count="90" />
+<Component Subtype="Motor" Count="60" />
+<Component Subtype="SteelPlate" Count="160" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ProductivityModule_Inner</BlockPairName>
+<PrimarySound>BlockModuleProductivity</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>LargeEffectivenessModule_Inner</SubtypeId>
+</Id>
+<DisplayName>Upgraded Inner Tech Yield Module</DisplayName>
+<Description>Advanced yield technology from the inner planets.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="InnerComponent" Count="10" />
+<Component Subtype="StructuralReinforcement" Count="40" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="SmallTube" Count="30" />
+<Component Subtype="Superconductor" Count="80" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="SteelPlate" Count="160" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>EffectivenessModule_Inner</BlockPairName>
+<PrimarySound>BlockModuleEffectiveness</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>LargeEnergyModule_Inner</SubtypeId>
+</Id>
+<DisplayName>Upgraded Inner Tech Power Module</DisplayName>
+<Description>Advanced power reduction technology from the inner planets.</Description>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="InnerComponent" Count="10" />
+<Component Subtype="StructuralReinforcement" Count="40" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="PowerCell" Count="40" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="SteelPlate" Count="160" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>EnergyModule_Inner</BlockPairName>
+<PrimarySound>BlockModuleEfficiency</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Inner Tech</DisplayName>
+<Name>InnerTechBlocks</Name>
+<ItemIds>
+<string>Large_MCRN_Welder</string>
+<string>Small_MCRN_Welder</string>
+<string>Large_UNN_Welder</string>
+<string>Small_UNN_Welder</string>
+<string>Large_UNN_Drill_Base</string>
+<string>Small_UNN_Drill_Base</string>
+<string>LargeProductivityModule_Inner</string>
+<string>LargeEffectivenessModule_Inner</string>
+<string>LargeEnergyModule_Inner</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ShipTools</DisplayName>
+<Name>Inner Tech Blocks</Name>
+<SearchBlocks>false</SearchBlocks>
+<IsToolCategory>true</IsToolCategory>
+<ItemIds>
+<string>Large_MCRN_Welder</string>
+<string>Small_MCRN_Welder</string>
+<string>Large_UNN_Welder</string>
+<string>Small_UNN_Welder</string>
+<string>Large_UNN_Drill_Base</string>
+<string>Small_UNN_Drill_Base</string>
+<string>LargeProductivityModule_Inner</string>
+<string>LargeEffectivenessModule_Inner</string>
+<string>LargeEnergyModule_Inner</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

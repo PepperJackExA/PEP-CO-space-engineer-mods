@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>ClangCola</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_ClangCola</DisplayName>
+<Description>Description_ClangKola</Description>
+<Mass>0.5</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>CosmicCoffee</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_CosmicCoffee</DisplayName>
+<Description>Description_CosmicCoffee</Description>
+<Mass>0.5</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>SparklingWater</SubtypeId>
+</Id>
+<DisplayName>Sparkling Water</DisplayName>
+<Description>Just freshly made out of spacedust. Like we all.</Description>
+<Mass>0.5</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>InterBeer</SubtypeId>
+</Id>
+<DisplayName>Inter-Stella Beer</DisplayName>
+<Description>It's always 5pm somewhere in space.</Description>
+<Mass>0.5</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>150</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>LaysChips</SubtypeId>
+</Id>
+<DisplayName>Lies Chips</DisplayName>
+<Description>When you expect food, but get air instead, but it's space so that's actaully good.</Description>
+<Mass>0.3</Mass>
+<Volume>1</Volume>
+<MinimalPricePerUnit>500</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>PrlnglesChips</SubtypeId>
+</Id>
+<DisplayName>Single Chips</DisplayName>
+<Description>Feeling all alone in outer space? Eat some chips.</Description>
+<Mass>0.3</Mass>
+<Volume>1</Volume>
+<MinimalPricePerUnit>500</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Emergency_Ration</SubtypeId>
+</Id>
+<DisplayName>Emergency Ration</DisplayName>
+<Description>The Emergency Ratio is made out of trace elements from Soil and Water.</Description>
+<Mass>0.2</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>Wood</PhysicalMaterial>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

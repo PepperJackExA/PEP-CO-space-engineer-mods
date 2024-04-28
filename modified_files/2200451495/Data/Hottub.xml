@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_PoweredCargoContainerDefinition">
+<Id>
+<TypeId>Collector</TypeId>
+<SubtypeId>Hottub</SubtypeId>
+</Id>
+<DisplayName>Hottub</DisplayName>
+<Description>A recreational tool to help increase viewer count.</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="SmallTube" Count="24" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="Display" Count="8" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Hottub</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<ResourceSinkGroup>Conveyors</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ActionSound>BlockCollect</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>40</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

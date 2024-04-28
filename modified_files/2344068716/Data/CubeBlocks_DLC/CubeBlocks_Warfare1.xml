@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Embrasure</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Embrasure</DisplayName>
+<Description>Description_Embrasure</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="ArmoredPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="ArmoredPlate" Index="0" />
+<BlockPairName>Embrasure</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>PassageSciFiLight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Passage3Light</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="74" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Lightbulb" Count="5" />
+<Component Subtype="SmallTube" Count="48" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>PassageSciFiLight</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>25</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

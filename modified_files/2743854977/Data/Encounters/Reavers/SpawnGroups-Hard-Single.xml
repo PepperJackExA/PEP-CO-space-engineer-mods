@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Reaver-SpawnGroup-Crimson</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>1.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-RVR) Crimson">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Reaver-SpawnGroup-Havelock</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>2.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-RVR) Havelock">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Reaver-SpawnGroup-Scourge</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>1.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-RVR) Scourge">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Reaver-SpawnGroup-Tormentor</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>1.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-RVR) Tormentor">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

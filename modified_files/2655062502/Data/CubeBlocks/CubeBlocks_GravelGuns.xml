@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+<Id>
+<TypeId>Assembler</TypeId>
+<SubtypeId>GravelCompressor</SubtypeId>
+</Id>
+<DisplayName>Gravel Compressor</DisplayName>
+<Description>Sifts and packs Gravel into Gravel Ammunition</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Electromagnet" Count="20" />
+<Component Subtype="LargeTube" Count="15" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="40" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>80</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>CompressedGravel</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>40</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeGatlingTurret</TypeId>
+<SubtypeId>LightGravelTurret</SubtypeId>
+</Id>
+<DisplayName>Light Gravel Turret</DisplayName>
+<Description>Uses an electrically-powered piston to fire chunks of gravel with compressed air. Low damage, high fire rate. Good for short-range defense.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="15" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LightGravelTurret</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<InventoryMaxVolume>0.384</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-58</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>275</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeGatlingTurret</TypeId>
+<SubtypeId>SmallLightGravelTurret</SubtypeId>
+</Id>
+<DisplayName>Light Gravel Turret</DisplayName>
+<Description>Uses an electrically-powered piston to fire chunks of gravel with compressed air. Low damage, high fire rate. Good for short-range defense.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="15" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LightGravelTurret</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<InventoryMaxVolume>0.384</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-58</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>275</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>HeavyGravelTurret</SubtypeId>
+</Id>
+<DisplayName>Heavy Gravel Turret</DisplayName>
+<Description>Uses compressed air to fire a large stone. Medium-range, low damage, low fire rate.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="35" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SmallTube" Count="15" />
+<Component Subtype="LargeTube" Count="30" />
+<Component Subtype="CopperWire" Count="30" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="40" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-20</MinElevationDegrees>
+<MaxElevationDegrees>35</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>PEPCO_OrganicOil</SubtypeId>
+</Id>
+<DisplayName>Organic Oil</DisplayName>
+<Mass>20</Mass>
+<Volume>200</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>850</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>10000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

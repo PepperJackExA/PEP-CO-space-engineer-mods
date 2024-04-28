@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeGatlingTurret</TypeId>
+<SubtypeId>CLGGTurret</SubtypeId>
+</Id>
+<DisplayName>CLG Autocannon Turret</DisplayName>
+<Description>Combusion Light-Gas Gun; uses combustion of compressed hydrogen to fire projectiles.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="LargeTube" Count="15" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>50</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>CoilgunTurret</SubtypeId>
+</Id>
+<DisplayName>Coilgun Turret</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="CopperWire" Count="75" />
+<Component Subtype="MetalGrid" Count="25" />
+<Component Subtype="LargeTube" Count="30" />
+<Component Subtype="Motor" Count="25" />
+<Component Subtype="Capacitor" Count="50" />
+<Component Subtype="Superconductor" Count="25" />
+<Component Subtype="SuperMagnet" Count="15" />
+<Component Subtype="Detector" Count="15" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="50" />
+<Component Subtype="ArmoredPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-3</MinElevationDegrees>
+<MaxElevationDegrees>55</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>8</OperationalPowerConsumption>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>305mmDoubleTurret</SubtypeId>
+</Id>
+<DisplayName>305mm Twin Turret</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="75" />
+<Component Subtype="Construction" Count="75" />
+<Component Subtype="CopperWire" Count="50" />
+<Component Subtype="MetalGrid" Count="25" />
+<Component Subtype="LargeTube" Count="65" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="Detector" Count="10" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="45" />
+<Component Subtype="ArmoredPlate" Count="75" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-7</MinElevationDegrees>
+<MaxElevationDegrees>65</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>305mmSingleTurret</SubtypeId>
+</Id>
+<DisplayName>305mm Turret</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="Construction" Count="75" />
+<Component Subtype="CopperWire" Count="45" />
+<Component Subtype="MetalGrid" Count="25" />
+<Component Subtype="LargeTube" Count="30" />
+<Component Subtype="Motor" Count="25" />
+<Component Subtype="Detector" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="25" />
+<Component Subtype="ArmoredPlate" Count="40" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-7</MinElevationDegrees>
+<MaxElevationDegrees>65</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>155mmSingleTurret</SubtypeId>
+</Id>
+<DisplayName>155mm Turret</DisplayName>
+<CubeSize>Small</CubeSize>
+<BlockPairName>155mmTurret</BlockPairName>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="CopperWire" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="LargeTube" Count="12" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Detector" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="ArmoredPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>70</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>155mmSingleTurretLarge</SubtypeId>
+</Id>
+<DisplayName>155mm Turret</DisplayName>
+<CubeSize>Large</CubeSize>
+<BlockPairName>155mmTurret</BlockPairName>
+<Components>
+<Component Subtype="SteelPlate" Count="35" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="CopperWire" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="LargeTube" Count="12" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Detector" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="ArmoredPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>70</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

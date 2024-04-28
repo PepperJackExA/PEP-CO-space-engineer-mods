@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SparklingWater</SubtypeId>
+</Id>
+<DisplayName>Sparkling Water</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+<Item Amount="0.1" TypeId="Ingot" SubtypeId="Iron" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Emergency_Ration</SubtypeId>
+</Id>
+<DisplayName>Emergency Ration</DisplayName>
+<Description>The Emergency Ration is made out of trace organic elements found in Gravel and Ice.</Description>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="5" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

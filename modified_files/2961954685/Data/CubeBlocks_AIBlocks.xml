@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_PathRecorderBlockDefinition">
+<Id>
+<TypeId>PathRecorderBlock</TypeId>
+<SubtypeId>LargePathRecorderBlock</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>DisplayName_PathRecorderBlock</DisplayName>
+<Description>Description_PathRecorderBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<BlockPairName>PathRecorderBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_PathRecorderBlockDefinition">
+<Id>
+<TypeId>PathRecorderBlock</TypeId>
+<SubtypeId>SmallPathRecorderBlock</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>DisplayName_PathRecorderBlock</DisplayName>
+<Description>Description_PathRecorderBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="CopperWire" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="5" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<BlockPairName>PathRecorderBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<PCU>25</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BasicMissionBlockDefinition">
+<Id>
+<TypeId>BasicMissionBlock</TypeId>
+<SubtypeId>LargeBasicMission</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_BasicMissionBlock</DisplayName>
+<Description>Description_BasicMissionBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>BasicMissionBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PCU>15</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BasicMissionBlockDefinition">
+<Id>
+<TypeId>BasicMissionBlock</TypeId>
+<SubtypeId>SmallBasicMission</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_BasicMissionBlock</DisplayName>
+<Description>Description_BasicMissionBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="CopperWire" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="5" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>BasicMissionBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PCU>15</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_FlightMovementBlockDefinition">
+<Id>
+<TypeId>FlightMovementBlock</TypeId>
+<SubtypeId>LargeFlightMovement</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_FlightMovementBlock</DisplayName>
+<Description>Description_FlightMovementBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>FlightMovementBlock</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PCU>25</PCU>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_FlightMovementBlockDefinition">
+<Id>
+<TypeId>FlightMovementBlock</TypeId>
+<SubtypeId>SmallFlightMovement</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_FlightMovementBlock</DisplayName>
+<Description>Description_FlightMovementBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="CopperWire" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="5" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>FlightMovementBlock</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PCU>25</PCU>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DefensiveCombatBlockDefinition">
+<Id>
+<TypeId>DefensiveCombatBlock</TypeId>
+<SubtypeId>LargeDefensiveCombat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_DefensiveCombatBlock</DisplayName>
+<Description>Description_DefensiveCombatBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>DefensiveCombatBlock</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PCU>25</PCU>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DefensiveCombatBlockDefinition">
+<Id>
+<TypeId>DefensiveCombatBlock</TypeId>
+<SubtypeId>SmallDefensiveCombat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_DefensiveCombatBlock</DisplayName>
+<Description>Description_DefensiveCombatBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="CopperWire" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="5" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>DefensiveCombatBlock</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PCU>25</PCU>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OffensiveCombatBlockDefinition">
+<Id>
+<TypeId>OffensiveCombatBlock</TypeId>
+<SubtypeId>LargeOffensiveCombat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffensiveCombatBlock</DisplayName>
+<Description>Description_OffensiveCombatBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>OffensiveCombatBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OffensiveCombatBlockDefinition">
+<Id>
+<TypeId>OffensiveCombatBlock</TypeId>
+<SubtypeId>SmallOffensiveCombat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffensiveCombatBlock</DisplayName>
+<Description>Description_OffensiveCombatBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="CopperWire" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="5" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>OffensiveCombatBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PCU>25</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_CraftingComponentBlockDefinition">
+<Id>
+<TypeId>MyObjectBuilder_CraftingComponentBlock</TypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>ModName</SubtypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>NextGenLarge_LargeCargoPad</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>NextGen_Cargo_Container_Stack</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>NextGen_Cargo_Container</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>NextGen_Small_Cargo_Container</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>NextGen_Cargo_Crate</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>NextGen_Small_Cargo_Crate</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>NextGen_Large_FreightContainer</SubtypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

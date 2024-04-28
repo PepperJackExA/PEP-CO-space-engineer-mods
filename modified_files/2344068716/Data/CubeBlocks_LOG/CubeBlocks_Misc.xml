@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SmallEnclosedGasolineTank</SubtypeId>
+</Id>
+<DisplayName>Enclosed Gasoline Tank</DisplayName>
+<Description>Stores Gasoline. 200L capacity.
+Caution: Stored fuels are extremely flammable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>EnclosedGasolineTank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>200</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Gasoline</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0025</LeakPercent>
+<GasExplosionMaxRadius>4</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>200</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.002</GasExplosionDamageMultiplier>
+<GasExplosionSound>ArcHydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SmallEnclosedRocketFuelTank</SubtypeId>
+</Id>
+<DisplayName>Enclosed Rocket Fuel Tank</DisplayName>
+<Description>Stores Rocket Fuel. 200L capacity.
+Caution: Stored fuels are extremely flammable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>EnclosedRocketTank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>200</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>RocketFuel</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0025</LeakPercent>
+<GasExplosionMaxRadius>4</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>200</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.002</GasExplosionDamageMultiplier>
+<GasExplosionSound>ArcHydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SmallCylinderGasolineTank</SubtypeId>
+</Id>
+<DisplayName>Small Cylinder Gasoline Tank</DisplayName>
+<Description>Stores Gasoline. 1000L capacity.
+Caution: Stored fuels are extremely flammable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="SmallTube" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>1000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Gasoline</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0025</LeakPercent>
+<GasExplosionMaxRadius>8</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>1000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.002</GasExplosionDamageMultiplier>
+<GasExplosionSound>ArcHydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SmallCylinderRocketFuelTank</SubtypeId>
+</Id>
+<DisplayName>Small Cylinder Rocket Fuel Tank</DisplayName>
+<Description>Stores Rocket Fuel. 1000L capacity.
+Caution: Stored fuels are extremely flammable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="SmallTube" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>1000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>RocketFuel</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0025</LeakPercent>
+<GasExplosionMaxRadius>8</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>1000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.002</GasExplosionDamageMultiplier>
+<GasExplosionSound>ArcHydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SmallGasolineTankMini</SubtypeId>
+</Id>
+<DisplayName>Small Gasoline Tank</DisplayName>
+<Description>Stores Gasoline. 5000L capacity.
+Caution: Stored fuels are extremely flammable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>5000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Gasoline</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0025</LeakPercent>
+<GasExplosionMaxRadius>10</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>5000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.002</GasExplosionDamageMultiplier>
+<GasExplosionSound>ArcHydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SmallRocketFuelTankMini</SubtypeId>
+</Id>
+<DisplayName>Small Rocket Fuel Tank</DisplayName>
+<Description>Stores Rocket Fuel. 5000L capacity.
+Caution: Stored fuels are extremely flammable.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>5000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>RocketFuel</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0025</LeakPercent>
+<GasExplosionMaxRadius>10</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>5000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.002</GasExplosionDamageMultiplier>
+<GasExplosionSound>ArcHydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>LargeShippingContainer</SubtypeId>
+</Id>
+<DisplayName>Transport Container</DisplayName>
+<Description>Basic cargo container. Simple to build, but no conveyor access.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ShippingContainer</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>SmallShippingContainer</SubtypeId>
+</Id>
+<DisplayName>Transport Container</DisplayName>
+<Description>Basic cargo container. Simple to build, but no conveyor access.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ShippingContainer</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>TransportBox</SubtypeId>
+</Id>
+<DisplayName>Transport Crate</DisplayName>
+<Description>Basic cargo container. Simple to build, but no conveyor access.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="5" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>MediumPistonBase</SubtypeId>
+</Id>
+<DisplayName>Medium Piston</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="CopperWire" Count="10" />
+<Component Subtype="SmallTube" Count="8" />
+<Component Subtype="Motor" Count="8" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ExtendedMediumPistonBase</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>PistonTop</TypeId>
+<SubtypeId>MediumPistonTop</SubtypeId>
+</Id>
+<DisplayName>Medium Piston Top</DisplayName>
+<Description>Description_PistonTop</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="6" />
+<Component Subtype="LargeTube" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>MediumPistonTop</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

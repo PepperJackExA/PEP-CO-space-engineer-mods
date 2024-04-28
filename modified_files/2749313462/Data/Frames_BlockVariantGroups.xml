@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="FrameBlock" />
+<DisplayName>DisplayName_Frame_Block</DisplayName>
+<Description>Description_Frames</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="FrameBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="FrameSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="FrameCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="FrameCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="FrameBracket" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrameBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrameSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrameCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrameCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrameBracket" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Frame1x1Flat" />
+<DisplayName>DisplayName_Frame_1x1_Flat</DisplayName>
+<Description>Description_Frames</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Frame1x1Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Frame1x2Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Frame2x2Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Frame1x1Slope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Frame2x1Slope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallFrame1x1Flat" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

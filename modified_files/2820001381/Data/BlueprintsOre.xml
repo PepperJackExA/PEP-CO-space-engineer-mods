@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ConcreteOreToGravel</SubtypeId>
+</Id>
+<DisplayName>Concrete Rubble to Gravel</DisplayName>
+<Prerequisites>
+<Item Amount="100" TypeId="Ore" SubtypeId="Concrete" />
+</Prerequisites>
+<Results>
+<Item Amount="100" TypeId="Ingot" SubtypeId="Stone" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+<BlueprintClassEntries>
+<Entry Class="BasicComponents" BlueprintSubtypeId="ConcreteOreToGravel" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="ConcreteOreToGravel" />
+<Entry Class="Ingots" BlueprintSubtypeId="ConcreteOreToGravel" />
+</BlueprintClassEntries>
+</Definitions>
+ 

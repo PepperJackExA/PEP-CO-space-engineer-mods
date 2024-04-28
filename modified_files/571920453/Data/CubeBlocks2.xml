@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Large_centerofliftghost</SubtypeId>
+</Id>
+<DisplayName>centerofliftghost</DisplayName>
+<Public>false</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>10000</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Large_centerofmassghost</SubtypeId>
+</Id>
+<DisplayName>centerofmassghost</DisplayName>
+<Public>false</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>10000</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_centerofliftghost</SubtypeId>
+</Id>
+<DisplayName>centerofliftghost</DisplayName>
+<Public>false</Public>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>10000</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>Small_centerofmassghost</SubtypeId>
+</Id>
+<DisplayName>centerofmassghost</DisplayName>
+<Public>false</Public>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>10000</BuildTimeSeconds>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+</BlockPositions>
+</Definitions>
+ 

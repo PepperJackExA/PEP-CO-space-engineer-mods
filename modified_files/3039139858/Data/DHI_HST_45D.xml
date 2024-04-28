@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>DHI_HST_45D</SubtypeId>
+</Id>
+<DisplayName>DHI_HST_45D</DisplayName>
+<Description>DHI_HST_45D</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="Construction" Count="300" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="SteelPlate" Count="300" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>DHI_HST_45D</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<InventoryMaxVolume>0.6</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-15</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>275</PCU>
+<IsAirTight>true</IsAirTight>
+<AmmoPullAmountPerTick>2</AmmoPullAmountPerTick>
+<string>Weapons</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

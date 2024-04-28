@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>SmallLight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InteriorLight</DisplayName>
+<Description>Description_InteriorLight</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>InteriorLight</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>SmallBlockSmallLight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InteriorLight</DisplayName>
+<Description>Description_InteriorLight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>InteriorLight</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>LargeBlockLight_1corner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CornerLight</DisplayName>
+<BlockPairName>CornerLight</BlockPairName>
+<Description>Description_CornerLight</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="3" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<RequiredPowerInput>0.00008</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>LargeBlockLight_2corner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CornerLightDouble</DisplayName>
+<Description>Description_CornerLight</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="6" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<RequiredPowerInput>0.00008</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>SmallBlockLight_1corner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CornerLight</DisplayName>
+<BlockPairName>CornerLight</BlockPairName>
+<Description>Description_CornerLight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<RequiredPowerInput>0.00008</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>SmallBlockLight_2corner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CornerLightDouble</DisplayName>
+<Description>Description_CornerLight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="4" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<RequiredPowerInput>0.00008</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>OffsetLight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffsetLight</DisplayName>
+<Description>Description_OffsetLight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>OffsetLight</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+<Id>
+<TypeId>ReflectorLight</TypeId>
+<SubtypeId>OffsetSpotlight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OffsetSpotlight</DisplayName>
+<Description>Description_OffsetLight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>OffsetSpotlight</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

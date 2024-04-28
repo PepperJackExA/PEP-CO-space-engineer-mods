@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>LightGravelTurret</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="2000" ShootSoundName="LightGravelFire" />
+<DeviateShotAngle>3</DeviateShotAngle>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="GravelMag" />
+</AmmoMagazines>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>HeavyGravelTurret</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="100" ShootSoundName="HeavyGravelFire" />
+<DeviateShotAngle>0.1</DeviateShotAngle>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="GravelMag" />
+</AmmoMagazines>
+<ReloadTime>6000</ReloadTime>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>PDLaser</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="720" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="PDLaserCharge" />
+</AmmoMagazines>
+<ReloadTime>0</ReloadTime>
+</Weapon>
+</Weapons>
+</Definitions>
+ 

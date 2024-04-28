@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>PassengerSeatLarge</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PassengerSeat</DisplayName>
+<Description>Description_PassengerSeat</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Fabric" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>PassengerSeat</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>PassengerSeatSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PassengerSeat</DisplayName>
+<Description>Description_PassengerSeat</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Fabric" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>PassengerSeat</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>PassengerSeatSmallOffset</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PassengerSeatOffset</DisplayName>
+<Description>Description_PassengerSeat</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Fabric" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>OffsetPassengerSeat</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

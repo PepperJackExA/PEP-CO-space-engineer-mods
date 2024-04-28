@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
+<Id>
+<TypeId>MyProgrammableBlock</TypeId>
+<SubtypeId>MicroPB</SubtypeId>
+</Id>
+<PCU>100</PCU>
+<BlockPairName>MicroPB</BlockPairName>
+<DisplayName>Micro Programmable Block</DisplayName>
+<Description>Description_ProgrammableBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
+<Id>
+<TypeId>MyProgrammableBlock</TypeId>
+<SubtypeId>LargeMicroPB</SubtypeId>
+</Id>
+<PCU>100</PCU>
+<BlockPairName>MicroPB</BlockPairName>
+<DisplayName>Micro Programmable Block</DisplayName>
+<Description>Description_ProgrammableBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

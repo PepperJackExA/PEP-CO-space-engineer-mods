@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorCube</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Block</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorCube</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorSlope</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Slope</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorSlope</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorCorner</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Corner</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorInvCorner</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Inv. Corner</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorInvCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorCornerSquare</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Corner Square</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorCornerSquare</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorCornerSquareInv</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Corner Square Inv.</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorCornerSquareInv</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorSlope2x1x1Base</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Slope 2x1x1 Base</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorSlope2x1x1Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorSlope2x1x1Tip</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Slope 2x1x1 Tip</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorSlope2x1x1Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallHalfReinforcedArmor</SubtypeId>
+</Id>
+<DisplayName>Half Reinforced Armor Block</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>HalfReinforcedArmor</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallHalfSlopeReinforcedArmor</SubtypeId>
+</Id>
+<DisplayName>Half Slope Reinforced Armor</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>HalfSlopeReinforcedArmor</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallHalfSlopeCornerReinforcedArmor</SubtypeId>
+</Id>
+<DisplayName>Half Slope Corner Reinforced Armor</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>HalfSlopeCornerReinforcedArmor</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorHalfCorner</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Half Corner</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorHalfCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorHalfSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Half Sloped Corner</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorHalfSlopedCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorCorner2x1x1Base</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Corner 2x1x1 Base</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorCorner2x1x1Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorCorner2x1x1Tip</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Corner 2x1x1 Tip</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorCorner2x1x1Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorInvCorner2x1x1Base</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Inv. Corner 2x1x1 Base</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorInvCorner2x1x1Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorInvCorner2x1x1Tip</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Inv. Corner 2x1x1 Tip</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorInvCorner2x1x1Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallHalfSlopeCornerInvReinforcedArmor</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Half Slope Corner Inv.</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>HalfSlopeCornerInvReinforcedArmor</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallHalfSlopeInvReinforcedArmor</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Half Slope Inv.</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>HalfSlopeInvReinforcedArmor</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallSlopedCornerReinforcedArmorTip</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Sloped Corner Tip</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>SlopedCornerReinforcedArmorTip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Sloped Corner Base</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorSlopedCornerBase</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorSlopedCorner</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Sloped Corner</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorSlopedCorner</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallReinforcedArmorHalfSlopedCornerBase</SubtypeId>
+</Id>
+<DisplayName>Reinforced Armor Half Sloped Corner Base</DisplayName>
+<Description>Armor constructed from Dorium-alloy plating provides unparalleled durability.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ReinforcedPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="ReinforcedPlate" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>ReinforcedArmorHalfSlopedCornerBase</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

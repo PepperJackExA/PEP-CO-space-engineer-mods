@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
+<Id>
+<TypeId>AirVent</TypeId>
+<SubtypeId>GanymedeAirVent</SubtypeId>
+</Id>
+<DisplayName>Rocinante Air Vent</DisplayName>
+<Description>Does it grow herbs and spices? or produce oxygen when connected to a conveyor?  It distributes oxygen like a standard air vent when connected to a conveyor system. Designed by Sargonnas</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Sapling" Count="10" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="Sapling" Index="0" />
+<BlockPairName>MCRNAirVent</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.1</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<PressurizeSound>BlockAirVentExhale</PressurizeSound>
+<DepressurizeSound>BlockAirVentDepressurize</DepressurizeSound>
+<IdleSound>BlockAirVentIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>GanymedeBatteryLG1</SubtypeId>
+</Id>
+<DisplayName>Tycho Battery (Full)</DisplayName>
+<Description>A improved battery designed by Sargonnas and produced by Tycho Manufacturing</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="75" />
+<Component Subtype="Construction" Count="70" />
+<Component Subtype="PowerCell" Count="80">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="LithiumCell" Count="60">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="Construction" Count="75" />
+<Component Subtype="SteelPlate" Count="120" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>TychoBattery1</BlockPairName>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>60</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>GanymedeBatteryLG2</SubtypeId>
+</Id>
+<DisplayName>Tycho Battery (Double)</DisplayName>
+<Description>A improved battery designed by Sargonnas and produced by Tycho Manufacturing</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="Construction" Count="140" />
+<Component Subtype="PowerCell" Count="160">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="LithiumCell" Count="120">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Computer" Count="200" />
+<Component Subtype="Construction" Count="75" />
+<Component Subtype="SteelPlate" Count="120" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>TychoBattery2</BlockPairName>
+<BuildTimeSeconds>110</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>130</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>GanymedeBatteryLG3</SubtypeId>
+</Id>
+<DisplayName>Tycho Battery (Half)</DisplayName>
+<Description>A improved battery designed by Sargonnas and produced by Tycho Manufacturing</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="37" />
+<Component Subtype="Construction" Count="35" />
+<Component Subtype="LithiumCell" Count="65">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Computer" Count="50" />
+<Component Subtype="Construction" Count="37" />
+<Component Subtype="SteelPlate" Count="60" />
+</Components>
+<CriticalComponent Subtype="LithiumCell" Index="0" />
+<BlockPairName>TychoBattery3</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>30</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>RazorbackControlSeat</SubtypeId>
+</Id>
+<DisplayName>Razorback Control Seat (Static LCD)</DisplayName>
+<Description>Ganymede Tech introduces the Razorback Control Seat with Static LCD Screen.  This models LCD screens cannot be adjusted. Ring Colors can be adjusted via the blocks control panel.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Display" Count="15" />
+<Component Subtype="Computer" Count="155" />
+<Component Subtype="ReactiveMotor" Count="1" />
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="BulletproofGlass" Count="60" />
+</Components>
+<CriticalComponent Subtype="ReactiveMotor" Index="0" />
+<BlockPairName>RazorbackControlSeat</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>RazorbackControlSeat2</SubtypeId>
+</Id>
+<DisplayName>Razorback Control Seat (Functional Holo LCD)</DisplayName>
+<Description>Ganymede Tech introduces the Razorback Control Seat with Static LCD Screen.  This models Large LCD Screen can be used as an standard LCD Screen. Ring Colors can be adjusted via the blocks control panel.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Display" Count="15" />
+<Component Subtype="Computer" Count="155" />
+<Component Subtype="ReactiveMotor" Count="1" />
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="BulletproofGlass" Count="60" />
+</Components>
+<CriticalComponent Subtype="ReactiveMotor" Index="0" />
+<BlockPairName>RazorbackControlSeat2</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SolarPanelDefinition">
+<Id>
+<TypeId>SolarPanel</TypeId>
+<SubtypeId>SolarArrayBlock</SubtypeId>
+</Id>
+<DisplayName>Solar Array</DisplayName>
+<Description>Description_SolarPanel</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Girder" Count="12" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="CompositeSolarArray" Count="32" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="BulletproofGlass" Count="4" />
+</Components>
+<CriticalComponent Subtype="CompositeSolarArray" Index="0" />
+<BlockPairName>SolarArray</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PhysicalMaterial>GlassOpaque</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>55</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

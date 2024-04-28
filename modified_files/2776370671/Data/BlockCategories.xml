@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Military Equipment</DisplayName>
+<Name>military1</Name>
+<ItemIds>
+<string>CargoContainer/WeaponRacksL</string>
+<string>CargoContainer/WeaponRackS</string>
+<string>AdvancedDoor/BoardingRamp</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

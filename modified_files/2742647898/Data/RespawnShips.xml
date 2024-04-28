@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<RespawnShips>
+<Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>AgarisCarcosa</SubtypeId>
+</Id>
+<DisplayName>Carcosa Area</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>CarcosaRespawnRover</Prefab>
+<UseForSpace>true</UseForSpace>
+<UseForPlanetsWithAtmosphere>false</UseForPlanetsWithAtmosphere>
+</Ship>
+<Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>AgarisAzuris</SubtypeId>
+</Id>
+<DisplayName>Azuris Area</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>AzurisRespawnRover</Prefab>
+<UseForSpace>true</UseForSpace>
+<UseForPlanetsWithAtmosphere>false</UseForPlanetsWithAtmosphere>
+</Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>Ares-Campaign</SubtypeId>
+</Id>
+<DisplayName>Ares-Campaign</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>Ares-Campaign</Prefab>
+<UseForSpace>true</UseForSpace>
+<UseForPlanetsWithAtmosphere>false</UseForPlanetsWithAtmosphere>
+</Ship>
+<Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>AaWStart-2</SubtypeId>
+</Id>
+<DisplayName>Bylen Belt (WIP)</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>Respawn Space Pod</Prefab>
+<UseForPlanetsWithAtmosphere>false</UseForPlanetsWithAtmosphere>
+<UseForSpace>true</UseForSpace>
+</Ship>
+<Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>AaWStart-3</SubtypeId>
+</Id>
+<DisplayName>Lezuno Crash (WIP)</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>ITC Mallard (Crashed)</Prefab>
+<UseForPlanetsWithAtmosphere>false</UseForPlanetsWithAtmosphere>
+<UseForSpace>true</UseForSpace>
+</Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>RespawnPlanetPod</SubtypeId>
+</Id>
+<DisplayName>DisplayName_PlanetaryLander</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>RespawnPlanetPod</Prefab>
+<UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
+</Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>RespawnMoonPod</SubtypeId>
+</Id>
+<DisplayName>Agaris Start Rover</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>RespawnMoonPod</Prefab>
+</Ship>
+<Id>
+<TypeId>RespawnShipDefinition</TypeId>
+<SubtypeId>RespawnSpacePod</SubtypeId>
+</Id>
+<DisplayName>DisplayName_RespawnPodSpace</DisplayName>
+<CooldownSeconds>900</CooldownSeconds>
+<Prefab>RespawnSpacePod</Prefab>
+<UseForSpace>true</UseForSpace>
+</Ship>
+</RespawnShips>
+</Definitions>
+ 

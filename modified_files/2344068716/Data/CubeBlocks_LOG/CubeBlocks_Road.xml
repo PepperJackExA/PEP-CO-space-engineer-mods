@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionSingleRamp</SubtypeId>
+</Id>
+<DisplayName>Road Section - Ramp Single</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+<PhysicalMaterial>Rock</PhysicalMaterial>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionSingleRampSupport</SubtypeId>
+</Id>
+<DisplayName>Road Section - Ramp Single w/ Support</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Concrete" Count="50" />
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionRampSupport</SubtypeId>
+</Id>
+<DisplayName>Road Section - Ramp Support</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Concrete" Count="50" />
+</Components>
+<CriticalComponent Subtype="Concrete" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionSideRampMirrorSupport</SubtypeId>
+</Id>
+<DisplayName>Road Section - Ramp Side Mirror w/ Support</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Concrete" Count="50" />
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionSideRampSupport</SubtypeId>
+</Id>
+<DisplayName>Road Section - Ramp Side w/ Support</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Concrete" Count="50" />
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionCenterRampSupport</SubtypeId>
+</Id>
+<DisplayName>Road Section - Ramp Center w/ Support</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Concrete" Count="50" />
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionSideRampMirror</SubtypeId>
+</Id>
+<DisplayName>Road Section - Ramp Side Mirror</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionSideRamp</SubtypeId>
+</Id>
+<DisplayName>Road Section - Ramp Side</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionCenterRamp</SubtypeId>
+</Id>
+<DisplayName>Road Section - Ramp Center</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionAngle</SubtypeId>
+</Id>
+<DisplayName>Road Section - Angle</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="30" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionIntersection1</SubtypeId>
+</Id>
+<DisplayName>Road Section - Intersection 1</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionIntersection2</SubtypeId>
+</Id>
+<DisplayName>Road Section - Intersection 2</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionIntersection3</SubtypeId>
+</Id>
+<DisplayName>Road Section - Intersection 3</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionIntersection4</SubtypeId>
+</Id>
+<DisplayName>Road Section - Intersection 4</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionIntersection5</SubtypeId>
+</Id>
+<DisplayName>Road Section - Intersection 5</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionIntersection6</SubtypeId>
+</Id>
+<DisplayName>Road Section - Intersection 6</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionMergeLeft</SubtypeId>
+</Id>
+<DisplayName>Road Section - Merge Left</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="90" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionMergeRight</SubtypeId>
+</Id>
+<DisplayName>Road Section - Merge Right</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="90" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionBlank</SubtypeId>
+</Id>
+<DisplayName>Road Section - Blank</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionCenter</SubtypeId>
+</Id>
+<DisplayName>Road Section - Center</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionSide</SubtypeId>
+</Id>
+<DisplayName>Road Section - Side</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionSide2</SubtypeId>
+</Id>
+<DisplayName>Road Section - Side 2</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>RoadSectionSingle</SubtypeId>
+</Id>
+<DisplayName>Road Section - Single</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Asphalt" Count="40" />
+</Components>
+<CriticalComponent Subtype="Asphalt" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

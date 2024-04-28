@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Seamless_Industrial_Pipe_5x</SubtypeId>
+</Id>
+<DisplayName>Conveyor Pipe 5x</DisplayName>
+<Description>A Seamless Industrial Pipe that is 5 times longer.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="50" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="InteriorPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Seamless_Industrial_Pipe_9x</SubtypeId>
+</Id>
+<DisplayName>Conveyor Pipe 9x</DisplayName>
+<Description>A Seamless Industrial Pipe that is 9 times longer.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="90" />
+<Component Subtype="Construction" Count="180" />
+<Component Subtype="SmallTube" Count="108" />
+<Component Subtype="Motor" Count="54" />
+<Component Subtype="InteriorPlate" Count="36" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<BuildTimeSeconds>36</BuildTimeSeconds>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Seamless_Industrial_Pipe_15x</SubtypeId>
+</Id>
+<DisplayName>Conveyor Pipe 15x</DisplayName>
+<Description>A Seamless Industrial Pipe that is 15 times longer.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="Construction" Count="300" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="SmallTube" Count="180" />
+<Component Subtype="Motor" Count="90" />
+<Component Subtype="InteriorPlate" Count="60" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>WCIS_Seamless_Industrial_Pipe_21x</SubtypeId>
+</Id>
+<DisplayName>Conveyor Pipe 21x</DisplayName>
+<Description>A Seamless Industrial Pipe that is 21 times longer.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="210" />
+<Component Subtype="Construction" Count="420" />
+<Component Subtype="MetalGrid" Count="21" />
+<Component Subtype="SmallTube" Count="252" />
+<Component Subtype="Motor" Count="126" />
+<Component Subtype="InteriorPlate" Count="84" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<BuildTimeSeconds>84</BuildTimeSeconds>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WCIS_Industrial_Pipes_Group" />
+<DisplayName>WCIS Industrial Pipes</DisplayName>
+<Description>The Seamless Industrial Conveyor Pipe Extensions from WolfCraft Industries ranging from 5 to 21 Blocks in lenght</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Seamless_Industrial_Pipe_5x" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Seamless_Industrial_Pipe_9x" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Seamless_Industrial_Pipe_15x" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="WCIS_Seamless_Industrial_Pipe_21x" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>WolfCraft Industries</DisplayName>
+<Name>WolfCraft Industries</Name>
+<ItemIds>
+<string>WCIS_Seamless_Industrial_Pipe_5x</string>
+<string>WCIS_Seamless_Industrial_Pipe_9x</string>
+<string>WCIS_Seamless_Industrial_Pipe_15x</string>
+<string>WCIS_Seamless_Industrial_Pipe_21x</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

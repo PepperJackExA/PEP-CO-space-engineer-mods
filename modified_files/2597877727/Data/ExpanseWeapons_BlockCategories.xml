@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+<Name>ShipWeapons</Name>
+<SearchBlocks>false</SearchBlocks>
+<IsToolCategory>false</IsToolCategory>
+<ItemIds>
+<string>ConveyorSorter/Kess Hashari Cannon</string>
+<string>ConveyorSorter/Glapion Collective Gatling Cannon</string>
+<string>ConveyorSorter/Apollo Class Torpedo Launcher</string>
+<string>ConveyorSorter/Ostman-Jazinski Flak Cannon</string>
+<string>ConveyorSorter/Outer Planets Alliance Point Defence Cannon</string>
+<string>ConveyorSorter/OPA Shotgun PDC</string>
+<string>ConveyorSorter/OPA Shotgun PDC Slope Base</string>
+<string>ConveyorSorter/Voltaire Collective Anti Personnel PDC</string>
+<string>ConveyorSorter/Tycho Class Torpedo Mount</string>
+<string>ConveyorSorter/Apollo Class Torpedo Launcher</string>
+<string>ConveyorSorter/Zakosetara Heavy Railgun</string>
+<string>ConveyorSorter/Mounted Zakosetara Heavy Railgun</string>
+<string>ConveyorSorter/UNN MA-15 Coilgun</string>
+<string>ConveyorSorter/T-47 Roci Light Fixed Railgun</string>
+<string>ConveyorSorter/Nariman Dynamics PDC</string>
+<string>ConveyorSorter/Nariman Dynamics PDC Slope Base</string>
+<string>ConveyorSorter/V-14 Stiletto Light Railgun</string>
+<string>ConveyorSorter/VX-12 Foehammer Ultra-Heavy Railgun</string>
+<string>ConveyorSorter/Redfields Ballistics PDC</string>
+<string>ConveyorSorter/Dawson-Pattern Medium Railgun</string>
+<string>ConveyorSorter/Farren-Pattern Heavy Railgun</string>
+<string>ConveyorSorter/Artemis_Torpedo_Tube</string>
+<string>ConveyorSorter/Ares_Class_Torpedo_Launcher_F</string>
+<string>ConveyorSorter/Ares_Class_Torpedo_Launcher</string>
+<string>ConveyorSorter/ZeusClass_Rapid_Torpedo_Launcher</string>
+<string>TurretControlBlock/AdvancedLargeTurretControlBlock</string>
+<string>ConveyorSorter/LidarLG</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Expanse Weapons</DisplayName>
+<Name>Expanse_Weapons</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>ConveyorSorter/Kess Hashari Cannon</string>
+<string>ConveyorSorter/Glapion Collective Gatling Cannon</string>
+<string>ConveyorSorter/Apollo Class Torpedo Launcher</string>
+<string>ConveyorSorter/Ostman-Jazinski Flak Cannon</string>
+<string>ConveyorSorter/Voltaire Collective Anti Personnel PDC</string>
+<string>ConveyorSorter/Outer Planets Alliance Point Defence Cannon</string>
+<string>ConveyorSorter/OPA Shotgun PDC</string>
+<string>ConveyorSorter/OPA Shotgun PDC Slope Base</string>
+<string>ConveyorSorter/Tycho Class Torpedo Mount</string>
+<string>ConveyorSorter/Zakosetara Heavy Railgun</string>
+<string>ConveyorSorter/Mounted Zakosetara Heavy Railgun</string>
+<string>ConveyorSorter/UNN MA-15 Coilgun</string>
+<string>ConveyorSorter/T-47 Roci Light Fixed Railgun</string>
+<string>ConveyorSorter/Nariman Dynamics PDC</string>
+<string>ConveyorSorter/Nariman Dynamics PDC Slope Base</string>
+<string>ConveyorSorter/V-14 Stiletto Light Railgun</string>
+<string>ConveyorSorter/VX-12 Foehammer Ultra-Heavy Railgun</string>
+<string>ConveyorSorter/Redfields Ballistics PDC</string>
+<string>ConveyorSorter/Redfields Ballistics PDC Slope Base</string>
+<string>ConveyorSorter/Dawson-Pattern Medium Railgun</string>
+<string>ConveyorSorter/Farren-Pattern Heavy Railgun</string>
+<string>ConveyorSorter/Artemis_Torpedo_Tube</string>
+<string>ConveyorSorter/Ares_Class_Torpedo_Launcher_F</string>
+<string>ConveyorSorter/Ares_Class_Torpedo_Launcher</string>
+<string>ConveyorSorter/ZeusClass_Rapid_Torpedo_Launcher</string>
+<string>TurretControlBlock/AdvancedLargeTurretControlBlock</string>
+<string>ConveyorSorter/LidarLG</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>ConveyorSorter/Kess Hashari Cannon</string>
+<string>ConveyorSorter/Glapion Collective Gatling Cannon</string>
+<string>ConveyorSorter/Apollo Class Torpedo Launcher</string>
+<string>ConveyorSorter/Ostman-Jazinski Flak Cannon</string>
+<string>ConveyorSorter/Outer Planets Alliance Point Defence Cannon</string>
+<string>ConveyorSorter/OPA Shotgun PDC</string>
+<string>ConveyorSorter/OPA Shotgun PDC Slope Base</string>
+<string>ConveyorSorter/Voltaire Collective Anti Personnel PDC</string>
+<string>ConveyorSorter/Tycho Class Torpedo Mount</string>
+<string>ConveyorSorter/Apollo Class Torpedo Launcher</string>
+<string>ConveyorSorter/Artemis_Torpedo_Tube</string>
+<string>ConveyorSorter/Zakosetara Heavy Railgun</string>
+<string>ConveyorSorter/Mounted Zakosetara Heavy Railgun</string>
+<string>ConveyorSorter/UNN MA-15 Coilgun</string>
+<string>ConveyorSorter/T-47 Roci Light Fixed Railgun</string>
+<string>ConveyorSorter/Nariman Dynamics PDC</string>
+<string>ConveyorSorter/Nariman Dynamics PDC Slope Base</string>
+<string>ConveyorSorter/V-14 Stiletto Light Railgun</string>
+<string>ConveyorSorter/VX-12 Foehammer Ultra-Heavy Railgun</string>
+<string>ConveyorSorter/Redfields Ballistics PDC</string>
+<string>ConveyorSorter/Redfields Ballistics PDC Slope Base</string>
+<string>ConveyorSorter/Dawson-Pattern Medium Railgun</string>
+<string>ConveyorSorter/Farren-Pattern Heavy Railgun</string>
+<string>ConveyorSorter/Ares_Class_Torpedo_Launcher_F</string>
+<string>ConveyorSorter/Ares_Class_Torpedo_Launcher</string>
+<string>ConveyorSorter/ZeusClass_Rapid_Torpedo_Launcher</string>
+<string>TurretControlBlock/AdvancedLargeTurretControlBlock</string>
+<string>ConveyorSorter/LidarLG</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

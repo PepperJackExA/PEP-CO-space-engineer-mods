@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>SubtypeID</SubtypeId>
+</Id>
+<DisplayName>DisplayName</DisplayName>
+<Description>Template Description</Description>
+<CubeSize>Large</CubeSize>
+<BuildTimeSeconds>180</BuildTimeSeconds>
+<InventoryMaxVolume>0.276</InventoryMaxVolume>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>BlockPairName</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>40</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

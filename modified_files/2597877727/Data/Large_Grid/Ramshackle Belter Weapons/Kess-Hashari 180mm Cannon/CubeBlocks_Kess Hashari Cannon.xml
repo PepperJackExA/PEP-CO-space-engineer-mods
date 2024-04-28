@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Kess Hashari Cannon</SubtypeId>
+</Id>
+<DisplayName>Kess Hashari Cannon</DisplayName>
+<Description>A fixed mount cannon put together from scrap metal and salvaged machines. [2.0 km/s muzzle velocity, 8km range - Accepts 180mm Lead-Steel Slugs]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="200" />
+<Component Subtype="SmallTube" Count="80" />
+<Component Subtype="LargeTube" Count="160" />
+<Component Subtype="InteriorPlate" Count="75" />
+<Component Subtype="Motor" Count="200" />
+<Component Subtype="Computer" Count="250" />
+<Component Subtype="MetalGrid" Count="500" />
+<Component Subtype="Construction" Count="500" />
+<Component Subtype="SteelPlate" Count="500" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>15</OperationalPowerConsumption>
+<BlockPairName>Kess Hashari Cannon</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<InventoryMaxVolume>0.960</InventoryMaxVolume>
+<PCU>800</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

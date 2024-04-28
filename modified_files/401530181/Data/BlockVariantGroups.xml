@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="MicroPB" />
+<DisplayName>Micro Programmable Block</DisplayName>
+<Description>Description_ProgrammableBlock</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="LargeMicroPB" />
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="MicroPB" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

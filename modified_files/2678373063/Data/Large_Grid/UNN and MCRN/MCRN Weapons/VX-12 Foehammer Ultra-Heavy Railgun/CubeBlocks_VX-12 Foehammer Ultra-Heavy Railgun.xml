@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>VX-12 Foehammer Ultra-Heavy Railgun</SubtypeId>
+</Id>
+<DisplayName>VX-12 Foehammer Ultra-Heavy Railgun</DisplayName>
+<Description>The VX-12 Foehammer boasts the longest range and greatest firepower of any ship-mounted railgun ever constructed. Fires 120mm Tungsten-Uranium Slug MCRN variant.</Description>
+<CubeSize>Large</CubeSize>
+<BuildTimeSeconds>180</BuildTimeSeconds>
+<InventoryMaxVolume>0.276</InventoryMaxVolume>  <!-- In Liters, add 3 zero's -->
+<Components>
+<Component Subtype="GravityGenerator" Count="330" />
+<Component Subtype="PowerCell" Count="1240" />
+<Component Subtype="Superconductor" Count="800" />
+<Component Subtype="Girder" Count="1210" />
+<Component Subtype="SmallTube" Count="990" />
+<Component Subtype="LargeTube" Count="1210" />
+<Component Subtype="InteriorPlate" Count="1650" />
+<Component Subtype="TrackingComponent" Count="40" />
+<Component Subtype="MCRNExpComponent" Count="200" />
+<Component Subtype="Motor" Count="1540" />
+<Component Subtype="Computer" Count="2850" />
+<Component Subtype="MetalGrid" Count="3190" />
+<Component Subtype="Construction" Count="2200" />
+<Component Subtype="SteelPlate" Count="6830" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<BlockPairName>VX-12 Foehammer Ultra-Heavy Railgun</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>40</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<PCU>7000</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>VX-12 Foehammer Ultra-Heavy Railgun MES</SubtypeId>
+</Id>
+<DisplayName>VX-12 Foehammer Ultra-Heavy Railgun</DisplayName>
+<Description>The VX-12 Foehammer boasts the longest range and greatest firepower of any ship-mounted railgun ever constructed. Fires 120mm Tungsten-Uranium Slug MCRN variant.</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<BuildTimeSeconds>180</BuildTimeSeconds>
+<InventoryMaxVolume>0.276</InventoryMaxVolume>
+<Components>
+<Component Subtype="GravityGenerator" Count="330" />
+<Component Subtype="PowerCell" Count="1240" />
+<Component Subtype="Superconductor" Count="800" />
+<Component Subtype="Girder" Count="1210" />
+<Component Subtype="SmallTube" Count="990" />
+<Component Subtype="LargeTube" Count="1210" />
+<Component Subtype="InteriorPlate" Count="1650" />
+<Component Subtype="TrackingComponent" Count="40" />
+<Component Subtype="MCRNExpComponent" Count="200" >
+<DeconstructId>
+<TypeId>Ingot</TypeId>
+<SubtypeId>MCRNExpCompTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="1540" />
+<Component Subtype="Computer" Count="2850" />
+<Component Subtype="MetalGrid" Count="3190" />
+<Component Subtype="Construction" Count="2200" />
+<Component Subtype="SteelPlate" Count="6830" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<BlockPairName>VX-12 Foehammer Ultra-Heavy Railgun MES</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>40</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<PCU>7000</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

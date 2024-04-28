@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockPositions>
+<BlockPosition>
+<Name>WeldPad</Name>
+</BlockPosition>
+</BlockPositions>
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>SmallWeldPad</SubtypeId>
+</Id>
+<BlockPairName>WeldPad</BlockPairName>
+<DisplayName>Weld Pad</DisplayName>
+<Description>Single-use slim pads that can merge 2 grids without extra space required.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="CopperWire" Count="1" />
+</Components>
+<CriticalComponent Subtype="CopperWire" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>LargeWeldPad</SubtypeId>
+</Id>
+<BlockPairName>WeldPad</BlockPairName>
+<DisplayName>Weld Pad</DisplayName>
+<Description>Single-use slim pads that can merge 2 grids without extra space required.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="CopperWire" Count="5" />
+</Components>
+<CriticalComponent Subtype="CopperWire" Index="0" />
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

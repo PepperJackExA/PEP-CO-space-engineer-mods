@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Ceramics</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ceramic_Components</DisplayName>
+<Description>Description_BlueprintClass_Ceramic_Components</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>BasicComponents</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_BasicComponents</DisplayName>
+<Description>Description_BlueprintClass_BasicComponents</Description>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="Ceramics" BlueprintSubtypeId="ArmoredGlass" />
+<Entry Class="Ceramics" BlueprintSubtypeId="CeramicPlate" />
+<Entry Class="Ceramics" BlueprintSubtypeId="BulletproofGlass" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Assembler/Furnace" />
+</BlueprintClassEntries>
+</Definitions>
+ 

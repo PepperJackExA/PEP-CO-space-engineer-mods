@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>LandingGear/LG_TSOMagneticHalfBlock</string>
+<string>LandingGear/LG_TSOMagneticPlateHalf</string>
+<string>LandingGear/TSOMagneticPlateCenterSmall</string>
+<string>LandingGear/LG_TSOMagneticPlate5x5</string>
+<string>LandingGear/LG_TSOMagneticPlate3x3</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>LandingGear/SG_TSOMagneticHalfBlock</string>
+<string>LandingGear/SG_TSOMagneticPlateHalf</string>
+<string>LandingGear/SG_TSOMagneticPlate5x5</string>
+<string>LandingGear/SG_TSOMagneticPlate3x3</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>+ TSO</DisplayName>
+<Name>zzzzzzzzzzz-TSO</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>LandingGear/TSOMagneticPlateCenterSmall</string>
+<string>LandingGear/LG_TSOMagneticPlateHalf</string>
+<string>LandingGear/SG_TSOMagneticPlateHalf</string>
+<string>LandingGear/LG_TSOMagneticPlate5x5</string>
+<string>LandingGear/SG_TSOMagneticPlate5x5</string>
+<string>LandingGear/LG_TSOMagneticPlate3x3</string>
+<string>LandingGear/SG_TSOMagneticPlate3x3</string>
+<string>LandingGear/LG_TSOMagneticHalfBlock</string>
+<string>LandingGear/SG_TSOMagneticHalfBlock</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

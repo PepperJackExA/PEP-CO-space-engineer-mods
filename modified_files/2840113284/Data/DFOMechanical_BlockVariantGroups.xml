@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RotorGroup" />
+<DisplayName>DisplayName_Block_Rotor</DisplayName>
+<Description>Description_Rotor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MotorStator" Subtype="LargeStator" />
+<Block Type="MyObjectBuilder_MotorStator" Subtype="SmallStator" />
+<Block Type="MyObjectBuilder_MotorRotor" Subtype="LargeRotor" />
+<Block Type="MyObjectBuilder_MotorRotor" Subtype="SmallRotor" />
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="LargeAdvancedRotor" />
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SmallAdvancedRotor" />
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SmallAdvancedRotorSmall" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallAdvancedStatorSmall" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="LargeAdvancedStator" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallAdvancedStator" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ExtraRotorGroup" />
+<DisplayName>More Rotor</DisplayName>
+<Description>Description_Rotor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SmallAxleMotorRotorSmall" />
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SmallWideAxleMotorRotorSmall" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallJunctionMotorStatorSmall" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallWideJunctionMotorStatorSmall" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallRightMotorStatorSmall" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallWideRightMotorStatorSmall" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallAxleMotorStatorSmall" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallWideAxleMotorStatorSmall" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ExtraLandingGearGroup" />
+<DisplayName>Landing Gear Undercarriage</DisplayName>
+<Description>Description_Rotor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MotorStator" Subtype="LandingGearStatorLeft" />
+<Block Type="MyObjectBuilder_MotorStator" Subtype="LandingGearStatorRight" />
+<Block Type="MyObjectBuilder_MotorRotor" Subtype="RealLandingGearWheel" />
+<Block Type="MyObjectBuilder_SpaceBall" Subtype="LandingGearWheel" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HingeGroup" />
+<DisplayName>DisplayName_Block_Hinge</DisplayName>
+<Description>Description_Rotor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="LargeHinge" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="MediumHinge" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallHinge" />
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="LargeHingeHead" />
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="MediumHingeHead" />
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SmallHingeHead" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ExtraHingeGroup" />
+<DisplayName>More Hinge</DisplayName>
+<Description>Description_Rotor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallCenterHinge" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallCornerHinge" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallWideHinge" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="SmallLongHinge" />
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="SmallSlimHingeHead" />
+<Block Type="MyObjectBuilder_MotorStator" Subtype="SuspensionHingeBase" />
+<Block Type="MyObjectBuilder_MotorStator" Subtype="SuspensionHingeBaseOffsetA" />
+<Block Type="MyObjectBuilder_MotorStator" Subtype="SuspensionHingeBaseOffsetAInv" />
+<Block Type="MyObjectBuilder_MotorStator" Subtype="SuspensionHingeBaseOffsetB" />
+<Block Type="MyObjectBuilder_MotorStator" Subtype="SuspensionHingeBaseOffsetBInv" />
+<Block Type="MyObjectBuilder_MotorRotor" Subtype="SuspensionHingeTop" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TrackHingeGroup" />
+<DisplayName>Track Hinge</DisplayName>
+<Description>Description_Rotor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MotorStator" Subtype="TrackRailHingeBase" />
+<Block Type="MyObjectBuilder_MotorRotor" Subtype="TrackRailHingeHead" />
+<Block Type="MyObjectBuilder_SpaceBall" Subtype="TrackWheel1x1" />
+<Block Type="MyObjectBuilder_SpaceBall" Subtype="TrackWheel2x1" />
+<Block Type="MyObjectBuilder_SpaceBall" Subtype="TrackWheel3x1" />
+<Block Type="MyObjectBuilder_SpaceBall" Subtype="TrackWheel4x1" />
+<Block Type="MyObjectBuilder_SpaceBall" Subtype="TrackWheel5x1" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="PistonGroup" />
+<DisplayName>DisplayName_Block_PistonBase</DisplayName>
+<Description>Description_Piston</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="LargePistonBase" />
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="SmallPistonBase" />
+<Block Type="MyObjectBuilder_PistonTop" Subtype="LargePistonTop" />
+<Block Type="MyObjectBuilder_PistonTop" Subtype="SmallPistonTop" />
+<Block Type="MyObjectBuilder_MergeBlock" Subtype="LargeShipMergeBlock" />
+<Block Type="MyObjectBuilder_MergeBlock" Subtype="SmallShipMergeBlock" />
+<Block Type="MyObjectBuilder_MergeBlock" Subtype="SmallShipSmallMergeBlock" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ExtraPistonGroup" />
+<DisplayName>More Piston</DisplayName>
+<Description>Description_Piston</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="LargeShortPistonBase" />
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="LargeShortWidePistonBase" />
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="LargeShortSidePistonBase" />
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="LargeWidePistonBase" />
+<Block Type="MyObjectBuilder_PistonTop" Subtype="LargeWidePistonTopOffset" />
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="SmallShortPistonBase" />
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="SmallShortWidePistonBase" />
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="SmallShortSidePistonBase" />
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="SmallWidePistonBase" />
+<Block Type="MyObjectBuilder_PistonTop" Subtype="SmallWidePistonTopOffset" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HardpointGroup" />
+<DisplayName>Hardpoint</DisplayName>
+<Description>Description_Piston</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="HardpointBase" />
+<Block Type="MyObjectBuilder_PistonTop" Subtype="HardpointTop" />
+<Block Type="MyObjectBuilder_ExtendedPistonBase" Subtype="SideHardpointBase" />
+<Block Type="MyObjectBuilder_PistonTop" Subtype="SideHardpointTop" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DamperGroup" />
+<DisplayName>Suspension Damper</DisplayName>
+<Description>Description_MotorSuspension</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MotorSuspension" Subtype="SuspensionDamperBase" />
+<Block Type="MyObjectBuilder_Wheel" Subtype="SuspensionDamperTop" />
+<Block Type="MyObjectBuilder_MotorSuspension" Subtype="HeavyDutySuspensionDamperBase" />
+<Block Type="MyObjectBuilder_Wheel" Subtype="HeavyDutySuspensionDamperTop" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TurretGroup" />
+<DisplayName>Manual Turret</DisplayName>
+<Description>Description_TurretControlBlock</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Cockpit" Subtype="TurretCockpit" />
+<Block Type="MyObjectBuilder_TurretControlBlock" Subtype="TurretController" />
+<Block Type="MyObjectBuilder_Gyro" Subtype="TurretStand" />
+<Block Type="MyObjectBuilder_MotorAdvancedStator" Subtype="TurretHingeBase" />
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="TurretHingeHead" />
+<Block Type="MyObjectBuilder_MotorAdvancedRotor" Subtype="TurretHingeAdapter" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

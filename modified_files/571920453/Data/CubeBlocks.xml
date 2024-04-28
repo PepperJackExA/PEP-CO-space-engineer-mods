@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+<Id>
+<TypeId>ReflectorLight</TypeId>
+<SubtypeId>lightDummy</SubtypeId>
+</Id>
+<DisplayName>lightDummy</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>lightDummy</BlockPairName>
+<BuildTimeSeconds>10000</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.000001</RequiredPowerInput>
+<Public>false</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>batteryDummy</SubtypeId>
+</Id>
+<DisplayName>batteryDummy</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>batteryDummy</BlockPairName>
+<BuildTimeSeconds>10000</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>12</RequiredPowerInput>
+<Public>false</Public>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+</BlockPositions>
+</Definitions>
+ 

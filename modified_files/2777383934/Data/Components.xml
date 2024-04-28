@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>JumpCore</SubtypeId>
+</Id>
+<DisplayName>High-Density Core</DisplayName>
+<Mass>1000</Mass>
+<Volume>50</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>ReinforcedDrillbit</SubtypeId>
+</Id>
+<DisplayName>Reinforced Drill Tooth</DisplayName>
+<Mass>40</Mass>
+<Volume>5</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>200</MaxIntegrity>
+<MinimalPricePerUnit>89563</MinimalPricePerUnit>
+<MinimumOfferAmount>1</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<MinimumOrderAmount>1</MinimumOrderAmount>
+<MaximumOrderAmount>100</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</Component>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>ReinforcedPlate</SubtypeId>
+</Id>
+<DisplayName>Reinforced Plate</DisplayName>
+<Mass>75</Mass>
+<Volume>3</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>1250</MaxIntegrity>
+<MinimalPricePerUnit>19675</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<MinimumOrderAmount>10</MinimumOrderAmount>
+<MaximumOrderAmount>1000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</Component>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>LaserAmplifier</SubtypeId>
+</Id>
+<DisplayName>Laser Amplifier</DisplayName>
+<Mass>18.3</Mass>
+<Volume>12</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>20</MaxIntegrity>
+<MinimalPricePerUnit>559751</MinimalPricePerUnit>
+<MinimumOfferAmount>5</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<MinimumOrderAmount>5</MinimumOrderAmount>
+<MaximumOrderAmount>100</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</Component>
+</Components>
+</Definitions>
+ 

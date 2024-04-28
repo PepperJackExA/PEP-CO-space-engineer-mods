@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
+<Id>
+<TypeId>MyProgrammableBlock</TypeId>
+<SubtypeId>SmallProgrammableBlock</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>DisplayName_Programmable_Block</DisplayName>
+<Description>Description_ProgrammableBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="CoreSchematic" Count="2">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ProgrammableBlock</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ProjectorDefinition">
+<Id>
+<TypeId>MyObjectBuilder_Projector</TypeId>
+<SubtypeId>LargeProjector</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Projector</DisplayName>
+<Description>Description_Projector</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="11" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="CoreSchematic" Count="2">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Projector</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PrimarySound>BlockProjectorOn</PrimarySound>
+<IdleSound>BlockProjectorOff</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ProjectorDefinition">
+<Id>
+<TypeId>MyObjectBuilder_Projector</TypeId>
+<SubtypeId>SmallProjector</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Projector</DisplayName>
+<Description>Description_Projector</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="CoreSchematic" Count="2">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Projector</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PrimarySound>BlockProjectorOn</PrimarySound>
+<IdleSound>BlockProjectorOff</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SensorBlockDefinition">
+<Id>
+<TypeId>SensorBlock</TypeId>
+<SubtypeId>SmallBlockSensor</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Sensor</DisplayName>
+<Description>Description_Sensor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="6" />
+<Component Subtype="RadioCommunication" Count="4" />
+<Component Subtype="Detector" Count="6" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>Sensor</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<MaxRange>50</MaxRange>
+<ActionSound>BlockSensor</ActionSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SensorBlockDefinition">
+<Id>
+<TypeId>SensorBlock</TypeId>
+<SubtypeId>LargeBlockSensor</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Sensor</DisplayName>
+<Description>Description_Sensor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="6" />
+<Component Subtype="RadioCommunication" Count="4" />
+<Component Subtype="Detector" Count="6" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>Sensor</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<MaxRange>50</MaxRange>
+<ActionSound>BlockSensor</ActionSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TargetDummyBlockDefinition">
+<Id>
+<TypeId>TargetDummyBlock</TypeId>
+<SubtypeId>TargetDummy</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TargetDummy</DisplayName>
+<Description>Description_TargetDummy</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>TargetDummy</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>false</IsAirTight>
+<PCU>25</PCU>
+<InventoryMaxVolume>.09</InventoryMaxVolume>
+<string>TargetD_Torso</string>
+<string>TargetD_Head</string>
+<string>TargetD_RightArm</string>
+<string>TargetD_LeftArm</string>
+<RegenerationSound>ArcPrgConstrPh01Start</RegenerationSound>
+<DestructionSound>ArcPrgDeconstrPh01Start</DestructionSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SoundBlockDefinition">
+<Id>
+<TypeId>SoundBlock</TypeId>
+<SubtypeId>SmallBlockSoundBlock</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SoundBlock</DisplayName>
+<Description>Description_Sound</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="InteriorPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SoundBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SoundBlockDefinition">
+<Id>
+<TypeId>SoundBlock</TypeId>
+<SubtypeId>LargeBlockSoundBlock</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SoundBlock</DisplayName>
+<Description>Description_Sound</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="InteriorPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SoundBlock</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelLarge</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ButtonPanel</DisplayName>
+<Description>Description_ButtonPanel</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<string>Textures\GUI\Icons\buttons\ThreeButton.dds</string>
+<string>Textures\GUI\Icons\buttons\FourButton.dds</string>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ButtonPanel</DisplayName>
+<Description>Description_ButtonPanel</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<string>Textures\GUI\Icons\buttons\IconSquareHighlight.dds</string>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
+<Id>
+<TypeId>TimerBlock</TypeId>
+<SubtypeId>TimerBlockLarge</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TimerBlock</DisplayName>
+<Description>Description_Timer</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>TimerBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PrimarySound>BlockTimer</PrimarySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
+<Id>
+<TypeId>TimerBlock</TypeId>
+<SubtypeId>TimerBlockSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TimerBlock</DisplayName>
+<Description>Description_Timer</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>TimerBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PrimarySound>BlockTimer</PrimarySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ProgrammableBlockDefinition">
+<Id>
+<TypeId>MyProgrammableBlock</TypeId>
+<SubtypeId>LargeProgrammableBlock</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>DisplayName_Programmable_Block</DisplayName>
+<Description>Description_ProgrammableBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="11" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="CoreSchematic" Count="2">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ProgrammableBlock</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TurretControlBlockDefinition">
+<Id>
+<TypeId>TurretControlBlock</TypeId>
+<SubtypeId>LargeTurretControlBlock</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>DisplayName_TurretControlBlock</DisplayName>
+<Description>Description_TurretControlBlock</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="CoreSchematic" Count="2">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="6" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<BlockPairName>TurretControlBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<PowerInputIdle>0.0005</PowerInputIdle>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TurretControlBlockDefinition">
+<Id>
+<TypeId>TurretControlBlock</TypeId>
+<SubtypeId>SmallTurretControlBlock</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>DisplayName_TurretControlBlock</DisplayName>
+<Description>Description_TurretControlBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Detector" Count="4" />
+<Component Subtype="CoreSchematic" Count="1">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<BlockPairName>TurretControlBlock</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<PowerInputIdle>0.0005</PowerInputIdle>
+<PCU>100</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

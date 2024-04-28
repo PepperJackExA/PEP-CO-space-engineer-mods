@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Artemis_Torpedo_Tube</SubtypeId>
+</Id>
+<DisplayName>Artemis Torpedo Tube</DisplayName>
+<Description>A single tube torpedo launcher which boasts a small autoloading compartment that contains everything needed to load torpedoes from storage into the tube. [Stores 1 torpedoes - Accepts 220mm, MCRN, and UNN Torpedoes]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="100" />
+<Component Subtype="Construction" Count="500" />
+<Component Subtype="SmallTube" Count="100" />
+<Component Subtype="LargeTube" Count="100" />
+<Component Subtype="InteriorPlate" Count="100" />
+<Component Subtype="InnerComponent" Count="10" />
+<Component Subtype="Motor" Count="300" />
+<Component Subtype="Computer" Count="150" />
+<Component Subtype="MetalGrid" Count="300" />
+<Component Subtype="Construction" Count="250" />
+<Component Subtype="SteelPlate" Count="500" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Artemis_Torpedo_Tube</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PCU>400</PCU>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<MinElevationDegrees>-15</MinElevationDegrees>
+<MaxElevationDegrees>75</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Artemis_Torpedo_Tube_MES</SubtypeId>
+</Id>
+<DisplayName>Artemis Torpedo Tube MES</DisplayName>
+<Description>
+</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="Girder" Count="100" />
+<Component Subtype="Construction" Count="500" />
+<Component Subtype="SmallTube" Count="100" />
+<Component Subtype="LargeTube" Count="100" />
+<Component Subtype="InteriorPlate" Count="100" />
+<Component Subtype="InnerComponent" Count="11">
+<DeconstructId>
+<TypeId>Ingot</TypeId>
+<SubtypeId>InnerTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="300" />
+<Component Subtype="Computer" Count="150" />
+<Component Subtype="MetalGrid" Count="300" />
+<Component Subtype="Construction" Count="250" />
+<Component Subtype="SteelPlate" Count="500" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Artemis_Torpedo_Tube_MES</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PCU>400</PCU>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<MinElevationDegrees>-15</MinElevationDegrees>
+<MaxElevationDegrees>75</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

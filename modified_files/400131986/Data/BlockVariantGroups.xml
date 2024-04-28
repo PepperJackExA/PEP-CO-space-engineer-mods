@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="MicroTimer" />
+<DisplayName>Micro Timer</DisplayName>
+<Description>Description_TimerBlock</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_TimerBlock" Subtype="LargeMicroTimer" />
+<Block Type="MyObjectBuilder_TimerBlock" Subtype="MicroTimer" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

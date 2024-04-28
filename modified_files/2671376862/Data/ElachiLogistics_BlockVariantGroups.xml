@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ContainerGroup1" />
+<DisplayName>DisplayName_BlockGroup_ContainerGroup</DisplayName>
+<Description>Description_BlockGroup_ContainerGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="1x1x3CargoSG" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="2x1x2CargoSG" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="2x1x2CargoSGInv" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="2x2x2CargoSG" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="9x11x5CargoSG" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ContainerGroup3" />
+<DisplayName>DisplayName_BlockGroup_ContainerGroup</DisplayName>
+<Description>Description_BlockGroup_ContainerGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="StorageShelfv1SG" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="StorageShelfv2SG" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="StorageShelfv3SG" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="StorageShelfv1LG" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="StorageShelfv2LG" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="StorageShelfv3LG" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ContainerGroup2" />
+<DisplayName>DisplayName_BlockGroup_ContainerGroup</DisplayName>
+<Description>Description_BlockGroup_ContainerGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="3x3x1Cargo" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="3x3x1OpenCargo" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="3x3x1OpenCargoV2" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="3x5x3LargeContainer" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="3x11x3LargeContainer" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="7x11x3LargeContainer" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="HalfBlockCargo" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="EDPAccessCargoTube" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

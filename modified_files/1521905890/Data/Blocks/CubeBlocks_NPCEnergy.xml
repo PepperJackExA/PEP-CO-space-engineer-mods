@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>MES-NPC-Battery-SmallGrid-Small</SubtypeId>
+</Id>
+<DisplayName>NPC Small Battery</DisplayName>
+<Description>Special high energy battery only usable by NPC Owned Identities</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="ProprietaryTech" Count="1">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="PowerCell" Count="2">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>MES-NPC-Battery-Small</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>4</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>true</IsAirTight>
+<PCU>15</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AmmoBlueprintSubtypeID</SubtypeId>
+</Id>
+<DisplayName>DisplayName</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

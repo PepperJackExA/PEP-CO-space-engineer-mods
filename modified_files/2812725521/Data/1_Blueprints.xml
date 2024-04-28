@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>UnlockerComponent</SubtypeId>
+</Id>
+<DisplayName>Unlocker</DisplayName>
+<Prerequisites>
+<Item Amount="1000" TypeId="Ingot" SubtypeId="Platinum" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="UnlockerComponent" />
+</Results>
+<BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

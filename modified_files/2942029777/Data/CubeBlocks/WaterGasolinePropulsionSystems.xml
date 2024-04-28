@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SGGasolinePropellers" />
+<Blocks>
+<Block Type="Thrust" Subtype="SG3x3GasShipScrew" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Propulsion Systems</DisplayName>
+<Name>PropulsionSystem</Name>
+<ItemIds>
+<string>Thrust/SG3x3GasShipScrew</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SG3x3GasShipScrew</SubtypeId>
+</Id>
+<DisplayName>Small 3x3 Gasoline Ship Screw</DisplayName>
+<Description>Gasoline Propulsion System for use under water</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="LargeTube" Count="12" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="CopperWire" Count="30" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SG3x3GasShipScrew</BlockPairName>
+<ThrusterType>Gasoline</ThrusterType>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>216000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Gasoline</SubtypeId>
+</FuelId>
+<Efficiency>1</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>0.00125</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<string>Propulsion</string>
+<PCU>25</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

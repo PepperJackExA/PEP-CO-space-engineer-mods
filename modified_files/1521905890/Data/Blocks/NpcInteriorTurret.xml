@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>InteriorTurret</TypeId>
+<SubtypeId>NpcLargeInteriorTurret</SubtypeId>
+</Id>
+<DisplayName>Npc Interior Turret</DisplayName>
+<Description>Description_InteriorTurret</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>NpcInteriorTurret</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<InventoryMaxVolume>0.384</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-76</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>125</PCU>
+<IsAirTight>false</IsAirTight>
+<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<AmmoMagazines>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>AutocannonClip</SubtypeId>
+</Id>
+<DisplayName>Autocannon Clip</DisplayName>
+<Mass>40</Mass>
+<Volume>24</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>16</Capacity>
+<AmmoDefinitionId Subtype="AutocannonShell" />
+<MinimalPricePerUnit>116165</MinimalPricePerUnit>
+<MinimumOfferAmount>30</MinimumOfferAmount>
+<MaximumOfferAmount>300</MaximumOfferAmount>
+<MinimumOrderAmount>10</MinimumOrderAmount>
+<MaximumOrderAmount>1000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>AutocannonClipDUAP</SubtypeId>
+</Id>
+<DisplayName>Depleted Uranium Autocannon Clip</DisplayName>
+<Mass>40</Mass>
+<Volume>24</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>16</Capacity>
+<AmmoDefinitionId Subtype="AutocannonShellDUAP" />
+<MinimalPricePerUnit>145640</MinimalPricePerUnit>
+<MinimumOfferAmount>30</MinimumOfferAmount>
+<MaximumOfferAmount>300</MaximumOfferAmount>
+<MinimumOrderAmount>10</MinimumOrderAmount>
+<MaximumOrderAmount>1000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>LargeCalibreAmmo</SubtypeId>
+</Id>
+<DisplayName>AP Artillery Shell</DisplayName>
+<Mass>100</Mass>
+<Volume>100</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="LargeCalibreShell" />
+<MinimalPricePerUnit>50806</MinimalPricePerUnit>
+<MinimumOfferAmount>50</MinimumOfferAmount>
+<MaximumOfferAmount>500</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>LargeCalibreAmmoHE</SubtypeId>
+</Id>
+<DisplayName>HE Artillery Shell</DisplayName>
+<Mass>100</Mass>
+<Volume>100</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="LargeCalibreShellHE" />
+<MinimalPricePerUnit>139717</MinimalPricePerUnit>
+<MinimumOfferAmount>50</MinimumOfferAmount>
+<MaximumOfferAmount>500</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>LargeCalibreAmmoDUAP</SubtypeId>
+</Id>
+<DisplayName>DUAP Artillery Shell</DisplayName>
+<Mass>100</Mass>
+<Volume>100</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="LargeCalibreShellDUAP" />
+<MinimalPricePerUnit>62596</MinimalPricePerUnit>
+<MinimumOfferAmount>50</MinimumOfferAmount>
+<MaximumOfferAmount>500</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>MediumCalibreAmmo</SubtypeId>
+</Id>
+<DisplayName>AP Assault Cannon Shell</DisplayName>
+<Mass>60</Mass>
+<Volume>30</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="MediumCalibreShell" />
+<MinimalPricePerUnit>21942</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>MediumCalibreAmmoHE</SubtypeId>
+</Id>
+<DisplayName>HE Assault Cannon Shell</DisplayName>
+<Mass>60</Mass>
+<Volume>30</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="MediumCalibreShellHE" />
+<MinimalPricePerUnit>56016</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>MediumCalibreAmmoDUAP</SubtypeId>
+</Id>
+<DisplayName>DUAP Assault Cannon Shell</DisplayName>
+<Mass>60</Mass>
+<Volume>30</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="MediumCalibreShellDUAP" />
+<MinimalPricePerUnit>27837</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>LargeRailgunAmmo</SubtypeId>
+</Id>
+<DisplayName>Large Standard Railgun Sabot</DisplayName>
+<Mass>60</Mass>
+<Volume>40</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="LargeRailgunSlug" />
+<MinimalPricePerUnit>17912</MinimalPricePerUnit>
+<MinimumOfferAmount>3</MinimumOfferAmount>
+<MaximumOfferAmount>15</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>LargeRailgunAmmoDUAP</SubtypeId>
+</Id>
+<DisplayName>Large Depleted Uranium Railgun Sabot</DisplayName>
+<Mass>60</Mass>
+<Volume>40</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="LargeRailgunSlugDUAP" />
+<MinimalPricePerUnit>39787</MinimalPricePerUnit>
+<MinimumOfferAmount>3</MinimumOfferAmount>
+<MaximumOfferAmount>15</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>SmallRailgunAmmoDUAP</SubtypeId>
+</Id>
+<DisplayName>Small Standard Railgun Sabot</DisplayName>
+<Mass>10</Mass>
+<Volume>8</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="SmallRailgunSlugDUAP" />
+<MinimalPricePerUnit>3582</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>50</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>SmallRailgunAmmoDUAP</SubtypeId>
+</Id>
+<DisplayName>Small Depleted Uranium Railgun Sabot</DisplayName>
+<Mass>10</Mass>
+<Volume>8</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="SmallRailgunSlugDUAP" />
+<MinimalPricePerUnit>7957</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>50</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+</AmmoMagazines>
+</Definitions>
+ 

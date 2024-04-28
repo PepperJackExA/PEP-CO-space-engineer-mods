@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>AutomaticRifleGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="600" ShootSoundName="WepRifleShot"/>
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.02</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.33</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_5p56x45mm" />
+<AmmoMagazine Subtype="RapidFireAutomaticRifleGun_Mag_50rd" />
+<AmmoMagazine Subtype="UltimateAutomaticRifleGun_Mag_30rd" />
+<AmmoMagazine Subtype="AutomaticRifleGun_Mag_20rd" />
+<AmmoMagazine Subtype="PreciseAutomaticRifleGun_Mag_5rd" />
+</AmmoMagazines>
+<ReloadTime>2400</ReloadTime>
+<RecoilJetpackVertical>15</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>15</RecoilJetpackHorizontal>
+<RecoilGroundVertical>0.56</RecoilGroundVertical>
+<RecoilGroundHorizontal>0.33</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>25</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>PreciseAutomaticRifleGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="900" ShootSoundName="WepRifleShot" ShotsInBurst="1" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.01</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.45</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_5p56x45mm" />
+<AmmoMagazine Subtype="RapidFireAutomaticRifleGun_Mag_50rd" />
+<AmmoMagazine Subtype="UltimateAutomaticRifleGun_Mag_30rd" />
+<AmmoMagazine Subtype="AutomaticRifleGun_Mag_20rd" />
+<AmmoMagazine Subtype="PreciseAutomaticRifleGun_Mag_5rd" />
+</AmmoMagazines>
+<ReloadTime>2400</ReloadTime>
+<RecoilJetpackVertical>15</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>15</RecoilJetpackHorizontal>
+<RecoilGroundVertical>0.80</RecoilGroundVertical>
+<RecoilGroundHorizontal>0.20</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>25</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>RapidFireAutomaticRifleGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="900" ShootSoundName="WepRifleShot" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.02</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.24</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<ReloadTime>2400</ReloadTime>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_5p56x45mm" />
+<AmmoMagazine Subtype="RapidFireAutomaticRifleGun_Mag_50rd" />
+<AmmoMagazine Subtype="UltimateAutomaticRifleGun_Mag_30rd" />
+<AmmoMagazine Subtype="AutomaticRifleGun_Mag_20rd" />
+<AmmoMagazine Subtype="PreciseAutomaticRifleGun_Mag_5rd" />
+</AmmoMagazines>
+<RecoilJetpackVertical>15</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>15</RecoilJetpackHorizontal>
+<RecoilGroundVertical>0.32</RecoilGroundVertical>
+<RecoilGroundHorizontal>0.38</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>25</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>UltimateAutomaticRifleGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="900" ShootSoundName="WepRifleShot" ShotsInBurst="3" />
+<DeviateShotAngle>0.5</DeviateShotAngle>
+<DeviateShotAngleAiming>0.02</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.24</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<AmmoMagazines>
+<AmmoMagazine Subtype="NATO_5p56x45mm" />
+<AmmoMagazine Subtype="RapidFireAutomaticRifleGun_Mag_50rd" />
+<AmmoMagazine Subtype="UltimateAutomaticRifleGun_Mag_30rd" />
+<AmmoMagazine Subtype="AutomaticRifleGun_Mag_20rd" />
+<AmmoMagazine Subtype="PreciseAutomaticRifleGun_Mag_5rd" />
+</AmmoMagazines>
+<ReloadTime>2400</ReloadTime>
+<RecoilJetpackVertical>15</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>15</RecoilJetpackHorizontal>
+<RecoilGroundVertical>0.25</RecoilGroundVertical>
+<RecoilGroundHorizontal>0.25</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>25</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>SemiAutoPistolGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="600" ShootSoundName="WepPlayPistolShot" ShotsInBurst="1"/>
+<DeviateShotAngle>1.0</DeviateShotAngle>
+<DeviateShotAngleAiming>0.02</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.22</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<ReloadTime>1200</ReloadTime>
+<AmmoMagazines>
+<AmmoMagazine Subtype="FullAutoPistolMagazine" />
+<AmmoMagazine Subtype="ElitePistolMagazine" />
+<AmmoMagazine Subtype="SemiAutoPistolMagazine" />
+</AmmoMagazines>
+<RecoilJetpackVertical>10</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>10</RecoilJetpackHorizontal>
+<RecoilGroundVertical>0.80</RecoilGroundVertical>
+<RecoilGroundHorizontal>0.60</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>25</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>FullAutoPistolGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="1200" ShootSoundName="WepPlayPistolShot"/>
+<DeviateShotAngle>1.0</DeviateShotAngle>
+<DeviateShotAngleAiming>0.02</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.20</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<ReloadTime>1200</ReloadTime>
+<AmmoMagazines>
+<AmmoMagazine Subtype="FullAutoPistolMagazine" />
+<AmmoMagazine Subtype="ElitePistolMagazine" />
+<AmmoMagazine Subtype="SemiAutoPistolMagazine" />
+</AmmoMagazines>
+<RecoilJetpackVertical>10</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>10</RecoilJetpackHorizontal>
+<RecoilGroundVertical>1.50</RecoilGroundVertical>
+<RecoilGroundHorizontal>0.75</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>25</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>ElitePistolGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="900" ShootSoundName="WepPlayPistolShot" ShotsInBurst="3"/>
+<DeviateShotAngle>1.0</DeviateShotAngle>
+<DeviateShotAngleAiming>0.01</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.22</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<ReloadTime>1200</ReloadTime>
+<AmmoMagazines>
+<AmmoMagazine Subtype="FullAutoPistolMagazine" />
+<AmmoMagazine Subtype="ElitePistolMagazine" />
+<AmmoMagazine Subtype="SemiAutoPistolMagazine" />
+</AmmoMagazines>
+<RecoilJetpackVertical>10</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>10</RecoilJetpackHorizontal>
+<RecoilGroundVertical>1.00</RecoilGroundVertical>
+<RecoilGroundHorizontal>0.50</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>25</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>FlarePistolGun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="120" ShootSoundName="WepPlayFlarePistolShot" FlightSoundName="FlareFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>1</DeviateShotAngle>
+<DeviateShotAngleAiming>1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="FlareClip" />
+</AmmoMagazines>
+<ReloadTime>1800</ReloadTime>
+<RecoilJetpackVertical>10</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>3</RecoilJetpackHorizontal>
+<RecoilGroundVertical>3</RecoilGroundVertical>
+<RecoilGroundHorizontal>1</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>25</RecoilResetTimeMilliseconds>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>BasicHandHeldLauncherGun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="240" ShootSoundName="WepRocketLaunchShot" FlightSoundName="MissileFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.5</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+</AmmoMagazines>
+<ReloadTime>3600</ReloadTime>
+<RecoilJetpackVertical>1</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>1</RecoilJetpackHorizontal>
+<RecoilGroundVertical>1</RecoilGroundVertical>
+<RecoilGroundHorizontal>1</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+</Weapon>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>AdvancedHandHeldLauncherGun</SubtypeId>
+</Id>
+<MissileAmmoData RateOfFire="240" ShootSoundName="WepRocketLaunchShot" FlightSoundName="MissileFlightSound" ShotsInBurst="1" />
+<DeviateShotAngle>3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.1</DeviateShotAngleAiming>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Missile200mm" />
+</AmmoMagazines>
+<ReloadTime>3600</ReloadTime>
+<RecoilJetpackVertical>1</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>1</RecoilJetpackHorizontal>
+<RecoilGroundVertical>1</RecoilGroundVertical>
+<RecoilGroundHorizontal>1</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+</Weapon>
+</Weapons>
+</Definitions>
+ 

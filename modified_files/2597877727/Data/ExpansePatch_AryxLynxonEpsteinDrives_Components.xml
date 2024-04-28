@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>AryxLynxon_FusionComponent</SubtypeId>
+</Id>
+<DisplayName>Fusion Coil</DisplayName>
+<Mass>35</Mass>
+<Volume>25</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>40</MaxIntegrity>
+<DropProbability>0.45</DropProbability>
+<Health>40</Health>
+<MinimalPricePerUnit>10</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>500</MaximumOfferAmount>
+<MinimumOrderAmount>10</MinimumOrderAmount>
+<MaximumOrderAmount>100</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+</Component>
+</Components>
+</Definitions>
+ 

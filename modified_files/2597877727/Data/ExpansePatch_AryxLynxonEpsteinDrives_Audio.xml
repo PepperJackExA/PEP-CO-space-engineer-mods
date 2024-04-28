@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ArcARYLYN_edrive_standard_burn</SubtypeId>
+</Id>
+<Category>SHIP_JET</Category>
+<MaxDistance>3000</MaxDistance>
+<Volume>2.0</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\ARLN_EPST\arylyn_edrive_ignition_01.wav</Start>
+<Loop>Audio\ARLN_EPST\aryx_lynxon_drive_loop_01.wav</Loop>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\ARLN_EPST\arylyn_edrive_loop_01.wav</Start>
+<Loop>Audio\ARLN_EPST\arylyn_edrive_loop_02.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ArcARYLYN_Very_Large_Epstein_Drive_Fire</SubtypeId>
+</Id>
+<Category>SHIP_JET</Category>
+<MaxDistance>3000</MaxDistance>
+<Volume>0.5</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D3">
+<Loop>Audio\ARLN_EPST\aryx_lynxon_heavy_drive_loop.wav</Loop>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>SuperLaserUpgrade_Block</SubtypeId>
+</Id>
+<DisplayName>Super Laser Upgrade Mod</DisplayName>
+<Description>Placed along the pieces of the weapon. Group and fire along side the other pieces. Will increase damage and power draw.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="150" Subtype="SteelPlate"/>
+<Component Count="100" Subtype="Construction"/>
+<Component Count="25" Subtype="LargeTube" />
+<Component Count="25" Subtype="MetalGrid" />
+<Component Count="250" Subtype="PowerCell" />
+<Component Count="50" Subtype="Motor" />
+<Component Count="75" Subtype="Superconductor" />
+<Component Count="150" Subtype="Computer"/>
+<Component Count="50" Subtype="Construction"/>
+<Component Count="150" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="Superconductor"/>
+<BuildTimeSeconds>150</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<RequiredPowerInput>0.00002</RequiredPowerInput>
+<PCU>500</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

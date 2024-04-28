@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Zakosetara Heavy Railgun</SubtypeId>
+</Id>
+<DisplayName>Zakosetara Heavy Railgun</DisplayName>
+<Description>Zakosetara-series fixed railguns were extremely powerful, and it was feared that the recoil from these guns would buckle the entire hull of the onetime generation ship, as well as causing ship-wide power grid failures, due to the ship not being designed for combat. [8km/s muzzle velocity, 10km range - Accepts 120mm Lead-Steel Sabots]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="GravityGenerator" Count="30" />
+<Component Subtype="PowerCell" Count="110" />
+<Component Subtype="Superconductor" Count="80" />
+<Component Subtype="Girder" Count="70" />
+<Component Subtype="SmallTube" Count="90" />
+<Component Subtype="LargeTube" Count="110" />
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="BelterComponent" Count="50" />
+<Component Subtype="Motor" Count="140" />
+<Component Subtype="Computer" Count="250" />
+<Component Subtype="MetalGrid" Count="280" />
+<Component Subtype="Construction" Count="150" />
+<Component Subtype="SteelPlate" Count="480" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<BlockPairName>Zakosetara Heavy Railgun</BlockPairName>
+<InventoryMaxVolume>0.32</InventoryMaxVolume>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<PCU>2000</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallGatlingGun</TypeId>
+<SubtypeId>Zakosetara Heavy Railgun MES</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>Zakosetara Heavy Railgun MES</DisplayName>
+<Description>Zakosetara-series fixed railguns were extremely powerful, and it was feared that the recoil from these guns would buckle the entire hull of the onetime generation ship, as well as causing ship-wide power grid failures, due to the ship not being designed for combat.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="GravityGenerator" Count="30" />
+<Component Subtype="PowerCell" Count="110" />
+<Component Subtype="Superconductor" Count="80" />
+<Component Subtype="Girder" Count="70" />
+<Component Subtype="SmallTube" Count="90" />
+<Component Subtype="LargeTube" Count="110" />
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="BelterComponent" Count="50" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>HighTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="140" />
+<Component Subtype="Computer" Count="250" />
+<Component Subtype="MetalGrid" Count="280" />
+<Component Subtype="Construction" Count="150" />
+<Component Subtype="SteelPlate" Count="480" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<BlockPairName>Zakosetara Heavy Railgun MES</BlockPairName>
+<InventoryMaxVolume>0.32</InventoryMaxVolume>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<PCU>2000</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

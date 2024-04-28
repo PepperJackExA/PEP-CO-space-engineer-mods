@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ExpanseTurretGroup" />
+<DisplayName>Expanse Weapons - Turrets</DisplayName>
+<Description>Expanse Weapons turret weapons group.</Description>
+<Blocks>
+<Block Type="ConveyorSorter" Subtype="Nariman Dynamics PDC"/>
+<Block Type="ConveyorSorter" Subtype="Nariman Dynamics PDC Slope Base"/>
+<Block Type="ConveyorSorter" Subtype="Redfields Ballistics PDC"/>
+<Block Type="ConveyorSorter" Subtype="Redfields Ballistics PDC Slope Base"/>
+<Block Type="ConveyorSorter" Subtype="Voltaire Collective Anti Personnel PDC"/>
+<Block Type="ConveyorSorter" Subtype="Ostman-Jazinski Flak Cannon"/>
+<Block Type="ConveyorSorter" Subtype="Outer Planets Alliance Point Defence Cannon"/>
+<Block Type="ConveyorSorter" Subtype="OPA Shotgun PDC"/>
+<Block Type="ConveyorSorter" Subtype="OPA Shotgun PDC Slope Base"/>
+<Block Type="ConveyorSorter" Subtype="UNN MA-15 Coilgun"/>
+<Block Type="ConveyorSorter" Subtype="Mounted Zakosetara Heavy Railgun"/>
+<Block Type="ConveyorSorter" Subtype="Farren-Pattern Heavy Railgun"/>
+<Block Type="ConveyorSorter" Subtype="Dawson-Pattern Medium Railgun"/>
+<Block Type="ConveyorSorter" Subtype="V-14 Stiletto Light Railgun"/>
+<Block Type="ConveyorSorter" Subtype="VX-12 Foehammer Ultra-Heavy Railgun"/>
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ExpanseFixedGroup" />
+<DisplayName>Expanse Weapons - Fixed</DisplayName>
+<Description>Expanse Weapons fixed weapons group.</Description>
+<Blocks>
+<Block Type="ConveyorSorter" Subtype="Glapion Collective Gatling Cannon"/>
+<Block Type="ConveyorSorter" Subtype="Kess Hashari Cannon"/>
+<Block Type="ConveyorSorter" Subtype="Zakosetara Heavy Railgun"/>
+<Block Type="ConveyorSorter" Subtype="T-47 Roci Light Fixed Railgun"/>
+<Block Type="ConveyorSorter" Subtype="Tycho Class Torpedo Mount"/>
+<Block Type="ConveyorSorter" Subtype="Apollo Class Torpedo Launcher"/>
+<Block Type="ConveyorSorter" Subtype="Artemis_Torpedo_Tube"/>
+<Block Type="ConveyorSorter" Subtype="Ares_Class_Torpedo_Launcher_F"/>
+<Block Type="ConveyorSorter" Subtype="Ares_Class_TorpedoLauncher"/>
+<Block Type="ConveyorSorter" Subtype="ZeusClass_Rapid_Torpedo_Launcher"/>
+<Block Type="ConveyorSorter" Subtype="LidarLG"/>
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

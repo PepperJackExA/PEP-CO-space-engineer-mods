@@ -1,0 +1,1843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2CubedAnglePt1</SubtypeId>
+</Id>
+<DisplayName>1x2 Cubic Angle Pt1</DisplayName>
+<Description>Corner Shape Pt1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2CubedAnglePt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2CubedAnglePt2</SubtypeId>
+</Id>
+<DisplayName>1x2 Cubic Angle Pt2</DisplayName>
+<Description>Corner Shape Pt2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2CubedAnglePt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHalfSlope</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope</DisplayName>
+<Description>Half Block Half Slope</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHalfSlope</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBCorner1</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner 1</DisplayName>
+<Description>Half Block Corner 1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBCorner1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBCorner2</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner 2</DisplayName>
+<Description>Half Block Corner 2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBCorner2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBCorner3</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner 3</DisplayName>
+<Description>Half Block Corner 3</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBCorner3</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBCorner4</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner 4</DisplayName>
+<Description>Half Block Corner 4</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBCorner4</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBCorner4a</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner 4a</DisplayName>
+<Description>Half Block Corner 4a</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBCorner4a</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBSteps</SubtypeId>
+</Id>
+<DisplayName>Half Block Steps</DisplayName>
+<Description>Half Block Steps</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBSteps</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSCornerAngle</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner Angle</DisplayName>
+<Description>Half Block Corner Transition</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSCornerAngle</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt1</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1</DisplayName>
+<Description>Half Block Half Slope Pt1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt1Corner1</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1 Corner 1</DisplayName>
+<Description>Half Block Half Slope Pt1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt1Corner1a</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1 Corner 1a</DisplayName>
+<Description>Half Block Half Slope Pt1a</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner1a</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt1Corner2</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1 Corner 2</DisplayName>
+<Description>Half Block Half Slope Pt1 Corner 2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt1Corner3</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1 Corner 3</DisplayName>
+<Description>Half Block Half Slope Pt1 Corner 3</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner3</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt1Corner3a</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1 Corner 3a</DisplayName>
+<Description>Half Block Half Slope Pt1 Corner 3a</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner3a</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt2</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2</DisplayName>
+<Description>Half Block Half Slope Pt2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt2Corner1</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2 Corner 1</DisplayName>
+<Description>Half Block Half Slope Pt2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt2Corner1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt2Corner1a</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2 Corner 1a</DisplayName>
+<Description>Half Block Half Slope Pt1a</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt2Corner1a</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt2Corner2</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2 Corner 2</DisplayName>
+<Description>Half Block Half Slope Pt2 Corner 2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt2Corner2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt2Corner3</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2 Corner 3</DisplayName>
+<Description>Half Block Half Slope Pt2 Corner 3</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt2Corner3</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHSPt2Corner3a</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2 Corner 3a</DisplayName>
+<Description>Half Block Half Slope Pt2 Corner 3a</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner3a</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSG1x2MixedTransitionPt1</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Transition Pt1</DisplayName>
+<Description>Mixed Transition Part</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2MixedTransitionPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSG1x2MixedTransitionPt1Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Transition Pt1 Inv</DisplayName>
+<Description>Mixed Transition Part Inv</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2MixedTransitionPt1Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSG1x2MixedTransitionPt2</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Transition Pt2</DisplayName>
+<Description>Mixed Transition Part 2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2MixedTransitionPt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSG1x2MixedTransitionPt2Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Transition Pt2 Inv</DisplayName>
+<Description>Mixed Transition Part 2 Inv</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2MixedTransitionPt2Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHalfCube</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Part</DisplayName>
+<Description>Half Block Half Part</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPEDPHBHalfCube</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBHalfHalfCube</SubtypeId>
+</Id>
+<DisplayName>Half Block mini Cube</DisplayName>
+<Description>Half Block Mini Cube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHalfHalfCube</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBSmallSlope</SubtypeId>
+</Id>
+<DisplayName>Half Block 45° Mini Slope</DisplayName>
+<Description>Half Block 45° Mini Slope</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBSmallSlope</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHB45dCorner</SubtypeId>
+</Id>
+<DisplayName>Half Block 45° Corner</DisplayName>
+<Description>Half Block 45° Corner</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHB45dCorner</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHB1x2Slope</SubtypeId>
+</Id>
+<DisplayName>Half Block 1x2 Mini Slope</DisplayName>
+<Description>Half Block 1x2 Mini Slope</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHB1x2Slope</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHB1x2SlopeInv</SubtypeId>
+</Id>
+<DisplayName>Half Block 1x2 Mini Slope Inv</DisplayName>
+<Description>Half Block 1x2 Mini Slope Inv</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHB1x2SlopeInv</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHB1x2SlopePt2</SubtypeId>
+</Id>
+<DisplayName>Half Block 1x2 Mini Slope Pt2</DisplayName>
+<Description>Half Block 1x2 Mini Slope Pt2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHB1x2SlopePt2</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHB1x2SlopePt2Inv</SubtypeId>
+</Id>
+<DisplayName>Half Block 1x2 Mini Slope Pt2 Inv</DisplayName>
+<Description>Half Block 1x2 Mini Slope Pt2 Inv</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHB1x2SlopePt2Inv</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBVanillaCornerPart</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner Part for 45°</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBVanillaCornerPart</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGHBVanillaCornerPart2</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner Part 2 for 45°</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBVanillaCornerPart2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGSlopeTransitionPt1</SubtypeId>
+</Id>
+<DisplayName>Slope Transition Pt 1</DisplayName>
+<Description>Sloped Transition Pt 1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPSlopedTransitionPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGSlopeTransitionPt1C</SubtypeId>
+</Id>
+<DisplayName>Slope Transition Pt 1C</DisplayName>
+<Description>Sloped Transition Pt 1C</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPSlopedTransitionPt1C</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGSlopeTransitionPt2</SubtypeId>
+</Id>
+<DisplayName>Slope Transition Pt 2</DisplayName>
+<Description>Sloped Transition Pt 2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPSlopedTransitionPt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGSlopeTransitionPt2C</SubtypeId>
+</Id>
+<DisplayName>Slope Transition Pt 2C</DisplayName>
+<Description>Sloped Transition Pt 2C</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPSlopedTransitionPt2C</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGDoubleSlopeTransitionPt1</SubtypeId>
+</Id>
+<DisplayName>Double slopes HB Pt 1</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPDSTransitionPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGDoubleSlopeTransitionPt1Inv</SubtypeId>
+</Id>
+<DisplayName>Double slopes HB Pt 1 Inv</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPDSTransitionPt1Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGDoubleSlopeTransitionPt2</SubtypeId>
+</Id>
+<DisplayName>Double slopes HB Pt 2</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPDSTransitionPt2</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGDoubleSlopeTransitionPt2Inv</SubtypeId>
+</Id>
+<DisplayName>Double slopes HB Pt 2 Inv</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPDSTransitionPt2Inv</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2MixedAnglePt1</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Cubic Angle Pt1</DisplayName>
+<Description>Mixed Corner Shape Pt1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2MixedAnglePt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2MixedAnglePt1Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Cubic Angle Pt1 Inv</DisplayName>
+<Description>Mixed Corner Shape Pt1 Inv</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2MixedAnglePt1Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2MixedAnglePt2</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Cubic Angle Pt2</DisplayName>
+<Description>Mixed Corner Shape Pt2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2MixedAnglePt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2MixedAnglePt2Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Cubic Angle Pt2 Inv</DisplayName>
+<Description>Mixed Corner Shape Pt2 Inv</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2MixedAnglePt2Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2CubeCornerPt1</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner Pt1</DisplayName>
+<Description>1x2 Cube Corner Pt1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2CubeCornerPt2</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner Pt2</DisplayName>
+<Description>1x2 Cube Corner Pt2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt2</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2CubeCorner2Pt1</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner 2 Pt1</DisplayName>
+<Description>1x2 Cube Corner 2 Pt1</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2CubeCorner2Pt1Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner 2 Pt1 Inv</DisplayName>
+<Description>1x2 Cube Corner 2 Pt1 Inv</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt1Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2CubeCorner2Pt2</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner 2 Pt2</DisplayName>
+<Description>1x2 Cube Corner 2 Pt2</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGArmor1x2CubeCorner2Pt2Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner 2 Pt2 Inv</DisplayName>
+<Description>1x2 Cube Corner 2 Pt2 Inv</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt2Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPSGVanillaPt1x2Slope</SubtypeId>
+</Id>
+<DisplayName>HalfBlock Pt 1x2 Slope Corner</DisplayName>
+<Description>Vanilla Pt 1x2 Slope</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPVanillaPt1x2Slope</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2CubedAnglePt1</SubtypeId>
+</Id>
+<DisplayName>1x2 Cubic Angle Pt1</DisplayName>
+<Description>Corner Shape Pt1</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="14" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2CubedAnglePt1</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2CubedAnglePt2</SubtypeId>
+</Id>
+<DisplayName>1x2 Cubic Angle Pt2</DisplayName>
+<Description>Corner Shape Pt2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2CubedAnglePt2</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHalfSlope</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope</DisplayName>
+<Description>Half Block Half Slope</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHalfSlope</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBCorner1</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner 1</DisplayName>
+<Description>Half Block Corner 1</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="11" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBCorner1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBCorner2</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner 2</DisplayName>
+<Description>Half Block Corner 2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="17" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBCorner2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBCorner3</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner 3</DisplayName>
+<Description>Half Block Corner 3</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="13" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBCorner3</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBCorner4</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner 4</DisplayName>
+<Description>Half Block Corner 4</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBCorner4</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBCorner4a</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner 4a</DisplayName>
+<Description>Half Block Corner 4a</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="7" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBCorner4a</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBSteps</SubtypeId>
+</Id>
+<DisplayName>Half Block Steps</DisplayName>
+<Description>Half Block Steps</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBSteps</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSCornerAngle</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner Angle</DisplayName>
+<Description>Half Block Corner Transition</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSCornerAngle</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt1</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1</DisplayName>
+<Description>Half Block Half Slope Pt1</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt1Corner1</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1 Corner 1</DisplayName>
+<Description>Half Block Half Slope Pt1</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt1Corner1a</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1 Corner 1a</DisplayName>
+<Description>Half Block Half Slope Pt1a</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner1a</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt1Corner2</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1 Corner 2</DisplayName>
+<Description>Half Block Half Slope Pt1 Corner 2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SteelPlate" Count="7" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt1Corner3</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1 Corner 3</DisplayName>
+<Description>Half Block Half Slope Pt1 Corner 3</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner3</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt1Corner3a</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt1 Corner 3a</DisplayName>
+<Description>Half Block Half Slope Pt1 Corner 3a</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner3a</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt2</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2</DisplayName>
+<Description>Half Block Half Slope Pt2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt2Corner1</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2 Corner 1</DisplayName>
+<Description>Half Block Half Slope Pt2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt2Corner1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt2Corner1a</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2 Corner 1a</DisplayName>
+<Description>Half Block Half Slope Pt1a</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt2Corner1a</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt2Corner2</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2 Corner 2</DisplayName>
+<Description>Half Block Half Slope Pt2 Corner 2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt2Corner2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt2Corner3</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2 Corner 3</DisplayName>
+<Description>Half Block Half Slope Pt2 Corner 3</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt2Corner3</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHSPt2Corner3a</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Slope Pt2 Corner 3a</DisplayName>
+<Description>Half Block Half Slope Pt2 Corner 3a</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHSPt1Corner3a</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLG1x2MixedTransitionPt1</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Transition Pt1</DisplayName>
+<Description>Mixed Transition Part</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2MixedTransitionPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLG1x2MixedTransitionPt1Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Transition Pt1 Inv</DisplayName>
+<Description>Mixed Transition Part Inv</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2MixedTransitionPt1Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLG1x2MixedTransitionPt2</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Transition Pt2</DisplayName>
+<Description>Mixed Transition Part 2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2MixedTransitionPt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLG1x2MixedTransitionPt2Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Transition Pt2 Inv</DisplayName>
+<Description>Mixed Transition Part 2 Inv</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2MixedTransitionPt2Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHalfCube</SubtypeId>
+</Id>
+<DisplayName>Half Block Half Part</DisplayName>
+<Description>Half Block Half Part</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPEDPHBHalfCube</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBHalfHalfCube</SubtypeId>
+</Id>
+<DisplayName>Half Block mini Cube</DisplayName>
+<Description>Half Block Mini Cube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBHalfHalfCube</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBSmallSlope</SubtypeId>
+</Id>
+<DisplayName>Half Block 45° Mini Slope</DisplayName>
+<Description>Half Block 45° Mini Slope</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBSmallSlope</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHB45dCorner</SubtypeId>
+</Id>
+<DisplayName>Half Block 45° Corner</DisplayName>
+<Description>Half Block 45° Corner</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="9" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHB45dCorner</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHB1x2Slope</SubtypeId>
+</Id>
+<DisplayName>Half Block 1x2 Mini Slope</DisplayName>
+<Description>Half Block 1x2 Mini Slope</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHB1x2Slope</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHB1x2SlopeInv</SubtypeId>
+</Id>
+<DisplayName>Half Block 1x2 Mini Slope Inv</DisplayName>
+<Description>Half Block 1x2 Mini Slope Inv</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHB1x2SlopeInv</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHB1x2SlopePt2</SubtypeId>
+</Id>
+<DisplayName>Half Block 1x2 Mini Slope Pt2</DisplayName>
+<Description>Half Block 1x2 Mini Slope Pt2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHB1x2SlopePt2</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHB1x2SlopePt2Inv</SubtypeId>
+</Id>
+<DisplayName>Half Block 1x2 Mini Slope Pt2 Inv</DisplayName>
+<Description>Half Block 1x2 Mini Slope Pt2 Inv</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHB1x2SlopePt2Inv</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBVanillaCornerPart</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner Part for 45°</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBVanillaCornerPart</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGHBVanillaCornerPart2</SubtypeId>
+</Id>
+<DisplayName>Half Block Corner Part 2 for 45°</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPHBVanillaCornerPart2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGSlopeTransitionPt1</SubtypeId>
+</Id>
+<DisplayName>Slope Transition Pt 1</DisplayName>
+<Description>Sloped Transition Pt 1</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="6" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPSlopedTransitionPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGSlopeTransitionPt1C</SubtypeId>
+</Id>
+<DisplayName>Slope Transition Pt 1C</DisplayName>
+<Description>Sloped Transition Pt 1C</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPSlopedTransitionPt1C</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGSlopeTransitionPt2</SubtypeId>
+</Id>
+<DisplayName>Slope Transition Pt 2</DisplayName>
+<Description>Sloped Transition Pt 2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPSlopedTransitionPt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGSlopeTransitionPt2C</SubtypeId>
+</Id>
+<DisplayName>Slope Transition Pt 2C</DisplayName>
+<Description>Sloped Transition Pt 2C</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="14" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPSlopedTransitionPt2C</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGDoubleSlopeTransitionPt1</SubtypeId>
+</Id>
+<DisplayName>Double slopes HB Pt 1</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="9" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPDSTransitionPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGDoubleSlopeTransitionPt1Inv</SubtypeId>
+</Id>
+<DisplayName>Double slopes HB Pt 1 Inv</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="9" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPDSTransitionPt1Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGDoubleSlopeTransitionPt2</SubtypeId>
+</Id>
+<DisplayName>Double slopes HB Pt 2</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPDSTransitionPt2</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGDoubleSlopeTransitionPt2Inv</SubtypeId>
+</Id>
+<DisplayName>Double slopes HB Pt 2 Inv</DisplayName>
+<Description>Half Block Corner Part</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPDSTransitionPt2Inv</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2MixedAnglePt1</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Cubic Angle Pt1</DisplayName>
+<Description>Mixed Corner Shape Pt1</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2MixedAnglePt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2MixedAnglePt1Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Cubic Angle Pt1 Inv</DisplayName>
+<Description>Mixed Corner Shape Pt1 Inv</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2MixedAnglePt1Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2MixedAnglePt2</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Cubic Angle Pt2</DisplayName>
+<Description>Mixed Corner Shape Pt2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2MixedAnglePt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2MixedAnglePt2Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Mixed Cubic Angle Pt2 Inv</DisplayName>
+<Description>Mixed Corner Shape Pt2 Inv</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPArmor1x2MixedAnglePt2Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2CubeCornerPt1</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner Pt1</DisplayName>
+<Description>1x2 Cube Corner Pt1</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="9" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2CubeCornerPt2</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner Pt2</DisplayName>
+<Description>1x2 Cube Corner Pt2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt2</BlockPairName>
+<IsAirTight>false</IsAirTight>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2CubeCorner2Pt1</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner 2 Pt1</DisplayName>
+<Description>1x2 Cube Corner 2 Pt1</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="14" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2CubeCorner2Pt1Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner 2 Pt1 Inv</DisplayName>
+<Description>1x2 Cube Corner 2 Pt1 Inv</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="14" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt1Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2CubeCorner2Pt2</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner 2 Pt2</DisplayName>
+<Description>1x2 Cube Corner 2 Pt2</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGArmor1x2CubeCorner2Pt2Inv</SubtypeId>
+</Id>
+<DisplayName>1x2 Cube Corner 2 Pt2 Inv</DisplayName>
+<Description>1x2 Cube Corner 2 Pt2 Inv</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDP1x2CubeCornerPt2Inv</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EDPLGVanillaPt1x2Slope</SubtypeId>
+</Id>
+<DisplayName>HalfBlock Pt 1x2 Slope Corner</DisplayName>
+<Description>Vanilla Pt 1x2 Slope</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="17" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>EDPVanillaPt1x2Slope</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

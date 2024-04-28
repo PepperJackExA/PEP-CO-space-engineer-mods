@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>PEPCO_LG_BioDiesel_LargeTankStorage</SubtypeId>
+</Id>
+<DisplayName>Large BioDiesel Tank</DisplayName>
+<Description>Storage for BioDiesel Jerrycans. It acts like a H2O2 generator and turns the Jerrycans into gas to be used in engines and propulsion systems.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="160" />
+<Component Subtype="LargeTube" Count="80" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SteelPlate" Count="120" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<IsAirTight>true</IsAirTight>
+<BlockPairName>PEPCO_LARGEBIODIESELTANK</BlockPairName>
+<BuildTimeSeconds>22</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>0.5</IceConsumptionPerSecond>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>PEPCO_BioDiesel</SubtypeId>
+</Id>
+<IceToGasRatio>0.2</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Jerrycantogas</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>PEPCO_LG_BioDiesel_SmallTankStorage</SubtypeId>
+</Id>
+<DisplayName>Small BioDiesel Tank</DisplayName>
+<Description>Storage for BioDiesel Jerrycans. It acts like a H2O2 generator and turns the Jerrycans into gas to be used in engines and propulsion systems.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<IsAirTight>true</IsAirTight>
+<BlockPairName>PEPCO_SMALLBIODIESELTANK</BlockPairName>
+<BuildTimeSeconds>22</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>0.5</IceConsumptionPerSecond>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>PEPCO_BioDiesel</SubtypeId>
+</Id>
+<IceToGasRatio>0.2</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Jerrycantogas</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>PEPCO_SG_BioDiesel_LargeTankStorage</SubtypeId>
+</Id>
+<DisplayName>Large BioDiesel Gas Tank</DisplayName>
+<Description>Storage for BioDiesel Jerrycans. It acts like a H2O2 generator and turns the Jerrycans into gas to be used in engines and propulsion systems.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="SmallTube" Count="30" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>0.5</IceConsumptionPerSecond>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>PEPCO_BioDiesel</SubtypeId>
+</Id>
+<IceToGasRatio>0.2</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Jerrycantogas</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<BlockPairName>PEPCO_LARGEBIODIESELTANK</BlockPairName>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>PEPCO_SG_BioDiesel_SmallTankStorage</SubtypeId>
+</Id>
+<DisplayName>Small BioDiesel Gas Tank</DisplayName>
+<Description>Storage for BioDiesel Jerrycans. It acts like a H2O2 generator and turns the Jerrycans into gas to be used in engines and propulsion systems.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>0.5</IceConsumptionPerSecond>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>PEPCO_BioDiesel</SubtypeId>
+</Id>
+<IceToGasRatio>0.2</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Jerrycantogas</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<BlockPairName>PEPCO_SMALLBIODIESELTANK</BlockPairName>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ProjectorDefinition">
+<Id>
+<TypeId>Projector</TypeId>
+<SubtypeId>MES-Blocks-ShipyardTerminal</SubtypeId>
+</Id>
+<DisplayName>Shipyard Terminal</DisplayName>
+<Description>
+</Description>
+<Public>false</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Display" Count="10" />
+<Component Subtype="ProprietaryTech" Count="1" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="ProprietaryTech" Index="0" />
+<BlockPairName>ShipyardTerminal</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PrimarySound>BlockProjectorOn</PrimarySound>
+<IdleSound>BlockProjectorOff</IdleSound>
+<PCU>150</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>MES-Blocks-SuitUpgradeStation</SubtypeId>
+</Id>
+<DisplayName>Suit Upgrade Station</DisplayName>
+<Description>
+</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="ProprietaryTech" Count="1" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="ProprietaryTech" Index="0" />
+<BlockPairName>ML_Suit_Large</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<string>Textures\GUI\Icons\buttons\ThreeButton.dds</string>
+<string>Textures\GUI\Icons\buttons\FourButton.dds</string>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>MES-Blocks-ResearchTerminal</SubtypeId>
+</Id>
+<DisplayName>Research Terminal</DisplayName>
+<Public>false</Public>
+<Description>This terminal contains downloadable research points.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="ProprietaryTech" Count="1" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Construction" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>MESResearchTerminal</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+<BlockPositions></BlockPositions>
+</Definitions>
+ 

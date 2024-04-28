@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>AudioDefinition</TypeId>
+<SubtypeId>Redfields Ballistics PDC Audio</SubtypeId>
+</Id>
+<Category>WEP_TURR</Category>
+<MaxDistance>800</MaxDistance>
+<Volume>0.5</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D3">
+<Loop>Audio\20mm_Vulcan_Large_Turret_Audio_Start.xwm</Loop>
+<End>Audio\20mm_Vulcan_Large_Turret_Audio_End.xwm</End>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

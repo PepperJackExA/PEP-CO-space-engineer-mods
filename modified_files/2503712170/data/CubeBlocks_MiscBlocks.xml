@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMGratedCatwalkPassageSupported</SubtypeId>
+</Id>
+<DisplayName>Grated Catwalk Passage Supported</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SmallTube" Count="48"/>
+<Component Subtype="Construction" Count="3"/>
+<Component Subtype="InteriorPlate" Count="78"/>
+<Component Subtype="SmallTube" Count="11"/>
+<Component Subtype="Construction" Count="26"/>
+<Component Subtype="Girder" Count="6"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="2"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>GCMGratedCatwalkPassageSupported</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMGratedCatwalkPassageSupportedStraight</SubtypeId>
+</Id>
+<DisplayName>Grated Catwalk Passage Supported w/ Rails</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SmallTube" Count="48"/>
+<Component Subtype="Construction" Count="7"/>
+<Component Subtype="InteriorPlate" Count="78"/>
+<Component Subtype="SmallTube" Count="5"/>
+<Component Subtype="Construction" Count="26"/>
+<Component Subtype="Girder" Count="6"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="2"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>GCMGratedCatwalkPassageSupportedStraight</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMGratedCatwalkPassageBaseless</SubtypeId>
+</Id>
+<DisplayName>Grated Catwalk Passage Unsupported</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SmallTube" Count="48"/>
+<Component Subtype="Construction" Count="3"/>
+<Component Subtype="InteriorPlate" Count="74"/>
+<Component Subtype="SmallTube" Count="11"/>
+<Component Subtype="Construction" Count="26"/>
+<Component Subtype="Girder" Count="2"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="2"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>GCMGratedCatwalkPassageBaseless</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>GCMGratedCatwalkPassageBaselessStraight</SubtypeId>
+</Id>
+<DisplayName>Grated Catwalk Passage Unsupported w/ Rails</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SmallTube" Count="48"/>
+<Component Subtype="Construction" Count="7"/>
+<Component Subtype="InteriorPlate" Count="74"/>
+<Component Subtype="SmallTube" Count="5"/>
+<Component Subtype="Construction" Count="26"/>
+<Component Subtype="Girder" Count="2"/>
+</Components>
+<CriticalComponent Subtype="Construction" Index="2"/>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+<BlockPairName>GCMGratedCatwalkPassageBaselessStraight</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

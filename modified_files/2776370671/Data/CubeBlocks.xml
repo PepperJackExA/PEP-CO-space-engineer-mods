@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ExhaustBlockDefinition">
+<Id>
+<TypeId>ExhaustBlock</TypeId>
+<SubtypeId>SmallExhaustPipe2</SubtypeId>
+</Id>
+<DisplayName>  </DisplayName>
+<Description>Description_ExhaustPipe</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ExhaustPipe2</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+<string>Fire0</string>
+<RequiredPowerInput>0</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+<Id>
+<TypeId>CameraBlock</TypeId>
+<SubtypeId>ScopeCamera</SubtypeId>
+</Id>
+<DisplayName></DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+<Id>
+<TypeId>CameraBlock</TypeId>
+<SubtypeId>ScopeCameraPreciseAutomaticRifleItem</SubtypeId>
+</Id>
+<DisplayName></DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>WeaponRacksL</SubtypeId>
+</Id>
+<DisplayName>Weapon Racks</DisplayName>
+<Public>true</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<BlockPairName>WeaponRacksL</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>WeaponRacksS</SubtypeId>
+</Id>
+<DisplayName>Weapon Racks</DisplayName>
+<Public>true</Public>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<BlockPairName>WeaponRacksL</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>WeaponRackL</SubtypeId>
+</Id>
+<DisplayName>Weapon Rack</DisplayName>
+<Public>true</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="InteriorPlate" Count="8" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<BlockPairName>WeaponRackS</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>WeaponRackS</SubtypeId>
+</Id>
+<DisplayName>Weapon Rack</DisplayName>
+<Public>true</Public>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="InteriorPlate" Count="8" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<BlockPairName>WeaponRackS</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>SB_BoardingRamp</SubtypeId>
+</Id>
+<DisplayName>Boarding Ramp</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="16" />
+<Component Subtype="InteriorPlate" Count="16" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="12" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="InteriorPlate" Count="8" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>BoardingRamp</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PowerConsumptionIdle>0.00002</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.002</PowerConsumptionMoving>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<Name>BoardingRamp_Hydraulic</Name>
+<Name>BoardingRamp_Ramp</Name>
+<Speed>1.1368</Speed>
+<OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound>
+<Speed>20</Speed>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>BoardingRamp</SubtypeId>
+</Id>
+<DisplayName>Boarding Ramp</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="16" />
+<Component Subtype="InteriorPlate" Count="16" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="12" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="InteriorPlate" Count="8" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>BoardingRamp</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PowerConsumptionIdle>0.00002</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.002</PowerConsumptionMoving>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<Name>BoardingRamp_Hydraulic</Name>
+<Name>BoardingRamp_Ramp</Name>
+<Speed>1.1368</Speed>
+<OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound>
+<Speed>20</Speed>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

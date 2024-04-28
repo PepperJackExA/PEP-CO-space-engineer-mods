@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Container>
+<Id>
+<TypeId>StoreBlock</TypeId>
+<SubtypeId>NPC_Dummies_Store_Standing</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="NPC_Dummies_Store_Standing" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>StoreBlock</TypeId>
+<SubtypeId>NPC_Dummies_Store_Standing_Small</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="NPC_Dummies_Store_Standing_Small" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>StoreBlock</TypeId>
+<SubtypeId>NPC_Dummies_Store_Desk</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="NPC_Dummies_Store_Desk" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+</Definitions>
+ 

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_CraftingComponentBlockDefinition">
+<Id>
+<TypeId>MyObjectBuilder_CraftingComponentBlock</TypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>ModName</SubtypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_TimerComponentDefinition">
+<Id>
+<TypeId>TimerComponent</TypeId>
+<SubtypeId>AstronautBackpack</SubtypeId>
+</Id>
+<TimeToRemoveMin>5</TimeToRemoveMin>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>AstronautBackpack</SubtypeId>
+</Id>
+<Volume>1</Volume>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_UseObjectsComponentDefinition">
+<Id>
+<TypeId>UseObjectsComponent</TypeId>
+<SubtypeId>AstronautBackpack</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModelComponentDefinition">
+<Id>
+<TypeId>ModelComponent</TypeId>
+<SubtypeId>AstronautBackpack</SubtypeId>
+</Id>
+<DisplayName>DisplayName_AstronautBackpack</DisplayName>
+<Mass>5</Mass>
+<Volume>60</Volume>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_PhysicsBodyComponentDefinition">
+<Id>
+<TypeId>PhysicsBodyComponent</TypeId>
+<SubtypeId>AstronautBackpack</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Default_Astronaut</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>SpaceCharacterHealth</SubtypeId>
+</Stat>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Default_Astronaut_Female</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>SpaceCharacterHealth</SubtypeId>
+</Stat>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Space_spider</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>SpiderHealth</SubtypeId>
+</Stat>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Space_Wolf</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>WolfHealth</SubtypeId>
+</Stat>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>SmallBlockSmallContainer</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>SmallBlockMediumContainer</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>SmallBlockLargeContainer</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>LargeBlockSmallContainer</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>LargeBlockLargeContainer</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>LargeBlockLargeIndustrialContainer</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>LargeBlockLockers</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>LargeBlockLockerRoomCorner</SubtypeId>
+</Id>
+<TypeId>Datapad</TypeId>
+<SubtypeId>Datapad</SubtypeId>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>LargeBlockLockerRoom</SubtypeId>
+</Id>
+<TypeId>Datapad</TypeId>
+<SubtypeId>Datapad</SubtypeId>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>LargeBlockWeaponRack</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>SmallBlockWeaponRack</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>CustomData</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>SafeZoneBlock</SubtypeId>
+</Id>
+<Volume>0.005</Volume>
+<TypeId>Component</TypeId>
+<SubtypeId>ZoneChip</SubtypeId>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>TargetDummy</SubtypeId>
+</Id>
+<Volume>0.09</Volume>
+<TypeId>Component</TypeId>
+<SubtypeId>SteelPlate</SubtypeId>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>StoreBlock</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>VendingMachine</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>LargeBlockBed</SubtypeId>
+</Id>
+<Volume>0.4</Volume>
+<TypeId>Datapad</TypeId>
+<SubtypeId>Datapad</SubtypeId>
+<TypeId>PhysicalObject</TypeId>
+<SubtypeId>SpaceCredit</SubtypeId>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>Freight1</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>Freight2</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>Freight3</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>DeadBody01</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>DeadBody02</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>DeadBody03</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>DeadBody04</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>DeadBody05</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>DeadBody06</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_TargetFocusComponentDefinition">
+<Id>
+<TypeId>TargetFocusComponent</TypeId>
+<SubtypeId>Character</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_TargetLockingComponentDefinition">
+<Id>
+<TypeId>TargetLockingComponent</TypeId>
+<SubtypeId>Character</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityCapacitorComponentDefinition">
+<Id>
+<TypeId>EntityCapacitorComponent</TypeId>
+<SubtypeId>FixedCoilgun</SubtypeId>
+</Id>
+<Capacity>0.075</Capacity>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityCapacitorComponentDefinition">
+<Id>
+<TypeId>EntityCapacitorComponent</TypeId>
+<SubtypeId>CoilgunTurret</SubtypeId>
+</Id>
+<Capacity>0.075</Capacity>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

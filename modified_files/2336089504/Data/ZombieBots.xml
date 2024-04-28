@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Bots>
+<Bot xsi:type="MyObjectBuilder_AnimalBotDefinition">
+<Id>
+<TypeId>MyObjectBuilder_AnimalBot</TypeId>
+<SubtypeId>Space_Zombie</SubtypeId>
+</Id>
+<DisplayName>Space_Zombie</DisplayName>
+<Public>true</Public>
+<AvailableInSurvival>false</AvailableInSurvival>
+<RemoveAfterDeath>true</RemoveAfterDeath>
+<InventoryContainerTypeId>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>ZombieLoot</SubtypeId>
+</InventoryContainerTypeId>
+<FactionTag>SPID</FactionTag>
+</Bot>
+<Bot xsi:type="MyObjectBuilder_AnimalBotDefinition">
+<Id>
+<TypeId>MyObjectBuilder_AnimalBot</TypeId>
+<SubtypeId>Space_Skeleton</SubtypeId>
+</Id>
+<DisplayName>Space_Skeleton</DisplayName>
+<Public>true</Public>
+<AvailableInSurvival>false</AvailableInSurvival>
+<RemoveAfterDeath>true</RemoveAfterDeath>
+<InventoryContainerTypeId>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>SkeletonLoot</SubtypeId>
+</InventoryContainerTypeId>
+<FactionTag>SPID</FactionTag>
+</Bot>
+<Bot xsi:type="MyObjectBuilder_AnimalBotDefinition">
+<Id>
+<TypeId>MyObjectBuilder_AnimalBot</TypeId>
+<SubtypeId>Ghost_Bot</SubtypeId>
+</Id>
+<DisplayName>Ghost_Bot</DisplayName>
+<Public>true</Public>
+<AvailableInSurvival>false</AvailableInSurvival>
+<RemoveAfterDeath>true</RemoveAfterDeath>
+<InventoryContainerTypeId>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>GhostLoot</SubtypeId>
+</InventoryContainerTypeId>
+<FactionTag>SPID</FactionTag>
+</Bot>
+<Bot xsi:type="MyObjectBuilder_AnimalBotDefinition">
+<Id>
+<TypeId>MyObjectBuilder_AnimalBot</TypeId>
+<SubtypeId>Frosty_Zombie</SubtypeId>
+</Id>
+<DisplayName>Frosty_Zombie</DisplayName>
+<Public>true</Public>
+<AvailableInSurvival>false</AvailableInSurvival>
+<RemoveAfterDeath>true</RemoveAfterDeath>
+<InventoryContainerTypeId>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>ZombieLoot</SubtypeId>
+</InventoryContainerTypeId>
+<FactionTag>SPID</FactionTag>
+</Bot>
+</Bots>
+</Definitions>
+ 

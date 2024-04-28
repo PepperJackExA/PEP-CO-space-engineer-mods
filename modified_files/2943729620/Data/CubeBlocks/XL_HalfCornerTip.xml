@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>XL_HalfCornerTip</SubtypeId>
+</Id>
+<DisplayName>XL Half Corner Tip</DisplayName>
+<Description>A 5x3x3 large grid block that does not deform.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="300"/>
+<Component Subtype="Girder" Count="12"/>
+<Component Subtype="SteelPlate" Count="75"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>XL_HalfCornerTip</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

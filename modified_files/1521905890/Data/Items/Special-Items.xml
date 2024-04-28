@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>SkeletonKey</SubtypeId>
+</Id>
+<DisplayName>Skeleton Key</DisplayName>
+<Description>This module will override the protections on any door, forcing it to immediately open (as long as it's enabled / powered).</Description>
+<Mass>9</Mass>
+<Volume>9</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>250000</MinimalPricePerUnit>
+<CanPlayerOrder>false</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>HackingModule</SubtypeId>
+</Id>
+<DisplayName>Hacking Module</DisplayName>
+<Description>This module will immediately change ownership of a block to the module user.</Description>
+<Mass>9</Mass>
+<Volume>9</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>1000000</MinimalPricePerUnit>
+<CanPlayerOrder>false</CanPlayerOrder>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

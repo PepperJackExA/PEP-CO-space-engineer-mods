@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Airlock Doors" />
+<DisplayName>Airlock Doors</DisplayName>
+<Description>For Airlock Use</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Door" Subtype="EDPAirlockDoor1" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPAirlockDoor2" />
+<Block Type="MyObjectBuilder_AdvancedDoor" Subtype="EDPRailingGate" />
+<Block Type="MyObjectBuilder_AdvancedDoor" Subtype="EDPRailingGate2" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPAirlockDoor1SG" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPAirlockDoor2SG" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Interior Doors" />
+<DisplayName>Internal Doors</DisplayName>
+<Description>Spice up your interiors</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Door" Subtype="EDPInteriorDoor" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPInteriorDoor2" />
+<Block Type="MyObjectBuilder_AdvancedDoor" Subtype="EDPBulkheadDoor1" />
+<Block Type="MyObjectBuilder_AdvancedDoor" Subtype="EDPBulkheadDoor1a" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPDoorT1v1" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPDoorT2v1" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPDoorT1v1HB" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPDoorT2v1HB" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPDoorT1v1OS" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPDoorT2v1OS" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPInteriorDoorSG" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPDoorT1v1SG" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPDoorT2v1SG" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Angled Doors" />
+<DisplayName>Angled Doors</DisplayName>
+<Description>Doors for sloped walls</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Door" Subtype="EDPAngledDoor1" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPAngledDoor1x2" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPAngledDoor1SG" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPAngledDoor1x2SG" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="VLS Hatches" />
+<DisplayName>Hatches</DisplayName>
+<Description>Hatches for tanks and VLS/misssile silos</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_AdvancedDoor" Subtype="VLSHatchType1" />
+<Block Type="MyObjectBuilder_AdvancedDoor" Subtype="VLSHatchType1HB" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPHatchV2" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPHatchV2HB" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPLadderHatch" />
+<Block Type="MyObjectBuilder_AdvancedDoor" Subtype="EDPHatchSG" />
+<Block Type="MyObjectBuilder_Door" Subtype="EDPHatchV2SG" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

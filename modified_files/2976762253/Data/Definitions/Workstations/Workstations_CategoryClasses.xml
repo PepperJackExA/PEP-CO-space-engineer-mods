@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>AI Logistics Automation</DisplayName>
+<Name>AILogisticsAutomation</Name>
+<ItemIds>
+<string>OreDetector/AIInventoryManager</string>
+<string>OreDetector/AIInventoryManagerReskin</string>
+<string>OreDetector/AIRefineryController</string>
+<string>OreDetector/AIRefineryControllerReskin</string>
+<string>OreDetector/AIAssemblerController</string>
+<string>OreDetector/AIAssemblerControllerReskin</string>
+<string>OreDetector/AIDisplayMonitor</string>
+<string>OreDetector/AIDisplayMonitorReskin</string>
+<string>OreDetector/AIIgnoreMap</string>
+<string>OreDetector/AIIgnoreMapReskin</string>
+<string>OreDetector/AIIgnoreMapSmall</string>
+<string>OreDetector/AIIgnoreMapReskinSmall</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

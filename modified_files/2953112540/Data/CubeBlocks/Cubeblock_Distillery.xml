@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>PEPCO_BiodieselDistillery</SubtypeId>
+</Id>
+<DisplayName>BioDiesel Distillery</DisplayName>
+<Description>Refines raw Organic Oil into environmental-friendly Bio Diesel.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<IsAirTight>true</IsAirTight>
+<BlockPairName>PEPCO_BiodieselDistillery</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.250</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>OrganicOilToBioDiesel</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>75</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

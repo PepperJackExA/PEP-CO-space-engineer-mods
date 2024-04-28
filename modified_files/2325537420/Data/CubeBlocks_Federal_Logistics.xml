@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>Industrial Storage</SubtypeId>
+</Id>
+<DisplayName>Industrial Storage Container</DisplayName>
+<Description>Industrial Storage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="650" />
+<Component Subtype="SteelPlate" Count="500" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Motor" Count="24" />
+<Component Subtype="Display" Count="8" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="InteriorPlate" Count="200" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Industrial Storage</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>Stone Storage</SubtypeId>
+</Id>
+<DisplayName>Ore Storage Container</DisplayName>
+<Description>Large Ore Storage Container</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="600" />
+<Component Subtype="Girder" Count="70" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="LargeTube" Count="60" />
+<Component Subtype="Motor" Count="24" />
+<Component Subtype="Computer" Count="6" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="Girder" Count="60" />
+<Component Subtype="SteelPlate" Count="200" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Stone Storage</BlockPairName>
+<BlockPairName>Industrial Storage</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>Stone Storage SG</SubtypeId>
+</Id>
+<DisplayName>Small Ore Storage Container</DisplayName>
+<Description>A small Grid large ore container</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="200" />
+<Component Subtype="Girder" Count="25" />
+<Component Subtype="Construction" Count="23" />
+<Component Subtype="LargeTube" Count="12" />
+<Component Subtype="Motor" Count="12" />
+<Component Subtype="Computer" Count="6" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Stone Storage</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>Industrial Storage SG</SubtypeId>
+</Id>
+<DisplayName>Industrial Storage Container</DisplayName>
+<Description>Industrial Storage Container</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="175" />
+<Component Subtype="SteelPlate" Count="125" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Motor" Count="12" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Computer" Count="14" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="35" />
+<Component Subtype="InteriorPlate" Count="90" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Industrial Storage</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>Small Ship Conveyor 1-5</SubtypeId>
+</Id>
+<DisplayName>Conveyor Spliter 1-5</DisplayName>
+<Description>Small grid conveyor spliter</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="14" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Small Ship Conveyor 1-5</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>Small Ship Conveyor 2-4</SubtypeId>
+</Id>
+<DisplayName>Conveyor Spliter 2-4</DisplayName>
+<Description>Small grid conveyor spliter 2- 4</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="14" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Small Ship Conveyor 2-4</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>SG_HPL</SubtypeId>
+</Id>
+<DisplayName>SG_HPL</DisplayName>
+<Description>SG_HPL</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="SteelPlate" Count="120" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>white_Lance</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.3</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<IsAirTight>true</IsAirTight>
+<string>Weapons</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

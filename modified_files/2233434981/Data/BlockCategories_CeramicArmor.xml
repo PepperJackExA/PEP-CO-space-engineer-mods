@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ArmorBlocks</DisplayName>
+<Name>ArmorBlocks</Name>
+<ItemIds>
+<string>CubeBlock/CeramicArmorFlat</string>
+<string>CubeBlock/CeramicArmorSlope</string>
+<string>CubeBlock/CeramicArmorSide</string>
+<string>CubeBlock/CeramicArmorFace</string>
+<string>CubeBlock/CeramicArmorFaceInv</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CubeBlock/CeramicArmorFlat</string>
+<string>CubeBlock/CeramicArmorSlope</string>
+<string>CubeBlock/CeramicArmorSide</string>
+<string>CubeBlock/CeramicArmorFace</string>
+<string>CubeBlock/CeramicArmorFaceInv</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CubeBlock/SmallCeramicArmorFlat</string>
+<string>CubeBlock/SmallCeramicArmorSlope</string>
+<string>CubeBlock/SmallCeramicArmorSide</string>
+<string>CubeBlock/SmallCeramicArmorFace</string>
+<string>CubeBlock/SmallCeramicArmorFaceInv</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>StorageShelf1</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_StorageShelf1</DisplayName>
+<Description>Description_StorageShelf</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SmallTube" Count="25" />
+<Component Subtype="InteriorPlate" Count="25" />
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SmallTube" Count="25" />
+<Component Subtype="InteriorPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="1" />
+<BlockPairName>StorageShelf1</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>StorageShelf2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_StorageShelf2</DisplayName>
+<Description>Description_StorageShelf</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="PowerCell" Count="10" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="PowerCell" Count="10" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="MetalGrid" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="1" />
+<BlockPairName>StorageShelf2</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>StorageShelf3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_StorageShelf3</DisplayName>
+<Description>Description_StorageShelf</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="Reactor" Count="5" />
+<Component Subtype="Superconductor" Count="5" />
+<Component Subtype="Thrust" Count="5" />
+<Component Subtype="GravityGenerator" Count="1" />
+<Component Subtype="Reactor" Count="5" />
+<Component Subtype="Superconductor" Count="5" />
+<Component Subtype="Thrust" Count="5" />
+<Component Subtype="GravityGenerator" Count="1" />
+</Components>
+<CriticalComponent Subtype="GravityGenerator" Index="1" />
+<BlockPairName>StorageShelf3</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>StorageShelf1</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>StorageShelf2</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>StorageShelf3</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>StorageShelf1</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>StorageShelf2</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+<Id>
+<TypeId>Inventory</TypeId>
+<SubtypeId>StorageShelf3</SubtypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Id>
+<TypeId>SoundCategoryDefinition</TypeId>
+<SubtypeId>Expanse Sounds</SubtypeId>
+</Id>
+<Sounds>
+</Sounds>
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ExpTheme</SubtypeId>
+</Id>
+<Category>Sb</Category>
+<MaxDistance>100</MaxDistance>
+<Volume>1.00</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\ExpanseSounds\ExpTheme.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ExpErosMusic</SubtypeId>
+</Id>
+<Category>Sb</Category>
+<MaxDistance>100</MaxDistance>
+<Volume>1.00</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\ExpanseSounds\ExpErosMusic.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ExpComputerChirp</SubtypeId>
+</Id>
+<Category>Sb</Category>
+<MaxDistance>100</MaxDistance>
+<Volume>1.00</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D3">
+<Loop>Audio\ExpanseSounds\ExpComputerChirp.xwm</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ExpComputerLongChirp</SubtypeId>
+</Id>
+<Category>Sb</Category>
+<MaxDistance>100</MaxDistance>
+<Volume>1.00</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D3">
+<Loop>Audio\ExpanseSounds\ExpComputerLongChirp.xwm</Loop>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ExpAlarmQuiet</SubtypeId>
+</Id>
+<Category>Sb</Category>
+<MaxDistance>100</MaxDistance>
+<Volume>1.00</Volume>
+<Loopable>true</Loopable>
+<Waves>
+<Wave Type="D3">
+<Loop>Audio\ExpanseSounds\ExpAlarmQuiet.xwm</Loop>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

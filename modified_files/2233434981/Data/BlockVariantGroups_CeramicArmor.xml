@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CeramicArmorFlat" />
+<DisplayName>DisplayName_Ceramic_Armor</DisplayName>
+<Description>Description_Ceramic_Armor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CeramicArmorFlat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CeramicArmorSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CeramicArmorSide" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CeramicArmorFace" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CeramicArmorFaceInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCeramicArmorFlat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCeramicArmorSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCeramicArmorSide" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCeramicArmorFace" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallCeramicArmorFaceInv" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

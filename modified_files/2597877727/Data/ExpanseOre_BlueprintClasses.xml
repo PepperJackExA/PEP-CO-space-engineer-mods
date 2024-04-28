@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>TradeGoods</SubtypeId>
+</Id>
+<DisplayName>Trade Goods</DisplayName>
+<Description>Manufacturable goods to be sold at Ceres or Medina Station.</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Fuel</SubtypeId>
+</Id>
+<DisplayName>Fuel</DisplayName>
+<Description>Fuel</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>NPTradeGoods</SubtypeId>
+</Id>
+<DisplayName>NPTradeGoods</DisplayName>
+<Description>NPTradeGoods</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>AdminIngots</SubtypeId>
+</Id>
+<DisplayName>AdminIngots</DisplayName>
+<Description>AdminIngots</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>AdminComponents</SubtypeId>
+</Id>
+<DisplayName>AdminComponents</DisplayName>
+<Description>AdminComponents</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>NPFuelGoods</SubtypeId>
+</Id>
+<DisplayName>NPFuelGoods</DisplayName>
+<Description>NPFuelGoods</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Extracting</SubtypeId>
+</Id>
+<DisplayName>Extracting</DisplayName>
+<Description>Extract Fuel From Tanks</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>SGExtracting</SubtypeId>
+</Id>
+<DisplayName>SGExtracting</DisplayName>
+<Description>Extract Fuel From Tanks</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>BulkPackaging</SubtypeId>
+</Id>
+<DisplayName>Bulk Packaging</DisplayName>
+<Description>Package your Resources with FedEx!</Description>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/ARYLNX_Epstein_Drive" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/ARYLNX_ROCI_Epstein_Drive" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/ARYLNX_Mega_Epstein_Drive" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/ARYLNX_MUNR_Epstein_Drive" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/ARYLYNX_SILVERSMITH_Epstein_DRIVE" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LynxRcsThruster1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/ARYLNX_RZB_Epstein_Drive" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/ARYXLNX_YACHT_EPSTEIN_DRIVE" />
+<!-- <Entry Class="LargeBlocks" BlueprintSubtypeId="Oblivium/ObliviumArmorCenter" /> -->
+<Entry Class="Ingots" BlueprintSubtypeId="TungstenToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="TungstenToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CopperToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="CopperToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="LeadToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="LeadToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="TitaniumToIngot" />
+<Entry Class="AdminIngots" BlueprintSubtypeId="LithiumToIngot" />
+<Entry Class="AdminComponents" BlueprintSubtypeId="ToLithiumPowerCell" />
+<Entry Class="AdminComponents" BlueprintSubtypeId="toResearchInnerUNN"/>
+<Entry Class="AdminComponents" BlueprintSubtypeId="toResearchInnerMCRN"/>
+<Entry Class="AdminComponents" BlueprintSubtypeId="toResearchBelter"/>
+<Entry Class="TradeGoods" BlueprintSubtypeId="Composting" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="CrateofTomatoes" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="BottleWater" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="ToSmallArms" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="ToHeavyArms" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="ToTools" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="ToAmmo" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="ToMedicalCache" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="ToRepairCache" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="FromRepairCache"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="FromMedicalCache"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="FromSmallArms"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="FromHeavyArms"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="FromTools"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="FromAmmo"/>
+<Entry Class="SimpleComponents" BlueprintSubtypeId="toStructuralReinforcement" />
+<Entry Class="Components" BlueprintSubtypeId="toStructuralReinforcement" />
+<Entry Class="Fuel" BlueprintSubtypeId="toFusionFuel" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toMachinePart"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toUpgradedBelterComp"/>
+<Entry Class="Ingots" BlueprintSubtypeId="StoneOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="IronOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="ScrapToIronIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="ScrapIngotToIronIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="NickelOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CobaltOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="MagnesiumOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="SiliconOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="SilverOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="GoldOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="PlatinumOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="UraniumOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="IronOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="NickelOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="CobaltOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="MagnesiumOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="ScrapToIronIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="SiliconOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="ScrapIngotToIronIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="StoneOreToIngot" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="Position0010_StoneOreToIngotBasic" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="Display" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="SolarCell" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="SteelPlate" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="InteriorPlate" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="MotorComponent" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="GirderComponent" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="ComputerComponent" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="ConstructionComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="ConstructionComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="GirderComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="MetalGrid" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="InteriorPlate" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="SteelPlate" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="SmallTube" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="LargeTube" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="MotorComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="Display" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="BulletproofGlass" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="ComputerComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="MedicalComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="RadioCommunicationComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="DetectorComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="SolarCell" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="PowerCell" />
+<Entry Class="Components" BlueprintSubtypeId="ConstructionComponent" />
+<Entry Class="Components" BlueprintSubtypeId="GirderComponent" />
+<Entry Class="Components" BlueprintSubtypeId="MetalGrid" />
+<Entry Class="Components" BlueprintSubtypeId="InteriorPlate" />
+<Entry Class="Components" BlueprintSubtypeId="SteelPlate" />
+<Entry Class="Components" BlueprintSubtypeId="SmallTube" />
+<Entry Class="Components" BlueprintSubtypeId="LargeTube" />
+<Entry Class="Components" BlueprintSubtypeId="MotorComponent" />
+<Entry Class="Components" BlueprintSubtypeId="Display" />
+<Entry Class="Components" BlueprintSubtypeId="BulletproofGlass" />
+<Entry Class="Components" BlueprintSubtypeId="ComputerComponent" />
+<Entry Class="Components" BlueprintSubtypeId="ReactorComponent" />
+<Entry Class="Components" BlueprintSubtypeId="ThrustComponent" />
+<Entry Class="Components" BlueprintSubtypeId="GravityGeneratorComponent" />
+<Entry Class="Components" BlueprintSubtypeId="MedicalComponent" />
+<Entry Class="Components" BlueprintSubtypeId="RadioCommunicationComponent" />
+<Entry Class="Components" BlueprintSubtypeId="DetectorComponent" />
+<Entry Class="Components" BlueprintSubtypeId="ExplosivesComponent" />
+<Entry Class="Components" BlueprintSubtypeId="SolarCell" />
+<Entry Class="Components" BlueprintSubtypeId="PowerCell" />
+<Entry Class="Components" BlueprintSubtypeId="Superconductor" />
+<Entry Class="Consumables" BlueprintSubtypeId="Canvas" />
+<Entry Class="Consumables" BlueprintSubtypeId="SemiAutoPistolMagazine" />
+<Entry Class="Consumables" BlueprintSubtypeId="AutomaticRifleGun_Mag_20rd" />
+<Entry Class="Consumables" BlueprintSubtypeId="FullAutoPistolMagazine" />
+<Entry Class="Consumables" BlueprintSubtypeId="RapidFireAutomaticRifleGun_Mag_50rd" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Canvas" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="NATO_5p56x45mmMagazine" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="NATO_25x184mmMagazine" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Missile200mm" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="SemiAutoPistolMagazine" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="FullAutoPistolMagazine" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="ElitePistolMagazine" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="AutomaticRifleGun_Mag_20rd" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="RapidFireAutomaticRifleGun_Mag_50rd" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="PreciseAutomaticRifleGun_Mag_5rd" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="UltimateAutomaticRifleGun_Mag_30rd" />
+<Entry Class="Tools" BlueprintSubtypeId="SemiAutoPistol" />
+<Entry Class="Tools" BlueprintSubtypeId="FullAutoPistol" />
+<Entry Class="Tools" BlueprintSubtypeId="AutomaticRifle" />
+<Entry Class="Tools" BlueprintSubtypeId="RapidFireAutomaticRifle" />
+<Entry Class="Tools" BlueprintSubtypeId="Welder" />
+<Entry Class="Tools" BlueprintSubtypeId="Welder2" />
+<Entry Class="Tools" BlueprintSubtypeId="AngleGrinder" />
+<Entry Class="Tools" BlueprintSubtypeId="AngleGrinder2" />
+<Entry Class="Tools" BlueprintSubtypeId="HandDrill" />
+<Entry Class="Tools" BlueprintSubtypeId="HandDrill2" />
+<Entry Class="Tools" BlueprintSubtypeId="OxygenBottle" />
+<Entry Class="Tools" BlueprintSubtypeId="HydrogenBottle" />
+<Entry Class="EliteTools" BlueprintSubtypeId="OxygenBottle" />
+<Entry Class="EliteTools" BlueprintSubtypeId="HydrogenBottle" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Welder" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Welder2" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Welder3" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Welder4" />
+<Entry Class="EliteTools" BlueprintSubtypeId="HandDrill" />
+<Entry Class="EliteTools" BlueprintSubtypeId="HandDrill2" />
+<Entry Class="EliteTools" BlueprintSubtypeId="HandDrill3" />
+<Entry Class="EliteTools" BlueprintSubtypeId="HandDrill4" />
+<Entry Class="EliteTools" BlueprintSubtypeId="AngleGrinder" />
+<Entry Class="EliteTools" BlueprintSubtypeId="AngleGrinder2" />
+<Entry Class="EliteTools" BlueprintSubtypeId="AngleGrinder3" />
+<Entry Class="EliteTools" BlueprintSubtypeId="AngleGrinder4" />
+<Entry Class="EliteTools" BlueprintSubtypeId="AutomaticRifle" />
+<Entry Class="EliteTools" BlueprintSubtypeId="SemiAutoPistol" />
+<Entry Class="EliteTools" BlueprintSubtypeId="FullAutoPistol" />
+<Entry Class="EliteTools" BlueprintSubtypeId="EliteAutoPistol" />
+<Entry Class="EliteTools" BlueprintSubtypeId="PreciseAutomaticRifle" />
+<Entry Class="EliteTools" BlueprintSubtypeId="RapidFireAutomaticRifle" />
+<Entry Class="EliteTools" BlueprintSubtypeId="UltimateAutomaticRifle" />
+<Entry Class="EliteTools" BlueprintSubtypeId="BasicHandHeldLauncher" />
+<Entry Class="EliteTools" BlueprintSubtypeId="AdvancedHandHeldLauncher" />
+<Entry Class="BasicTools" BlueprintSubtypeId="Welder" />
+<Entry Class="BasicTools" BlueprintSubtypeId="HandDrill" />
+<Entry Class="BasicTools" BlueprintSubtypeId="AngleGrinder" />
+<Entry Class="Ice" BlueprintSubtypeId="IceToOxygen" />
+<Entry Class="OxygenBottles" BlueprintSubtypeId="OxygenBottlesRefill" />
+<Entry Class="HydrogenBottles" BlueprintSubtypeId="HydrogenBottlesRefill" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="IcetoNPTradeGoods" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="RawMaterialsCraft" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="RawMaterialsUse" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="ComponentCreationTycho" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="ComponentCreationCeres" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="ComponentCreationVesta" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="ComponentCreationMedina" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="PassengerCreationTycho" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="PassengerCreationCeres" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="PassengerCreationVesta" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="PassengerCreationGanymede" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="PassengerCreationMedina" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="SurviviorConsume" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="WelWalaConsume" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toInnerComp"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toMCRNComponent"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toMCRNAdvComponent"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toMCRNExpComponent"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toUNNComponent"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toUNNAdvComponent"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toUNNExpComponent"/>
+<Entry Class="NPFuelGoods" BlueprintSubtypeId="Fuel_Processing" />
+<Entry Class="BulkTradeGoods" BlueprintSubtypeId="ShipmentofTomatoes" />
+<Entry Class="Components" BlueprintSubtypeId="CraftBottle" />
+<Entry Class="Extracting" BlueprintSubtypeId="Fuel_Extracting" />
+<Entry Class="SGExtracting" BlueprintSubtypeId="SG_Fuel_Extracting" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkTungsten" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkCopper" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkLead" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkTitanium" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkIron" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkNickel" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkCobalt" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkMagnesium" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkSilicon" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkSilver" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkGold" />
+<Entry Class="BulkPackaging" BlueprintSubtypeId="BulkUranium" />
+</BlueprintClassEntries>
+</Definitions>
+ 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>StrategicIngots</SubtypeId>
+</Id>
+<DisplayName>Strategic Ingot Refining</DisplayName>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>OreCatalyzer</SubtypeId>
+</Id>
+<DisplayName>Ore Catalyzation</DisplayName>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>ActivatedSpice</SubtypeId>
+</Id>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>CronyxAmmo</SubtypeId>
+</Id>
+<DisplayName>Cronyx Ammo</DisplayName>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="Ingots" BlueprintSubtypeId="CatalyzedIronOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CatalyzedNickelOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CatalyzedCobaltOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CatalyzedSiliconOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CatalyzedSilverOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CatalyzedGoldOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CatalyzedPlatinumOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CatalyzedUraniumOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CatalyzedMagnesiumOreToIngot" />
+<Entry Class="StrategicIngots" BlueprintSubtypeId="FuseCrystal" />
+<Entry Class="StrategicIngots" BlueprintSubtypeId="RefineDorium" />
+<Entry Class="StrategicIngots" BlueprintSubtypeId="StabilizeCronyx" />
+<Entry Class="StrategicIngots" BlueprintSubtypeId="RefineSpice" />
+<Entry Class="OreCatalyzer" BlueprintSubtypeId="CatalyzeIronOre" />
+<Entry Class="OreCatalyzer" BlueprintSubtypeId="CatalyzeNickelOre" />
+<Entry Class="OreCatalyzer" BlueprintSubtypeId="CatalyzeCobaltOre" />
+<Entry Class="OreCatalyzer" BlueprintSubtypeId="CatalyzeSiliconOre" />
+<Entry Class="OreCatalyzer" BlueprintSubtypeId="CatalyzeSilverOre" />
+<Entry Class="OreCatalyzer" BlueprintSubtypeId="CatalyzeGoldOre" />
+<Entry Class="OreCatalyzer" BlueprintSubtypeId="CatalyzePlatinumOre" />
+<Entry Class="OreCatalyzer" BlueprintSubtypeId="CatalyzeUraniumOre" />
+<Entry Class="OreCatalyzer" BlueprintSubtypeId="CatalyzeMagnesiumOre" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="SpiceInhaler" />
+<Entry Class="ActivatedSpice" BlueprintSubtypeId="ActivatedSpice" />
+<Entry Class="Components" BlueprintSubtypeId="ReinforcedDrillbit" />
+<Entry Class="Components" BlueprintSubtypeId="ReinforcedPlate" />
+<Entry Class="Components" BlueprintSubtypeId="LaserAmplifier" />
+<Entry Class="Components" BlueprintSubtypeId="JumpCore" />
+<Entry Class="Components" BlueprintSubtypeId="CompatRecipe" />
+<Entry Class="CronyxAmmo" BlueprintSubtypeId="CronyxNATO_25x184mm" />
+<Entry Class="CronyxAmmo" BlueprintSubtypeId="CronyxMissile200mm" />
+<Entry Class="CronyxAmmo" BlueprintSubtypeId="CronyxMediumCalibreAmmo" />
+<Entry Class="CronyxAmmo" BlueprintSubtypeId="CronyxLargeCalibreAmmo" />
+<Entry Class="CronyxAmmo" BlueprintSubtypeId="CronyxAutocannonClip" />
+</BlueprintClassEntries>
+</Definitions>
+ 

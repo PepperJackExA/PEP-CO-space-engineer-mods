@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>FSSolarCell</SubtypeId>
+</Id>
+<DisplayName>Full-Spectrum Solar Cell</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Component" SubtypeId="ArmorGlass" />
+<Item Amount="3" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="0.5" TypeId="Ingot" SubtypeId="Titanium" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="0.2" TypeId="Ingot" SubtypeId="Tantalum" />
+<Item Amount="1" TypeId="Component" SubtypeId="GoldWire" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ElectronMatrix</SubtypeId>
+</Id>
+<DisplayName>Electron-Matrix Cell</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="ArmorGlass" />
+<Item Amount="0.5" TypeId="Ingot" SubtypeId="Tantalum" />
+<Item Amount="1" TypeId="Component" SubtypeId="LaserEmitter" />
+<Item Amount="2" TypeId="Component" SubtypeId="GoldWire" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Polymer" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Capacitor</SubtypeId>
+</Id>
+<DisplayName>Capacitor Cell</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="Rubber" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="1" TypeId="Component" SubtypeId="Ceramic" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CompositeArmor</SubtypeId>
+</Id>
+<DisplayName>Composite Plate</DisplayName>
+<Prerequisites>
+<Item Amount="0.5" TypeId="Component" SubtypeId="Ceramic" />
+<Item Amount="0.1" TypeId="Ingot" SubtypeId="DepletedUranium" />
+<Item Amount="0.5" TypeId="Component" SubtypeId="ArmoredPlate" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>TokamakBlanket</SubtypeId>
+</Id>
+<DisplayName>Tokamak Blanket Plate</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Component" SubtypeId="Ceramic" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Lithium" />
+<Item Amount="1" TypeId="Component" SubtypeId="ArmoredPlate" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="1" TypeId="Component" SubtypeId="Thermocouple" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SuperMagnet</SubtypeId>
+</Id>
+<DisplayName>Superconducting Electromagnet</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Tantalum" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Titanium" />
+<Item Amount="2" TypeId="Component" SubtypeId="GoldWire" />
+<Item Amount="1" TypeId="Component" SubtypeId="Cryocooler" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Cryocooler</SubtypeId>
+</Id>
+<DisplayName>Cryogenic Cooler</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="1" TypeId="Component" SubtypeId="SteelPlate" />
+<Item Amount="1" TypeId="Component" SubtypeId="Motor" />
+<Item Amount="1" TypeId="Component" SubtypeId="Thermocouple" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Thermocouple</SubtypeId>
+</Id>
+<DisplayName>Thermocouple</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="3" TypeId="Component" SubtypeId="CopperWire" />
+<Item Amount="1" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Aluminum" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ArmorGlass</SubtypeId>
+</Id>
+<DisplayName>Armor Glass</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Niter" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>7</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CopperWire</SubtypeId>
+</Id>
+<DisplayName>Copper Wire</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Copper" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>GoldWire</SubtypeId>
+</Id>
+<DisplayName>Gold Wire</DisplayName>
+<Prerequisites>
+<Item Amount="0.6" TypeId="Ingot" SubtypeId="Gold" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Fabric</SubtypeId>
+</Id>
+<DisplayName>Synthetic Fabric</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Component" SubtypeId="Plastic" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Rubber</SubtypeId>
+</Id>
+<DisplayName>Rubber</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Polymer" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AdvancedComputer</SubtypeId>
+</Id>
+<DisplayName>Advanced Computer</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="GoldWire" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="2" TypeId="Component" SubtypeId="Plastic" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>QuantumComputer</SubtypeId>
+</Id>
+<DisplayName>Quantum Computer</DisplayName>
+<Prerequisites>
+<Item Amount="0.1" TypeId="Ingot" SubtypeId="Tantalum" />
+<Item Amount="0.2" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="6" TypeId="Component" SubtypeId="GoldWire" />
+<Item Amount="3" TypeId="Component" SubtypeId="AdvancedComputer" />
+<Item Amount="3" TypeId="Component" SubtypeId="InteriorPlate" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Concrete</SubtypeId>
+</Id>
+<DisplayName>Concrete</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Ingot" SubtypeId="Stone" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Asphalt</SubtypeId>
+</Id>
+<DisplayName>Asphalt</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="1" TypeId="Ore" SubtypeId="OilSand" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>TitaniumPlate</SubtypeId>
+</Id>
+<DisplayName>Titanium Plate</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="Titanium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ArmoredPlate</SubtypeId>
+</Id>
+<DisplayName>Armored Plate</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="SteelPlate" />
+<Item Amount="1" TypeId="Component" SubtypeId="TitaniumPlate" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Electromagnet</SubtypeId>
+</Id>
+<DisplayName>Electromagnet</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="3" TypeId="Component" SubtypeId="CopperWire" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Lightbulb</SubtypeId>
+</Id>
+<DisplayName>Lightbulb</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="BulletproofGlass" />
+<Item Amount="1" TypeId="Component" SubtypeId="CopperWire" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AcidPowerCell</SubtypeId>
+</Id>
+<DisplayName>Acid Power Cell</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="SteelPlate" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="3" TypeId="Component" SubtypeId="CopperWire" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Sulfur" />
+<Item Amount="4" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AlkalinePowerCell</SubtypeId>
+</Id>
+<DisplayName>Alkaline Power Cell</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1" TypeId="Component" SubtypeId="CopperWire" />
+<Item Amount="2" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Ceramic</SubtypeId>
+</Id>
+<DisplayName>Ceramic</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Carbon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>LaserEmitter</SubtypeId>
+</Id>
+<DisplayName>Laser Emitter</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Component" SubtypeId="BulletproofGlass" />
+<Item Amount="3" TypeId="Component" SubtypeId="Lightbulb" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Lithium" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Aluminum" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>HeatingElement</SubtypeId>
+</Id>
+<DisplayName>Heating Element</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Copper" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

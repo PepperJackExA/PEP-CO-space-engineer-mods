@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ARYLYN_RCS_THRUSTERS" />
+<DisplayName>RCS Thrusters</DisplayName>
+<Description>Arylyn Drive Systems-brand RCS thrusters.</Description>
+<Blocks>
+<Block Type="Thrust" Subtype="LynxRcsThruster1" />
+<Block Type="Thrust" Subtype="AryxRCS" />
+<Block Type="Thrust" Subtype="AryxRCSSlant" />
+<Block Type="Thrust" Subtype="AryxRCSHalfRamp" />
+<Block Type="Thrust" Subtype="AryxRCSRamp" />
+<Block Type="Thrust" Subtype="AryxRCSThruster" />
+<Block Type="Thrust" Subtype="AryxRCS_S" />
+<Block Type="Thrust" Subtype="AryxRCSSlant_S" />
+<Block Type="Thrust" Subtype="AryxRCSHalfRamp_S" />
+<Block Type="Thrust" Subtype="AryxRCSRamp_S" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ARYLYN_LG_Drive_THRUSTERS" />
+<DisplayName>Large Arylyn Drives</DisplayName>
+<Description>Large Arylyn Epstien Drive Systems.</Description>
+<Blocks>
+<Block Type="Thrust" Subtype="ARYLNX_QUADRA_Epstein_Drive" /> <!-- Avalon -->
+<Block Type="Thrust" Subtype="ARYLNX_Epstein_Drive" /> <!-- Morrigan -->
+<Block Type="Thrust" Subtype="ARYLNX_MUNR_Epstein_Drive" />	<!-- Munroe -->
+<Block Type="Thrust" Subtype="ARYLNX_PNDR_Epstein_Drive" />	<!-- Pandora -->
+<Block Type="Thrust" Subtype="ARYLNX_RAIDER_Epstein_Drive" /> <!-- Raider -->
+<Block Type="Thrust" Subtype="ARYLNX_ROCI_Epstein_Drive" /> <!-- Tachi -->
+<Block Type="Thrust" Subtype="ARYLNX_Leo_Epstein_Drive" /> <!-- Leo -->
+<Block Type="Thrust" Subtype="ARYLYNX_SILVERSMITH_Epstein_DRIVE" /> <!-- Silversmith -->
+<Block Type="Thrust" Subtype="ARYLNX_DRUMMER_Epstein_Drive" /> <!-- Camina -->
+<Block Type="Thrust" Subtype="ARYLNX_SCIRCOCCO_Epstein_Drive" /> <!-- Scirocco -->
+<Block Type="Thrust" Subtype="ARYLNX_Mega_Epstein_Drive" /> <!-- Kaminari -->
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ARYLYN_SG_Drive_THRUSTERS" />
+<DisplayName>Small Arylyn Drives</DisplayName>
+<Description>Small Arylyn Epstien Drive Systems.</Description>
+<Blocks>
+<Block Type="Thrust" Subtype="ARYLNX_RZB_Epstein_Drive" />
+<Block Type="Thrust" Subtype="ARYXLNX_YACHT_EPSTEIN_DRIVE" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

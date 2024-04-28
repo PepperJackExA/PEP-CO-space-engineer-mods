@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="JumpDriveGroup" />
+<DisplayName>DisplayName_Block_JumpDrive</DisplayName>
+<Description>Description_JumpDrive</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_JumpDrive" Subtype="FSDriveSmall" />
+<Block Type="MyObjectBuilder_SafeZoneBlock" Subtype="FSDriveLarge" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>ConveyorTubeDuct</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorTubeDuct</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorTubeDuct</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>ConveyorTubeDuctCurved</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorTubeDuctCurved</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorTubeDuctCurved</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>ConveyorTubeDuctT</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorTubeDuctT</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="12" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="24" />
+<Component Subtype="SmallTube" Count="14" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorTubeDuctT</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>ConveyorTubeDuctSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorTubeDuctSmall</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>ConveyorTubeDuct</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>ConveyorTubeDuctSmallCurved</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorTubeDuctSmallCurved</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>ConveyorTubeDuctCurved</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>ConveyorTubeDuctSmallT</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorTubeDuctSmallT</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>ConveyorTubeDuctT</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

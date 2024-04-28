@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_EventDistanceToLockedTargetDefinition">
+<Id>
+<TypeId>EventDistanceToLockedTarget</TypeId>
+</Id>
+<MaxDistance>7500</MaxDistance>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_SearchEnemyComponentDefinition">
+<Id>
+<TypeId>SearchEnemyComponent</TypeId>
+<SubtypeId>DefaultEnemySearch</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_TargetFocusComponentDefinition">
+<Id>
+<TypeId>TargetFocusComponent</TypeId>
+<SubtypeId>Character</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_TargetLockingComponentDefinition">
+<Id>
+<TypeId>TargetLockingComponent</TypeId>
+<SubtypeId>Character</SubtypeId>
+</Id>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

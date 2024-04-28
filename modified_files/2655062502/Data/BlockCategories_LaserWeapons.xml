@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+<Name>ShipWeapons</Name>
+<SearchBlocks>false</SearchBlocks>
+<IsToolCategory>true</IsToolCategory>
+<ItemIds>
+<string>SmallMissileLauncher/HeavyLaserFixed</string>
+<string>SmallMissileLauncher/LightLaserFixed</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+<Name>Weapons</Name>
+<ItemIds>
+<string>SmallMissileLauncher/HeavyLaserFixed</string>
+<string>SmallMissileLauncher/LightLaserFixed</string>
+<string>LargeMissileTurret/HeavyLaserTurret</string>
+<string>LargeMissileTurret/LightLaserTurretLarge</string>
+<string>LargeMissileTurret/PDLaser</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>Organic</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Organic</DisplayName>
+<Mass>1</Mass>
+<Volume>0.37</Volume>
+<PhysicalMaterial>Stone</PhysicalMaterial>
+<MinimalPricePerUnit>200</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>EuropaTea</SubtypeId>
+</Id>
+<DisplayName>Europa Ice Tea</DisplayName>
+<Description>Europa Ice Tea</Description>
+<Mass>0.5</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>150</MinimalPricePerUnit>
+<MinimumOfferAmount>10</MinimumOfferAmount>
+<MaximumOfferAmount>100</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Apple</SubtypeId>
+</Id>
+<DisplayName>Apple</DisplayName>
+<Description>a space-grown version of the red fruit</Description>
+<Mass>0.05</Mass>
+<Volume>0.05</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>1</MinimumOfferAmount>
+<MaximumOfferAmount>10</MaximumOfferAmount>
+<MinimumOrderAmount>1000</MinimumOrderAmount>
+<MaximumOrderAmount>20000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>AppleJuice</SubtypeId>
+</Id>
+<DisplayName>Apple Juice</DisplayName>
+<Description>a refreshing drink</Description>
+<Mass>0.5</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>ApplePie</SubtypeId>
+</Id>
+<DisplayName>Apple Pie</DisplayName>
+<Description>a delicious snack, high in carbs</Description>
+<Mass>0.25</Mass>
+<Volume>0.25</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>500</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Wheat</SubtypeId>
+</Id>
+<DisplayName>Wheat</DisplayName>
+<Description>Spike of gluten-full Wheat</Description>
+<Mass>0.01</Mass>
+<Volume>0.01</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>1</MinimumOfferAmount>
+<MaximumOfferAmount>10</MaximumOfferAmount>
+<MinimumOrderAmount>1000</MinimumOrderAmount>
+<MaximumOrderAmount>20000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Pumpkin</SubtypeId>
+</Id>
+<DisplayName>Pumpkin</DisplayName>
+<Description>It is always autumn somewhere in the universe</Description>
+<Mass>1.0</Mass>
+<Volume>1.0</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>200</MinimalPricePerUnit>
+<MinimumOfferAmount>1</MinimumOfferAmount>
+<MaximumOfferAmount>10</MaximumOfferAmount>
+<MinimumOrderAmount>1000</MinimumOrderAmount>
+<MaximumOrderAmount>20000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Cabbage</SubtypeId>
+</Id>
+<DisplayName>Cabbage</DisplayName>
+<Description>Just a plain, old, space grown cabbage. Nothing special about it.</Description>
+<Mass>1.0</Mass>
+<Volume>1.0</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>200</MinimalPricePerUnit>
+<MinimumOfferAmount>1</MinimumOfferAmount>
+<MaximumOfferAmount>10</MaximumOfferAmount>
+<MinimumOrderAmount>1000</MinimumOrderAmount>
+<MaximumOrderAmount>20000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Soya</SubtypeId>
+</Id>
+<DisplayName>Soya Beans</DisplayName>
+<Description>A handful of Soya Beans</Description>
+<Mass>0.01</Mass>
+<Volume>0.01</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>1</MinimumOfferAmount>
+<MaximumOfferAmount>10</MaximumOfferAmount>
+<MinimumOrderAmount>1000</MinimumOrderAmount>
+<MaximumOrderAmount>20000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Herbs</SubtypeId>
+</Id>
+<DisplayName>Herbs</DisplayName>
+<Description>Herbs</Description>
+<Mass>0.1</Mass>
+<Volume>0.3</Volume>
+<PhysicalMaterial>Wood</PhysicalMaterial>
+<MinimalPricePerUnit>70</MinimalPricePerUnit>
+<MinimumOfferAmount>1</MinimumOfferAmount>
+<MaximumOfferAmount>10</MaximumOfferAmount>
+<MinimumOrderAmount>1000</MinimumOrderAmount>
+<MaximumOrderAmount>20000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Bread</SubtypeId>
+</Id>
+<DisplayName>Bread</DisplayName>
+<Description>Right out of the oven.</Description>
+<Mass>0.3</Mass>
+<Volume>0.3</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>200</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Burger</SubtypeId>
+</Id>
+<DisplayName>Burger</DisplayName>
+<Description>You are what you eat.</Description>
+<Mass>0.5</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>750</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Meat</SubtypeId>
+</Id>
+<DisplayName>Meat</DisplayName>
+<Description>raw meat harvested from a kill</Description>
+<Mass>0.05</Mass>
+<Volume>0.05</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>400</MinimalPricePerUnit>
+<MinimumOfferAmount>1</MinimumOfferAmount>
+<MaximumOfferAmount>10</MaximumOfferAmount>
+<MinimumOrderAmount>200</MinimumOrderAmount>
+<MaximumOrderAmount>5000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>MeatRoasted</SubtypeId>
+</Id>
+<DisplayName>Roast Meat</DisplayName>
+<Description>a filling meal</Description>
+<Mass>0.25</Mass>
+<Volume>0.25</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>300</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Soup</SubtypeId>
+</Id>
+<DisplayName>Meat Soup</DisplayName>
+<Description>Delicious, filling and healthy. Real super-food.</Description>
+<Mass>0.5</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>750</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>MushroomSoup</SubtypeId>
+</Id>
+<DisplayName>Mushroom Soup</DisplayName>
+<Description>Something warm for the belly.</Description>
+<Mass>0.5</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>400</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>TofuSoup</SubtypeId>
+</Id>
+<DisplayName>Tofu Soup</DisplayName>
+<Description>Some say it is almost as good as meat soup</Description>
+<Mass>0.5</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>600</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Tofu</SubtypeId>
+</Id>
+<DisplayName>Tofu</DisplayName>
+<Description>When you are in a planet, that has no meet running around.</Description>
+<Mass>0.25</Mass>
+<Volume>0.25</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>200</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Mushrooms</SubtypeId>
+</Id>
+<DisplayName>Mushrooms</DisplayName>
+<Description>fungi of unknown origin</Description>
+<Mass>0.25</Mass>
+<Volume>0.25</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>10</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<MinimumOrderAmount>1000</MinimumOrderAmount>
+<MaximumOrderAmount>20000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>ShroomSteak</SubtypeId>
+</Id>
+<DisplayName>Steak with Mushrooms</DisplayName>
+<Description>a filling meal</Description>
+<Mass>0.25</Mass>
+<Volume>0.25</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>750</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

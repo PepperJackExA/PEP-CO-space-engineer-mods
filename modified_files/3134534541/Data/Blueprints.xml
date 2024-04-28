@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>OakLogtoPlank</SubtypeId>
+</Id>
+<DisplayName>Log to Plank</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="OakWoodLog" />
+</Prerequisites>
+<Results>
+<Item Amount="4" TypeId="Component" SubtypeId="OakWoodPlank" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

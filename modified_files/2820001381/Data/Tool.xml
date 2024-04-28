@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>WeaponTerrainTool</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="600" ShootSoundName="HudColorBlock" />
+<DeviateShotAngle>0</DeviateShotAngle>
+<ReleaseTimeAfterFire>500</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="SoilStoneMix" />
+</AmmoMagazines>
+</Weapon>
+</Weapons>
+<PhysicalItems>
+<PhysicalItem xsi:type="MyObjectBuilder_WeaponItemDefinition">
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>PhysicalTerrainTool</SubtypeId>
+</Id>
+<DisplayName>Terrain Tool</DisplayName>
+<Description>Places terrain on asteroids and planets.
+{6} show help window.</Description>
+<Mass>5</Mass>
+<Volume>15</Volume>
+</PhysicalItem>
+</PhysicalItems>
+<HandItems>
+<Id>
+<TypeId>MyObjectBuilder_AutomaticRifle</TypeId>
+<SubtypeId>TerrainTool</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_PhysicalGunObject</TypeId>
+<SubtypeId>PhysicalTerrainTool</SubtypeId>
+<XAmplitudeOffset>0</XAmplitudeOffset>
+<YAmplitudeOffset>0</YAmplitudeOffset>
+<ZAmplitudeOffset>0</ZAmplitudeOffset>
+<XAmplitudeScale>0.12491703</XAmplitudeScale>
+<YAmplitudeScale>0.289282471</YAmplitudeScale>
+<ZAmplitudeScale>0</ZAmplitudeScale>
+<RunMultiplier>1.27547634</RunMultiplier>
+</HandItem>
+</HandItems>
+</Definitions>
+ 

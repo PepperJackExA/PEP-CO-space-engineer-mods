@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions>
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>LargeConveyorTubeLong</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_LongConveyorTube</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="100" />
+<Component Subtype="Construction" Count="200" />
+<Component Subtype="SmallTube" Count="120" />
+<Component Subtype="Motor" Count="60" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="InteriorPlate" Count="40" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Mafoo_LongConveyorTube</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>LargeConveyorTubeMedium</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_MediumConveyorTube</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="50" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="InteriorPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Mafoo_MediumConveyorTube</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>Mafoo_Large_CoveredConveyorTube</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_CoveredConveyorTube</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="InteriorPlate" Count="17" />
+<Component Subtype="Girder" Count="12" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Mafoo_CoveredConveyorTube</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>Mafoo_Large_CoveredConveyorTubeMedium</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_CoveredConveyorTube</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="Construction" Count="125" />
+<Component Subtype="SmallTube" Count="160" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="InteriorPlate" Count="50" />
+<Component Subtype="Girder" Count="60" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Mafoo_CoveredConveyorTubeMedium</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>Mafoo_Large_GratedConveyorTube</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_GratedConveyorTube</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="28" />
+<Component Subtype="SmallTube" Count="43" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Construction" Count="16" />
+<Component Subtype="InteriorPlate" Count="9" />
+<Component Subtype="Girder" Count="16" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Mafoo_GratedConveyorTube</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>Mafoo_Large_GratedConveyorTubeMedium</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_GratedConveyorTube</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="75" />
+<Component Subtype="Construction" Count="140" />
+<Component Subtype="SmallTube" Count="215" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="InteriorPlate" Count="45" />
+<Component Subtype="Girder" Count="80" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Mafoo_GratedConveyorTubeMedium</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>LargeConveyor3WayTee</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_Conveyor3WayTee</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="SmallTube" Count="18" />
+<Component Subtype="Motor" Count="9" />
+<Component Subtype="InteriorPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Conveyor3WayTee</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>LargeConveyor3WayCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_Conveyor3WayCorner</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="SmallTube" Count="18" />
+<Component Subtype="Motor" Count="9" />
+<Component Subtype="InteriorPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Conveyor3WayCorner</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>LargeConveyor4Way</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_Conveyor4Way</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SmallTube" Count="24" />
+<Component Subtype="Motor" Count="12" />
+<Component Subtype="InteriorPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Conveyor4Way</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>LargeConveyor4WayTee</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_Conveyor4WayTee</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SmallTube" Count="24" />
+<Component Subtype="Motor" Count="12" />
+<Component Subtype="InteriorPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Conveyor4WayTee</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>LargeConveyorTubeHanging</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_ConveyorHanging</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorTubeHanging</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>LargeConveyorTubeLongHanging</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_ConveyorHangingLong</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="28" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="InteriorPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorTubeLongHanging</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>Mafoo_Large_AngledConveyorTube</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Mafoo_AngledConveyorTube</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SmallTube" Count="24" />
+<Component Subtype="Motor" Count="12" />
+<Component Subtype="InteriorPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Mafoo_AngledConveyorTube</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

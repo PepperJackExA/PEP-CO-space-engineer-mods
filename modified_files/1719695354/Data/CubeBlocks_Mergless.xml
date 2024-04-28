@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockArmorMergelessSlopeSides</SubtypeId>
+</Id>
+<DisplayName>Mergeless Armor Slope Sides</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>true</ShowEdges>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>LightArmorMergelessSlopeSides</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeMergelessBlockSimple</SubtypeId>
+</Id>
+<DisplayName>Mergeless Block Simple</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>MergelessBlockSimple</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeMergelessBlock</SubtypeId>
+</Id>
+<DisplayName>Mergeless Block</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>MergelessBlock</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeMergelessTwoFaceBlock</SubtypeId>
+</Id>
+<DisplayName>Mergeless Two Face Block</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<ShowEdges>false</ShowEdges>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>MergelessTwoFaceBlock</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ButtonPanelGroup" />
+<DisplayName>DisplayName_Block_ButtonPanel</DisplayName>
+<Description>Description_ButtonPanel</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="ButtonPanelLarge" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="ButtonPanelSmall" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="LargeSciFiButtonPanel" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="LargeSciFiButtonTerminal" />
+<Block Type="MyObjectBuilder_TerminalBlock" Subtype="ControlPanel" />
+<Block Type="MyObjectBuilder_TerminalBlock" Subtype="SmallControlPanel" />
+<Block Type="MyObjectBuilder_TerminalBlock" Subtype="LargeBlockSciFiTerminal" />
+<!--<Block Type="MyObjectBuilder_ButtonPanel" Subtype="AVTech_LG_RailingButtonPanel_NODLC" />-->
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="AVTech_LG_RailingButtonPanel" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="AVTech_LG_WindowButtonPanel" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

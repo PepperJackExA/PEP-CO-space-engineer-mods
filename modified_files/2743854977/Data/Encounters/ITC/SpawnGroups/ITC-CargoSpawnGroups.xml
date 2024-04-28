@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>ITC-SpawnGroup-Thora4Cargo</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="ITC-B60">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="ITC-B980">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="ITC - Titania">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="ITC-Caliberg">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>ITC-SpawnGroup-AgarisCargo</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="ITC-B60">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="ITC-B980">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="ITC - Titania">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>ITC-SpawnGroup-SpaceCargo</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="ITC-SpaceCargo1">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="ITC-SpaceCargo2">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="ITC-SpaceCargo3">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

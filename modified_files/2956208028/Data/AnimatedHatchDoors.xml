@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+<Id>
+<TypeId>Door</TypeId>
+<SubtypeId>SlidingHatchDoor</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SlidingHatchDoor</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<OpenSound>BlockDoorHangar</OpenSound>
+<CloseSound>BlockDoorHangar</CloseSound>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="BulletproofGlass" Count="10" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SlidingHatchDoor</BlockPairName>
+<BuildTimeSeconds>26</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+<Id>
+<TypeId>Door</TypeId>
+<SubtypeId>SlidingHatchDoorHalf</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SlidingHatchDoorHalf</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<OpenSound>BlockDoorHangar</OpenSound>
+<CloseSound>BlockDoorHangar</CloseSound>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="BulletproofGlass" Count="10" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SlidingHatchDoorHalf</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

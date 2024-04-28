@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>RivalAiBehaviorDataKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>RivalAiStoredDataKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>NpcDataKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>LegacyNpcDataKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>NpcThrusterDataKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>NpcGyroDataKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>BehaviorStorageKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>TriggerStorageKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>MesTurretControllerKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>MesTemporaryPlanetKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>MesContainerTypeKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>MesShipyardKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>MesSuitModsKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>MesButtonPointsKey</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+<Id>
+<TypeId>ModStorageComponent</TypeId>
+<SubtypeId>MesSafeZoneLinkedEntity</SubtypeId>
+</Id>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_AutopilotComponentDefinition">
+<Id>
+<TypeId>AutopilotComponent</TypeId>
+<SubtypeId>RivalAIRemoteControlSmall</SubtypeId>
+</Id>
+<CourseCorrectionMaxRemainingRotationBeforeThrust>0.5</CourseCorrectionMaxRemainingRotationBeforeThrust>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_AutopilotComponentDefinition">
+<Id>
+<TypeId>AutopilotComponent</TypeId>
+<SubtypeId>RivalAIRemoteControlLarge</SubtypeId>
+</Id>
+<CourseCorrectionMaxRemainingRotationBeforeThrust>0.5</CourseCorrectionMaxRemainingRotationBeforeThrust>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

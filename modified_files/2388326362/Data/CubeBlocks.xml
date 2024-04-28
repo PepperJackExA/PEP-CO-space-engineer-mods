@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_BeaconDefinition">
+<Id>
+<TypeId>Beacon</TypeId>
+<SubtypeId>ZoneBlock</SubtypeId>
+</Id>
+<DisplayName>King Of The Hill - KotH</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="AdminKit" Count="1" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="AdminKit" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdminKit" Index="1" />
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>3.402823E+38</BuildTimeSeconds>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>Prizebox</SubtypeId>
+</Id>
+<DisplayName>KotH Golden Cargo Container</DisplayName>
+<Description>Description_SpecialCargoContainerOnlyRarelyFound</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="AdminKit" Count="1" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="GravityGenerator" Count="999" />
+<Component Subtype="AdminKit" Count="1" />
+</Components>
+<CriticalComponent Subtype="AdminKit" Index="1" />
+<BlockPairName>GoldenBlock_Large</BlockPairName>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>3.402823E+38</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

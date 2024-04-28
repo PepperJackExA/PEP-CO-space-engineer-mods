@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>FAFSquadron</SubtypeId>
+</Id>
+<DisplayName>FAF Squadron Request Beacon</DisplayName>
+<Description>Using this item will attempt to call a FAF Squadron </Description> <!--from a nearby FAF station-->
+<Mass>9</Mass>
+<Volume>9</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>5000000</MinimalPricePerUnit>
+<CanPlayerOrder>false</CanPlayerOrder>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

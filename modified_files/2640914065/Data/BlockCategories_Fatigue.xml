@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_Consumables</DisplayName>
+<Name>Consumables</Name>
+<SearchBlocks>false</SearchBlocks>
+<IsToolCategory>true</IsToolCategory>
+<ItemIds>
+<string>Apple</string>
+<string>AppleJuice</string>
+<string>ApplePie</string>
+<string>Tofu</string>
+<string>Soup</string>
+<string>Meat</string>
+<string>MeatRoasted</string>
+<string>Mushrooms</string>
+<string>ShroomSteak</string>
+<string>Bread</string>
+<string>Burger</string>
+<string>EuropaTea</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_DLC_DecorativeBlocks</DisplayName>
+<Name>DecorativeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>Assembler/Kitchen</string>
+<string>Assembler/Planters</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SparksOfTheFuturePack</DisplayName>
+<Name>SparksOfTheFutureBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CargoContainer/LargeBlockBarCounter</string>
+<string>CargoContainer/LargeBlockBarCounterCorner</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

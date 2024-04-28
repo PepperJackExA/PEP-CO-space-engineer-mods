@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WindTurbineDefinition">
+<Id>
+<TypeId>WindTurbine</TypeId>
+<SubtypeId>LargeBlockWindTurbine</SubtypeId>
+</Id>
+<DisplayName>Basic Wind Turbine</DisplayName>
+<Description>Basic wind panel capable of generating power.
+Nominal Max Output: 500kW</Description>
+<CubeSize>Large</CubeSize>
+<ResearchGroup>Tier00Basics</ResearchGroup>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Electromagnet" Count="8" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="CopperWire" Count="24" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>BasicWindTurbine</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ActionSound>ArcBlockWindTurbine</ActionSound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>false</IsAirTight>
+<RaycastersToFullEfficiency>7</RaycastersToFullEfficiency>
+<PCU>10</PCU>
+<string>PowerSystems</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

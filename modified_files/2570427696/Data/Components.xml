@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>EmptyTinCan</SubtypeId>
+</Id>
+<DisplayName>Empty Tin Can</DisplayName>
+<Description>Empty Tin Can</Description>
+<Mass>0.01</Mass>
+<Volume>0.5</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>1</MaxIntegrity>
+<DropProbability>0.1</DropProbability>
+<Health>1</Health>
+</Component>
+</Components>
+</Definitions>
+ 

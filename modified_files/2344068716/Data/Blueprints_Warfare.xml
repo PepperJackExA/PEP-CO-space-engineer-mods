@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AutocannonClip</SubtypeId>
+</Id>
+<DisplayName>Autocannon Clip</DisplayName>
+<Prerequisites>
+<Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="6" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AutocannonClipDUAP</SubtypeId>
+</Id>
+<DisplayName>Depleted Uranium Autocannon Clip</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="DepletedUranium" />
+<Item Amount="6" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>MediumCalibreAmmo</SubtypeId>
+</Id>
+<DisplayName>AP Assault Cannon Shell</DisplayName>
+<Prerequisites>
+<Item Amount="4" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1.5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="1.5" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>MediumCalibreAmmoHE</SubtypeId>
+</Id>
+<DisplayName>HE Assault Cannon Shell</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1.5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="4" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>MediumCalibreAmmoDUAP</SubtypeId>
+</Id>
+<DisplayName>DUAP Assault Cannon Shell</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="DepletedUranium" />
+<Item Amount="1.5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="1.5" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>LargeCalibreAmmo</SubtypeId>
+</Id>
+<DisplayName>AP Artillery Shell</DisplayName>
+<Prerequisites>
+<Item Amount="8" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="3.5" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>LargeCalibreAmmoHE</SubtypeId>
+</Id>
+<DisplayName>HE Artillery Shell</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>LargeCalibreAmmoDUAP</SubtypeId>
+</Id>
+<DisplayName>DUAP Artillery Shell</DisplayName>
+<Prerequisites>
+<Item Amount="4" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="4" TypeId="Ingot" SubtypeId="DepletedUranium" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="3.5" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>LargeRailgunAmmo</SubtypeId>
+</Id>
+<DisplayName>Large Standard Railgun Sabot</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Titanium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>14</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>LargeRailgunAmmoDUAP</SubtypeId>
+</Id>
+<DisplayName>Large Depleted Uranium Railgun Sabot</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="DepletedUranium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>14</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SmallRailgunAmmo</SubtypeId>
+</Id>
+<DisplayName>Small Standard Railgun Sabot</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Titanium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>14</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SmallRailgunAmmoDUAP</SubtypeId>
+</Id>
+<DisplayName>Small Depleted Uranium Railgun Sabot</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="DepletedUranium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>14</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

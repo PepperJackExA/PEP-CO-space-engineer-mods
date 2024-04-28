@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_SearchlightDefinition">
+<Id>
+<TypeId>Searchlight</TypeId>
+<SubtypeId>SmallSearchlight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Searchlight</DisplayName>
+<Description>Description_Searchlight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Searchlight</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<HasInventory>false</HasInventory>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MinElevationDegrees>-40</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SearchlightDefinition">
+<Id>
+<TypeId>Searchlight</TypeId>
+<SubtypeId>LargeSearchlight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Searchlight</DisplayName>
+<Description>Description_Searchlight</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="BulletproofGlass" Count="4" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Searchlight</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<HasInventory>false</HasInventory>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.001</RequiredPowerInput>
+<MinElevationDegrees>-40</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Gear_030_Center</SubtypeId>
+</Id>
+<DisplayName>Beam 1x1x1 50cm</DisplayName>
+<Description>Gear Type: Beam; Size: 1x1x1; Diameter: 50cm</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>Gear_030_Center</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

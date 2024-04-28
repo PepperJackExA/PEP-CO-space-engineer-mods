@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>Ares_Class_Torpedo_Launcher_F</SubtypeId>
+</Id>
+<DisplayName>Ares Class Torpedo Launcher Flat</DisplayName>
+<Description>A single tube torpedo launcher which boasts an autoloading compartment that contains everything needed to load torpedoes from storage into the tube.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="150" />
+<Component Subtype="SmallTube" Count="120" />
+<Component Subtype="LargeTube" Count="135" />
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="InnerComponent" Count="50" />
+<Component Subtype="Motor" Count="300" />
+<Component Subtype="Computer" Count="300" />
+<Component Subtype="MetalGrid" Count="300" />
+<Component Subtype="Construction" Count="210" />
+<Component Subtype="SteelPlate" Count="570" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>45</OperationalPowerConsumption>
+<BlockPairName>Ares Class Torpedo Launcher Flat</BlockPairName>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>Ares_Class_Torpedo_Launcher_F_MES</SubtypeId>
+</Id>
+<DisplayName>Ares Class Torpedo Launcher Flat</DisplayName>
+<Description>A single tube torpedo launcher which boasts an autoloading compartment that contains everything needed to load torpedoes from storage into the tube.</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="Girder" Count="150" />
+<Component Subtype="SmallTube" Count="120" />
+<Component Subtype="LargeTube" Count="135" />
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="InnerComponent" Count="50">
+<DeconstructId>
+<TypeId>Ingot</TypeId>
+<SubtypeId>InnerTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="300" />
+<Component Subtype="Computer" Count="300" />
+<Component Subtype="MetalGrid" Count="300" />
+<Component Subtype="Construction" Count="210" />
+<Component Subtype="SteelPlate" Count="570" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>45</OperationalPowerConsumption>
+<BlockPairName>Ares Class Torpedo Launcher Flat MES</BlockPairName>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

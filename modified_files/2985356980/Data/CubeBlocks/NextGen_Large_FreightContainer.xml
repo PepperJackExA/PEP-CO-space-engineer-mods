@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>NextGen_Large_FreightContainer</SubtypeId>
+</Id>
+<DisplayName>Freight Container</DisplayName>
+<Description>Description_LockerRoomCorner</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="28" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="6" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>NextGen_Large_FreightContainer</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

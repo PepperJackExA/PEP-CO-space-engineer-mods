@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>OreCompactorSmall</SubtypeId>
+</Id>
+<DisplayName>Ore Compactor</DisplayName>
+<Description>A production machine that compacts ores into half their size, doubling their density</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="300" />
+<Component Subtype="Construction" Count="250" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="MetalGrid" Count="30" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>OreCompactor</BlockPairName>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4.0</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.50</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>CompressedOres</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1.0</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>60</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>OreCompactorLarge</SubtypeId>
+</Id>
+<DisplayName>Large Ore Compactor</DisplayName>
+<Description>A production machine that compacts ores into half their size, doubling their density.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="500" />
+<Component Subtype="Construction" Count="400" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="Motor" Count="200" />
+<Component Subtype="MetalGrid" Count="75" />
+<Component Subtype="Computer" Count="40" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>OreCompactor</BlockPairName>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>10.0</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.50</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>CompressedOres</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1.0</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>75</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>OreMill</SubtypeId>
+</Id>
+<DisplayName>Ore Mill</DisplayName>
+<Description>An ore mill that grinds down compressed ore blocks back into their original form. This is only needed for mod compatibility, as compressed blocks can normally be refined as is.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="450" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>OreMill</BlockPairName>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>5.0</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.50</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>UnCompressedOres</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1.0</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>60</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

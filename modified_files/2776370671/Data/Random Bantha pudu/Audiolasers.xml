@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>LaserM60sound</SubtypeId>
+</Id>
+<Category>WEP_PLAY</Category>
+<MaxDistance>30</MaxDistance>
+<Volume>.1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\Weapons\NR_LaserCannon_A.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Weapons\NR_LaserCannon_A.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>LaserSmallPistolsound</SubtypeId>
+</Id>
+<Category>WEP_PLAY</Category>
+<MaxDistance>30</MaxDistance>
+<Volume>.1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\Weapons\ProtoBlaster_III.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Weapons\ProtoBlaster_III.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>LaserSmallPistolsoundHeavy</SubtypeId>
+</Id>
+<Category>WEP_PLAY</Category>
+<MaxDistance>30</MaxDistance>
+<Volume>.1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\Weapons\NR_LaserCannon_XWing_C.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Weapons\NR_LaserCannon_XWing_C.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>Lasernadesound</SubtypeId>
+</Id>
+<Category>WEP_PLAY</Category>
+<MaxDistance>30</MaxDistance>
+<Volume>.1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\Weapons\NR_HeavyLaserCannon_B.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Weapons\NR_HeavyLaserCannon_B.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>LaserLargePistolsound</SubtypeId>
+</Id>
+<Category>WEP_PLAY</Category>
+<MaxDistance>30</MaxDistance>
+<Volume>.1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\Weapons\HeavyBlaster_B.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Weapons\HeavyBlaster_B.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>LaserSniperSound</SubtypeId>
+</Id>
+<Category>WEP_PLAY</Category>
+<MaxDistance>30</MaxDistance>
+<Volume>.1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\Weapons\LightCannon_B.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Weapons\LightCannon_B.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>LaserMGSound</SubtypeId>
+</Id>
+<Category>WEP_PLAY</Category>
+<MaxDistance>30</MaxDistance>
+<Volume>.1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio\Weapons\LightCannon_C.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Weapons\LightCannon_C.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

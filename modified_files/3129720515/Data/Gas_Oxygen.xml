@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<GasProperties>
+<Gas>
+<Id>
+<TypeId>MyObjectBuilder_GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</Id>
+<EnergyDensity>0.000001</EnergyDensity> <!--oxygen needs at least some energy density for jetpack, otherwise it shuts off instantly-->
+</Gas>
+</GasProperties>
+</Definitions>
+ 

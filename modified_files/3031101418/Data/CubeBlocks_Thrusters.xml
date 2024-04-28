@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LargeBlockLargeAtmosphericThrust</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeAtmoThrust</DisplayName>
+<Description>
+</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Atmospheric</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="CopperWire" Count="100" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="Motor" Count="500" />
+<Component Subtype="TitaniumPlate" Count="150" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>LargeAtmoThrust</BlockPairName>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>6480000</ForceMagnitude>
+<MaxPowerConsumption>16.8</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LargeBlockLargeAtmosphericThrustSciFi</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeAtmoThrustSciFi</DisplayName>
+<Description>
+</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Atmospheric</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="CopperWire" Count="100" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="Motor" Count="500" />
+<Component Subtype="TitaniumPlate" Count="150" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>LargeAtmoThrustSciFi</BlockPairName>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>6480000</ForceMagnitude>
+<MaxPowerConsumption>16.8</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LargeBlockLargeFlatAtmosphericThrust</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeAtmoThrustFlat</DisplayName>
+<Description>Description_AtmosphericThrust</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Atmospheric</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="CopperWire" Count="100" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="Motor" Count="400" />
+<Component Subtype="TitaniumPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>LargeAtmoThrustFlat</BlockPairName>
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>2600000</ForceMagnitude>
+<MaxPowerConsumption>6.7</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LargeBlockLargeFlatAtmosphericThrustDShape</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeAtmoThrustFlatDShape</DisplayName>
+<Description>Description_AtmosphericThrust</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Atmospheric</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="CopperWire" Count="100" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="Motor" Count="400" />
+<Component Subtype="TitaniumPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>LargeAtmoThrustFlatDShape</BlockPairName>
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>2600000</ForceMagnitude>
+<MaxPowerConsumption>6.7</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LargeBlockSmallFlatAtmosphericThrust</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallAtmoThrustFlat</DisplayName>
+<Description>Description_AtmosphericThrust</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Atmospheric</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="CopperWire" Count="50" />
+<Component Subtype="MetalGrid" Count="3" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="TitaniumPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>SmallAtmoThrustFlat</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>200000</ForceMagnitude>
+<MaxPowerConsumption>0.8</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LargeBlockSmallFlatAtmosphericThrustDShape</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallAtmoThrustFlatDShape</DisplayName>
+<Description>Description_AtmosphericThrust</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Atmospheric</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="CopperWire" Count="50" />
+<Component Subtype="MetalGrid" Count="3" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="TitaniumPlate" Count="10" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>SmallAtmoThrustFlatDShape</BlockPairName>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>200000</ForceMagnitude>
+<MaxPowerConsumption>0.8</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>LrgShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SmallBlockLargeFlatAtmosphericThrust</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeAtmoThrustFlat</DisplayName>
+<Description>Description_AtmosphericThrust</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Atmospheric</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="MetalGrid" Count="3" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="TitaniumPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>LargeAtmoThrustFlat</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>230000</ForceMagnitude>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>SmShipLrgJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SmallBlockLargeFlatAtmosphericThrustDShape</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeAtmoThrustFlatDShape</DisplayName>
+<Description>Description_AtmosphericThrust</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Atmospheric</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="MetalGrid" Count="3" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="TitaniumPlate" Count="4" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>LargeAtmoThrustFlatDShape</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>230000</ForceMagnitude>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>SmShipLrgJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SmallBlockSmallFlatAtmosphericThrust</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallAtmoThrustFlat</DisplayName>
+<Description>Description_AtmosphericThrust</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Atmospheric</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="CopperWire" Count="15" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="TitaniumPlate" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>SmallAtmoThrustFlat</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>32000</ForceMagnitude>
+<MaxPowerConsumption>0.200</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SmallBlockSmallFlatAtmosphericThrustDShape</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallAtmoThrustFlatDShape</DisplayName>
+<Description>Description_AtmosphericThrust</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Atmospheric</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="CopperWire" Count="15" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="TitaniumPlate" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+<BlockPairName>SmallAtmoThrustFlatDShape</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>32000</ForceMagnitude>
+<MaxPowerConsumption>0.200</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+<string>Propulsion</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

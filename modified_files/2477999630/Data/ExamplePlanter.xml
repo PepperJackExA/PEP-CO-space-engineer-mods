@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ExamplePlanter</SubtypeId>
+</Id>
+<DisplayName>ExamplePlanter</DisplayName>
+<Description>Decorative plant</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="5" Subtype="SteelPlate"/>
+<Component Subtype="Construction" Count="5" />
+<Component Count="5" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="Construction"/>
+<BlockPairName>ExamplePlanter</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

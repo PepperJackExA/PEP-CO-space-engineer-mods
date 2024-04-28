@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Definition xsi:type="MyObjectBuilder_FactionTypeDefinition">
+<Id Type="MyObjectBuilder_FactionTypeDefinition" Subtype="Trader" />
+<OffersList>
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="GravelMag" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="GravelMagBig" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="155mmAPShell" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="155mmDUAPShell" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="155mmHEShell" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="305mmAPShell" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="305mmDUAPShell" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="305mmHEShell" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="APCoilgunShell" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="DUAPCoilgunShell" />
+</OffersList>
+</Definition>
+</Definitions>
+ 

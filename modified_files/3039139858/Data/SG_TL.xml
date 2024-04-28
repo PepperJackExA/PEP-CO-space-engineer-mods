@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>SG_TL</SubtypeId>
+</Id>
+<DisplayName>SG_TL</DisplayName>
+<Description>SG_TL</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="15" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SI_TL</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>1.14</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>825</PCU>
+<string>Weapons</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

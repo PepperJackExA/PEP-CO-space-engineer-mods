@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Faction Tag="insert_tagName"(use more than 3 letters. With 3 it is possible to conflict with player tags) Founder="insert_founderName">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>Insert_SubTypeName</SubtypeId>
+</Id>
+<DisplayName>Insert_KeyToFractionDisplayName</DisplayName>
+<AcceptHumans>true or false</AcceptHumans>
+<AutoAcceptMember>true or false</AutoAcceptMember>
+<EnableFriendlyFire>true or false</EnableFriendlyFire> (this one does not work fully. Ask Cestmir for more details)
+<IsDefault>true or false</IsDefault> (Indicates if faction should be created in the world by default. Its owner will be visible in Ownership dropdown.
+</Faction>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Factions>
+<Faction Tag="NOMAD" Founder="The Wanderer">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>NomadBots</SubtypeId>
+</Id>
+<DisplayName>[AiE] Nomads</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="BINC" Founder="The Tinkerer">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>BotsIncorporated</SubtypeId>
+</Id>
+<DisplayName>[AiE] Bots Incorporated</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="SCDS" Founder="The Martyr">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>SuicideSquad</SubtypeId>
+</Id>
+<DisplayName>[AiE] Suicide Squad</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="OTFI" Founder="The Tailor">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>OutfittersInc</SubtypeId>
+</Id>
+<DisplayName>[AiE] Outfitters Inc</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="UNIT" Founder="The Soldier">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>TheUnit</SubtypeId>
+</Id>
+<DisplayName>[AiE] The Unit</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="BLBT" Founder="The Infiltrator">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>BlackBots</SubtypeId>
+</Id>
+<DisplayName>[AiE] Black Bots</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="LEGN" Founder="The Legionnaire">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>Legion</SubtypeId>
+</Id>
+<DisplayName>[AiE] Legion</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="OBSD" Founder="The Obsidianborn">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>Obsidian</SubtypeId>
+</Id>
+<DisplayName>[AiE] Obsidian</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="FLWR" Founder="Flamesoul">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>FlamesOfWrath</SubtypeId>
+</Id>
+<DisplayName>[AiE] Flames of Wrath</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="AZRE" Founder="Azure's Gift">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>Azure</SubtypeId>
+</Id>
+<DisplayName>[AiE] Azure</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="RSBC" Founder="The Rusted">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>RustBucket</SubtypeId>
+</Id>
+<DisplayName>[AiE] Rust Bucket</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="ENGR" Founder="The Architect">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>Engineers Inc</SubtypeId>
+</Id>
+<DisplayName>[AiE] Engineers Inc</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="MDFR" Founder="The Modifier">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>Assimilators</SubtypeId>
+</Id>
+<DisplayName>[AiE] Assimilators</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="ALPB" Founder="The Alpha">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>AlphaBots</SubtypeId>
+</Id>
+<DisplayName>[AiE] Alpha Bots</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="DMGD" Founder="Short Circuit">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>TheDamaged</SubtypeId>
+</Id>
+<DisplayName>[AiE] The Damaged</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="BTTL" Founder="Iron Hide">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>BattleBots</SubtypeId>
+</Id>
+<DisplayName>[AiE] Battle Bots</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="MCHB" Founder="The Mechanic">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>MechBots</SubtypeId>
+</Id>
+<DisplayName>[AiE] Mech Bots</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="PRME" Founder="Optimus">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>ThePrime</SubtypeId>
+</Id>
+<DisplayName>[AiE] The Prime</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="PREN" Founder="The Coder">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>PerceptiveEncoding</SubtypeId>
+</Id>
+<DisplayName>[AiE] Perceptive Encoding</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="SENT" Founder="Reboot">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>TheSentient</SubtypeId>
+</Id>
+<DisplayName>[AiE] The Sentient</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="JKHP" Founder="Scrap">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>JunkHeap</SubtypeId>
+</Id>
+<DisplayName>[AiE] Junk Heap</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="RCDR" Founder="The Analyst">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>ReconDroids</SubtypeId>
+</Id>
+<DisplayName>[AiE] Recon Droids</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="OPER" Founder="The Hacker">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>TheOperators</SubtypeId>
+</Id>
+<DisplayName>[AiE] The Operators</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="MTLM" Founder="Tin">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>MetalMates</SubtypeId>
+</Id>
+<DisplayName>[AiE] Metal Mates</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="CRTG" Founder="The Map Maker">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>Cartographers</SubtypeId>
+</Id>
+<DisplayName>[AiE] Cartographers</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="FIBR" Founder="Fiber">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>FiberOptics</SubtypeId>
+</Id>
+<DisplayName>[AiE] Fiber Optics</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="PCKP" Founder="The General">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>ThePeacekeepers</SubtypeId>
+</Id>
+<DisplayName>[AiE] The Peacekeepers</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="FGHT" Founder="The Brute">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>FightersIncorporated</SubtypeId>
+</Id>
+<DisplayName>[AiE] Fighters Incorporated</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="FUTR" Founder="The Experiment">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>FutureBots</SubtypeId>
+</Id>
+<DisplayName>[AiE] Future Bots</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="CLBT" Founder="Ratchet">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>ClangBots</SubtypeId>
+</Id>
+<DisplayName>[AiE] Clang Bots</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="BLDR" Founder="Socket">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>BuildersInc</SubtypeId>
+</Id>
+<DisplayName>[AiE] Builders Inc</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="CLTR" Founder="Cylinder">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>TheCollectors</SubtypeId>
+</Id>
+<DisplayName>[AiE] The Collectors</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="OBSR" Founder="Telescope">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>TheObservers</SubtypeId>
+</Id>
+<DisplayName>[AiE] The Observers</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>true</AutoAcceptMember>
+<EnableFriendlyFire>false</EnableFriendlyFire>
+<StartingBalance>0</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\BotsIcon.dds</FactionIcon>
+</Faction>
+</Factions>
+</Definitions>
+ 

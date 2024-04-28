@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OxygenFarmDefinition">
+<Id>
+<TypeId>OxygenFarm</TypeId>
+<SubtypeId>SolarConcentrator</SubtypeId>
+</Id>
+<DisplayName>Solar Concentrator</DisplayName>
+<Description>Parabolic-Trough Solar Concentrator. Uses mirrors to focus sunlight and generate steam.
+Max Output: 1.5MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="BulletproofGlass" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<BlockPairName>PEPCO_SolarConcentrator_Rebalance</BlockPairName>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<OperationalPowerConsumption>0.02</OperationalPowerConsumption>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

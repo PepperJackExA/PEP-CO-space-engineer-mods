@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>SmallBlockConveyorPipeCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeCorner</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeCorner</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>SmallBlockConveyorPipeEnd</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeEnd</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeEnd</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>SmallBlockConveyorPipeFlange</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeFlange</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeFlange</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>SmallBlockConveyorPipeSeamless</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeSeamless</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeSeamless</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallBlockConveyorPipeIntersection</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeIntersection</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeIntersection</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallBlockConveyorPipeJunction</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeJunction</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeJunction</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallBlockConveyorPipeTJunction</SubtypeId>
+</Id>
+<DisplayName>Conveyor Pipe T Junction</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeT</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallBlockConveyorPipeElbow</SubtypeId>
+</Id>
+<DisplayName>Conveyor Pipe Elbow</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>PipeElbow</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallBlockConveyorPipeElbowJunction</SubtypeId>
+</Id>
+<DisplayName>Conveyor Pipe Elbow Junction</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>PipeElbowJunction</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallBlockConveyorPipe5-Way</SubtypeId>
+</Id>
+<DisplayName>Conveyor Pipe 5 Way</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>Pipe5Way</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

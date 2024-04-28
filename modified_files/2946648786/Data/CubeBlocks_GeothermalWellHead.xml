@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>GeothermalWellHead</SubtypeId>
+</Id>
+<DisplayName>Geothermal Wellhead</DisplayName>
+<Description>Processes geothermal heat to produce Steam. Must be connected by Geothermal Pipes to a Geothermal Well Tip.
+Produces ~30 Steam/sec per at 250m depth and increses if you go deaper.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="TitaniumPlate" Count="50" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="CopperWire" Count="25" />
+<Component Subtype="AdvancedComputer" Count="5" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>9999999999</IceConsumptionPerSecond>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<IceToGasRatio>0.05</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Heat</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

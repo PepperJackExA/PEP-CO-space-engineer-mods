@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+<Id>
+<TypeId>CryoChamber</TypeId>
+<SubtypeId>SmallBlockCryoChamber</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CryoChamber</DisplayName>
+<Description>Description_CryoChamber</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Medical" Count="3" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="BulletproofGlass" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>CryoChamber</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<IdlePowerConsumption>0.00003</IdlePowerConsumption>
+<OutsideSound>BlockCryoOut</OutsideSound>
+<InsideSound>BlockCryoIn</InsideSound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

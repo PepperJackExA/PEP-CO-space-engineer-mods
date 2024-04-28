@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>Mounted Zakosetara Heavy Railgun WeaponDefinition</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1"/>
+<DeviateShotAngle>0.01</DeviateShotAngle>
+<ReleaseTimeAfterFire>3000</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="Energy" />
+</AmmoMagazines>
+<ReloadTime>0</ReloadTime>
+</Weapon>
+</Weapons>
+</Definitions>
+ 

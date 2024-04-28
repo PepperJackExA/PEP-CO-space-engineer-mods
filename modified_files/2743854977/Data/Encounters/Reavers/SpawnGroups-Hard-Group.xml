@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Reaver-SpawnGroup-GroupEncounter-Hard-A</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>3.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-RVR) Aggressor">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-RVR) Butcher">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-RVR) Charger">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-RVR) Mutilator">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>AaW-Reaver-SpawnGroup-GroupEncounter-Hard-B</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>3.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-RVR) Aggressor">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-RVR) Charger">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-RVR) Butcher">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-RVR) Mutilator">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-RVR) Piercer">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

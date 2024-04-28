@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>LargeSciFiButtonTerminal</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SciFiButtonTerminal</DisplayName>
+<Description>Description_ButtonPanel</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Construction" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>SciFiButtonTerminal</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

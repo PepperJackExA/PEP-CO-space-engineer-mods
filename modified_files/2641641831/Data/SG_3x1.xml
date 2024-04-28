@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Concave Base</SubtypeId>
+</Id>
+<DisplayName>3x1 Concave Base</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Concave Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Concave Mid</SubtypeId>
+</Id>
+<DisplayName>3x1 Concave Mid</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Concave Mid</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Concave Tip</SubtypeId>
+</Id>
+<DisplayName>3x1 Concave Tip</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Concave Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Convex Base</SubtypeId>
+</Id>
+<DisplayName>3x1 Convex Base</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Convex Base</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Convex Mid</SubtypeId>
+</Id>
+<DisplayName>3x1 Convex Mid</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Convex Mid</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Convex Tip</SubtypeId>
+</Id>
+<DisplayName>3x1 Convex Tip</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Convex Tip</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Concave Base H</SubtypeId>
+</Id>
+<DisplayName>Heavy 3x1 Concave Base</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2"/>
+<Component Subtype="MetalGrid" Count="1"/>
+<Component Subtype="SteelPlate" Count="2"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Concave Base Heavy</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Concave Mid H</SubtypeId>
+</Id>
+<DisplayName>Heavy 3x1 Concave Mid</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+<Component Subtype="MetalGrid" Count="1"/>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Concave Mid Heavy</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Concave Tip H</SubtypeId>
+</Id>
+<DisplayName>Heavy 3x1 Concave Tip</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="MetalGrid" Count="1"/>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Concave Tip Heavy</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Convex Base H</SubtypeId>
+</Id>
+<DisplayName>Heavy 3x1 Convex Base</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2"/>
+<Component Subtype="MetalGrid" Count="1"/>
+<Component Subtype="SteelPlate" Count="2"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Convex Base Heavy</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_3x1 Convex Mid H</SubtypeId>
+</Id>
+<DisplayName>Heavy 3x1 Convex Mid</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1"/>
+<Component Subtype="MetalGrid" Count="1"/>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Convex Mid Heavy</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>H
+<SubtypeId>SG_3x1 Convex Tip </SubtypeId>
+</Id>
+<DisplayName>Heavy 3x1 Convex Tip</DisplayName>
+<Description>Description_HeavyArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="MetalGrid" Count="1"/>
+<Component Subtype="SteelPlate" Count="1"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>3x1 Convex Tip Heavy</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

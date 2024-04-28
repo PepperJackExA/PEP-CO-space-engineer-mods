@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>SPRT-SpawnGroup-LightSpaceTaskForce</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="SPRT-LightHunter">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="SPRT-LightHunter-2">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>SPRT-SpawnGroup-MediumSpaceTaskForce</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="SPRT-Corvette-1">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="SPRT-Corvette-2">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>SPRT-SpawnGroup-HeavySpaceTaskForce</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="SPRT-Gunfighter">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="SPRT-Cruiser-1">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="SPRT-Cruiser-2">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="SPRT-Destroyer-Grissom">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

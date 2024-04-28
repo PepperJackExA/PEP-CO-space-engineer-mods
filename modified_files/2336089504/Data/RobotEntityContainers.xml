@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Drone_Bot</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Drone_Bot" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_AssetModifierComponent" SubtypeId="Default_Astronaut" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_CharacterDiscoveryComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Boss_Bot</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Boss_Bot" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_AssetModifierComponent" SubtypeId="Default_Astronaut" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_CharacterDiscoveryComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Police_Bot</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Police_Bot" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_AssetModifierComponent" SubtypeId="Default_Astronaut" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_CharacterDiscoveryComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>Target_Dummy</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="Target_Dummy" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_AssetModifierComponent" SubtypeId="Default_Astronaut" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_CharacterDiscoveryComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Character</TypeId>
+<SubtypeId>RoboDog</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_CharacterStatComponent" SubtypeId="RoboDog" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_AssetModifierComponent" SubtypeId="Default_Astronaut" ForceCreate="true"/>
+<Component BuilderType="MyObjectBuilder_CharacterDiscoveryComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+</Definitions>
+ 

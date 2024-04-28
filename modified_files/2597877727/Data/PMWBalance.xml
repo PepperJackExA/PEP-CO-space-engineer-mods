@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SmallHydrogenTank</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HydrogenTank</DisplayName>
+<Description>Description_HydrogenTank</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="SmallTube" Count="30" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>HydrogenTank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>500000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.005</LeakPercent>
+<GasExplosionMaxRadius>5</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>500000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepSmallWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_02</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SmallHydrogenTankSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HydrogenTankSmall</DisplayName>
+<Description>Description_HydrogenTank</Description>
+<Public>true</Public>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>HydrogenTankSmall</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.0002</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.0000002</StandbyPowerConsumption>
+<Capacity>15000 </Capacity>
+<InventoryMaxVolume>0.12</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.025</LeakPercent>
+<GasExplosionMaxRadius>3</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>15000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RemoteControlDefinition">
+<Id>
+<TypeId>RemoteControl</TypeId>
+<SubtypeId>SmallBlockRemoteControl</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_RemoteControl</DisplayName>
+<Description>Description_RemoteControl</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="GuidanceComponent" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>RemoteControl</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<EnableFirstPerson>false</EnableFirstPerson>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RemoteControlDefinition">
+<Id>
+<TypeId>RemoteControl</TypeId>
+<SubtypeId>LargeBlockRemoteControl</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_RemoteControl</DisplayName>
+<Description>Description_RemoteControl</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="GuidanceComponent" Count="1" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>RemoteControl</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.01</RequiredPowerInput>
+<EnableFirstPerson>false</EnableFirstPerson>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

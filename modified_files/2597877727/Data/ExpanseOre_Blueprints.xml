@@ -1,0 +1,1582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>TungstenToIngot</SubtypeId>
+</Id>
+<DisplayName>Tungsten Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Tungsten" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CopperToIngot</SubtypeId>
+</Id>
+<DisplayName>Copper Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Copper" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>LeadToIngot</SubtypeId>
+</Id>
+<DisplayName>Lead Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Lead" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>TitaniumToIngot</SubtypeId>
+</Id>
+<DisplayName>Titanium Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Titanium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>9</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>LithiumToIngot</SubtypeId>
+</Id>
+<DisplayName>Lithium Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ore" SubtypeId="Lithium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToLithiumPowerCell</SubtypeId>
+</Id>
+<DisplayName>Lithium Ingot</DisplayName>
+<Prerequisites>
+<Item Amount="2500" TypeId="Ingot" SubtypeId="LithiumIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<!--<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToSmallArms</SubtypeId>
+</Id>
+<DisplayName>Small Arms</DisplayName>
+<Prerequisites>
+<Item Amount="30" TypeId="PhysicalGunObject" SubtypeId="SemiAutoPistolItem" />
+<Item Amount="27" TypeId="PhysicalGunObject" SubtypeId="FullAutoPistolItem" />
+<Item Amount="33" TypeId="PhysicalGunObject" SubtypeId="AutomaticRifleItem" />
+<Item Amount="24" TypeId="PhysicalGunObject" SubtypeId="RapidFireAutomaticRifleItem" />
+<Item Amount="90" TypeId="AmmoMagazine" SubtypeId="SemiAutoPistolMagazine" />
+<Item Amount="180" TypeId="AmmoMagazine" SubtypeId="FullAutoPistolMagazine" />
+<Item Amount="60" TypeId="AmmoMagazine" SubtypeId="AutomaticRifleGun_Mag_20rd" />
+<Item Amount="120" TypeId="AmmoMagazine" SubtypeId="RapidFireAutomaticRifleGun_Mag_50rd" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2.15</BaseProductionTimeInSeconds>
+</Blueprint>-->
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToSmallArms</SubtypeId>
+</Id>
+<DisplayName>Small Arms</DisplayName>
+<Prerequisites>
+<Item Amount="642" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="342" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="79.5" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>FromSmallArms</SubtypeId>
+</Id>
+<DisplayName>Small Arms</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="SmallArms" />
+</Prerequisites>
+<Results>
+<Item Amount="214" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="114" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="26.5" TypeId="Ingot" SubtypeId="Magnesium" />
+</Results>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<!--<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToHeavyArms</SubtypeId>
+</Id>
+<DisplayName>Heavy Arms</DisplayName>
+<Prerequisites>
+<Item Amount="15" TypeId="PhysicalGunObject" SubtypeId="BasicHandHeldLauncherItem" />
+<Item Amount="30" TypeId="PhysicalGunObject" SubtypeId="AdvancedHandHeldLauncherItem" />
+<Item Amount="120" TypeId="PhysicalGunObject" SubtypeId="ElitePistolItem" />
+<Item Amount="30" TypeId="PhysicalGunObject" SubtypeId="PreciseAutomaticRifleItem" />
+<Item Amount="60" TypeId="PhysicalGunObject" SubtypeId="UltimateAutomaticRifleItem" />
+<Item Amount="90" TypeId="AmmoMagazine" SubtypeId="PreciseAutomaticRifleGun_Mag_5rd" />
+<Item Amount="180" TypeId="AmmoMagazine" SubtypeId="UltimateAutomaticRifleGun_Mag_30rd" />
+<Item Amount="120" TypeId="AmmoMagazine" SubtypeId="ElitePistolMagazine" />
+<Item Amount="60" TypeId="AmmoMagazine" SubtypeId="Missile200mm" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>180</BaseProductionTimeInSeconds>
+</Blueprint>-->
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToHeavyArms</SubtypeId>
+</Id>
+<DisplayName>Heavy Arms</DisplayName>
+<Prerequisites>
+<Item Amount="5364" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1110" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="435" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="262.5" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="12" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="360" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="392.4" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="6" TypeId="Ingot" SubtypeId="Uranium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>120</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>FromHeavyArms</SubtypeId>
+</Id>
+<DisplayName>Heavy Arms</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="HeavyArms" />
+</Prerequisites>
+<Results>
+<Item Amount="1788" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="370" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="145" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="87.5" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="4" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="120" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="130.8" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Uranium" />
+</Results>
+<BaseProductionTimeInSeconds>120</BaseProductionTimeInSeconds>
+</Blueprint>
+<!--<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToTools</SubtypeId>
+</Id>
+<DisplayName>Tool Pack</DisplayName>
+<Prerequisites>
+<Item Amount="9" TypeId="PhysicalGunObject" SubtypeId="WelderItem" />
+<Item Amount="6" TypeId="PhysicalGunObject" SubtypeId="Welder2Item" />
+<Item Amount="12" TypeId="PhysicalGunObject" SubtypeId="Welder3Item" />
+<Item Amount="18" TypeId="PhysicalGunObject" SubtypeId="Welder4Item" />
+<Item Amount="9" TypeId="PhysicalGunObject" SubtypeId="AngleGrinderItem" />
+<Item Amount="6" TypeId="PhysicalGunObject" SubtypeId="AngleGrinder2Item" />
+<Item Amount="12" TypeId="PhysicalGunObject" SubtypeId="AngleGrinder3Item" />
+<Item Amount="18" TypeId="PhysicalGunObject" SubtypeId="AngleGrinder4Item" />
+<Item Amount="9" TypeId="PhysicalGunObject" SubtypeId="HandDrillItem" />
+<Item Amount="6" TypeId="PhysicalGunObject" SubtypeId="HandDrill2Item" />
+<Item Amount="12" TypeId="PhysicalGunObject" SubtypeId="HandDrill3Item" />
+<Item Amount="18" TypeId="PhysicalGunObject" SubtypeId="HandDrill4Item" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+</Blueprint>-->
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToTools</SubtypeId>
+</Id>
+<DisplayName>Tool Pack</DisplayName>
+<Prerequisites>
+<Item Amount="1260" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="225" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="49.2" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="120" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="144" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="72" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="108" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="36" TypeId="Ingot" SubtypeId="CopperIngot" />
+<Item Amount="18" TypeId="Ingot" SubtypeId="TitaniumIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>40</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>FromTools</SubtypeId>
+</Id>
+<DisplayName>Tool Pack</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="ToolPack" />
+</Prerequisites>
+<Results>
+<Item Amount="420" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="75" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="16.4" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="40" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="48" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="24" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="36" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="12" TypeId="Ingot" SubtypeId="CopperIngot" />
+<Item Amount="6" TypeId="Ingot" SubtypeId="TitaniumIngot" />
+</Results>
+<BaseProductionTimeInSeconds>40</BaseProductionTimeInSeconds>
+</Blueprint>
+<!--<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToAmmo</SubtypeId>
+</Id>
+<DisplayName>Ammo Cache</DisplayName>
+<Prerequisites>
+<Item Amount="60" TypeId="AmmoMagazine" SubtypeId="Missile200mm" />
+<Item Amount="180" TypeId="AmmoMagazine" SubtypeId="SemiAutoPistolMagazine" />
+<Item Amount="120" TypeId="AmmoMagazine" SubtypeId="FullAutoPistolMagazine" />
+<Item Amount="180" TypeId="AmmoMagazine" SubtypeId="ElitePistolMagazine" />
+<Item Amount="150" TypeId="AmmoMagazine" SubtypeId="AutomaticRifleGun_Mag_20rd" />
+<Item Amount="150" TypeId="AmmoMagazine" SubtypeId="RapidFireAutomaticRifleGun_Mag_50rd" />
+<Item Amount="90" TypeId="AmmoMagazine" SubtypeId="PreciseAutomaticRifleGun_Mag_5rd" />
+<Item Amount="120" TypeId="AmmoMagazine" SubtypeId="UltimateAutomaticRifleGun_Mag_30rd" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>18</BaseProductionTimeInSeconds>
+</Blueprint>-->
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToAmmo</SubtypeId>
+</Id>
+<DisplayName>Ammo Cache</DisplayName>
+<Prerequisites>
+<Item Amount="4095" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="630" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="237" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="12" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="2.4" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="6" TypeId="Ingot" SubtypeId="Uranium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>FromAmmo</SubtypeId>
+</Id>
+<DisplayName>Ammo Cache</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="AmmoCache" />
+</Prerequisites>
+<Results>
+<Item Amount="1365" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="210" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="79" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="4" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="0.8" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Uranium" />
+</Results>
+<BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+</Blueprint>
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="WelderItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="Welder2Item" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="Welder3Item" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="Welder4Item" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AngleGrinderItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AngleGrinder2Item" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AngleGrinder3Item" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AngleGrinder4Item" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="HandDrillItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="HandDrill2Item" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="HandDrill3Item" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="HandDrill4Item" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="BasicHandHeldLauncherItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AdvancedHandHeldLauncherItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="SemiAutoPistolItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="FullAutoPistolItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="ElitePistolItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="AutomaticRifleItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="RapidFireAutomaticRifleItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="PreciseAutomaticRifleItem" />
+<Item Amount="1" TypeId="PhysicalGunObject" SubtypeId="UltimateAutomaticRifleItem" />
+<Item Amount="1" TypeId="AmmoMagazine" SubtypeId="SemiAutoPistolMagazine" />
+<Item Amount="1" TypeId="AmmoMagazine" SubtypeId="FullAutoPistolMagazine" />
+<Item Amount="1" TypeId="AmmoMagazine" SubtypeId="ElitePistolMagazine" />
+<Item Amount="1" TypeId="AmmoMagazine" SubtypeId="AutomaticRifleGun_Mag_20rd" />
+<Item Amount="1" TypeId="AmmoMagazine" SubtypeId="RapidFireAutomaticRifleGun_Mag_50rd" />
+<Item Amount="1" TypeId="AmmoMagazine" SubtypeId="PreciseAutomaticRifleGun_Mag_5rd" />
+<Item Amount="1" TypeId="AmmoMagazine" SubtypeId="UltimateAutomaticRifleGun_Mag_30rd" />
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>StoneOreToIngot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+<Prerequisites>
+<Item Amount="1000" TypeId="Ore" SubtypeId="Stone" />
+</Prerequisites>
+<Results>
+<Item Amount="14" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2.4" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="4.0" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="0.05" TypeId="Ingot" SubtypeId="LeadIngot" />
+<Item Amount="0.1" TypeId="Ingot" SubtypeId="CopperIngot" />
+<Item Amount="0.05" TypeId="Ingot" SubtypeId="TungstenIngot" />
+</Results>
+<BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0010_StoneOreToIngotBasic</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+<Prerequisites>
+<Item Amount="150" TypeId="Ore" SubtypeId="Stone" />
+</Prerequisites>
+<Results>
+<Item Amount="1.4" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.24" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.4" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="0.01" TypeId="Ingot" SubtypeId="LeadIngot" />
+<Item Amount="0.02" TypeId="Ingot" SubtypeId="CopperIngot" />
+<Item Amount="0.01" TypeId="Ingot" SubtypeId="TungstenIngot" />
+</Results>
+<Priority>1000</Priority>
+<BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>MotorComponent</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Motor</DisplayName>
+<Prerequisites>
+<Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="7" TypeId="Ingot" SubtypeId="CopperIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ComputerComponent</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Computer</DisplayName>
+<Prerequisites>
+<Item Amount="0.5" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.2" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="0.5" TypeId="Ingot" SubtypeId="CopperIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ReactorComponent</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_ReactorComponents</DisplayName>
+<Prerequisites>
+<Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="20" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="LeadIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ThrustComponent</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_ThrustComponents</DisplayName>
+<Prerequisites>
+<Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Gold" />
+<Item Amount="0.4" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="TitaniumIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>GravityGeneratorComponent</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_GravityGeneratorComponents</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Gold" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="TungstenIngot" />
+<Item Amount="220" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="600" TypeId="Ingot" SubtypeId="Iron" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>RadioCommunicationComponent</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_RadioCommunicationComponents</DisplayName>
+<Prerequisites>
+<Item Amount="8" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="CopperIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>DetectorComponent</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_DetectorComponents</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="CopperIngot" />
+<Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ExplosivesComponent</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Explosives</DisplayName>
+<Prerequisites>
+<Item Amount="0.5" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="LeadIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SolarCell</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_SolarCell</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="4" TypeId="Ingot" SubtypeId="CopperIngot" />
+<Item Amount="6" TypeId="Ingot" SubtypeId="Silicon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PowerCell</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_PowerCell</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="LeadIngot" />
+<Item Amount="4" TypeId="Ingot" SubtypeId="CopperIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0120_Welder4</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Welder4</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.2" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="CopperIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>50</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0040_AngleGrinder4</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_AngleGrinder4</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="TitaniumIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>50</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Superconductor</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Superconductor</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Gold" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="CopperIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toStructuralReinforcement</SubtypeId>
+</Id>
+<DisplayName>Structural Reinforcement for Refineries, Assemblers, and O2 Generators</DisplayName>
+<Prerequisites>
+<Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="LeadIngot" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="TungstenIngot" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>12</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>AdminKit</SubtypeId>
+</Id>
+<DisplayName>AdminKit</DisplayName>
+<Prerequisites>
+<Item Amount="9999999" TypeId="Ingot" SubtypeId="Uranium" />
+<Item Amount="9999999" TypeId="Ingot" SubtypeId="Gold" />
+<Item Amount="9999999" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="9999999" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="9999999" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="9999999" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="9999999" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toFusionFuel</SubtypeId>
+</Id>
+<DisplayName>Fusion Fuel Canister</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Uranium" />
+<Item Amount="200" TypeId="Ore" SubtypeId="Ice" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="LeadIngot" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Cobalt" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toBelterComp</SubtypeId>
+</Id>
+<DisplayName>BelterCompDud</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="AdminKit" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>99999999</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toMachinePart</SubtypeId>
+</Id>
+<DisplayName>Machine Parts</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ore" SubtypeId="HighTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toUpgradedBelterComp</SubtypeId>
+</Id>
+<DisplayName>Machine Parts</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="MachinedParts" />
+<Item Amount="3" TypeId="Component" SubtypeId="BelterComponent"/>
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toMCRNComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer MCRN Tech</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="MCRNCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toMCRNAdvComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer MCRN Adv Tech</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="MCRNAdvCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toMCRNExpComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer MCRN Exp Tech</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="MCRNExpCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toUNNComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer UNN Tech</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="UNNCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toUNNAdvComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer UNN Adv Tech</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="UNNAdvCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toUNNExpComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer UNN Exp Tech</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="UNNExpCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toInnerComp</SubtypeId>
+</Id>
+<DisplayName>Inner Comps</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="InnerTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkTungsten</SubtypeId>
+</Id>
+<DisplayName>Bulk Tungsten</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="22500" TypeId="Ingot" SubtypeId="Tungsten" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkTungstenCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkCopper</SubtypeId>
+</Id>
+<DisplayName>Bulk Copper</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="45000" TypeId="Ingot" SubtypeId="Copper" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkCopperCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkLead</SubtypeId>
+</Id>
+<DisplayName>Bulk Lead</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="30000" TypeId="Ingot" SubtypeId="Lead" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkLeadCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkTitanium</SubtypeId>
+</Id>
+<DisplayName>Bulk Titanium</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="3375" TypeId="Ingot" SubtypeId="Titanium" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkTitaniumCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkIron</SubtypeId>
+</Id>
+<DisplayName>Bulk Iron</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10500000" TypeId="Ingot" SubtypeId="Iron" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkIronCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkNickel</SubtypeId>
+</Id>
+<DisplayName>Bulk Nickel</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="375000" TypeId="Ingot" SubtypeId="Nickel" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkNickelCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkCobalt</SubtypeId>
+</Id>
+<DisplayName>Bulk Cobalt</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="60000" TypeId="Ingot" SubtypeId="Cobalt" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkCobaltCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkMagnesium</SubtypeId>
+</Id>
+<DisplayName>Bulk Magnesium</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="375000" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkMagnesiumCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkSilicon</SubtypeId>
+</Id>
+<DisplayName>Bulk Silicon</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="405000" TypeId="Ingot" SubtypeId="Silicon" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkSiliconCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkSilver</SubtypeId>
+</Id>
+<DisplayName>Bulk Silver</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="60000" TypeId="Ingot" SubtypeId="Silver" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkSilverCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkGold</SubtypeId>
+</Id>
+<DisplayName>Bulk Gold</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="150000" TypeId="Ingot" SubtypeId="Gold" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkGoldCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BulkUranium</SubtypeId>
+</Id>
+<DisplayName>Bulk Uranium</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="9" TypeId="Ingot" SubtypeId="Lead" />
+<Item Amount="1500" TypeId="Ingot" SubtypeId="Uranium" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkUraniumCrate" />
+</Results>
+<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>RawMaterialsCraft</SubtypeId>
+</Id>
+<DisplayName>RawMaterialsCraft</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="IceBox" />
+<Item Amount="1" TypeId="Component" SubtypeId="Water_Tank" />
+</Prerequisites>
+<Results>
+<Item Amount="3" TypeId="Component" SubtypeId="RawMaterials" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>RawMaterialsUse</SubtypeId>
+</Id>
+<DisplayName>Raw Materials Use</DisplayName>
+<Prerequisites>
+<Item Amount="100" TypeId="Component" SubtypeId="RawMaterials" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="InnerComponent" />
+<Item Amount="1" TypeId="Component" SubtypeId="UNNComponent" />
+<Item Amount="1" TypeId="Component" SubtypeId="MCRNComponent" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ComponentCreationTycho</SubtypeId>
+</Id>
+<DisplayName>ComponentCreationTycho</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="GanymedeFoodShipment" />
+<Item Amount="12" TypeId="Component" SubtypeId="DrinkingWater" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="TychoComponent" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ComponentCreationCeres</SubtypeId>
+</Id>
+<DisplayName>ComponentCreationCeres</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="GanymedeFoodShipment" />
+<Item Amount="12" TypeId="Component" SubtypeId="DrinkingWater" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="CeresComponent" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ComponentCreationVesta</SubtypeId>
+</Id>
+<DisplayName>ComponentCreationVesta</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="GanymedeFoodShipment" />
+<Item Amount="12" TypeId="Component" SubtypeId="DrinkingWater" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="VestaComponent" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ComponentCreationMedina</SubtypeId>
+</Id>
+<DisplayName>ComponentCreationTycho</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="GanymedeFoodShipment" />
+<Item Amount="12" TypeId="Component" SubtypeId="DrinkingWater" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="MedinaComponent" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PassengerCreationTycho</SubtypeId>
+</Id>
+<DisplayName>PassengerCreationTycho</DisplayName>
+<Prerequisites>
+<Item Amount="12" TypeId="Component" SubtypeId="TychoPassenger" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="CeresPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="VestaPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="GanymedePassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="MedinaPassenger" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PassengerCreationCeres</SubtypeId>
+</Id>
+<DisplayName>PassengerCreationCeres</DisplayName>
+<Prerequisites>
+<Item Amount="12" TypeId="Component" SubtypeId="CeresPassenger" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="TychoPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="VestaPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="GanymedePassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="MedinaPassenger" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PassengerCreationVesta</SubtypeId>
+</Id>
+<DisplayName>PassengerCreationVesta</DisplayName>
+<Prerequisites>
+<Item Amount="12" TypeId="Component" SubtypeId="VestaPassenger" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="CeresPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="TychoPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="GanymedePassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="MedinaPassenger" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PassengerCreationGanymede</SubtypeId>
+</Id>
+<DisplayName>PassengerCreationGanymede</DisplayName>
+<Prerequisites>
+<Item Amount="12" TypeId="Component" SubtypeId="GanymedePassenger" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="CeresPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="TychoPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="VestaPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="MedinaPassenger" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PassengerCreationMedina</SubtypeId>
+</Id>
+<DisplayName>PassengerCreationMedina</DisplayName>
+<Prerequisites>
+<Item Amount="12" TypeId="Component" SubtypeId="MedinaPassenger" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="CeresPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="TychoPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="VestaPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="GanymedePassenger" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SurviviorConsume</SubtypeId>
+</Id>
+<DisplayName>SurviviorConsume</DisplayName>
+<Prerequisites>
+<Item Amount="15" TypeId="Component" SubtypeId="Survivor" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="CeresPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="TychoPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="VestaPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="GanymedePassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="MedinaPassenger" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>WelWalaConsume</SubtypeId>
+</Id>
+<DisplayName>WelwalaConsume</DisplayName>
+<Prerequisites>
+<Item Amount="15" TypeId="Component" SubtypeId="Survivor" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="CeresPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="TychoPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="VestaPassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="GanymedePassenger" />
+<Item Amount="1" TypeId="Component" SubtypeId="MedinaPassenger" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToMedicalCache</SubtypeId>
+</Id>
+<DisplayName>Medical Cache</DisplayName>
+<Prerequisites>
+<Item Amount="4770" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1095" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="4530" TypeId="Ingot" SubtypeId="Nickel" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="MedicalCache" />
+</Results>
+<BaseProductionTimeInSeconds>120</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>FromMedicalCache</SubtypeId>
+</Id>
+<DisplayName>Deconstruct Medical Cache</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="MedicalCache" />
+</Prerequisites>
+<Results>
+<Item Amount="1590" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="365" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="1510" TypeId="Ingot" SubtypeId="Nickel" />
+</Results>
+<BaseProductionTimeInSeconds>120</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ToRepairCache</SubtypeId>
+</Id>
+<DisplayName>Deconstruct Repair Cache</DisplayName>
+<Prerequisites>
+<Item Amount="5985" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="3897" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="378" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="4200" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="342" TypeId="Ingot" SubtypeId="Gold" />
+<Item Amount="24000" TypeId="Ingot" SubtypeId="Stone" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="RepairCache" />
+</Results>
+<BaseProductionTimeInSeconds>120</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>FromRepairCache</SubtypeId>
+</Id>
+<DisplayName>Deconstruct Repair Cache</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="RepairCache" />
+</Prerequisites>
+<Results>
+<Item Amount="1995" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1299" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="126" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="1400" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="114" TypeId="Ingot" SubtypeId="Gold" />
+<Item Amount="8000" TypeId="Ingot" SubtypeId="Stone" />
+</Results>
+<BaseProductionTimeInSeconds>120</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>IcetoNPTradeGoods</SubtypeId>
+</Id>
+<DisplayName>Purify Ice</DisplayName>
+<Prerequisites>
+<Item Amount="30000" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<Results>
+<Item Amount="2" TypeId="Component" SubtypeId="IceBox" />
+<Item Amount="2" TypeId="Component" SubtypeId="Water_Tank" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Fuel_Processing</SubtypeId>
+</Id>
+<DisplayName>Filter Ice</DisplayName>
+<Prerequisites>
+<Item Amount="9" TypeId="Component" SubtypeId="IceBox" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Fuel_Tank" />
+<Item Amount="1" TypeId="Component" SubtypeId="SG_Fuel_Tank" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Fuel_Extracting</SubtypeId>
+</Id>
+<DisplayName>Fuel Extracting</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Fuel_Tank" />
+</Prerequisites>
+<Results>
+<Item Amount="0.9" TypeId="Ingot" SubtypeId="Stone" />
+</Results>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SG_Fuel_Extracting</SubtypeId>
+</Id>
+<DisplayName>Jerry Cant Fuel Extracting</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="SG_Fuel_Tank" />
+</Prerequisites>
+<Results>
+<Item Amount="0.9" TypeId="Ingot" SubtypeId="Stone" />
+</Results>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Composting</SubtypeId>
+</Id>
+<DisplayName>Composting</DisplayName>
+<Prerequisites>
+<Item Amount="1500" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="3" TypeId="Component" SubtypeId="Canvas" />
+<Item Amount="90" TypeId="Component" SubtypeId="Tomato" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Compost" />
+</Results>
+<BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrateofTomatoes</SubtypeId>
+</Id>
+<DisplayName>Crate of Tomatoes</DisplayName>
+<Prerequisites>
+<Item Amount="60" TypeId="Component" SubtypeId="Construction" />
+<Item Amount="240" TypeId="Component" SubtypeId="Tomato" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="CrateTomato" />
+</Results>
+<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ShipmentofTomatoes</SubtypeId>
+</Id>
+<DisplayName>Bulk Shipment of Tomatoes</DisplayName>
+<Prerequisites>
+<Item Amount="600" TypeId="Component" SubtypeId="Construction" />
+<Item Amount="2700" TypeId="Component" SubtypeId="Tomato" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkTomato" />
+</Results>
+<BaseProductionTimeInSeconds>240</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CraftBottle</SubtypeId>
+</Id>
+<DisplayName>Empty Water Bottle</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="Silicon" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="WaterBottle" />
+</Results>
+<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BottleWater</SubtypeId>
+</Id>
+<DisplayName>Bottle Water</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Water_Tank" />
+<Item Amount="180" TypeId="Component" SubtypeId="WaterBottle" />
+</Prerequisites>
+<Results>
+<Item Amount="3" TypeId="Component" SubtypeId="DrinkingWater" />
+</Results>
+<BaseProductionTimeInSeconds>50</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data1</SubtypeId>
+</Id>
+<DisplayName>Scan Data Water</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="DrinkingWater" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data2</SubtypeId>
+</Id>
+<DisplayName>Scan Data steel plate</DisplayName>
+<Prerequisites>
+<Item Amount="750" TypeId="Component" SubtypeId="SteelPlate" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data3</SubtypeId>
+</Id>
+<DisplayName>Scan Data tanks</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Fuel_Tank" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data4</SubtypeId>
+</Id>
+<DisplayName>Scan Data Interior</DisplayName>
+<Prerequisites>
+<Item Amount="1500" TypeId="Component" SubtypeId="InteriorPlate" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data5</SubtypeId>
+</Id>
+<DisplayName>Scan Data grids</DisplayName>
+<Prerequisites>
+<Item Amount="150" TypeId="Component" SubtypeId="MetalGrid" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data6</SubtypeId>
+</Id>
+<DisplayName>Scan Data smalltube</DisplayName>
+<Prerequisites>
+<Item Amount="300" TypeId="Component" SubtypeId="SmallTube" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data7</SubtypeId>
+</Id>
+<DisplayName>Scan Data largetube</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Component" SubtypeId="LargeTube" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data8</SubtypeId>
+</Id>
+<DisplayName>Scan Data Motor</DisplayName>
+<Prerequisites>
+<Item Amount="300" TypeId="Component" SubtypeId="Motor" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data9</SubtypeId>
+</Id>
+<DisplayName>Scan Data Display</DisplayName>
+<Prerequisites>
+<Item Amount="300" TypeId="Component" SubtypeId="Display" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data10</SubtypeId>
+</Id>
+<DisplayName>Scan Data BulletproofGlass</DisplayName>
+<Prerequisites>
+<Item Amount="300" TypeId="Component" SubtypeId="BulletproofGlass" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data11</SubtypeId>
+</Id>
+<DisplayName>Scan Data Superconductor</DisplayName>
+<Prerequisites>
+<Item Amount="45" TypeId="Component" SubtypeId="Superconductor" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data12</SubtypeId>
+</Id>
+<DisplayName>Scan Data Computer</DisplayName>
+<Prerequisites>
+<Item Amount="300" TypeId="Component" SubtypeId="Computer" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data13</SubtypeId>
+</Id>
+<DisplayName>Scan Data Reactor</DisplayName>
+<Prerequisites>
+<Item Amount="120" TypeId="Component" SubtypeId="Reactor" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data14</SubtypeId>
+</Id>
+<DisplayName>Scan Data Medical</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Medical" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data15</SubtypeId>
+</Id>
+<DisplayName>Scan Data PowerCell</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Component" SubtypeId="PowerCell" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data16</SubtypeId>
+</Id>
+<DisplayName>Scan Data CrateTomato</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="CrateTomato" />
+</Prerequisites>
+<Results>
+<Item Amount="2" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data17</SubtypeId>
+</Id>
+<DisplayName>Scan Data ToolPack</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="ToolPack" />
+</Prerequisites>
+<Results>
+<Item Amount="2" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toResearchInnerUNN</SubtypeId>
+</Id>
+<DisplayName>Compile Inner Research</DisplayName>
+<Prerequisites>
+<Item Amount="15.001" TypeId="Component" SubtypeId="UNNComponent" />
+<Item Amount="3.001" TypeId="Component" SubtypeId="UNNAdvComponent"/>
+<Item Amount="15.001" TypeId="Component" SubtypeId="InnerComponent"/>
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toResearchInnerMCRN</SubtypeId>
+</Id>
+<DisplayName>Compile Inner Research</DisplayName>
+<Prerequisites>
+<Item Amount="15.001" TypeId="Component" SubtypeId="MCRNComponent" />
+<Item Amount="3.001" TypeId="Component" SubtypeId="MCRNAdvComponent"/>
+<Item Amount="15.001" TypeId="Component" SubtypeId="InnerComponent"/>
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toResearchBelter</SubtypeId>
+</Id>
+<DisplayName>Compile Belter Research</DisplayName>
+<Prerequisites>
+<Item Amount="30.001" TypeId="Component" SubtypeId="GuidanceComponent" />
+<Item Amount="60.001" TypeId="Component" SubtypeId="BelterComponent" />
+<Item Amount="3.001" TypeId="Component" SubtypeId="TrackingComponent" />
+<Item Amount="30.001" TypeId="Component" SubtypeId="PDCComponent" />
+<Item Amount="15.001" TypeId="Component" SubtypeId="UpgradedBelterComponent"/>
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Bots>
+<Bot xsi:type="MyObjectBuilder_AnimalBotDefinition">
+<Id>
+<TypeId>MyObjectBuilder_AnimalBot</TypeId>
+<SubtypeId>Police_Bot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Bots_Deer</DisplayName>
+<Public>true</Public>
+<AvailableInSurvival>false</AvailableInSurvival>
+<RemoveAfterDeath>true</RemoveAfterDeath>
+<InventoryContainerTypeId>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>RobotLoot</SubtypeId>
+</InventoryContainerTypeId>
+<FactionTag>SPRT</FactionTag>
+</Bot>
+<Bot xsi:type="MyObjectBuilder_AnimalBotDefinition">
+<Id>
+<TypeId>MyObjectBuilder_AnimalBot</TypeId>
+<SubtypeId>Drone_Bot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Bots_Deer</DisplayName>
+<Public>true</Public>
+<AvailableInSurvival>false</AvailableInSurvival>
+<RemoveAfterDeath>true</RemoveAfterDeath>
+<InventoryContainerTypeId>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>RobotLoot</SubtypeId>
+</InventoryContainerTypeId>
+<FactionTag>FSTC</FactionTag>
+</Bot>
+<Bot xsi:type="MyObjectBuilder_AnimalBotDefinition">
+<Id>
+<TypeId>MyObjectBuilder_AnimalBot</TypeId>
+<SubtypeId>Target_Dummy</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Bots_Deer</DisplayName>
+<Public>true</Public>
+<AvailableInSurvival>false</AvailableInSurvival>
+<RemoveAfterDeath>true</RemoveAfterDeath>
+<InventoryContainerTypeId>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>RobotLoot</SubtypeId>
+</InventoryContainerTypeId>
+<FactionTag>FSTC</FactionTag>
+</Bot>
+<Bot xsi:type="MyObjectBuilder_AnimalBotDefinition">
+<Id>
+<TypeId>MyObjectBuilder_AnimalBot</TypeId>
+<SubtypeId>Boss_Bot</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Bots_Deer</DisplayName>
+<Public>true</Public>
+<AvailableInSurvival>false</AvailableInSurvival>
+<RemoveAfterDeath>true</RemoveAfterDeath>
+<InventoryContainerTypeId>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>RobotLoot</SubtypeId>
+</InventoryContainerTypeId>
+<FactionTag>SPRT</FactionTag>
+</Bot>
+</Bots>
+</Definitions>
+ 

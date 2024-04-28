@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>NickelOreStarting</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_NickelIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Nickel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.2</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SiliconOreStarting</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_SiliconWafer</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Silicon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.2</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SilverOreStarting</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_SilverIngot</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Silver" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PEPCO_AlkalinePowerCellStarting</SubtypeId>
+</Id>
+<DisplayName>Alkaline Power Cell</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1" TypeId="Component" SubtypeId="CopperWire" />
+<Item Amount="2" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POMedicalComponent_Bench</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_MedicalComponents</DisplayName>
+<Prerequisites>
+<Item Amount="12" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="Silver" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

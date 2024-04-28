@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AutomationGroup" />
+<DisplayName>DisplayName_BlockGroup_AutomationGroup</DisplayName>
+<Description>Description_BlockGroup_AutomationGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="LargeProgrammableBlock" />
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="SmallProgrammableBlock" />
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="LargeProgrammableBlockReskin" />
+<Block Type="MyObjectBuilder_MyProgrammableBlock" Subtype="SmallProgrammableBlockReskin" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="LargeBlockSensor" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="SmallBlockSensor" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="LargeBlockSensorReskin" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="SmallBlockSensorReskin" />
+<Block Type="MyObjectBuilder_TimerBlock" Subtype="TimerBlockLarge" />
+<Block Type="MyObjectBuilder_TimerBlock" Subtype="TimerBlockSmall" />
+<Block Type="MyObjectBuilder_TimerBlock" Subtype="TimerBlockReskinLarge" />
+<Block Type="MyObjectBuilder_TimerBlock" Subtype="TimerBlockReskinSmall" />
+<Block Type="MyObjectBuilder_TurretControlBlock" Subtype="LargeTurretControlBlock" />
+<Block Type="MyObjectBuilder_TurretControlBlock" Subtype="SmallTurretControlBlock" />
+<Block Type="MyObjectBuilder_EventControllerBlock" Subtype="EventControllerLarge" />
+<Block Type="MyObjectBuilder_EventControllerBlock" Subtype="EventControllerSmall" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensor" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalf" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2S" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalfB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2SB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorSGB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorC" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalfC" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2SC" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorD" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalfD" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2SD" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SensorGroup" />
+<DisplayName>DisplayName_Block_Sensor</DisplayName>
+<Description>Description_Sensor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="LargeBlockSensor" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="SmallBlockSensor" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="LargeBlockSensorReskin" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="SmallBlockSensorReskin" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensor" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalf" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2S" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalfB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2SB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorSGB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorC" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalfC" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2SC" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorD" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalfD" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2SD" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LCDGroup" />
+<DisplayName>DisplayName_BlockGroup_LCDGroup</DisplayName>
+<Description>Description_BlockGroup_LCDGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_TextPanel" Subtype="LargeTextPanel" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="LargeLCDPanelWide" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="LargeLCDPanel" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="SmallTextPanel" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="SmallLCDPanelWide" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="SmallLCDPanel" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TransparentLCDLarge" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TransparentLCDSmall" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCD" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDHalf" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDL2S" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDB" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDHalfB" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDL2SB" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDSGB" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDC" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDHalfC" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDL2SC" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDD" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDHalfD" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDL2SD" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CameraGroup" />
+<DisplayName>DisplayName_Block_Camera</DisplayName>
+<Description>Description_Camera</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="LargeCameraBlock" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="SmallCameraBlock" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="LargeCameraTopMounted" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="SmallCameraTopMounted" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCamera" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraHalf" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraL2S" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraB" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraHalfB" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraL2SB" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraSGB" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraHalfC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraL2SC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraD" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraHalfD" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraL2SD" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LightingGroup" />
+<DisplayName>DisplayName_BlockGroup_LightingGroup</DisplayName>
+<Description>Description_BlockGroup_LightingGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="LargeBlockFrontLight" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="SmallBlockFrontLight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallLight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockSmallLight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="LargeBlockLight_1corner" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="LargeBlockLight_2corner" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockLight_1corner" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockLight_2corner" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="RotatingLightLarge" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="RotatingLightSmall" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="OffsetLight" />
+<Block Type="MyObjectBuilder_ReflectorLight" Subtype="OffsetSpotlight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallLightPanel" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="LargeLightPanel" />
+<Block Type="MyObjectBuilder_Searchlight" Subtype="LargeSearchlight" />
+<Block Type="MyObjectBuilder_Searchlight" Subtype="SmallSearchlight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="LargeBlockInsetLight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockInsetLight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockHalf" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockL2S" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockB" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockHalfB" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockL2SB" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockC" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockHalfC" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockL2SC" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockD" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockHalfD" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockL2SD" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InteriorStructureGroup" />
+<DisplayName>DisplayName_BlockGroup_InteriorStructureGroup</DisplayName>
+<Description>Description_BlockGroup_InteriorStructureGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockCylindricalColumn" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockCylindricalColumn" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockInteriorWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockSciFiWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PipeWorkBlockA" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PipeWorkBlockB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AngledInteriorWallA" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AngledInteriorWallB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeInteriorPillar" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCoverWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCoverWallHalf" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCoverWallHalfMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="FireCover" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="FireCoverCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockHalf" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockL2S" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockHalfB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockL2SB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockSGB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockC" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockHalfC" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockL2SC" />
+<!--		<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockD" /> -->
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockHalfD" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockL2SD" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SoundGroup" />
+<DisplayName>DisplayName_Block_SoundBlock</DisplayName>
+<Description>Description_Sound</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="LargeBlockSoundBlock" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="SmallBlockSoundBlock" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="Jukebox" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlock" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockHalf" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockL2S" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBox" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxHalf" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxL2S" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockB" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockHalfB" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockL2SB" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxB" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxHalfB" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxL2SB" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockSGB" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxSGB" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxSG3x1B" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockC" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockHalfC" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockL2SC" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxC" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxHalfC" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxL2SC" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockD" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockHalfD" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockL2SD" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxD" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxHalfD" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxL2SD" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockSGD" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxSGD" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxSG3x1D" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ButtonPanelGroup" />
+<DisplayName>DisplayName_Block_ButtonPanel</DisplayName>
+<Description>Description_ButtonPanel</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="ButtonPanelLarge" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="ButtonPanelSmall" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="LargeSciFiButtonPanel" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="LargeSciFiButtonTerminal" />
+<Block Type="MyObjectBuilder_TerminalBlock" Subtype="ControlPanel" />
+<Block Type="MyObjectBuilder_TerminalBlock" Subtype="MaintenancePanelLarge" />
+<Block Type="MyObjectBuilder_TerminalBlock" Subtype="SmallControlPanel" />
+<Block Type="MyObjectBuilder_TerminalBlock" Subtype="LargeBlockSciFiTerminal" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="VerticalButtonPanelLarge" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="VerticalButtonPanelSmall" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButton" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonHalf" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonL2S" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonHalfB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonL2SB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonSGB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonHalfC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonL2SC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonHalfD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonL2SD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonSGD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanel" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelHalf" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelL2S" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelHalfB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelL2SB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelSG3x1B" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelHalfC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelL2SC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelHalfD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelL2SD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelSG3x1D" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanel" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelHalf" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelL2S" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelHalfB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelL2SB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelSGB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelHalfC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelL2SC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelHalfD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelL2SD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AutomatonInteriorStructureGroup" />
+<DisplayName>Automaton Interior Wall</DisplayName>
+<Description>Automaton Interior Wall</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockHalf" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockL2S" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockHalfB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockL2SB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockSGB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockC" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockHalfC" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockL2SC" />
+<!-- <Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockD" /> -->
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PipeWorkBlockB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockHalfD" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockL2SD" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TSOAutoInteriorBlockSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SingleButtonPanelGroup" />
+<DisplayName>Inset Button</DisplayName>
+<Description>Description_ButtonPanel</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButton" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonHalf" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonL2S" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonHalfB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonL2SB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonSGB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonHalfC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonL2SC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonHalfD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonL2SD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoButtonSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="VerticalButtonPanelGroup" />
+<DisplayName>Inset Vertical Button Panel</DisplayName>
+<Description>Description_ButtonPanel</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanel" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelHalf" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelL2S" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelHalfB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelL2SB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelSGB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelHalfC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelL2SC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelHalfD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelL2SD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoBPanelSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="FourButtonPanelGroup" />
+<DisplayName>Inset Button Panel</DisplayName>
+<Description>Description_ButtonPanel</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanel" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelHalf" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelL2S" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelHalfB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelL2SB" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelSG3x1B" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelHalfC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelL2SC" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelHalfD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelL2SD" />
+<Block Type="MyObjectBuilder_ButtonPanel" Subtype="TSOInsetAutoSciFiPanelSG3x1D" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InsetCarmeraGroup" />
+<DisplayName>Inset Camera</DisplayName>
+<Description>Description_Camera</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCamera" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraHalf" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraL2S" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraB" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraHalfB" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraL2SB" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraSGB" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraHalfC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraL2SC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraD" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraHalfD" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraL2SD" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOInsetAutoCameraSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InsetSoundGroup" />
+<DisplayName>Inset SoundBlock</DisplayName>
+<Description>Description_Sound</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlock" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockHalf" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockL2S" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockB" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockHalfB" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockL2SB" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockSGB" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockC" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockHalfC" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockL2SC" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockD" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockHalfD" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockL2SD" />
+<Block Type="MyObjectBuilder_SoundBlock" Subtype="TSOInsetAutoSoundBlockSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InsetJukeBoxGroup" />
+<DisplayName>Inset Jukebox</DisplayName>
+<Description>Description_Jukebox</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBox" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxHalf" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxL2S" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxB" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxHalfB" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxL2SB" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxSGB" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxSG3x1B" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxC" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxHalfC" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxL2SC" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxD" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxHalfD" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxL2SD" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxSGD" />
+<Block Type="MyObjectBuilder_Jukebox" Subtype="TSOInsetAutoJukeBoxSG3x1D" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InsetLCDGroup" />
+<DisplayName>Inset LCD Panel</DisplayName>
+<Description>Description_TextPanelp</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCD" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDHalf" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDL2S" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDB" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDHalfB" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDL2SB" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDSGB" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDC" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDHalfC" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDL2SC" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDD" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDHalfD" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDL2SD" />
+<Block Type="MyObjectBuilder_TextPanel" Subtype="TSOInsetAutomationLCDSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InsetSensorGroup" />
+<DisplayName>Inset Automaton Sensor</DisplayName>
+<Description>Description_Sensor</Description>
+<Blocks>>
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensor" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalf" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2S" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalfB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2SB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorSGB" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorC" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalfC" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2SC" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorD" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorHalfD" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorL2SD" />
+<Block Type="MyObjectBuilder_SensorBlock" Subtype="TSOInsetAutoSensorSGD" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TSOInsetLightingGroup" />
+<DisplayName>DisplayName_Block_InsetLight</DisplayName>
+<Description>Description_InteriorLight</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="LargeBlockInsetLight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockInsetLight" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockHalf" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockL2S" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockB" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockHalfB" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockL2SB" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockSGB" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockC" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockHalfC" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockL2SC" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockD" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockHalfD" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockL2SD" />
+<Block Type="MyObjectBuilder_InteriorLight" Subtype="TSOInsetLightBlockSGD" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

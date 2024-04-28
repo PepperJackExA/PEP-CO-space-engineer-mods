@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>IcetoNPTradeGoods</SubtypeId>
+</Id>
+<DisplayName>Purify Ice</DisplayName>
+<Prerequisites>
+<Item Amount="15000" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="IceBox" />
+<Item Amount="1" TypeId="Component" SubtypeId="Water_Tank" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Fuel_Processing</SubtypeId>
+</Id>
+<DisplayName>Filter Ice</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="IceBox" />
+</Prerequisites>
+<Results>
+<Item Amount="2" TypeId="Component" SubtypeId="Fuel_Tank" />
+<Item Amount="2" TypeId="Component" SubtypeId="SG_Fuel_Tank" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Fuel_Extracting</SubtypeId>
+</Id>
+<DisplayName>Fuel Extracting</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Fuel_Tank" />
+</Prerequisites>
+<Results>
+<Item Amount="0.9" TypeId="Ingot" SubtypeId="Stone" />
+</Results>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>SG_Fuel_Extracting</SubtypeId>
+</Id>
+<DisplayName>Jerry Cant Fuel Extracting</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="SG_Fuel_Tank" />
+</Prerequisites>
+<Results>
+<Item Amount="0.9" TypeId="Ingot" SubtypeId="Stone" />
+</Results>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Composting</SubtypeId>
+</Id>
+<DisplayName>Composting</DisplayName>
+<Prerequisites>
+<Item Amount="1500" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="3" TypeId="Component" SubtypeId="Canvas" />
+<Item Amount="90" TypeId="Component" SubtypeId="Tomato" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Compost" />
+</Results>
+<BaseProductionTimeInSeconds>50</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CrateofTomatoes</SubtypeId>
+</Id>
+<DisplayName>Crate of Tomatoes</DisplayName>
+<Prerequisites>
+<Item Amount="60" TypeId="Component" SubtypeId="Construction" />
+<Item Amount="240" TypeId="Component" SubtypeId="Tomato" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="CrateTomato" />
+</Results>
+<BaseProductionTimeInSeconds>150</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ShipmentofTomatoes</SubtypeId>
+</Id>
+<DisplayName>Bulk Shipment of Tomatoes</DisplayName>
+<Prerequisites>
+<Item Amount="600" TypeId="Component" SubtypeId="Construction" />
+<Item Amount="2700" TypeId="Component" SubtypeId="Tomato" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="BulkTomato" />
+</Results>
+<BaseProductionTimeInSeconds>1500</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CraftBottle</SubtypeId>
+</Id>
+<DisplayName>Empty Water Bottle</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="Silicon" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="WaterBottle" />
+</Results>
+<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>BottleWater</SubtypeId>
+</Id>
+<DisplayName>Bottle Water</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Water_Tank" />
+<Item Amount="180" TypeId="Component" SubtypeId="WaterBottle" />
+</Prerequisites>
+<Results>
+<Item Amount="3" TypeId="Component" SubtypeId="DrinkingWater" />
+</Results>
+<BaseProductionTimeInSeconds>50</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data1</SubtypeId>
+</Id>
+<DisplayName>Scan Data Water</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="DrinkingWater" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data2</SubtypeId>
+</Id>
+<DisplayName>Scan Data steel plate</DisplayName>
+<Prerequisites>
+<Item Amount="750" TypeId="Component" SubtypeId="SteelPlate" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data3</SubtypeId>
+</Id>
+<DisplayName>Scan Data tanks</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Fuel_Tank" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data4</SubtypeId>
+</Id>
+<DisplayName>Scan Data Interior</DisplayName>
+<Prerequisites>
+<Item Amount="1500" TypeId="Component" SubtypeId="InteriorPlate" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data5</SubtypeId>
+</Id>
+<DisplayName>Scan Data grids</DisplayName>
+<Prerequisites>
+<Item Amount="150" TypeId="Component" SubtypeId="MetalGrid" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data6</SubtypeId>
+</Id>
+<DisplayName>Scan Data smalltube</DisplayName>
+<Prerequisites>
+<Item Amount="300" TypeId="Component" SubtypeId="SmallTube" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data7</SubtypeId>
+</Id>
+<DisplayName>Scan Data largetube</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Component" SubtypeId="LargeTube" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data8</SubtypeId>
+</Id>
+<DisplayName>Scan Data Motor</DisplayName>
+<Prerequisites>
+<Item Amount="300" TypeId="Component" SubtypeId="Motor" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data9</SubtypeId>
+</Id>
+<DisplayName>Scan Data Display</DisplayName>
+<Prerequisites>
+<Item Amount="300" TypeId="Component" SubtypeId="Display" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data10</SubtypeId>
+</Id>
+<DisplayName>Scan Data BulletproofGlass</DisplayName>
+<Prerequisites>
+<Item Amount="300" TypeId="Component" SubtypeId="BulletproofGlass" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data11</SubtypeId>
+</Id>
+<DisplayName>Scan Data Superconductor</DisplayName>
+<Prerequisites>
+<Item Amount="45" TypeId="Component" SubtypeId="Superconductor" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data12</SubtypeId>
+</Id>
+<DisplayName>Scan Data Computer</DisplayName>
+<Prerequisites>
+<Item Amount="300" TypeId="Component" SubtypeId="Computer" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data13</SubtypeId>
+</Id>
+<DisplayName>Scan Data Reactor</DisplayName>
+<Prerequisites>
+<Item Amount="120" TypeId="Component" SubtypeId="Reactor" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data14</SubtypeId>
+</Id>
+<DisplayName>Scan Data Medical</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Medical" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data15</SubtypeId>
+</Id>
+<DisplayName>Scan Data PowerCell</DisplayName>
+<Prerequisites>
+<Item Amount="90" TypeId="Component" SubtypeId="PowerCell" />
+</Prerequisites>
+<Results>
+<Item Amount="1" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data16</SubtypeId>
+</Id>
+<DisplayName>Scan Data CrateTomato</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="CrateTomato" />
+</Prerequisites>
+<Results>
+<Item Amount="2" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Scan_Data17</SubtypeId>
+</Id>
+<DisplayName>Scan Data ToolPack</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="ToolPack" />
+</Prerequisites>
+<Results>
+<Item Amount="2" TypeId="Component" SubtypeId="Research" />
+</Results>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toMCRNComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer MCRN Tech</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="MCRNCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toMCRNAdvComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer MCRN Adv Tech</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="MCRNAdvCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toMCRNExpComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer MCRN Exp Tech</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="MCRNExpCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toUNNComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer UNN Tech</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="UNNCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toUNNAdvComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer UNN Adv Tech</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="UNNAdvCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toUNNExpComponent</SubtypeId>
+</Id>
+<DisplayName>Reverse Engineer UNN Exp Tech</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="UNNExpCompTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>toInnerComp</SubtypeId>
+</Id>
+<DisplayName>Inner Comps</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="InnerTechScrap" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Definition xsi:type="MyObjectBuilder_FactionTypeDefinition">
+<Id Type="MyObjectBuilder_FactionTypeDefinition" Subtype="Miner" />
+<OffersList>
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Coal" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Sulfur" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Copper" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Lithium" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Bauxite" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Titanium" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Tantalum" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Niter" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="CrudeOil" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Copper" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Lithium" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Aluminum" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Titanium" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Tantalum" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Sulfur" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Carbon" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Niter" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="FuelOil" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Polymer" />
+</OffersList>
+<OrdersList>
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Coal" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Sulfur" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="OilSand" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Copper" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Lithium" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Bauxite" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Titanium" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Tantalum" />
+<ItemId Type="MyObjectBuilder_Ore" Subtype="Niter" />
+</OrdersList>
+<CanSellOxygen>true</CanSellOxygen>
+<CanSellHydrogen>true</CanSellHydrogen>
+<MaxContractCount>15</MaxContractCount>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_FactionTypeDefinition">
+<Id Type="MyObjectBuilder_FactionTypeDefinition" Subtype="Trader" />
+<OffersList>
+<ItemId Type="MyObjectBuilder_PhysicalGunObject" Subtype="Welder3Item" />
+<ItemId Type="MyObjectBuilder_PhysicalGunObject" Subtype="Welder4Item" />
+<ItemId Type="MyObjectBuilder_PhysicalGunObject" Subtype="HandDrill3Item" />
+<ItemId Type="MyObjectBuilder_PhysicalGunObject" Subtype="HandDrill4Item" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="DUNATO_25x184mm" />
+<ItemId Type="MyObjectBuilder_AmmoMagazine" Subtype="InteriorTurret_Mag_50rd" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Copper" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Lithium" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Polymer" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="FuelOil" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Lithium" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Aluminum" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Titanium" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Tantalum" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Sulfur" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Carbon" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Niter" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Magnesium" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="ElectronMatrix" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Capacitor" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="CompositeArmor" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="TokamakBlanket" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="SuperMagnet" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Cryocooler" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Thermocouple" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="ArmorGlass" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="CopperWire" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="GoldWire" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Fabric" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Rubber" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Plastic" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="AdvancedComputer" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="QuantumComputer" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Concrete" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Asphalt" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="TitaniumPlate" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="ArmoredPlate" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Electromagnet" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Lightbulb" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="AcidPowerCell" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="AlkalinePowerCell" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Ceramic" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="LaserEmitter" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="HeatingElement" />
+</OffersList>
+<OrdersList>
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Copper" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Lithium" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Polymer" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="FuelOil" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Lithium" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Aluminum" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Titanium" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Tantalum" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Sulfur" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Carbon" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Niter" />
+<ItemId Type="MyObjectBuilder_Ingot" Subtype="Magnesium" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="ElectronMatrix" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Capacitor" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="CompositeArmor" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="TokamakBlanket" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="SuperMagnet" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Cryocooler" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Thermocouple" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="ArmorGlass" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="CopperWire" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="GoldWire" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Fabric" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Rubber" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Plastic" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="AdvancedComputer" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="QuantumComputer" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Concrete" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Asphalt" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="TitaniumPlate" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="ArmoredPlate" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Electromagnet" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Lightbulb" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="AcidPowerCell" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="AlkalinePowerCell" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Ceramic" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="LaserEmitter" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="HeatingElement" />
+</OrdersList>
+<CanSellOxygen>true</CanSellOxygen>
+<CanSellHydrogen>true</CanSellHydrogen>
+<MaxContractCount>15</MaxContractCount>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_FactionTypeDefinition">
+<Id Type="MyObjectBuilder_FactionTypeDefinition" Subtype="Builder" />
+<OrdersList>
+<ItemId Type="MyObjectBuilder_Component" Subtype="ElectronMatrix" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Capacitor" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="CompositeArmor" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="TokamakBlanket" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="SuperMagnet" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Cryocooler" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Thermocouple" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="ArmorGlass" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="CopperWire" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="GoldWire" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Fabric" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Rubber" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Plastic" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="AdvancedComputer" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="QuantumComputer" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Concrete" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Asphalt" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="TitaniumPlate" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="ArmoredPlate" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Electromagnet" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Lightbulb" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="AcidPowerCell" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="AlkalinePowerCell" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="Ceramic" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="LaserEmitter" />
+<ItemId Type="MyObjectBuilder_Component" Subtype="HeatingElement" />
+</OrdersList>
+<CanSellOxygen>true</CanSellOxygen>
+<CanSellHydrogen>true</CanSellHydrogen>
+<MaxContractCount>15</MaxContractCount>
+</Definition>
+</Definitions>
+ 

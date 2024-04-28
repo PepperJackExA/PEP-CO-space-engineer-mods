@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0010_SemiAutoPistolMagazine</SubtypeId>
+</Id>
+<DisplayName>12 Round Pistol Magazine</DisplayName>
+<Prerequisites>
+<Item Amount="0.50" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.30" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.03" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0030_ElitePistolMagazine</SubtypeId>
+</Id>
+<DisplayName>18 Round Pistol Magazine</DisplayName>
+<Prerequisites>
+<Item Amount="0.75" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.45" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.05" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0020_FullAutoPistolMagazine</SubtypeId>
+</Id>
+<DisplayName>30 Round Pistol Magazine</DisplayName>
+<Prerequisites>
+<Item Amount="1.25" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.75" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.08" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0060_PreciseAutomaticRifleGun_Mag_5rd</SubtypeId>
+</Id>
+<DisplayName>20 Round 5.7x28 Magazine</DisplayName>
+<Prerequisites>
+<Item Amount="0.90" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.30" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.15" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0040_AutomaticRifleGun_Mag_20rd</SubtypeId>
+</Id>
+<DisplayName>30 Round 5.7x28 Rifle Magazine</DisplayName>
+<Prerequisites>
+<Item Amount="1.35" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.45" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.23" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0070_UltimateAutomaticRifleGun_Mag_30rd</SubtypeId>
+</Id>
+<DisplayName>40 Round 5.7x28 Rifle Magazine</DisplayName>
+<Prerequisites>
+<Item Amount="1.80" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.60" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.30" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0050_RapidFireAutomaticRifleGun_Mag_50rd</SubtypeId>
+</Id>
+<DisplayName>50 Round 5.7x28 Rifle Magazine</DisplayName>
+<Prerequisites>
+<Item Amount="2.25" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.75" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="0.38" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0100_Missile200mm</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Missile200mm</DisplayName>
+<Prerequisites>
+<Item Amount="60" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="12" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Platinum" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Position0005_FlareGunMagazine</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_FlareClip</DisplayName>
+<Prerequisites>
+<Item Amount="0.20" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.05" TypeId="Ingot" SubtypeId="Nickel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

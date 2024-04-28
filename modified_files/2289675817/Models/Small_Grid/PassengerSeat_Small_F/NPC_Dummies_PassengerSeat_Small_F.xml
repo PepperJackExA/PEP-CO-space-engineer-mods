@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>NPC_Dummies_PassengerSeat_Small_F</SubtypeId>
+</Id>
+<DisplayName>DisplayName_NPC_Dummies_PassengerSeat_Small_F</DisplayName>
+<Description>Description_NPC_Dummies_PassengerSeat_Small_F</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>NPC_Dummies_PassengerSeat_Small_F</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

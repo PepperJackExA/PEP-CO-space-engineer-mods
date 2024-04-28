@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>NextGen_Small_SmallOxegenGasTank</SubtypeId>
+</Id>
+<DisplayName>NextGen Small Oxygen  Tank</DisplayName>
+<Description>Description_OxygenTank</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="SmallTube" Count="5" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>NextGen_Small_LargeOxyegenGasTank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>40000</Capacity>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Oxygen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>OxygenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>32</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.005</LeakPercent>
+<GasExplosionMaxRadius>10</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>100000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepSmallWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

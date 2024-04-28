@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>TSOInsetLightBlockL2SB</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InsetLight</DisplayName>
+<Description>Description_InteriorLight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TSOInsetLightBlockB</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

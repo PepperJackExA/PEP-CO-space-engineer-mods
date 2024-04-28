@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallRTG</SubtypeId>
+</Id>
+<DisplayName>RTG</DisplayName>
+<Description>Radioisotope Thermoelectric Generator. Low power output, but extremely long-lasting.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Ceramic" Count="4" />
+<Component Subtype="Reactor" Count="5" />
+<Component Subtype="Thermocouple" Count="10" />
+<Component Subtype="Superconductor" Count="2" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="10" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>RTG</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallCompactReactor</SubtypeId>
+</Id>
+<DisplayName>Compact Reactor</DisplayName>
+<Description>Closed-cycle gas-cooled fission reactor. Power output and efficiency are reduced to keep the reactor small.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="CopperWire" Count="15" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="5" />
+<Component Subtype="Ceramic" Count="40" />
+<Component Subtype="Reactor" Count="200" />
+<Component Subtype="Motor" Count="15" />
+<Component Subtype="Electromagnet" Count="30" />
+<Component Subtype="TitaniumPlate" Count="20" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="Thermocouple" Count="80" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="Detector" Count="10" />
+<Component Subtype="GoldWire" Count="25" />
+<Component Subtype="AdvancedComputer" Count="25" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>LargeCompactReactor</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeRTG</SubtypeId>
+</Id>
+<DisplayName>RTG</DisplayName>
+<Description>Radioisotope Thermoelectric Generator. Low power output, but extremely long-lasting.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="LargeTube" Count="15" />
+<Component Subtype="Ceramic" Count="40" />
+<Component Subtype="Reactor" Count="50" />
+<Component Subtype="Thermocouple" Count="100" />
+<Component Subtype="Superconductor" Count="15" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="35" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>RTG</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeCompactReactor</SubtypeId>
+</Id>
+<DisplayName>Compact Reactor</DisplayName>
+<Description>Closed-cycle gas-cooled fission reactor. Power output and efficiency are reduced to keep the reactor small.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="CopperWire" Count="50" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="LargeTube" Count="25" />
+<Component Subtype="Ceramic" Count="300" />
+<Component Subtype="Reactor" Count="2000" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="Electromagnet" Count="100" />
+<Component Subtype="TitaniumPlate" Count="75" />
+<Component Subtype="Superconductor" Count="300" />
+<Component Subtype="Thermocouple" Count="500" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="GoldWire" Count="75" />
+<Component Subtype="AdvancedComputer" Count="100" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>LargeCompactReactor</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+<Id>
+<TypeId>HydrogenEngine</TypeId>
+<SubtypeId>SteamTurbineMirrored</SubtypeId>
+</Id>
+<DisplayName>Steam Turbine - Mirrored</DisplayName>
+<Description>Pressurized Steam Turbine for generating electricity. Must be connected to a source of Steam.
+Max Output: 50MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="CopperWire" Count="125" />
+<Component Subtype="Electromagnet" Count="80" />
+<Component Subtype="TitaniumPlate" Count="50" />
+<Component Subtype="Computer" Count="50" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Generators</ResourceSinkGroup>
+<IsAirTight>false</IsAirTight>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<PrimarySound>ArcBlockWindTurbine</PrimarySound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+<Id>
+<TypeId>HydrogenEngine</TypeId>
+<SubtypeId>SteamTurbine</SubtypeId>
+</Id>
+<DisplayName>Steam Turbine</DisplayName>
+<Description>Pressurized Steam Turbine for generating electricity. Must be connected to a source of Steam.
+Max Output: 50MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="CopperWire" Count="125" />
+<Component Subtype="Electromagnet" Count="80" />
+<Component Subtype="TitaniumPlate" Count="50" />
+<Component Subtype="Computer" Count="50" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Generators</ResourceSinkGroup>
+<IsAirTight>false</IsAirTight>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<PrimarySound>ArcBlockWindTurbine</PrimarySound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>CoalFurnace</SubtypeId>
+</Id>
+<DisplayName>Coal Boiler</DisplayName>
+<Description>Burns Coal to produce Steam. Must be connected to a Steam Turbine.
+Produces 100 Steam/sec</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="CopperWire" Count="30" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="HeatingElement" Count="10" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<IsAirTight>true</IsAirTight>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>5</IceConsumptionPerSecond>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.25</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<IceToGasRatio>20</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>CoalFurnace</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>NuclearReactor</SubtypeId>
+</Id>
+<DisplayName>Nuclear Reactor</DisplayName>
+<Description>Standard fission Reactor. High efficiency and power output.
+Produces 500 Steam/sec</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="CopperWire" Count="60" />
+<Component Subtype="MetalGrid" Count="75" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Ceramic" Count="100" />
+<Component Subtype="Reactor" Count="1500" />
+<Component Subtype="Motor" Count="60" />
+<Component Subtype="ArmorGlass" Count="40" />
+<Component Subtype="Superconductor" Count="30" />
+<Component Subtype="Concrete" Count="150" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="50" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<IsAirTight>true</IsAirTight>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>0.025</IceConsumptionPerSecond>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<IceToGasRatio>20000</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>NRSteam</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>FastNeutronReactor</SubtypeId>
+</Id>
+<DisplayName>Fast Neutron Reactor</DisplayName>
+<Description>Less efficient, but generates less waste than a standard Reactor.
+Produces 300 Steam/sec</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="CopperWire" Count="60" />
+<Component Subtype="MetalGrid" Count="75" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Ceramic" Count="150" />
+<Component Subtype="Reactor" Count="1750" />
+<Component Subtype="Motor" Count="80" />
+<Component Subtype="ArmorGlass" Count="50" />
+<Component Subtype="Superconductor" Count="125" />
+<Component Subtype="Concrete" Count="200" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="75" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<IsAirTight>true</IsAirTight>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>0.025</IceConsumptionPerSecond>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<IceToGasRatio>12000</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>FNRSteam</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>Centrifuge</SubtypeId>
+</Id>
+<DisplayName>Uranium Centrifuge</DisplayName>
+<Description>Refines and enriches Uranium into useable forms.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="CopperWire" Count="30" />
+<Component Subtype="LargeTube" Count="80" />
+<Component Subtype="SmallTube" Count="50" />
+<Component Subtype="Motor" Count="75" />
+<Component Subtype="InteriorPlate" Count="50" />
+<Component Subtype="Rubber" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>7.5</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>6</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>CentrifugeIngots</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1.0</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>90</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>Reprocessor</SubtypeId>
+</Id>
+<DisplayName>Nuclear Reprocessor</DisplayName>
+<Description>Extracts additional useable Uranium from Spent Nuclear Fuel.
+Reprocessing requires Ice, Sulfur and Potassium Nitrate as solvents.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="70" />
+<Component Subtype="CopperWire" Count="50" />
+<Component Subtype="LargeTube" Count="75" />
+<Component Subtype="SmallTube" Count="25" />
+<Component Subtype="Ceramic" Count="40" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="InteriorPlate" Count="50" />
+<Component Subtype="Reactor" Count="20" />
+<Component Subtype="Rubber" Count="25" />
+<Component Subtype="ArmorGlass" Count="30" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="35" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>7.5</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>8</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>ReprocessorIngots</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1.0</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>90</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

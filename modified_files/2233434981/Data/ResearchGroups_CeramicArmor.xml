@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchGroups>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="CeramicArmor" />
+<Members>
+<BlockId Type="CubeBlock" Subtype="CeramicArmorFlat" />
+<BlockId Type="CubeBlock" Subtype="CeramicArmorSlope" />
+<BlockId Type="CubeBlock" Subtype="CeramicArmorSide" />
+<BlockId Type="CubeBlock" Subtype="CeramicArmorFace" />
+<BlockId Type="CubeBlock" Subtype="CeramicArmorFaceInv" />
+<BlockId Type="CubeBlock" Subtype="SmallCeramicArmorFlat" />
+<BlockId Type="CubeBlock" Subtype="SmallCeramicArmorSlope" />
+<BlockId Type="CubeBlock" Subtype="SmallCeramicArmorSide" />
+<BlockId Type="CubeBlock" Subtype="SmallCeramicArmorFace" />
+<BlockId Type="CubeBlock" Subtype="SmallCeramicArmorFaceInv" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup" Enabled="false">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="1" />
+<Members>
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="LightArmor" />
+<Members>
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCornerInv" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCornerInv" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorRoundSlope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorRoundSlope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorRoundCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorRoundCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorRoundCornerInv" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorRoundCornerInv" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="HalfArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfSlopeArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="HalfSlopeArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlope2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlope2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlope2Tip" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlope2Tip" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCorner2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCorner2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCorner2Tip" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCorner2Tip" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorInvCorner2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorInvCorner2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorInvCorner2Tip" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorInvCorner2Tip" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="HeavyArmor" />
+<Members>
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorSlope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorSlope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorCornerInv" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorCornerInv" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorRoundSlope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorRoundSlope" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorRoundCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorRoundCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorRoundCornerInv" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorRoundCornerInv" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyHalfArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="HalfHeavyArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyHalfSlopeArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="HalfHeavySlopeArmorBlock" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorSlope2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorSlope2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorSlope2Tip" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorSlope2Tip" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorCorner2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorCorner2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorCorner2Tip" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorCorner2Tip" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorInvCorner2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorInvCorner2Base" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorInvCorner2Tip" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorInvCorner2Tip" />
+</Members>
+</ResearchGroup>
+</ResearchGroups>
+</Definitions>
+ 

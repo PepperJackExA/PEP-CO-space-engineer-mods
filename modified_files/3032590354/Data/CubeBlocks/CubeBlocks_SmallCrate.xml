@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>SmallCrate</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Crate</DisplayName>
+<Description>Description_CrateBlock</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="SmallTube" Count="8" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Construction" Count="24" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>Crate</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

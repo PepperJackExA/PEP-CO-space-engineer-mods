@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<GasProperties>
+<Gas>
+<Id>
+<TypeId>MyObjectBuilder_GasProperties</TypeId>
+<SubtypeId>Gasoline</SubtypeId>
+</Id>
+<EnergyDensity>0.0125</EnergyDensity>
+</Gas>
+<Gas>
+<Id>
+<TypeId>MyObjectBuilder_GasProperties</TypeId>
+<SubtypeId>RocketFuel</SubtypeId>
+</Id>
+<EnergyDensity>0.02</EnergyDensity>
+</Gas>
+<Gas>
+<Id>
+<TypeId>MyObjectBuilder_GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<EnergyDensity>0</EnergyDensity>
+</Gas>
+<Gas>
+<Id>
+<TypeId>MyObjectBuilder_GasProperties</TypeId>
+<SubtypeId>Deuterium</SubtypeId>
+</Id>
+<EnergyDensity>5000</EnergyDensity>
+</Gas>
+</GasProperties>
+</Definitions>
+ 

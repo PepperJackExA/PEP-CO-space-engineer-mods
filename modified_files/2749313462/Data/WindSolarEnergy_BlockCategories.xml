@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_Power</DisplayName>
+<Name>Power</Name>
+<ItemIds>
+<string>SolarPanel/LargeBlockSolarPanelUnstackable</string>
+<string>SolarPanel/SmallBlockSolarPanelUnstackable</string>
+<string>WindTurbine/LargeBlockWindTurbineStackable</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<ItemIds>
+<string>SolarPanel/LargeBlockSolarPanelUnstackable</string>
+<string>WindTurbine/LargeBlockWindTurbineStackable</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<ItemIds>
+<string>SolarPanel/SmallBlockSolarPanelUnstackable</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>NPTradeGoods</SubtypeId>
+</Id>
+<DisplayName>NPTradeGoods</DisplayName>
+<Description>NPTradeGoods</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>NPFuelGoods</SubtypeId>
+</Id>
+<DisplayName>NPFuelGoods</DisplayName>
+<Description>NPFuelGoods</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Extracting</SubtypeId>
+</Id>
+<DisplayName>Extracting</DisplayName>
+<Description>Extract Fuel From Tanks</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>SGExtracting</SubtypeId>
+</Id>
+<DisplayName>SGExtracting</DisplayName>
+<Description>Extract Fuel From Tanks</Description>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="IcetoNPTradeGoods" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data1" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data2" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data3" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data4" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data5" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data6" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data7" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data8" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data9" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data10" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data11" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data12" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data13" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data14" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data15" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data16" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="Scan_Data17" />
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toInnerComp"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toMCRNComponent"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toMCRNAdvComponent"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toMCRNExpComponent"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toUNNComponent"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toUNNAdvComponent"/>
+<Entry Class="NPTradeGoods" BlueprintSubtypeId="toUNNExpComponent"/>
+<Entry Class="NPFuelGoods" BlueprintSubtypeId="Fuel_Processing" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="Composting" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="CrateofTomatoes" />
+<Entry Class="TradeGoods" BlueprintSubtypeId="BottleWater" />
+<Entry Class="BulkTradeGoods" BlueprintSubtypeId="ShipmentofTomatoes" />
+<Entry Class="Components" BlueprintSubtypeId="CraftBottle" />
+<Entry Class="Extracting" BlueprintSubtypeId="Fuel_Extracting" />
+<Entry Class="SGExtracting" BlueprintSubtypeId="SG_Fuel_Extracting" />
+</BlueprintClassEntries>
+</Definitions>
+ 

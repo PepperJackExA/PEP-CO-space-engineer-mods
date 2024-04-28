@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>155mmCHEShell</SubtypeId>
+</Id>
+<DisplayName>155mm Cronyx HE Shell</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="StabilizedCronyx" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>305mmCHEShell</SubtypeId>
+</Id>
+<DisplayName>305mm Cronyx HE Shell</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="15" TypeId="Ingot" SubtypeId="StabilizedCronyx" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>14</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CronyxNATO_25x184mm</SubtypeId>
+</Id>
+<DisplayName>Cronyx Gatling Ammo</DisplayName>
+<Prerequisites>
+<Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="StabilizedCronyx" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CronyxMissile200mm</SubtypeId>
+</Id>
+<DisplayName>Cronyx Missile</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Component" SubtypeId="LargeTube" />
+<Item Amount="1" TypeId="Component" SubtypeId="Computer" />
+<Item Amount="5" TypeId="Component" SubtypeId="CopperWire" />
+<Item Amount="20" TypeId="Ingot" SubtypeId="StabilizedCronyx" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CronyxMediumCalibreAmmo</SubtypeId>
+</Id>
+<DisplayName>Cronyx Assault Cannon Shell</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1.5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="4" TypeId="Ingot" SubtypeId="StabilizedCronyx" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CronyxLargeCalibreAmmo</SubtypeId>
+</Id>
+<DisplayName>Cronyx Artillery Shell</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="StabilizedCronyx" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>12</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CronyxAutocannonClip</SubtypeId>
+</Id>
+<DisplayName>Cronyx Autocannon Clip</DisplayName>
+<Prerequisites>
+<Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="6" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="8" TypeId="Ingot" SubtypeId="StabilizedCronyx" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>9</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

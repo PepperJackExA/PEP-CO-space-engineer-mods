@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LandingGearDefinition">
+<Id>
+<TypeId>LandingGear</TypeId>
+<SubtypeId>TSOMagneticPlateCenterSmall</SubtypeId>
+</Id>
+<DisplayName>Magnetic Plate Center</DisplayName>
+<Description>Description_LandingGear</Description>
+<CubeSize>Large</CubeSize>
+<LockSound>ShipLandGearOn</LockSound>
+<UnlockSound>ShipLandGearOff</UnlockSound>
+<FailedAttachSound>ShipLandGearNothing01</FailedAttachSound>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" Default="true" />
+<BlockPairName>TSOMagneticPlateCenterSmallPair</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>35</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

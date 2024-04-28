@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LCDPanelsBlockDefinition">
+<Id>
+<TypeId>LCDPanelsBlock</TypeId>
+<SubtypeId>MES-MedicalStation</SubtypeId>
+</Id>
+<DisplayName>Suit Upgrade Station</DisplayName>
+<Description>A station that allows players to upgrade their suit with new abilities</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Medical" Count="1" />
+<Component Subtype="Display" Count="2" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Construction" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

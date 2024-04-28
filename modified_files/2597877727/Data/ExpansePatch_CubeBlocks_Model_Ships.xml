@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>rockhopper_model</SubtypeId>
+</Id>
+<DisplayName>rockhopper_model</DisplayName>
+<Description>Collectors Rockhopper Model Ship</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="rockhoppermodel" Count="1"/>
+</Components>
+<CriticalComponent Subtype="rockhoppermodel" Index="0" />
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>asp_model</SubtypeId>
+</Id>
+<DisplayName>asp_model</DisplayName>
+<Description>Collectors MCRN Asp Class Model Ship</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="aspmodel" Count="1"/>
+</Components>
+<CriticalComponent Subtype="aspmodel" Index="0" />
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EngineerPlushie</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_EngineerPlushie</DisplayName>
+<Description>Description_EngineerPlushie</Description>
+<Public>true</Public>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="EngineerPlushie" Count="1" />
+</Components>
+<CriticalComponent Subtype="EngineerPlushie" Index="0" />
+<BlockPairName>EngineerPlushie</BlockPairName>
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>pt_model</SubtypeId>
+</Id>
+<DisplayName>pt_model</DisplayName>
+<Description>Collectors UNN PT Class Model Ship</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="ptmodel" Count="1"/>
+</Components>
+<CriticalComponent Subtype="ptmodel" Index="0" />
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>EngineerPlushie</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_EngineerPlushie</DisplayName>
+<Description>Description_EngineerPlushie</Description>
+<Public>true</Public>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="EngineerPlushie" Count="1" />
+</Components>
+<CriticalComponent Subtype="EngineerPlushie" Index="0" />
+<BlockPairName>EngineerPlushie</BlockPairName>
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

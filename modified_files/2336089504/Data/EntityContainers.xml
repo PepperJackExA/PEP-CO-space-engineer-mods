@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Container>
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>RoboFactory</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="RoboFactory" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+</Definitions>
+ 

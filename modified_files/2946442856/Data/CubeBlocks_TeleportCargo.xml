@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_ConveyorSorter" Subtype="LargeBlockSmallSorterTeleport" />
+<UnlockedByGroups>
+<GroupSubtype>13</GroupSubtype>
+<GroupSubtype>TeleUnlock</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_ConveyorSorter" Subtype="LargeBlockMediumSorterTeleport" />
+<UnlockedByGroups>
+<GroupSubtype>13</GroupSubtype>
+<GroupSubtype>TeleUnlock</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchGroups>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="TeleUnlock" />
+<Members>
+<BlockId Type="MyObjectBuilder_Collector" Subtype="Collector" />
+<BlockId Type="MyObjectBuilder_Collector" Subtype="CollectorSmall" />
+<BlockId Type="MyObjectBuilder_ShipConnector" Subtype="Connector" />
+<BlockId Type="MyObjectBuilder_ShipConnector" Subtype="ConnectorMedium" />
+<BlockId Type="MyObjectBuilder_ConveyorSorter" Subtype="LargeBlockConveyorSorter" />
+<BlockId Type="MyObjectBuilder_ConveyorSorter" Subtype="MediumBlockConveyorSorter" />
+<BlockId Type="MyObjectBuilder_ConveyorSorter" Subtype="SmallBlockConveyorSorter" />
+</Members>
+</ResearchGroup>
+</ResearchGroups>
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>LargeBlockSmallSorterTeleport</SubtypeId>
+</Id>
+<DisplayName>Conveyor Teleporter</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="GravityGenerator" Count="15" />
+<Component Subtype="Detector" Count="5" />
+<Component Subtype="PowerCell" Count="10" />
+<Component Subtype="Superconductor" Count="10" />
+<Component Subtype="MetalGrid" Count="8" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Motor" Count="15" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="QuantumComputer" Count="200" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="InteriorPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SorterCargoTeleport</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<Description>Wireless conveyor sorter to any container on the same grid or connected grids (via antenna). Requires 10 MW of power.</Description>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>SmallBlockMediumSorterTeleport</SubtypeId>
+</Id>
+<DisplayName>Conveyor Teleporter</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="24" />
+<Component Subtype="GravityGenerator" Count="8" />
+<Component Subtype="Detector" Count="4" />
+<Component Subtype="PowerCell" Count="4" />
+<Component Subtype="Superconductor" Count="4" />
+<Component Subtype="QuantumComputer" Count="80" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SorterCargoTeleport</BlockPairName>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<Description>Wireless conveyor sorter to any container on the same grid or connected grids (via antenna). Requires 5 MW of power.</Description>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

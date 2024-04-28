@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ShipWeapons</DisplayName>
+<Name>ShipWeapons</Name>
+<SearchBlocks>false</SearchBlocks>
+<IsToolCategory>false</IsToolCategory>
+<ItemIds>
+<string>SmallGatlingGun/Kess Hashari Cannon</string>
+<string>SmallGatlingGun/Glapion Collective Gatling Cannon</string>
+<string>SmallMissileLauncherReload/Apollo Class Torpedo Launcher</string>
+<string>LargeMissileTurret/Ostman-Jazinski Flak Cannon</string>
+<string>LargeGatlingTurret/Outer Planets Alliance Point Defence Cannon</string>
+<string>LargeGatlingTurret/Voltaire Collective Anti Personnel PDC</string>
+<string>SmallMissileLauncherReload/Tycho Class Torpedo Mount</string>
+<string>SmallMissileLauncherReload/Apollo Class Torpedo Launcher</string>
+<string>SmallGatlingGun/Zakosetara Heavy Railgun</string>
+<string>LargeMissileTurret/Mounted Zakosetara Heavy Railgun</string>
+<string>SmallMissileLauncherReload/T-47 Roci Light Fixed Railgun</string>
+<string>LargeGatlingTurret/Nariman Dynamics PDC</string>
+<string>LargeMissileTurret/V-14 Stiletto Light Railgun</string>
+<string>LargeMissileTurret/VX-12 Foehammer Ultra-Heavy Railgun</string>
+<string>LargeGatlingTurret/Redfields Ballistics PDC</string>
+<string>LargeMissileTurret/Dawson-Pattern Medium Railgun</string>
+<string>LargeMissileTurret/Farren-Pattern Heavy Railgun</string>
+<string>SmallMissileLauncherReload/Ares_Class_Torpedo_Launcher_F</string>
+<string>SmallMissileLauncherReload/Ares_Class_Torpedo_Launcher</string>
+<string>SmallMissileLauncherReload/ZeusClass_Rapid_Torpedo_Launcher</string>
+<string>TurretControlBlock/AdvancedLargeTurretControlBlock</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Expanse Weapons</DisplayName>
+<Name>Expanse_Weapons</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>SmallGatlingGun/Kess Hashari Cannon</string>
+<string>SmallGatlingGun/Glapion Collective Gatling Cannon</string>
+<string>SmallMissileLauncherReload/Apollo Class Torpedo Launcher</string>
+<string>LargeMissileTurret/Ostman-Jazinski Flak Cannon</string>
+<string>LargeGatlingTurret/Voltaire Collective Anti Personnel PDC</string>
+<string>SmallMissileLauncherReload/Tycho Class Torpedo Mount</string>
+<string>SmallGatlingGun/Zakosetara Heavy Railgun</string>
+<string>LargeMissileTurret/Mounted Zakosetara Heavy Railgun</string>
+<string>SmallMissileLauncherReload/T-47 Roci Light Fixed Railgun</string>
+<string>LargeGatlingTurret/Nariman Dynamics PDC</string>
+<string>LargeMissileTurret/V-14 Stiletto Light Railgun</string>
+<string>LargeMissileTurret/VX-12 Foehammer Ultra-Heavy Railgun</string>
+<string>LargeGatlingTurret/Redfields Ballistics PDC</string>
+<string>LargeMissileTurret/Dawson-Pattern Medium Railgun</string>
+<string>LargeMissileTurret/Farren-Pattern Heavy Railgun</string>
+<string>SmallMissileLauncherReload/Ares_Class_Torpedo_Launcher_F</string>
+<string>SmallMissileLauncherReload/Ares_Class_Torpedo_Launcher</string>
+<string>SmallMissileLauncherReload/ZeusClass_Rapid_Torpedo_Launcher</string>
+<string>TurretControlBlock/AdvancedLargeTurretControlBlock</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>SmallGatlingGun/Kess Hashari Cannon</string>
+<string>SmallGatlingGun/Glapion Collective Gatling Cannon</string>
+<string>SmallMissileLauncherReload/Apollo Class Torpedo Launcher</string>
+<string>LargeMissileTurret/Ostman-Jazinski Flak Cannon</string>
+<string>LargeGatlingTurret/Outer Planets Alliance Point Defence Cannon</string>
+<string>LargeGatlingTurret/Voltaire Collective Anti Personnel PDC</string>
+<string>SmallMissileLauncherReload/Tycho Class Torpedo Mount</string>
+<string>SmallMissileLauncherReload/Apollo Class Torpedo Launcher</string>
+<string>SmallGatlingGun/Zakosetara Heavy Railgun</string>
+<string>LargeMissileTurret/Mounted Zakosetara Heavy Railgun</string>
+<string>SmallMissileLauncherReload/T-47 Roci Light Fixed Railgun</string>
+<string>LargeGatlingTurret/Nariman Dynamics PDC</string>
+<string>LargeMissileTurret/V-14 Stiletto Light Railgun</string>
+<string>LargeMissileTurret/VX-12 Foehammer Ultra-Heavy Railgun</string>
+<string>LargeGatlingTurret/Redfields Ballistics PDC</string>
+<string>LargeMissileTurret/Dawson-Pattern Medium Railgun</string>
+<string>LargeMissileTurret/Farren-Pattern Heavy Railgun</string>
+<string>SmallMissileLauncherReload/Ares_Class_Torpedo_Launcher_F</string>
+<string>SmallMissileLauncherReload/Ares_Class_Torpedo_Launcher</string>
+<string>SmallMissileLauncherReload/ZeusClass_Rapid_Torpedo_Launcher</string>
+<string>TurretControlBlock/AdvancedLargeTurretControlBlock</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

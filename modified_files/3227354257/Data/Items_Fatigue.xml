@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ContainerTypes>
+<ContainerType CountMin="1" CountMax="1">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>SpiderLoot</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="3" AmountMax="6">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Meat</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="15" AmountMax="30">
+<Frequency>0.75</Frequency>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>Organic</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="1" CountMax="1">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>WolfLoot</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="6" AmountMax="12">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Meat</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="6" AmountMax="12">
+<Frequency>0.75</Frequency>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>Organic</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+</ContainerTypes>
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Farming</SubtypeId>
+</Id>
+<DisplayName>Farming</DisplayName>
+<Description>Farming</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Cooking</SubtypeId>
+</Id>
+<DisplayName>Cooking</DisplayName>
+<Description>Cooking</Description>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="CommonMetals" BlueprintSubtypeId="Organic" />
+<Entry Class="Farming" BlueprintSubtypeId="Mushrooms" />
+<Entry Class="Farming" BlueprintSubtypeId="Apple" />
+<Entry Class="Farming" BlueprintSubtypeId="Sapling" />
+<Entry Class="Cooking" BlueprintSubtypeId="AppleJuice" />
+<Entry Class="Cooking" BlueprintSubtypeId="ApplePie" />
+<Entry Class="Cooking" BlueprintSubtypeId="MeatRoasted" />
+<Entry Class="Cooking" BlueprintSubtypeId="ShroomSteak" />
+</BlueprintClassEntries>
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Organic</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Organic</DisplayName>
+<Description>organic trace matter</Description>
+<Prerequisites>
+<Item Amount="1000" TypeId="Ingot" SubtypeId="Stone" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>100</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Mushrooms</SubtypeId>
+</Id>
+<DisplayName>Mushrooms</DisplayName>
+<Description>fungus of unknown origin</Description>
+<Prerequisites>
+<Item Amount="3" TypeId="Ore" SubtypeId="Organic" />
+<Item Amount="3" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1000</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Apple</SubtypeId>
+</Id>
+<DisplayName>Apple</DisplayName>
+<Description>a space-grown version of the red fruit</Description>
+<Prerequisites>
+<Item Amount="0.01" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="0.001" TypeId="Ore" SubtypeId="Sapling" />
+<Item Amount="0.1" TypeId="Ore" SubtypeId="Organic" />
+<Item Amount="0.6" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6000</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Sapling</SubtypeId>
+</Id>
+<DisplayName>Apple Sapling</DisplayName>
+<Description>a bonsai sized apple tree</Description>
+<Prerequisites>
+<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Apple" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>1000</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>AppleJuice</SubtypeId>
+</Id>
+<DisplayName>Apple Juice</DisplayName>
+<Description>a refreshing drink</Description>
+<Prerequisites>
+<Item Amount="6" TypeId="ConsumableItem" SubtypeId="Apple" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ApplePie</SubtypeId>
+</Id>
+<DisplayName>Apple Pie</DisplayName>
+<Description>a delicious snack, high in carbs</Description>
+<Prerequisites>
+<Item Amount="15" TypeId="ConsumableItem" SubtypeId="Apple" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>MeatRoasted</SubtypeId>
+</Id>
+<DisplayName>Roast Meat</DisplayName>
+<Description>a filling meal</Description>
+<Prerequisites>
+<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Meat" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>ShroomSteak</SubtypeId>
+</Id>
+<DisplayName>Steak with mushrooms</DisplayName>
+<Description>a complete meal</Description>
+<Prerequisites>
+<Item Amount="3" TypeId="ConsumableItem" SubtypeId="Meat" />
+<Item Amount="9" TypeId="ConsumableItem" SubtypeId="Mushrooms" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+<PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ore</TypeId>
+<SubtypeId>Sapling</SubtypeId>
+</Id>
+<DisplayName>Apple Sapling</DisplayName>
+<Description>a bonsai sized apple tree</Description>
+<Mass>1</Mass>
+<Volume>0.37</Volume>
+<PhysicalMaterial>Wood</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>ClangCola</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_ClangCola</DisplayName>
+<Description>Description_ClangKola</Description>
+<Mass>1</Mass>
+<Volume>1</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>CosmicCoffee</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_CosmicCoffee</DisplayName>
+<Description>Description_CosmicCoffee</Description>
+<Mass>1</Mass>
+<Volume>1</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>AppleJuice</SubtypeId>
+</Id>
+<DisplayName>Apple Juice</DisplayName>
+<Description>a refreshing drink</Description>
+<Mass>0.1</Mass>
+<Volume>0.1</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Mushrooms</SubtypeId>
+</Id>
+<DisplayName>Mushrooms</DisplayName>
+<Description>fungi of unknown origin</Description>
+<Mass>0.25</Mass>
+<Volume>0.25</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>10</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Apple</SubtypeId>
+</Id>
+<DisplayName>Apple</DisplayName>
+<Description>a space-grown version of the red fruit</Description>
+<Mass>0.05</Mass>
+<Volume>0.05</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>50</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>ApplePie</SubtypeId>
+</Id>
+<DisplayName>Apple Pie</DisplayName>
+<Description>a delicious snack, high in carbs</Description>
+<Mass>0.25</Mass>
+<Volume>0.25</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>250</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Meat</SubtypeId>
+</Id>
+<DisplayName>Meat</DisplayName>
+<Description>raw meat harvested from a kill</Description>
+<Mass>0.05</Mass>
+<Volume>0.05</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>100</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>MeatRoasted</SubtypeId>
+</Id>
+<DisplayName>Roast Meat</DisplayName>
+<Description>a filling meal</Description>
+<Mass>0.25</Mass>
+<Volume>0.25</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>500</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>ShroomSteak</SubtypeId>
+</Id>
+<DisplayName>Steak with Mushrooms</DisplayName>
+<Description>a filling meal</Description>
+<Mass>0.25</Mass>
+<Volume>0.25</Volume>
+<PhysicalMaterial>None</PhysicalMaterial>
+<MinimalPricePerUnit>750</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Medkit</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Medkit</DisplayName>
+<Description>Description_Medkit</Description>
+<Mass>10</Mass>
+<Volume>12</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>750</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>Powerkit</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Powerkit</DisplayName>
+<Description>Description_Powerkit</Description>
+<Mass>9</Mass>
+<Volume>9</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>1000</MinimalPricePerUnit>
+<MinimumOfferAmount>1000</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

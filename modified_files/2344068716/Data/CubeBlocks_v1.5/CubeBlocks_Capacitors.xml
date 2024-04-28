@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>LargeCapacitor</SubtypeId>
+</Id>
+<DisplayName>Capacitor</DisplayName>
+<Description>Very low storage, but extremely high burst output potential.
+Stored Power: 100kWh</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="35" />
+<Component Subtype="Capacitor" Count="50" />
+<Component Subtype="Computer" Count="35" />
+<Component Subtype="CopperWire" Count="50" />
+<Component Subtype="Ceramic" Count="40" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="Ceramic" Index="0" />
+<BlockPairName>Capacitor</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>50</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>SmallCapacitor</SubtypeId>
+</Id>
+<DisplayName>Capacitor</DisplayName>
+<Description>Very low storage, but extremely high burst output potential.
+Stored Power: 10kWh</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Capacitor" Count="5" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Ceramic" Count="10" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Ceramic" Index="0" />
+<BlockPairName>Capacitor</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>5</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>LargeElectronMatrix</SubtypeId>
+</Id>
+<DisplayName>Electron-Matrix Bank</DisplayName>
+<Description>Stores individual high-energy electrons in a nano-crystalline lattice.
+Stored Power: 250MWh</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Girder" Count="30" />
+<Component Subtype="ElectronMatrix" Count="60" />
+<Component Subtype="Superconductor" Count="40" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="GoldWire" Count="25" />
+<Component Subtype="QuantumComputer" Count="25" />
+<Component Subtype="ArmorGlass" Count="15" />
+</Components>
+<CriticalComponent Subtype="QuantumComputer" Index="0" />
+<BlockPairName>ElectronMatrix</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>50</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>SmallElectronMatrix</SubtypeId>
+</Id>
+<DisplayName>Electron-Matrix Bank</DisplayName>
+<Description>Stores individual high-energy electrons in a nano-crystalline lattice.
+Stored Power: 25MWh</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="ElectronMatrix" Count="12" />
+<Component Subtype="Superconductor" Count="15" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="GoldWire" Count="5" />
+<Component Subtype="QuantumComputer" Count="15" />
+<Component Subtype="ArmorGlass" Count="5" />
+</Components>
+<CriticalComponent Subtype="QuantumComputer" Index="0" />
+<BlockPairName>ElectronMatrix</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>5</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

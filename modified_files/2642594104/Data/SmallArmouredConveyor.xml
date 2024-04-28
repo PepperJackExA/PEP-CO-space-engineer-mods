@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorStraight" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorCorner" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorT" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorX" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorElbow" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorElbowT" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorElbowX" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockArmourConveyor" />
+<UnlockedByGroups>
+<GroupSubtype>24</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<!-- ResearchGroups -->
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="25" />
+<Members>
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyor" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorStraight" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorCorner" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorT" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorX" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorElbow" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorElbowT" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorElbowX" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockArmourConveyor" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyor" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTube" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeCurved" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmall" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmallCurved" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeMedium" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeCurvedMedium" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorFrameMedium" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallShipConveyorHub" />
+</Members>
+</ResearchGroup>
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_ConveyorBlocks</DisplayName>
+<Name>Conveyors</Name>
+<ItemIds>
+<string>Conveyor/SmallArmouredConveyorStraight</string>
+<string>Conveyor/SmallArmouredConveyorCorner</string>
+<string>Conveyor/SmallArmouredConveyorT</string>
+<string>Conveyor/SmallArmouredConveyorX</string>
+<string>Conveyor/SmallArmouredConveyorElbow</string>
+<string>Conveyor/SmallArmouredConveyorElbowT</string>
+<string>Conveyor/SmallArmouredConveyorElbowX</string>
+<string>Conveyor/SmallBlockArmourConveyor</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmouredConveyorThinGroup" />
+<DisplayName>Small Armored Conveyor Blocks</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorStraight" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorCorner" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorT" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorX" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorElbow" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorElbowT" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallArmouredConveyorElbowX" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockArmourConveyor" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallArmouredConveyorCorner</SubtypeId>
+</Id>
+<DisplayName>Small Armoured Conveyor Corner</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Count="1" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorArmourSmallCorner</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>7</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallArmouredConveyorX</SubtypeId>
+</Id>`
+<DisplayName>Small Armoured Conveyor X</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Count="1" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorArmourSmallX</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>7</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallArmouredConveyorElbow</SubtypeId>
+</Id>
+<DisplayName>Small Armoured Conveyor Elbow</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Count="1" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorArmourSmallElbow</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>7</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallArmouredConveyorElbowT</SubtypeId>
+</Id>
+<DisplayName>Small Armoured Conveyor Elbow T</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Count="1" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorArmourSmallElbowT</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>7</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallArmouredConveyorElbowX</SubtypeId>
+</Id>
+<DisplayName>Small Armoured Conveyor Elbow X</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Count="1" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorArmourSmallElbowX</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>7</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallArmouredConveyorStraight</SubtypeId>
+</Id>
+<DisplayName>Small Armoured Conveyor Straight</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Count="1" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorArmourSmallStraight</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>7</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallArmouredConveyorT</SubtypeId>
+</Id>
+<DisplayName>Small Armoured Conveyor T</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Count="1" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorArmourSmallT</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>7</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SmallBlockArmourConveyor</SubtypeId>
+</Id>
+<DisplayName>Small Armoured Junction</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Count="1" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorArmourSmall</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

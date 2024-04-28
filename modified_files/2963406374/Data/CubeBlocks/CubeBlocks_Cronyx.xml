@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeCronyxReactor</SubtypeId>
+</Id>
+<DisplayName>Cronyx Reactor</DisplayName>
+<Description>Heavy-duty Reactor chamber, capable of containing and controlling the massive energy output of Cronyx combustion.
+Fuel: Stabilized Cronyx - 3.3/min</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="CopperWire" Count="50" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="LargeTube" Count="25" />
+<Component Subtype="Ceramic" Count="200" />
+<Component Subtype="Reactor" Count="1000" />
+<Component Subtype="Electromagnet" Count="100" />
+<Component Subtype="TokamakBlanket" Count="100" />
+<Component Subtype="Superconductor" Count="500" />
+<Component Subtype="Thermocouple" Count="500" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="GoldWire" Count="75" />
+<Component Subtype="AdvancedComputer" Count="100" />
+<Component Subtype="Computer" Count="50" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="ArmorGlass" Count="150" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>CronyxReactor</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>StabilizedCronyx</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallCronyxReactor</SubtypeId>
+</Id>
+<DisplayName>Cronyx Reactor</DisplayName>
+<Description>Heavy-duty Reactor chamber, capable of containing and controlling the massive energy output of Cronyx combustion.
+Fuel: Stabilized Cronyx - 0.167/min</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="CopperWire" Count="15" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="5" />
+<Component Subtype="Ceramic" Count="40" />
+<Component Subtype="Reactor" Count="100" />
+<Component Subtype="Electromagnet" Count="30" />
+<Component Subtype="TokamakBlanket" Count="20" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="Thermocouple" Count="80" />
+<Component Subtype="Detector" Count="10" />
+<Component Subtype="GoldWire" Count="25" />
+<Component Subtype="AdvancedComputer" Count="25" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="Motor" Count="15" />
+<Component Subtype="ArmorGlass" Count="30" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>CronyxReactor</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>StabilizedCronyx</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+<Id>
+<TypeId>Assembler</TypeId>
+<SubtypeId>CronyxMunitionsFactory</SubtypeId>
+</Id>
+<DisplayName>Cronyx Munitions Factory</DisplayName>
+<Description>Produces powerful Cronyx ammunition.
+Power Usage: 1 MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="CopperWire" Count="25" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="TitaniumPlate" Count="40" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="AdvancedComputer" Count="30" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>80</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>1</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>CronyxAmmo</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>40</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

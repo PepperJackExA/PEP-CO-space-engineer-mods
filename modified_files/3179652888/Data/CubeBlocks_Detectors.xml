@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+<Id>
+<TypeId>OreDetector</TypeId>
+<SubtypeId>LargeOreDetector</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OreDetector</DisplayName>
+<Description>Description_OreDetector</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>OreDetector</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>40</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+<Id>
+<TypeId>OreDetector</TypeId>
+<SubtypeId>SmallBlockOreDetector</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OreDetector</DisplayName>
+<Description>Description_OreDetector</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="Detector" Count="1" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>OreDetector</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>40</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+<Id>
+<TypeId>OreDetector</TypeId>
+<SubtypeId>MediumOreDetector_SB</SubtypeId>
+</Id>
+<DisplayName>Medium Ore Detector</DisplayName>
+<Description>It is Ore detector... For small ships. But with range of large grid ore detector</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>MediumOreDetector_SB</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>40</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+<Id>
+<TypeId>OreDetector</TypeId>
+<SubtypeId>LargeOreDetector_LR</SubtypeId>
+</Id>
+<DisplayName>Long Range Ore Detector</DisplayName>
+<Description>Description_OreDetector</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="Motor" Count="55" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="Superconductor" Count="30" />
+<Component Subtype="Detector" Count="150" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>OreDetector_LR</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>40</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+<Id>
+<TypeId>OreDetector</TypeId>
+<SubtypeId>SmallOreDetector_LR</SubtypeId>
+</Id>
+<DisplayName>Long Range Ore Detector</DisplayName>
+<Description>Description_OreDetector</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="Superconductor" Count="30" />
+<Component Subtype="Detector" Count="150" />
+<Component Subtype="SteelPlate" Count="40" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>OreDetector_LR</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>40</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>RT6-B "MORRIGAN" Epstein Drive</DisplayName>
+<Description>A powerful, compact epstein drive found on first-generation Morrigan-class patrol destroyers. Sports a hexagonal base and single conveyor port for fuel input. [MCRN]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="90" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="LargeTube" Count="80" />
+<Component Subtype="Superconductor" Count="64" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="48" />
+<Component Subtype="Thrust" Count="180" />
+<Component Subtype="MetalGrid" Count="120" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>LG_ARYLNX_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<MaxPowerConsumption>1.75</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>24000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2.343</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.5</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_MUNR_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>S-100 "MUNROE" Light Epstein Drive</DisplayName>
+<Description>A UNN prototype epstein drive, found on Munroe-class destroyers involved in the pursuit of the Rocinante. Whilst less powerful than her MCRN sister, she still packs a punch. [UNN] </Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="90" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="LargeTube" Count="72" />
+<Component Subtype="Superconductor" Count="48" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="48" />
+<Component Subtype="Thrust" Count="180" />
+<Component Subtype="PowerCell" Count="60" />
+<Component Subtype="MetalGrid" Count="48" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>LG_ARYLYN_MUNR_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>80</BuildTimeSeconds>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.00000001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>18000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>1.607</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>125</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_PNDR_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>N22 "PANDORA-II" Epstein Drive</DisplayName>
+<Description>A mid-range, compact Epstein Drive designed for civilian luxury and privateer craft. Sports a compact baseplate, ample fuel consumption and impressive thrust. [CIVILIAN]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SmallTube" Count="260" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="48" />
+<Component Subtype="Thrust" Count="120" />
+<Component Subtype="PowerCell" Count="20" />
+<Component Subtype="MetalGrid" Count="200" />
+<Component Subtype="Construction" Count="160" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>ARYLYNX_PANDORA_Epstein_DRIVE</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<MaxPowerConsumption>1.0892</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>20000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2.8</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.5</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_QUADRA_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>E-405 "Avalon" Light Epstein Drive</DisplayName>
+<Description>A smaller, compact epstein drive when compared to its counterparts. Designed to be used in quad-clusters aboard raiding craft like the Granicus, Marco's pursuit ship, or the Dewalt. [BELTER]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="LargeTube" Count="48" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="16" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="160" />
+</Components>
+<CriticalComponent Subtype="AryxLynxon_FusionComponent" Index="0" />
+<BlockPairName>LG_ARYLYN_QUADRA_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<MaxPowerConsumption>1.5</MaxPowerConsumption>
+<MinPowerConsumption>0.00000001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>12500000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2.699</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>125</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_RAIDER_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>LV-300 "Raider" Light Epstein Drive</DisplayName>
+<Description>Denied the advanced technologies and drive systems of the inner planets, belters were forced to improvise and create drives of their own from salvaged wrecks. Whilst less efficient than their UNN and MCRN counterparts, they are much cheaper and provide respectable thrust. [BELTER]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="124" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="24" />
+<Component Subtype="PowerCell" Count="40" />
+<Component Subtype="Girder" Count="160" />
+<Component Subtype="Construction" Count="200" />
+<Component Subtype="SteelPlate" Count="160" />
+</Components>
+<CriticalComponent Subtype="AryxLynxon_FusionComponent" Index="0" />
+<BlockPairName>LG_ARYLYN_RAIDER_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.00000001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>22000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>1.168</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>125</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_ROCI_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>RT8 "TACHI" Epstein Drive</DisplayName>
+<Description>A medium-sized epstein drive of the RT series, found on Corvette-class frigates and light cruisers such as the Pella. These drives are both iconic, including their reactor vault's lower half, and signature drive pattern. A powerful drive for all legitimate salvages. [MCRN] </Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="440" />
+<Component Subtype="Construction" Count="400" />
+<Component Subtype="LargeTube" Count="80" />
+<Component Subtype="Superconductor" Count="360" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="72" />
+<Component Subtype="Thrust" Count="480" />
+<Component Subtype="MetalGrid" Count="620" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="SteelPlate" Count="1000" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>LG_ARYLNX_ROCI_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>150</BuildTimeSeconds>
+<MaxPowerConsumption>3</MaxPowerConsumption>
+<MinPowerConsumption>0.0001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>82000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>1.646</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.5</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>200</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_Leo_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>S-250 "Leo" Epstein Drive</DisplayName>
+<Description>An older UNN epstein drive found on Leonidas-class Battleship. A decent surplus drive for cheaper UNN military ships. [UNN] </Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="400" />
+<Component Subtype="Construction" Count="120" />
+<Component Subtype="LargeTube" Count="120" />
+<Component Subtype="Superconductor" Count="240" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="72" />
+<Component Subtype="PowerCell" Count="240" />
+<Component Subtype="Thrust" Count="480" />
+<Component Subtype="MetalGrid" Count="540" />
+<Component Subtype="Construction" Count="520" />
+<Component Subtype="SteelPlate" Count="1200" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>LG_ARYLNX_LEO_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>160</BuildTimeSeconds>
+<MaxPowerConsumption>3</MaxPowerConsumption>
+<MinPowerConsumption>0.0001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>74000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>1.563</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.5</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>200</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLYNX_SILVERSMITH_Epstein_DRIVE</SubtypeId>
+</Id>
+<DisplayName>AM-R5 "SILVERSMITH" Supercooled Epstein Drive</DisplayName>
+<Description>An extraordinarily powerful, experimental Epstein drive produced by Bush Shipyards for the Protogen corporation's Amun-Ra series of ships. Sporting a supercooling system to lower its thermal output and drive signature, this drive fits the bill for any mighty secret warships. [PROTOGEN]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="UNNComponent" Count="10" />
+<Component Subtype="SteelPlate" Count="400" />
+<Component Subtype="Construction" Count="400" />
+<Component Subtype="LargeTube" Count="240" />
+<Component Subtype="Superconductor" Count="640" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="80" />
+<Component Subtype="PowerCell" Count="280" />
+<Component Subtype="Thrust" Count="800" />
+<Component Subtype="MetalGrid" Count="240" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="SteelPlate" Count="1000" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>LG_ARYLNX_AMUNRA_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>160</BuildTimeSeconds>
+<MaxPowerConsumption>3</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>70000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>1.653</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.75</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>200</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_DRUMMER_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>LV613 "CAMINA" Epstein Drive</DisplayName>
+<Description>A powerful custom-built midweight Epstein Drive belonging to a ship with the best guns in the belt, once serving her and her family. #PolyamBelterFam [BELTER]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="240" />
+<Component Subtype="Construction" Count="600" />
+<Component Subtype="LargeTube" Count="160" />
+<Component Subtype="SmallTube" Count="800" />
+<Component Subtype="Superconductor" Count="60" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="72" />
+<Component Subtype="Thrust" Count="320" />
+<Component Subtype="PowerCell" Count="300" />
+<Component Subtype="MetalGrid" Count="360" />
+<Component Subtype="Construction" Count="120" />
+<Component Subtype="SteelPlate" Count="960" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>LG_ARYLNX_DRUMMER_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>150</BuildTimeSeconds>
+<MaxPowerConsumption>2.5</MaxPowerConsumption>
+<MinPowerConsumption>0.0001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>76000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2.114</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.5</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>200</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_SCIRCOCCO_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>RTF-B "SCIROCCO" Epstein Drive</DisplayName>
+<Description>A large epstein drive of the RT series, found on Scirocco-class assault cruisers such as the MCRN Hammurabi and Scirocco. [MCRN] </Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="600" />
+<Component Subtype="Construction" Count="120" />
+<Component Subtype="LargeTube" Count="360" />
+<Component Subtype="Superconductor" Count="640" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="148" />
+<Component Subtype="PowerCell" Count="640" />
+<Component Subtype="Thrust" Count="720" />
+<Component Subtype="MetalGrid" Count="720" />
+<Component Subtype="Construction" Count="780" />
+<Component Subtype="SteelPlate" Count="1800" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>LG_ARYLNX_SCIR_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>150</BuildTimeSeconds>
+<MaxPowerConsumption>3</MaxPowerConsumption>
+<MinPowerConsumption>0.0001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>152000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>1.015</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.5</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>200</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_Mega_Epstein_Drive</SubtypeId>
+</Id>
+<DisplayName>RT-10 "KAMINARI" Superheavy Epstein Drive</DisplayName>
+<Description>One of the largest epstein drives in modern use, built as part of the Martian navy's RT series of drives. These mighty thrusters are found pushing the quarter-million tonnes of bad news' formally known as Donnager-class battleships. A truly enormous drive, for truly enormous spacecraft. [MCRN]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1600" />
+<Component Subtype="Construction" Count="800" />
+<Component Subtype="LargeTube" Count="720" />
+<Component Subtype="Superconductor" Count="2000" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="240" />
+<Component Subtype="PowerCell" Count="2400" />
+<Component Subtype="Thrust" Count="1600" />
+<Component Subtype="MetalGrid" Count="2400" />
+<Component Subtype="Construction" Count="1600" />
+<Component Subtype="SteelPlate" Count="5600" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>LG_ARYLNX_Mega_Epstein_Drive</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>200</BuildTimeSeconds>
+<MaxPowerConsumption>5</MaxPowerConsumption>
+<MinPowerConsumption>0.0001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>396000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>0.974</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.5</SlowdownFactor>
+<PrimarySound>ArcARYLYN_Very_Large_Epstein_Drive_Fire</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LynxRcsThruster1</SubtypeId>
+</Id>
+<DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+<Description>Hydrazine thrusters are powerful maneuvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>rcsThruster1</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>1250000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>AryxRCSRamp</SubtypeId>
+</Id>
+<DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+<Description>Hydrazine thrusters are powerful maneuvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>AryxRCSRamp</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>1250000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>AryxRCSHalfRamp</SubtypeId>
+</Id>
+<DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+<Description>Hydrazine thrusters are powerful maneuvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>AryxRCSHalfRamp</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>1250000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>AryxRCSSlant</SubtypeId>
+</Id>
+<DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+<Description>Hydrazine thrusters are powerful maneuvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>AryxRCSSlant</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>1250000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>AryxRCS</SubtypeId>
+</Id>
+<DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+<Description>Hydrazine thrusters are powerful maneuvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>AryxRCS</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>1250000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_MESX_Epstein_Drive1</SubtypeId>
+</Id>
+<DisplayName>RTF-B "SCIROCCO" Epstein Drive</DisplayName>
+<Description>A large epstein drive of the RT series, found on Scirocco-class assault cruisers such as the MCRN Hammurabi and Scirocco. [MCRN] </Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1800" />
+<Component Subtype="Construction" Count="780" />
+<Component Subtype="MetalGrid" Count="720" />
+<Component Subtype="LargeTube" Count="360" />
+<Component Subtype="Superconductor" Count="640" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="148" />
+<Component Subtype="PowerCell" Count="640" />
+<Component Subtype="Thrust" Count="720" />
+<Component Subtype="Construction" Count="120" />
+<Component Subtype="SteelPlate" Count="600" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>ARYLNX_MESX_Epstein_Drive1</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>150</BuildTimeSeconds>
+<MaxPowerConsumption>3</MaxPowerConsumption>
+<MinPowerConsumption>0.0001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>152000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>1.015</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.5</SlowdownFactor>
+<PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>false</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>200</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>ARYLNX_MESX_Epstein_Drive2</SubtypeId>
+</Id>
+<DisplayName>RT-10 "KAMINARI" Superheavy Epstein Drive</DisplayName>
+<Description>One of the largest epstein drives in modern use, built as part of the Martian navy's RT series of drives. These mighty thrusters are found pushing the quarter-million tonnes of bad news' formally known as Donnager-class battleships. A truly enormous drive, for truly enormous spacecraft. [MCRN]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5600" />
+<Component Subtype="Construction" Count="1600" />
+<Component Subtype="MetalGrid" Count="2400" />
+<Component Subtype="LargeTube" Count="720" />
+<Component Subtype="Superconductor" Count="2000" />
+<Component Subtype="AryxLynxon_FusionComponent" Count="240" />
+<Component Subtype="PowerCell" Count="2400" />
+<Component Subtype="Thrust" Count="1600" />
+<Component Subtype="Construction" Count="800" />
+<Component Subtype="SteelPlate" Count="1600" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>ARYLNX_MESX_Epstein_Drive2</BlockPairName>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<BuildTimeSeconds>200</BuildTimeSeconds>
+<MaxPowerConsumption>5</MaxPowerConsumption>
+<MinPowerConsumption>0.0001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>396000000</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>0.974</Efficiency>
+</FuelConverter>
+<SlowdownFactor>1.5</SlowdownFactor>
+<PrimarySound>ArcARYLYN_Very_Large_Epstein_Drive_Fire</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>false</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ArcBotElectricalDischarge</SubtypeId>
+</Id>
+<Category>BOT</Category>
+<MaxDistance>25</MaxDistance>
+<Volume>2</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\ArcParticleElectricalDischarge3d02.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Robot_power_down.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>RealBotElectricalDischarge</SubtypeId>
+</Id>
+<Category>BOT</Category>
+<MaxDistance>8</MaxDistance>
+<Volume>2</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\RealParticleElectricalDischarge3d02.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Robot_power_down.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ArcEnemy</SubtypeId>
+</Id>
+<Category>BOT</Category>
+<MaxDistance>100</MaxDistance>
+<Volume>2</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\EnemyDetected.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Warning.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>RealEnemy</SubtypeId>
+</Id>
+<Category>BOT</Category>
+<MaxDistance>25</MaxDistance>
+<Volume>2</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\EnemyDetected.wav</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio\Warning.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

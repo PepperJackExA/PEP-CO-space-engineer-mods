@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EnergyRenewableGroup" />
+<DisplayName>DisplayName_BlockGroup_EnergyRenewableGroup</DisplayName>
+<Description>Description_BlockGroup_EnergyRenewableGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanel" />
+<Block Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockSolarPanel" />
+<Block Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanelUnstackable" />
+<Block Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockSolarPanelUnstackable" />
+<Block Type="MyObjectBuilder_WindTurbine" Subtype="LargeBlockWindTurbineStackable" />
+<Block Type="MyObjectBuilder_WindTurbine" Subtype="LargeBlockWindTurbine" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>LargeBlockCockpitIndustrial</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CockpitIndustrial</DisplayName>
+<Description>Description_CockpitIndustrial</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="10" />
+<Component Subtype="Computer" Count="60" />
+<Component Subtype="BulletproofGlass" Count="80" />
+<Component Subtype="SmallTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>CockpitIndustrial</BlockPairName>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PrimarySound>BlockCockpitLrg</PrimarySound>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>150</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

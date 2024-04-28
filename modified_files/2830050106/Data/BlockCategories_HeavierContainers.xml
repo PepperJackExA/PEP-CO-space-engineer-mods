@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CargoContainer/SlopedIndustrialCargoContainer</string>
+<string>CargoContainer/PortedSlopedIndustrialCargoContainer</string>
+<string>CargoContainer/ReinforcedCargoContainerLarge</string>
+<string>CargoContainer/IndustrialSiloXL</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CargoContainer/SlopedIndustrialCargoContainerMedium</string>
+<string>CargoContainer/ReinforcedCargoContainerMedium</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>TBH Industries Mods</DisplayName>
+<Name>TBH Industries</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CargoContainer/SlopedIndustrialCargoContainerMedium</string>
+<string>CargoContainer/ReinforcedCargoContainerMedium</string>
+<string>CargoContainer/SlopedIndustrialCargoContainer</string>
+<string>CargoContainer/PortedSlopedIndustrialCargoContainer</string>
+<string>CargoContainer/ReinforcedCargoContainerLarge</string>
+<string>CargoContainer/IndustrialSiloXL</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

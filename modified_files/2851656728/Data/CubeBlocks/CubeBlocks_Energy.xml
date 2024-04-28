@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>LargeBlockBatteryBlock</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Battery</DisplayName>
+<Description>Description_Battery</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="PowerCell" Count="80">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="60" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>BatteryBlock</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>12</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>true</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>SmallBlockBatteryBlock</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Battery</DisplayName>
+<Description>Description_Battery</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="PowerCell" Count="20">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>BatteryBlock</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>4</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>SmallBlockSmallBatteryBlock</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallBattery</DisplayName>
+<Description>Description_Battery</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="PowerCell" Count="2">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Battery1x1Block</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>0.2</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>true</IsAirTight>
+<PCU>15</PCU>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallBlockSmallGenerator</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallReactor</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Reactor" Count="3" />
+<Component Subtype="ReactorSchematic" Count="3">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SmallReactor</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallBlockLargeGenerator</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeReactor</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="Construction" Count="9" />
+<Component Subtype="MetalGrid" Count="9" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="Reactor" Count="95" />
+<Component Subtype="ReactorSchematic" Count="12">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LargeReactor</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeBlockSmallGenerator</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallReactor</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="MetalGrid" Count="4" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Reactor" Count="100" />
+<Component Subtype="ReactorSchematic" Count="20">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SmallReactor</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeBlockLargeGenerator</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeReactor</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="800" />
+<Component Subtype="Construction" Count="70" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="Superconductor" Count="100" />
+<Component Subtype="Reactor" Count="2000" />
+<Component Subtype="ReactorSchematic" Count="150">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Computer" Count="75" />
+<Component Subtype="SteelPlate" Count="200" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LargeReactor</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+<Id>
+<TypeId>HydrogenEngine</TypeId>
+<SubtypeId>LargeHydrogenEngine</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Hydrogen_Engine</DisplayName>
+<Description>Description_PowerGenerator</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="LargeTube" Count="12" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Motor" Count="12" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="PowerCell" Count="1" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>HydrogenEngine</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Generators</ResourceSinkGroup>
+<IsAirTight>false</IsAirTight>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</Id>
+<PrimarySound>ArcBlockHydrogenEngine</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_HydrogenEngineDefinition">
+<Id>
+<TypeId>HydrogenEngine</TypeId>
+<SubtypeId>SmallHydrogenEngine</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Hydrogen_Engine</DisplayName>
+<Description>Description_PowerGenerator</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="18" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="SmallTube" Count="6" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="PowerCell" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>HydrogenEngine</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Generators</ResourceSinkGroup>
+<IsAirTight>false</IsAirTight>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</Id>
+<PrimarySound>ArcBlockHydrogenEngine</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WindTurbineDefinition">
+<Id>
+<TypeId>WindTurbine</TypeId>
+<SubtypeId>LargeBlockWindTurbine</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_WindTurbine</DisplayName>
+<Description>Description_WindTurbine</Description>
+<CubeSize>Large</CubeSize>
+<ResearchGroup>Tier00Basics</ResearchGroup>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Motor" Count="8" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Girder" Count="24" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="InteriorPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>WindTurbine</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ActionSound>ArcBlockWindTurbine</ActionSound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>false</IsAirTight>
+<RaycastersToFullEfficiency>7</RaycastersToFullEfficiency>
+<PCU>55</PCU>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SolarPanelDefinition">
+<Id>
+<TypeId>SolarPanel</TypeId>
+<SubtypeId>LargeBlockSolarPanel</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SolarPanel</DisplayName>
+<Description>Description_SolarPanel</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Girder" Count="12" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="SolarCell" Count="32" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="BulletproofGlass" Count="4" />
+</Components>
+<CriticalComponent Subtype="SolarCell" Index="0" />
+<BlockPairName>SolarPanel</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PhysicalMaterial>GlassOpaque</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>55</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SolarPanelDefinition">
+<Id>
+<TypeId>SolarPanel</TypeId>
+<SubtypeId>SmallBlockSolarPanel</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SolarPanel</DisplayName>
+<Description>Description_SolarPanel</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="Girder" Count="4" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="SolarCell" Count="8" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="SolarCell" Index="0" />
+<BlockPairName>SolarPanel</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PhysicalMaterial>GlassOpaque</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>55</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

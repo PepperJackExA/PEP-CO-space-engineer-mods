@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>T-47 Roci Light Fixed Railgun</SubtypeId>
+</Id>
+<DisplayName>T-47 Roci Light Fixed Railgun</DisplayName>
+<Description>A custom Tycho creation the T-47 Roci Light Fixed Railgun is an upgrade to the Zakosetara Heavy Railgun that sports a higher rate of fire with a lower stopping power due to its decreased size.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="GravityGenerator" Count="60" />
+<Component Subtype="PowerCell" Count="220" />
+<Component Subtype="Superconductor" Count="160" />
+<Component Subtype="Girder" Count="70" />
+<Component Subtype="SmallTube" Count="90" />
+<Component Subtype="LargeTube" Count="55" />
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="UpgradedBelterComponent" Count="100" />
+<Component Subtype="Motor" Count="70" />
+<Component Subtype="Computer" Count="125" />
+<Component Subtype="MetalGrid" Count="140" />
+<Component Subtype="Construction" Count="75" />
+<Component Subtype="SteelPlate" Count="240" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<BlockPairName>T-47 Roci Light Fixed Railgun</BlockPairName>
+<InventoryMaxVolume>0.32</InventoryMaxVolume>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<PCU>2200</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

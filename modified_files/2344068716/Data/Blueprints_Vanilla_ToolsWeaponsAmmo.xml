@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Gunpowder</SubtypeId>
+</Id>
+<DisplayName>Gunpowder</DisplayName>
+<Prerequisites>
+<Item Amount="6" TypeId="Ingot" SubtypeId="Niter" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Carbon" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Sulfur" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>2</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>IceToOxygen</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Oxygen</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>OxygenBottlesRefill</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_OxygenBottles</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="OxygenContainerObject" SubtypeId="OxygenBottle" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POOxygenBottle</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_OxygenBottle</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Component" SubtypeId="LargeTube" />
+<Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>HydrogenBottlesRefill</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_HydrogenBottles</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="GasContainerObject" SubtypeId="HydrogenBottle" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POHydrogenBottle</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_HydrogenBottle</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Component" SubtypeId="LargeTube" />
+<Item Amount="15" TypeId="Ingot" SubtypeId="Nickel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POWelder</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Welder</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="CopperWire" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="2" TypeId="Component" SubtypeId="SteelPlate" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POWelder2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Welder2</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="CopperWire" />
+<Item Amount="1" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="2" TypeId="Component" SubtypeId="InteriorPlate" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POWelder3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Welder3</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Component" SubtypeId="GoldWire" />
+<Item Amount="1" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="2" TypeId="Component" SubtypeId="InteriorPlate" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POWelder4</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Welder4</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Component" SubtypeId="GoldWire" />
+<Item Amount="1" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="2" TypeId="Component" SubtypeId="InteriorPlate" />
+<Item Amount="1" TypeId="Component" SubtypeId="LaserEmitter" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POAngleGrinder</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_AngleGrinder</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="SteelPlate" />
+<Item Amount="2" TypeId="Component" SubtypeId="CopperWire" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Silicon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POAngleGrinder2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_AngleGrinder2</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="InteriorPlate" />
+<Item Amount="2" TypeId="Component" SubtypeId="CopperWire" />
+<Item Amount="2" TypeId="Component" SubtypeId="TitaniumPlate" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POAngleGrinder3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_AngleGrinder3</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="InteriorPlate" />
+<Item Amount="2" TypeId="Component" SubtypeId="GoldWire" />
+<Item Amount="2" TypeId="Component" SubtypeId="Ceramic" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POAngleGrinder4</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_AngleGrinder4</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="InteriorPlate" />
+<Item Amount="5" TypeId="Component" SubtypeId="GoldWire" />
+<Item Amount="1" TypeId="Component" SubtypeId="LaserEmitter" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POHandDrill</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_HandDrill</DisplayName>
+<Prerequisites>
+<Item Amount="4" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="3" TypeId="Component" SubtypeId="SteelPlate" />
+<Item Amount="2" TypeId="Component" SubtypeId="CopperWire" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POHandDrill2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_HandDrill2</DisplayName>
+<Prerequisites>
+<Item Amount="4" TypeId="Component" SubtypeId="TitaniumPlate" />
+<Item Amount="3" TypeId="Component" SubtypeId="InteriorPlate" />
+<Item Amount="2" TypeId="Component" SubtypeId="CopperWire" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POHandDrill3</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_HandDrill3</DisplayName>
+<Prerequisites>
+<Item Amount="4" TypeId="Component" SubtypeId="Ceramic" />
+<Item Amount="3" TypeId="Component" SubtypeId="InteriorPlate" />
+<Item Amount="2" TypeId="Component" SubtypeId="GoldWire" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POHandDrill4</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_HandDrill4</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Component" SubtypeId="LaserEmitter" />
+<Item Amount="3" TypeId="Component" SubtypeId="InteriorPlate" />
+<Item Amount="5" TypeId="Component" SubtypeId="GoldWire" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POAutomaticRifle</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_AutomaticRifle</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="5" TypeId="Component" SubtypeId="SmallTube" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Nickel" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POPreciseAutomaticRifle</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_PreciseAutomaticRifle</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="7" TypeId="Component" SubtypeId="SmallTube" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="1" TypeId="Component" SubtypeId="BulletproofGlass" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PORapidFireAutomaticRifle</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_RapidFireAutomaticRifle</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="3" TypeId="Component" SubtypeId="SmallTube" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Aluminum" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POUltimateAutomaticRifle</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_EliteAutomaticRifle</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="5" TypeId="Component" SubtypeId="SmallTube" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="1" TypeId="Component" SubtypeId="BulletproofGlass" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POBasicHandHeldLauncher</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_BasicHandHeldLauncher</DisplayName>
+<Prerequisites>
+<Item Amount="20" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="5" TypeId="Component" SubtypeId="LargeTube" />
+<Item Amount="5" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="2" TypeId="Component" SubtypeId="BulletproofGlass" />
+<Item Amount="2" TypeId="Component" SubtypeId="Computer" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POAdvancedHandHeldLauncher</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_AdvancedHandHeldLauncher</DisplayName>
+<Prerequisites>
+<Item Amount="20" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="5" TypeId="Component" SubtypeId="LargeTube" />
+<Item Amount="10" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="5" TypeId="Component" SubtypeId="BulletproofGlass" />
+<Item Amount="1" TypeId="Component" SubtypeId="AdvancedComputer" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POSemiAutoPistol</SubtypeId>
+</Id>
+<DisplayName>Basic Pistol</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.3" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="1" TypeId="Component" SubtypeId="SmallTube" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>8</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POFullAutoPistol</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_FullAutoPistol</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="1" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="1" TypeId="Component" SubtypeId="SmallTube" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POEliteAutoPistol</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_ElitePistol</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Aluminum" />
+<Item Amount="1" TypeId="Component" SubtypeId="Plastic" />
+<Item Amount="1" TypeId="Component" SubtypeId="SmallTube" />
+<Item Amount="1" TypeId="Component" SubtypeId="BulletproofGlass" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>12</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POInteriorTurret_Mag_50rd</SubtypeId>
+</Id>
+<DisplayName>Light Turret Ammo</DisplayName>
+<Prerequisites>
+<Item Amount="15" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PONATO_25x184mmMagazine</SubtypeId>
+</Id>
+<DisplayName>25x184mm Gatling Ammo</DisplayName>
+<Prerequisites>
+<Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>DUNATO_25x184mmMagazine</SubtypeId>
+</Id>
+<DisplayName>Depleted Uranium 25x184mm</DisplayName>
+<Prerequisites>
+<Item Amount="20" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="DepletedUranium" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POMissile200mm</SubtypeId>
+</Id>
+<DisplayName>200mm Missile</DisplayName>
+<Prerequisites>
+<Item Amount="5" TypeId="Component" SubtypeId="LargeTube" />
+<Item Amount="1" TypeId="Component" SubtypeId="Computer" />
+<Item Amount="5" TypeId="Component" SubtypeId="CopperWire" />
+<Item Amount="20" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POSemiAutoPistolMagazine</SubtypeId>
+</Id>
+<DisplayName>Basic Pistol Magazine</DisplayName>
+<Prerequisites>
+<Item Amount="10" TypeId="Ingot" SubtypeId="Stone" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POFullAutoPistolMagazine</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_FullAutoPistolMagazine</DisplayName>
+<Prerequisites>
+<Item Amount="0.5" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.1" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="0.1" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>6</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POElitePistolMagazine</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_ElitePistolMagazine</DisplayName>
+<Prerequisites>
+<Item Amount="0.3" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.1" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="0.1" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POAutomaticRifleGun_Mag_20rd</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_AutomaticRifleGun_Mag_20rd</DisplayName>
+<Prerequisites>
+<Item Amount="0.8" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.2" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="0.15" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>PORapidFireAutomaticRifleGun_Mag_50rd</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_RapidFireAutomaticRifleGun_Mag_50rd</DisplayName>
+<Prerequisites>
+<Item Amount="2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.5" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="0.4" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POPreciseAutomaticRifleGun_Mag_5rd</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_PreciseAutomaticRifleGun_Mag_5rd</DisplayName>
+<Prerequisites>
+<Item Amount="0.8" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.2" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="0.15" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>POUltimateAutomaticRifleGun_Mag_30rd</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_UltimateAutomaticRifleGun_Mag_30rd</DisplayName>
+<Prerequisites>
+<Item Amount="1.2" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="0.4" TypeId="Ingot" SubtypeId="Copper" />
+<Item Amount="0.25" TypeId="Ingot" SubtypeId="Magnesium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

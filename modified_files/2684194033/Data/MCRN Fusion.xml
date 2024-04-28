@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>MCRNFusion</SubtypeId>
+</Id>
+<DisplayName>MCRN Fusion Reactor</DisplayName>
+<Description>A specialised fusion reactor utilised in MCRN corvettes</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="800" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="MCRN_Fusion_Core" Count="1" />
+<Component Subtype="MetalGrid" Count="60" />
+<Component Subtype="LargeTube" Count="60" />
+<Component Subtype="MCRN_Fusion_Moderator" Count="24" />
+<Component Subtype="Superconductor" Count="400" />
+<Component Subtype="MCRN_Coolant_Modulator" Count="1" />
+<Component Subtype="Reactor" Count="3000" />
+<Component Subtype="MCRN_Containment_Chamber" Count="1" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="MCRN_Control_Computer" Count="1" />
+<Component Subtype="Computer" Count="200" />
+<Component Subtype="SteelPlate" Count="400" />
+<Component Subtype="MCRN_Reactor_Housing" Count="1" />
+</Components>
+<CriticalComponent Subtype="MCRN Fusion Core" Index="0" />
+<BlockPairName>MCRNFusionReactor</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>600</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

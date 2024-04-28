@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>220mmUNNTorpedoBlueprint</SubtypeId>
+</Id>
+<DisplayName>5x 220mm UNN Torpedo</DisplayName>
+<Prerequisites>
+<Item Amount="200" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="100" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="100" TypeId="Ingot" SubtypeId="LeadIngot" />
+<Item Amount="125" TypeId="Ingot" SubtypeId="Uranium" />
+<Item Amount="300" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="100" TypeId="Ingot" SubtypeId="Gold" />
+<Item Amount="100" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Silver" />
+<Item Amount="120" TypeId="Component" SubtypeId="GuidanceComponent" />
+<Item Amount="3" TypeId="Component" SubtypeId="UNNComponent" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>25</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelSmall_3b_tri</SubtypeId>
+</Id>
+<DisplayName>3 Button Corner</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel_3b_tri</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<string>Textures\GUI\Icons\buttons\ThreeButton.dds</string>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>ButtonPanelSmall_3b_inv_tri</SubtypeId>
+</Id>
+<DisplayName>3 Button InvCorner</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ButtonPanel_3b_inv_tri</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<string>Textures\GUI\Icons\buttons\ThreeButton.dds</string>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>CooperativeTakeoverRemoteNoise</SubtypeId>
+</Id>
+<Category>BLOCK</Category>
+<MaxDistance>12</MaxDistance>
+<Loopable>true</Loopable>
+<Volume>0.8</Volume>
+<Waves>
+<Wave Type="D3">
+<Loop>Audio\ARC\AIRemote.xwm</Loop>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

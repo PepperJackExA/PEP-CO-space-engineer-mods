@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+<Id>
+<TypeId>OreDetector</TypeId>
+<SubtypeId>AIInventoryManager</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>AI Inventory Manager</DisplayName>
+<Description></Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="11" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="PowerCell" Count="10" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AIInventoryManager</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+<Id>
+<TypeId>OreDetector</TypeId>
+<SubtypeId>AIInventoryManagerReskin</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>AI Inventory Manager</DisplayName>
+<Description></Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="11" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="PowerCell" Count="10" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AIInventoryManagerReskin</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

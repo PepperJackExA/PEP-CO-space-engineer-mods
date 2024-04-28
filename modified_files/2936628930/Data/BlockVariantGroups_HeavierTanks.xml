@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TBHTankGroup" />
+<DisplayName>TBH Industries - Tanks</DisplayName>
+<Description>A collection of tanks from TBH Industries!</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="Reinforced_Hydrogen_Tank_LS" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="Reinforced Hydrogen Tank LL" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="Drum_Hydrogen_Tank_LS" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="Drum_Hydrogen_Tank_SS" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="Drum_Oxygen_Tank_LS" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="Drum_Oxygen_Tank_SS" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

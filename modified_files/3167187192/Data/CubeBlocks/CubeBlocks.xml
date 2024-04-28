@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>PEPCOTowerBuildingBlock</SubtypeId>
+</Id>
+<DisplayName>Tower Block</DisplayName>
+<Description>A block to serve as the middle part of a wind turbine or similar tower.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80"/>
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>SteelPlateScrap</SubtypeId>
+</DeconstructId>
+<Component Subtype="Construction" Count="100"/>
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>ConstructionScrap</SubtypeId>
+</DeconstructId>
+<Component Subtype="Girder" Count="20"/>
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>GirderScrap</SubtypeId>
+</DeconstructId>
+<Component Subtype="SteelPlate" Count="20"/>
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>SteelPlateScrap</SubtypeId>
+</DeconstructId>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>PEPCOTowerBuildingBlock</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>PEPCOTowerBuildingBlockTop</SubtypeId>
+</Id>
+<DisplayName>Tower Block Top</DisplayName>
+<Description>A block to serve as the top cap of a wind turbine or similar tower.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80"/>
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>SteelPlateScrap</SubtypeId>
+</DeconstructId>
+<Component Subtype="Construction" Count="160"/>
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>ConstructionScrap</SubtypeId>
+</DeconstructId>
+<Component Subtype="Girder" Count="30"/>
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>GirderScrap</SubtypeId>
+</DeconstructId>
+<Component Subtype="SteelPlate" Count="20"/>
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>SteelPlateScrap</SubtypeId>
+</DeconstructId>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>PEPCOTowerBuildingBlockTop</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>PEPCOConveyorTowerBuildingBlock</SubtypeId>
+</Id>
+<DisplayName>Conveyored Tower Block</DisplayName>
+<Description>A staircase around a conveyor in the middle.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="120" />
+<Component Subtype="Construction" Count="180" />
+<Component Subtype="SmallTube" Count="48" />
+<Component Subtype="Motor" Count="24" />
+<Component Subtype="Girder" Count="30"/>
+<Component Subtype="SteelPlate" Count="60" />
+</Components>
+<CriticalComponent Subtype="Girder" Index="0" />
+<BlockPairName>PEPCOConveyorTowerBuildingBlock</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>PEPCOConveyorTowerBuildingBlockTop</SubtypeId>
+</Id>
+<DisplayName>Conveyored Tower Block Top</DisplayName>
+<Description>A staircase around a conveyor in the middle with a top cap.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="160" />
+<Component Subtype="Construction" Count="280" />
+<Component Subtype="SmallTube" Count="48" />
+<Component Subtype="Motor" Count="24" />
+<Component Subtype="Girder" Count="60"/>
+<Component Subtype="SteelPlate" Count="90" />
+</Components>
+<CriticalComponent Subtype="Girder" Index="0" />
+<BlockPairName>PEPCOConveyorTowerBuildingBlockTop</BlockPairName>
+</Definition>
+</CubeBlocks>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="PEPCOTowerBuildingBlocks" />
+<DisplayName>Tower building blocks</DisplayName>
+<Description>Blocks to serve as wind turbine or similar towers.</Description>
+<Blocks>
+<Block Type="CubeBlock" Subtype="PEPCOTowerBuildingBlock" />
+<Block Type="CubeBlock" Subtype="PEPCOTowerBuildingBlockTop" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="PEPCOConveyorTowerBuildingBlocks" />
+<DisplayName>Conveyored tower building blocks</DisplayName>
+<Description>Blocks to serve as conveyored towers.</Description>
+<Blocks>
+<Block Type="ConveyorConnector" Subtype="PEPCOConveyorTowerBuildingBlock" />
+<Block Type="ConveyorConnector" Subtype="PEPCOConveyorTowerBuildingBlockTop" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>PEPCO Industries</DisplayName>
+<Name>PEPCO Industries</Name>
+<ItemIds>
+<string>PEPCOTowerBuildingBlock</string>
+<string>PEPCOTowerBuildingBlockTop</string>
+<string>PEPCOConveyorTowerBuildingBlock</string>
+<string>PEPCOConveyorTowerBuildingBlockTop</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

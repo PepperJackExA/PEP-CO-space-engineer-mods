@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_LandingGearDefinition">
+<Id>
+<TypeId>LandingGear</TypeId>
+<SubtypeId>LargeBlockMagneticPlate</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_MagneticPlateLarge</DisplayName>
+<Description>Description_LandingGear</Description>
+<CubeSize>Large</CubeSize>
+<LockSound>ShipLandGearOn</LockSound>
+<UnlockSound>ShipLandGearOff</UnlockSound>
+<FailedAttachSound>ShipLandGearNothing01</FailedAttachSound>
+<Components>
+<Component Subtype="SteelPlate" Count="300" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="CopperWire" Count="30" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="Electromagnet" Count="15" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>LargeMagneticPlate</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>35</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LandingGearDefinition">
+<Id>
+<TypeId>LandingGear</TypeId>
+<SubtypeId>SmallBlockMagneticPlate</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_MagneticPlateLarge</DisplayName>
+<Description>Description_LandingGear</Description>
+<CubeSize>Small</CubeSize>
+<LockSound>ShipLandGearOn</LockSound>
+<UnlockSound>ShipLandGearOff</UnlockSound>
+<FailedAttachSound>ShipLandGearNothing01</FailedAttachSound>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="CopperWire" Count="10" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="Electromagnet" Count="5" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>LargeMagneticPlate</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>35</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>LargeBlockLargeIndustrialContainer</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeIndustrialCargoContainer</DisplayName>
+<Description>Description_LargeCargoContainer</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="240" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="MetalGrid" Count="24" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="60" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LargeCargoContainerIndustrial</BlockPairName>
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>LargeBlockConveyorPipeSeamless</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeSeamless</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeSeamless</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>LargeBlockConveyorPipeCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeCorner</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeCorner</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>LargeBlockConveyorPipeJunction</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeJunction</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeJunction</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>LargeBlockConveyorPipeIntersection</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeIntersection</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="16" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeIntersection</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>LargeBlockConveyorPipeFlange</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeFlange</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeFlange</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>ConveyorConnector</TypeId>
+<SubtypeId>LargeBlockConveyorPipeEnd</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeEnd</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeEnd</BlockPairName>
+<BuildTimeSeconds>7</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>LargeBlockConveyorPipeT</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorPipeT</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorPipeT</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>LargeHydrogenTankIndustrial</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HydrogenTankIndustrial</DisplayName>
+<Description>Stores Hydrogen. 2,000,000L capacity.
+Caution: Compressed gases are volatile.</Description>
+<Public>true</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="160" />
+<Component Subtype="LargeTube" Count="80" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SteelPlate" Count="120" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>HydrogenTankIndustrial</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>2000000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0025</LeakPercent>
+<GasExplosionMaxRadius>20</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>2000000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>ArcHydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+<Id>
+<TypeId>Assembler</TypeId>
+<SubtypeId>LargeAssemblerIndustrial</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AssemblerIndustrial</DisplayName>
+<Description>Assembles basic components together to produce more complex items.
+Produces Comms and Medical Components, Acid Power Cells, Motors, Solar Cells, Capacitors, and Cryocoolers.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="120" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AssemblerIndustrial</BlockPairName>
+<BuildTimeSeconds>80</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>3</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>AssemblerComponents</Class>
+<Class>T2Tools</Class>
+<Class>Bottles</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>40</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>LargeRefineryIndustrial</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_RefineryIndustrial</DisplayName>
+<Description>Refineries can refine Bauxite, Titanium, Coal, Silver, Gold, Platinum, and Tantalum.
+Stone can also be refined for higher yields than in a Smelter.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="250" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="Electromagnet" Count="25" />
+<Component Subtype="HeatingElement" Count="50" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>RefineryIndustrial</BlockPairName>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>7.5</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>3</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>RefineryIngots</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1.0</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>90</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>LargeBlockConveyorSorterIndustrial</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConveyorSorterIndustrial</DisplayName>
+<Description>Description_ConveyorSorter</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="40" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="SmallTube" Count="50" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="20" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ConveyorSorterIndustrial</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Conveyors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LargeBlockLargeHydrogenThrustIndustrial</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeHydrogenThrustIndustrial</DisplayName>
+<Description>Fuelled thruster, running on Hydrogen fuel. Will function normally in all environments.
+Fuel Consumption: 2.41kL/s</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="150" />
+<Component Subtype="MetalGrid" Count="250" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>LargeHydrogenThrustIndustrial</BlockPairName>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>7.5</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>7200000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<PrimarySound>LrgShipLrgJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LargeBlockSmallHydrogenThrustIndustrial</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HydrogenThrustIndustrial</DisplayName>
+<Description>Fuelled thruster, running on Hydrogen fuel. Will function normally in all environments.
+Fuel Consumption: 401.67L/s</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>HydrogenThrustIndustrial</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>1080000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>1.25</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SmallBlockLargeHydrogenThrustIndustrial</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeHydrogenThrustIndustrial</DisplayName>
+<Description>Fuelled thruster, running on Hydrogen fuel. Will function normally in all environments.
+Fuel Consumption: 192.8L/s</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="22" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>LargeHydrogenThrustIndustrial</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>2</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>0.6</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>480000</ForceMagnitude>
+<SlowdownFactor>1</SlowdownFactor>
+<PrimarySound>SmShipLrgJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SmallBlockSmallHydrogenThrustIndustrial</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HydrogenThrustIndustrial</DisplayName>
+<Description>Fuelled thruster, running on Hydrogen fuel. Will function normally in all environments.
+Fuel Consumption: 40.17L/s</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Hydrogen</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="MetalGrid" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BlockPairName>HydrogenThrustIndustrial</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>98400</ForceMagnitude>
+<FuelConverter>
+<FuelId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</FuelId>
+<Efficiency>1</Efficiency>
+</FuelConverter>
+<MaxPowerConsumption>0.125</MaxPowerConsumption>
+<MinPowerConsumption>0.000000001</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<PrimarySound>SmShipSmJetHydrogen</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<Public>true</Public>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

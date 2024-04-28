@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JBeach</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>25</MaxDistance>
+<Volume>0.25</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/Beach.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JUnderground</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>25</MaxDistance>
+<Volume>2</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/Sewer Loop 3.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JOcean</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>50</MaxDistance>
+<Volume>0.5</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/Ocean.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JUnderwater</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>50</MaxDistance>
+<Volume>2</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/Underwater Loop 3.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JSplash</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>100</MaxDistance>
+<Volume>1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 1_1.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 1_2.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 1_3.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 1_4.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 1_5.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 2_1.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 2_2.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 2_3.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 2_4.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 2_5.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 3_1.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 3_2.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 3_3.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 3_4.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 3_5.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 4_1.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 4_2.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 4_3.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 4_4.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Splash/Splash Large 4_4.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JSplashUnderwater</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>50</MaxDistance>
+<Volume>1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/SplashUnderwater/Splash Large 1_1.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/SplashUnderwater/Splash Large 1_2.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/SplashUnderwater/Splash Large 1_3.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/SplashUnderwater/Splash Large 1_4.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JAmbient</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>100</MaxDistance>
+<Volume>2</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/ambwater1.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/ambwater2.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/ambwater3.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/ambwater4.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/ambwater5.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/ambwater6.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/ambwater7.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/ambwater8.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JGroan</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>100</MaxDistance>
+<Volume>0.5</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/groan1.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/groan2.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/groan3.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/groan4.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JSeagull</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>100</MaxDistance>
+<Volume>0.25</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/seagull_0.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/seagull_1.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/seagull_2.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/seagull_3.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/seagull_4.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JSizzle</SubtypeId>
+</Id>
+<Category>AMB</Category>
+<MaxDistance>50</MaxDistance>
+<Volume>1</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/Sizzle.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JExplosionUnderwater</SubtypeId>
+</Id>
+<Category>WEP_EXPL</Category>
+<MaxDistance>150</MaxDistance>
+<Volume>1</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/Explosion_Underwater.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JExplosionSurface</SubtypeId>
+</Id>
+<Category>WEP_EXPL</Category>
+<MaxDistance>150</MaxDistance>
+<Volume>1</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/Explosion_Surface.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>JPoofUnderwater</SubtypeId>
+</Id>
+<Category>EXPL</Category>
+<MaxDistance>50</MaxDistance>
+<Volume>2</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio/Poof1.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Poof2.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Poof3.xwm</Start>
+</Wave>
+<Wave Type="D3">
+<Start>Audio/Poof4.xwm</Start>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorThickGroup" />
+<DisplayName>DisplayName_Block_Conveyor</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyor" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTube" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="FixedConveyorTube" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LongConveyorTube" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ExtraLongConveyorTube" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeMedium" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="FixedConveyorTubeMedium" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LongConveyorTubeMedium" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ExtraLongConveyorTubeMedium" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorFrameMedium" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorShiftedFrameMedium" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeCurved" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeCurvedMedium" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="TripleFlatConveyorTubeLarge" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="TripleFlatConveyorTubeMedium" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="TripleCurvedConveyorTubeLarge" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="TripleCurvedConveyorTubeMedium" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="FourthFlatConveyorTubeLarge" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="FourthFlatConveyorTubeMedium" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="FourthCurvedConveyorTubeLarge" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="FourthCurvedConveyorTubeMedium" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="PentaConveyorTubeLarge" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="PentaConveyorTubeMedium" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="HubConveyorTubeLarge" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="HubConveyorTubeMedium" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallShipConveyorHub" />
+<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="LargeBlockConveyorSorter" />
+<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="MediumBlockConveyorSorter" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorThinGroup" />
+<DisplayName>DisplayName_Block_ConveyorTubeSmall</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyor" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="FixedConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LongConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ExtraLongConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmallCurved" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="TripleFlatConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="TripleCurvedConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="FourthFlatConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="FourthCurvedConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="PentaConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="HubConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="SmallBlockConveyorSorter" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

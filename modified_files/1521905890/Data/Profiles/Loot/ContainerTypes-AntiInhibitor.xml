@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ContainerTypes>
+<ContainerType CountMin="1" CountMax="3">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>MES-ContainerTypes-AntiInhibitor-1</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="1" AmountMax="3">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>JetpackInhibitorBlocker</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="3">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>DrillInhibitorBlocker</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="1" AmountMax="3">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>PlayerInhibitorBlocker</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="2" CountMax="3">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>MES-ContainerTypes-AntiInhibitor-2</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="2" AmountMax="6">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>JetpackInhibitorBlocker</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="6">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>DrillInhibitorBlocker</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="2" AmountMax="6">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>PlayerInhibitorBlocker</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="3" CountMax="3">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>MES-ContainerTypes-AntiInhibitor-3</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="3" AmountMax="10">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>JetpackInhibitorBlocker</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="3" AmountMax="10">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>DrillInhibitorBlocker</SubtypeId>
+</Id>
+</Item>
+<Item AmountMin="3" AmountMax="10">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>PlayerInhibitorBlocker</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+</ContainerTypes>
+</Definitions>
+ 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>quantum_charging</SubtypeId>
+</Id>
+<Category>SHIP</Category>
+<Volume>1.7</Volume>
+<MaxDistance>1000</MaxDistance>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\SC\charging_Fsd.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>quantum_jumpout</SubtypeId>
+</Id>
+<Category>SHIP</Category>
+<Volume>1.7</Volume>
+<MaxDistance>10000</MaxDistance>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\SC\jump_out_supercruise.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>quantum_jumpin</SubtypeId>
+</Id>
+<Category>SHIP</Category>
+<Volume>1.7</Volume>
+<MaxDistance>30000</MaxDistance>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\SC\jump_in_supercruise.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>SuperCruiseGravity</SubtypeId>
+</Id>
+<Category>SHIP</Category>
+<Volume>1.7</Volume>
+<MaxDistance>10000</MaxDistance>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\SC\SuperCruiseGravity.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Anvils Tables</DisplayName>
+<Name>Anvils</Name>
+<ItemIds>
+<string>AnvilTable</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AnvilTableGroup" />
+<DisplayName>Crafting Tables</DisplayName>
+<Description>Use your hand tools and a wooden table to craft a basic component into one that uses less metal. Some metal will be lost.</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AnvilTable" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AnvilTableDirty" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AnvilTableRusted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AnvilTable2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AnvilTableDirty2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AnvilTableRusted2" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>EStabilizerComp</SubtypeId>
+</Id>
+<DisplayName>Stabilizer Module</DisplayName>
+<Mass>100</Mass>
+<Volume>300</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>1000</MaxIntegrity>
+<DropProbability>0.95</DropProbability>
+<Health>53</Health>
+<MinimalPricePerUnit>1</MinimalPricePerUnit>
+<MinimumOfferAmount>1</MinimumOfferAmount>
+<MaximumOfferAmount>1</MaximumOfferAmount>
+<MinimumOrderAmount>1</MinimumOrderAmount>
+<MaximumOrderAmount>1</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>1</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+</Component>
+</Components>
+</Definitions>
+ 

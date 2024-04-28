@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>NPC-SY-SG-SpaceRandomEncounters</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate> <!--Do not edit-->
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="(NPC-SY) Fruit Fly">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-SY) Locust Drone">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-SY) Space Wasp Drone">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-SY) Firefly Drone">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-SY) Monarch">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-SY) Firefly Drone Mk2">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-SY) Monarch Drone Mk2">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-SY) Firefly Drone Mk3">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-SY) Space Wasp Drone Mk2">
+<Speed>0</Speed>
+</Prefab>
+<Prefab SubtypeId="(NPC-SY) Locust Drone Mk2">
+<Speed>0</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

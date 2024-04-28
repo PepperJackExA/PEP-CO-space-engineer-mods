@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>ATL_ArmorBlockLCD_SG</SubtypeId>
+</Id>
+<DisplayName>Armor Block LCD</DisplayName>
+<Description>Full armor block LCD Panel</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Display" Count="3" />
+</Components>
+<CriticalComponent Index="0" Subtype="Computer"/>
+<BlockPairName>ATL_ArmorBlockLCD</BlockPairName>
+<IsAirTight>true</IsAirTight>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>ATL_SingleLCDPanel_SG</SubtypeId>
+</Id>
+<DisplayName>Unarmored LCD Panel</DisplayName>
+<Description>LCD section of the other blocks, but not on armor.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Display" Count="3" />
+</Components>
+<CriticalComponent Index="0" Subtype="Computer"/>
+<BlockPairName>ATL_SingleLCDPanel</BlockPairName>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>ATL_SlopedArmorBlockLCD_SG</SubtypeId>
+</Id>
+<DisplayName>Slope Armor Block LCD</DisplayName>
+<Description>45 degree sloped armor LCD panel</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Display" Count="3" />
+</Components>
+<CriticalComponent Index="0" Subtype="Computer"/>
+<BlockPairName>ATL_SlopedArmorBlockLCD</BlockPairName>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>ATL_HalfSlopeArmorBlockTipLCD_SG</SubtypeId>
+</Id>
+<DisplayName>Half Slope Armor Block Tip LCD</DisplayName>
+<Description>Half-slope armor block LCD panel, tip section</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Display" Count="3" />
+</Components>
+<CriticalComponent Index="0" Subtype="Computer"/>
+<BlockPairName>ATL_HalfSlopeArmorBlockTipLCD</BlockPairName>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>ATL_HalfSlopeArmorBlockBaseLCD_SG</SubtypeId>
+</Id>
+<DisplayName>Half Slope Armor Block Base LCD</DisplayName>
+<Description>Half-slope armor block LCD panel, base section</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Display" Count="3" />
+</Components>
+<CriticalComponent Index="0" Subtype="Computer"/>
+<BlockPairName>ATL_HalfSlopeArmorBlockBaseLCD</BlockPairName>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

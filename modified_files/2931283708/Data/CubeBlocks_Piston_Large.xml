@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_1_Base_Large</SubtypeId>
+</Id>
+<DisplayName>Piston [1]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4"/>
+<Component Subtype="Construction" Count="4"/>
+<Component Subtype="CopperWire" Count="4"/>
+<Component Subtype="LargeTube" Count="2"/>
+<Component Subtype="Motor" Count="2"/>
+<Component Subtype="Computer" Count="1"/>
+<Component Subtype="SteelPlate" Count="2"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_1_Base</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_2_Base_Large</SubtypeId>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_3_Base_Large</SubtypeId>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_5_Base_Large</SubtypeId>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_10_Base_Large</SubtypeId>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_20_Base_Large</SubtypeId>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_2_Base_Large</SubtypeId>
+</Id>
+<DisplayName>Piston [2]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7"/>
+<Component Subtype="Construction" Count="7"/>
+<Component Subtype="CopperWire" Count="7"/>
+<Component Subtype="LargeTube" Count="3"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="Computer" Count="2"/>
+<Component Subtype="SteelPlate" Count="4"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_2_Base</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_3_Base_Large</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>Piston [3]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7"/>
+<Component Subtype="Construction" Count="7"/>
+<Component Subtype="CopperWire" Count="7"/>
+<Component Subtype="LargeTube" Count="3"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="Computer" Count="2"/>
+<Component Subtype="SteelPlate" Count="4"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_3_Base</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_5_Base_Large</SubtypeId>
+</Id>
+<DisplayName>Piston [5]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="17"/>
+<Component Subtype="Construction" Count="17"/>
+<Component Subtype="CopperWire" Count="17"/>
+<Component Subtype="LargeTube" Count="7"/>
+<Component Subtype="Motor" Count="7"/>
+<Component Subtype="Computer" Count="4"/>
+<Component Subtype="SteelPlate" Count="9"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_5_Base</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_10_Base_Large</SubtypeId>
+</Id>
+<DisplayName>Piston [10]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="34"/>
+<Component Subtype="Construction" Count="34"/>
+<Component Subtype="CopperWire" Count="34"/>
+<Component Subtype="LargeTube" Count="14"/>
+<Component Subtype="Motor" Count="14"/>
+<Component Subtype="Computer" Count="7"/>
+<Component Subtype="SteelPlate" Count="17"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_10_Base</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ExtendedPistonBaseDefinition">
+<Id>
+<TypeId>ExtendedPistonBase</TypeId>
+<SubtypeId>RB_Piston_20_Base_Large</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>Piston [20]</DisplayName>
+<Description>Description_Piston</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="34"/>
+<Component Subtype="Construction" Count="34"/>
+<Component Subtype="CopperWire" Count="34"/>
+<Component Subtype="LargeTube" Count="14"/>
+<Component Subtype="Motor" Count="14"/>
+<Component Subtype="Computer" Count="7"/>
+<Component Subtype="SteelPlate" Count="17"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>RB_Piston_20_Base</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PrimarySound>BlockPiston</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>PistonTop</TypeId>
+<SubtypeId>LargePistonTop</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PistonTop</DisplayName>
+<Description>Description_PistonTop</Description>
+<Public>false</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10"/>
+<Component Subtype="LargeTube" Count="8"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>PistonTop</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

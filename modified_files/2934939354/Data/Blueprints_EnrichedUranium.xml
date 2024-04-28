@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>EnrichedUraniumOre_reprocessor</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_UraniumIngot</DisplayName>
+<Prerequisites>
+<Item Amount="3" TypeId="Ore" SubtypeId="PurifiedUranium" />
+<Item Amount="20" TypeId="Ore" SubtypeId="Ice" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Sulfur" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Niter" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>500</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>EnrichedUraniumCore_Nano</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+<Prerequisites>
+<Item Amount="1" TypeId="Ore" SubtypeId="EnrichedUraniumOre" />
+<Item Amount="3" TypeId="Ingot" SubtypeId="DepletedUranium" />
+<Item Amount="5" TypeId="Ingot" SubtypeId="Tantalum" />
+<Item Amount="25" TypeId="Ingot" SubtypeId="Cobalt" />
+<Item Amount="20" TypeId="Ingot" SubtypeId="Silver" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+<BlueprintClassEntries>
+<Entry Class="NanoAssemblerComponents" BlueprintSubtypeId="EnrichedUraniumCore_Nano" />
+<Entry Class="ReprocessorIngots" BlueprintSubtypeId="EnrichedUraniumOre_reprocessor" />
+</BlueprintClassEntries>
+</Definitions>
+ 

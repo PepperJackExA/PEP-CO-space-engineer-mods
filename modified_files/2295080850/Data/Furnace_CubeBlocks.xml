@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+<Id>
+<TypeId>Assembler</TypeId>
+<SubtypeId>Furnace</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Furnace</DisplayName>
+<Description>Description_Furnace</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="110" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="Motor" Count="8" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="Display" Count="10" />
+<Component Subtype="Computer" Count="60" />
+<Component Subtype="SteelPlate" Count="40" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Furnace</BlockPairName>
+<BuildTimeSeconds>80</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>4</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.56</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>Ceramics</Class>
+<Class>BuildPlanner</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockAssembler</PrimarySound>
+<ActionSound>BlockAssemblerProcess</ActionSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>40</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+<BlockPosition>
+<Name>Furnace</Name>
+</BlockPosition>
+</BlockPositions>
+</Definitions>
+ 

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>MESThrust</SubtypeId>
+</Id>
+<DisplayName>Proprietary Thrust Component</DisplayName>
+<Mass>40</Mass>
+<Volume>10</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.2</DropProbability>
+<Health>12</Health>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>500</MaximumOfferAmount>
+<MinimumOrderAmount>50</MinimumOrderAmount>
+<MaximumOrderAmount>500</MaximumOrderAmount>
+<CanPlayerOrder>false</CanPlayerOrder>
+<MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>100</MaximumAcquisitionAmount>
+</Component>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>ProprietaryTech</SubtypeId>
+</Id>
+<DisplayName>Proprietary Circuits</DisplayName>
+<Mass>0.250</Mass>
+<Volume>1</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>-1</MinimalPricePerUnit>
+<MinimumOfferAmount>-1</MinimumOfferAmount>
+<MaximumOfferAmount>-1</MaximumOfferAmount>
+<CanPlayerOrder>false</CanPlayerOrder>
+<MaxIntegrity>1</MaxIntegrity>
+<DropProbability>0</DropProbability>
+</Component>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>InhibitorChip</SubtypeId>
+</Id>
+<DisplayName>Inhibitor Chip</DisplayName>
+<Mass>0.250</Mass>
+<Volume>1</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>10000000</MinimalPricePerUnit>
+<MinimumOfferAmount>10000000</MinimumOfferAmount>
+<MaximumOfferAmount>10000000</MaximumOfferAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MaxIntegrity>1</MaxIntegrity>
+<DropProbability>0</DropProbability>
+</Component>
+</Components>
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>MESThrustComponent</SubtypeId>
+</Id>
+<DisplayName>Proprietrary Thrust Component</DisplayName>
+<Prerequisites>
+<Item Amount="41" TypeId="Ingot" SubtypeId="Iron" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

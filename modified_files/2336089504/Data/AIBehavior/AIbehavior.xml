@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Id>
+<TypeId>MyObjectBuilder_BehaviorTreeDefinition</TypeId>
+<SubtypeId>Police_BotBehavior1</SubtypeId>
+</Id>
+<Name>Sequence</Name>
+<Name>Sequence</Name>
+<Name>Sequence</Name>
+<Name>Selector</Name>
+<Name>Sequence</Name>
+<Name>FindTarget</Name>
+<Name>Selector</Name>
+<Name>Sequence</Name>
+<Name>MoveToTarget</Name>
+<Name>FindAndApproachTarget</Name>
+<Name>FindTargetIfNotAttacking</Name>
+<Name>Sequence</Name>
+<Name>PerformAttack</Name>
+<Name>AttackSequence</Name>
+</Definitions>
+ 

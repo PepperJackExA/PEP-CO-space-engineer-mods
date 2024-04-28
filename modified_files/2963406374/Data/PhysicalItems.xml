@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>SpiceInhaler</SubtypeId>
+</Id>
+<DisplayName>Spice Inhaler</DisplayName>
+<Description>Single-use inhaler containing Refined Spice. When ingested, pure Spice is capable of catalyzing and accelerating numerous biological processes.
+Deals 30% Damage over the following 5 seconds.</Description>
+<Mass>1</Mass>
+<Volume>1</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>450000</MinimalPricePerUnit>
+<MinimumOfferAmount>2</MinimumOfferAmount>
+<MaximumOfferAmount>20</MaximumOfferAmount>
+<MinimumOrderAmount>1</MinimumOrderAmount>
+<MaximumOrderAmount>20</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

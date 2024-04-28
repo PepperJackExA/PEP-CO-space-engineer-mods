@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_MotorStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SmallAdvancedStatorSmall</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>DisplayName_Block_AdvancedRotor</DisplayName>
+<Description>Description_AdvancedRotor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="CopperWire" Count="2" />
+<Component Subtype="SmallTube" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>MotorAdvancedStator</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotorSmall</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MaxForceMagnitude>1E6</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

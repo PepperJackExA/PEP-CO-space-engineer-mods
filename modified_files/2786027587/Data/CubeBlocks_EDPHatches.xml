@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>EDPHatchSG</SubtypeId>
+</Id>
+<DisplayName>Hatch</DisplayName>
+<Description>Hatch for Tanks and Armored vehicles</Description>
+<CubeSize>Small</CubeSize>
+<!--OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound-->
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>EDPHatchT1</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PowerConsumptionIdle>0.00003</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.00003</PowerConsumptionMoving>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+<Name>SGHatchLeft</Name><!--ID=0-->
+<Name>SGHatchRight</Name><!--ID=1-->
+<Speed>38</Speed>
+<OpenSound>BlockDoorHangar</OpenSound>
+<CloseSound>BlockDoorHangar</CloseSound>
+<Speed>38</Speed>
+<OpenSound>BlockDoorHangar</OpenSound>
+<CloseSound>BlockDoorHangar</CloseSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>VLSHatchType1</SubtypeId>
+</Id>
+<DisplayName>Hatch Type 1</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<!--OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound-->
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>EDPHatchT1</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<PowerConsumptionIdle>0.00003</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.00003</PowerConsumptionMoving>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+<Name>HatchType1Left</Name><!--ID=0-->
+<Name>HatchType1Right</Name><!--ID=1-->
+<Speed>38</Speed>
+<OpenSound>BlockDoorHangar</OpenSound>
+<CloseSound>BlockDoorHangar</CloseSound>
+<Speed>38</Speed>
+<OpenSound>BlockDoorHangar</OpenSound>
+<CloseSound>BlockDoorHangar</CloseSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>VLSHatchType1HB</SubtypeId>
+</Id>
+<DisplayName>Hatch Type 1 HalfBlock</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<!--OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound-->
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>EDPHatchT1HB</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00003</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.00003</PowerConsumptionMoving>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+<Name>HatchType1LeftHB</Name><!--ID=0-->
+<Name>HatchType1RightHB</Name><!--ID=1-->
+<Speed>38</Speed>
+<OpenSound>BlockDoorHangar</OpenSound>
+<CloseSound>BlockDoorHangar</CloseSound>
+<Speed>38</Speed>
+<OpenSound>BlockDoorHangar</OpenSound>
+<CloseSound>BlockDoorHangar</CloseSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+<Id>
+<TypeId>Door</TypeId>
+<SubtypeId>EDPHatchV2SG</SubtypeId>
+</Id>
+<DisplayName>Access Hatch</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Small</CubeSize>
+<OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>EDPHatchV2</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+<Id>
+<TypeId>Door</TypeId>
+<SubtypeId>EDPHatchV2</SubtypeId>
+</Id>
+<DisplayName>Access Hatch</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>EDPHatchV2</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+<Id>
+<TypeId>Door</TypeId>
+<SubtypeId>EDPHatchV2HB</SubtypeId>
+</Id>
+<DisplayName>Access Hatch HalfBlock</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>EDPHatchV2HB</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+<Id>
+<TypeId>Door</TypeId>
+<SubtypeId>EDPLadderHatch</SubtypeId>
+</Id>
+<DisplayName>Ladder Hatch</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="InteriorPlate" Count="6" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>EDPLadderHatch</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

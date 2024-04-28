@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallArmorRamp6x1x1</SubtypeId>
+</Id>
+<DisplayName>Armor Ramp 6x1x1</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorRamp6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallArmorCorner6x1x1</SubtypeId>
+</Id>
+<DisplayName>Armor Corner 6x1x1</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorCorner6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallArmorInvCorner6x1x1</SubtypeId>
+</Id>
+<DisplayName>Armor InvCorner 6x1x1</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="6" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorInvCorner6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HeavySmallArmorRamp6x1x1</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Ramp 6x1x1</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="MetalGrid" Count="3" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorRamp6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HeavySmallArmorCorner6x1x1</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Corner 6x1x1</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="MetalGrid" Count="3" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorCorner6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HeavySmallArmorInvCorner6x1x1</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor InvCorner 6x1x1</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="MetalGrid" Count="3" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorInvCorner6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorRamp6x1x1</SubtypeId>
+</Id>
+<DisplayName>Armor Ramp 6x1x1</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="48" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorRamp6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorCorner6x1x1</SubtypeId>
+</Id>
+<DisplayName>Armor Corner 6x1x1</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="42" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorCorner6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeArmorInvCorner6x1x1</SubtypeId>
+</Id>
+<DisplayName>Armor InvCorner 6x1x1</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="54" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>ArmorInvCorner6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HeavyLargeArmorRamp6x1x1</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Ramp 6x1x1</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="180" />
+<Component Subtype="MetalGrid" Count="70" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorRamp6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HeavyLargeArmorCorner6x1x1</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor Corner 6x1x1</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="165" />
+<Component Subtype="MetalGrid" Count="60" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorCorner6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HeavyLargeArmorInvCorner6x1x1</SubtypeId>
+</Id>
+<DisplayName>Heavy Armor InvCorner 6x1x1</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="195" />
+<Component Subtype="MetalGrid" Count="85" />
+<Component Subtype="SteelPlate" Count="45" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>HeavyArmorInvCorner6x1x1</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

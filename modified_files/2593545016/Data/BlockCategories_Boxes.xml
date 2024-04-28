@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Wooden Box</DisplayName>
+<Name>WoodBox</Name>
+<ItemIds>
+<string>WoodContainerLargeGrid</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WoodBox" />
+<DisplayName>Wooden Box</DisplayName>
+<Description>A simple cargo box with a wooden structure. Not very robust, but features standard cargo capacity.</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WoodContainerLargeGrid" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WoodContainerSmallGrid" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

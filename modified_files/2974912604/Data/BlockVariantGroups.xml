@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SteamTurbines" />
+<Blocks>
+<Block Type="MyObjectBuilder_HydrogenEngine" Subtype="SteamTurbine" />
+<Block Type="MyObjectBuilder_HydrogenEngine" Subtype="SteamTurbineMirrored" />
+<Block Type="MyObjectBuilder_HydrogenEngine" Subtype="PEPCO_LowPowerSteamTurbine" />
+<Block Type="MyObjectBuilder_HydrogenEngine" Subtype="PEPCO_LowPowerSteamTurbineMirrored" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CoalFurnace" />
+<Blocks>
+<Block Type="MyObjectBuilder_OxygenGenerator" Subtype="CoalFurnace" />
+<Block Type="MyObjectBuilder_OxygenGenerator" Subtype="PEPCO_LowPowerCoalFurnace" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

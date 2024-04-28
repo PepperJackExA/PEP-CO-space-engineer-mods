@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_JukeboxDefinition">
+<Id>
+<TypeId>Jukebox</TypeId>
+<SubtypeId>TSOInsetAutoJukeBoxSGB</SubtypeId>
+</Id>
+<DisplayName>Inset Jukebox B</DisplayName>
+<Description>Description_Jukebox</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="InteriorPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>TSOInsetAutoJukeBoxPairB</BlockPairName>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PCU>25</PCU>
+<RequiredPowerInput>0.02</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

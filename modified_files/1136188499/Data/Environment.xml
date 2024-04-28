@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Definition xsi:type="EnvironmentDefinition">
+<Id>
+<TypeId>EnvironmentDefinition</TypeId>
+<SubtypeId>Default</SubtypeId>
+</Id>
+<MaxDistanceForSmoothCameraMovement>11</MaxDistanceForSmoothCameraMovement> <!--- if this value of units per frame is reached, the lods are skipped (no transition) -->
+<MaxDistanceForSmoothCameraMovement>11</MaxDistanceForSmoothCameraMovement><!--- if this value of units per frame is reached, the lods are skipped (no transition) -->
+<MaxDistanceForSmoothCameraMovement>11</MaxDistanceForSmoothCameraMovement> <!--- if this value of units per frame is reached, the lods are skipped (no transition) -->
+<MaxDistanceForSmoothCameraMovement>11</MaxDistanceForSmoothCameraMovement> <!--- if this value of units per frame is reached, the lods are skipped (no transition) -->
+<Id>
+<TypeId>MyObjectBuilder_EnvironmentalParticleLogicSpace</TypeId>
+<SubtypeId>SpaceParticles</SubtypeId>
+</Id>
+<Density>0.0000235</Density>
+<Id>
+<TypeId>MyObjectBuilder_EnvironmentalParticleLogicFireFly</TypeId>
+<SubtypeId>Firefly</SubtypeId>
+</Id>
+<Density>0.15</Density>
+<Id>
+<TypeId>MyObjectBuilder_EnvironmentalParticleLogicGrassland</TypeId>
+<SubtypeId>Grassland</SubtypeId>
+</Id>
+<Density>1.0</Density>
+</Definition>
+</Definitions>
+ 

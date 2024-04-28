@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowArmoredFlat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Flat</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="ArmoredGlass" Count="30" />
+<Component Subtype="ArmoredGlass" Count="20" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="0" />
+<BlockPairName>WindowArmoredFlat</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<BlockPairName>WindowArmoredFlat</BlockPairName>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowArmoredFlat</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Flat</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="ArmoredGlass" Count="2" />
+<Component Subtype="ArmoredGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="0" />
+<BlockPairName>WindowArmoredFlat</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<BlockPairName>WindowArmoredFlat</BlockPairName>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowArmoredFlatInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Flat_Inv</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="ArmoredGlass" Count="30" />
+<Component Subtype="ArmoredGlass" Count="20" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="0" />
+<BlockPairName>WindowArmoredFlatInv</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowArmoredFlatInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Flat_Inv</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="ArmoredGlass" Count="2" />
+<Component Subtype="ArmoredGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="0" />
+<BlockPairName>WindowArmoredFlatInv</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowArmoredSlope</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Slope</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="12" />
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="ArmoredGlass" Count="50" />
+<Component Subtype="ArmoredGlass" Count="20" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="0" />
+<BlockPairName>WindowArmoredSlope</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<BlockPairName>WindowArmoredSlope</BlockPairName>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowArmoredSlope</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Slope</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="ArmoredGlass" Count="2" />
+<Component Subtype="ArmoredGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="0" />
+<BlockPairName>WindowArmoredSlope</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<BlockPairName>WindowArmoredSlope</BlockPairName>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowArmoredSide</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Side</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="9" />
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="ArmoredGlass" Count="24" />
+<Component Subtype="ArmoredGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="0" />
+<BlockPairName>WindowArmoredSide</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowArmoredSideInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Side_Inv</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="9" />
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="ArmoredGlass" Count="24" />
+<Component Subtype="ArmoredGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="0" />
+<BlockPairName>WindowArmoredSideInv</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowArmoredSide</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Side</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="ArmoredGlass" Count="2" />
+<Component Subtype="ArmoredGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="1" />
+<BlockPairName>WindowArmoredSide</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowArmoredSideInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Side_Inv</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="ArmoredGlass" Count="2" />
+<Component Subtype="ArmoredGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="1" />
+<BlockPairName>WindowArmoredSideInv</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowArmoredFace</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Face</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="11" />
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="ArmoredGlass" Count="32" />
+<Component Subtype="ArmoredGlass" Count="16" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="0" />
+<BlockPairName>WindowArmoredFace</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>WindowArmoredFaceInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Face_Inv</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="11" />
+<Component Subtype="SteelPlate" Count="4" />
+<Component Subtype="ArmoredGlass" Count="32" />
+<Component Subtype="ArmoredGlass" Count="16" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="0" />
+<BlockPairName>WindowArmoredFaceInv</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowArmoredFace</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Face</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="ArmoredGlass" Count="2" />
+<Component Subtype="ArmoredGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="1" />
+<BlockPairName>WindowArmoredFace</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallWindowArmoredFaceInv</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Window_Armored_Face_Inv</DisplayName>
+<Description>Description_Window_Armored</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="ArmoredGlass" Count="2" />
+<Component Subtype="ArmoredGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="ArmoredGlass" Index="1" />
+<BlockPairName>WindowArmoredFaceInv</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+<BlockPosition>
+<Name>WindowArmoredFlat</Name>
+</BlockPosition>
+</BlockPositions>
+</Definitions>
+ 

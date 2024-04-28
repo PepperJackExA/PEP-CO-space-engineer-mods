@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Ai_Enabled" />
+<DisplayName>Ai_Enabled</DisplayName>
+<Description>Ai_Enabled</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ConveyorSorterDefinition" Subtype="RoboFactory" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

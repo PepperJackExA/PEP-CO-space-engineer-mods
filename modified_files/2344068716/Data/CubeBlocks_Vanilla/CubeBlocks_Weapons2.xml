@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallGatlingGun</TypeId>
+<SubtypeId>SmallBlockAutocannon</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Autocannon</DisplayName>
+<Description>Description_Autocannon</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="CopperWire" Count="5" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="SmallTube" Count="5" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Autocannon</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.072</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>SmallBlockMediumCalibreGun</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_MediumCalibreGun</DisplayName>
+<Description>Description_MediumCalibreGun</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="CopperWire" Count="10" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="ArmoredPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>MediumCalibreGun</BlockPairName>
+<BuildTimeSeconds>26</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.09</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncher</TypeId>
+<SubtypeId>LargeBlockLargeCalibreGun</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeavyCalibreGun</DisplayName>
+<Description>Description_HeavyCalibreGun</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="45" />
+<Component Subtype="CopperWire" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="LargeTube" Count="30" />
+<Component Subtype="Motor" Count="15" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="ArmoredPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LargeCalibreGun</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.3</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<IsAirTight>false</IsAirTight>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>LargeRailgun</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Railgun</DisplayName>
+<Description>Description_Railgun</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="CopperWire" Count="70" />
+<Component Subtype="MetalGrid" Count="25" />
+<Component Subtype="LargeTube" Count="30" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Capacitor" Count="75" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="Girder" Count="100" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="40" />
+<Component Subtype="ArmoredPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>Railgun</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<ResourceSinkGroup>DefenseAdative</ResourceSinkGroup>
+<InventoryMaxVolume>0.24</InventoryMaxVolume>
+<StandbyPowerConsumption>0.0001</StandbyPowerConsumption>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>80</PCU>
+<IsAirTight>false</IsAirTight>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>SmallRailgun</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Railgun</DisplayName>
+<Description>Description_SmallRailgun</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="CopperWire" Count="20" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Capacitor" Count="15" />
+<Component Subtype="Superconductor" Count="10" />
+<Component Subtype="Girder" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="10" />
+<Component Subtype="ArmoredPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>Railgun</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>DefenseAdative</ResourceSinkGroup>
+<InventoryMaxVolume>0.048</InventoryMaxVolume>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>80</PCU>
+<IsAirTight>false</IsAirTight>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>LargeCalibreTurret</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeCalibreTurret</DisplayName>
+<Description>Description_LargeCalibreTurret</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="75" />
+<Component Subtype="Construction" Count="75" />
+<Component Subtype="CopperWire" Count="50" />
+<Component Subtype="MetalGrid" Count="25" />
+<Component Subtype="LargeTube" Count="65" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="Detector" Count="10" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="45" />
+<Component Subtype="ArmoredPlate" Count="75" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>LargeCalibreTurret</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<InventoryMaxVolume>0.6</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-15</MinElevationDegrees>
+<MaxElevationDegrees>60</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>275</PCU>
+<IsAirTight>false</IsAirTight>
+<AmmoPullAmountPerTick>2</AmmoPullAmountPerTick>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>LargeBlockMediumCalibreTurret</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_MediumCalibreTurret</DisplayName>
+<Description>Description_MediumCalibreTurret</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="Construction" Count="75" />
+<Component Subtype="CopperWire" Count="45" />
+<Component Subtype="MetalGrid" Count="25" />
+<Component Subtype="LargeTube" Count="30" />
+<Component Subtype="Motor" Count="25" />
+<Component Subtype="Detector" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="25" />
+<Component Subtype="ArmoredPlate" Count="40" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>MediumCalibreTurret</BlockPairName>
+<BuildTimeSeconds>80</BuildTimeSeconds>
+<InventoryMaxVolume>0.18</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-20</MinElevationDegrees>
+<MaxElevationDegrees>75</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>275</PCU>
+<IsAirTight>false</IsAirTight>
+<AmmoPullAmountPerTick>2</AmmoPullAmountPerTick>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>SmallBlockMediumCalibreTurret</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_MediumCalibreTurret</DisplayName>
+<Description>Description_MediumCalibreGun</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="CopperWire" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="LargeTube" Count="12" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Detector" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="ArmoredPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BlockPairName>MediumCalibreTurret</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<InventoryMaxVolume>0.09</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>50</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>275</PCU>
+<IsAirTight>false</IsAirTight>
+<AmmoPullAmountPerTick>2</AmmoPullAmountPerTick>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeGatlingTurret</TypeId>
+<SubtypeId>AutoCannonTurret</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AutoCannonTurret</DisplayName>
+<Description>Description_AutoCannonTurret</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="CopperWire" Count="15" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="SmallTube" Count="5" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="ArmoredPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AutoCannonTurret</BlockPairName>
+<BuildTimeSeconds>26</BuildTimeSeconds>
+<InventoryMaxVolume>0.072</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>180</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>225</PCU>
+<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+<string>Weapons</string>
+<Value>AutocannonTurret_Base1</Value>
+<Value>AutocannonTurret_Base1/AutocannonTurret_Barrel</Value>
+<Value>AutocannonTurret_Base1/AutocannonTurret_Barrel</Value>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

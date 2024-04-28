@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Factions>
+<Faction Tag="MCRN" Founder="Prime Minister Emily Richards">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>MCRN</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>Martian Congressional Republic Navy</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+<Faction Tag="UNN" Founder="Chrisjen Avasarala">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>UNN_</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>United Nations Navy</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+<Faction Tag="EMCN" Founder="EMCN Command">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>EMCN</SubtypeId>
+</Id>
+<DisplayName>Earth Mars Coalition Navy</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="OPA" Founder="Anderson Dawes">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>OPA_</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>Outer Planets Alliance</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+<Faction Tag="RCE" Founder="Toulouse Marwick">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId>
+<SubtypeId>RCE_</SubtypeId>
+</Id>
+<DisplayName>Royal Charter Energy</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon>
+</Faction>
+<Faction Tag="PGEN" Founder="Unknown">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>PGEN</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>Protogen</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>false</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+<Faction Tag="TYCO" Founder="Fred Johnson">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>TYCO</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>Tycho Security</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>false</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+<Faction Tag="FNVY" Founder="Marco Inaros">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>FREE</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>Free Navy</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+<Faction Tag="TTU" Founder="Michio Pa">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>TTU</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>The Transport Union</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+<Faction Tag="TIH" Founder="Captain Shemden Kwan">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>TIH</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>The Iron Hearts</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+<Faction Tag="UN" Founder="Nancy Gao">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>UN</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>United Nations</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+<Faction Tag="MFR" Founder="Captain Marvin">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>MFR</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>Martian Free Rebels</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>true</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+<Faction Tag="CIVL" Founder="Nico Sanjrani">
+<Id>
+<TypeId>MyObjectBuilder_FactionDefinition</TypeId> <!--Do Not Edit-->
+<SubtypeId>CIVL</SubtypeId> <!--Must Be Unique-->
+</Id>
+<DisplayName>Civilian</DisplayName>
+<IsDefault>true</IsDefault>
+<AcceptHumans>false</AcceptHumans>
+<AutoAcceptMember>false</AutoAcceptMember>
+<StartingBalance>999999999999</StartingBalance>
+<DiscoveredByDefault>true</DiscoveredByDefault>
+<FactionIcon>Textures\FactionLogo\PirateIcon.dds</FactionIcon> <!--Game or Mod Path For Texture File-->
+</Faction>
+</Factions>
+</Definitions>
+ 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<AmmoMagazines>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>SuperLaserCore_MagazineLarge</SubtypeId>
+</Id>
+<DisplayName>SL</DisplayName>
+<Mass>35</Mass>
+<Volume>8</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="SuperLaserCore_Ammo" />
+</AmmoMagazine>
+</AmmoMagazines>
+</Definitions>
+ 

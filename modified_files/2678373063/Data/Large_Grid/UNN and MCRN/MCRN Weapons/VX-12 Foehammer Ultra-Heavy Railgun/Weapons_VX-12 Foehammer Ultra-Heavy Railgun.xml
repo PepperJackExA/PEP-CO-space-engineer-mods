@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>VX-12 Foehammer Ultra-Heavy Railgun WeaponDefinition</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="1" ShootSoundName="" ShotsInBurst="1"/>
+<DeviateShotAngle>0.25</DeviateShotAngle>
+<ReleaseTimeAfterFire>1000</ReleaseTimeAfterFire>
+<AmmoMagazines>
+<AmmoMagazine Subtype="120mmTungstenUraniumSlugMCRNMagazine" />
+</AmmoMagazines>
+<ReloadTime>5000</ReloadTime>
+</Weapon>
+</Weapons>
+</Definitions>
+ 

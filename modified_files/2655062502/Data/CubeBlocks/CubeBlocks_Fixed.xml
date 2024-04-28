@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncher</TypeId>
+<SubtypeId>155mmFixedCannon</SubtypeId>
+</Id>
+<DisplayName>155mm Fixed Cannon</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="CopperWire" Count="10" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="ArmoredPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncher</TypeId>
+<SubtypeId>305mmFixedCannon</SubtypeId>
+</Id>
+<DisplayName>305mm Fixed Cannon</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="45" />
+<Component Subtype="CopperWire" Count="25" />
+<Component Subtype="MetalGrid" Count="15" />
+<Component Subtype="LargeTube" Count="30" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="ArmoredPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncher</TypeId>
+<SubtypeId>HeavyLaserFixed</SubtypeId>
+</Id>
+<DisplayName>Heavy Fixed Laser</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="CopperWire" Count="30"/>
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="Superconductor" Count="20" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="LaserEmitter" Count="50" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="30" />
+<Component Subtype="ArmoredPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncher</TypeId>
+<SubtypeId>LightLaserFixed</SubtypeId>
+</Id>
+<DisplayName>Light Fixed Laser</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="CopperWire" Count="20"/>
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="MetalGrid" Count="10" />
+<Component Subtype="Superconductor" Count="20" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="LaserEmitter" Count="25" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="10" />
+<Component Subtype="ArmoredPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncher</TypeId>
+<SubtypeId>FixedCoilgun</SubtypeId>
+</Id>
+<DisplayName>Fixed Coilgun</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="60" />
+<Component Subtype="CopperWire" Count="70" />
+<Component Subtype="MetalGrid" Count="25" />
+<Component Subtype="LargeTube" Count="30" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Capacitor" Count="40" />
+<Component Subtype="Superconductor" Count="20" />
+<Component Subtype="SuperMagnet" Count="15" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="AdvancedComputer" Count="20" />
+<Component Subtype="ArmoredPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

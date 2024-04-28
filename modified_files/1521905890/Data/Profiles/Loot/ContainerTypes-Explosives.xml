@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ContainerTypes>
+<ContainerType CountMin="1" CountMax="1">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>MES-ContainerTypes-Explosives-1</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="1" AmountMax="10">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Explosives</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="1" CountMax="1">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>MES-ContainerTypes-Explosives-2</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="10" AmountMax="50">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Explosives</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="1" CountMax="1">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>MES-ContainerTypes-Explosives-3</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="25" AmountMax="100">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Explosives</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="1" CountMax="1">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>MES-ContainerTypes-Explosives-4</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="100" AmountMax="500">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Explosives</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+<ContainerType CountMin="1" CountMax="1">
+<Id>
+<TypeId>ContainerTypeDefinition</TypeId>
+<SubtypeId>MES-ContainerTypes-Explosives-5</SubtypeId>
+</Id>
+<Items>
+<Item AmountMin="250" AmountMax="1000">
+<Frequency>1.0</Frequency>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Explosives</SubtypeId>
+</Id>
+</Item>
+</Items>
+</ContainerType>
+</ContainerTypes>
+</Definitions>
+ 

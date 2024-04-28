@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition Enabled="false">
+<Id>
+<TypeId>LargeGatlingTurret</TypeId>
+<SubtypeId>AutoCannonTurret</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AutoCannonTurret</DisplayName>
+<Description>Description_AutoCannonTurret</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="MetalGrid" Count="6" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AutoCannonTurret</BlockPairName>
+<BuildTimeSeconds>26</BuildTimeSeconds>
+<InventoryMaxVolume>0.072</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>180</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>225</PCU>
+<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+<string>Weapons</string>
+<Value>AutocannonTurret_Base1</Value>
+<Value>AutocannonTurret_Base1/AutocannonTurret_Barrel</Value>
+<Value>AutocannonTurret_Base1/AutocannonTurret_Barrel</Value>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+<Id>
+<TypeId>LargeMissileTurret</TypeId>
+<SubtypeId>AutoCannonTurret</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AutoCannonTurret</DisplayName>
+<Description>Description_AutoCannonTurret</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="CopperWire" Count="15" />
+<Component Subtype="MetalGrid" Count="5" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="SmallTube" Count="5" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="ArmoredPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AutoCannonTurret</BlockPairName>
+<BuildTimeSeconds>26</BuildTimeSeconds>
+<InventoryMaxVolume>0.072</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>180</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>225</PCU>
+<AmmoPullAmountPerTick>3</AmmoPullAmountPerTick>
+<string>Weapons</string>
+<Value>AutocannonTurret_Base1</Value>
+<Value>AutocannonTurret_Base1/AutocannonTurret_Barrel</Value>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

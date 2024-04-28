@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_LA_Slope3x1</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Slope3x1}</DisplayName>
+<Description>{LOC:Description_LightArmor}</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_LA_Slope3x1</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>3</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_LA_Slope3x1</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Slope3x1}</DisplayName>
+<Description>{LOC:Description_LightArmor}</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_LA_Slope3x1</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>3</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_HA_Slope3x1</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Slope3x1}</DisplayName>
+<Description>{LOC:Description_HeavyArmor}</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="200" />
+<Component Subtype="MetalGrid" Count="75" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_HA_Slope3x1</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<PCU>3</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_HA_Slope3x1</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Slope3x1}</DisplayName>
+<Description>{LOC:Description_HeavyArmor}</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="7" />
+<Component Subtype="MetalGrid" Count="3" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_HA_Slope3x1</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<PCU>3</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+<Id>
+<TypeId>OreDetector</TypeId>
+<SubtypeId>LargeOreDetector</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_OreDetector</DisplayName>
+<Description>Description_OreDetector</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>OreDetector</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>40</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

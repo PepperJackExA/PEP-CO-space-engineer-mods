@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>PaintGun_TempBlock</SubtypeId>
+</Id>
+<Public>false</Public>
+<BlockPairName>PaintGun_TempBlock</BlockPairName>
+<DisplayName>PaintGun_TempBlock</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>99999999</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

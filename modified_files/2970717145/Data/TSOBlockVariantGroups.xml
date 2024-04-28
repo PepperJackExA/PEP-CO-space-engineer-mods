@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="MountedCameraGroup" />
+<DisplayName>Top Mounted Camera</DisplayName>
+<Description>Mounted Camera</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="LargeCameraTopMounted" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="SmallCameraTopMounted" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinTopFC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinTopFL" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinTopFR" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraBottomL" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraBottomS" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinBottomFC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinBottomFL" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinBottomFR" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraRightL" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraRightS" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinRightFC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinRightFT" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinRightFB" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraLeftL" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraLeftS" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinLeftFC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinLeftFT" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinLeftFB" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RemoteControlGroup" />
+<DisplayName>DisplayName_Block_RemoteControl</DisplayName>
+<Description>Description_RemoteControl</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_RemoteControl" Subtype="LargeBlockRemoteControl" />
+<Block Type="MyObjectBuilder_RemoteControl" Subtype="SmallBlockRemoteControl" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="LargeCameraBlock" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="SmallCameraBlock" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="LargeCameraTopMounted" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="SmallCameraTopMounted" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinTopFC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinTopFR" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinTopFL" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraBottomL" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraBottomS" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinBottomFC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinBottomFR" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinBottomFL" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraRightL" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraRightS" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinRightFC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinRightFT" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinRightFB" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraLeftL" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraLeftS" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinLeftFC" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinLeftFT" />
+<Block Type="MyObjectBuilder_CameraBlock" Subtype="TSOCameraReskinLeftFB" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

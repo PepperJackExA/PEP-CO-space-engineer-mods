@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>LargeShipUsableLadder</SubtypeId>
+</Id>
+<BlockPairName>UsableLadder</BlockPairName>
+<DisplayName>Ladder</DisplayName>
+<PCU>10</PCU>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Girder" Count="4" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>LargeShipUsableLadderRetractable</SubtypeId>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>SmallShipUsableLadder</SubtypeId>
+</Id>
+<BlockPairName>UsableLadder</BlockPairName>
+<DisplayName>Ladder</DisplayName>
+<PCU>10</PCU>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Girder" Count="4" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>SmallShipUsableLadderSegment</SubtypeId>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>SmallShipUsableLadderRetractable</SubtypeId>
+</Definition>
+<Definition>
+<Id>
+<TypeId>TerminalBlock</TypeId>
+<SubtypeId>SmallShipUsableLadderSegment</SubtypeId>
+</Id>
+<BlockPairName>UsableLadderSegment</BlockPairName>
+<DisplayName>Ladder Segment</DisplayName>
+<PCU>10</PCU>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Girder" Count="1" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BuildTimeSeconds>2.5</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>LargeShipUsableLadderRetractable</SubtypeId>
+</Id>
+<BlockPairName>LadderRetractable</BlockPairName>
+<DisplayName>Ladder Retractable</DisplayName>
+<PCU>125</PCU>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Girder" Count="6" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.000000001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<Name>LadderRetractable_Part1</Name>
+<Name>LadderRetractable_Part2</Name>
+<Name>LadderRetractable_Part3</Name>
+<Name>LadderRetractable_Part4</Name>
+<Name>LadderRetractable_Part5</Name>
+<Speed>1.2</Speed>
+<Speed>1.2</Speed>
+<Speed>1.2</Speed>
+<Speed>1.2</Speed>
+<Speed>1.2</Speed>
+<OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>SmallShipUsableLadderRetractable</SubtypeId>
+</Id>
+<BlockPairName>LadderRetractable</BlockPairName>
+<DisplayName>Ladder Retractable</DisplayName>
+<PCU>125</PCU>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Girder" Count="6" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.000000001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<Name>LadderRetractable_Part1</Name>
+<Name>LadderRetractable_Part2</Name>
+<Name>LadderRetractable_Part3</Name>
+<Name>LadderRetractable_Part4</Name>
+<Name>LadderRetractable_Part5</Name>
+<Speed>1.2</Speed>
+<Speed>1.2</Speed>
+<Speed>1.2</Speed>
+<Speed>1.2</Speed>
+<Speed>1.2</Speed>
+<OpenSound>BlockDoorSmallOpen</OpenSound>
+<CloseSound>BlockDoorSmallClose</CloseSound>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

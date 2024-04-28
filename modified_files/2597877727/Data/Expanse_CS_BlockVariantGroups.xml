@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CSArmorLightCubeGroup" />
+<DisplayName>DisplayName_Block_LightArmorBlock</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorCornerSquare" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorCornerSquareInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorCornerSquare" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorCornerSquareInverted" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CSArmorLightRampGroup" />
+<DisplayName>DisplayName_BlockGroup_ArmorLightRampGroup</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlope2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlope2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeHalfArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeHalfSlopeArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorHalfSlopeCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorHalfCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorHalfSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlope2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlope2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSHalfArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSHalfSlopeArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorHalfSlopeCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorHalfCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorHalfSlopedCorner" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CSArmorLightRampCornerGroup" />
+<DisplayName>DisplayName_BlockGroup_ArmorLightRampCornerGroup</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorInvCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorHalfSlopeCornerInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorHalfSlopeInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorInvCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorHalfSlopeCornerInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorHalfSlopeInverted" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CSArmorLightRoundGroup" />
+<DisplayName>DisplayName_Block_LightRoundArmorSlope</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorRoundSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorRoundCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorRoundCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorRoundSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorRoundCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorRoundCornerInv" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CSArmorLightSlopedCorners" />
+<DisplayName>DisplayName_BlockGroup_LightArmorSlopedCorners</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorRaisedSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSquareSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSquareSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSquareSlopedCornerTipInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorHalfSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorRaisedSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSquareSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSquareSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSquareSlopedCornerTipInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorHalfSlopedCornerBase" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CSArmorLightTransitionBlocks" />
+<DisplayName>DisplayName_BlockGroup_LightArmorTransitionBlocks</DisplayName>
+<Description>Description_LightArmor</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlopeTransitionBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlopeTransition" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlopeTransitionTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlopeTransitionBaseMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlopeTransitionMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeBlockArmorSlopeTransitionTipMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlopeTransitionBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlopeTransition" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlopeTransitionTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlopeTransitionBaseMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlopeTransitionMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallBlockArmorSlopeTransitionTipMirrored" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CSLightArmorPanelsGroup" />
+<DisplayName>DisplayName_Block_LightArmorPanel</DisplayName>
+<Description>Description_ArmorPanel</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmorPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmorSlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmorSlopedSidePanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmor2x1SlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmor2x1SlopedPanelTipLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmor2x1SlopedSideBasePanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmor2x1SlopedSideTipPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmor2x1SlopedSideBasePanelLightInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmor2x1SlopedSideTipPanelLightInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmorHalfSlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmor2x1HalfSlopedPanelLightRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmor2x1HalfSlopedTipPanelLightRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmor2x1HalfSlopedPanelLightLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmor2x1HalfSlopedTipPanelLightLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmorHalfCenterPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmorHalfPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmorQuarterPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSLargeArmorCenterPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmorPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmorSlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmorSlopedSidePanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmor2x1SlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmor2x1SlopedPanelTipLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmor2x1SlopedSideBasePanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmor2x1SlopedSideTipPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmor2x1SlopedSideBasePanelLightInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmor2x1SlopedSideTipPanelLightInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmorHalfSlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmor2x1HalfSlopedPanelLightRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmor2x1HalfSlopedTipPanelLightRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmor2x1HalfSlopedPanelLightLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmor2x1HalfSlopedTipPanelLightLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmorHalfCenterPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmorHalfPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmorQuarterPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CSSmallArmorCenterPanelLight" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

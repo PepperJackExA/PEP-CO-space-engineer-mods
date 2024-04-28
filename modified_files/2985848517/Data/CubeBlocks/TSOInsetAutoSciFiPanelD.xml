@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>TSOInsetAutoSciFiPanelD</SubtypeId>
+</Id>
+<DisplayName>Inset Button Panel D</DisplayName>
+<Description>Description_ButtonPanel</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="Display" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>TSOInsetAutoSciFiPanelPairD</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<string>Textures\GUI\Icons\buttons\ThreeButton.dds</string>
+<string>Textures\GUI\Icons\buttons\FourButton.dds</string>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem xsi:type="MyObjectBuilder_WeaponItemDefinition">
+<Id>
+<TypeId>PhysicalGunObject</TypeId>
+<SubtypeId>BinocularsItem</SubtypeId>
+</Id>
+<DisplayName>Binoculars</DisplayName>
+<Description>Binoculars</Description>
+<Mass>1</Mass>
+<Volume>6</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimumOfferAmount>0</MinimumOfferAmount>
+<MaximumOfferAmount>0</MaximumOfferAmount>
+<MinimumOrderAmount>0</MinimumOrderAmount>
+<MaximumOrderAmount>0</MaximumOrderAmount>
+<CanPlayerOrder>false</CanPlayerOrder>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallBlockSmallGenerator</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallReactor</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Reactor" Count="3" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SmallReactor</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallBlockLargeGenerator</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeReactor</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="Construction" Count="9" />
+<Component Subtype="MetalGrid" Count="9" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="Reactor" Count="95" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LargeReactor</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeBlockSmallGenerator</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallReactor</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="MetalGrid" Count="4" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Reactor" Count="100" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SmallReactor</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<BlueprintClasses>
+<Class>Fuel</Class>
+</BlueprintClasses>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeBlockLargeGenerator</SubtypeId>
+</Id>
+<DisplayName>Fusion Reactor</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="200" />
+<Component Subtype="Construction" Count="70" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="Superconductor" Count="100" />
+<Component Subtype="Reactor" Count="2000" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Computer" Count="75" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="SteelPlate" Count="800" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LargeReactor</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>300</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeBlockSmallGeneratorWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallReactorWarfare2</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="MetalGrid" Count="4" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Reactor" Count="100" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SmallReactorWarfare2</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeBlockLargeGeneratorWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeReactorWarfare2</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="200" />
+<Component Subtype="Construction" Count="70" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="Superconductor" Count="100" />
+<Component Subtype="Reactor" Count="2000" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Computer" Count="75" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="SteelPlate" Count="800" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LargeReactorWarfare2</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>300</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallBlockSmallGeneratorWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallReactorWarfare2</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Reactor" Count="3" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SmallReactorWarfare2</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallBlockLargeGeneratorWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeReactorWarfare2</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="Construction" Count="9" />
+<Component Subtype="MetalGrid" Count="9" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="Reactor" Count="95" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LargeReactorWarfare2</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+<string>PowerSystems</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

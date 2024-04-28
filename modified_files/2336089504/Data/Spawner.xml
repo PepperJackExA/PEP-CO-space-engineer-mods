@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>BotSpawner</SubtypeId>
+</Id>
+<Public>true</Public>
+<!-- <AvailableInSurvival>false</AvailableInSurvival>-->
+<DisplayName>Spawner</DisplayName>
+<Description>Description_Spawner</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="AdminPlate" Count="1">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Spawner</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>RoboFactory</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>RoboFactory</DisplayName>
+<Description>RoboFactory</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="11" />
+<Component Subtype="Construction" Count="14" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Display" Count="2" />
+<Component Subtype="Computer" Count="10" />
+<!--        <Component Subtype="Mainframe" Count="2" />-->
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>RoboFactory</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

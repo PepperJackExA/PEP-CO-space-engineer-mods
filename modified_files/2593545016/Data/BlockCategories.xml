@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2003/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2003/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Wood Blocks</DisplayName>
+<Name>Wood Blocks</Name>
+<ItemIds>
+<string>CubeBlock/Wood_Cube</string>
+<string>CubeBlock/Wood_Slope</string>
+<string>CubeBlock/Wood_InvertedCorner</string>
+<string>CubeBlock/Wood_Corner</string>
+<string>CubeBlock/Wood_Raft</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WoodBlockGroup" />
+<DisplayName>Wood Blocks</DisplayName>
+<Description>Wooden blocks are lighter and more delicate than light armor, but have a better strength to weight ratio.</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Wood_Cube" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Wood_Slope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Wood_Corner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Wood_InvertedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="S_Wood_Cube" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="S_Wood_Slope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="S_Wood_Corner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="S_Wood_InvertedCorner" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

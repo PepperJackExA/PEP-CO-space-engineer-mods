@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_LA_Slope4x1_Transition</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Slope4x1_Transition}</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="55"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>AQD_LA_Slope4x1_Transition</BlockPairName>
+<BuildTimeSeconds>19</BuildTimeSeconds>
+<PCU>4</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_LA_Slope4x1_TransitionMirror</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Slope4x1_TransitionMirror}</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="55"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>AQD_LA_Slope4x1_TransitionMirror</BlockPairName>
+<BuildTimeSeconds>19</BuildTimeSeconds>
+<PCU>4</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_LA_Slope4x1_Transition</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Slope4x1_Transition}</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>AQD_LA_Slope4x1_Transition</BlockPairName>
+<BuildTimeSeconds>9</BuildTimeSeconds>
+<PCU>4</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_LA_Slope4x1_TransitionMirror</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Slope4x1_TransitionMirror}</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="4"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>AQD_LA_Slope4x1_TransitionMirror</BlockPairName>
+<BuildTimeSeconds>9</BuildTimeSeconds>
+<PCU>4</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_HA_Slope4x1_Transition</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Slope4x1_Transition}</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="225" />
+<Component Subtype="MetalGrid" Count="90" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>AQD_HA_Slope4x1_Transition</BlockPairName>
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<PCU>4</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_HA_Slope4x1_TransitionMirror</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Slope4x1_TransitionMirror}</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="225" />
+<Component Subtype="MetalGrid" Count="90" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>AQD_HA_Slope4x1_TransitionMirror</BlockPairName>
+<BuildTimeSeconds>50</BuildTimeSeconds>
+<PCU>4</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_HA_Slope4x1_Transition</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Slope4x1_Transition}</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="9" />
+<Component Subtype="MetalGrid" Count="4" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>AQD_HA_Slope4x1_Transition</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>4</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_HA_Slope4x1_TransitionMirror</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Slope4x1_TransitionMirror}</DisplayName>
+<Description>Description_LightArmor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="9" />
+<Component Subtype="MetalGrid" Count="4" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>AQD_HA_Slope4x1_TransitionMirror</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>4</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

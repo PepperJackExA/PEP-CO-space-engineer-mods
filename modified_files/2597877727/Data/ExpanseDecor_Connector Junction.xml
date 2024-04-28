@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+<Id>
+<TypeId>ShipConnector</TypeId>
+<SubtypeId>Connector_Junction</SubtypeId>
+</Id>
+<DisplayName>Connector Junction</DisplayName>
+<Description>Description_Connector</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="260" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="SmallTube" Count="24" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="Computer" Count="40" />
+<Component Subtype="SteelPlate" Count="65" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ConnectorJunction</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ActionSound>BlockEject</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+<Id>
+<TypeId>ShipConnector</TypeId>
+<SubtypeId>Mini_Connector</SubtypeId>
+</Id>
+<DisplayName>Mini Connector</DisplayName>
+<Description>Description_Connector</Description>
+<CubeSize>Small</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="4" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ConnectorJunction</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ActionSound>BlockEject</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>UNN MA-15 Coilgun</SubtypeId>
+</Id>
+<DisplayName>UNN MM-30 Salvaged Coilgun</DisplayName>
+<Description>An old phased out coilgun salvaged by belters and designed by Mikazuki Munitions. Previously used in the UNN on smaller ships until railgun became more prevalent. [6km/s muzzle velocity, 10km range - Accepts 80mm Sabots.]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="GravityGenerator" Count="80" />
+<Component Subtype="PowerCell" Count="310" />
+<Component Subtype="Superconductor" Count="200" />
+<Component Subtype="Girder" Count="300" />
+<Component Subtype="SmallTube" Count="250" />
+<Component Subtype="LargeTube" Count="300" />
+<Component Subtype="InteriorPlate" Count="400" />
+<Component Subtype="TrackingComponent" Count="10" />
+<Component Subtype="UpgradedBelterComponent" Count="25" />
+<Component Subtype="Motor" Count="350" />
+<Component Subtype="Computer" Count="700" />
+<Component Subtype="MetalGrid" Count="850" />
+<Component Subtype="Construction" Count="550" />
+<Component Subtype="SteelPlate" Count="1750" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>100</OperationalPowerConsumption>
+<BlockPairName>UNN MM-30 Coilgun</BlockPairName>
+<InventoryMaxVolume>0.32</InventoryMaxVolume>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<PCU>1500</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>UNN MA-15 Coilgun MES</SubtypeId>
+</Id>
+<DisplayName>UNN MM-30 Salvaged Coilgun MES</DisplayName>
+<Description>An old phased out coilgun salvaged by belters and designed by Mikazuki Munitions. Previously used in the UNN on smaller ships until railgun became more prevalent. [6km/s muzzle velocity, 10km range - Accepts 80mm Sabots]</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="GravityGenerator" Count="80" />
+<Component Subtype="PowerCell" Count="310" />
+<Component Subtype="Superconductor" Count="200" />
+<Component Subtype="Girder" Count="300" />
+<Component Subtype="SmallTube" Count="250" />
+<Component Subtype="LargeTube" Count="300" />
+<Component Subtype="InteriorPlate" Count="400" />
+<Component Subtype="TrackingComponent" Count="10" />
+<Component Subtype="UpgradedBelterComponent" Count="26" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>HighTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="350" />
+<Component Subtype="Computer" Count="700" />
+<Component Subtype="MetalGrid" Count="850" />
+<Component Subtype="Construction" Count="550" />
+<Component Subtype="SteelPlate" Count="1750" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>100</OperationalPowerConsumption>
+<BlockPairName>UNN MM-30 Coilgun MES</BlockPairName>
+<InventoryMaxVolume>0.32</InventoryMaxVolume>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<PCU>1500</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

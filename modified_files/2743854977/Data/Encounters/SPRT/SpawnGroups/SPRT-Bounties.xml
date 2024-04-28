@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>SPRT-SpawnGroup-BountyHunter-A</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="SPRT-Bounty-A1">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="SPRT-Bounty-A2">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="SPRT-Bounty-A3">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="SPRT-Bounty-A4">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="SPRT-Bounty-A5">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="SPRT-Bounty-A6">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

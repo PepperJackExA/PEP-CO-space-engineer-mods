@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Container>
+<Id>
+<TypeId>MedicalRoom</TypeId>
+<SubtypeId>Wardrobe</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="Wardrobe" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MedicalRoom</TypeId>
+<SubtypeId>SG_Wardrobe</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="SG_Wardrobe" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Kit_Locker</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="Kit_Locker" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SG_Kit_Locker</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="SG_Kit_Locker" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+</Definitions>
+ 

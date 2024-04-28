@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TBHContainerGroup" />
+<DisplayName>TBH Industries - Containers</DisplayName>
+<Description>A collection of containers from TBH Industries!</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="PortedSlopedIndustrialCargoContainer" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="SlopedIndustrialCargoContainer" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="SlopedIndustrialCargoContainerMedium" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="ReinforcedCargoContainerLarge" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="ReinforcedCargoContainerMedium" />
+<Block Type="MyObjectBuilder_CargoContainer" Subtype="IndustrialSiloXL" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Ares_Class_TorpedoLauncher</SubtypeId>
+</Id>
+<DisplayName>Ares Class Torpedo Launcher</DisplayName>
+<Description>A single tube torpedo launcher which boasts an autoloading compartment that contains everything needed to load torpedoes from storage into the tube. [Stores 3 torpedoes - Accepts 220mm, MCRN, and UNN Torpedoes]</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="150" />
+<Component Subtype="Construction" Count="750" />
+<Component Subtype="SmallTube" Count="120" />
+<Component Subtype="LargeTube" Count="150" />
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="InnerComponent" Count="30" />
+<Component Subtype="Motor" Count="500" />
+<Component Subtype="Computer" Count="300" />
+<Component Subtype="MetalGrid" Count="400" />
+<Component Subtype="Construction" Count="250" />
+<Component Subtype="SteelPlate" Count="500" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>45</OperationalPowerConsumption>
+<BlockPairName>Ares Class Torpedo Launcher</BlockPairName>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>600</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Ares_Class_TorpedoLauncher_MES</SubtypeId>
+</Id>
+<DisplayName>Ares Class Torpedo Launcher</DisplayName>
+<Description>A single tube torpedo launcher which boasts an autoloading compartment that contains everything needed to load torpedoes from storage into the tube.</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="Girder" Count="150" />
+<Component Subtype="Construction" Count="750" />
+<Component Subtype="SmallTube" Count="120" />
+<Component Subtype="LargeTube" Count="150" />
+<Component Subtype="InteriorPlate" Count="150" />
+<Component Subtype="InnerComponent" Count="31">
+<DeconstructId>
+<TypeId>Ingot</TypeId>
+<SubtypeId>InnerTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="500" />
+<Component Subtype="Computer" Count="300" />
+<Component Subtype="MetalGrid" Count="400" />
+<Component Subtype="Construction" Count="250" />
+<Component Subtype="SteelPlate" Count="500" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>45</OperationalPowerConsumption>
+<BlockPairName>Ares Class Torpedo Launcher MES</BlockPairName>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.1</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>600</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

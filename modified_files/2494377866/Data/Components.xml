@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>RestrictedConstruction</SubtypeId>
+</Id>
+<DisplayName>Restricted Component</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>ATV-Survivor</SubtypeId>
+</Id>
+<DisplayName>ATV-Survivor</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Fighter2</SubtypeId>
+</Id>
+<DisplayName>Fighter2</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>MinerSmallShip</SubtypeId>
+</Id>
+<DisplayName>MinerSmallShip</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Civic Hauler</SubtypeId>
+</Id>
+<DisplayName>Civic Hauler</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Cursor</SubtypeId>
+</Id>
+<DisplayName>Cursor</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Buddy Miner</SubtypeId>
+</Id>
+<DisplayName>Buddy Miner</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Atmo Constructor</SubtypeId>
+</Id>
+<DisplayName>Atmo Constructor</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Scout Miner</SubtypeId>
+</Id>
+<DisplayName>Scout Miner</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Solar Scout</SubtypeId>
+</Id>
+<DisplayName>Solar Scout</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Gerbil Miner</SubtypeId>
+</Id>
+<DisplayName>Gerbil Miner</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Ion Constructor</SubtypeId>
+</Id>
+<DisplayName>Ion Constructor</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Kite Miner</SubtypeId>
+</Id>
+<DisplayName>Kite Miner</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Ion Light Scout</SubtypeId>
+</Id>
+<DisplayName>Ion Light Scout</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Ion Tug Ship</SubtypeId>
+</Id>
+<DisplayName>Ion Tug Ship</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Turtle Miner</SubtypeId>
+</Id>
+<DisplayName>Turtle Miner</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>U-92 Patrol Craft</SubtypeId>
+</Id>
+<DisplayName>U-92 Patrol Craft</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Lunar Scout mk.4</SubtypeId>
+</Id>
+<DisplayName>Lunar Scout mk.4</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>LCC-3 Freighter</SubtypeId>
+</Id>
+<DisplayName>LCC-3 Freighter</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Burstfire Bomber</SubtypeId>
+</Id>
+<DisplayName>Burstfire Bomber</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Hydro Scout Rover</SubtypeId>
+</Id>
+<DisplayName>Hydro Scout Rover</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Lunar Scout mk.2</SubtypeId>
+</Id>
+<DisplayName>Lunar Scout mk.2</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>T-Ion Fade</SubtypeId>
+</Id>
+<DisplayName>T-Ion Fade</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Blue Ambassador Explorer</SubtypeId>
+</Id>
+<DisplayName>Blue Ambassador Explorer</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Red Cruiser</SubtypeId>
+</Id>
+<DisplayName>Red Cruiser</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Rescue Rover 1</SubtypeId>
+</Id>
+<DisplayName>Rescue Rover 1</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>TT-15 Freighter</SubtypeId>
+</Id>
+<DisplayName>TT-15 Freighter</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>RespawnSpacePod</SubtypeId>
+</Id>
+<DisplayName>RespawnSpacePod</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>RespawnShip</SubtypeId>
+</Id>
+<DisplayName>RespawnShip</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>B-980 Hauler</SubtypeId>
+</Id>
+<DisplayName>B-980 Hauler</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>TT-420 Freighter</SubtypeId>
+</Id>
+<DisplayName>TT-420 Freighter</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>J-Class Courier</SubtypeId>
+</Id>
+<DisplayName>J-Class Courier</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>B-60 Bulk Freighter</SubtypeId>
+</Id>
+<DisplayName>B-60 Bulk Freighter</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>H-01 Prospector</SubtypeId>
+</Id>
+<DisplayName>H-01 Prospector</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>H-01 Sapper</SubtypeId>
+</Id>
+<DisplayName>H-01 Sapper</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>PV-4 Buggy</SubtypeId>
+</Id>
+<DisplayName>PV-4 Buggy</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>MiniMerchant</SubtypeId>
+</Id>
+<DisplayName>MiniMerchant</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Cargo Shuttle</SubtypeId>
+</Id>
+<DisplayName>Cargo Shuttle</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+</Components>
+</Definitions>
+ 

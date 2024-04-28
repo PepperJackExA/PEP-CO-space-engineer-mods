@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>AudioDefinition</TypeId>
+<SubtypeId>Railgun_Large_Charge</SubtypeId>
+</Id>
+<Category>SHOT</Category>
+<MaxDistance>1000</MaxDistance>
+<Volume>1.0</Volume>
+<Waves>
+<Wave Type="D3">
+<Start>Audio\RailGun_Charging_Without_Siren.wav</Start>
+</Wave>
+<!--<Wave Type="D3">
+<Start>ARC\WEP\RailGun_Charging_Without_Siren.wav</Start>
+</Wave>-->
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

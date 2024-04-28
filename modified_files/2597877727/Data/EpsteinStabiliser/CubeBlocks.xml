@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>EpsteinStabalizer</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>Epstein Stabilizer</DisplayName>
+<Description>Stabilizer modules can be sold at trade stations.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="180" />
+<Component Subtype="EStabilizerComp" Count="1" />
+<Component Subtype="MetalGrid" Count="300" />
+<Component Subtype="GravityGenerator" Count="40" />
+<Component Subtype="Detector" Count="120" />
+<Component Subtype="PowerCell" Count="40" />
+<Component Subtype="Superconductor" Count="3000" />
+<Component Subtype="Computer" Count="400" />
+<Component Subtype="Construction" Count="140" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>High-GStabalizer</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>10</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>EpsteinStabalizerSG</SubtypeId>
+</Id>
+<Public>true</Public>
+<DisplayName>Epstein Stabilizer Small Grid</DisplayName>
+<Description>Stabilizer modules can be sold at trade stations.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="EStabilizerComp" Count="1" />
+<Component Subtype="MetalGrid" Count="60" />
+<Component Subtype="GravityGenerator" Count="15" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="PowerCell" Count="25" />
+<Component Subtype="Superconductor" Count="1000" />
+<Component Subtype="Computer" Count="160" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>High-GStabalizer</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>5</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

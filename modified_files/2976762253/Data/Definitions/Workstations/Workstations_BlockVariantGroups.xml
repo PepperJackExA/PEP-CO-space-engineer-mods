@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AIInventoryManagerGroup" />
+<DisplayName>AI Ignore Map</DisplayName>
+<Description></Description>
+<Blocks>
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIIgnoreMap" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIIgnoreMapReskin" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIIgnoreMapSmall" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIIgnoreMapReskinSmall" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIInventoryManager" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIInventoryManagerReskin" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIRefineryController" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIRefineryControllerReskin" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIAssemblerController" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIAssemblerControllerReskin" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIDisplayMonitor" />
+<Block Type="MyObjectBuilder_OreDetector" Subtype="AIDisplayMonitorReskin" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

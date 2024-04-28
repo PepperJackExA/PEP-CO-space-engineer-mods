@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SpawnGroups>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>GC-SpawnGroup-Cargo-Escort</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="GC-Fighter-MK3">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="GC-Fighter-MK3">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="GC-MediumCargoTransport">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="GC-SmallCargoTransport">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>GC-SpawnGroup-Cargo-NoEscort</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="GC-MediumCargoTransport">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="GC-SmallCargoTransport">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+<SpawnGroup>
+<Id>
+<TypeId>SpawnGroupDefinition</TypeId>
+<SubtypeId>GC-SpawnGroup-SpaceCargo</SubtypeId>
+</Id>
+<Description>
+</Description>
+<IsPirate>true</IsPirate>
+<Frequency>5.0</Frequency>
+<Prefabs>
+<Prefab SubtypeId="GC-Fighter-MK3">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="GC-Fighter-MK3">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="GC-SpaceCargo1">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="GC-SpaceCargo2">
+<Speed>25</Speed>
+</Prefab>
+<Prefab SubtypeId="GC-HydroVessel1">
+<Speed>25</Speed>
+</Prefab>
+</Prefabs>
+</SpawnGroup>
+</SpawnGroups>
+</Definitions>
+ 

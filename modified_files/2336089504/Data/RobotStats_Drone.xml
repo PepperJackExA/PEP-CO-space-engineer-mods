@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<StatDefinitions>
+<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+<Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Drone_Health</SubtypeId>
+</Id>
+<Name>Health</Name>
+<MinValue>0</MinValue>
+<DefaultValue>100</DefaultValue>
+<MaxValue>100</MaxValue>
+</Stat>
+<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+<Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Boss_Bot_Health</SubtypeId>
+</Id>
+<Name>Health</Name>
+<MinValue>0</MinValue>
+<DefaultValue>500</DefaultValue>
+<MaxValue>500</MaxValue>
+</Stat>
+<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+<Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Droid_Health</SubtypeId>
+</Id>
+<Name>Health</Name>
+<MinValue>0</MinValue>
+<DefaultValue>100</DefaultValue>
+<MaxValue>100</MaxValue>
+</Stat>
+<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+<Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Target_Dummy_Health</SubtypeId>
+</Id>
+<Name>Health</Name>
+<MinValue>0</MinValue>
+<DefaultValue>200</DefaultValue>
+<MaxValue>200</MaxValue>
+</Stat>
+<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+<Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>RoboDog_Health</SubtypeId>
+</Id>
+<Name>Health</Name>
+<MinValue>0</MinValue>
+<DefaultValue>200</DefaultValue>
+<MaxValue>200</MaxValue>
+</Stat>
+</StatDefinitions>
+</Definitions>
+ 

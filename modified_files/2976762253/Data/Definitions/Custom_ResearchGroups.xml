@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<ResearchGroups>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="12201" />
+<Members>
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIInventoryManager" />
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIInventoryManagerReskin" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="12202" />
+<Members>
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIRefineryController" />
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIRefineryControllerReskin" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="12203" />
+<Members>
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIAssemblerController" />
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIAssemblerControllerReskin" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="12204" />
+<Members>
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIDisplayMonitor" />
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIDisplayMonitorReskin" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="12205" />
+<Members>
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIIgnoreMap" />
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIIgnoreMapSmall" />
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIIgnoreMapReskin" />
+<BlockId Type="MyObjectBuilder_OreDetector" Subtype="AIIgnoreMapReskinSmall" />
+</Members>
+</ResearchGroup>
+</ResearchGroups>
+</Definitions>
+ 

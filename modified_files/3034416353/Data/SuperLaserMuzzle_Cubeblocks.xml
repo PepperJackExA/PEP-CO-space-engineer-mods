@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>SuperLaserMuzzle_Block</SubtypeId>
+</Id>
+<DisplayName>Super Laser End Piece</DisplayName>
+<Description>Placed at the end of the laser. Needed for laser to function properly</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Count="250" Subtype="SteelPlate"/>
+<Component Count="100" Subtype="Construction"/>
+<Component Count="50" Subtype="LargeTube" />
+<Component Count="100" Subtype="MetalGrid" />
+<Component Count="25" Subtype="GravityGenerator" />
+<Component Count="50" Subtype="Motor" />
+<Component Count="250" Subtype="Superconductor" />
+<Component Count="500" Subtype="Computer"/>
+<Component Count="150" Subtype="Construction"/>
+<Component Count="750" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="Superconductor"/>
+<BuildTimeSeconds>150</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<RequiredPowerInput>0.00002</RequiredPowerInput>
+<PCU>500</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

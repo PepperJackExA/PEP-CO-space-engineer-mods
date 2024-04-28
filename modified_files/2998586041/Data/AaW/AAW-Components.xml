@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Components>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>AHE-Legionnaire-Store</SubtypeId>
+</Id>
+<DisplayName>AHE-Legionnaire</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>AHE-TRCT</SubtypeId>
+</Id>
+<DisplayName>AHE-TRCT</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>AHE-TRMC</SubtypeId>
+</Id>
+<DisplayName>AHE-TRMC</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>CM - Cuda G2H</SubtypeId>
+</Id>
+<DisplayName>CM - Cuda G2H</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>CM-Aeon G1</SubtypeId>
+</Id>
+<DisplayName>CM-Aeon G1</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>CM-Eon G1</SubtypeId>
+</Id>
+<DisplayName>CM-Eon G1</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>ITC - Alpha Freighter</SubtypeId>
+</Id>
+<DisplayName>ITC - Alpha Freighter</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>ITC - Delta Speeder</SubtypeId>
+</Id>
+<DisplayName>ITC - Delta Speeder</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>ITC - Salamander</SubtypeId>
+</Id>
+<DisplayName>ITC - Salamander</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>ITC-ScoutBuggy</SubtypeId>
+</Id>
+<DisplayName>ITC-ScoutBuggy</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Beetle Explorer</SubtypeId>
+</Id>
+<DisplayName>Beetle Explorer</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>SurvivalRover</SubtypeId>
+</Id>
+<DisplayName>SurvivalRover with trailer</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+<Component>
+<Public>false</Public>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>Starter Boat</SubtypeId>
+</Id>
+<DisplayName>Starter Boat</DisplayName>
+<Mass>8</Mass>
+<Volume>2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>30</MaxIntegrity>
+<DropProbability>0.5</DropProbability>
+<Health>18</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+</Component>
+</Components>
+</Definitions>
+ 

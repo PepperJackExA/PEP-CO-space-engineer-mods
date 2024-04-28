@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_AirVentDefinition">
+<Id>
+<TypeId>AirVent</TypeId>
+<SubtypeId>AQD_LG_ConveyorVent</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_ConveyorVent}</DisplayName>
+<Description>Description_AirVent</Description>
+<Public>false</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AQD_ConveyorVent</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.1</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<PressurizeSound>BlockAirVentExhale</PressurizeSound>
+<DepressurizeSound>BlockAirVentDepressurize</DepressurizeSound>
+<IdleSound>BlockAirVentIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

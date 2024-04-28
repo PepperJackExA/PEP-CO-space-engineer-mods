@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>S_Wood_Cube</SubtypeId>
+</Id>
+<DisplayName>Wood Cube</DisplayName>
+<Description>Wooden blocks are lighter and more delicate than light armor, but have a better strength to weight ratio.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="10" />
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<BlockPairName>Wood_Cube</BlockPairName>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>S_Wood_InvertedCorner</SubtypeId>
+</Id>
+<DisplayName>Wood Inverted Corner</DisplayName>
+<Description>Wooden blocks are lighter and more delicate than light armor, but have a better strength to weight ratio.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="7" Subtype="WoodPlank"/>
+</Components>
+<CriticalComponent Index="0" Subtype="WoodPlank"/>
+<BlockPairName>Wood_InvertedCorner</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>S_Wood_Slope</SubtypeId>
+</Id>
+<DisplayName>Wood Slope</DisplayName>
+<Description>Wooden blocks are lighter and more delicate than light armor, but have a better strength to weight ratio.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="5" Subtype="WoodPlank"/>
+</Components>
+<CriticalComponent Index="0" Subtype="WoodPlank"/>
+<BlockPairName>Wood_Slope</BlockPairName>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>S_Wood_Corner</SubtypeId>
+</Id>
+<DisplayName>Wood Corner</DisplayName>
+<Description>Wooden blocks are lighter and more delicate than light armor, but have a better strength to weight ratio.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="3" />
+</Components>
+<CriticalComponent Subtype="WoodPlank" Index="0" />
+<BlockPairName>Wood_Corner</BlockPairName>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

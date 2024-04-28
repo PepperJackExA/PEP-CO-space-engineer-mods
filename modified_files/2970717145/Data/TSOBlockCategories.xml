@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CameraBlock/TSOCameraReskinTop</string>
+<string>CameraBlock/TSOCameraReskinTopFC</string>
+<string>CameraBlock/TSOCameraReskinTopFR</string>
+<string>CameraBlock/TSOCameraReskinTopFL</string>
+<string>CameraBlock/TSOCameraBottomL</string>
+<string>CameraBlock/TSOCameraReskinTopFC</string>
+<string>CameraBlock/TSOCameraReskinTopFR</string>
+<string>CameraBlock/TSOCameraReskinTopFL</string>
+<string>CameraBlock/TSOCameraLeftL</string>
+<string>CameraBlock/TSOCameraReskinLeftFC</string>
+<string>CameraBlock/TSOCameraReskinLeftFR</string>
+<string>CameraBlock/TSOCameraReskinLeftFL</string>
+<string>CameraBlock/TSOCameraRightL</string>
+<string>CameraBlock/TSOCameraReskinRightFC</string>
+<string>CameraBlock/TSOCameraReskinRightFR</string>
+<string>CameraBlock/TSOCameraReskinRightFL</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<StrictSearch>true</StrictSearch>
+<ItemIds>
+<string>CameraBlock/TSOCameraBottomS</string>
+<string>CameraBlock/TSOCameraLeftS</string>
+<string>CameraBlock/TSOCameraRightS</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

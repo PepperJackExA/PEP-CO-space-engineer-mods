@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BeamGroup" />
+<DisplayName>DisplayName_Block_BeamBlock</DisplayName>
+<Description>Description_BeamBlock</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridXBeamBlockSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockRound" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridXBeamBlockRound" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockSlope2x1Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockSlope2x1Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridXBeamBlockSlope2x1Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridXBeamBlockSlope2x1Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridXBeamBlockSlope2x1Corner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockHalf" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockHalfSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockEnd" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockJunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockTJunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridXBeamBlockCube" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridXBeamBlockSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockRound" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridXBeamBlockRound" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockSlope2x1Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockSlope2x1Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridXBeamBlockSlope2x1Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridXBeamBlockSlope2x1Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridXBeamBlockSlope2x1Corner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockHalf" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockHalfSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockEnd" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockJunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockTJunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridXBeamBlockCube" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

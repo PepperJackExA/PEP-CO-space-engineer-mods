@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ExpanseTurretGroup" />
+<DisplayName>Expanse Weapons - Turrets</DisplayName>
+<Description>Expanse Weapons turret weapons group.</Description>
+<Blocks>
+<Block Type="LargeGatlingTurret" Subtype="Nariman Dynamics PDC"/>
+<Block Type="LargeGatlingTurret" Subtype="Redfields Ballistics PDC"/>
+<Block Type="LargeGatlingTurret" Subtype="Voltaire Collective Anti Personnel PDC"/>
+<Block Type="LargeMissileTurret" Subtype="Ostman-Jazinski Flak Cannon"/>
+<Block Type="LargeGatlingTurret" Subtype="Outer Planets Alliance Point Defence Cannon"/>
+<Block Type="LargeMissileTurret" Subtype="Mounted Zakosetara Heavy Railgun"/>
+<Block Type="LargeMissileTurret" Subtype="Farren-Pattern Heavy Railgun"/>
+<Block Type="LargeMissileTurret" Subtype="Dawson-Pattern Medium Railgun"/>
+<Block Type="LargeMissileTurret" Subtype="V-14 Stiletto Light Railgun"/>
+<Block Type="LargeMissileTurret" Subtype="VX-12 Foehammer Ultra-Heavy Railgun"/>
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ExpanseFixedGroup" />
+<DisplayName>Expanse Weapons - Fixed</DisplayName>
+<Description>Expanse Weapons fixed weapons group.</Description>
+<Blocks>
+<Block Type="SmallGatlingGun" Subtype="Glapion Collective Gatling Cannon"/>
+<Block Type="SmallGatlingGun" Subtype="Kess Hashari Cannon"/>
+<Block Type="SmallGatlingGun" Subtype="Zakosetara Heavy Railgun"/>
+<Block Type="SmallMissileLauncherReload" Subtype="T-47 Roci Light Fixed Railgun"/>
+<Block Type="SmallMissileLauncherReload" Subtype="Tycho Class Torpedo Mount"/>
+<Block Type="SmallMissileLauncherReload" Subtype="Apollo Class Torpedo Launcher"/>
+<Block Type="SmallMissileLauncherReload" Subtype="Ares_Class_Torpedo_Launcher_F"/>
+<Block Type="SmallMissileLauncherReload" Subtype="Ares_Class_TorpedoLauncher"/>
+<Block Type="SmallMissileLauncherReload" Subtype="ZeusClass_Rapid_Torpedo_Launcher"/>
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Mounted Zakosetara Heavy Railgun</SubtypeId>
+</Id>
+<DisplayName>Mounted Zakosetara Heavy Railgun</DisplayName>
+<Description>[8km/s muzzle velocity, 10km range - Accepts 120mm Lead-Steel Sabots]</Description>
+<CubeSize>Large</CubeSize>
+<BuildTimeSeconds>120</BuildTimeSeconds>
+<InventoryMaxVolume>0.276</InventoryMaxVolume>
+<Components>
+<Component Subtype="GravityGenerator" Count="330" />
+<Component Subtype="PowerCell" Count="1240" />
+<Component Subtype="Superconductor" Count="800" />
+<Component Subtype="Girder" Count="1210" />
+<Component Subtype="SmallTube" Count="990" />
+<Component Subtype="LargeTube" Count="1210" />
+<Component Subtype="InteriorPlate" Count="1650" />
+<Component Subtype="TrackingComponent" Count="10" />
+<Component Subtype="UpgradedBelterComponent" Count="50" />
+<Component Subtype="Motor" Count="1540" />
+<Component Subtype="Computer" Count="2850" />
+<Component Subtype="MetalGrid" Count="3190" />
+<Component Subtype="Construction" Count="2200" />
+<Component Subtype="SteelPlate" Count="6830" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Mounted Zakosetara Railgun</BlockPairName>
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>40</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<PCU>2500</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>Mounted Zakosetara Heavy Railgun MES</SubtypeId>
+</Id>
+<Public>false</Public>
+<DisplayName>Mounted Zakosetara Heavy Railgun MES</DisplayName>
+<Description></Description>
+<CubeSize>Large</CubeSize>
+<BuildTimeSeconds>120</BuildTimeSeconds>
+<InventoryMaxVolume>0.276</InventoryMaxVolume>
+<Components>
+<Component Subtype="GravityGenerator" Count="330" />
+<Component Subtype="PowerCell" Count="1240" />
+<Component Subtype="Superconductor" Count="800" />
+<Component Subtype="Girder" Count="1210" />
+<Component Subtype="SmallTube" Count="990" />
+<Component Subtype="LargeTube" Count="1210" />
+<Component Subtype="InteriorPlate" Count="1650" />
+<Component Subtype="TrackingComponent" Count="10" />
+<Component Subtype="UpgradedBelterComponent" Count="51" >
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>HighTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="1540" />
+<Component Subtype="Computer" Count="2850" />
+<Component Subtype="MetalGrid" Count="3190" />
+<Component Subtype="Construction" Count="2200" />
+<Component Subtype="SteelPlate" Count="6830" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Mounted Zakosetara Railgun MES</BlockPairName>
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>40</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<PCU>2500</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

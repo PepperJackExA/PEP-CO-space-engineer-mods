@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Drone_Bot</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Drone_Health</SubtypeId>
+</Stat>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Boss_Bot</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Boss_Bot_Health</SubtypeId>
+</Stat>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Police_Bot</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Droid_Health</SubtypeId>
+</Stat>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Target_Dummy</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Target_Dummy_Health</SubtypeId>
+</Stat>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>RoboDog</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>RoboDog_Health</SubtypeId>
+</Stat>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

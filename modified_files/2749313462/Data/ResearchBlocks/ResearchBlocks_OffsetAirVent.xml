@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_AirVent" Subtype="AirVentOffset" />
+<UnlockedByGroups>
+<GroupSubtype>15</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_AirVent" Subtype="SmallAirVentOffset" />
+<UnlockedByGroups>
+<GroupSubtype>15</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+</Definitions>
+ 

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Helmet_vignette</SubtypeId>
+</Id>
+<DisplayName>Helmet_vignette</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Helmet_vignetteNoReflection</SubtypeId>
+</Id>
+<DisplayName>Helmet_vignetteNoReflection</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Helmet_vignetteBroken</SubtypeId>
+</Id>
+<DisplayName>Helmet_vignetteBroken</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_health</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_health</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_healthBar</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_healthBar</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_energy</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_energy</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_energyBar</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_energyBar</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_oxygen</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_oxygen</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_oxygenBar</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_oxygenBar</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_oxygenenv0</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_oxygenenv0</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_oxygenenv1</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_oxygenenv1</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_oxygenenv2</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_oxygenenv2</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_hydrogen</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_hydrogen</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_hydrogenBar</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_hydrogenBar</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_inventory</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_inventory</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_inventoryBar</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_inventoryBar</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_horizon</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_horizon</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>HelmetHUD_horizonBar</SubtypeId>
+</Id>
+<DisplayName>HelmetHUD_horizonBar</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BuildTimeSeconds>999999</BuildTimeSeconds>
+<Public>false</Public>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
+<Id>
+<TypeId>TimerBlock</TypeId>
+<SubtypeId>MicroTimer</SubtypeId>
+</Id>
+<PCU>25</PCU>
+<BlockPairName>MicroTimer</BlockPairName>
+<DisplayName>Micro Timer</DisplayName>
+<Description>Description_Timer</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="Computer" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<PrimarySound>BlockTimer</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TimerBlockDefinition">
+<Id>
+<TypeId>TimerBlock</TypeId>
+<SubtypeId>LargeMicroTimer</SubtypeId>
+</Id>
+<PCU>25</PCU>
+<BlockPairName>MicroTimer</BlockPairName>
+<DisplayName>Micro Timer</DisplayName>
+<Description>Description_Timer</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="Computer" Count="1" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<PrimarySound>BlockTimer</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

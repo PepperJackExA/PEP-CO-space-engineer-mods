@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable</SubtypeId>
+</Id>
+<DisplayName>Crafting (SteelPlate -> LargeTube)</DisplayName>
+<Description>Use your hand tools and a wooden table to craft a basic component into one that uses less metal. Some metal will be lost.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="50" />
+<Component Subtype="SteelPlate" Count="1">
+<DeconstructId>
+<TypeId>Component</TypeId>
+<SubtypeId>LargeTube</SubtypeId>
+</DeconstructId>
+</Component>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<IsAirTight>false</IsAirTight>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted2</SubtypeId>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty</SubtypeId>
+</Id>
+<DisplayName>Crafting (LargeTube -> Girder)</DisplayName>
+<Description>Use your hand tools and a wooden table to craft a basic component into one that uses less metal. Some metal will be lost.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="50" />
+<Component Subtype="LargeTube" Count="1">
+<DeconstructId>
+<TypeId>Component</TypeId>
+<SubtypeId>Girder</SubtypeId>
+</DeconstructId>
+</Component>
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<IsAirTight>false</IsAirTight>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted2</SubtypeId>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted</SubtypeId>
+</Id>
+<DisplayName>Crafting (Girder -> SmallTube)</DisplayName>
+<Description>Use your hand tools and a wooden table to craft a basic component into one that uses less metal. Some metal will be lost.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="50" />
+<Component Subtype="Girder" Count="1">
+<DeconstructId>
+<TypeId>Component</TypeId>
+<SubtypeId>SmallTube</SubtypeId>
+</DeconstructId>
+</Component>
+</Components>
+<CriticalComponent Subtype="Girder" Index="0" />
+<IsAirTight>false</IsAirTight>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted2</SubtypeId>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable2</SubtypeId>
+</Id>
+<DisplayName>Crafting (SmallTube -> IntPlate)</DisplayName>
+<Description>Use your hand tools to craft a basic component into one that uses less metal. Some metal will be lost.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="50" />
+<Component Subtype="SmallTube" Count="1">
+<DeconstructId>
+<TypeId>Component</TypeId>
+<SubtypeId>InteriorPlate</SubtypeId>
+</DeconstructId>
+</Component>
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<IsAirTight>false</IsAirTight>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted2</SubtypeId>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty2</SubtypeId>
+</Id>
+<DisplayName>Crafting (IntPlate -> Construction)</DisplayName>
+<Description>Use your hand tools and a wooden table to craft a basic component into one that uses less metal. Some metal will be lost.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="50" />
+<Component Subtype="InteriorPlate" Count="1">
+<DeconstructId>
+<TypeId>Component</TypeId>
+<SubtypeId>Construction</SubtypeId>
+</DeconstructId>
+</Component>
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<IsAirTight>false</IsAirTight>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted2</SubtypeId>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted2</SubtypeId>
+</Id>
+<DisplayName>Crafting (!Construction -> Ingot!)</DisplayName>
+<Description>Use your hand tools and a wooden table to craft a basic component into one that uses less metal. Some metal will be lost.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="WoodPlank" Count="50" />
+<Component Subtype="Construction" Count="1">
+<DeconstructId>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Iron</SubtypeId>
+</DeconstructId>
+</Component>
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<IsAirTight>false</IsAirTight>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTable2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableDirty2</SubtypeId>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AnvilTableRusted2</SubtypeId>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

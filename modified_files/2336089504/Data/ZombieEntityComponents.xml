@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<EntityComponents>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Space_Skeleton</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Space_Skeleton_Health</SubtypeId>
+</Stat>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Space_Zombie</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Space_Zombie_Health</SubtypeId>
+</Stat>
+</EntityComponent>
+<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+<Id>
+<TypeId>CharacterStatComponent</TypeId>
+<SubtypeId>Ghost_Bot</SubtypeId>
+</Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Ghost_Bot_Health</SubtypeId>
+</Stat>
+</EntityComponent>
+</EntityComponents>
+</Definitions>
+ 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InputOutputGroup" />
+<DisplayName>DisplayName_BlockGroup_InputOutputGroup</DisplayName>
+<Description>Description_BlockGroup_InputOutputGroup</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_ShipConnector" Subtype="Connector" />
+<Block Type="MyObjectBuilder_ShipConnector" Subtype="ConnectorMedium" />
+<Block Type="MyObjectBuilder_Collector" Subtype="Collector" />
+<Block Type="MyObjectBuilder_Collector" Subtype="CollectorSmall" />
+<Block Type="MyObjectBuilder_ShipConnector" Subtype="ConnectorSmall" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InputOutputMergelessGroup" />
+<DisplayName>DisplayName_BlockGroup_InputOutputGroup</DisplayName>
+<Description>Description_BlockGroup_InputOutputGroup</Description>
+<Blocks>
+<Block Type="AirtightSlideDoor" Subtype="LargeBlockDockingDoor" />
+<Block Type="ShipConnector" Subtype="ConnectorCompact" />
+<Block Type="ConveyorConnector" Subtype="ConveyorTubeCurvedPort" />
+<Block Type="ShipConnector" Subtype="ConnectorSmallExtended" />
+<Block Type="ConveyorConnector" Subtype="ConveyorFrameMediumPort" />
+<Block Type="ConveyorConnector" Subtype="ConveyorTubePort" />
+<Block Type="ConveyorConnector" Subtype="ConveyorTubePortMedium" />
+<Block Type="ConveyorConnector" Subtype="ConveyorTubePortSmall" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

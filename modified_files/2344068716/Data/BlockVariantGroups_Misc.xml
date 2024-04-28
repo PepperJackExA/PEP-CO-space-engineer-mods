@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups><!-- Windows -->
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorWindowSmallGroup" />
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x1Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x1FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x1Slope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x1Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x1FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x1Slope" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorWindowMediumGroup" />
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x2Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x2FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x2Slope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x2Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x2FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x2Slope" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorWindowLargeGroup" />
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow2x3Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow2x3FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow3x3Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow3x3FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow2x3Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow2x3FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow3x3Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow3x3FlatInv" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorWindowSmallCornerGroup" />
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x1Face" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x1Inv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x1Side" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x1SideInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x1Face" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x1Inv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x1Side" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x1SideInv" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorWindowMediumCornerGroup" />
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x2Face" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x2Inv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x2SideLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x2SideLeftInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x2SideRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorWindow1x2SideRightInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x2Face" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x2Inv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x2SideLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x2SideLeftInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x2SideRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSmallWindow1x2SideRightInv" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConcreteArmor" />
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmor" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorInvertedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorSlope2x1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorCorner2x1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ConcreteArmorInvertedCorner2x1" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AcidBatteries" />
+<Blocks>
+<Block Type="MyObjectBuilder_BatteryBlock" Subtype="LargeBlockAcidBatteryBlock" />
+<Block Type="MyObjectBuilder_BatteryBlock" Subtype="SmallBlockAcidBatteryBlock" />
+<Block Type="MyObjectBuilder_BatteryBlock" Subtype="SmallBlockSmallAcidBatteryBlock" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AlkalineBatteries" />
+<Blocks>
+<Block Type="MyObjectBuilder_BatteryBlock" Subtype="LargeBlockAlkalineBatteryBlock" />
+<Block Type="MyObjectBuilder_BatteryBlock" Subtype="SmallBlockSmallAlkalineBatteryBlock" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RocketThrusters" />
+<Blocks>
+<Block Type="MyObjectBuilder_Thrust" Subtype="LargeBlockLargeRocketThrust" />
+<Block Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallRocketThrust" />
+<Block Type="MyObjectBuilder_Thrust" Subtype="SmallBlockLargeRocketThrust" />
+<Block Type="MyObjectBuilder_Thrust" Subtype="SmallBlockSmallRocketThrust" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RocketTanks" />
+<Blocks>
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="LargeRocketFuelTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="LargeRocketFuelTankNoLegs" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="SmallRocketFuelTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="CylinderRocketFuelTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="EnclosedRocketFuelTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="SmallEnclosedRocketFuelTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="SmallCylinderRocketFuelTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="SmallRocketFuelTankMini" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GasolineTanks" />
+<Blocks>
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="LargeGasolineTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="LargeGasolineTankNoLegs" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="SmallGasolineTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="CylinderGasolineTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="EnclosedGasolineTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="SmallEnclosedGasolineTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="SmallCylinderGasolineTank" />
+<Block Type="MyObjectBuilder_OxygenTank" Subtype="SmallGasolineTankMini" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="MetalWheel" />
+<Blocks>
+<Block Type="MyObjectBuilder_MotorSuspension" Subtype="MetalWheelSuspension3x3" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="MetalDetector" />
+<Blocks>
+<Block Type="MyObjectBuilder_OreDetector" Subtype="LargeOreDetector" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OreDetector" />
+<Blocks>
+<Block Type="MyObjectBuilder_OreDetector" Subtype="LargeMetalDetector" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GasolineEngine" />
+<Blocks>
+<Block Type="MyObjectBuilder_HydrogenEngine" Subtype="LargeGasolineEngine" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

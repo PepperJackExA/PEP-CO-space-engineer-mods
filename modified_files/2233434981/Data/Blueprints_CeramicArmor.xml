@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>CeramicPlate</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Item_Ceramic_Plate</DisplayName>
+<Prerequisites>
+<Item Amount="40" TypeId="Ingot" SubtypeId="Stone" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Cobalt" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>15</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

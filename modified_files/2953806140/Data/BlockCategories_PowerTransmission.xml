@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_Power</DisplayName>
+<Name>Power</Name>
+<ItemIds>
+<string>Reactor/LargeBlockSmallRemotePowerConverter</string>
+<string>Refinery/LargeBlockSmallRadialPowerTransmitter</string>
+<string>Refinery/LargeBlockSmallOpticalPowerTransmitter</string>
+<string>UpgradeModule/LargeBlockSmallRadialSignalAmplifier</string>
+<string>UpgradeModule/LargeBlockSmallOpticalSignalAmplifier</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<ItemIds>
+<string>Reactor/LargeBlockSmallRemotePowerConverter</string>
+<string>Refinery/LargeBlockSmallRadialPowerTransmitter</string>
+<string>Refinery/LargeBlockSmallOpticalPowerTransmitter</string>
+<string>UpgradeModule/LargeBlockSmallRadialSignalAmplifier</string>
+<string>UpgradeModule/LargeBlockSmallOpticalSignalAmplifier</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

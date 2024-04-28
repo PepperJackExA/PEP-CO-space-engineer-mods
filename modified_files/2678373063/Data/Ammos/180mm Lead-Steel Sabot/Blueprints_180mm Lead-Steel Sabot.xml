@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>180mmLeadSteelSabotBlueprint</SubtypeId>
+</Id>
+<DisplayName>180mm Lead-Steel Slug</DisplayName>
+<Prerequisites>
+<Item Amount="40" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="40" TypeId="Ingot" SubtypeId="Magnesium" />
+<Item Amount="70" TypeId="Ingot" SubtypeId="LeadIngot" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Silicon" />
+<Item Amount="10" TypeId="Ingot" SubtypeId="Cobalt" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>40</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+</Definitions>
+ 

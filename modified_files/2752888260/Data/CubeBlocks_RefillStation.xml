@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_MedicalRoomDefinition">
+<Id>
+<TypeId>MedicalRoom</TypeId>
+<SubtypeId>LargeRefillStation</SubtypeId>
+</Id>
+<DisplayName>Refill Station</DisplayName>
+<Description>A small hatch which allows for suit power, oxygen, and hydrogen refills.&#10;&#10;These stations are public and can be used by anyone regardless of faction standing.</Description>
+<CubeSize>Large</CubeSize>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<ProgressSound>BlockMedicalProgress</ProgressSound>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="MetalGrid" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>RefillStation</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>30</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MedicalRoomDefinition">
+<Id>
+<TypeId>MedicalRoom</TypeId>
+<SubtypeId>SmallRefillStation</SubtypeId>
+</Id>
+<DisplayName>Refill Station</DisplayName>
+<Description>A small hatch which allows for suit power, oxygen, and hydrogen refills.&#10;&#10;These stations are public and can be used by anyone regardless of faction standing.</Description>
+<CubeSize>Small</CubeSize>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<ProgressSound>BlockMedicalProgress</ProgressSound>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="MetalGrid" Count="4" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>RefillStation</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>30</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

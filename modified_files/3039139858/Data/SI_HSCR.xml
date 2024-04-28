@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>redSI_HSCR</SubtypeId>
+</Id>
+<DisplayName>SI_HSCR</DisplayName>
+<Description>Standart Issue Heavy Plasma Accelerator</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>redSI_HSCR</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.3</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<IsAirTight>true</IsAirTight>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>greenSI_HSCR</SubtypeId>
+</Id>
+<DisplayName>SI_HSCR</DisplayName>
+<Description>Standart Issue Heavy Plasma Accelerator</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>greenSI_HSCR</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.3</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<IsAirTight>true</IsAirTight>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>blueSI_HSCR</SubtypeId>
+</Id>
+<DisplayName>SI_HSCR</DisplayName>
+<Description>Standart Issue Heavy Plasma Accelerator</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>blueSI_HSCR</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.3</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<IsAirTight>true</IsAirTight>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>purpleSI_HSCR</SubtypeId>
+</Id>
+<DisplayName>SI_HSCR</DisplayName>
+<Description>Standart Issue Heavy Plasma Accelerator</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>purpleSI_HSCR</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.3</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<IsAirTight>true</IsAirTight>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>yellowSI_HSCR</SubtypeId>
+</Id>
+<DisplayName>SI_HSCR</DisplayName>
+<Description>Standart Issue Heavy Plasma Accelerator</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>yellowSI_HSCR</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.3</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<IsAirTight>true</IsAirTight>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<SubtypeId>orangeSI_HSCR</SubtypeId>
+</Id>
+<DisplayName>SI_HSCR</DisplayName>
+<Description>Standart Issue Heavy Plasma Accelerator</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="MetalGrid" Count="20" />
+<Component Subtype="LargeTube" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="SteelPlate" Count="150" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>orangeSI_HSCR</BlockPairName>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.3</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<IsAirTight>true</IsAirTight>
+<string>Weapons</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

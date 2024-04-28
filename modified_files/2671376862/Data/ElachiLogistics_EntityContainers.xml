@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_CubeBlock</TypeId>
+</Id>
+<DefaultComponents>
+<Component>MyObjectBuilder_PositionComponent</Component>
+<Component>MyObjectBuilder_RenderDebugComponent</Component>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>MyObjectBuilder_Reactor</TypeId>
+<SubtypeId>Custom_Block_Name</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_ModStorageComponent" ForceCreate="true"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>1x1x3CargoSG</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>2x1x2CargoSG</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>2x1x2CargoSGInv</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>2x2x2CargoSG</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>StorageShelfv1SG</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>StorageShelfv2SG</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>StorageShelfv3SG</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>9x11x5CargoSG</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>HalfBlockCargo</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>EDPAccessCargoTube</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>StorageShelfv1LG</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>StorageShelfv2LG</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>StorageShelfv3LG</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>3x3x1Cargo</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>3x3x1OpenCargo</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>3x3x1OpenCargoV2</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>3x5x3LargeContainer</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>3x11x3LargeContainer</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>7x11x3LargeContainer</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory"/>
+</DefaultComponents>
+</Container>
+</Definitions>
+ 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>Pipeline_Cargo</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_Pipeline_Cargo}</DisplayName>
+<Description>{LOC:Description_Pipeline_Cargo}</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="30"/>
+<Component Subtype="MetalGrid" Count="4"/>
+<Component Subtype="SmallTube" Count="20"/>
+<Component Subtype="Motor" Count="4"/>
+<Component Subtype="Computer" Count="2"/>
+<Component Subtype="InteriorPlate" Count="10"/>
+</Components>
+<CriticalComponent Subtype="Computer" Index="0"/>
+<BlockPairName>Pipeline_Cargo</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

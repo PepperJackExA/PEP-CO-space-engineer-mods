@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>AQD_LG_ConveyorEndcap</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_ConveyorEndcap}</DisplayName>
+<Description>Description_ConveyorTube</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SmallTube" Count="5" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="InteriorPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>AQD_ConveyorEndcap</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>30</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

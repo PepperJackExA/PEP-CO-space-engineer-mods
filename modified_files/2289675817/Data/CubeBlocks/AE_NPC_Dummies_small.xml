@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_Standing_Normal_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Standing</DisplayName>
+<Description>A Dummy NPC standing in an idle pose. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_Standing_Normal</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_Standing_Wall_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Leaning on Wall</DisplayName>
+<Description>A Dummy NPC standing with his foot and back pressed against the wall. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_Standing_Wall</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_Standing_Akimbo_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Akimbo</DisplayName>
+<Description>A Dummy NPC standing with his arms akimbo. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_Standing_Akimbo</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_Standing_ArmPad_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Wrist PDA</DisplayName>
+<Description>A Dummy NPC looking at his wrist PDA. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_Standing_ArmPad</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_Standing_Salute_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Salute</DisplayName>
+<Description>A Dummy NPC saluting. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_Standing_Salute</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_Standing_Console_Small_R</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Typing R</DisplayName>
+<Description>A Dummy NPC typing something. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_Standing_Console</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_Standing_Console_Small_L</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Typing L</DisplayName>
+<Description>A Dummy NPC typing something. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_Standing_Console_Small_L</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_Standing_Rifle_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC with Rifle</DisplayName>
+<Description>A Dummy NPC holding a rifle. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_Standing_Rifle</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_F_Standing_Normal_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Female Standing</DisplayName>
+<Description>A female Dummy NPC standing in an idle pose. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_F_Standing_Normal</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_F_Standing_Cup_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Female Standing with Can</DisplayName>
+<Description>A female Dummy NPC holding a can of Clang Kola. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_F_Standing_Cup</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_StoreBlockDefinition">
+<Id>
+<TypeId>StoreBlock</TypeId>
+<SubtypeId>NPC_Dummies_Store_Standing_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Trader Standing</DisplayName>
+<Description>A Dummy NPC Trader standing and holding a datapad. Has Store functionality. NOTE: Does NOT use conveyors!</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>NPC_Dummies_Store_Standing</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Conveyors</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_PassengerSeat_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Passenger Seat</DisplayName>
+<Description>A Dummy NPC chilling on a passenger seat. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Construction" Count="20" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_PassengerSeat</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_PassengerSeat_Small_Offset</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Passenger Seat Offset</DisplayName>
+<Description>A Dummy NPC chilling on a passenger seat. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Construction" Count="20" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_PassengerSeat_Small_Offset</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_F_PassengerSeat_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Female Passenger Seat</DisplayName>
+<Description>A Female Dummy NPC chilling on a passenger seat. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Construction" Count="20" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_F_PassengerSeat</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_F_PassengerSeat_Small_Offset</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Female Passenger Seat Offset</DisplayName>
+<Description>A Female Dummy NPC chilling on a passenger seat. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Construction" Count="20" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_F_PassengerSeat_Small_Offset</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_ControlSeat_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC Control Seat</DisplayName>
+<Description>Dummy NPC sitting at a control seat. Perfect for decorating CICs and bridges. Has Text Panel functionality.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_ControlSeat</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>NPC_Dummies_Cryo_Small</SubtypeId>
+</Id>
+<DisplayName>Dummy NPC in Cryopod</DisplayName>
+<Description>A Dummy NPC lying in a cryopod. Has Text Panel functionality. NOTE: Does NOT support conveyors!</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="Display" Count="4" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="BulletproofGlass" Count="5" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>NPC_Dummies_Bed_Lying</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0001</RequiredPowerInput>
+<PCU>10</PCU>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

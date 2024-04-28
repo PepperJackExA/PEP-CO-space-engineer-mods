@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId>ATL_SlopeLCDs2_Category</SubtypeId>
+</Id>
+<DisplayName>Slope LCDs Redux</DisplayName>
+<Name>ATL_SlopeLCDs2</Name>
+<ItemIds>
+<string>ATL_ArmorBlockLCD_LG</string>
+<string>ATL_SlopedArmorBlockLCD_LG</string>
+<string>ATL_HalfSlopeArmorBlockBaseLCD_LG</string>
+<string>ATL_HalfSlopeArmorBlockTipLCD_LG</string>
+<string>ATL_SingleLCDPanel_LG</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+</Definitions>
+ 

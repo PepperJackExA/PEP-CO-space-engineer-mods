@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowArmoredFlat" />
+<DisplayName>DisplayName_Window_Armored</DisplayName>
+<Description>Description_Window_Armored</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowArmoredFlat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowArmoredFlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowArmoredSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowArmoredFace" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowArmoredFaceInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowArmoredSide" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowArmoredSideInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowArmoredFlat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowArmoredFlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowArmoredSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowArmoredFace" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowArmoredFaceInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowArmoredSide" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowArmoredSideInv" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

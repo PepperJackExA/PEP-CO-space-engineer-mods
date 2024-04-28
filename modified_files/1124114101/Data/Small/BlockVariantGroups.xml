@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorThinGroup" />
+<DisplayName>DisplayName_Block_ConveyorTubeSmall</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyor" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmall" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmallCurved" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="Mafoo_Small_MediumConveyorTube" />
+<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="Mafoo_Small_LongConveyorTube" />
+<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="SmallBlockConveyorSorter" />
+</Blocks>
+</BlockVariantGroup>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorAdaptor" />
+<DisplayName>Conveyor Adaptors</DisplayName>
+<Description>Description_Mafoo_ConveyorTube</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallConveyorAdaptorTypeA" />
+<Block Type="MyObjectBuilder_Conveyor" Subtype="SmallConveyorAdaptorTypeB" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+</Definitions>
+ 

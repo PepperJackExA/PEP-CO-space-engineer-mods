@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<DisplayName>Nuclear Fuel</DisplayName>
+<Mass>3.8</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>12500</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>10000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>SpentFuel</SubtypeId>
+</Id>
+<DisplayName>Spent Nuclear Fuel</DisplayName>
+<Mass>3.5</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>NuclearWaste</SubtypeId>
+</Id>
+<DisplayName>Nuclear Waste</DisplayName>
+<Mass>3</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+</PhysicalItem>
+<PhysicalItem>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>DepletedUranium</SubtypeId>
+</Id>
+<DisplayName>Depleted Uranium</DisplayName>
+<Mass>3.8</Mass>
+<Volume>0.2</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>3125</MinimalPricePerUnit>
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>10000</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>10000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+<MinimumAcquisitionAmount>1000</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>50000</MaximumAcquisitionAmount>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

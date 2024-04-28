@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+<Id>
+<TypeId>OxygenGenerator</TypeId>
+<SubtypeId>GeothermalWellHead</SubtypeId>
+</Id>
+<DisplayName>Geothermal Wellhead</DisplayName>
+<Description>Processes geothermal heat to produce Steam. Must be connected by Geothermal Pipes to a Geothermal Well Tip.
+Produces ~7.5 Steam/sec per 100m of Well Tip depth below 150m.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="LargeTube" Count="50" />
+<Component Subtype="Motor" Count="30" />
+<Component Subtype="CopperWire" Count="25" />
+<Component Subtype="AdvancedComputer" Count="5" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<IceConsumptionPerSecond>9999999999</IceConsumptionPerSecond>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>0.5</OperationalPowerConsumption>
+<ProducedGases>
+<GasInfo>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<IceToGasRatio>1.25</IceToGasRatio>
+</GasInfo>
+</ProducedGases>
+<BlueprintClasses>
+<Class>Heat</Class>
+</BlueprintClasses>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>GeothermalPipeMount</SubtypeId>
+</Id>
+<DisplayName>Geothermal Pipe Mount</DisplayName>
+<Description>Used in Geothermal systems to connect Well Tips and Wellheads. Provides a point to anchor Pipes.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Girder" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="LargeTube" Count="5" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>GeothermalPipe</SubtypeId>
+</Id>
+<DisplayName>Geothermal Pipe</DisplayName>
+<Description>Used in Geothermal systems to connect Well Tips and Wellheads.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="LargeTube" Count="5" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>GeothermalWellTip</SubtypeId>
+</Id>
+<DisplayName>Geothermal Well Tip</DisplayName>
+<Description>Geothermal heat exchanger. Must be placed underground and connected to a Wellhead.
+Produces ~7.5 Steam/sec per 100m of depth below 150m.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>10</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WindTurbineDefinition">
+<Id>
+<TypeId>WindTurbine</TypeId>
+<SubtypeId>LargeWindTurbine</SubtypeId>
+</Id>
+<DisplayName>Large Wind Turbine</DisplayName>
+<Description>Large blades and an upgraded geartrain provide increased power generation.
+Nominal Output: 4MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="25" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Motor" Count="10" />
+<Component Subtype="Electromagnet" Count="40" />
+<Component Subtype="CopperWire" Count="50" />
+<Component Subtype="InteriorPlate" Count="60" />
+<Component Subtype="AdvancedComputer" Count="15" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ActionSound>ArcBlockWindTurbine</ActionSound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<IsAirTight>false</IsAirTight>
+<RaycastersToFullEfficiency>9</RaycastersToFullEfficiency>
+<PCU>55</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OxygenFarmDefinition">
+<Id>
+<TypeId>OxygenFarm</TypeId>
+<SubtypeId>SolarConcentrator</SubtypeId>
+</Id>
+<DisplayName>Solar Concentrator</DisplayName>
+<Description>Parabolic-Trough Solar Concentrator. Uses mirrors to focus sunlight and generate steam.
+Produces 0.5 Steam/sec</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Girder" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="SmallTube" Count="20" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="BulletproofGlass" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<Id>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</Id>
+<OperationalPowerConsumption>0.02</OperationalPowerConsumption>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>SolarConcentratorMount</SubtypeId>
+</Id>
+<DisplayName>Solar Concentrator Mount</DisplayName>
+<Description>Rotating mount to allow Solar Concentrators to be aligned.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="CopperWire" Count="10" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<PrimarySound>BlockRotor</PrimarySound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.002</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>MotorAdvancedRotor</TypeId>
+<SubtypeId>SolarConcentratorMountHead</SubtypeId>
+</Id>
+<DisplayName>Solar Concentrator Mount Head</DisplayName>
+<Description></Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="LargeTube" Count="5" />
+<Component Subtype="SmallTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BlockPairName>SolarConcentratorMountHead</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<PCU>1</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SolarPanelDefinition">
+<Id>
+<TypeId>SolarPanel</TypeId>
+<SubtypeId>LargeFullSpectrumSolarPanel</SubtypeId>
+</Id>
+<DisplayName>Full-Spectrum Solar Panel</DisplayName>
+<Description>High-tech panel capable of generating power from all electromagnetic wavelengths at high efficiency.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="AdvancedComputer" Count="10" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="GoldWire" Count="15" />
+<Component Subtype="FSSolarCell" Count="32" />
+<Component Subtype="Construction" Count="5" />
+</Components>
+<CriticalComponent Subtype="FSSolarCell" Index="0" />
+<BlockPairName>FullSpectrumSolarPanel</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PhysicalMaterial>GlassOpaque</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>55</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SolarPanelDefinition">
+<Id>
+<TypeId>SolarPanel</TypeId>
+<SubtypeId>SmallFullSpectrumSolarPanel</SubtypeId>
+</Id>
+<DisplayName>Full-Spectrum Solar Panel</DisplayName>
+<Description>High-tech panel capable of generating power from all electromagnetic wavelengths at high efficiency.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="Girder" Count="5" />
+<Component Subtype="AdvancedComputer" Count="5" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="GoldWire" Count="10" />
+<Component Subtype="FSSolarCell" Count="8" />
+<Component Subtype="Construction" Count="5" />
+</Components>
+<CriticalComponent Subtype="FSSolarCell" Index="0" />
+<BlockPairName>FullSpectrumSolarPanel</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PhysicalMaterial>GlassOpaque</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>55</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

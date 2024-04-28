@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>V-14 Stiletto Light Railgun</SubtypeId>
+</Id>
+<DisplayName>V-14 Stiletto Light Railgun</DisplayName>
+<Description>The V-14 'Stiletto' is a light railgun turret employed by the MCRN on its Scirocco-class assault cruisers. [10km/s muzzle velocity, 10km range - Accepts MCRN 100mm Tungsten-Uranium Sabots]</Description>
+<CubeSize>Large</CubeSize>
+<BuildTimeSeconds>120</BuildTimeSeconds>
+<InventoryMaxVolume>0.276</InventoryMaxVolume>
+<Components>
+<Component Subtype="GravityGenerator" Count="330" />
+<Component Subtype="PowerCell" Count="1240" />
+<Component Subtype="Superconductor" Count="800" />
+<Component Subtype="Girder" Count="1210" />
+<Component Subtype="SmallTube" Count="990" />
+<Component Subtype="LargeTube" Count="1210" />
+<Component Subtype="InteriorPlate" Count="1650" />
+<Component Subtype="TrackingComponent" Count="10" />
+<Component Subtype="MCRNAdvComponent" Count="50" />
+<Component Subtype="Motor" Count="1540" />
+<Component Subtype="Computer" Count="2850" />
+<Component Subtype="MetalGrid" Count="3190" />
+<Component Subtype="Construction" Count="2200" />
+<Component Subtype="SteelPlate" Count="6830" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<BlockPairName>V-14 Stiletto Light Railgun</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>40</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<PCU>2500</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>V-14 Stiletto Light Railgun MES</SubtypeId>
+</Id>
+<DisplayName>V-14 Stiletto Light Railgun</DisplayName>
+<Description>The V-14 'Stiletto' is a light railgun turret employed by the MCRN on its Scirocco-class assault cruisers. Fires 120mm Tungsten-Uranium Slug MCRN variant.</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<BuildTimeSeconds>120</BuildTimeSeconds>
+<InventoryMaxVolume>0.276</InventoryMaxVolume>
+<Components>
+<Component Subtype="GravityGenerator" Count="330" />
+<Component Subtype="PowerCell" Count="1240" />
+<Component Subtype="Superconductor" Count="800" />
+<Component Subtype="Girder" Count="1210" />
+<Component Subtype="SmallTube" Count="990" />
+<Component Subtype="LargeTube" Count="1210" />
+<Component Subtype="InteriorPlate" Count="1650" />
+<Component Subtype="TrackingComponent" Count="10" />
+<Component Subtype="MCRNAdvComponent" Count="51">
+<DeconstructId>
+<TypeId>Ingot</TypeId>
+<SubtypeId>MCRNAdvCompTechScrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Motor" Count="1540" />
+<Component Subtype="Computer" Count="2850" />
+<Component Subtype="MetalGrid" Count="3190" />
+<Component Subtype="Construction" Count="2200" />
+<Component Subtype="SteelPlate" Count="6830" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<StandbyPowerConsumption>1</StandbyPowerConsumption>
+<OperationalPowerConsumption>200</OperationalPowerConsumption>
+<BlockPairName>V-14 Stiletto Light Railgun MES</BlockPairName>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<MinElevationDegrees>-10</MinElevationDegrees>
+<MaxElevationDegrees>40</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>false</IdleRotation>
+<PCU>2500</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Gear1_3_1_4tline</SubtypeId>
+</Id>
+<DisplayName>Legacy Gear Rail 1x3, 4 teeth</DisplayName>
+<Description>Legacy Gear Rail, size 1x3, 4 teeth.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Count="3" Subtype="SteelPlate"/>
+</Components>
+<CriticalComponent Index="0" Subtype="SteelPlate"/>
+<BlockPairName>Gear1_3_1_4tline</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

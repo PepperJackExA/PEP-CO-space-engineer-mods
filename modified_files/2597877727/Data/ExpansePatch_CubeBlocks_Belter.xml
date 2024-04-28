@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeBlockLargeBelterGenerator</SubtypeId>
+</Id>
+<DisplayName>OPA Large Reactor</DisplayName>
+<Description>A specialised fusion reactor developed by the OPA for use in ships equipped with railguns</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="250" />
+<Component Subtype="UpgradedBelterComponent" Count="20" />
+<Component Subtype="Construction" Count="200" />
+<Component Subtype="LargeTube" Count="100" />
+<Component Subtype="Superconductor" Count="200" />
+<Component Subtype="Reactor" Count="2000" />
+<Component Subtype="Motor" Count="250" />
+<Component Subtype="Computer" Count="100" />
+<Component Subtype="MetalGrid" Count="250" />
+<Component Subtype="SteelPlate" Count="1000" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>BelterLargeReactor</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>300</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeBlockSmallGenerator_Belter</SubtypeId>
+</Id>
+<DisplayName>Large Supercooled Reactor</DisplayName>
+<Description>Sum slight modification to di heat shielding mek dis one wa lee bit mo powaful.</Description>
+<CubeSize>Large</CubeSize>
+<Public>true</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="MetalGrid" Count="24" />
+<Component Subtype="LargeTube" Count="16" />
+<Component Subtype="Reactor" Count="200" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="BelterComponent" Count="12" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="BelterComponent" Index="0" />
+<BlockPairName>SupercooledSmallReactor</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<BlueprintClasses>
+<Class>Fuel</Class>
+</BlueprintClasses>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallBlockSmallGenerator_Belter</SubtypeId>
+</Id>
+<DisplayName>Small Supercooled Reactor</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Reactor" Count="6" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="BelterComponent" Count="3" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SupercooledSmallReactor</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>FusionFuel</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>300</PCU>
+<Public>true</Public>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>LargeProductivityModule_Belter</SubtypeId>
+</Id>
+<DisplayName>Upgraded Ramshackle Speed Module</DisplayName>
+<Description>We increase da speed past da normal limit, mostly stable bossmeng.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="160" />
+<Component Subtype="BelterComponent" Count="10" />
+<Component Subtype="StructuralReinforcement" Count="40" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="Computer" Count="90" />
+<Component Subtype="Motor" Count="60" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ProductivityModule_Belter</BlockPairName>
+<PrimarySound>BlockModuleProductivity</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>LargeEffectivenessModule_Belter</SubtypeId>
+</Id>
+<DisplayName>Upgraded Ramshackle Yield Module</DisplayName>
+<Description>We find out how fi mek more from less bossmeng!</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="160" />
+<Component Subtype="BelterComponent" Count="10" />
+<Component Subtype="StructuralReinforcement" Count="40" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="SmallTube" Count="30" />
+<Component Subtype="Superconductor" Count="80" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>EffectivenessModule_Belter</BlockPairName>
+<PrimarySound>BlockModuleEffectiveness</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+<Id>
+<TypeId>UpgradeModule</TypeId>
+<SubtypeId>LargeEnergyModule_Belter</SubtypeId>
+</Id>
+<DisplayName>Upgraded Ramshackle Power Module</DisplayName>
+<Description>We manage fi divert da powah from negutive to posative.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="160" />
+<Component Subtype="BelterComponent" Count="10" />
+<Component Subtype="StructuralReinforcement" Count="40" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="PowerCell" Count="40" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>EnergyModule_Belter</BlockPairName>
+<PrimarySound>BlockModuleEfficiency</PrimarySound>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+<Id>
+<TypeId>OreDetector</TypeId>
+<SubtypeId>LargeOreDetector_Belter</SubtypeId>
+</Id>
+<DisplayName>Ramshackle Ore Detector</DisplayName>
+<Description>Damn near double da range with dis upgrade copeng!</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="BelterComponent" Count="10" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="Motor" Count="15" />
+<Component Subtype="Computer" Count="50" />
+<Component Subtype="Detector" Count="40" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>RamOreDetector</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_OreDetectorDefinition">
+<Id>
+<TypeId>OreDetector</TypeId>
+<SubtypeId>SmallBlockRamshackleOreDetector</SubtypeId>
+</Id>
+<DisplayName>Ramshackle Ore Detector</DisplayName>
+<Description>Damn near double da range with dis upgrade copeng!</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="BelterComponent" Count="4" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="Detector" Count="20" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Detector" Index="0" />
+<BlockPairName>RamOreDetector</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SolarPanelDefinition">
+<Id>
+<TypeId>SolarPanel</TypeId>
+<SubtypeId>LargeBlockSolarPanel_Belter</SubtypeId>
+</Id>
+<DisplayName>Ramshackle Solar Panel</DisplayName>
+<Description>We boost da powah to five times the original amount, we lose a little when me mark it for you bossmeng.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+<Component Subtype="StructuralReinforcement" Count="24" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Girder" Count="24" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="SolarCell" Count="64" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="BulletproofGlass" Count="16" />
+</Components>
+<CriticalComponent Subtype="SolarCell" Index="0" />
+<BuildTimeSeconds>45</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PhysicalMaterial>GlassOpaque</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>110</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LandingGearDefinition">
+<Id>
+<TypeId>LandingGear</TypeId>
+<SubtypeId>LargeClamp</SubtypeId>
+</Id>
+<DisplayName>Ship Clamp</DisplayName>
+<Description>The Claw</Description>
+<CubeSize>Large</CubeSize>
+<LockSound>ShipLandGearOn</LockSound>
+<UnlockSound>ShipLandGearOff</UnlockSound>
+<FailedAttachSound>ShipLandGearNothing01</FailedAttachSound>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="BelterComponent" Count="5" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Computer" Count="6" />
+<Component Subtype="SteelPlate" Count="250" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>LandingGear</BlockPairName>
+<BuildTimeSeconds>70</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>35</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">
+<Id>
+<TypeId>Drill</TypeId>
+<SubtypeId>RamshackleDrill</SubtypeId>
+</Id>
+<DisplayName>Large Ramshackle Drill</DisplayName>
+<Description>Standard drill that has been torn apart and redesigned over a generation of belters, produced by Arkolis Manufacturing.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="80" />
+<Component Subtype="BelterComponent" Count="20" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="22" />
+<Component Subtype="Motor" Count="15" />
+<Component Subtype="Computer" Count="15" />
+<Component Subtype="SteelPlate" Count="320" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>RamDrill</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>ToolShipDrillIdle</PrimarySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>190</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">
+<Id>
+<TypeId>Drill</TypeId>
+<SubtypeId>SmallRamshackleDrill</SubtypeId>
+</Id>
+<DisplayName>Small Ramshackle Drill</DisplayName>
+<Description>Standard drill that has been torn apart and redesigned over a generation of belters, produced by Arkolis Manufacturing.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="BelterComponent" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="LargeTube" Count="11" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Computer" Count="6" />
+<Component Subtype="SteelPlate" Count="160" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>RamDrill</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>ToolShipDrillIdle</PrimarySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>190</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>RamshackleGrinder</SubtypeId>
+</Id>
+<DisplayName>Ramshackle Grinder</DisplayName>
+<Description>Standard grinder that has been torn apart and redesigned over a generation of belters, produced by Arkolis Manufacturing.</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="BelterComponent" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>RamGrinder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>18</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+<Speed>2</Speed>
+<DamageCharacters>false</DamageCharacters>
+<Speed>720</Speed>
+<Speed>720</Speed>
+<Sound>
+<Name>ToolLrgGrindIdle</Name>
+</Sound>
+<Name>MaterialProperties/Grinder</Name>
+<Name>MaterialProperties/Grinder</Name>
+<Sound>
+<Name>MaterialProperties/Grinder</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>LargeRamshackleGrinder</SubtypeId>
+</Id>
+<DisplayName>Large Ramshackle Grinder</DisplayName>
+<Description>Standard grinder that has been torn apart and redesigned over a generation of belters, produced by Arkolis Manufacturing.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="BelterComponent" Count="20" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>RamGrinder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<Speed>2</Speed>
+<DamageCharacters>false</DamageCharacters>
+<Speed>720</Speed>
+<Speed>720</Speed>
+<Sound>
+<Name>ToolLrgGrindIdle</Name>
+</Sound>
+<Name>MaterialProperties/Grinder</Name>
+<Name>MaterialProperties/Grinder</Name>
+<Sound>
+<Name>MaterialProperties/Grinder</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>SmallShipGrinder</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShipGrinder</DisplayName>
+<Description>Description_ShipGrinder</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SmallTube" Count="4" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ShipGrinder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>18</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+<DamageCharacters>false</DamageCharacters>
+<Speed>720</Speed>
+<Speed>720</Speed>
+<Sound>
+<Name>ToolLrgGrindIdle</Name>
+</Sound>
+<Name>MaterialProperties/Grinder</Name>
+<Name>MaterialProperties/Grinder</Name>
+<Sound>
+<Name>MaterialProperties/Grinder</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>LargeShipGrinder</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShipGrinder</DisplayName>
+<Description>Description_ShipGrinder</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ShipGrinder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>100</PCU>
+<DamageCharacters>false</DamageCharacters>
+<Speed>720</Speed>
+<Speed>720</Speed>
+<Sound>
+<Name>ToolLrgGrindIdle</Name>
+</Sound>
+<Name>MaterialProperties/Grinder</Name>
+<Name>MaterialProperties/Grinder</Name>
+<Sound>
+<Name>MaterialProperties/Grinder</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipWelderDefinition">
+<Id>
+<TypeId>ShipWelder</TypeId>
+<SubtypeId>RamshackleWelder</SubtypeId>
+</Id>
+<DisplayName>Ramshackle Welder</DisplayName>
+<Description>The Maw (small)</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="BelterComponent" Count="10"/>
+<Component Subtype="Construction" Count="23"/>
+<Component Subtype="SmallTube" Count="9"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="Computer" Count="3"/>
+<Component Subtype="Construction" Count="3"/>
+<Component Subtype="SteelPlate" Count="13"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<BlockPairName>RamWelder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>270</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+<PCU>150</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipWelderDefinition">
+<Id>
+<TypeId>ShipWelder</TypeId>
+<SubtypeId>LargeRamshackleWelder</SubtypeId>
+</Id>
+<DisplayName>Large Ramshackle Welder</DisplayName>
+<Description>The Maw</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="BelterComponent" Count="20"/>
+<Component Subtype="Construction" Count="32"/>
+<Component Subtype="LargeTube" Count="3"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="Computer" Count="2"/>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SteelPlate" Count="35"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<BlockPairName>RamWelder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>360</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipWelderDefinition">
+<Id>
+<TypeId>ShipWelder</TypeId>
+<SubtypeId>SmallShipWelder</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShipWelder</DisplayName>
+<Description>Description_ShipWelder</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SmallTube" Count="6" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ShipWelder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>18</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<IsAirTight>false</IsAirTight>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ShipWelderDefinition">
+<Id>
+<TypeId>ShipWelder</TypeId>
+<SubtypeId>LargeShipWelder</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ShipWelder</DisplayName>
+<Description>Description_ShipWelder</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ShipWelder</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>LargeRamshackleWelder_ToolCore</SubtypeId>
+</Id>
+<DisplayName>Large Ramshackle Welder ToolCore</DisplayName>
+<Description>The Maw</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5"/>
+<Component Subtype="BelterComponent" Count="20"/>
+<Component Subtype="Construction" Count="32"/>
+<Component Subtype="LargeTube" Count="3"/>
+<Component Subtype="Motor" Count="3"/>
+<Component Subtype="Computer" Count="2"/>
+<Component Subtype="Construction" Count="8"/>
+<Component Subtype="SteelPlate" Count="35"/>
+</Components>
+<CriticalComponent Subtype="Motor" Index="0"/>
+<BlockPairName>RamWelderToolCore</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>360</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+<Id>
+<TypeId>ConveyorSorter</TypeId>
+<SubtypeId>LargeShipWelder_ToolCore</SubtypeId>
+</Id>
+<DisplayName>Welder ToolCore</DisplayName>
+<Description>Description_ShipWelder</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>ShipWelderToolCore</BlockPairName>
+<Public>true</Public>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>150</PCU>
+<DamageCharacters>false</DamageCharacters>
+<Sound>
+<Name>ToolLrgWeldIdle</Name>
+</Sound>
+<Name>ShipWelderArc</Name>
+<Sound>
+<Name>ToolLrgWeldMetal</Name>
+</Sound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>TychoCompressedHydroTank</SubtypeId>
+</Id>
+<DisplayName>Tycho Compressed Hydrogen Tank</DisplayName>
+<Description>Designed for ship use, minimizing required space while keeping fuel capacity high</Description>
+<Public>true</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="60" />
+<Component Subtype="BelterComponent" Count="10" />
+<Component Subtype="LargeTube" Count="80" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SteelPlate" Count="220" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>CompressedHydroTank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>30000000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0025</LeakPercent>
+<GasExplosionMaxRadius>20</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>30000000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>HydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>StationHydrogenTank</SubtypeId>
+</Id>
+<DisplayName>Station Hydrogen Tank</DisplayName>
+<Description>Designed for use on station to maximize fuel storage capacity at the cost of significant weight</Description>
+<Public>true</Public>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="160" />
+<Component Subtype="StructuralReinforcement" Count="100" />
+<Component Subtype="LargeTube" Count="80" />
+<Component Subtype="SmallTube" Count="60" />
+<Component Subtype="Computer" Count="8" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="SteelPlate" Count="120" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>StationHydrogenTank</BlockPairName>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<OperationalPowerConsumption>0.001</OperationalPowerConsumption>
+<StandbyPowerConsumption>0.000001</StandbyPowerConsumption>
+<Capacity>50000000</Capacity>
+<InventoryMaxVolume>0.75</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Hydrogen</SubtypeId>
+</StoredGasId>
+<BlueprintClasses>
+<Class>HydrogenBottles</Class>
+</BlueprintClasses>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.0025</LeakPercent>
+<GasExplosionMaxRadius>20</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>50000000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.00015</GasExplosionDamageMultiplier>
+<GasExplosionSound>HydrogenExplosion</GasExplosionSound>
+<GasExplosionEffect>Explosion_Warhead_30</GasExplosionEffect>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

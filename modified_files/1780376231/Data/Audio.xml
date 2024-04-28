@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Sounds>
+<Sound>
+<Id>
+<TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+<SubtypeId>ClockAlarm1</SubtypeId>
+</Id>
+<MaxDistance>5</MaxDistance>
+<Volume>20.0</Volume>
+<Loopable>false</Loopable>
+<Waves>
+<Wave Type="D2">
+<Start>Audio/ClockAlarm1.wav</Start>
+</Wave>
+</Waves>
+</Sound>
+</Sounds>
+</Definitions>
+ 

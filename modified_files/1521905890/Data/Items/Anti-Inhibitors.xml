@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PhysicalItems>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>JetpackInhibitorBlocker</SubtypeId>
+</Id>
+<DisplayName>Jetpack Inhibitor Nullifier</DisplayName>
+<Description>This module will temporarily negate the effects of Jetpack Inhibitor Blocks when activated. The effect lasts for 30 seconds and will drain 30 points of Suit Energy.</Description>
+<Mass>9</Mass>
+<Volume>9</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>25000000</MinimalPricePerUnit>
+<CanPlayerOrder>false</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>DrillInhibitorBlocker</SubtypeId>
+</Id>
+<DisplayName>Drill Inhibitor Nullifier</DisplayName>
+<Description>This module will temporarily negate the effects of Hand-Drill Inhibitor Blocks when activated. The effect lasts for 60 seconds and will drain 30 points of Suit Energy.</Description>
+<Mass>9</Mass>
+<Volume>9</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>25000000</MinimalPricePerUnit>
+<CanPlayerOrder>false</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>PlayerInhibitorBlocker</SubtypeId>
+</Id>
+<DisplayName>Personnel Inhibitor Nullifier</DisplayName>
+<Description>This module will temporarily negate the effects of Personnel Inhibitor Blocks when activated. The effect lasts for 30 seconds and will drain 30 points of Suit Energy.</Description>
+<Mass>9</Mass>
+<Volume>9</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>25000000</MinimalPricePerUnit>
+<CanPlayerOrder>false</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>EnergyInhibitorBlocker</SubtypeId>
+</Id>
+<DisplayName>Energy Inhibitor Nullifier</DisplayName>
+<Description>This module will temporarily negate the effects of Energy Inhibitor Blocks when activated. The effect lasts for 30 seconds.</Description>
+<Mass>9</Mass>
+<Volume>9</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>25000000</MinimalPricePerUnit>
+<CanPlayerOrder>false</CanPlayerOrder>
+</PhysicalItem>
+<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+<Id>
+<TypeId>ConsumableItem</TypeId>
+<SubtypeId>CounterfeitInhibitorBlocker</SubtypeId>
+</Id>
+<DisplayName>Counterfeit Inhibitor Nullifier</DisplayName>
+<Description>This module is a counterfeit Inhibitor Nullifier, and is not effective against any Inhibitor Type. It will probably cause sudden death if used.</Description>
+<Mass>9</Mass>
+<Volume>9</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MinimalPricePerUnit>25000000</MinimalPricePerUnit>
+<CanPlayerOrder>false</CanPlayerOrder>
+</PhysicalItem>
+</PhysicalItems>
+</Definitions>
+ 

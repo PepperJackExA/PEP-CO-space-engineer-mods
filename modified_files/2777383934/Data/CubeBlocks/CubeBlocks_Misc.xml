@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Id>
+<TypeId>Collector</TypeId>
+<SubtypeId>NebulaRamscoop</SubtypeId>
+</Id>
+<DisplayName>Nebula Ramscoop</DisplayName>
+<Description>Uses shaped magnetic and gravitational fields to collect, separate, and compress trace amounts of Crystal Dust present in certain nebulae.
+Collection funnel must be open to space.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="150" />
+<Component Subtype="Construction" Count="75" />
+<Component Subtype="LargeTube" Count="25" />
+<Component Subtype="Girder" Count="50" />
+<Component Subtype="Motor" Count="25" />
+<Component Subtype="Computer" Count="50" />
+<Component Subtype="Superconductor" Count="30" />
+<Component Subtype="GravityGenerator" Count="30" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="GravityGenerator" Index="0" />
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>1</InventoryMaxVolume>
+<RequiredPowerInput>25</RequiredPowerInput>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<GenerateSound>BlockOxyGenProcess</GenerateSound>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+<DestroySound>WepSmallMissileExpl</DestroySound>
+<PCU>50</PCU>
+<Definition xsi:type="MyObjectBuilder_ShipDrillDefinition">
+<Id>
+<TypeId>Drill</TypeId>
+<SubtypeId>ReinforcedDrill</SubtypeId>
+</Id>
+<DisplayName>Reinforced Drill</DisplayName>
+<Description>An idustrial-scale Drill equipped with Dorium-alloy teeth.
+15m clearance radius.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="80" />
+<Component Subtype="LargeTube" Count="30" />
+<Component Subtype="Motor" Count="50" />
+<Component Subtype="Computer" Count="35" />
+<Component Subtype="ReinforcedDrillbit" Count="48" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="ReinforcedDrillbit" Index="0" />
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<OperationalPowerConsumption>0.2</OperationalPowerConsumption>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>ToolShipDrillIdle</PrimarySound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>190</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+<Id>
+<TypeId>Refinery</TypeId>
+<SubtypeId>ExoticMaterialRefinery</SubtypeId>
+</Id>
+<DisplayName>Exotic Material Refinery</DisplayName>
+<Description>Specialized refining equipment capable of safely processing exotic ores such as Crystal, Dorium, Cronyx, and Spice.
+Power Usage: 5 MW</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="250" />
+<Component Subtype="Construction" Count="100" />
+<Component Subtype="LargeTube" Count="25" />
+<Component Subtype="Motor" Count="60" />
+<Component Subtype="BulletproofGlass" Count="50" />
+<Component Subtype="MetalGrid" Count="50" />
+<Component Subtype="Superconductor" Count="25" />
+<Component Subtype="Display" Count="15" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<InventoryMaxVolume>7.5</InventoryMaxVolume>
+<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
+<OperationalPowerConsumption>5</OperationalPowerConsumption>
+<BlueprintClasses>
+<Class>StrategicIngots</Class>
+</BlueprintClasses>
+<MaterialEfficiency>1</MaterialEfficiency>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<PrimarySound>BlockRafinery</PrimarySound>
+<ActionSound>BlockRafineryProcess</ActionSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>90</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>RotaryAirlock</SubtypeId>
+</Id>
+<DisplayName>Rotary Airlock Door</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Electromagnet" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Rubber" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="BulletproofGlass" Count="25" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>nukeguard_rotaryDoor</BlockPairName>
+<Description>A 100% sealed door that is never opened to vacuum. Straight passthrough.</Description>
+<IsAirTight>true</IsAirTight>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.025</PowerConsumptionMoving>
+<Name>RotaryDoorPart_section_1</Name>
+<Speed>100</Speed>
+<OpenSound>ParticleHeavyMech</OpenSound>
+<CloseSound>ParticleHeavyMech</CloseSound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>RotaryAirlockSmallGrid</SubtypeId>
+</Id>
+<DisplayName>Rotary Airlock Door</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Electromagnet" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Rubber" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="BulletproofGlass" Count="25" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>nukeguard_rotaryDoor</BlockPairName>
+<Description>A 100% sealed door that is never opened to vacuum. Straight passthrough.</Description>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.025</PowerConsumptionMoving>
+<Name>RotaryDoorPart_section_1</Name>
+<Speed>130</Speed>
+<OpenSound>ParticleHeavyMech</OpenSound>
+<CloseSound>ParticleHeavyMech</CloseSound>
+<IsAirTight>true</IsAirTight>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>RotaryAirlockCorner</SubtypeId>
+</Id>
+<DisplayName>Rotary Airlock Corner Door</DisplayName>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Electromagnet" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Rubber" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="BulletproofGlass" Count="25" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>nukeguard_rotaryDoorCorner</BlockPairName>
+<Description>A 100% sealed door that is never opened to vacuum. Angled passthrough.</Description>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.025</PowerConsumptionMoving>
+<Name>RotaryDoorCornerPart</Name>
+<Speed>100</Speed>
+<OpenSound>ParticleHeavyMech</OpenSound>
+<CloseSound>ParticleHeavyMech</CloseSound>
+<IsAirTight>true</IsAirTight>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AdvancedDoorDefinition">
+<Id>
+<TypeId>AdvancedDoor</TypeId>
+<SubtypeId>RotaryAirlockCornerSmallGrid</SubtypeId>
+</Id>
+<DisplayName>Rotary Airlock Corner Door</DisplayName>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Electromagnet" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Rubber" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="BulletproofGlass" Count="25" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>nukeguard_rotaryDoorCorner</BlockPairName>
+<Description>A 100% sealed door that is never opened to vacuum. Angled passthrough.</Description>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.025</PowerConsumptionMoving>
+<Name>RotaryDoorCornerPart</Name>
+<Speed>130</Speed>
+<OpenSound>ParticleHeavyMech</OpenSound>
+<CloseSound>ParticleHeavyMech</CloseSound>
+<IsAirTight>true</IsAirTight>
+<PCU>115</PCU>
+</Definition>
+</CubeBlocks>
+<BlockPositions>
+<BlockPosition>
+<Name>nukeguard_rotaryDoor</Name>
+</BlockPosition>
+</BlockPositions>
+</Definitions>
+ 

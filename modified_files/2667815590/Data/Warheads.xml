@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_WarheadDefinition">
+<Id>
+<TypeId>Warhead</TypeId>
+<SubtypeId>SmallWarhead_Nuclear</SubtypeId>
+</Id>
+<DisplayName>Mini-Nuke</DisplayName>
+<Description>Description_Warhead</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SmallTube" Count="2" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="EnrichedUraniumCore" Count="1" />
+<Component Subtype="Explosives" Count="2" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Explosives" Index="0" />
+<BlockPairName>MiniNuke</BlockPairName>
+<ActionSound>WepLrgWarheadExpl</ActionSound>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ExplosionRadius>0.01</ExplosionRadius>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WarheadDefinition">
+<Id>
+<TypeId>Warhead</TypeId>
+<SubtypeId>LargeWarhead_Nuclear</SubtypeId>
+</Id>
+<DisplayName>Nuclear Warhead</DisplayName>
+<Description>Description_Warhead</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Girder" Count="24" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="EnrichedUraniumCore" Count="2" />
+<Component Subtype="Explosives" Count="6" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Explosives" Index="0" />
+<BlockPairName>NuclearWarhead</BlockPairName>
+<ActionSound>WepLrgWarheadExpl</ActionSound>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ExplosionRadius>0.01</ExplosionRadius>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WarheadDefinition">
+<Id>
+<TypeId>Warhead</TypeId>
+<SubtypeId>LargeWarhead_NuclearSmall</SubtypeId>
+</Id>
+<DisplayName>Nuclear Warhead</DisplayName>
+<Description>Description_Warhead</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Girder" Count="24" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="SmallTube" Count="12" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="EnrichedUraniumCore" Count="2" />
+<Component Subtype="Explosives" Count="6" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Explosives" Index="0" />
+<BlockPairName>NuclearWarhead</BlockPairName>
+<ActionSound>WepLrgWarheadExpl</ActionSound>
+<BuildTimeSeconds>60</BuildTimeSeconds>
+<ExplosionRadius>0.01</ExplosionRadius>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WarheadDefinition">
+<Id>
+<TypeId>Warhead</TypeId>
+<SubtypeId>LargeWarhead_NuclearLarge</SubtypeId>
+</Id>
+<DisplayName>Thermonuclear Warhead</DisplayName>
+<Description>Description_Warhead</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Girder" Count="24" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="Superconductor" Count="50" />
+<Component Subtype="Computer" Count="12" />
+<Component Subtype="EnrichedUraniumCore" Count="8" />
+<Component Subtype="Explosives" Count="12" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Explosives" Index="0" />
+<BlockPairName>ThermonuclearWarhead</BlockPairName>
+<ActionSound>WepLrgWarheadExpl</ActionSound>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ExplosionRadius>0.01</ExplosionRadius>
+<PCU>100</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+<Components>
+<Component>
+<Id>
+<TypeId>Component</TypeId>
+<SubtypeId>EnrichedUraniumCore</SubtypeId>
+</Id>
+<DisplayName>Enriched Uranium Core</DisplayName>
+<Mass>200</Mass>
+<Volume>100.0</Volume>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<MaxIntegrity>150</MaxIntegrity>
+<DropProbability>0.95</DropProbability>
+<Health>50</Health>
+<CanPlayerOrder>false</CanPlayerOrder>
+<MinimumAcquisitionAmount>125</MinimumAcquisitionAmount>
+<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+</Component>
+</Components>
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>EnrichedUraniumCoreComponent</SubtypeId>
+</Id>
+<DisplayName>Enriched Uranium Core</DisplayName>
+<Prerequisites>
+<Item Amount="30" TypeId="Ingot" SubtypeId="Uranium" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>50</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+<BlueprintClassEntries>
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Warhead/LargeWarhead_Nuclear" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Warhead/LargeWarhead_NuclearLarge" />
+</BlueprintClassEntries>
+</Definitions>
+ 

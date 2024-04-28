@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>WeaponRacksL</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="WeaponRacksL"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>WeaponRacksS</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="WeaponRacksS"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>WeaponRackL</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="WeaponRackL"/>
+</DefaultComponents>
+</Container>
+<Container>
+<Id>
+<TypeId>CargoContainer</TypeId>
+<SubtypeId>WeaponRackS</SubtypeId>
+</Id>
+<DefaultComponents>
+<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="WeaponRackS"/>
+</DefaultComponents>
+</Container>
+</Definitions>
+ 

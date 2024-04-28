@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Weapons>
+<Weapon>
+<Id>
+<TypeId>WeaponDefinition</TypeId>
+<SubtypeId>BinoGun</SubtypeId>
+</Id>
+<ProjectileAmmoData RateOfFire="1" ShootSoundName="WepRifleShot" ShotsInBurst="1"/>
+<DeviateShotAngle>3</DeviateShotAngle>
+<DeviateShotAngleAiming>0.15</DeviateShotAngleAiming>
+<ReleaseTimeAfterFire>100</ReleaseTimeAfterFire>
+<DamageMultiplier>0.3</DamageMultiplier>
+<RangeMultiplier>1.0</RangeMultiplier>
+<AmmoMagazines>
+<AmmoMagazine Subtype="BinoAmmo"/>
+</AmmoMagazines>
+<ReloadTime>2400</ReloadTime>
+<RecoilJetpackVertical>15</RecoilJetpackVertical>
+<RecoilJetpackHorizontal>8</RecoilJetpackHorizontal>
+<RecoilGroundVertical>3</RecoilGroundVertical>
+<RecoilGroundHorizontal>1</RecoilGroundHorizontal>
+<RecoilMultiplierDataNames>
+<string>Standing</string>
+<string>Walking</string>
+<string>Running</string>
+<string>Crouching</string>
+<string>Aiming</string>
+</RecoilMultiplierDataNames>
+<RecoilMultiplierDataVerticals>
+</RecoilMultiplierDataVerticals>
+<RecoilMultiplierDataHorizontals>
+</RecoilMultiplierDataHorizontals>
+<RecoilResetTimeMilliseconds>150</RecoilResetTimeMilliseconds>
+</Weapon>
+</Weapons>
+</Definitions>
+ 

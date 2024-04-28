@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<AmmoMagazines>
+<AmmoMagazine>
+<Id>
+<TypeId>AmmoMagazine</TypeId>
+<SubtypeId>120mmTungstenUraniumSlugUNNMagazine</SubtypeId>
+</Id>
+<DisplayName>120mm Tungsten-Uranium Sabot UNN</DisplayName>
+<Mass>20</Mass>
+<Volume>10</Volume>
+<PhysicalMaterial>Ammo</PhysicalMaterial>
+<Capacity>1</Capacity>
+<AmmoDefinitionId Subtype="120mmTungstenUraniumSlugUNN" />
+<MinimumOfferAmount>100</MinimumOfferAmount>
+<MaximumOfferAmount>1000</MaximumOfferAmount>
+<MinimumOrderAmount>100</MinimumOrderAmount>
+<MaximumOrderAmount>2000</MaximumOrderAmount>
+<CanPlayerOrder>true</CanPlayerOrder>
+</AmmoMagazine>
+</AmmoMagazines>
+</Definitions>
+ 

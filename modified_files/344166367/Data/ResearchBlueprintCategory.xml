@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CategoryClasses>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>Ntech</DisplayName>
+<Name>Ntech</Name>
+<ItemIds>
+<string>LBShortRadioAntenna</string>
+<string>SBLongRadioAntenna</string>
+<string>SBAngledRadioAntenna</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_SmallBlocks</DisplayName>
+<Name>SmallBlocks</Name>
+<ItemIds>
+<string>SBLongRadioAntenna</string>
+<string>SBAngledRadioAntenna</string>
+</ItemIds>
+</Category>
+<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+<Id>
+<TypeId>GuiBlockCategoryDefinition</TypeId>
+<SubtypeId/>
+</Id>
+<DisplayName>DisplayName_Category_LargeBlocks</DisplayName>
+<Name>LargeBlocks</Name>
+<ItemIds>
+<string>LBShortRadioAntenna</string>
+</ItemIds>
+</Category>
+</CategoryClasses>
+<BlueprintClassEntries>
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SBAngledRadioAntenna" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SBLongRadioAntenna" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LBShortRadioAntenna" />
+</BlueprintClassEntries>
+<BlockVariantGroups>
+<BlockVariantGroup>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BetterAntennaGroup" />
+<DisplayName>Better Antennae</DisplayName>
+<Description>Small Large Block Antenna, Larger Small Block Antenna</Description>
+<Blocks>
+<Block Type="MyObjectBuilder_RadioAntenna" Subtype="LBShortRadioAntenna" />
+<Block Type="MyObjectBuilder_RadioAntenna" Subtype="SBLongRadioAntenna" />
+<Block Type="MyObjectBuilder_RadioAntenna" Subtype="SBAngledRadioAntenna" />
+</Blocks>
+</BlockVariantGroup>
+</BlockVariantGroups>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_RadioAntenna" Subtype="SBLongRadioAntenna" />
+<UnlockedByGroups>
+<GroupSubtype>6</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_RadioAntenna" Subtype="LBShortRadioAntenna" />
+<UnlockedByGroups>
+<GroupSubtype>6</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+<ResearchBlock xsi:type="ResearchBlock">
+<Id Type="MyObjectBuilder_RadioAntenna" Subtype="SBAngledRadioAntenna" />
+<UnlockedByGroups>
+<GroupSubtype>6</GroupSubtype>
+</UnlockedByGroups>
+</ResearchBlock>
+</Definitions>
+ 

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Blueprints>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Blueprint_PaintGun</SubtypeId>
+</Id>
+<DisplayName>Paint Gun</DisplayName>
+<Prerequisites>
+<Item Amount="4" TypeId="Ingot" SubtypeId="Iron" />
+<Item Amount="1" TypeId="Ingot" SubtypeId="Nickel" />
+<Item Amount="2" TypeId="Ingot" SubtypeId="Silicon" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+</Blueprint>
+<Blueprint>
+<Id>
+<TypeId>BlueprintDefinition</TypeId>
+<SubtypeId>Blueprint_PaintGunMag</SubtypeId>
+</Id>
+<DisplayName>Paint Chemicals</DisplayName>
+<Prerequisites>
+<Item Amount="0.03" TypeId="Ingot" SubtypeId="Stone" />
+</Prerequisites>
+<BaseProductionTimeInSeconds>0.03</BaseProductionTimeInSeconds>
+</Blueprint>
+</Blueprints>
+<BlueprintClassEntries>
+<Entry Class="BasicTools" BlueprintSubtypeId="Blueprint_PaintGun" />
+<Entry Class="BasicTools" BlueprintSubtypeId="Blueprint_PaintGunMag" />
+<Entry Class="Tools" BlueprintSubtypeId="Blueprint_PaintGun" />
+<Entry Class="Tools" BlueprintSubtypeId="Blueprint_PaintGunMag" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Blueprint_PaintGun" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Blueprint_PaintGunMag" />
+</BlueprintClassEntries>
+</Definitions>
+ 

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>AttachmentBase</SubtypeId>
+</Id>
+<BlockPairName>AttachmentBase</BlockPairName>
+<DisplayName>Attachment Base Large</DisplayName>
+<PCU>150</PCU>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<PrimarySound>BlockRotor</PrimarySound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>AttachmentBaseSmall</SubtypeId>
+</Id>
+<BlockPairName>AttachmentBase</BlockPairName>
+<DisplayName>Attachment Base Small</DisplayName>
+<PCU>150</PCU>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<PrimarySound>BlockRotor</PrimarySound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_MotorAdvancedStatorDefinition">
+<Id>
+<TypeId>MotorAdvancedStator</TypeId>
+<SubtypeId>AttachmentBaseTall</SubtypeId>
+</Id>
+<BlockPairName>AttachmentBaseTall</BlockPairName>
+<DisplayName>Attachment Base Tall</DisplayName>
+<PCU>150</PCU>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Computer" Count="3" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0</RequiredPowerInput>
+<MaxForceMagnitude>1E9</MaxForceMagnitude>
+<PrimarySound>BlockRotor</PrimarySound>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>MotorAdvancedRotor</TypeId>
+<SubtypeId>AttachmentTop</SubtypeId>
+</Id>
+<BlockPairName>AttachmentTop</BlockPairName>
+<DisplayName>Attachment Top Small</DisplayName>
+<PCU>1</PCU>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>MotorAdvancedRotor</TypeId>
+<SubtypeId>AttachmentTopLarge</SubtypeId>
+</Id>
+<BlockPairName>AttachmentTop</BlockPairName>
+<DisplayName>Attachment Top Large</DisplayName>
+<PCU>1</PCU>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="30" />
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

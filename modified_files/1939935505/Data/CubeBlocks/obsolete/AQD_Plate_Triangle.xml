@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_LA_Plate_Triangle</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Plate_Triangle}</DisplayName>
+<Description>{LOC:Description_LightArmor}</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="8" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_LA_Plate_Triangle</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_LA_Plate_Triangle</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_LA_Plate_Triangle}</DisplayName>
+<Description>{LOC:Description_LightArmor}</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_LA_Plate_Triangle</BlockPairName>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_LG_HA_Plate_Triangle</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Plate_Triangle}</DisplayName>
+<Description>{LOC:Description_HeavyArmor}</Description>
+<CubeSize>Large</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="MetalGrid" Count="3" />
+<Component Subtype="SteelPlate" Count="5" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_HA_Plate_Triangle</BlockPairName>
+<BuildTimeSeconds>2.5</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>AQD_SG_HA_Plate_Triangle</SubtypeId>
+</Id>
+<DisplayName>{LOC:DisplayName_AQD_LG_HA_Plate_Triangle}</DisplayName>
+<Description>{LOC:Description_HeavyArmor}</Description>
+<CubeSize>Small</CubeSize>
+<Public>false</Public>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0" />
+<BlockPairName>AQD_HA_Plate_Triangle</BlockPairName>
+<BuildTimeSeconds>1</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

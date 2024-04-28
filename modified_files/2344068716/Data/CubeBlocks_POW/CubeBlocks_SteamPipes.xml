@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition xsi:type="MyObjectBuilder_GasTankDefinition">
+<Id>
+<TypeId>OxygenTank</TypeId>
+<SubtypeId>SteamTank</SubtypeId>
+</Id>
+<DisplayName>Steam Buffer Tank</DisplayName>
+<Description>Tank for storing Steam and acting as a buffer in Steam power systems.
+Caution: High-pressure Steam can cause explosions.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="LargeTube" Count="45" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="SteelPlate" Count="15" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<ResourceSinkGroup>Factory</ResourceSinkGroup>
+<Capacity>5000</Capacity>
+<InventoryMaxVolume>0</InventoryMaxVolume>
+<StoredGasId>
+<TypeId>GasProperties</TypeId>
+<SubtypeId>Steam</SubtypeId>
+</StoredGasId>
+<BuildTimeSeconds>25</BuildTimeSeconds>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<LeakPercent>0.05</LeakPercent>
+<GasExplosionMaxRadius>20</GasExplosionMaxRadius>
+<GasExplosionNeededVolumeToReachMaxRadius>5000</GasExplosionNeededVolumeToReachMaxRadius>
+<GasExplosionDamageMultiplier>0.001</GasExplosionDamageMultiplier>
+<GasExplosionSound>WepLrgWarheadExpl</GasExplosionSound>
+<GasExplosionEffect>BlockDestroyedExplosion_Large</GasExplosionEffect>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SteamPipe</SubtypeId>
+</Id>
+<DisplayName>Steam Pipe</DisplayName>
+<Description>Transports high-pressure Steam.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SteamPipeFrame</SubtypeId>
+</Id>
+<DisplayName>Steam Pipe w/ Frame</DisplayName>
+<Description>Transports high-pressure Steam. Provides a mounting point for Steam Pipe networks.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SteamPipePassthrough</SubtypeId>
+</Id>
+<DisplayName>Steam Pipe Passthrough</DisplayName>
+<Description>Transports high-pressure Steam. Provides an airtight wall passthrough for Steam Pipes.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SteamPipeCorner</SubtypeId>
+</Id>
+<DisplayName>Steam Pipe Corner</DisplayName>
+<Description>Transports high-pressure Steam.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SteamPipeT</SubtypeId>
+</Id>
+<DisplayName>Steam Pipe T</DisplayName>
+<Description>Transports high-pressure Steam.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SteamPipeCross</SubtypeId>
+</Id>
+<DisplayName>Steam Pipe Cross</DisplayName>
+<Description>Transports high-pressure Steam.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SteamPipeElbow</SubtypeId>
+</Id>
+<DisplayName>Steam Pipe Elbow</DisplayName>
+<Description>Transports high-pressure Steam.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SteamPipe4Way</SubtypeId>
+</Id>
+<DisplayName>Steam Pipe 4-Way</DisplayName>
+<Description>Transports high-pressure Steam.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SteamPipe5Way</SubtypeId>
+</Id>
+<DisplayName>Steam Pipe 5-Way</DisplayName>
+<Description>Transports high-pressure Steam.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>Conveyor</TypeId>
+<SubtypeId>SteamPipe6Way</SubtypeId>
+</Id>
+<DisplayName>Steam Pipe 6-Way</DisplayName>
+<Description>Transports high-pressure Steam.</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="LargeTube" Count="10" />
+</Components>
+<CriticalComponent Subtype="LargeTube" Index="0" />
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>10</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

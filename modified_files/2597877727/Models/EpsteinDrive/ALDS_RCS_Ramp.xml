@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ALDS_RCS_Ramp</SubtypeId>
+</Id>
+<DisplayName>DisplayName_ALDS_RCS_Ramp</DisplayName>
+<Description>Description_ALDS_RCS_Ramp</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10"/>
+</Components>
+<CriticalComponent Subtype="SteelPlate" Index="0"/>
+<BlockPairName>ALDS_RCS_Ramp</BlockPairName>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 
