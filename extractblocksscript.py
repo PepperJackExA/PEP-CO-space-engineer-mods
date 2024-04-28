@@ -1,4 +1,3 @@
-from xml.etree.ElementTree import ElementTree
 import os
 
 def pull_lines_with_word(file_path, target_words):
@@ -17,16 +16,22 @@ def add_line_after_tag(lines, tag, new_line):
             modified_lines.append(new_line)
     return modified_lines
 
-def output_file_path(input_file, output_directory):
-    subfolder_name = os.path.basename(os.path.dirname(input_file))
-    return os.path.join(output_directory, subfolder_name, os.path.splitext(os.path.basename(input_file))[0] + '.xml')
+def output_file_path(input_file, output_directory, directory):
+    # Get the relative path of the input file relative to the directory
+    relative_path = os.path.relpath(input_file, directory)
+    # Construct the output file path by joining the output directory with the relative path
+    output_path = os.path.join(output_directory, os.path.splitext(relative_path)[0] + '.xml')
+    # Ensure all parent directories of the output file path are created
+    output_dir = os.path.dirname(output_path)
+    os.makedirs(output_dir, exist_ok=True)
+    return output_path
 
 def process_files(directory, output_directory):
     for root, _, files in os.walk(directory):
         for file_name in files:
             if file_name.endswith('.sbc'):
                 input_file_path = os.path.join(root, file_name)
-                output_file_path_name = output_file_path(input_file_path, output_directory)
+                output_file_path_name = output_file_path(input_file_path, output_directory, directory)
 
                 # Ensure the output folder exists
                 os.makedirs(os.path.dirname(output_file_path_name), exist_ok=True)
@@ -49,8 +54,8 @@ def process_files(directory, output_directory):
                         output_file.write(line + '\n')
 
 
-directory = r'C:\Program Files (x86)\Steam\steamapps\common\SpaceEngineers\Content\Data'  # Replace with the actual directory path
-output_directory = r'C:\Users\ljdug\AppData\Roaming\SpaceEngineers\Mods\modified_files'  # Replace with the desired output directory path
+directory = r'C:\Program Files (x86)\Steam\steamapps\workshop\content\244850\3179652888'  # Replace with the actual directory path
+output_directory = r'C:\Users\ljdug\AppData\Roaming\SpaceEngineers\Mods\modified_files\3179652888'  # Replace with the desired output directory path
 os.makedirs(output_directory, exist_ok=True)
 
 custom_lines_at_beginning = ['<?xml version="1.0" encoding="utf-8"?>']
@@ -84,7 +89,7 @@ target_words = ['</CubeBlocks>','</Definitions>','<TypeId>','<SubtypeId','<Displ
                 'Members>','<BlockId Type','RespawnShips>','<Ship>','</Ship>','<CooldownSeconds>','<DisplayName>','<UseForPlanetsWithAtmosphere>','<UseForSpace>','StatDefinitions>','<Stat xsi:typ','</Stat>','<MinValue>','<DefaultValue>','<MaxValue>','Weapons>','Weapon>',
                 '<RangeMultiplier>','<DamageMultiplier>','<ReleaseTimeAfterFire>','<DeviateShotAngleAiming>','<DeviateShotAngle>','<ReloadTime>','<Recoil','</Recoil','<Weapon>','<CubeSize>','<IsAirTight>','BlockPositions>','BlockPosition>','<ShowEdges>','<RequiredPowerInput>',
                 '<ResourceSinkGroup>','<MaxBroadcastRadius>','<MaxBroadcastPowerDrainkW>','<EnableFirstPerson>','<PowerInputIdle>','<PowerInputTurning>','<PowerInputLasing>','<MinElevationDegrees>','<MaxElevationDegrees>','<MinAzimuthDegrees>','<MaxAzimuthDegrees>',
-                '<RotationRate>','<MaxRange>','<RequireLineOfSight>','DeconstructId>','<MaxFieldSize','<MinFieldSize','GravityAcceleration>','VirtualMass>','InventoryMaxVolume>','StoredGasId>','<LeakPercent>','<GasExplosion']
+                '<RotationRate>','<MaxRange>','<RequireLineOfSight>','DeconstructId>','<MaxFieldSize','<MinFieldSize','GravityAcceleration>','VirtualMass>','InventoryMaxVolume>','StoredGasId>','<LeakPercent>','<GasExplosion','ResearchGroup']
 lines_to_add_after_tags = {
     '</Definistion>': ' ',
 }
