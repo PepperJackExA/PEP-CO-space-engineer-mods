@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>NextGen_Small_Cargo_Crate</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="18" />
+				<Component Subtype="Construction" Count="11" />
+				<Component Subtype="MetalGrid" Count="5" />
+				<Component Subtype="Computer" Count="3" />
+				<Component Subtype="CopperWire" Count="7" />
+				<Component Subtype="Motor" Count="4" />
+				<Component Subtype="Display" Count="1" />
+				<Component Subtype="InteriorPlate" Count="9" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+	</CubeBlocks>
+</Definitions>
+
