@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+			<Id>
+				<TypeId>RadioAntenna</TypeId>
+				<SubtypeId>SmallBlockRadioAntenna</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+				<Component Subtype="SmallTube" Count="1" />
+				<Component Subtype="Construction" Count="1" />
+				<Component Subtype="Computer" Count="1" />
+				<Component Subtype="CopperWire" Count="8" />
+				<Component Subtype="RadioCommunication" Count="4" />
+				<Component Subtype="Construction" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="RadioCommunication" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+			<Id>
+				<TypeId>RadioAntenna</TypeId>
+				<SubtypeId>LargeBlockRadioAntenna</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="60" />
+				<Component Subtype="LargeTube" Count="30" />
+				<Component Subtype="Construction" Count="30" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="AdvancedComputer" Count="20" />
+				<Component Subtype="RadioCommunication" Count="40" />
+				<Component Subtype="SteelPlate" Count="20" />
+			</Components>
+			<CriticalComponent Subtype="RadioCommunication" Index="0" />
+		</Definition>
+	</CubeBlocks>
+</Definitions>
+

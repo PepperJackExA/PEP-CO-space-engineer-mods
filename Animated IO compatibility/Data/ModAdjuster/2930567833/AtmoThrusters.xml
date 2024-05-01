@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockLargeAtmosphericThrust</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="25" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="LargeTube" Count="10" />
+				<Component Subtype="CopperWire" Count="20" />
+				<Component Subtype="MetalGrid" Count="8" />
+				<Component Subtype="Motor" Count="80" />
+				<Component Subtype="TitaniumPlate" Count="25" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SmallBlockSmallAtmosphericThrust</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="5" />
+				<Component Subtype="Construction" Count="15" />
+				<Component Subtype="LargeTube" Count="2" />
+				<Component Subtype="CopperWire" Count="15" />
+				<Component Subtype="MetalGrid" Count="2" />
+				<Component Subtype="Motor" Count="20" />
+				<Component Subtype="TitaniumPlate" Count="5" />
+				<Component Subtype="SteelPlate" Count="5" />
+			</Components>
+			<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockLargeAtmosphericThrust</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="100" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="LargeTube" Count="50" />
+				<Component Subtype="CopperWire" Count="100" />
+				<Component Subtype="Motor" Count="500" />
+				<Component Subtype="TitaniumPlate" Count="150" />
+				<Component Subtype="SteelPlate" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>LargeBlockSmallAtmosphericThrust</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="30" />
+				<Component Subtype="Construction" Count="25" />
+				<Component Subtype="LargeTube" Count="20" />
+				<Component Subtype="CopperWire" Count="50" />
+				<Component Subtype="MetalGrid" Count="10" />
+				<Component Subtype="Motor" Count="100" />
+				<Component Subtype="TitaniumPlate" Count="30" />
+				<Component Subtype="SteelPlate" Count="25" />
+			</Components>
+			<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+		</Definition>
+	</CubeBlocks>
+</Definitions>
+

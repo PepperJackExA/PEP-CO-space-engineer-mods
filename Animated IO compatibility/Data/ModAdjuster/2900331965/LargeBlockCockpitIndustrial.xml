@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+			<Id>
+				<TypeId>Cockpit</TypeId>
+				<SubtypeId>LargeBlockCockpitIndustrial</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="20" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="CopperWire" Count="15" />
+				<Component Subtype="Motor" Count="5" />
+				<Component Subtype="Display" Count="8" />
+				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="AdvancedComputer" Count="30" />
+				<Component Subtype="Fabric" Count="15" />
+				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="BulletproofGlass" Count="60" />
+			</Components>
+			<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+		</Definition>
+	</CubeBlocks>
+</Definitions>
+

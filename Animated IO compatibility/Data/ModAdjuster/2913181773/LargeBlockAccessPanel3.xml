@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+			<Id>
+				<TypeId>ButtonPanel</TypeId>
+				<SubtypeId>LargeBlockAccessPanel3</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="Construction" Count="5" />
+				<Component Subtype="Computer" Count="3" />
+				<Component Subtype="Construction" Count="3" />
+				<Component Subtype="InteriorPlate" Count="3" />
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="1" />
+		</Definition>
+	</CubeBlocks>
+</Definitions>
+

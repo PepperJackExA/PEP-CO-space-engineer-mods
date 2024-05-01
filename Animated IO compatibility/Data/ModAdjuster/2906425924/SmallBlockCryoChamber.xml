@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+			<Id>
+				<TypeId>CryoChamber</TypeId>
+				<SubtypeId>SmallBlockCryoChamber</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="15" />
+				<Component Subtype="Construction" Count="10" />
+				<Component Subtype="CopperWire" Count="10" />
+				<Component Subtype="Motor" Count="4" />
+				<Component Subtype="Display" Count="4" />
+				<Component Subtype="Medical" Count="3" />
+				<Component Subtype="Cryocooler" Count="10" />
+				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="AdvancedComputer" Count="15" />
+				<Component Subtype="InteriorPlate" Count="5" />
+				<Component Subtype="BulletproofGlass" Count="5" />
+			</Components>
+			<CriticalComponent Subtype="AdvancedComputer" Index="0" />
+		</Definition>
+	</CubeBlocks>
+</Definitions>
+

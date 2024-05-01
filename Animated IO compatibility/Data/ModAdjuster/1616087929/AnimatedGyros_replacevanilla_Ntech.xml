@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_GyroDefinition">
+			<Id>
+				<TypeId>Gyro</TypeId>
+				<SubtypeId>LBAnimGyroInside</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Gyroscope</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="LargeTube" Count="4" />
+				<Component Subtype="MetalGrid" Count="50" />
+				<Component Subtype="Motor" Count="30" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="SteelPlate" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_GyroDefinition">
+			<Id>
+				<TypeId>Gyro</TypeId>
+				<SubtypeId>LargeBlockGyro</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Gyroscope</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="LargeTube" Count="4" />
+				<Component Subtype="MetalGrid" Count="50" />
+				<Component Subtype="Motor" Count="30" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="SteelPlate" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_GyroDefinition">
+			<Id>
+				<TypeId>Gyro</TypeId>
+				<SubtypeId>SmallBlockGyro</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Gyroscope</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="15" />
+				<Component Subtype="Construction" Count="5" />
+				<Component Subtype="LargeTube" Count="1" />
+				<Component Subtype="Motor" Count="2" />
+				<Component Subtype="Computer" Count="3" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+	</CubeBlocks>
+</Definitions>
+
