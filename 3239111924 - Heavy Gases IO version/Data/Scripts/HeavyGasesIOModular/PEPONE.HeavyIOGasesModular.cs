@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Sandbox.Common.ObjectBuilders;
 using Sandbox.Definitions;
@@ -19,43 +19,64 @@ using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage;
 using Digi;
 using Sandbox.Game.Entities.Blocks;
+using System.Linq;
+using System.Xml.Linq;
+using System.Xml;
+using VRage.Game.ObjectBuilders.Definitions;
+using System.Security.Cryptography;
 
 namespace PEPONE.HeavyIOGases
 {
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class HeavyGasolineSession : MySessionComponentBase
     {
-        HeavyIOGasSettings Settings = new HeavyIOGasSettings();
+        public HeavyIOGasSettings Settings = new HeavyIOGasSettings();
 
 
         public static bool EnableNPCs = false;
-        public static double GAS_L_KG_CONVERSION_Gasoline = 0;
-        public static double GAS_L_KG_CONVERSION_RocketFuel = 0;
-        public static double GAS_L_KG_CONVERSION_Steam = 0;
-        public static double GAS_L_KG_CONVERSION_Deuterium = 0;
+
+        public static List<MyTuple<string, double>> gasList = new List<MyTuple<string, double>>();
+
+        public static List<string> gasListString = new List<string>();
 
         public override void LoadData()
         {
+
+            
+
+
             //Triggers the load of the mod information
             Settings.Load();
             EnableNPCs = Settings.EnableNPCs;
-            GAS_L_KG_CONVERSION_Gasoline = Settings.GAS_L_KG_CONVERSION_Gasoline;
-            GAS_L_KG_CONVERSION_RocketFuel = Settings.GAS_L_KG_CONVERSION_RocketFuel;
-            GAS_L_KG_CONVERSION_Steam = Settings.GAS_L_KG_CONVERSION_Steam;
-            GAS_L_KG_CONVERSION_Deuterium = Settings.GAS_L_KG_CONVERSION_Deuterium;
+
+            
+
+
+            gasList = Settings.gasList;
+
         }
 
-        class HeavyIOGasSettings
+public class HeavyIOGasSettings
         {
+            //The initial list of IO gases
+            public List<MyTuple<string, double>> gasList = new List<MyTuple<string, double>>()
+            {
+                MyTuple.Create("Gasoline",0.74),
+                MyTuple.Create("RocketFuel",0.791),
+                MyTuple.Create("Steam",0.0561597),
+                MyTuple.Create("Deuterium",0.1624)
+            };
+
+            
+
             const string VariableId = nameof(HeavyIOGasSettings); // IMPORTANT: must be unique as it gets written in a shared space (sandbox.sbc)
             const string FileName = "HeavyIOGas.ini"; // the file that gets saved to world storage under your mod's folder
             const string IniSection = "Config";
 
             public bool EnableNPCs = false;
-            public double GAS_L_KG_CONVERSION_Gasoline = 0.74; // The specific gravity of gasoline ranges from 0.71 to 0.77
-            public double GAS_L_KG_CONVERSION_RocketFuel = 0.791; //Density of Unsymmetrical dimethylhydrazine as 22°C
-            public double GAS_L_KG_CONVERSION_Steam = 0.0561597; //Density at 100 bar & 311.74 °C have fun changing it if you don't like it
-            public double GAS_L_KG_CONVERSION_Deuterium = 0.1624; // Density of liquid deuterium at 18 K (Yeah, I know quite cold eh?)
+
+
+
 
             public HeavyIOGasSettings()
             {
@@ -67,11 +88,53 @@ namespace PEPONE.HeavyIOGases
                 // Load whether NPCs are impacted
                 EnableNPCs = iniParser.Get(IniSection, nameof(EnableNPCs)).ToBoolean(EnableNPCs);
 
-                // Load the other mass coversion factors; default to the above values if anything goes wrong
-                GAS_L_KG_CONVERSION_Gasoline = iniParser.Get(IniSection, nameof(GAS_L_KG_CONVERSION_Gasoline)).ToDouble(GAS_L_KG_CONVERSION_Gasoline);
-                GAS_L_KG_CONVERSION_RocketFuel = iniParser.Get(IniSection, nameof(GAS_L_KG_CONVERSION_RocketFuel)).ToDouble(GAS_L_KG_CONVERSION_RocketFuel);
-                GAS_L_KG_CONVERSION_Steam = iniParser.Get(IniSection, nameof(GAS_L_KG_CONVERSION_Steam)).ToDouble(GAS_L_KG_CONVERSION_Steam);
-                GAS_L_KG_CONVERSION_Deuterium = iniParser.Get(IniSection, nameof(GAS_L_KG_CONVERSION_Deuterium)).ToDouble(GAS_L_KG_CONVERSION_Deuterium);
+
+                //Because errors can and do happen
+                try 
+                {
+                    //Get the gas list from the ini and split it to an array
+                    var configList = iniParser.Get(IniSection, nameof(gasList)).ToString().Trim().Split('\n');
+
+
+                    foreach (string s in configList)
+                    {
+                        // Get the gas name from the ini
+                        string gasName = s.Split(';')[0];
+
+                        // Try and get rid of flukes by making sure the gas has a name
+                        if (gasName.Length > 0)
+                        {
+                            //Get the gas conversion from the ini
+                            double gasConversion = 0;
+                            
+                            // If the second part cannot be parsed as a double, the import of the gas is skipped
+                            if (!double.TryParse(s.Split(';')[1], out gasConversion))
+                            {
+                                Log.Error($"This line could not be imported properly: {s} make sure it is formatted properly as per the instructions in the .ini");
+                                continue;
+                            }
+
+                            var tempTuple = MyTuple.Create(gasName, gasConversion);
+
+                            int index = gasList.FindIndex(x => x.Item1 == gasName.Trim());
+
+                            // if the index is not -1, it was found so we replace the gas with the one from the .ini
+                            if (index != -1)
+                            {
+                                gasList.RemoveAt(index);
+                            }
+                                
+                            // Here we add the gas to the gas list so it can be found by the tanks wanting to gain weight
+                            gasList.Add(tempTuple);
+                            
+                        }
+
+                    }
+                } catch (Exception ex) 
+                { 
+                    Log.Error(ex);
+                }
+
             }
 
             void SaveConfig(MyIni iniParser)
@@ -79,21 +142,10 @@ namespace PEPONE.HeavyIOGases
                 // Define whether NPCs are impacted
                 iniParser.Set(IniSection, nameof(EnableNPCs), EnableNPCs);
 
-                // Gasoline settings
-                iniParser.Set(IniSection, nameof(GAS_L_KG_CONVERSION_Gasoline), GAS_L_KG_CONVERSION_Gasoline);
-                iniParser.SetComment(IniSection, nameof(GAS_L_KG_CONVERSION_Gasoline), "This is the gasoline mass factor in Kg / l");
+                var myarray = gasList.ToArray(x => x.Item1 + ";" + x.Item2);
+                iniParser.Set(IniSection, nameof(gasList), string.Join("\n", myarray));
+                iniParser.SetComment(IniSection, nameof(gasList), "Add the IDs of additional gases in separate lines starting with a '|'. Use a ';' delimiter here. E.g. \n|Hydrogen;0.01111 \n|Oxygen;0.17777");
 
-                // Rocket fuel settings
-                iniParser.Set(IniSection, nameof(GAS_L_KG_CONVERSION_RocketFuel), GAS_L_KG_CONVERSION_RocketFuel);
-                iniParser.SetComment(IniSection, nameof(GAS_L_KG_CONVERSION_RocketFuel), "This is the rocket fuel mass factor in Kg / l");
-
-                // Steam settings
-                iniParser.Set(IniSection, nameof(GAS_L_KG_CONVERSION_Steam), GAS_L_KG_CONVERSION_Steam);
-                iniParser.SetComment(IniSection, nameof(GAS_L_KG_CONVERSION_Steam), "This is the steam mass factor in Kg / l");
-
-                // Deuterium settings
-                iniParser.Set(IniSection, nameof(GAS_L_KG_CONVERSION_Deuterium), GAS_L_KG_CONVERSION_Deuterium);
-                iniParser.SetComment(IniSection, nameof(GAS_L_KG_CONVERSION_Deuterium), "This is the deuterium mass factor in Kg / l");
             }
 
             public void Load()
@@ -106,6 +158,31 @@ namespace PEPONE.HeavyIOGases
 
             void LoadOnHost()
             {
+
+                foreach (var def in MyDefinitionManager.Static.GetAllDefinitions())
+                {
+                    var gasDef = def as MyGasProperties;
+                    if (gasDef != null)
+                    {
+                        Log.Info($"found this: " +
+                            $"\ngasDef.Id: {gasDef.Id}" +
+                            $"\n gasDef.Id.SubtypeName {gasDef.Id.SubtypeName}");
+                        var tempTuple = MyTuple.Create(gasDef.Id.SubtypeName, 0.0);
+
+                        int index = gasList.FindIndex(x => x.Item1 == gasDef.Id.SubtypeName.Trim());
+
+                        // if the index is not -1, it was found so we replace the gas with the one from the .ini
+                        if (index != -1)
+                        {
+                            gasList.RemoveAt(index);
+                        }
+
+                        // Here we add the gas to the gas list so it can be found by the tanks wanting to gain weight
+                        gasList.Add(tempTuple);
+
+                    }
+                }
+
                 MyIni iniParser = new MyIni();
 
                 // load file if exists then save it regardless so that it can be sanitized and updated
@@ -133,10 +210,16 @@ namespace PEPONE.HeavyIOGases
                 {
                     file.Write(saveText);
                 }
+
+                using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage("ModConfig.xml", typeof(HeavyIOGasSettings)))
+                {
+                    writer.Write(MyAPIGateway.Utilities.SerializeToXML(gasList));
+                }
             }
 
             void LoadOnClient()
             {
+
                 string text;
                 if (!MyAPIGateway.Utilities.GetVariable<string>(VariableId, out text))
                     throw new Exception("No config found in sandbox.sbc!");
@@ -180,26 +263,15 @@ namespace PEPONE.HeavyIOGases
             // Check if the tank has a block definition
             if (tankDef != null)
             {
-                // Find out what type of tank this is and set multiplier accordingly
-                switch (tankDef.StoredGasId.ToString())
-                {
-                    case "MyObjectBuilder_GasProperties/Gasoline":
-                        massMultiplierIO = HeavyGasolineSession.GAS_L_KG_CONVERSION_Gasoline;
-                        break;
-                    case "MyObjectBuilder_GasProperties/RocketFuel":
-                        massMultiplierIO = HeavyGasolineSession.GAS_L_KG_CONVERSION_RocketFuel;
-                        break;
-                    case "MyObjectBuilder_GasProperties/Steam":
-                        massMultiplierIO = HeavyGasolineSession.GAS_L_KG_CONVERSION_Steam;
-                        break;
-                    case "MyObjectBuilder_GasProperties/Deuterium":
-                        massMultiplierIO = HeavyGasolineSession.GAS_L_KG_CONVERSION_Deuterium;
-                        break;
-                    default:
-                        //Maybe add a message for gases that were not found.
-                        break;
 
-                }
+                string searchString = tankDef.StoredGasId.ToString();
+
+                var gasMultiplier = HeavyGasolineSession.gasList.Find(x => "MyObjectBuilder_GasProperties/"+x.Item1 == searchString);
+                        massMultiplierIO = gasMultiplier.Item2;
+                //break;
+                Log.Info($"Look! I found this nice tank: {searchString} and it gave me the mass multiplier {massMultiplierIO}");
+
+                //}
             }
 
 

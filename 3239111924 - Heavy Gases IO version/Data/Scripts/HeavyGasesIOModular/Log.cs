@@ -42,7 +42,7 @@ namespace Digi
         {
             instance = null;
 
-            if(handler != null && handler.AutoClose)
+            if (handler != null && handler.AutoClose)
             {
                 Unload();
             }
@@ -52,14 +52,14 @@ namespace Digi
         {
             try
             {
-                if(unloaded)
+                if (unloaded)
                     return;
 
                 unloaded = true;
                 handler?.Close();
                 handler = null;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MyLog.Default.WriteLine($"Error in {ModContext.ModName} ({ModContext.ModId}): {e.Message}\n{e.StackTrace}");
                 throw new ModCrashedException(e, ModContext);
@@ -68,10 +68,10 @@ namespace Digi
 
         private static void EnsureHandlerCreated()
         {
-            if(unloaded)
+            if (unloaded)
                 throw new Exception("Digi.Log accessed after it was unloaded!");
 
-            if(handler == null)
+            if (handler == null)
                 handler = new Handler();
         }
         #endregion
@@ -204,9 +204,9 @@ namespace Digi
         {
             EnsureHandlerCreated();
 
-            if(task.Exceptions != null && task.Exceptions.Length > 0)
+            if (task.Exceptions != null && task.Exceptions.Length > 0)
             {
-                foreach(Exception e in task.Exceptions)
+                foreach (Exception e in task.Exceptions)
                 {
                     Error($"Error in {taskName} thread!\n{e}");
                 }
@@ -257,10 +257,10 @@ namespace Digi
 
             public void Init(Log sessionComp)
             {
-                if(writer != null)
+                if (writer != null)
                     return; // already initialized
 
-                if(MyAPIGateway.Utilities == null)
+                if (MyAPIGateway.Utilities == null)
                 {
                     Error("MyAPIGateway.Utilities is NULL !");
                     return;
@@ -268,7 +268,7 @@ namespace Digi
 
                 this.sessionComp = sessionComp;
 
-                if(string.IsNullOrWhiteSpace(ModName))
+                if (string.IsNullOrWhiteSpace(ModName))
                     ModName = sessionComp.ModContext.ModName;
 
                 WorkshopId = GetWorkshopID(sessionComp.ModContext.ModId);
@@ -276,13 +276,13 @@ namespace Digi
                 writer = MyAPIGateway.Utilities.WriteFileInLocalStorage(FILE, typeof(Log));
 
                 #region Pre-init messages
-                if(preInitMessages != null)
+                if (preInitMessages != null)
                 {
                     string warning = $"{modName} WARNING: there are log messages before the mod initialized!";
 
                     Info($"--- pre-init messages ---");
 
-                    foreach(string msg in preInitMessages)
+                    foreach (string msg in preInitMessages)
                     {
                         Info(msg, warning);
                     }
@@ -333,7 +333,7 @@ namespace Digi
 
             public void Close()
             {
-                if(writer != null)
+                if (writer != null)
                 {
                     Info("Unloaded.");
 
@@ -355,7 +355,7 @@ namespace Digi
 
             public void DecreaseIndent()
             {
-                if(indent > 0)
+                if (indent > 0)
                     indent--;
             }
 
@@ -370,7 +370,7 @@ namespace Digi
 
                 LogMessage(message, "ERROR: "); // write to custom log
 
-                if(printText != null) // printing to HUD is optional
+                if (printText != null) // printing to HUD is optional
                     ShowHudMessage(ref notifyError, message, printText, printTime, MyFontEnum.Red);
             }
 
@@ -378,25 +378,25 @@ namespace Digi
             {
                 LogMessage(message); // write to custom log
 
-                if(printText != null) // printing to HUD is optional
+                if (printText != null) // printing to HUD is optional
                     ShowHudMessage(ref notifyInfo, message, printText, printTime, MyFontEnum.White);
             }
 
             private void ShowHudMessage(ref IMyHudNotification notify, string message, string printText, int printTime, string font)
             {
-                if(printText == null)
+                if (printText == null)
                     return;
 
                 try
                 {
-                    if(MyAPIGateway.Utilities != null && !MyAPIGateway.Utilities.IsDedicated) // print on screen if applicable
+                    if (MyAPIGateway.Utilities != null && !MyAPIGateway.Utilities.IsDedicated) // print on screen if applicable
                     {
-                        if(printText == PRINT_ERROR)
+                        if (printText == PRINT_ERROR)
                             printText = errorPrintText;
-                        else if(printText == PRINT_MSG)
+                        else if (printText == PRINT_MSG)
                             printText = message;
 
-                        if(notify == null)
+                        if (notify == null)
                         {
                             notify = MyAPIGateway.Utilities.CreateNotification(printText, printTime, font);
                         }
@@ -410,7 +410,7 @@ namespace Digi
                         notify.Show();
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Info("ERROR: Could not send notification to local client: " + e);
                     MyLog.Default.WriteLineAndConsole(modName + " logger error/exception: Could not send notification to local client: " + e);
@@ -424,20 +424,20 @@ namespace Digi
                     sb.Clear();
                     sb.Append(DateTime.Now.ToString("[HH:mm:ss] "));
 
-                    if(writer == null)
+                    if (writer == null)
                         sb.Append("(PRE-INIT) ");
 
-                    for(int i = 0; i < indent; i++)
+                    for (int i = 0; i < indent; i++)
                         sb.Append(' ', 4);
 
-                    if(prefix != null)
+                    if (prefix != null)
                         sb.Append(prefix);
 
                     sb.Append(message);
 
-                    if(writer == null)
+                    if (writer == null)
                     {
-                        if(preInitMessages == null)
+                        if (preInitMessages == null)
                             preInitMessages = new List<string>();
 
                         preInitMessages.Add(sb.ToString());
@@ -450,7 +450,7 @@ namespace Digi
 
                     sb.Clear();
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     MyLog.Default.WriteLineAndConsole($"{modName} had an error while logging message = '{message}'\nLogger error: {e.Message}\n{e.StackTrace}");
                 }
@@ -459,9 +459,9 @@ namespace Digi
             private ulong GetWorkshopID(string modId)
             {
                 // HACK workaround for MyModContext not having the actual workshop ID number.
-                foreach(MyObjectBuilder_Checkpoint.ModItem mod in MyAPIGateway.Session.Mods)
+                foreach (MyObjectBuilder_Checkpoint.ModItem mod in MyAPIGateway.Session.Mods)
                 {
-                    if(mod.Name == modId)
+                    if (mod.Name == modId)
                         return mod.PublishedFileId;
                 }
 
