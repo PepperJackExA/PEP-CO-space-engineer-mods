@@ -43,7 +43,7 @@ namespace PEPONE.HeavyIOGases
         {
 
             
-
+// add a function to test for the heavy gas mod
 
             //Triggers the load of the mod information
             Settings.Load();
