@@ -25,40 +25,75 @@ using System.Xml;
 using VRage.Game.ObjectBuilders.Definitions;
 using System.Security.Cryptography;
 
-namespace PEPONE.HeavyIOGases
+namespace PEPONE.HeavyGasesModular
 {
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
-    public class HeavyGasolineSession : MySessionComponentBase
+    public class HeavyGasesModular : MySessionComponentBase
     {
-        public HeavyIOGasSettings Settings = new HeavyIOGasSettings();
+        public HeavyGasesModularSettings Settings = new HeavyGasesModularSettings();
 
 
-        public static bool EnableNPCs = false;
-
+        public static bool enableNPCs = false;
         public static List<MyTuple<string, double>> gasList = new List<MyTuple<string, double>>();
 
-        public static List<string> gasListString = new List<string>();
+        public const ulong HEAVY_GAS_MOD_ID = 2921890257;
+        public static bool HeavyGasVanillaModInstalled = false;
+
+        public static HeavyGasesModular Instance = null;
+
 
         public override void LoadData()
         {
+            Instance = this;
 
-            
+            // Check if the Heavy Gas mod is installed to avoid overlaps
+            List<MyObjectBuilder_Checkpoint.ModItem> mods = MyAPIGateway.Session.Mods;
 
+            foreach (MyObjectBuilder_Checkpoint.ModItem mod in mods)
+            {
+                if (mod.PublishedFileId == HEAVY_GAS_MOD_ID)
+                {
+                    HeavyGasVanillaModInstalled = true;
+                    Log.Info("Heavy Gas mod found, will adjust the procedures accordingly.");
+                    break;
+                }
+            }
 
             //Triggers the load of the mod information
-            Settings.Load();
-            EnableNPCs = Settings.EnableNPCs;
+            Settings.Load(HeavyGasVanillaModInstalled);
 
-            
-
-
+            enableNPCs = Settings.enableNPCs;
             gasList = Settings.gasList;
+
 
         }
 
-public class HeavyIOGasSettings
+        public override void BeforeStart()
         {
-            //The initial list of IO gases
+            if (HeavyGasVanillaModInstalled)
+            {
+                Log.Info("You have both the Heavy Gas mod and the Heavy Gas Modular mod installed.\nThe Heavy Gas Modular mod will ignore your settings for Hydrogen and Oxygen to avoid compatibility issues.",
+                    "You have both the Heavy Gas mod and the Heavy Gas Modular mod installed.\nThe Heavy Gas Modular mod will ignore your settings for Hydrogen and Oxygen to avoid compatibility issues.",
+                    10000);
+            }
+        }
+
+
+
+        public class HeavyGasesModularSettings
+        {
+
+
+            const string VariableId = nameof(HeavyGasesModularSettings); // IMPORTANT: must be unique as it gets written in a shared space (sandbox.sbc)
+            const string FileName = "HeavyGasesModular.ini"; // the file that gets saved to world storage under your mod's folder
+            const string IniSection = "Config";
+
+            public bool enableNPCs = false;
+
+
+            public bool HeavyGasVanillaModInstalled = false;
+
+            //The initial list of IO gases used to prefill the .ini
             public List<MyTuple<string, double>> gasList = new List<MyTuple<string, double>>()
             {
                 MyTuple.Create("Gasoline",0.74),
@@ -67,26 +102,17 @@ public class HeavyIOGasSettings
                 MyTuple.Create("Deuterium",0.1624)
             };
 
-            
-
-            const string VariableId = nameof(HeavyIOGasSettings); // IMPORTANT: must be unique as it gets written in a shared space (sandbox.sbc)
-            const string FileName = "HeavyIOGas.ini"; // the file that gets saved to world storage under your mod's folder
-            const string IniSection = "Config";
-
-            public bool EnableNPCs = false;
-
-
-
-
-            public HeavyIOGasSettings()
+            public HeavyGasesModularSettings()
             {
 
             }
 
+
+
             void LoadConfig(MyIni iniParser)
             {
                 // Load whether NPCs are impacted
-                EnableNPCs = iniParser.Get(IniSection, nameof(EnableNPCs)).ToBoolean(EnableNPCs);
+                enableNPCs = iniParser.Get(IniSection, nameof(enableNPCs)).ToBoolean(enableNPCs);
 
 
                 //Because errors can and do happen
@@ -110,19 +136,16 @@ public class HeavyIOGasSettings
                             // If the second part cannot be parsed as a double, the import of the gas is skipped
                             if (!double.TryParse(s.Split(';')[1], out gasConversion))
                             {
-                                Log.Error($"This line could not be imported properly: {s} make sure it is formatted properly as per the instructions in the .ini");
+                                Log.Error($"This line could not be imported properly: {s}\nMake sure it is formatted properly as per the instructions in the .ini");
                                 continue;
                             }
 
                             var tempTuple = MyTuple.Create(gasName, gasConversion);
 
-                            int index = gasList.FindIndex(x => x.Item1 == gasName.Trim());
+                            // if the gas was found, we replace it with the one from the .ini
+                            gasList.RemoveAll(x => x.Item1 == gasName.Trim());
 
-                            // if the index is not -1, it was found so we replace the gas with the one from the .ini
-                            if (index != -1)
-                            {
-                                gasList.RemoveAt(index);
-                            }
+                            
                                 
                             // Here we add the gas to the gas list so it can be found by the tanks wanting to gain weight
                             gasList.Add(tempTuple);
@@ -135,12 +158,13 @@ public class HeavyIOGasSettings
                     Log.Error(ex);
                 }
 
+
             }
 
             void SaveConfig(MyIni iniParser)
             {
                 // Define whether NPCs are impacted
-                iniParser.Set(IniSection, nameof(EnableNPCs), EnableNPCs);
+                iniParser.Set(IniSection, nameof(enableNPCs), enableNPCs);
 
                 var myarray = gasList.ToArray(x => x.Item1 + ";" + x.Item2);
                 iniParser.Set(IniSection, nameof(gasList), string.Join("\n", myarray));
@@ -148,14 +172,15 @@ public class HeavyIOGasSettings
 
             }
 
-            public void Load()
+            public void Load(bool compatibility)
             {
+                HeavyGasVanillaModInstalled = compatibility;
                 if (MyAPIGateway.Session.IsServer)
                     LoadOnHost();
                 else
                     LoadOnClient();
             }
-
+            // This loads on either a server or a single player
             void LoadOnHost()
             {
 
@@ -164,21 +189,17 @@ public class HeavyIOGasSettings
                     var gasDef = def as MyGasProperties;
                     if (gasDef != null)
                     {
-                        Log.Info($"found this: " +
-                            $"\ngasDef.Id: {gasDef.Id}" +
-                            $"\n gasDef.Id.SubtypeName {gasDef.Id.SubtypeName}");
                         var tempTuple = MyTuple.Create(gasDef.Id.SubtypeName, 0.0);
 
                         int index = gasList.FindIndex(x => x.Item1 == gasDef.Id.SubtypeName.Trim());
 
-                        // if the index is not -1, it was found so we replace the gas with the one from the .ini
-                        if (index != -1)
+                        // if the index is -1, the gas was not found so we add it to the ini
+                        if (index == -1)
                         {
-                            gasList.RemoveAt(index);
-                        }
-
                         // Here we add the gas to the gas list so it can be found by the tanks wanting to gain weight
                         gasList.Add(tempTuple);
+                        }
+
 
                     }
                 }
@@ -186,9 +207,9 @@ public class HeavyIOGasSettings
                 MyIni iniParser = new MyIni();
 
                 // load file if exists then save it regardless so that it can be sanitized and updated
-                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(FileName, typeof(HeavyIOGasSettings)))
+                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(FileName, typeof(HeavyGasesModularSettings)))
                 {
-                    using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(FileName, typeof(HeavyIOGasSettings)))
+                    using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(FileName, typeof(HeavyGasesModularSettings)))
                     {
                         string text = file.ReadToEnd();
 
@@ -206,17 +227,14 @@ public class HeavyIOGasSettings
                 string saveText = iniParser.ToString();
                 MyAPIGateway.Utilities.SetVariable<string>(VariableId, saveText);
 
-                using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(FileName, typeof(HeavyIOGasSettings)))
+                using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(FileName, typeof(HeavyGasesModularSettings)))
                 {
                     file.Write(saveText);
                 }
 
-                using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage("ModConfig.xml", typeof(HeavyIOGasSettings)))
-                {
-                    writer.Write(MyAPIGateway.Utilities.SerializeToXML(gasList));
-                }
-            }
 
+            }
+            // This only loads on a server client
             void LoadOnClient()
             {
 
@@ -239,17 +257,14 @@ public class HeavyIOGasSettings
     [MyEntityComponentDescriptor(typeof(MyObjectBuilder_OxygenTank), false)]
     public class HeavyGas : MyGameLogicComponent
     {
-        // A molecule of water weights 18 atomic mass units
-        // .. 2 of which are hydrogen
-        // .. and 16 are oxygen
-        // in SE, turning 1kg of Ice into gas results in 10L of Hydrogen, and 5L of Oxygen, scale the values accordingly
+
 
         private IMyGasTank tank;
 
-        bool SetupComplete = false;
-        double massMultiplierIO = 0;
+        bool setupComplete = false;
+        double massMultiplierModular = 0;
 
-        bool NPCOwned = false;
+        bool isNPCOwned = false;
 
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
         {
@@ -258,36 +273,64 @@ public class HeavyIOGasSettings
             base.Init(objectBuilder);
             tank = (IMyGasTank)Entity;
 
-            MyGasTankDefinition tankDef = (MyGasTankDefinition)tank.SlimBlock.BlockDefinition;
+            NeedsUpdate |= MyEntityUpdateEnum.BEFORE_NEXT_FRAME; 
+        }
 
-            // Check if the tank has a block definition
-            if (tankDef != null)
-            {
+        public override void UpdateOnceBeforeFrame()
+        {
+            base.UpdateOnceBeforeFrame();
 
-                string searchString = tankDef.StoredGasId.ToString();
+            
+                if (tank?.CubeGrid?.Physics == null) // ignore projected and other non-physical grids
+                    return;
 
-                var gasMultiplier = HeavyGasolineSession.gasList.Find(x => "MyObjectBuilder_GasProperties/"+x.Item1 == searchString);
-                        massMultiplierIO = gasMultiplier.Item2;
-                //break;
-                Log.Info($"Look! I found this nice tank: {searchString} and it gave me the mass multiplier {massMultiplierIO}");
+                MyGasTankDefinition tankDef = (MyGasTankDefinition)tank.SlimBlock.BlockDefinition;
 
-                //}
+                // Check if the tank has a block definition
+                if (tankDef != null)
+                {
+
+                    string searchString = tankDef.StoredGasId.ToString();
+                try
+                {
+                    // Heavy Gas installed and not set to overwrite
+                    if (HeavyGasesModular.HeavyGasVanillaModInstalled)
+                    {
+                        if (searchString == "MyObjectBuilder_GasProperties/Hydrogen" || searchString == "MyObjectBuilder_GasProperties/Oxygen")
+                        {
+                            //This is to ignore hydrogen and oxygen since they are managed by the Heavy Gas vanilla mod
+                            return;
+
+                        }
+                    }
+                    
+                    // This means that either Heavy Gas isn't installed or that the tank is not an h2 / o2 tank
+                    var gasMultiplier = HeavyGasesModular.gasList.Find(x => "MyObjectBuilder_GasProperties/" + x.Item1 == searchString);
+                    massMultiplierModular = gasMultiplier.Item2;
+                }
+
+                catch (Exception ex)
+                {
+                    Log.Error(ex);
+                }
+
+                NeedsUpdate = massMultiplierModular > 0f ? MyEntityUpdateEnum.EACH_FRAME : MyEntityUpdateEnum.NONE;
+
             }
-
-
-            NeedsUpdate = massMultiplierIO > 0f ? MyEntityUpdateEnum.EACH_FRAME : MyEntityUpdateEnum.NONE;
+            
+            
         }
 
         private void CheckIfNPCOwned(IMyCubeGrid grid)
         {
-            NPCOwned = true;
+            isNPCOwned = true;
             foreach (var owner in grid.BigOwners)
             {
                 if (owner == 0)
                     continue;
 
                 if (MyAPIGateway.Players.TryGetSteamId(owner) > 0)
-                    NPCOwned = false;
+                    isNPCOwned = false;
             }
         }
 
@@ -311,7 +354,7 @@ public class HeavyIOGasSettings
         {
             base.UpdateBeforeSimulation();
 
-            if (SetupComplete == false)
+            if (setupComplete == false)
             {
                 tank.CubeGrid.OnBlockOwnershipChanged += CheckIfNPCOwned;
                 tank.CubeGrid.OnGridSplit += OnGridSplit;
@@ -319,7 +362,7 @@ public class HeavyIOGasSettings
 
                 // Update every 100 frames only from now on
                 NeedsUpdate = MyEntityUpdateEnum.EACH_100TH_FRAME;
-                SetupComplete = true;
+                setupComplete = true;
             }
         }
 
@@ -328,11 +371,11 @@ public class HeavyIOGasSettings
             base.UpdateAfterSimulation100();
 
             MyInventory inv = (MyInventory)tank.GetInventory();
-            MyFixedPoint newExternalMass = (MyFixedPoint)((tank.FilledRatio * tank.Capacity) * massMultiplierIO);
+            MyFixedPoint newExternalMass = (MyFixedPoint)((tank.FilledRatio * tank.Capacity) * massMultiplierModular);
 
 
             // disable extra mass for NPC grids, if needed
-            if (HeavyGasolineSession.EnableNPCs == false && NPCOwned == true)
+            if (HeavyGasesModular.enableNPCs == false && isNPCOwned == true)
             {
                 newExternalMass = 0;
             }
