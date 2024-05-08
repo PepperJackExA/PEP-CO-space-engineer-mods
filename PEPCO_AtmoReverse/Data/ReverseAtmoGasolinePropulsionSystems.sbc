@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>PEPCO_AtmoReverse</SubtypeId>
+			</Id>
+			<DisplayName>Advanced Gasoline Atmospheric Thruster</DisplayName>
+			<Description>Gasoline Propulsion System for use in Atmospher</Description>
+			<Icon>Textures\GUI\Icons\Cubes\PEPCO_AtmoReverse.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="5"/>
+			<Center x="0" y="1" z="0" />
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\PEPCO_AtmoReverse.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="5"/>
+				<Component Subtype="Construction" Count="15"/>
+				<Component Subtype="LargeTube" Count="2"/>
+				<Component Subtype="CopperWire" Count="15"/>
+				<Component Subtype="MetalGrid" Count="2"/>
+				<Component Subtype="Motor" Count="20"/>
+				<Component Subtype="Computer" Count="5"/>
+				<Component Subtype="TitaniumPlate" Count="5"/>
+				<Component Subtype="SteelPlate" Count="5"/>
+			</Components>
+			<CriticalComponent Subtype="TitaniumPlate" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.00" StartY="3.00" EndX="1.00" EndY="5.00"/>
+			</MountPoints>
+			<ThrusterType>Hydrogen</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+			<ForceMagnitude>144000</ForceMagnitude>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Gasoline</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>0.0125</MaxPowerConsumption>
+			<MinPowerConsumption>0.000000001</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+			<PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+			<PropellerRoundsPerSecondOnFullSpeed>1.9</PropellerRoundsPerSecondOnFullSpeed>
+			<PropellerRoundsPerSecondOnIdleSpeed>0.3</PropellerRoundsPerSecondOnIdleSpeed>
+			<PropellerAccelerationTime>3</PropellerAccelerationTime>
+			<PropellerDecelerationTime>6</PropellerDecelerationTime>
+			<PropellerMaxVisibleDistance>60</PropellerMaxVisibleDistance>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+			<NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+			<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<Public>true</Public>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>15</PCU>
+			<IsAirTight>false</IsAirTight>
+			<VoxelPlacement>
+				<StaticMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+				</StaticMode>
+				<DynamicMode>
+					<PlacementMode>OutsideVoxel</PlacementMode>
+				</DynamicMode>
+			</VoxelPlacement>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\PEPCO_AtmoReverse_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\PEPCO_AtmoReverse_BS2.mwm"/>
+			</BuildProgressModels>
+		</Definition>
+	</CubeBlocks>
+	<BlockVariantGroups>
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="PEPCO_AtmoReverse"/>
+			<Blocks>
+				<Block Type="Thrust" Subtype="PEPCO_AtmoReverse"/>
+			</Blocks>
+		</BlockVariantGroup>
+	</BlockVariantGroups>
+	<CategoryClasses>
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+			<Id>
+				<TypeId>GuiBlockCategoryDefinition</TypeId>
+				<SubtypeId/>
+			</Id>
+			<DisplayName>Propulsion Systems v2</DisplayName>
+			<Name>PropulsionSystemV2</Name>
+			<ItemIds>
+				<string>Thrust/PEPCO_AtmoReverse</string>
+			</ItemIds>
+		</Category>
+	</CategoryClasses>
+</Definitions>
