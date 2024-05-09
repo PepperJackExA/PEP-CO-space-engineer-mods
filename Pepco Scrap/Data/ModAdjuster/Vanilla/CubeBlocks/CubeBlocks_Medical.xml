@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_MedicalRoomDefinition">
+			<Id>
+				<TypeId>MedicalRoom</TypeId>
+				<SubtypeId>LargeMedicalRoom</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_MedicalRoom</DisplayName>
+			<IdleSound>BlockMedical</IdleSound>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="220">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapInteriorPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="80">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="MetalGrid" Count="60">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMetalGrid</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SmallTube" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSmallTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="LargeTube" Count="5">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapLargeTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Display" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapDisplay</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Medical" Count="15">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMedical</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="InteriorPlate" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapInteriorPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Medical" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+			<Id>
+				<TypeId>CryoChamber</TypeId>
+				<SubtypeId>LargeBlockCryoChamber</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_CryoChamber</DisplayName>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="30">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapInteriorPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="8">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Display" Count="8">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapDisplay</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Medical" Count="3">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMedical</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="30">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="InteriorPlate" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapInteriorPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="BulletproofGlass" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapBulletproofGlass</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<IdlePowerConsumption>0.00003</IdlePowerConsumption>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_CryoChamberDefinition">
+			<Id>
+				<TypeId>CryoChamber</TypeId>
+				<SubtypeId>SmallBlockCryoChamber</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_CryoChamber</DisplayName>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="15">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapInteriorPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Display" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapDisplay</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Medical" Count="3">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMedical</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="15">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="InteriorPlate" Count="5">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapInteriorPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="BulletproofGlass" Count="5">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapBulletproofGlass</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<IdlePowerConsumption>0.00003</IdlePowerConsumption>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
