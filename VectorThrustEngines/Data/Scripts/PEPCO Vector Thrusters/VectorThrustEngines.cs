@@ -21,7 +21,8 @@ using static VRageMath.Base27Directions;
 namespace PEPCO.VectorThrustEngines
 {
     [MyEntityComponentDescriptor(typeof(MyObjectBuilder_Thrust), false,
-                                 "SmallBlockLargeAtmosphericThrust")]
+                                    "SmallBlockLargeAtmosphericThrust",
+                                    "PEPCO_VectorThrustEngineMain")]
     public class ThrustBlock : MyGameLogicComponent
     {
 
@@ -126,26 +127,33 @@ namespace PEPCO.VectorThrustEngines
 
         public override void UpdateBeforeSimulation()
         {
+            if (VectorThrustEnginesMod.Instance == null || !VectorThrustEnginesMod.Instance.IsPlayer)
+                return;
+
+            thrust = (MyThrust)Entity;
+            MyCubeGrid grid = thrust.CubeGrid;
+
+            if (grid?.Physics == null || !grid.Physics.Enabled)
+                return;
 
             try
             {
-                if (VectorThrustEnginesMod.Instance == null || !VectorThrustEnginesMod.Instance.IsPlayer)
-                    return;
-
-                thrust = (MyThrust)Entity;
-                MyCubeGrid grid = thrust.CubeGrid;
-
-                if (grid?.Physics == null || !grid.Physics.Enabled)
-                    return;
 
                 if (VectorThrust_Toggle && thrust.CurrentStrength > 0)
                 {
+                    float rotationAngle;
+                    if (VectorThrustReverse_Toggle)
+                        rotationAngle = VectorThrust_Angle * -1;
+                    else rotationAngle = VectorThrust_Angle;
+
+                    float rotationRad = MathHelper.ToRadians(VectorThrust_Angle);
+
                     // Get the relevant directions and axis
                     Vector3D axis = thrust.WorldMatrix.Left;
                     Vector3D direction = thrust.WorldMatrix.Backward;
 
                     // Rotate around the axis by degrees
-                    MatrixD rotate = MatrixD.CreateFromAxisAngle(axis, MathHelper.ToRadians(VectorThrust_Angle));
+                    MatrixD rotate = MatrixD.CreateFromAxisAngle(axis, rotationRad);
                     Vector3D rotated = Vector3D.TransformNormal(direction, rotate);
 
                     // THis is where the forces will be applied

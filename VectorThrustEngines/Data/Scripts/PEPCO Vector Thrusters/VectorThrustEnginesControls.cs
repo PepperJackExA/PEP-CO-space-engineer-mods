@@ -111,6 +111,8 @@ namespace VectorThrustEngines.Data.Scripts.PEPONE_Vector_Thrusters
                 MyAPIGateway.TerminalControls.AddControl<IMyThrust>(c);
             }
 
+            IMyTerminalControlSlider slider;
+
             {
                 var c = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlSlider, IMyThrust>(IdPrefix + "VectorThrustAngleSlider");
                 c.Title = MyStringId.GetOrCompute("Vector Thrust Angle");
@@ -140,6 +142,24 @@ namespace VectorThrustEngines.Data.Scripts.PEPONE_Vector_Thrusters
                         float val = logic.VectorThrust_Angle;
                         sb.Append(Math.Round(val, 2)).Append(" degrees");
                     }
+                };
+                slider = c;
+                MyAPIGateway.TerminalControls.AddControl<IMyThrust>(c);
+            }
+
+            {
+                var c = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlButton, IMyThrust>(IdPrefix + "VectorThrustAngleReset");
+                c.Title = MyStringId.GetOrCompute("Reset");
+                c.Tooltip = MyStringId.GetOrCompute("Reset the angle to 0!");
+                c.SupportsMultipleBlocks = true;
+                c.Visible = CustomVisibleCondition;
+
+                c.Action = (b) =>
+                {
+                    var logic = b?.GameLogic?.GetAs<ThrustBlock>();
+                    if (logic != null)
+                        logic.VectorThrust_Angle = 0f;
+                    slider.UpdateVisual();
                 };
 
                 MyAPIGateway.TerminalControls.AddControl<IMyThrust>(c);
