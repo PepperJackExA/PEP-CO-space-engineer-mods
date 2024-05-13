@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+			<Id>
+				<TypeId>Refinery</TypeId>
+				<SubtypeId>LargeRefinery</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Refinery</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1100">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="40">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="LargeTube" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapLargeTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="16">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="MetalGrid" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMetalGrid</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="100">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+			<Id>
+				<TypeId>Refinery</TypeId>
+				<SubtypeId>Blast Furnace</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Arc_Furnace</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="100">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+			<Id>
+				<TypeId>OxygenGenerator</TypeId>
+				<SubtypeId></SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_OxygenGenerator</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="110">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="5">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="LargeTube" Count="2">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapLargeTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="5">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<Id>
+				<TypeId>GasProperties</TypeId>
+				<SubtypeId>Oxygen</SubtypeId>
+			</Id>
+			<Id>
+				<TypeId>GasProperties</TypeId>
+				<SubtypeId>Hydrogen</SubtypeId>
+			</Id>
+			<IdleSound>BlockOxyGenIdle</IdleSound>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_OxygenGeneratorDefinition">
+			<Id>
+				<TypeId>OxygenGenerator</TypeId>
+				<SubtypeId>OxygenGeneratorSmall</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_OxygenGenerator</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="6">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="8">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="LargeTube" Count="2">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapLargeTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="1">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="3">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="2">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<Id>
+				<TypeId>GasProperties</TypeId>
+				<SubtypeId>Oxygen</SubtypeId>
+			</Id>
+			<Id>
+				<TypeId>GasProperties</TypeId>
+				<SubtypeId>Hydrogen</SubtypeId>
+			</Id>
+			<IdleSound>BlockOxyGenIdle</IdleSound>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+			<Id>
+				<TypeId>Assembler</TypeId>
+				<SubtypeId>LargeAssembler</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_Assembler</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="120">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="80">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Display" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapDisplay</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="MetalGrid" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMetalGrid</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="160">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+			<Id>
+				<TypeId>Assembler</TypeId>
+				<SubtypeId>BasicAssembler</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_BasicAssembler</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="60">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="40">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Display" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapDisplay</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="80">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_SurvivalKitDefinition">
+			<Id>
+				<TypeId>SurvivalKit</TypeId>
+				<SubtypeId>SurvivalKitLarge</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_SurvivalKit</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="2">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Medical" Count="3">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMedical</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Display" Count="1">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapDisplay</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="5">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_SurvivalKitDefinition">
+			<Id>
+				<TypeId>SurvivalKit</TypeId>
+				<SubtypeId>SurvivalKit</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_SurvivalKit</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="2">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Medical" Count="3">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMedical</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Display" Count="1">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapDisplay</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="5">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="5">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_OxygenFarmDefinition">
+			<Id>
+				<TypeId>OxygenFarm</TypeId>
+				<SubtypeId>LargeBlockOxygenFarm</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_OxygenFarm</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="40">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="BulletproofGlass" Count="60">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapBulletproofGlass</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="LargeTube" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapLargeTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SmallTube" Count="10">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSmallTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="BulletproofGlass" Count="40">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapBulletproofGlass</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<Id>
+				<TypeId>GasProperties</TypeId>
+				<SubtypeId>Oxygen</SubtypeId>
+			</Id>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+			<Id>
+				<TypeId>UpgradeModule</TypeId>
+				<SubtypeId>LargeProductivityModule</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_ProductivityModule</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="80">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="40">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SmallTube" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSmallTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Computer" Count="60">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapComputer</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+			<Id>
+				<TypeId>UpgradeModule</TypeId>
+				<SubtypeId>LargeEffectivenessModule</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_EffectivenessModule</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="80">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="50">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SmallTube" Count="15">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSmallTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Superconductor" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSuperconductor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+			<Id>
+				<TypeId>UpgradeModule</TypeId>
+				<SubtypeId>LargeEnergyModule</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_PowerEfficiencyModule</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="80">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="40">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SmallTube" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSmallTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="PowerCell" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapPowerCell</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Motor" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapMotor</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="SteelPlate" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+		</Definition>
+	</CubeBlocks>
+</Definitions>

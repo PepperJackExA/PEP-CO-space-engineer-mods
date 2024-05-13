@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+			<Id>
+				<TypeId>ReflectorLight</TypeId>
+				<SubtypeId>LargeBlockFrontLight</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_ReflectorLight</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="8">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="LargeTube" Count="2">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapLargeTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="InteriorPlate" Count="20">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapInteriorPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="15">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="BulletproofGlass" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapBulletproofGlass</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ReflectorBlockDefinition">
+			<Id>
+				<TypeId>ReflectorLight</TypeId>
+				<SubtypeId>SmallBlockFrontLight</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_ReflectorLight</DisplayName>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapSteelPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="LargeTube" Count="1">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapLargeTube</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="InteriorPlate" Count="1">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapInteriorPlate</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="Construction" Count="1">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+				<Component Subtype="BulletproofGlass" Count="2">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapBulletproofGlass</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>SmallLight</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_InteriorLight</DisplayName>
+			<Components>
+				<Component Subtype="Construction" Count="2">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>SmallBlockSmallLight</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_InteriorLight</DisplayName>
+			<Components>
+				<Component Subtype="Construction" Count="2">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>LargeBlockLight_1corner</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_CornerLight</DisplayName>
+			<Components>
+				<Component Subtype="Construction" Count="3">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>LargeBlockLight_2corner</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_CornerLightDouble</DisplayName>
+			<Components>
+				<Component Subtype="Construction" Count="6">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>SmallBlockLight_1corner</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_CornerLight</DisplayName>
+			<Components>
+				<Component Subtype="Construction" Count="2">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="0" />
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>SmallBlockLight_2corner</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Block_CornerLightDouble</DisplayName>
+			<Components>
+				<Component Subtype="Construction" Count="4">
+					<DeconstructId>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>scrapConstruction</SubtypeId>
+					</DeconstructId>
+				</Component>
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="0" />
+		</Definition>
+	</CubeBlocks>
+</Definitions>
