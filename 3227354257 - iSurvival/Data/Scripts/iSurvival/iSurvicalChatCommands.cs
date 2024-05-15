@@ -39,23 +39,28 @@ namespace PEPONE.iSurvival
                 if (cmd.StartsWithCaseInsensitive("exempt"))
                 {
                     MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", Mod.Settings.playerExceptions)}");
+                    return;
                 }
                 else if (cmd.StartsWithCaseInsensitive("addexemption"))
                 {
                     Mod.Settings.playerExceptions.Add(MyAPIGateway.Session.LocalHumanPlayer.SteamUserId);
                     Mod.UpdateSettings();
                     MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", Mod.Settings.playerExceptions)}");
+                    return;
                 }
                 else if (cmd.StartsWithCaseInsensitive("removeexemption"))
                 {
                     Mod.Settings.playerRemovedExceptions = MyAPIGateway.Session.LocalHumanPlayer.SteamUserId;
                     Mod.UpdateSettings();
                     MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", Mod.Settings.playerExceptions)}");
+                    return;
                 }
 
-                //    MyAPIGateway.Utilities.ShowMessage(Log.ModName, "Available commands:");
-                //MyAPIGateway.Utilities.ShowMessage($"{MainCommand} clear ", "removes all objects from all PBs");
-                //MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"{MyAPIGateway.Session.LocalHumanPlayer.SteamUserId}");
+                MyAPIGateway.Utilities.ShowMessage(Log.ModName, "Available commands:");
+                MyAPIGateway.Utilities.ShowMessage($"{MainCommand} exempt ", "shows the SteamIDs of all exempt players");
+                MyAPIGateway.Utilities.ShowMessage($"{MainCommand} addexemption ", "adds the SteamID of the current user to the list of exempt players");
+                MyAPIGateway.Utilities.ShowMessage($"{MainCommand} removeexemption ", "removes the SteamID of the current user from the list of exempt players");
+
             }
             catch (Exception e)
             {
