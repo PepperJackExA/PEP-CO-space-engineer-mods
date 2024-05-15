@@ -174,6 +174,15 @@ namespace PEPONE.iSurvival
 
                 var myarray = playerExceptions.Distinct().ToArray();
 
+                //// In case a chat command is given to remove a player
+                //if (playerRemovedExceptions != null && playerRemovedExceptions != 0)
+                //{
+                //    playerExceptions = playerExceptions.RemoveAll(x => (ulong)x == playerRemovedExceptions);
+                //    myarray = playerExceptions.Distinct().ToArray();
+                //    Log.Info($"playerRemovedExceptions: {playerRemovedExceptions}");
+                //    playerRemovedExceptions = 0;
+                //}
+
                 iniParser.Set(IniSection, nameof(playerExceptions), string.Join("\n", myarray));
                 iniParser.SetComment(IniSection, nameof(playerExceptions), "Add the IDs of players who should be exempt from the iSurvival mod");
 
@@ -214,17 +223,6 @@ namespace PEPONE.iSurvival
                         LoadConfig(iniParser);
                     }
                 }
-
-                
-
-                // In case a chat command is given to remove a player
-                if (playerRemovedExceptions != null && playerRemovedExceptions != 0)
-                {
-                    playerExceptions.RemoveAll(x => (ulong)x == playerRemovedExceptions);
-                    Log.Info($"playerRemovedExceptions: {playerRemovedExceptions}");
-                    playerRemovedExceptions = 0;
-                }
-
 
 
                 iniParser.Clear(); // remove any existing settings that might no longer exist

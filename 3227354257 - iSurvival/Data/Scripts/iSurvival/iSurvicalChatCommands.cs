@@ -98,21 +98,28 @@ namespace PEPONE.iSurvival
 
                 if (cleanCommand.StartsWith("exempt"))
                 {
-                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", Mod.Settings.playerExceptions)}");
+                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", iSurvivalSessionSettings.playerExceptions)}");
                     return;
                 }
                 else if (cleanCommand.StartsWith("addexemption"))
                 {
                     Mod.Settings.playerExceptions.Add(thisPlayer.SteamUserId);
                     Mod.UpdateSettings();
-                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", Mod.Settings.playerExceptions)}");
+                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", iSurvivalSessionSettings.playerExceptions)}");
                     return;
                 }
                 else if (cleanCommand.StartsWith("removeexemption"))
                 {
-                    Mod.Settings.playerRemovedExceptions = thisPlayer.SteamUserId;
+                    Mod.Settings.playerExceptions.RemoveAll(x => x == thisPlayer.SteamUserId);
                     Mod.UpdateSettings();
-                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", Mod.Settings.playerExceptions)}");
+                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", iSurvivalSessionSettings.playerExceptions)}");
+                    return;
+                }
+                else if (cleanCommand.StartsWith("reloadconfig"))
+                {
+                    
+                    Mod.LoadData();
+                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Reloaded configuration from file.");
                     return;
                 }
                 else if (cleanCommand.StartsWith("staminadrainmultiplier"))
@@ -245,6 +252,7 @@ namespace PEPONE.iSurvival
                 }
 
                 MyAPIGateway.Utilities.ShowMessage(Log.ModName, "Available commands:");
+                MyAPIGateway.Utilities.ShowMessage($"{MainCommand} reloadconfig", "hot reloads the config file so you don't need to restart");
                 MyAPIGateway.Utilities.ShowMessage($"{MainCommand} exempt", "shows the SteamIDs of all exempt players");
                 MyAPIGateway.Utilities.ShowMessage($"{MainCommand} addexemption", "adds the SteamID of the current user to the list of exempt players");
                 MyAPIGateway.Utilities.ShowMessage($"{MainCommand} removeexemption", "removes the SteamID of the current user from the list of exempt players");
