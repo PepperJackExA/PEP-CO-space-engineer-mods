@@ -1,6 +1,5 @@
 ﻿using ProtoBuf;
 using Sandbox.ModAPI;
-using PEPCO.VectorThrustEngines;
 
 
 namespace PEPCO_ResourceNodesV2

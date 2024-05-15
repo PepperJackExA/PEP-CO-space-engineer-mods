@@ -24,6 +24,7 @@ using VRage.Game.ModAPI;
 using VRage.Game.ModAPI.Interfaces;
 using VRage.Utils;
 using VRageMath;
+using Digi;
 
 
 namespace PEPONE.iSurvival
@@ -31,7 +32,7 @@ namespace PEPONE.iSurvival
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class iSurvivalSessionSettings : MySessionComponentBase
     {
-        iSurvivalSettings Settings = new iSurvivalSettings();
+        public iSurvivalSettings Settings = new iSurvivalSettings();
 
         // changable varialbles
 
@@ -45,6 +46,10 @@ namespace PEPONE.iSurvival
         public static float healthincreasemultiplier = 1;
         public static float hungerincreasemultiplier = 1;
 
+        public static List<ulong> playerExceptions = new List<ulong>();
+
+        public ChatCommands ChatCommands;
+
         public override void LoadData()
         {
             Settings.Load();
@@ -57,9 +62,24 @@ namespace PEPONE.iSurvival
             fatigueincreasemultiplier = Settings.fatigueincreasemultiplier;
             healthincreasemultiplier = Settings.healthincreasemultiplier;
             hungerincreasemultiplier = Settings.hungerincreasemultiplier;
+
+            playerExceptions = Settings.playerExceptions.Distinct().ToList();
+
+            ChatCommands = new ChatCommands(this);
         }
 
-        class iSurvivalSettings
+        public void UpdateSettings()
+        {
+            Settings.Load();
+            playerExceptions = Settings.playerExceptions.Distinct().ToList();
+        }
+
+        protected override void UnloadData()
+        {
+            ChatCommands?.Dispose();
+        }
+
+        public class iSurvivalSettings
         {
             const string VariableId = nameof(iSurvivalSettings); // IMPORTANT: must be unique as it gets written in a shared space (sandbox.sbc)
             const string FileName = "iSurvivalSettings.ini"; // the file that gets saved to world storage under your mod's folder
@@ -75,12 +95,15 @@ namespace PEPONE.iSurvival
             public float healthincreasemultiplier = 1;
             public float hungerincreasemultiplier = 1;
 
+            public List<ulong> playerExceptions = new List<ulong>();
+            public ulong playerRemovedExceptions;
+
             public iSurvivalSettings()
             {
 
             }
 
-            void LoadConfig(MyIni iniParser)
+            public void LoadConfig(MyIni iniParser)
             {
                 staminadrainmultiplier = (float)iniParser.Get(IniSection, nameof(staminadrainmultiplier)).ToDouble(staminadrainmultiplier);
                 fatiguedrainmultiplier = (float)iniParser.Get(IniSection, nameof(fatiguedrainmultiplier)).ToDouble(fatiguedrainmultiplier);
@@ -91,9 +114,20 @@ namespace PEPONE.iSurvival
                 fatigueincreasemultiplier = (float)iniParser.Get(IniSection, nameof(fatigueincreasemultiplier)).ToDouble(fatigueincreasemultiplier);
                 healthincreasemultiplier = (float)iniParser.Get(IniSection, nameof(healthincreasemultiplier)).ToDouble(healthincreasemultiplier);
                 hungerincreasemultiplier = (float)iniParser.Get(IniSection, nameof(hungerincreasemultiplier)).ToDouble(hungerincreasemultiplier);
+
+                //Get the player list from the ini and split it to an array
+                var configList = iniParser.Get(IniSection, nameof(playerExceptions)).ToString().Trim().Split('\n');
+                foreach ( var config in configList)
+                {
+                    ulong playerId;
+                    if (ulong.TryParse(config, out playerId) && playerId > 0)
+                    {
+                        playerExceptions.Add(playerId);
+                    }
+                }
             }
 
-            void SaveConfig(MyIni iniParser)
+            public void SaveConfig(MyIni iniParser)
             {
                 iniParser.Set(IniSection, nameof(staminadrainmultiplier), staminadrainmultiplier);
                 iniParser.Set(IniSection, nameof(fatiguedrainmultiplier), fatiguedrainmultiplier);
@@ -104,6 +138,14 @@ namespace PEPONE.iSurvival
                 iniParser.Set(IniSection, nameof(fatigueincreasemultiplier), fatigueincreasemultiplier);
                 iniParser.Set(IniSection, nameof(healthincreasemultiplier), healthincreasemultiplier);
                 iniParser.Set(IniSection, nameof(hungerincreasemultiplier), hungerincreasemultiplier);
+
+                var myarray = playerExceptions.Distinct().ToArray();
+
+
+
+                iniParser.Set(IniSection, nameof(playerExceptions), string.Join("\n", myarray));
+                iniParser.SetComment(IniSection, nameof(playerExceptions), "Add the IDs of players who should be exempt from the iSurvival mod");
+
             }
 
             public void Load()
@@ -114,7 +156,7 @@ namespace PEPONE.iSurvival
                     LoadOnClient();
             }
 
-            void LoadOnHost()
+            public void LoadOnHost()
             {
                 MyIni iniParser = new MyIni();
 
@@ -133,6 +175,18 @@ namespace PEPONE.iSurvival
                     }
                 }
 
+                
+
+                // In case a chat command is given to remove a player
+                if (playerRemovedExceptions != null && playerRemovedExceptions != 0)
+                {
+                    playerExceptions.RemoveAll(x => (ulong)x == playerRemovedExceptions);
+                    Log.Info($"playerRemovedExceptions: {playerRemovedExceptions}");
+                    playerRemovedExceptions = 0;
+                }
+
+
+
                 iniParser.Clear(); // remove any existing settings that might no longer exist
                 SaveConfig(iniParser);
 
@@ -145,7 +199,7 @@ namespace PEPONE.iSurvival
                 }
             }
 
-            void LoadOnClient()
+            public void LoadOnClient()
             {
                 string text;
                 if (!MyAPIGateway.Utilities.GetVariable<string>(VariableId, out text))
@@ -182,6 +236,8 @@ namespace PEPONE.iSurvival
         public static float fatigueincreasemultiplier = iSurvivalSessionSettings.fatigueincreasemultiplier;
         public static float healthincreasemultiplier = iSurvivalSessionSettings.healthincreasemultiplier;
         public static float hungerincreasemultiplier = iSurvivalSessionSettings.hungerincreasemultiplier;
+
+
 
 
         public static float teststamina = 0; //can be removed when we remove debug text
@@ -228,7 +284,10 @@ namespace PEPONE.iSurvival
                 // Loop through all players
                 foreach (IMyPlayer player in players)
                 {
-                    var statComp = player.Character?.Components.Get<MyEntityStatComponent>();
+                    
+                    if (iSurvivalSessionSettings.playerExceptions.FindIndex(x => x == MyAPIGateway.Session.LocalHumanPlayer.SteamUserId) != -1) continue;
+
+                        var statComp = player.Character?.Components.Get<MyEntityStatComponent>();
                     if (statComp == null)
                         continue;
 
