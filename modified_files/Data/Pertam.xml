@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PlanetGeneratorDefinitions>
+<PlanetGeneratorDefinition>
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>Pertam</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_smallstone" Density="0.01" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_mediumstone" Density="0.01" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_smallstone" Density="0.01" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_mediumstone" Density="0.03" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_smallstone" Density="0.01" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_mediumstone" Density="0.03" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_smallstone" Density="0.01" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_mediumstone" Density="0.03" />
+</PlanetGeneratorDefinition>
+</PlanetGeneratorDefinitions>
+</Definitions>

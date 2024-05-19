@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>DefaultDirect</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>HoverDirect</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>DefaultDistant</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>Carrier</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>DefaultGrinderBot</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>DefaultDrillBot</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>DefaultDummyBot</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>StationGrinderBot</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>C_HoverTurretDrone</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>C_TunnelGatlingDrone</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>Bumblebee</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>C_CloseRangeGatlingDrone</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>C_LongRangeGatlingDrone</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>C_TunnelDrillDrone</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>C_LargeDrone</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>C_Mine</SubtypeId>
+</Id>
+<DroneBehavior xsi:type="MyObjectBuilder_DroneBehaviorDefinition">
+<Id>
+<TypeId>DroneBehaviorDefinition</TypeId>
+<SubtypeId>PlanetDrone</SubtypeId>
+</Id>
+</Definitions>

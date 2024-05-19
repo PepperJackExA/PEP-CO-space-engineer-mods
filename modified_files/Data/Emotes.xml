@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Id Type="AnimationDefinition" Subtype="test_emote" />
+<Id Type="AnimationDefinition" Subtype="Idle_Female" />
+<DisplayName>Idle</DisplayName>
+<Id Type="AnimationDefinition" Subtype="Angry_Female" />
+<Id Type="AnimationDefinition" Subtype="Cold_Female" />
+<Id Type="AnimationDefinition" Subtype="CheckWrist_Female" />
+<Id Type="AnimationDefinition" Subtype="AssistEnd_Female" />
+<Id Type="AnimationDefinition" Subtype="AssistCome_Female" />
+<Id Type="AnimationDefinition" Subtype="Dance_Female" />
+<Id Type="AnimationDefinition" Subtype="PointAggressive_Female" />
+<Id Type="AnimationDefinition" Subtype="PointBack_Female" />
+<Id Type="AnimationDefinition" Subtype="PointDown_Female" />
+<Id Type="AnimationDefinition" Subtype="PointForward_Female" />
+<Id Type="AnimationDefinition" Subtype="PointLeft_Female" />
+<Id Type="AnimationDefinition" Subtype="PointRight_Female" />
+<Id Type="AnimationDefinition" Subtype="Charge_Female" />
+<Id Type="AnimationDefinition" Subtype="Yelling_Female" />
+<Id Type="AnimationDefinition" Subtype="GotHit_Female" />
+<Id Type="AnimationDefinition" Subtype="Whatever_Female" />
+<Id Type="AnimationDefinition" Subtype="FingerGuns_Female" />
+<Id Type="AnimationDefinition" Subtype="DanceDisco1_Female" />
+<Id Type="AnimationDefinition" Subtype="DanceDisco2_Female" />
+<Id Type="AnimationDefinition" Subtype="LookingAround_Female" />
+<Id Type="AnimationDefinition" Subtype="Stretching_Female" />
+<Id Type="AnimationDefinition" Subtype="ComeHereBaby_Female" />
+<Id Type="AnimationDefinition" Subtype="FYou_Female" />
+<Id Type="AnimationDefinition" Subtype="Drunk_Female" />
+<Id Type="AnimationDefinition" Subtype="RPS_Paper_Female" />
+<Id Type="AnimationDefinition" Subtype="RPS_Rock_Female" />
+<Id Type="AnimationDefinition" Subtype="RPS_Scissor_Female" />
+<Id Type="AnimationDefinition" Subtype="Salute_Female" />
+<Id Type="AnimationDefinition" Subtype="Angry" />
+<Id Type="AnimationDefinition" Subtype="AssistEnd" />
+<Id Type="AnimationDefinition" Subtype="AssistCome" />
+<Id Type="AnimationDefinition" Subtype="Dance" />
+<Id Type="AnimationDefinition" Subtype="Charge" />
+<Id Type="AnimationDefinition" Subtype="ComeHereBaby" />
+<Id Type="AnimationDefinition" Subtype="DanceDisco1" />
+<Id Type="AnimationDefinition" Subtype="DanceDisco2" />
+<Id Type="AnimationDefinition" Subtype="LookingAround" />
+<Id Type="AnimationDefinition" Subtype="Stretching" />
+<Id Type="AnimationDefinition" Subtype="Whatever" />
+<Id Type="AnimationDefinition" Subtype="FingerGuns" />
+<Id Type="AnimationDefinition" Subtype="Yelling" />
+<Id Type="AnimationDefinition" Subtype="GotHit" />
+<Id Type="AnimationDefinition" Subtype="PointAggressive" />
+<Id Type="AnimationDefinition" Subtype="PointBack" />
+<Id Type="AnimationDefinition" Subtype="PointDown" />
+<Id Type="AnimationDefinition" Subtype="PointForward" />
+<Id Type="AnimationDefinition" Subtype="PointLeft" />
+<Id Type="AnimationDefinition" Subtype="PointRight" />
+<Id Type="AnimationDefinition" Subtype="Cold" />
+<Id Type="AnimationDefinition" Subtype="CheckWrist" />
+<Id Type="AnimationDefinition" Subtype="FYou" />
+<Id Type="AnimationDefinition" Subtype="Drunk" />
+<Id Type="AnimationDefinition" Subtype="RPS_Paper" />
+<Id Type="AnimationDefinition" Subtype="RPS_Rock" />
+<Id Type="AnimationDefinition" Subtype="RPS_Scissor" />
+<Id Type="AnimationDefinition" Subtype="Salute" />
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="test_emote" />
+<DisplayName>DisplayName_TestEmote</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="test_emote" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteAngry" />
+<DisplayName>DisplayName_EmoteAngry</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="Angry" />
+<AnimationId Type="AnimationDefinition" Subtype="Angry_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteAssist" />
+<DisplayName>DisplayName_EmoteAssistStop</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="AssistEnd" />
+<AnimationId Type="AnimationDefinition" Subtype="AssistEnd_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteAssistCome" />
+<DisplayName>DisplayName_EmoteAssistCome</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="AssistCome" />
+<AnimationId Type="AnimationDefinition" Subtype="AssistCome_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteDance" />
+<DisplayName>DisplayName_EmoteDance</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="Dance" />
+<AnimationId Type="AnimationDefinition" Subtype="Dance_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteCharge" />
+<DisplayName>DisplayName_EmoteCharge</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="Charge" />
+<AnimationId Type="AnimationDefinition" Subtype="Charge_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteComeHereBaby" />
+<DisplayName>DisplayName_EmoteComeHereBaby</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="ComeHereBaby" />
+<AnimationId Type="AnimationDefinition" Subtype="ComeHereBaby_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteDanceDisco1" />
+<DisplayName>DisplayName_DanceDisco1</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="DanceDisco1" />
+<AnimationId Type="AnimationDefinition" Subtype="DanceDisco1_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteDanceDisco2" />
+<DisplayName>DisplayName_DanceDisco2</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="DanceDisco2" />
+<AnimationId Type="AnimationDefinition" Subtype="DanceDisco2_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteLookingAround" />
+<DisplayName>DisplayName_LookingAround</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="LookingAround" />
+<AnimationId Type="AnimationDefinition" Subtype="LookingAround_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteStretching" />
+<DisplayName>DisplayName_Stretching</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="Stretching" />
+<AnimationId Type="AnimationDefinition" Subtype="Stretching_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteWhatever" />
+<DisplayName>DisplayName_Whatever</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="Whatever" />
+<AnimationId Type="AnimationDefinition" Subtype="Whatever_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteFingerGuns" />
+<DisplayName>DisplayName_FingerGuns</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="FingerGuns" />
+<AnimationId Type="AnimationDefinition" Subtype="FingerGuns_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteYelling" />
+<DisplayName>DisplayName_Yelling</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="Yelling" />
+<AnimationId Type="AnimationDefinition" Subtype="Yelling_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteGotHit" />
+<DisplayName>DisplayName_GotHit</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="GotHit" />
+<AnimationId Type="AnimationDefinition" Subtype="GotHit_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmotePointAggressive" />
+<DisplayName>DisplayName_EmotePointAggressive</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="PointAggressive" />
+<AnimationId Type="AnimationDefinition" Subtype="PointAggressive_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmotePointBack" />
+<DisplayName>DisplayName_EmotePointBack</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="PointBack" />
+<AnimationId Type="AnimationDefinition" Subtype="PointBack_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmotePointDown" />
+<DisplayName>DisplayName_EmotePointDown</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="PointDown" />
+<AnimationId Type="AnimationDefinition" Subtype="PointDown_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmotePointForward" />
+<DisplayName>DisplayName_EmotePointForward</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="PointForward" />
+<AnimationId Type="AnimationDefinition" Subtype="PointForward_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmotePointLeft" />
+<DisplayName>DisplayName_EmotePointLeft</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="PointLeft" />
+<AnimationId Type="AnimationDefinition" Subtype="PointLeft_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmotePointRight" />
+<DisplayName>DisplayName_EmotePointRight</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="PointRight" />
+<AnimationId Type="AnimationDefinition" Subtype="PointRight_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteCold" />
+<DisplayName>DisplayName_EmoteCold</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="Cold" />
+<AnimationId Type="AnimationDefinition" Subtype="Cold_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteCheckWrist" />
+<DisplayName>DisplayName_EmoteCheckWrist</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="CheckWrist" />
+<AnimationId Type="AnimationDefinition" Subtype="CheckWrist_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteGoClangYourself" />
+<DisplayName>DisplayName_EmoteFYou</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="FYou" />
+<AnimationId Type="AnimationDefinition" Subtype="FYou_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteDrunk" />
+<DisplayName>DisplayName_EmoteDrunk</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="Drunk" />
+<AnimationId Type="AnimationDefinition" Subtype="Drunk_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteRPS_Paper" />
+<DisplayName>DisplayName_EmoteRPS_Paper</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="RPS_Paper" />
+<AnimationId Type="AnimationDefinition" Subtype="RPS_Paper_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteRPS_Rock" />
+<DisplayName>DisplayName_EmoteRPS_Rock</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="RPS_Rock" />
+<AnimationId Type="AnimationDefinition" Subtype="RPS_Rock_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteRPS_Scissor" />
+<DisplayName>DisplayName_EmoteRPS_Scissors</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="RPS_Scissor" />
+<AnimationId Type="AnimationDefinition" Subtype="RPS_Scissor_Female" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteRPS" />
+<DisplayName>DisplayName_EmoteRPS</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="RPS" />
+<AnimationId Type="EmoteDefinition" Subtype="EmoteRPS_Paper" />
+<AnimationId Type="EmoteDefinition" Subtype="EmoteRPS_Rock" />
+<AnimationId Type="EmoteDefinition" Subtype="EmoteRPS_Scissor" />
+</Definition>
+<Definition xsi:type="MyObjectBuilder_EmoteDefinition">
+<Id Type="EmoteDefinition" Subtype="EmoteSalute" />
+<DisplayName>DisplayName_Salute</DisplayName>
+<AnimationId Type="AnimationDefinition" Subtype="Salute" />
+<AnimationId Type="AnimationDefinition" Subtype="Salute_Female" />
+</Definition>
+</Definitions>

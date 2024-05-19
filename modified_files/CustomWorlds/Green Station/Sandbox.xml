@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="WelderItem" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="AngleGrinderItem" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="HandDrillItem" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpitSeat" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanel" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_BatteryBlock" Subtype="LargeBlockBatteryBlock" />
+<Scenario Type="MyObjectBuilder_ScenarioDefinition" Subtype="EasyStart2" />
+<Identities>
+<IdentityId>144115188075855873</IdentityId>
+<DisplayName>falesh</DisplayName>
+<IdentityId>144115188075855874</IdentityId>
+<DisplayName>Space Pirates</DisplayName>
+<DisplayName>falesh</DisplayName>
+<IdentityId>144115188075855873</IdentityId>
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="WelderItem" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="AngleGrinderItem" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="HandDrillItem" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpitSeat" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanel" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_BatteryBlock" Subtype="LargeBlockBatteryBlock" />
+<Definition Type="MyObjectBuilder_CoordinateSystemDefinition" Subtype="CoordinateSystem" />
+<Id>5</Id>
+<Definition Type="MyObjectBuilder_ContainerDropSystemDefinition" Subtype="Default" />
+<GameDefinition Type="MyObjectBuilder_GameDefinition" Subtype="Default" />

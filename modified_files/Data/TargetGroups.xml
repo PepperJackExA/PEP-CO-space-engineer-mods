@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<TargetingGroup xsi:type="MyObjectBuilder_TargetingGroupDefinition">
+<Id>
+<TypeId>TargetingGroupDefinition</TypeId>
+<SubtypeId>Weapons</SubtypeId>
+</Id>
+<DisplayName>DisplayName_TargetOptions_Weapons</DisplayName>
+<TypeId>Warhead</TypeId>
+<TypeId>LargeGatlingTurret</TypeId>
+<TypeId>LargeMissileTurret</TypeId>
+<TypeId>InteriorTurret</TypeId>
+<TypeId>SmallMissileLauncher</TypeId>
+<TypeId>SmallMissileLauncherReload</TypeId>
+<TypeId>SmallGatlingGun</TypeId>
+<TypeId>Drill</TypeId>
+<TypeId>ShipGrinder</TypeId>
+<TypeId>ShipWelder</TypeId>
+<TypeId>Decoy</TypeId>
+<TargetingGroup xsi:type="MyObjectBuilder_TargetingGroupDefinition">
+<Id>
+<TypeId>TargetingGroupDefinition</TypeId>
+<SubtypeId>Propulsion</SubtypeId>
+</Id>
+<DisplayName>DisplayName_TargetOptions_Propulsion</DisplayName>
+<TypeId>Thrust</TypeId>
+<TypeId>Gyro</TypeId>
+<TypeId>JumpDrive</TypeId>
+<TypeId>Decoy</TypeId>
+<TargetingGroup xsi:type="MyObjectBuilder_TargetingGroupDefinition">
+<Id>
+<TypeId>TargetingGroupDefinition</TypeId>
+<SubtypeId>PowerSystems</SubtypeId>
+</Id>
+<DisplayName>DisplayName_TargetOptions_PowerSystems</DisplayName>
+<TypeId>BatteryBlock</TypeId>
+<TypeId>Reactor</TypeId>
+<TypeId>HydrogenEngine</TypeId>
+<TypeId>WindTurbine</TypeId>
+<TypeId>SolarPanel</TypeId>
+<TypeId>Decoy</TypeId>
+</Definitions>

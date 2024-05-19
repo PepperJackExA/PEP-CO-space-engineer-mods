@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorBlock" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpitSeat" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Reactor" Subtype="LargeBlockSmallGenerator" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallAtmosphericThrust" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_MotorSuspension" Subtype="Suspension3x3" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_AirtightSlideDoor" Subtype="LargeBlockSlideDoor" />
+<IdentityId>144115188075855897</IdentityId>
+<Scenario Type="MyObjectBuilder_ScenarioDefinition" Subtype="StarSystem" />
+<Identities>
+<IdentityId>144115188075855894</IdentityId>
+<DisplayName>Space Pirates</DisplayName>
+<IdentityId>144115188075855896</IdentityId>
+<DisplayName>The Great Tarantula</DisplayName>
+<IdentityId>144115188075855897</IdentityId>
+<DisplayName>Aragath</DisplayName>
+<IdentityId>144115188075855898</IdentityId>
+<DisplayName>Industrial Opportunists CEO</DisplayName>
+<DisplayName>Aragath</DisplayName>
+<IdentityId>144115188075855897</IdentityId>
+<Definition Type="MyObjectBuilder_ContainerDropSystemDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_SessionComponentContractSystemDefinition" Subtype="Default" />
+<Definition Type="MyObjectbuilder_SessionComponentEconomyDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_CoordinateSystemDefinition" Subtype="CoordinateSystem" />
+<Definition Type="MyObjectBuilder_BankingSystemDefinition" Subtype="BankingSystem" />
+<GameDefinition Type="MyObjectBuilder_GameDefinition" Subtype="Default" />

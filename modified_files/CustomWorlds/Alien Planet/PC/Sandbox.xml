@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="WelderItem" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="AngleGrinderItem" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="HandDrillItem" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpitSeat" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanel" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_ButtonPanel" Subtype="ButtonPanelLarge" />
+<Scenario Type="MyObjectBuilder_ScenarioDefinition" Subtype="EasyAlienStart" />
+<Identities>
+<IdentityId>144115188075855887</IdentityId>
+<DisplayName>First Colonist</DisplayName>
+<IdentityId>144115188075855888</IdentityId>
+<DisplayName>Space Pirates</DisplayName>
+<IdentityId>144115188075855889</IdentityId>
+<DisplayName>Aragath</DisplayName>
+<DisplayName>Aragath</DisplayName>
+<IdentityId>144115188075855889</IdentityId>
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="WelderItem" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="AngleGrinderItem" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="HandDrillItem" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpitSeat" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Thrust" Subtype="LargeBlockSmallThrust" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Gyro" Subtype="LargeBlockGyro" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanel" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_ButtonPanel" Subtype="ButtonPanelLarge" />
+<Definition Type="MyObjectBuilder_CoordinateSystemDefinition" Subtype="CoordinateSystem" />
+<Definition Type="MyObjectBuilder_ContainerDropSystemDefinition" Subtype="Default" />
+<GameDefinition Type="MyObjectBuilder_GameDefinition" Subtype="Default" />

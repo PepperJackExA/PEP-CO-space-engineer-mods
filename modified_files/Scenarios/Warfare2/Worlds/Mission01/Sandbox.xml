@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="WelderItem" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="AngleGrinderItem" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="HandDrillItem" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Assembler" Subtype="BasicAssembler" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_Refinery" Subtype="Blast Furnace" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_WindTurbine" Subtype="LargeBlockWindTurbine" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanel" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_LandingGear" Subtype="LargeBlockLandingGear" />
+<Scenario Type="MyObjectBuilder_ScenarioDefinition" Subtype="EmptyWorld" />
+<Identities>
+<IdentityId>144115188075855896</IdentityId>
+<DisplayName>Space Pirates</DisplayName>
+<IdentityId>144115188075855897</IdentityId>
+<DisplayName>RED Team</DisplayName>
+<IdentityId>144115188075855898</IdentityId>
+<DisplayName>BLUE Team</DisplayName>
+<Definition Type="MyObjectbuilder_AiRvoComponentDefinition" Subtype="Default" />
+<Definition Type="MyObjectbuilder_AutopilotPathfindingComponentDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_ContainerDropSystemDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_SessionComponentContractSystemDefinition" Subtype="Default" />
+<Definition Type="MyObjectbuilder_SessionComponentEconomyDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_CoordinateSystemDefinition" Subtype="CoordinateSystem" />
+<Id>10</Id>
+<Id>133</Id>
+<Id>54</Id>
+<Id>109</Id>
+<Id>152</Id>
+<Id>157</Id>
+<Definition Type="MyObjectBuilder_BankingSystemDefinition" Subtype="BankingSystem" />
+<GameDefinition Type="MyObjectBuilder_GameDefinition" Subtype="Default" />

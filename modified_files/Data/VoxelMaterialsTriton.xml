@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+<Id>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>TritonStone</SubtypeId>
+</Id>
+<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+<Id>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>TritonBlend</SubtypeId>
+</Id>
+<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+<Id>
+<TypeId>VoxelMaterialDefinition</TypeId>
+<SubtypeId>TritonIce</SubtypeId>
+</Id>
+</Definitions>

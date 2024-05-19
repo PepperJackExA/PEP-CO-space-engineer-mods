@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Definition xsi:type="VR.ProceduralEnvironmentModule">
+<Id Type="MyObjectBuilder_ProceduralEnvironmentModuleDefinition" Subtype="Static"/>
+</Definition>
+<Definition xsi:type="VR.ProceduralEnvironmentModule">
+<Id Type="MyObjectBuilder_ProceduralEnvironmentModuleDefinition" Subtype="Memory"/>
+</Definition>
+<Definition xsi:type="VR.EnvironmentModuleProxy">
+<Id Type="MyObjectBuilder_EnvironmentModuleProxyDefinition" Subtype="Breakable"/>
+</Definition>
+<Definition xsi:type="VR.EnvironmentModuleProxy">
+<Id Type="MyObjectBuilder_EnvironmentModuleProxyDefinition" Subtype="VoxelMap"/>
+</Definition>
+<Definition xsi:type="VR.EnvironmentModuleProxy">
+<Id Type="MyObjectBuilder_EnvironmentModuleProxyDefinition" Subtype="BotSpawner"/>
+</Definition>
+</Definitions>

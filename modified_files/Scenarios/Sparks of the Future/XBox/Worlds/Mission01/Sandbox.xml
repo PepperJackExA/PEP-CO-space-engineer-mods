@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Scenario Type="MyObjectBuilder_ScenarioDefinition" Subtype="EmptyWorld" />
+<Identities>
+<IdentityId>144115188075855903</IdentityId>
+<DisplayName>SPK NPC5806</DisplayName>
+<IdentityId>144115188075855904</IdentityId>
+<DisplayName>SOF CEO</DisplayName>
+<IdentityId>144115188075855905</IdentityId>
+<DisplayName>Smokki</DisplayName>
+<IdentityId>144115188075855896</IdentityId>
+<DisplayName>Space Pirates</DisplayName>
+<IdentityId>144115188075855899</IdentityId>
+<DisplayName>Engineer</DisplayName>
+<DisplayName>Smokki</DisplayName>
+<IdentityId>144115188075855905</IdentityId>
+<DisplayName>Engineer</DisplayName>
+<IdentityId>144115188075855899</IdentityId>
+<Definition Type="MyObjectBuilder_ContainerDropSystemDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_SessionComponentContractSystemDefinition" Subtype="Default" />
+<Definition Type="MyObjectbuilder_SessionComponentEconomyDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_CoordinateSystemDefinition" Subtype="CoordinateSystem" />
+<Id>4</Id>
+<Definition Type="MyObjectBuilder_BankingSystemDefinition" Subtype="BankingSystem" />
+<GameDefinition Type="MyObjectBuilder_GameDefinition" Subtype="Default" />

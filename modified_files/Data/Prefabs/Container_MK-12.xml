@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Container_MK-12" />
+<CubeBlocks>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ButtonPanel">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ButtonPanel">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Parachute">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CargoContainer">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RadioAntenna">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
+</MyObjectBuilder_CubeBlock>
+</CubeBlocks>
+<DisplayName>Container MK-12</DisplayName>
+</Definitions>

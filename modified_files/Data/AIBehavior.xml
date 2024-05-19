@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<AIBehavior xsi:type="MyObjectBuilder_BehaviorTreeDefinition">
+<Id Type="MyObjectBuilder_BehaviorTreeDefinition" Subtype="SpiderBehavior" />
+<AIBehavior xsi:type="MyObjectBuilder_BehaviorTreeDefinition">
+<Id Type="MyObjectBuilder_BehaviorTreeDefinition" Subtype="WolfBehavior" />
+</Definitions>

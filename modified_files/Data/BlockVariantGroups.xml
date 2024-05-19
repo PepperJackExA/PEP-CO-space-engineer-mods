@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightCubeGroup" />
+<DisplayName>DisplayName_Block_LightArmorBlock</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCornerSquare" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCornerSquareInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCornerSquare" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCornerSquareInverted" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightRampGroup" />
+<DisplayName>DisplayName_BlockGroup_ArmorLightRampGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlope2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlope2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHalfSlopeArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorHalfSlopeCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorHalfCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorHalfSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlope2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlope2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="HalfArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="HalfSlopeArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorHalfSlopeCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorHalfCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorHalfSlopedCorner" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightRampCornerGroup" />
+<DisplayName>DisplayName_BlockGroup_ArmorLightRampCornerGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorInvCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorHalfSlopeCornerInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorHalfSlopeInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorInvCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorHalfSlopeCornerInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorHalfSlopeInverted" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightRoundGroup" />
+<DisplayName>DisplayName_Block_LightRoundArmorSlope</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorRoundSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorRoundCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorRoundCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorRoundSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorRoundCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorRoundCornerInv" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyCubeGroup" />
+<DisplayName>DisplayName_Block_HeavyArmorBlock</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorCornerSquare" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorCornerSquareInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorCornerSquare" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorCornerSquareInverted" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyRampGroup" />
+<DisplayName>DisplayName_BlockGroup_ArmorHeavyRampGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorSlope2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorSlope2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyHalfArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyHalfSlopeArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopeCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorHalfCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorSlope2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorSlope2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="HeavyHalfArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="HeavyHalfSlopeArmorBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopeCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorHalfCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopedCorner" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyRampCornerGroup" />
+<DisplayName>DisplayName_BlockGroup_ArmorHeavyRampCornerGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorInvCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopeCornerInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopeInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorInvCorner2Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorInvCorner2Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopeCornerInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopeInverted" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyRoundGroup" />
+<DisplayName>DisplayName_Block_HeavyRoundArmorSlope</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorRoundSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorRoundCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeHeavyBlockArmorRoundCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorRoundSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorRoundCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallHeavyBlockArmorRoundCornerInv" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightSlopedCorners" />
+<DisplayName>DisplayName_BlockGroup_LightArmorSlopedCorners</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorRaisedSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSquareSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSquareSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSquareSlopedCornerTipInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorHalfSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorRaisedSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSquareSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSquareSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSquareSlopedCornerTipInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorHalfSlopedCornerBase" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavySlopedCorners" />
+<DisplayName>DisplayName_BlockGroup_HeavyArmorSlopedCorners</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorRaisedSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSquareSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSquareSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSquareSlopedCornerTipInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorHalfSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorRaisedSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSquareSlopedCornerTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSquareSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSquareSlopedCornerTipInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopedCornerBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopedCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorHalfSlopedCornerBase" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorLightTransitionBlocks" />
+<DisplayName>DisplayName_BlockGroup_LightArmorTransitionBlocks</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransitionBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransition" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransitionTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransitionBaseMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransitionMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorSlopeTransitionTipMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransitionBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransition" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransitionTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransitionBaseMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransitionMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockArmorSlopeTransitionTipMirrored" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ArmorHeavyTransitionBlocks" />
+<DisplayName>DisplayName_BlockGroup_HeavyArmorTransitionBlocks</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransition" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionBaseMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockHeavyArmorSlopeTransitionTipMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionBase" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransition" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionTip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionBaseMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockHeavyArmorSlopeTransitionTipMirrored" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RefineryGroup" />
+<DisplayName>DisplayName_Block_Refinery</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AssemblerGroup" />
+<DisplayName>DisplayName_Block_Assembler</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="UpgradeModuleGroup" />
+<DisplayName>DisplayName_BlockGroup_UpgradeModuleGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ProjectorGroup" />
+<DisplayName>DisplayName_Block_Projector</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BatteryGroup" />
+<DisplayName>DisplayName_Block_Battery</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EnergyRenewableGroup" />
+<DisplayName>DisplayName_BlockGroup_EnergyRenewableGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EnergyFueledGroup" />
+<DisplayName>DisplayName_BlockGroup_EnergyFueledGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="MedicalGroup" />
+<DisplayName>DisplayName_BlockGroup_MedicalGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GasGeneratorGroup" />
+<DisplayName>DisplayName_Block_OxygenGenerator</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TankGroup" />
+<DisplayName>DisplayName_BlockGroup_TankGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OxygenFarmGroup" />
+<DisplayName>DisplayName_Block_OxygenFarm</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AirVentGroup" />
+<DisplayName>DisplayName_Block_AirVent</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ContainerGroup" />
+<DisplayName>DisplayName_BlockGroup_ContainerGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorThickGroup" />
+<DisplayName>DisplayName_Block_Conveyor</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockConveyorCap" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockConveyorCapMedium" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorThinGroup" />
+<DisplayName>DisplayName_Block_ConveyorTubeSmall</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockConveyorCap" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InputOutputGroup" />
+<DisplayName>DisplayName_BlockGroup_InputOutputGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorPipeGroup" />
+<DisplayName>DisplayName_Block_ConveyorPipes</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockConveyorPipeCap" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CockpitGroup" />
+<DisplayName>DisplayName_Block_Cockpit2</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OpenCockpitGroup" />
+<DisplayName>DisplayName_Block_OpenCockpitSmall</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RemoteControlGroup" />
+<DisplayName>DisplayName_Block_RemoteControl</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GyroscopeGroup" />
+<DisplayName>DisplayName_Block_Gyroscope</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterAtmoGroup" />
+<DisplayName>DisplayName_Block_LargeAtmoThrust</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterSciFiAtmoGroup" />
+<DisplayName>DisplayName_Block_LargeAtmoThrustSciFi</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterHydroGroup" />
+<DisplayName>DisplayName_Block_LargeHydrogenThrust</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterHydroGroupIndustrial" />
+<DisplayName>DisplayName_Block_LargeHydrogenThrustIndustrial</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterIonGroup" />
+<DisplayName>DisplayName_Block_LargeThrust</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ThrusterSciFiIonGroup" />
+<DisplayName>DisplayName_Block_LargeThrustSciFi</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ModularThrusterGroup" />
+<DisplayName>DisplayName_Block_LargeModularThruster</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ParachuteGroup" />
+<DisplayName>DisplayName_Block_ParachuteHatch</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LandingGearGroup" />
+<DisplayName>DisplayName_Block_LandingGear</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WheelSuspensionRightGroup" />
+<DisplayName>DisplayName_Block_Suspension3x3</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WheelSuspensionLeftGroup" />
+<DisplayName>DisplayName_Block_Suspension3x3mirrored</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WheelStaticGroup" />
+<DisplayName>DisplayName_BlockGroup_WheelStaticGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OffroadWheelSuspensionRightGroup" />
+<DisplayName>DisplayName_Block_OffroadSuspension3x3</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OffroadWheelSuspensionLeftGroup" />
+<DisplayName>DisplayName_Block_OffroadSuspension3x3mirrored</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OffroadWheelStaticGroup" />
+<DisplayName>DisplayName_BlockGroup_OffroadWheelStaticGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ShipToolGroup" />
+<DisplayName>DisplayName_BlockGroup_ShipToolGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="OreDetectorGroup" />
+<DisplayName>DisplayName_Block_OreDetector</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ShipWeaponStaticGroup" />
+<DisplayName>DisplayName_BlockGroup_ShipWeaponStaticGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TurretGroup" />
+<DisplayName>DisplayName_BlockGroup_TurretGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WarheadGroup" />
+<DisplayName>DisplayName_Block_Warhead</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ExhaustPipeGroup" />
+<DisplayName>DisplayName_Block_ExhaustPipe</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HeatVentGroup" />
+<DisplayName>DisplayName_Block_HeatVent</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DecoyGroup" />
+<DisplayName>DisplayName_Block_Decoy</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AntennaGroup" />
+<DisplayName>DisplayName_BlockGroup_AntennaGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DoorGroup" />
+<DisplayName>DisplayName_Block_Door</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="StairsGroup" />
+<DisplayName>DisplayName_Block_Stairs</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeStairs" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeRamp" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GratedStairs" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GratedHalfStairs" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="GratedHalfStairsMirrored" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BlastDoorGroup" />
+<DisplayName>DisplayName_Block_ArmorCenter</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorCenter" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorInvCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="ArmorSide" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorCenter" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorInvCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorSide" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AirtightHangarDoorGroup" />
+<DisplayName>DisplayName_Block_AirtightHangarDoor</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LCDGroup" />
+<DisplayName>DisplayName_BlockGroup_LCDGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LCDGroupSOTF" />
+<DisplayName>DisplayName_BlockGroup_LCDGroupSOTF</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LCDCornerGroup" />
+<DisplayName>DisplayName_BlockGroup_LCDCornerGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LightingGroup" />
+<DisplayName>DisplayName_BlockGroup_LightingGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DeskGroup" />
+<DisplayName>DisplayName_Block_Desk</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockDeskChairless" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockDeskChairlessCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockDeskChairlessCornerInv" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CouchGroup" />
+<DisplayName>DisplayName_Block_Couch</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InteriorStructureGroup" />
+<DisplayName>DisplayName_BlockGroup_InteriorStructureGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockInteriorWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockSciFiWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PipeWorkBlockA" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PipeWorkBlockB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AngledInteriorWallA" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AngledInteriorWallB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeInteriorPillar" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCoverWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCoverWallHalf" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeCoverWallHalfMirrored" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="FireCover" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="FireCoverCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockCylindricalColumn" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockCylindricalColumn" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DecorativeUtilityGroup" />
+<DisplayName>DisplayName_BlockGroup_DecorativeUtilityGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockBarCounter" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockBarCounterCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Freight1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Freight2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Freight3" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DecorativeStorageGroup" />
+<DisplayName>DisplayName_Block_Barrel</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBarrel" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallBarrel" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBarrelThree" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBarrelStack" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DecorativeDeadBodiesGroup" />
+<DisplayName>DisplayName_BlockGroup_DeadBodies</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="DeadBody01" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="DeadBody02" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="DeadBody03" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="DeadBody04" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="DeadBody05" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="DeadBody06" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LockersGroup" />
+<DisplayName>DisplayName_Block_LockerRoom</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BathroomGroup" />
+<DisplayName>DisplayName_Block_Shower</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Shower" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="InteriorBlockGroup" />
+<DisplayName>DisplayName_Block_Passage</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Passage2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Passage2Wall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PassageSciFi" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PassageSciFiWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PassageSciFiIntersection" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PassageSciFiGate" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PassageScifiCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PassageSciFiTjunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="PassageSciFiWindow" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RailingGroup" />
+<DisplayName>DisplayName_Block_RailingStraight</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="RailingStraight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="RailingDouble" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="RailingDiagonal" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="RailingCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="RailingHalfRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="RailingHalfLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="RailingCenter" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Railing2x1Right" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Railing2x1Left" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="CatwalkGroup" />
+<DisplayName>DisplayName_Block_SteelCatwalk</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSteelCatwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSteelCatwalk2Sides" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSteelCatwalkCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSteelCatwalkPlate" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="DecoCatwalkGroup" />
+<DisplayName>DisplayName_Block_CatwalkWall</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Catwalk" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CatwalkStraight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CatwalkCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CatwalkWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CatwalkRailingEnd" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CatwalkRailingHalfRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CatwalkRailingHalfLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CatwalkHalf" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CatwalkHalfRailing" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CatwalkHalfCenterRailing" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="CatwalkHalfOuterRailing" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="NeonTubes" />
+<DisplayName>DisplayName_BlockGroup_NeonTubes</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowSmallGroup" />
+<DisplayName>DisplayName_BlockGroup_WindowSmallGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x1Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x1FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x1Slope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x1Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x1FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x1Slope" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowMediumGroup" />
+<DisplayName>DisplayName_BlockGroup_WindowMediumGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x2Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x2FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x2Slope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x2Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x2FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x2Slope" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowLargeGroup" />
+<DisplayName>DisplayName_BlockGroup_WindowLargeGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window2x3Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window2x3FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window3x3Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window3x3FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow2x3Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow2x3FlatInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow3x3Flat" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow3x3FlatInv" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowSmallCornerGroup" />
+<DisplayName>DisplayName_BlockGroup_WindowSmallCornerGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x1Face" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x1Inv" />
+<!--<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x1FaceInv" />-->
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x1Side" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x1SideInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x1Face" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x1Inv" />
+<!--<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x1FaceInv" />-->
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x1Side" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x1SideInv" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WindowMediumCornerGroup" />
+<DisplayName>DisplayName_BlockGroup_WindowMediumCornerGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x2Face" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x2Inv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x2SideLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x2SideLeftInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x2SideRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Window1x2SideRightInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x2Face" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x2Inv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x2SideLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x2SideLeftInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x2SideRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindow1x2SideRightInv" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ShutterGroup" />
+<DisplayName>DisplayName_BlockGroup_ShutterGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWindowSquare" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWindowEdge" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowWall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowWallLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowWallRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Viewport1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Viewport2" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HalfWindowGroup" />
+<DisplayName>DisplayName_BlockGroup_HalfWindows</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="HalfWindow" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="HalfWindowInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="HalfWindowCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="HalfWindowCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="HalfWindowDiagonal" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="HalfWindowRound" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RoundWindowGroup" />
+<DisplayName>DisplayName_BlockGroup_RoundWindows</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowRound" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowRoundInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowRoundCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowRoundCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowRoundFace" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowRoundFaceInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowRoundInwardsCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="WindowRoundInwardsCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowRound" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowRoundInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowRoundCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowRoundCornerInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowRoundFace" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowRoundFaceInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowRoundInwardsCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWindowRoundInwardsCornerInv" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="GravityGroup" />
+<DisplayName>DisplayName_BlockGroup_GravityGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="JumpDriveGroup" />
+<DisplayName>DisplayName_Block_JumpDrive</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AutomationGroup" />
+<DisplayName>DisplayName_BlockGroup_AutomationGroup</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SoundGroup" />
+<DisplayName>DisplayName_Block_SoundBlock</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ButtonPanelGroup" />
+<DisplayName>DisplayName_Block_ButtonPanel</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EconomyGroup" />
+<DisplayName>DisplayName_Block_ATM</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="StoreGroup" />
+<DisplayName>DisplayName_Block_Store</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="RotorGroup" />
+<DisplayName>DisplayName_Block_Rotor</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HingeGroup" />
+<DisplayName>DisplayName_Block_Hinge</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="PistonGroup" />
+<DisplayName>DisplayName_Block_PistonBase</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LettersAZ" />
+<DisplayName>DisplayName_BlockGroup_LettersAH</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolA" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolC" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolD" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolE" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolF" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolG" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolH" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolI" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolJ" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolK" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolL" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolM" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolN" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolO" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolP" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolQ" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolR" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolS" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolT" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolU" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolV" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolW" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolX" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolY" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolZ" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolA" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolB" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolC" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolD" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolE" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolF" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolG" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolH" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolI" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolJ" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolK" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolL" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolM" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolN" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolO" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolP" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolQ" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolR" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolS" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolT" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolU" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolV" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolW" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolX" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolY" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolZ" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Numbers1" />
+<DisplayName>DisplayName_BlockGroup_Numbers</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbol1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbol2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbol3" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbol4" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbol5" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbol6" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbol7" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbol8" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbol9" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbol0" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbol1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbol2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbol3" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbol4" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbol5" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbol6" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbol7" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbol8" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbol9" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbol0" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="Symbols" />
+<DisplayName>DisplayName_BlockGroup_Symbols</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolHyphen" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolUnderscore" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolDot" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolApostrophe" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolAnd" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolColon" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolExclamationMark" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeSymbolQuestionMark" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolHyphen" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolUnderscore" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolDot" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolApostrophe" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolAnd" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolColon" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolExclamationMark" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallSymbolQuestionMark" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BarredWindows" />
+<DisplayName>DisplayName_BlockGroup_BarredWindows</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="BarredWindow" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="BarredWindowSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="BarredWindowSide" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="BarredWindowFace" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="StorageShelves" />
+<DisplayName>DisplayName_BlockGroup_StorageShelves</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="StorageShelf1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="StorageShelf2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="StorageShelf3" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EmbrasureGroup" />
+<DisplayName>DisplayName_Block_Embrasure</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Embrasure" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="TargetDummyGroup" />
+<DisplayName>DisplayName_Block_TargetDummy</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BeamGroup" />
+<DisplayName>DisplayName_Block_BeamBlock</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockRound" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockSlope2x1Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockSlope2x1Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockHalf" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockHalfSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockEnd" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockJunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeGridBeamBlockTJunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlock" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockRound" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockSlope2x1Base" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockSlope2x1Tip" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockHalf" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockHalfSlope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockEnd" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockJunction" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallGridBeamBlockTJunction" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="LightArmorPanelsGroup" />
+<DisplayName>DisplayName_Block_LightArmorPanel</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorSlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorSlopedSidePanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedPanelTipLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedSideBasePanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedSideTipPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedSideBasePanelLightInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedSideTipPanelLightInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorHalfSlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1HalfSlopedPanelLightRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1HalfSlopedTipPanelLightRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1HalfSlopedPanelLightLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1HalfSlopedTipPanelLightLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeRoundArmorPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeRoundArmorPanelCornerLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorHalfCenterPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorHalfPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorQuarterPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorCenterPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorSlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorSlopedSidePanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedPanelTipLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedSideBasePanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedSideTipPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedSideBasePanelLightInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedSideTipPanelLightInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorHalfSlopedPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1HalfSlopedPanelLightRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1HalfSlopedTipPanelLightRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1HalfSlopedPanelLightLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1HalfSlopedTipPanelLightLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallRoundArmorPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallRoundArmorPanelCornerLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorHalfCenterPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorHalfPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorQuarterPanelLight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorCenterPanelLight" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="HeavyArmorPanelsGroup" />
+<DisplayName>DisplayName_Block_heavyArmorPanel</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorSlopedPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorSlopedSidePanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedPanelTipHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedSideBasePanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedSideTipPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedSideBasePanelHeavyInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1SlopedSideTipPanelHeavyInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorHalfSlopedPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1HalfSlopedPanelHeavyRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1HalfSlopedTipPanelHeavyRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1HalfSlopedPanelHeavyLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmor2x1HalfSlopedTipPanelHeavyLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeRoundArmorPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeRoundArmorPanelCornerHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorHalfCenterPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorHalfPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorQuarterPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeArmorCenterPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorSlopedPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorSlopedSidePanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedPanelTipHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedSideBasePanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedSideTipPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedSideBasePanelHeavyInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1SlopedSideTipPanelHeavyInv" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorHalfSlopedPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1HalfSlopedPanelHeavyRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1HalfSlopedTipPanelHeavyRight" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1HalfSlopedPanelHeavyLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmor2x1HalfSlopedTipPanelHeavyLeft" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallRoundArmorPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallRoundArmorPanelCornerHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorHalfCenterPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorHalfPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorQuarterPanelHeavy" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallArmorCenterPanelHeavy" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="BridgeWindowsGroup" />
+<DisplayName>DisplayName_BlockGroup_BridgeWindowsGroup</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="BridgeWindow1x1Slope" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="BridgeWindow1x1Face" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="BridgeWindow1x1FaceInverted" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EngineerPlushieGroup" />
+<DisplayName>DisplayName_Block_EngineerPlushie</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="EngineerPlushie" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SabiroidPlushieGroup" />
+<DisplayName>DisplayName_Block_SabiroidPlushie</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SabiroidPlushie" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="StatueGroup" />
+<DisplayName>DisplayName_Block_StatueEngineer</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockStatueEngineer" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AirDuctGroup" />
+<DisplayName>DisplayName_Block_AirDucts</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AirDuct1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AirDuct2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AirDuctCorner" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AirDuctT" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AirDuctX" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AirDuctRamp" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="AirDuctGrate" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AccesPanelGroup" />
+<DisplayName>DisplayName_Block_AccessPanel1</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="WarningSignGroup" />
+<DisplayName>DisplayName_Block_WarningSign1</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign3" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign4" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign5" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign6" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign7" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign8" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign9" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign10" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign11" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign12" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSign13" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign1" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign3" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign4" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign5" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign6" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign7" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign8" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign9" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign10" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign11" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign12" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSign13" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSignEaster3" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSignEaster3" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSignEaster9" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSignEaster9" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSignEaster10" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSignEaster10" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSignEaster11" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSignEaster11" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSignEaster13" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSignEaster13" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeWarningSignEaster2" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="SmallWarningSignEaster2" />
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="AIBlocksGroup" />
+<DisplayName>DisplayName_Block_FlightMovementBlock</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="EmotionControllerGroup" />
+<DisplayName>DisplayName_EmotionController</DisplayName>
+<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ScaffoldingGroup" />
+<DisplayName>DisplayName_Block_Truss</DisplayName>
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="Truss" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussSloped" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussSmall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussSlopedSmall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussAngled" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussAngledSmall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussHalf" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussHalfSmall" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussFloor" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussFloorAngled" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussFloorAngledInverted" />
+<Block Type="MyObjectBuilder_CubeBlock" Subtype="TrussFloorHalf" />
+</Definitions>

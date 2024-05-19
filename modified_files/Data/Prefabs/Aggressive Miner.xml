@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Aggressive Miner" />
+<DisplayName>Aggressive Miner</DisplayName>
+<CubeBlocks>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_OxygenTank">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_OreDetector">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_OxygenGenerator">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Cockpit">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+<DefinitionId Type="MyObjectBuilder_Drill" Subtype="SmallBlockDrill" />
+<DefinitionId Type="MyObjectBuilder_SmallGatlingGun" Subtype="" />
+<DefinitionId Type="MyObjectBuilder_SmallMissileLauncher" Subtype="" />
+<PilotGunDefinition xsi:nil="true" />
+<Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+<Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+<Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+<Font Type="MyObjectBuilder_FontDefinition" Subtype="Debug" />
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ShipConnector">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Gyro">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Gyro">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_SmallGatlingGun">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_SmallGatlingGun">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_RadioAntenna">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Conveyor">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Drill">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Drill">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ConveyorConnector">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ReflectorLight">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Reactor">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_Thrust">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_SmallMissileLauncher">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_PistonTop">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_PistonTop">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_PistonTop">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_LandingGear">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_LandingGear">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_HydrogenEngine">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_HydrogenEngine">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_PistonTop">
+</MyObjectBuilder_CubeBlock>
+</CubeBlocks>
+<DisplayName>Aggressive Miner</DisplayName>
+</Definitions>

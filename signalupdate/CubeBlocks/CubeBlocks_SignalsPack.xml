@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockInsetWall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InsetWall</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>InsetWall</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>LargeBlockInsetWallLight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InsetWallLight</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>InsetWallLight</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockInsetWallPillar</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InsetWallPillar</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>InsetWallPillar</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockInsetWallCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InsetWallCorner</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>InsetWallCorner</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockInsetWallCornerInverted</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InsetWallCornerInverted</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>InsetWallCornerInverted</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockInsetWallSlope</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_InsetWallSlope</DisplayName>
+<Description>Description_InteriorWall</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="6" />
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>InsetWallSlope</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockConsoleModule</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConsoleModule</DisplayName>
+<Description>Description_ConsoleModule</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="20" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="1" />
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BlockPairName>ConsoleModule</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>LargeBlockConsoleModuleCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConsoleModuleCorner</DisplayName>
+<Description>Description_ConsoleModule</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="1" />
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BlockPairName>ConsoleModuleCorner</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>LargeBlockConsoleModuleInvertedCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConsoleModuleInvertedCorner</DisplayName>
+<Description>Description_ConsoleModule</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="50" />
+<Component Subtype="Construction" Count="50" />
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="30" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="1" />
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BlockPairName>ConsoleModuleInvertedCorner</BlockPairName>
+<EnableFirstPerson>true</EnableFirstPerson>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>18</BuildTimeSeconds>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>LargeBlockConsoleModuleScreens</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConsoleModuleScreens</DisplayName>
+<Description>Description_ConsoleModule</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="Display" Count="12" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BlockPairName>ConsoleModuleScreens</BlockPairName>
+<EnableFirstPerson>true</EnableFirstPerson>
+<HasInventory>false</HasInventory>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>75</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>LargeBlockConsoleModuleButtons</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConsoleModuleButtons</DisplayName>
+<Description>Description_ConsoleModule</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="Display" Count="6" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ConsoleModuleButtons</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<string>Textures\GUI\Icons\buttons\ThreeButton.dds</string>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockConsoleModule</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConsoleModule</DisplayName>
+<Description>Description_ConsoleModule</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="1" />
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BlockPairName>ConsoleModule</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockConsoleModuleCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConsoleModuleCorner</DisplayName>
+<Description>Description_ConsoleModule</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="1" />
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BlockPairName>ConsoleModuleCorner</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockConsoleModuleInvertedCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConsoleModuleInvertedCorner</DisplayName>
+<Description>Description_ConsoleModule</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="1" />
+<DamagedSound>ParticleElectrical</DamagedSound>
+<BlockPairName>ConsoleModuleInvertedCorner</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+<Id>
+<TypeId>TextPanel</TypeId>
+<SubtypeId>SmallBlockConsoleModuleScreens</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConsoleModuleScreens</DisplayName>
+<Description>Description_ConsoleModule</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Display" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ConsoleModuleScreens</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ButtonPanelDefinition">
+<Id>
+<TypeId>ButtonPanel</TypeId>
+<SubtypeId>SmallBlockConsoleModuleButtons</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ConsoleModuleButtons</DisplayName>
+<Description>Description_ConsoleModule</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="Construction" Count="4" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="InteriorPlate" Count="2" />
+<Component Subtype="Construction" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>ConsoleModuleButtons</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<string>Textures\GUI\Icons\buttons\OneButton.dds</string>
+<string>Textures\GUI\Icons\buttons\TwoButton.dds</string>
+<string>Textures\GUI\Icons\buttons\ThreeButton.dds</string>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>5</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ExtendedWindow</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ExtendedWindow</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="BulletproofGlass" Count="15" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>ExtendedWindow</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ExtendedWindowRailing</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ExtendedWindowRailing</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="BulletproofGlass" Count="15" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>ExtendedWindowRailing</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ExtendedWindowCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ExtendedWindowCorner</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="4" />
+<Component Subtype="BulletproofGlass" Count="6" />
+<Component Subtype="BulletproofGlass" Count="4" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>ExtendedWindowCorner</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ExtendedWindowEnd</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ExtendedWindowEnd</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="BulletproofGlass" Count="15" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>ExtendedWindowEnd</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>ExtendedWindowDome</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ExtendedWindowDome</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="10" />
+<Component Subtype="BulletproofGlass" Count="15" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>ExtendedWindowDome</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockExtendedWindow</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ExtendedWindow</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>ExtendedWindow</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockExtendedWindowCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ExtendedWindowCorner</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>ExtendedWindowCorner</BlockPairName>
+<BuildTimeSeconds>2</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockExtendedWindowEnd</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ExtendedWindowEnd</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+<Component Subtype="BulletproofGlass" Count="1" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="1" />
+<BlockPairName>ExtendedWindowEnd</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>SmallBlockExtendedWindowDome</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_ExtendedWindowDome</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="2" />
+<Component Subtype="BulletproofGlass" Count="4" />
+<Component Subtype="BulletproofGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>ExtendedWindowDome</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<PhysicalMaterial>Glass</PhysicalMaterial>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>Corridor</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Corridor</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="80" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>Corridor</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>CorridorLight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CorridorLight</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="80" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>CorridorLight</BlockPairName>
+<BuildTimeSeconds>14</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CorridorCorner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CorridorCorner</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="80" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>CorridorCorner</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CorridorT</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CorridorT</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="55" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="InteriorPlate" Count="15" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>CorridorT</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CorridorX</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CorridorX</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>CorridorX</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CorridorWindow</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CorridorWindow</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="80" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="BulletproofGlass" Count="6" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>CorridorWindow</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CorridorDoubleWindow</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CorridorDoubleWindow</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="65" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="BulletproofGlass" Count="12" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>CorridorDoubleWindow</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CorridorWindowRoof</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CorridorWindowRoof</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="80" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="BulletproofGlass" Count="6" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>CorridorWindowRoof</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>CorridorNarrow</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CorridorNarrow</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="80" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>CorridorNarrow</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>CorridorNarrowStowage</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CorridorNarrowStowage</DisplayName>
+<Description>Description_Passage</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="80" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="20" />
+<Component Subtype="Construction" Count="10" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>CorridorNarrowStowage</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+<Id>
+<TypeId>Door</TypeId>
+<SubtypeId>LargeBlockNarrowDoor</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_NarrowDoor</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<OpenSound>BlockDoorSlidingOpen</OpenSound>
+<CloseSound>BlockDoorSlidingClose</CloseSound>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>NarrowDoor</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+<Id>
+<TypeId>Door</TypeId>
+<SubtypeId>LargeBlockNarrowDoorHalf</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_NarrowDoorHalf</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<OpenSound>BlockDoorSlidingOpen</OpenSound>
+<CloseSound>BlockDoorSlidingClose</CloseSound>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="1" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>NarrowDoorHalf</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>TrussPillar</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TrussPillar</DisplayName>
+<Description>Description_InteriorPillar</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="25" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrussPillar</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>TrussPillarT</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TrussPillarT</DisplayName>
+<Description>Description_InteriorPillar</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="SmallTube" Count="6" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrussPillarT</BlockPairName>
+<BuildTimeSeconds>9</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>TrussPillarX</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TrussPillarX</DisplayName>
+<Description>Description_InteriorPillar</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="35" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SmallTube" Count="8" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrussPillarX</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>TrussPillarDiagonal</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TrussPillarDiagonal</DisplayName>
+<Description>Description_InteriorPillar</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="30" />
+<Component Subtype="Construction" Count="12" />
+<Component Subtype="SmallTube" Count="6" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrussPillarDiagonal</BlockPairName>
+<BuildTimeSeconds>9</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>TrussPillarSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TrussPillar</DisplayName>
+<Description>Description_InteriorPillar</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="25" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrussPillar</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>TrussPillarOffset</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TrussPillarOffset</DisplayName>
+<Description>Description_InteriorPillar</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="25" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="SmallTube" Count="4" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrussPillarOffset</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<IsAirTight>false</IsAirTight>
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>TrussPillarLight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TrussPillarLight</DisplayName>
+<Description>Description_InteriorLight</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="12" />
+<Component Subtype="Construction" Count="8" />
+<Component Subtype="SmallTube" Count="2" />
+</Components>
+<CriticalComponent Subtype="SmallTube" Index="0" />
+<BlockPairName>TrussPillarLight</BlockPairName>
+<BuildTimeSeconds>8</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>TrussPillarLightSmall</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TrussPillarLight</DisplayName>
+<Description>Description_InteriorLight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="SmallTube" Count="1" />
+</Components>
+<CriticalComponent Subtype="Construction" Index="0" />
+<BlockPairName>TrussPillarLight</BlockPairName>
+<BuildTimeSeconds>4</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DecoyDefinition">
+<Id>
+<TypeId>Decoy</TypeId>
+<SubtypeId>TrussPillarDecoy</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_TrussPillarDecoy</DisplayName>
+<Description>Description_Decoy</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="RadioCommunication" Count="1" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="RadioCommunication" Index="0" />
+<BlockPairName>TrussPillarDecoy</BlockPairName>
+<BuildTimeSeconds>16</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>50</PCU>
+<string>Weapons</string>
+<string>Propulsion</string>
+<string>PowerSystems</string>
+<IsAirTight>false</IsAirTight>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 
