@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ResearchGroups>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="0" />
+<Members>
+<BlockId Type="MyObjectBuilder_Assembler" Subtype="BasicAssembler" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="3" />
+<Members>
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="SmallLight" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="PassageSciFiLight" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockSmallLight" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="LargeBlockLight_1corner" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="LargeBlockLight_2corner" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockLight_1corner" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockLight_2corner" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="TrussPillarLight" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="TrussPillarLightSmall" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesStraight1" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesStraight2" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesCorner" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesBendUp" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesBendDown" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesStraightEnd1" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesStraightEnd2" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesStraightDown" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesU" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesT" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="LargeNeonTubesCircle" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="SmallNeonTubesStraight1" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="SmallNeonTubesStraight2" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="SmallNeonTubesCorner" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="SmallNeonTubesBendUp" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="SmallNeonTubesBendDown" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="SmallNeonTubesStraightEnd1" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="SmallNeonTubesStraightDown" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="SmallNeonTubesU" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="SmallNeonTubesT" />
+<BlockId Type="MyObjectBuilder_EmissiveBlock" Subtype="SmallNeonTubesCircle" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="OffsetLight" />
+<BlockId Type="MyObjectBuilder_ReflectorLight" Subtype="OffsetSpotlight" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="LargeLightPanel" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="SmallLightPanel" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="LargeBlockInsetLight" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="SmallBlockInsetLight" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="LargeBlockInsetWallLight" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="CorridorLight" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="AirDuctLight" />
+<BlockId Type="MyObjectBuilder_InteriorLight" Subtype="CorridorNarrowStowage" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="4" />
+<Members>
+<BlockId Type="MyObjectBuilder_Assembler" Subtype="LargeAssembler" />
+<BlockId Type="MyObjectBuilder_Assembler" Subtype="LargeAssemblerIndustrial" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="5" />
+<Members>
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockInteriorWall" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockSciFiWall" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="PipeWorkBlockA" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="PipeWorkBlockB" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="AngledInteriorWallA" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="AngledInteriorWallB" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockCylindricalColumn" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockCylindricalColumn" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="6" />
+<Members>
+<BlockId Type="MyObjectBuilder_Beacon" Subtype="LargeBlockBeacon" />
+<BlockId Type="MyObjectBuilder_Beacon" Subtype="SmallBlockBeacon" />
+<BlockId Type="MyObjectBuilder_Beacon" Subtype="LargeBlockBeaconReskin" />
+<BlockId Type="MyObjectBuilder_Beacon" Subtype="SmallBlockBeaconReskin" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="7" />
+<Members>
+<BlockId Type="MyObjectBuilder_Reactor" Subtype="SmallBlockSmallGenerator" />
+<BlockId Type="MyObjectBuilder_Reactor" Subtype="SmallBlockLargeGenerator" />
+<BlockId Type="MyObjectBuilder_Reactor" Subtype="LargeBlockSmallGenerator" />
+<BlockId Type="MyObjectBuilder_Reactor" Subtype="LargeBlockLargeGenerator" />
+<BlockId Type="MyObjectBuilder_Reactor" Subtype="LargeBlockSmallGeneratorWarfare2" />
+<BlockId Type="MyObjectBuilder_Reactor" Subtype="LargeBlockLargeGeneratorWarfare2" />
+<BlockId Type="MyObjectBuilder_Reactor" Subtype="SmallBlockSmallGeneratorWarfare2" />
+<BlockId Type="MyObjectBuilder_Reactor" Subtype="SmallBlockLargeGeneratorWarfare2" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="8" />
+<Members>
+<BlockId Type="MyObjectBuilder_LargeGatlingTurret" Subtype="" />
+<BlockId Type="MyObjectBuilder_LargeGatlingTurret" Subtype="SmallGatlingTurret" />
+<BlockId Type="MyObjectBuilder_LargeMissileTurret" Subtype="" />
+<BlockId Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallMissileTurret" />
+<BlockId Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeCalibreTurret" />
+<BlockId Type="MyObjectBuilder_LargeMissileTurret" Subtype="LargeBlockMediumCalibreTurret" />
+<BlockId Type="MyObjectBuilder_LargeMissileTurret" Subtype="SmallBlockMediumCalibreTurret" />
+<BlockId Type="MyObjectBuilder_LargeGatlingTurret" Subtype="AutoCannonTurret" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="9" />
+<Members>
+<BlockId Type="MyObjectBuilder_Refinery" Subtype="Blast Furnace" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="13" />
+<Members>
+<BlockId Type="MyObjectBuilder_RadioAntenna" Subtype="SmallBlockRadioAntenna" />
+<BlockId Type="MyObjectBuilder_RadioAntenna" Subtype="LargeBlockRadioAntenna" />
+<BlockId Type="MyObjectBuilder_RadioAntenna" Subtype="LargeBlockRadioAntennaDish" />
+<BlockId Type="MyObjectBuilder_RadioAntenna" Subtype="LargeBlockCompactRadioAntenna" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="14" />
+<Members>
+<BlockId Type="MyObjectBuilder_LandingGear" Subtype="LargeBlockLandingGear" />
+<BlockId Type="MyObjectBuilder_LandingGear" Subtype="SmallBlockLandingGear" />
+<BlockId Type="MyObjectBuilder_LandingGear" Subtype="LargeBlockMagneticPlate" />
+<BlockId Type="MyObjectBuilder_LandingGear" Subtype="SmallBlockMagneticPlate" />
+<BlockId Type="MyObjectBuilder_LandingGear" Subtype="LargeBlockSmallMagneticPlate" />
+<BlockId Type="MyObjectBuilder_LandingGear" Subtype="SmallBlockSmallMagneticPlate" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="15" />
+<Members>
+<BlockId Type="MyObjectBuilder_OxygenGenerator" Subtype="OxygenGeneratorSmall" />
+<BlockId Type="MyObjectBuilder_OxygenGenerator" Subtype="" />
+<BlockId Type="MyObjectBuilder_OxygenFarm" Subtype="LargeBlockOxygenFarm" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="16" />
+<Members>
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpit" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpitSeat" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="SmallBlockCockpit" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="DBSmallBlockFighterCockpit" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="CockpitOpen" />
+<BlockId Type="MyObjectBuilder_RemoteControl" Subtype="LargeBlockRemoteControl" />
+<BlockId Type="MyObjectBuilder_RemoteControl" Subtype="SmallBlockRemoteControl" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockCockpitIndustrial" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="SmallBlockCockpitIndustrial" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="OpenCockpitSmall" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="OpenCockpitLarge" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="RoverCockpit" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="BuggyCockpit" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="SpeederCockpit" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="SpeederCockpitCompact" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="LargeBlockStandingCockpit" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="SmallBlockStandingCockpit" />
+<BlockId Type="MyObjectBuilder_Cockpit" Subtype="SmallBlockCapCockpit" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="17" />
+<Members>
+<BlockId Type="MyObjectBuilder_SmallMissileLauncher" Subtype="LargeMissileLauncher" />
+<BlockId Type="MyObjectBuilder_SmallMissileLauncher" Subtype="" />
+<BlockId Type="MyObjectBuilder_SmallMissileLauncher" Subtype="SmallMissileLauncherWarfare2" />
+<BlockId Type="MyObjectBuilder_SmallMissileLauncher" Subtype="LargeBlockLargeCalibreGun" />
+<BlockId Type="MyObjectBuilder_SmallMissileLauncherReload" Subtype="SmallBlockMediumCalibreGun" />
+<BlockId Type="MyObjectBuilder_SmallMissileLauncherReload" Subtype="LargeRailgun" />
+<BlockId Type="MyObjectBuilder_SmallMissileLauncherReload" Subtype="SmallRailgun" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="19" />
+<Members>
+<BlockId Type="MyObjectBuilder_OxygenGenerator" Subtype="OxygenGeneratorSmall" />
+<BlockId Type="MyObjectBuilder_OxygenGenerator" Subtype="" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="21" />
+<Members>
+<BlockId Type="MyObjectBuilder_OxygenTank" Subtype="LargeHydrogenTank" />
+<BlockId Type="MyObjectBuilder_OxygenTank" Subtype="LargeHydrogenTankIndustrial" />
+<BlockId Type="MyObjectBuilder_OxygenTank" Subtype="LargeHydrogenTankSmall" />
+<BlockId Type="MyObjectBuilder_OxygenTank" Subtype="SmallHydrogenTank" />
+<BlockId Type="MyObjectBuilder_OxygenTank" Subtype="SmallHydrogenTankSmall" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="22" />
+<Members>
+<BlockId Type="MyObjectBuilder_BatteryBlock" Subtype="LargeBlockBatteryBlock" />
+<BlockId Type="MyObjectBuilder_BatteryBlock" Subtype="SmallBlockBatteryBlock" />
+<BlockId Type="MyObjectBuilder_BatteryBlock" Subtype="SmallBlockSmallBatteryBlock" />
+<BlockId Type="MyObjectBuilder_BatteryBlock" Subtype="LargeBlockBatteryBlockWarfare2" />
+<BlockId Type="MyObjectBuilder_BatteryBlock" Subtype="SmallBlockBatteryBlockWarfare2" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="23" />
+<Members>
+<BlockId Type="MyObjectBuilder_Refinery" Subtype="LargeRefinery" />
+<BlockId Type="MyObjectBuilder_Refinery" Subtype="LargeRefineryIndustrial" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="24" />
+<Members>
+<BlockId Type="MyObjectBuilder_CargoContainer" Subtype="SmallBlockSmallContainer" />
+<BlockId Type="MyObjectBuilder_CargoContainer" Subtype="SmallBlockMediumContainer" />
+<BlockId Type="MyObjectBuilder_CargoContainer" Subtype="SmallBlockLargeContainer" />
+<BlockId Type="MyObjectBuilder_CargoContainer" Subtype="LargeBlockSmallContainer" />
+<BlockId Type="MyObjectBuilder_CargoContainer" Subtype="LargeBlockLargeContainer" />
+<BlockId Type="MyObjectBuilder_CargoContainer" Subtype="LargeBlockLargeIndustrialContainer" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="25" />
+<Members>
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyor" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyor" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTube" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeDuct" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeDuctCurved" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="ConveyorTubeDuctT" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeCurved" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="ConveyorTubeT" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmall" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeDuctSmall" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeDuctSmallCurved" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="ConveyorTubeDuctSmallT" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeSmallCurved" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="ConveyorTubeSmallT" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeMedium" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorTubeCurvedMedium" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="ConveyorFrameMedium" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallShipConveyorHub" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="SmallBlockConveyorConverter" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeJunction" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeIntersection" />
+<BlockId Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeT" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeSeamless" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeFlange" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeEnd" />
+<BlockId Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeCorner" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockConveyorPipeCap" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockConveyorCap" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockConveyorCapMedium" />
+<BlockId Type="MyObjectBuilder_CubeBlock" Subtype="SmallBlockConveyorCap" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="26" />
+<Members>
+<BlockId Type="MyObjectBuilder_GravityGenerator" Subtype="" />
+<BlockId Type="MyObjectBuilder_GravityGeneratorSphere" Subtype="" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="27" />
+<Members>
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockSolarPanel" />
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockSolarPanel" />
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockColorableSolarPanel" />
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockColorableSolarPanelCorner" />
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="SmallBlockColorableSolarPanelCornerInverted" />
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockColorableSolarPanel" />
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockColorableSolarPanelCorner" />
+<BlockId Type="MyObjectBuilder_SolarPanel" Subtype="LargeBlockColorableSolarPanelCornerInverted" />
+<BlockId Type="MyObjectBuilder_WindTurbine" Subtype="LargeBlockWindTurbine" />
+<BlockId Type="MyObjectBuilder_WindTurbine" Subtype="LargeBlockWindTurbineReskin" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="28" />
+<Members>
+<BlockId Type="MyObjectBuilder_Door" Subtype="" />
+<BlockId Type="MyObjectBuilder_Door" Subtype="SmallDoor" />
+<BlockId Type="MyObjectBuilder_Door" Subtype="SmallSideDoor" />
+<BlockId Type="MyObjectBuilder_AirtightSlideDoor" Subtype="LargeBlockSlideDoor" />
+<BlockId Type="MyObjectBuilder_Door" Subtype="LargeBlockOffsetDoor" />
+<BlockId Type="MyObjectBuilder_Door" Subtype="SlidingHatchDoor" />
+<BlockId Type="MyObjectBuilder_Door" Subtype="SlidingHatchDoorHalf" />
+<BlockId Type="MyObjectBuilder_Door" Subtype="LargeBlockNarrowDoor" />
+<BlockId Type="MyObjectBuilder_Door" Subtype="LargeBlockNarrowDoorHalf" />
+</Members>
+</ResearchGroup>
+<ResearchGroup xsi:type="ResearchGroup">
+<Id Type="MyObjectBuilder_ResearchGroupDefinition" Subtype="29" />
+<Members>
+<BlockId Type="MyObjectBuilder_SoundBlock" Subtype="SmallBlockSoundBlock" />
+<BlockId Type="MyObjectBuilder_SoundBlock" Subtype="LargeBlockSoundBlock" />
+</Members>
+</ResearchGroup>
+</ResearchGroups>
+</Definitions>
+ 

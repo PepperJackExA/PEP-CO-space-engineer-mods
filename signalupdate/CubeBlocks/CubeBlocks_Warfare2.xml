@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<CubeBlocks>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>BridgeWindow1x1Slope</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_BridgeWindow1x1Slope</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="8" />
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="BulletproofGlass" Count="15" />
+<Component Subtype="BulletproofGlass" Count="10" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>BridgeWindow1x1Slope</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<!--<PhysicalMaterial>Metal</PhysicalMaterial>-->
+<PCU>1</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>BridgeWindow1x1Face</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_BridgeWindow1x1Face</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="8" />
+<Component Subtype="SteelPlate" Count="2" />
+<Component Subtype="InteriorPlate" Count="4" />
+<Component Subtype="BulletproofGlass" Count="10" />
+<Component Subtype="BulletproofGlass" Count="8" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>BridgeWindow1x1Face</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<!--<PhysicalMaterial>Glass</PhysicalMaterial>-->
+<PCU>1</PCU>
+</Definition>
+<Definition>
+<Id>
+<TypeId>CubeBlock</TypeId>
+<SubtypeId>BridgeWindow1x1FaceInverted</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_BridgeWindow1x1FaceInverted</DisplayName>
+<Description>Description_Window</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Girder" Count="5" />
+<Component Subtype="SteelPlate" Count="6" />
+<Component Subtype="InteriorPlate" Count="12" />
+<Component Subtype="BulletproofGlass" Count="5" />
+<Component Subtype="BulletproofGlass" Count="7" />
+</Components>
+<CriticalComponent Subtype="BulletproofGlass" Index="0" />
+<BlockPairName>BridgeWindow1x1FaceInverted</BlockPairName>
+<BuildTimeSeconds>5</BuildTimeSeconds>
+<IsAirTight>true</IsAirTight>
+<!--<PhysicalMaterial>Glass</PhysicalMaterial>-->
+<PCU>1</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>PassengerBench</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_PassengerBench</DisplayName>
+<Description>Description_PassengerSeat</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BlockPairName>PassengerBench</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<EnableFirstPerson>true</EnableFirstPerson>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>LargeLightPanel</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightPanel</DisplayName>
+<Description>Description_InteriorLight</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="5" />
+<Component Subtype="Construction" Count="5" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BlockPairName>LightPanel</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+<Id>
+<TypeId>InteriorLight</TypeId>
+<SubtypeId>SmallLightPanel</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LightPanel</DisplayName>
+<Description>Description_InteriorLight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="InteriorPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+</Components>
+<CriticalComponent Subtype="InteriorPlate" Index="0" />
+<BlockPairName>LightPanel</BlockPairName>
+<BuildTimeSeconds>3</BuildTimeSeconds>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.00006</RequiredPowerInput>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>PoofExplosionCat1</DestroySound>
+<PCU>25</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeBlockSmallGeneratorWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallReactorWarfare2</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="50" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="MetalGrid" Count="4" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Reactor" Count="100" />
+<Component Subtype="Motor" Count="6" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="30" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SmallReactorWarfare2</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>LargeBlockLargeGeneratorWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeReactorWarfare2</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="800" />
+<Component Subtype="Construction" Count="70" />
+<Component Subtype="MetalGrid" Count="40" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="Superconductor" Count="100" />
+<Component Subtype="Reactor" Count="2000" />
+<Component Subtype="Motor" Count="20" />
+<Component Subtype="Computer" Count="75" />
+<Component Subtype="SteelPlate" Count="200" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LargeReactorWarfare2</BlockPairName>
+<BuildTimeSeconds>100</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipLrgNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepLrgWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallBlockSmallGeneratorWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallReactorWarfare2</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Reactor" Count="3" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="10" />
+<Component Subtype="SteelPlate" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SmallReactorWarfare2</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearSm</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<IsAirTight>false</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+<Id>
+<TypeId>Reactor</TypeId>
+<SubtypeId>SmallBlockLargeGeneratorWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeReactorWarfare2</DisplayName>
+<Description>Description_Reactor</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="40" />
+<Component Subtype="Construction" Count="9" />
+<Component Subtype="MetalGrid" Count="9" />
+<Component Subtype="LargeTube" Count="3" />
+<Component Subtype="Reactor" Count="95" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>LargeReactorWarfare2</BlockPairName>
+<BuildTimeSeconds>30</BuildTimeSeconds>
+<Id>
+<TypeId>Ingot</TypeId>
+<SubtypeId>Uranium</SubtypeId>
+</Id>
+<PrimarySound>ShipSmNuclearLrg</PrimarySound>
+<DamagedSound>ParticleReactor</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>25</PCU>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>AirtightHangarDoorWarfare2A</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirtightHangarDoorWarfare2A</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockDoorHangar</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="250" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AirtightHangarDoorWarfare2A</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>AirtightHangarDoorWarfare2B</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirtightHangarDoorWarfare2B</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockDoorHangar</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="250" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AirtightHangarDoorWarfare2B</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_AirtightHangarDoorDefinition">
+<Id>
+<TypeId>AirtightHangarDoor</TypeId>
+<SubtypeId>AirtightHangarDoorWarfare2C</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_AirtightHangarDoorWarfare2C</DisplayName>
+<Description>Description_HangarDoor</Description>
+<CubeSize>Large</CubeSize>
+<Sound>BlockDoorHangar</Sound>
+<Components>
+<Component Subtype="SteelPlate" Count="250" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="SmallTube" Count="40" />
+<Component Subtype="Motor" Count="16" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="25" />
+<Component Subtype="SteelPlate" Count="100" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>AirtightHangarDoorWarfare2C</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<PowerConsumptionIdle>0.00001</PowerConsumptionIdle>
+<PowerConsumptionMoving>0.001</PowerConsumptionMoving>
+<PhysicalMaterial>Metal</PhysicalMaterial>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallMissileLauncher</TypeId>
+<SubtypeId>SmallMissileLauncherWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_RocketLauncherWarfare2</DisplayName>
+<Description>Description_RocketLauncher</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="MetalGrid" Count="1" />
+<Component Subtype="LargeTube" Count="4" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>RocketLauncherWarfare2</BlockPairName>
+<BuildTimeSeconds>15</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.24</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>425</PCU>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_WeaponBlockDefinition">
+<Id>
+<TypeId>SmallGatlingGun</TypeId>
+<SubtypeId>SmallGatlingGunWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_GatlingGunWarfare2</DisplayName>
+<Description>Description_GatlingGun</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="MetalGrid" Count="2" />
+<Component Subtype="SmallTube" Count="6" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="1" />
+<Component Subtype="SteelPlate" Count="3" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>GatlingGunWarfare2</BlockPairName>
+<BuildTimeSeconds>13</BuildTimeSeconds>
+<ResourceSinkGroup>Defense</ResourceSinkGroup>
+<InventoryMaxVolume>0.064</InventoryMaxVolume>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>80</PCU>
+<string>Weapons</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>LargeBlockBatteryBlockWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_BatteryWarfare2</DisplayName>
+<Description>Description_Battery</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="20" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="PowerCell" Count="80">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Computer" Count="25" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="60" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>BatteryBlockWarfare2</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>12</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<IsAirTight>true</IsAirTight>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_BatteryBlockDefinition">
+<Id>
+<TypeId>BatteryBlock</TypeId>
+<SubtypeId>SmallBlockBatteryBlockWarfare2</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_BatteryWarfare2</DisplayName>
+<Description>Description_Battery</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="PowerCell" Count="20">
+<DeconstructId>
+<TypeId>Ore</TypeId>
+<SubtypeId>Scrap</SubtypeId>
+</DeconstructId>
+</Component>
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="3" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="PowerCell" Index="0" />
+<BlockPairName>BatteryBlockWarfare2</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>BatteryBlock</ResourceSinkGroup>
+<RequiredPowerInput>4</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>PowerSystems</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+<Id>
+<TypeId>Door</TypeId>
+<SubtypeId>SlidingHatchDoor</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SlidingHatchDoor</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<OpenSound>BlockDoorHangar</OpenSound>
+<CloseSound>BlockDoorHangar</CloseSound>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="BulletproofGlass" Count="10" />
+<Component Subtype="SteelPlate" Count="25" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SlidingHatchDoor</BlockPairName>
+<BuildTimeSeconds>26</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_DoorDefinition">
+<Id>
+<TypeId>Door</TypeId>
+<SubtypeId>SlidingHatchDoorHalf</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SlidingHatchDoorHalf</DisplayName>
+<Description>Description_Door</Description>
+<CubeSize>Large</CubeSize>
+<OpenSound>BlockDoorHangar</OpenSound>
+<CloseSound>BlockDoorHangar</CloseSound>
+<Components>
+<Component Subtype="SteelPlate" Count="10" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SmallTube" Count="10" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Display" Count="2" />
+<Component Subtype="Computer" Count="2" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="BulletproofGlass" Count="10" />
+<Component Subtype="SteelPlate" Count="20" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>SlidingHatchDoorHalf</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<ResourceSinkGroup>Doors</ResourceSinkGroup>
+<DamagedSound>ParticleHeavyMech</DamagedSound>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>115</PCU>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SearchlightDefinition">
+<Id>
+<TypeId>Searchlight</TypeId>
+<SubtypeId>SmallSearchlight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Searchlight</DisplayName>
+<Description>Description_Searchlight</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="2" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="2" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="BulletproofGlass" Count="2" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Searchlight</BlockPairName>
+<BuildTimeSeconds>12</BuildTimeSeconds>
+<HasInventory>false</HasInventory>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<MinElevationDegrees>-40</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>PoofExplosionCat2</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_SearchlightDefinition">
+<Id>
+<TypeId>Searchlight</TypeId>
+<SubtypeId>LargeSearchlight</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_Searchlight</DisplayName>
+<Description>Description_Searchlight</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="LargeTube" Count="2" />
+<Component Subtype="Motor" Count="4" />
+<Component Subtype="Computer" Count="5" />
+<Component Subtype="Construction" Count="10" />
+<Component Subtype="BulletproofGlass" Count="4" />
+</Components>
+<CriticalComponent Subtype="Computer" Index="0" />
+<BlockPairName>Searchlight</BlockPairName>
+<BuildTimeSeconds>24</BuildTimeSeconds>
+<HasInventory>false</HasInventory>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<ResourceSinkGroup>Utility</ResourceSinkGroup>
+<RequiredPowerInput>0.001</RequiredPowerInput>
+<MinElevationDegrees>-40</MinElevationDegrees>
+<MaxElevationDegrees>90</MaxElevationDegrees>
+<MinAzimuthDegrees>-180</MinAzimuthDegrees>
+<MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+<IdleRotation>true</IdleRotation>
+<DestroySound>PoofExplosionCat3</DestroySound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_HeatVentBlockDefinition">
+<Id>
+<TypeId>HeatVentBlock</TypeId>
+<SubtypeId>LargeHeatVentBlock</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeatVentWarfare2</DisplayName>
+<Description>Description_HeatVent</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="LargeTube" Count="10" />
+<Component Subtype="Motor" Count="5" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>HeatVentBlock</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<PCU>50</PCU>
+<IsAirTight>true</IsAirTight>
+<IdleSound>BlockOxyGenIdle</IdleSound>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_HeatVentBlockDefinition">
+<Id>
+<TypeId>HeatVentBlock</TypeId>
+<SubtypeId>SmallHeatVentBlock</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_HeatVentWarfare2</DisplayName>
+<Description>Description_HeatVent</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Motor" Index="0" />
+<BlockPairName>HeatVentBlock</BlockPairName>
+<BuildTimeSeconds>6</BuildTimeSeconds>
+<RequiredPowerInput>0.0002</RequiredPowerInput>
+<Public>true</Public>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<PCU>50</PCU>
+<IsAirTight>true</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>SmallBlockStandingCockpit</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CockpitStandingBridge</DisplayName>
+<Description>Description_CockpitStandingBridge</Description>
+<CubeSize>Small</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="Display" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>StandingBridge</BlockPairName>
+<EnableFirstPerson>true</EnableFirstPerson>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+<HasInventory>false</HasInventory>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_CockpitDefinition">
+<Id>
+<TypeId>Cockpit</TypeId>
+<SubtypeId>LargeBlockStandingCockpit</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_CockpitStandingBridge</DisplayName>
+<Description>Description_CockpitStandingBridge</Description>
+<CubeSize>Large</CubeSize>
+<Components>
+<Component Subtype="InteriorPlate" Count="10" />
+<Component Subtype="Construction" Count="15" />
+<Component Subtype="Motor" Count="1" />
+<Component Subtype="Computer" Count="20" />
+<Component Subtype="Display" Count="2" />
+<Component Subtype="Construction" Count="5" />
+<Component Subtype="InteriorPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Display" Index="0" />
+<BlockPairName>StandingBridge</BlockPairName>
+<EnableFirstPerson>true</EnableFirstPerson>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<HasInventory>false</HasInventory>
+<DamagedSound>ParticleElectrical</DamagedSound>
+<PCU>50</PCU>
+<IsAirTight>false</IsAirTight>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SmallBlockSmallModularThruster</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallModularThruster</DisplayName>
+<Description>Description_IonThrust</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Ion</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="LargeTube" Count="1" />
+<Component Subtype="Thrust" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="1" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>SmallModularThruster</BlockPairName>
+<BuildTimeSeconds>10</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>14400</ForceMagnitude>
+<MaxPowerConsumption>0.200</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<PrimarySound>SmShipSmJet</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>SmallBlockLargeModularThruster</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeModularThruster</DisplayName>
+<Description>Description_IonThrust</Description>
+<CubeSize>Small</CubeSize>
+<ThrusterType>Ion</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="1" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="LargeTube" Count="5" />
+<Component Subtype="Thrust" Count="12" />
+<Component Subtype="Construction" Count="1" />
+<Component Subtype="SteelPlate" Count="4" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>LargeModularThruster</BlockPairName>
+<BuildTimeSeconds>20</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>172800</ForceMagnitude>
+<MaxPowerConsumption>2.4</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<PrimarySound>SmShipLrgJet</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LargeBlockSmallModularThruster</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_SmallModularThruster</DisplayName>
+<Description>Description_IonThrust</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Ion</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="15" />
+<Component Subtype="Construction" Count="40" />
+<Component Subtype="LargeTube" Count="8" />
+<Component Subtype="Thrust" Count="80" />
+<Component Subtype="Construction" Count="20" />
+<Component Subtype="SteelPlate" Count="10" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>SmallModularThruster</BlockPairName>
+<BuildTimeSeconds>40</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>345600</ForceMagnitude>
+<MaxPowerConsumption>3.36</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<PrimarySound>LrgShipSmJet</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>Propulsion</string>
+</Definition>
+<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+<Id>
+<TypeId>Thrust</TypeId>
+<SubtypeId>LargeBlockLargeModularThruster</SubtypeId>
+</Id>
+<DisplayName>DisplayName_Block_LargeModularThruster</DisplayName>
+<Description>Description_IonThrust</Description>
+<CubeSize>Large</CubeSize>
+<ThrusterType>Ion</ThrusterType>
+<Components>
+<Component Subtype="SteelPlate" Count="100" />
+<Component Subtype="Construction" Count="70" />
+<Component Subtype="LargeTube" Count="40" />
+<Component Subtype="Thrust" Count="960" />
+<Component Subtype="Construction" Count="30" />
+<Component Subtype="SteelPlate" Count="50" />
+</Components>
+<CriticalComponent Subtype="Thrust" Index="0" />
+<BlockPairName>LargeModularThruster</BlockPairName>
+<BuildTimeSeconds>90</BuildTimeSeconds>
+<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+<ForceMagnitude>4320000</ForceMagnitude>
+<MaxPowerConsumption>33.6</MaxPowerConsumption>
+<MinPowerConsumption>0.000002</MinPowerConsumption>
+<SlowdownFactor>1</SlowdownFactor>
+<MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+<EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+<PrimarySound>LrgShipLrgJet</PrimarySound>
+<DamagedSound>ParticleWeapExpl</DamagedSound>
+<DestroySound>WepSmallWarheadExpl</DestroySound>
+<PCU>15</PCU>
+<string>Propulsion</string>
+</Definition>
+</CubeBlocks>
+</Definitions>
+ 

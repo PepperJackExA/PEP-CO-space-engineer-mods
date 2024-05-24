@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_TerminalBlock" Subtype="ControlPanel" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="WelderItem" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="Embrasure" />
+<DefinitionId Type="MyObjectBuilder_PhysicalGunObject" Subtype="AngleGrinder2Item" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockArmorBlock" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="Window1x1Flat" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_CubeBlock" Subtype="RailingStraight" />
+<Data xsi:type="MyObjectBuilder_ToolbarItemCubeBlock">
+<DefinitionId Type="MyObjectBuilder_BatteryBlock" Subtype="SmallBlockSmallBatteryBlock" />
+<IdentityId>144115188075855895</IdentityId>
+<IdentityId>144115188075855901</IdentityId>
+<Scenario Type="MyObjectBuilder_ScenarioDefinition" Subtype="UraniumHeist" />
+<Identities>
+<IdentityId>144115188075855895</IdentityId>
+<DisplayName>Aragath</DisplayName>
+<IdentityId>144115188075855896</IdentityId>
+<DisplayName>Space Pirates</DisplayName>
+<IdentityId>144115188075855897</IdentityId>
+<DisplayName>RED NPC8273</DisplayName>
+<IdentityId>144115188075855898</IdentityId>
+<DisplayName>BLU NPC4839</DisplayName>
+<IdentityId>144115188075855899</IdentityId>
+<DisplayName>GRN NPC1460</DisplayName>
+<IdentityId>144115188075855900</IdentityId>
+<DisplayName>ADM NPC7361</DisplayName>
+<IdentityId>144115188075855901</IdentityId>
+<DisplayName>P4p3Rc1iP</DisplayName>
+<Definition Type="MyObjectBuilder_ContainerDropSystemDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_SessionComponentContractSystemDefinition" Subtype="Default" />
+<Definition Type="MyObjectbuilder_SessionComponentEconomyDefinition" Subtype="Default" />
+<Definition Type="MyObjectBuilder_CoordinateSystemDefinition" Subtype="CoordinateSystem" />
+<Id>96</Id>
+<Id>122</Id>
+<Id>123</Id>
+<Id>119</Id>
+<Id>124</Id>
+<Id>135</Id>
+<Definition Type="MyObjectBuilder_BankingSystemDefinition" Subtype="BankingSystem" />
+<GameDefinition Type="MyObjectBuilder_GameDefinition" Subtype="Default" />

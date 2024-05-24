@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>EarthLike</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="SnowCoverageIronCore" ModifierId="EarthSnowArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="SnowCoverageIronCore" ModifierId="EarthSnowArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthDesertArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthDesertArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthDesertArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="EarthDesertArea" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="SnowCoverageIronCore" ModifierId="EarthSnowArea" Density="0.002" />
+</Definition>
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>Alien</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="alienrockyterrain_snowtop_largestone" Density="0.001" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="SnowCoverageIronCore" ModifierId="AlienIcelandArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="SnowCoverageIronCore" ModifierId="AlienIcelandArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="AlienForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="AlienForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="alienrockymountain_largestone" Density="0.001" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="AlienForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="AlienForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="AlienForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="AlienForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="AlienForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="AlienForestArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="AlienDesertArea" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="AlienDesertArea" Density="0.002" />
+</Definition>
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>Mars</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="Mars" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="Mars" Density="0.003" />
+</Definition>
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>Moon</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="Moon" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="Moon" Density="0.003" />
+</Definition>
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>Europa</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="SnowCoverageIronCore" ModifierId="Europa" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="SnowCoverageIronCore" ModifierId="Europa" Density="0.003" />
+</Definition>
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>Titan</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="Mars" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="StoneCoverageIronCore" ModifierId="Mars" Density="0.003" />
+</Definition>
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>EarthLikeTutorial</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_snowtop_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_snowtop_smallstone" Density="0.008" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_snowtop_mediumstone" Density="0.006" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_smallstone" Density="0.006" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_mediumstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_smallstone" Density="0.006" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_mediumstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_smallstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_mediumstone" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_smallstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_mediumstone" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_smallstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_mediumstone" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_snowtop_smallstone" Density="0.008" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_snowtop_mediumstone" Density="0.006" />
+</Definition>
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>MoonTutorial</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="moonrocks_smallstone" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="moonrocks_mediumstone" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="moonrocks_largestone" Density="0.0001" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="moonrocks_smallstone" Density="0.01" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="moonrocks_mediumstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="moonrocks_largestone" Density="0.0002" />
+</Definition>
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>MarsTutorial</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="marsrock_smallstone" Density="0.001" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="marsrock_mediumstone" Density="0.002" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="marsrocks_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="marsrock_smallstone" Density="0.009" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="marsrock_mediumstone" Density="0.005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="marsrocks_largestone" Density="0.0008" />
+</Definition>
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>EarthLikeModExample</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_snowtop_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_snowtop_smallstone" Density="0.008" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_snowtop_mediumstone" Density="0.006" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_smallstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_mediumstone" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_smallstone" Density="0.006" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_mediumstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_smallstone" Density="0.006" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_mediumstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_smallstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_mediumstone" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_smallstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_mediumstone" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_largestone" Density="0.0005" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_smallstone" Density="0.004" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="desertrocks_mediumstone" Density="0.003" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_snowtop_smallstone" Density="0.008" />
+<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" SubtypeId="stone_snowtop_mediumstone" Density="0.006" />
+</Definition>
+<Definition xsi:type="PlanetGeneratorDefinition">
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>SystemTestMap</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+</Definition>
+</Definitions>

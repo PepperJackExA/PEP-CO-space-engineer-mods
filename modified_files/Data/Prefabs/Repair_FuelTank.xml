@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
+<Id Type="MyObjectBuilder_PrefabDefinition" Subtype="Repair_FuelTank" />
+<CubeBlocks>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_OxygenTank">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_BatteryBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_ShipConnector">
+<ComponentContainer>
+<Components>
+<ComponentData>
+<TypeId>MyInventoryBase</TypeId>
+<Component xsi:type="MyObjectBuilder_Inventory">
+</Component>
+</ComponentData>
+</Components>
+</ComponentContainer>
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_CubeBlock">
+</MyObjectBuilder_CubeBlock>
+<MyObjectBuilder_CubeBlock xsi:type="MyObjectBuilder_InteriorLight">
+</MyObjectBuilder_CubeBlock>
+</CubeBlocks>
+<DisplayName>Repair_FuelTank</DisplayName>
+</Definitions>

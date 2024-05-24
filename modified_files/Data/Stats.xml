@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<StatDefinitions>
+<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+<Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>Health</SubtypeId>
+</Id>
+<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+<Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>SpiderHealth</SubtypeId>
+</Id>
+<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+<Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>SpaceCharacterHealth</SubtypeId>
+</Id>
+<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+<Id>
+<TypeId>MyObjectBuilder_EntityStat</TypeId>
+<SubtypeId>WolfHealth</SubtypeId>
+</Id>
+</StatDefinitions>
+</Definitions>

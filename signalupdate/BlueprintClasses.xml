@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<BlueprintClasses>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>SurvivalKitIngots</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_SurvivalKitIngots</DisplayName>
+<Description>Description_BlueprintClass_SurvivalKitIngots</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>BasicComponents</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Components</DisplayName>
+<Description>Description_BlueprintClass_Components</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>BasicEquipment</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Equipment</DisplayName>
+<Description>Description_BlueprintClass_Equipment</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>BasicTools</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Tools</DisplayName>
+<Description>Description_BlueprintClass_Tools</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>BasicWeapons</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Weapons</DisplayName>
+<Description>Description_BlueprintClass_Weapons</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>BasicConsumables</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ammo</DisplayName>
+<Description>Description_BlueprintClass_Ammo</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>SimpleComponents</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Components</DisplayName>
+<Description>Description_BlueprintClass_Components</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>SimpleEquipment</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Equipment</DisplayName>
+<Description>Description_BlueprintClass_Equipment</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Tools</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Tools</DisplayName>
+<Description>Description_BlueprintClass_Tools</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>SimpleWeapons</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Weapons</DisplayName>
+<Description>Description_BlueprintClass_Weapons</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Consumables</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ammo</DisplayName>
+<Description>Description_BlueprintClass_Ammo</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>LargeBlocks</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_LargeBlocks</DisplayName>
+<Description>Description_BlueprintClass_LargeBlocks</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>SmallBlocks</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_SmallBlocks</DisplayName>
+<Description>Description_BlueprintClass_SmallBlocks</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Components</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Components</DisplayName>
+<Description>Description_BlueprintClass_Components</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>EliteEquipment</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Equipment</DisplayName>
+<Description>Description_BlueprintClass_Equipment</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>EliteTools</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Tools</DisplayName>
+<Description>Description_BlueprintClass_Tools</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>EliteWeapons</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Weapons</DisplayName>
+<Description>Description_BlueprintClass_Weapons</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>EliteConsumables</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ammo</DisplayName>
+<Description>Description_BlueprintClass_Ammo</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>BuildPlanner</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_BuildPlanner</DisplayName>
+<Description>Description_BlueprintClass_BuildPlanner</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Ammo</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ammo</DisplayName>
+<Description>Description_BlueprintClass_Ammo</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Ingots</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+<Description>Description_BlueprintClass_Ingots</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>CommonMetals</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_CommonMetals</DisplayName>
+<Description>Description_BlueprintClass_CommonMetals</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>Ice</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_Ice</DisplayName>
+<Description>Description_BlueprintClass_Ice</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>OxygenBottles</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_OxygenBottles</DisplayName>
+<Description>Description_BlueprintClass_OxygenBottles</Description>
+</Class>
+<Class>
+<Id>
+<TypeId>BlueprintClassDefinition</TypeId>
+<SubtypeId>HydrogenBottles</SubtypeId>
+</Id>
+<DisplayName>DisplayName_BlueprintClass_HydrogenBottles</DisplayName>
+<Description>Description_BlueprintClass_HydrogenBottles</Description>
+</Class>
+</BlueprintClasses>
+<BlueprintClassEntries>
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SpaceBall/SpaceBallLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/LargeLCDPanelWide" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/LargeLCDPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/LargeLCDPanel3x3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/LargeLCDPanel5x3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/LargeLCDPanel5x5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MyProgrammableBlock/LargeProgrammableBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MyProgrammableBlock/LargeProgrammableBlockReskin" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TurretControlBlock/LargeTurretControlBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Assembler/LargeAssembler" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Assembler/BasicAssembler" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Assembler/LargeAssemblerIndustrial" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="AirtightSlideDoor/LargeBlockSlideDoor" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Door/SlidingHatchDoor" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Door/SlidingHatchDoorHalf" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Door/LargeBlockNarrowDoor" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Door/LargeBlockNarrowDoorHalf" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="BatteryBlock/LargeBlockBatteryBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="BatteryBlock/LargeBlockBatteryBlockWarfare2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Beacon/LargeBlockBeacon" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Beacon/LargeBlockBeaconReskin" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SafeZoneBlock/SafeZoneBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ButtonPanel/ButtonPanelLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ButtonPanel/LargeSciFiButtonPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ButtonPanel/LargeSciFiButtonTerminal" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ButtonPanel/VerticalButtonPanelLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ButtonPanel/LargeBlockInsetButtonPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/LargeBlockLargeContainer" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/LargeBlockSmallContainer" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/LargeBlockLargeIndustrialContainer" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/CockpitOpen" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockStandingCockpit" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockCockpit" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockCockpitSeat" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/PassengerSeatLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Collector/Collector" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Conveyor/LargeBlockConveyor" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorTube" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorTubeDuct" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorTubeDuctCurved" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Conveyor/ConveyorTubeDuctT" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorTubeCurved" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Conveyor/ConveyorTubeT" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/LargeBlockConveyorSorter" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/LargeBlockConveyorSorterIndustrial" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Conveyor/LargeBlockConveyorPipeJunction" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Conveyor/LargeBlockConveyorPipeIntersection" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Conveyor/LargeBlockConveyorPipeT" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorConnector/LargeBlockConveyorPipeSeamless" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorConnector/LargeBlockConveyorPipeFlange" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorConnector/LargeBlockConveyorPipeEnd" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorConnector/LargeBlockConveyorPipeCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockConveyorPipeCap" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockConveyorCap" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/ArmorAlpha" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/ArmorCenter" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/ArmorCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/ArmorInvCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/ArmorSide" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorCornerInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorRoundedSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorRoundedCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorAngledSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorAngledCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorRoundedSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorRoundedCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorAngledSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorAngledCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorRoundSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorRoundCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorRoundCornerInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorRoundSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorRoundCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorRoundCornerInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockInteriorWall" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/PipeWorkBlockA" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/PipeWorkBlockB" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/AngledInteriorWallA" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/AngledInteriorWallB" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/AirDuct1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/AirDuct2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/AirDuctLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/LargeBlockInsetAquarium" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/AirDuctCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/AirDuctT" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/AirDuctX" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/AirDuctRamp" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/AirDuctGrate" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockCylindricalColumn" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockSciFiWall" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TerminalBlock/LargeBlockSciFiTerminal" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TerminalBlock/LargeBlockAccessPanel1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TerminalBlock/LargeBlockAccessPanel2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ButtonPanel/LargeBlockAccessPanel3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TerminalBlock/LargeBlockAccessPanel4" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeCoverWall" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeCoverWallHalf" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeCoverWallHalfMirrored" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/FireCover" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/FireCoverCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorCornerInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeHeavyBlockArmorSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeInteriorPillar" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussPillar" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussPillarOffset" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussPillarT" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussPillarX" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussPillarDiagonal" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRailStraight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRamp" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmor_Corner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmor_CornerInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmor_Slope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeStairs" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSteelCatwalk" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSteelCatwalk2Sides" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSteelCatwalkCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSteelCatwalkPlate" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWindowCen" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWindowEdge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWindowSquare" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x1Flat" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x1FlatInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x1Face" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/BridgeWindow1x1Face" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/BridgeWindow1x1FaceInverted" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/BridgeWindow1x1Slope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x1Inv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x1Side" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x1SideInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x1Slope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x2Flat" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x2FlatInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x2Face" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x2Inv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x2SideLeft" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x2SideLeftInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x2SideRight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x2SideRightInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window1x2Slope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window2x3Flat" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window2x3FlatInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window3x3Flat" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Window3x3FlatInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowRound" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowRoundInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowRoundCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowRoundCornerInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowRoundFace" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowRoundFaceInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowRoundInwardsCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowRoundInwardsCornerInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Viewport1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Viewport2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/HalfWindow" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/HalfWindowInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/HalfWindowCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/HalfWindowCornerInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/HalfWindowDiagonal" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/HalfWindowRound" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/ExtendedWindow" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/ExtendedWindowRailing" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/ExtendedWindowCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/ExtendedWindowEnd" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/ExtendedWindowDome" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Embrasure" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Passage2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Passage2Wall" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/PassageSciFi" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/PassageSciFiLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/LargeLightPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/LargeBlockInsetLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/TrussPillarLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/PassageSciFiWall" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/PassageSciFiIntersection" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/PassageSciFiGate" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/PassageScifiCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/PassageSciFiTjunction" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/PassageSciFiWindow" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Corridor" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/CorridorLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CorridorCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CorridorT" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CorridorX" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CorridorWindow" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CorridorDoubleWindow" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CorridorWindowRoof" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CorridorNarrow" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/CorridorNarrowStowage" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolA" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolB" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolC" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolD" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolE" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolF" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolG" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolH" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolI" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolJ" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolK" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolL" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolM" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolN" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolO" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolP" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolQ" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolR" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolS" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolT" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolU" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolV" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolW" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolX" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolY" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolZ" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbol0" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbol1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbol2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbol3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbol4" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbol5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbol6" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbol7" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbol8" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbol9" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolHyphen" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolUnderscore" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolDot" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolApostrophe" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolAnd" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolColon" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolExclamationMark" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeSymbolQuestionMark" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ExhaustBlock/LargeExhaustPipe" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="HeatVentBlock/LargeHeatVentBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Decoy/LargeDecoy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Decoy/TrussPillarDecoy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Door/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Door/LargeBlockOffsetDoor" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Drill/LargeBlockDrill" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesStraight1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesStraight2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesBendUp" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesBendDown" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesStraightEnd1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesStraightEnd2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesStraightDown" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesU" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesT" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmissiveBlock/LargeNeonTubesCircle" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="GravityGenerator/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="GravityGeneratorSphere/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Gyro/LargeBlockGyro" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/SmallLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorTurret/LargeInteriorTurret" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LandingGear/LargeBlockLandingGear" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LandingGear/LargeBlockMagneticPlate" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LandingGear/LargeBlockSmallMagneticPlate" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeGatlingTurret/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/LargeCalibreTurret" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LargeMissileTurret/LargeBlockMediumCalibreTurret" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LaserAntenna/LargeBlockLaserAntenna" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MedicalRoom/LargeMedicalRoom" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MedicalRoom/LargeMedicalRoomReskin" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MergeBlock/LargeShipMergeBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorAdvancedStator/LargeAdvancedStator" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorAdvancedStator/LargeHinge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorAdvancedRotor/LargeHingeHead" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorRotor/LargeRotor" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorStator/LargeStator" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/Suspension1x1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/Suspension2x2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/Suspension3x3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/Suspension5x5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSuspension1x1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSuspension2x2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSuspension3x3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSuspension5x5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/ShortSuspension1x1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/ShortSuspension2x2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/ShortSuspension3x3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/ShortSuspension5x5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/OffroadShortSuspension1x1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/OffroadShortSuspension2x2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/OffroadShortSuspension3x3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="MotorSuspension/OffroadShortSuspension5x5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OreDetector/LargeOreDetector" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OxygenGenerator/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OxygenTank/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OxygenTank/LargeHydrogenTank" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OxygenTank/LargeHydrogenTankSmall" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OxygenTank/LargeHydrogenTankIndustrial" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OxygenFarm/LargeBlockOxygenFarm" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Parachute/LgParachute" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CryoChamber/LargeBlockCryoChamber" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CryoChamber/LargeBlockCryoRoom" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="UpgradeModule/LargeProductivityModule" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="UpgradeModule/LargeEffectivenessModule" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="UpgradeModule/LargeEnergyModule" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="JumpDrive/LargeJumpDrive" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="AirVent/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="AirVent/AirVentFull" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="AirVent/AirVentFan" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="AirVent/AirVentFanFull" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Passage/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="AirtightHangarDoor/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Door/LargeBlockGate" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="AirtightHangarDoor/AirtightHangarDoorWarfare2A" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="AirtightHangarDoor/AirtightHangarDoorWarfare2B" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="AirtightHangarDoor/AirtightHangarDoorWarfare2C" />
+<!--<Entry Class="LargeBlocks" BlueprintSubtypeId="PistonBase/LargePistonBase" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="PistonTop/LargePistonTop" />-->
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ExtendedPistonBase/LargePistonBase" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="PistonTop/LargePistonTop" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Projector/LargeProjector" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="RadioAntenna/LargeBlockRadioAntenna" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="RadioAntenna/LargeBlockCompactRadioAntenna" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="RadioAntenna/LargeBlockRadioAntennaDish" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Reactor/LargeBlockLargeGenerator" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Reactor/LargeBlockSmallGenerator" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Reactor/LargeBlockLargeGeneratorWarfare2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Reactor/LargeBlockSmallGeneratorWarfare2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Refinery/LargeRefinery" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Refinery/LargeRefineryIndustrial" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Refinery/Blast Furnace" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ReflectorLight/LargeBlockFrontLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="RemoteControl/LargeBlockRemoteControl" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SensorBlock/LargeBlockSensor" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SensorBlock/LargeBlockSensorReskin" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ShipConnector/Connector" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ShipGrinder/LargeShipGrinder" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ShipWelder/LargeShipWelder" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SmallMissileLauncher/LargeMissileLauncher" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SmallMissileLauncher/LargeFlareLauncher" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SmallMissileLauncherReload/LargeRailgun" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SmallMissileLauncher/LargeBlockLargeCalibreGun" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SolarPanel/LargeBlockSolarPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SoundBlock/LargeBlockSoundBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TerminalBlock/ControlPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/LargeTextPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TimerBlock/TimerBlockLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TimerBlock/TimerBlockReskinLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EventControllerBlock/EventControllerLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CameraBlock/LargeCameraBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CameraBlock/LargeCameraTopMounted" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockLargeThrust" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockSmallThrust" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockLargeThrustSciFi" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockSmallThrustSciFi" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockLargeAtmosphericThrust" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockSmallAtmosphericThrust" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockLargeAtmosphericThrustSciFi" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockSmallAtmosphericThrustSciFi" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockLargeHydrogenThrust" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockSmallHydrogenThrust" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockLargeHydrogenThrustIndustrial" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockSmallHydrogenThrustIndustrial" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockLargeModularThruster" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockSmallModularThruster" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="VirtualMass/VirtualMassLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Warhead/LargeWarhead" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/RealWheel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/RealWheel1x1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/RealWheel5x5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/Wheel1x1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/Wheel2x2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/Wheel3x3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/Wheel5x5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/OffroadRealWheel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/OffroadWheel2x2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/OffroadRealWheel1x1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/OffroadRealWheel5x5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/OffroadWheel1x1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/OffroadWheel3x3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Wheel/OffroadWheel5x5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SurvivalKit/SurvivalKitLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="HydrogenEngine/LargeHydrogenEngine" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="WindTurbine/LargeBlockWindTurbine" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="WindTurbine/LargeBlockWindTurbineReskin" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockDesk" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockDeskCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockDeskCornerInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockDeskChairless" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockDeskChairlessCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockDeskChairlessCornerInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockConsoleModule" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockConsoleModuleCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockConsoleModuleInvertedCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockConsoleModuleScreens" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ButtonPanel/LargeBlockConsoleModuleButtons" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Kitchen/LargeBlockKitchen" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockBarCounter" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockBarCounterCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CryoChamber/LargeBlockBed" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CryoChamber/LargeBlockInsetBed" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/LargeBlockLockerRoom" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/LargeBlockLockerRoomCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Planter/LargeBlockPlanters" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockCouch" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockCouchCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockInsetPlantCouch" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/LargeBlockLockers" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/LargeBlockWeaponRack" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CargoContainer/LargeBlockInsetBookshelf" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/LargeBlockInsetKitchen" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockBathroomOpen" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockBathroom" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockToilet" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Projector/LargeBlockConsole" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/LargeBlockCockpitIndustrial" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Ladder2/(null)" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Ladder2/LadderShaft" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="VendingMachine/FoodDispenser" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Jukebox/Jukebox" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Jukebox/LargeBlockInsetEntertainmentCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LCDPanelsBlock/LabEquipment" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Shower" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowWall" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowWallLeft" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/WindowWallRight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="LCDPanelsBlock/MedicalStation" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/TransparentLCDLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Catwalk" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CatwalkCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CatwalkStraight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CatwalkWall" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CatwalkHalf" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CatwalkHalfRailing" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CatwalkHalfOuterRailing" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/CatwalkHalfCenterRailing" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/GratedStairs" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/GratedHalfStairs" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/GratedHalfStairsMirrored" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/RailingStraight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/RailingDouble" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/RailingCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/RailingDiagonal" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/RailingHalfLeft" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/RailingHalfRight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/RailingCenter" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Railing2x1Right" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Railing2x1Left" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Cockpit/OpenCockpitLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ReflectorLight/RotatingLightLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Freight1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Freight2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Freight3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/StorageShelf1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/StorageShelf2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/StorageShelf3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TargetDummyBlock/TargetDummy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeGridBeamBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeGridBeamBlockSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeGridBeamBlockRound" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeGridBeamBlockSlope2x1Base" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeGridBeamBlockSlope2x1Tip" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeGridBeamBlockHalf" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeGridBeamBlockHalfSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeGridBeamBlockEnd" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeGridBeamBlockJunction" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeGridBeamBlockTJunction" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorPanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorCenterPanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorSlopedSidePanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorSlopedPanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorHalfPanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorHalfCenterPanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorQuarterPanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedPanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedPanelTipLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedSideBasePanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedSideTipPanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedSideBasePanelLightInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedSideTipPanelLightInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorHalfSlopedPanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1HalfSlopedPanelLightRight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1HalfSlopedTipPanelLightRight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1HalfSlopedPanelLightLeft" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1HalfSlopedTipPanelLightLeft" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmorPanelLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmorPanelCornerLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmorPanelFaceLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmorPanelInvertedCornerLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorPanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorCenterPanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorSlopedSidePanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorSlopedPanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorHalfPanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorHalfCenterPanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorQuarterPanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedPanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedPanelTipHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedSideBasePanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedSideTipPanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedSideBasePanelHeavyInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1SlopedSideTipPanelHeavyInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmorHalfSlopedPanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1HalfSlopedPanelHeavyRight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1HalfSlopedTipPanelHeavyRight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1HalfSlopedPanelHeavyLeft" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeArmor2x1HalfSlopedTipPanelHeavyLeft" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmorPanelHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmorPanelCornerHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmorPanelFaceHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeRoundArmorPanelInvertedCornerHeavy" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorRaisedSlopedCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockHeavyArmorRaisedSlopedCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorSlopeTransition" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockHeavyArmorSlopeTransition" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorSlopeTransitionBase" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockHeavyArmorSlopeTransitionBase" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorSlopeTransitionBaseMirrored" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockHeavyArmorSlopeTransitionBaseMirrored" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorSlopeTransitionMirrored" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockHeavyArmorSlopeTransitionMirrored" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorSlopeTransitionTip" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockHeavyArmorSlopeTransitionTip" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorSlopeTransitionTipMirrored" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockHeavyArmorSlopeTransitionTipMirrored" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorSquareSlopedCornerBase" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockHeavyArmorSquareSlopedCornerBase" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorSquareSlopedCornerTip" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockHeavyArmorSquareSlopedCornerTip" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockArmorSquareSlopedCornerTipInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockHeavyArmorSquareSlopedCornerTipInv" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Searchlight/LargeSearchlight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign1" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign4" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign5" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign6" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign7" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign8" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign9" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign10" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign11" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign12" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSign13" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="PathRecorderBlock/LargePathRecorderBlock" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="BasicMissionBlock/LargeBasicMission" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="FlightMovementBlock/LargeFlightMovement" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="DefensiveCombatBlock/LargeDefensiveCombat" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="OffensiveCombatBlock/LargeOffensiveCombat" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="EmotionControllerBlock/EmotionControllerLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockLargeFlatAtmosphericThrust" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockLargeFlatAtmosphericThrustDShape" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockSmallFlatAtmosphericThrust" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Thrust/LargeBlockSmallFlatAtmosphericThrustDShape" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SolarPanel/LargeBlockColorableSolarPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SolarPanel/LargeBlockColorableSolarPanelCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="SolarPanel/LargeBlockColorableSolarPanelCornerInverted" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/HoloLCDLarge" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TerminalBlock/LargeControlPanelPedestal" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ButtonPanel/LargeButtonPanelPedestal" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSignEaster3" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSignEaster9" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSignEaster10" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSignEaster11" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSignEaster13" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeWarningSignEaster2" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CryoChamber/LargeBlockHalfBed" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CryoChamber/LargeBlockHalfBedOffset" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/LargeFullBlockLCDPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/LargeDiagonalLCDPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/LargeCurvedLCDPanel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/Truss" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussSloped" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussAngled" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussHalf" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussFloor" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussFloorT" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussFloorX" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussFloorAngled" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussFloorAngledInverted" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussFloorHalf" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Ladder2/TrussLadder" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussFrame" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/TrussSlopedFrame" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="ReflectorLight/LargeInsetAquarium" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TerminalBlock/LargeCrate" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBarrel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBarrelThree" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBarrelStack" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="Warhead/LargeExplosiveBarrel" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockStatueEngineer" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockInsetWall" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="InteriorLight/LargeBlockInsetWallLight" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockInsetWallPillar" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockInsetWallCorner" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockInsetWallCornerInverted" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="CubeBlock/LargeBlockInsetWallSlope" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="TransponderBlock/LargeBlockTransponder" />
+<Entry Class="LargeBlocks" BlueprintSubtypeId="BroadcastController/LargeBlockBroadcastController" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="AirVent/SmallAirVent" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="AirVent/SmallAirVentFull" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="AirVent/SmallAirVentFan" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="AirVent/SmallAirVentFanFull" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SpaceBall/SpaceBallSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TextPanel/SmallLCDPanel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TextPanel/SmallLCDPanelWide" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MyProgrammableBlock/SmallProgrammableBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MyProgrammableBlock/SmallProgrammableBlockReskin" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TurretControlBlock/SmallTurretControlBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="BatteryBlock/SmallBlockBatteryBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="BatteryBlock/SmallBlockBatteryBlockWarfare2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="BatteryBlock/SmallBlockSmallBatteryBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Beacon/SmallBlockBeacon" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Beacon/SmallBlockBeaconReskin" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ButtonPanel/ButtonPanelSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ButtonPanel/VerticalButtonPanelSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CargoContainer/SmallBlockLargeContainer" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CargoContainer/SmallBlockMediumContainer" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CargoContainer/SmallBlockSmallContainer" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/SmallBlockStandingCockpit" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/PassengerSeatSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/PassengerSeatSmallNew" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/PassengerSeatSmallOffset" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/PassengerBench" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/SmallBlockCockpit" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/DBSmallBlockFighterCockpit" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/SpeederCockpit" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/SpeederCockpitCompact" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Collector/CollectorSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Conveyor/SmallBlockConveyor" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Conveyor/SmallShipConveyorHub" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorFrameMedium" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorTubeCurvedMedium" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorTubeMedium" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorTubeSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorTubeDuctSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorTubeDuctSmallCurved" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Conveyor/ConveyorTubeDuctSmallT" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorConnector/ConveyorTubeSmallCurved" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Conveyor/ConveyorTubeSmallT" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/SmallBlockConveyorSorter" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ConveyorSorter/MediumBlockConveyorSorter" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Conveyor/SmallBlockConveyorConverter" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockConveyorCapMedium" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockConveyorCap" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorCenter" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorInvCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorSide" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorCornerInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorCornerInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorRoundedSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorRoundedCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorAngledSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorAngledCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorRoundedSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorRoundedCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorAngledSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorAngledCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorRoundSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorRoundCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorRoundCornerInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorRoundSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorRoundCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallHeavyBlockArmorRoundCornerInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x1Flat" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x1FlatInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x1Side" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x1SideInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x1Face" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x1Inv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x1Slope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x2Flat" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x2FlatInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x2Inv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x2Face" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x2SideLeft" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x2SideLeftInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x2SideRight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x2SideRightInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow1x2Slope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow2x3Flat" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow2x3FlatInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow3x3Flat" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindow3x3FlatInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindowRound" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindowRoundInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindowRoundCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindowRoundCornerInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindowRoundFace" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindowRoundFaceInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindowRoundInwardsCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWindowRoundInwardsCornerInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/BarredWindow" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/BarredWindowSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/BarredWindowSide" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/BarredWindowFace" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockExtendedWindow" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockExtendedWindowCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockExtendedWindowEnd" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockExtendedWindowDome" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockCylindricalColumn" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolA" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolB" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolC" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolD" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolE" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolF" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolG" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolH" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolI" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolJ" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolK" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolL" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolM" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolN" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolO" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolP" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolQ" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolR" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolS" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolT" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolU" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolV" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolW" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolX" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolY" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolZ" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbol0" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbol1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbol2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbol3" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbol4" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbol5" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbol6" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbol7" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbol8" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbol9" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolHyphen" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolUnderscore" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolDot" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolApostrophe" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolAnd" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolColon" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolExclamationMark" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallSymbolQuestionMark" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ExhaustBlock/SmallExhaustPipe" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="HeatVentBlock/SmallHeatVentBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="InteriorLight/SmallBlockSmallLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="InteriorLight/OffsetLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="InteriorLight/SmallLightPanel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="InteriorLight/SmallBlockInsetLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="InteriorLight/TrussPillarLightSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ReflectorLight/OffsetSpotlight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeGatlingTurret/SmallGatlingTurret" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/SmallMissileTurret" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeMissileTurret/SmallBlockMediumCalibreTurret" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="LargeGatlingTurret/AutoCannonTurret" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Decoy/SmallDecoy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Drill/SmallBlockDrill" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Gyro/SmallBlockGyro" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="LandingGear/SmallBlockLandingGear" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="LandingGear/SmallBlockMagneticPlate" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="LandingGear/SmallBlockSmallMagneticPlate" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="LaserAntenna/SmallBlockLaserAntenna" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MergeBlock/SmallShipMergeBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MergeBlock/SmallShipSmallMergeBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorAdvancedStator/SmallAdvancedStator" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorAdvancedRotor/SmallAdvancedRotor" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorAdvancedStator/SmallAdvancedStatorSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorAdvancedRotor/SmallAdvancedRotorSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorRotor/SmallRotor" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorStator/SmallStator" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorAdvancedStator/MediumHinge" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorAdvancedStator/SmallHinge" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorAdvancedRotor/MediumHingeHead" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorAdvancedRotor/SmallHingeHead" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallSuspension1x1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallSuspension2x2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallSuspension3x3" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallSuspension5x5" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSmallSuspension1x1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSmallSuspension2x2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSmallSuspension3x3" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSmallSuspension5x5" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallShortSuspension1x1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallShortSuspension2x2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallShortSuspension3x3" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/SmallShortSuspension5x5" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSmallShortSuspension1x1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSmallShortSuspension2x2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSmallShortSuspension3x3" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="MotorSuspension/OffroadSmallShortSuspension5x5" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="OreDetector/SmallBlockOreDetector" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="OxygenTank/OxygenTankSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="OxygenTank/SmallHydrogenTank" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="OxygenTank/SmallHydrogenTankSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="OxygenGenerator/OxygenGeneratorSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Parachute/SmParachute" />
+<!--<Entry Class="SmallBlocks" BlueprintSubtypeId="PistonBase/SmallPistonBase" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="PistonTop/SmallPistonTop" />-->
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ExtendedPistonBase/SmallPistonBase" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="PistonTop/SmallPistonTop" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Projector/SmallProjector" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="RadioAntenna/SmallBlockRadioAntenna" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Reactor/SmallBlockLargeGenerator" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Reactor/SmallBlockSmallGenerator" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Reactor/SmallBlockLargeGeneratorWarfare2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Reactor/SmallBlockSmallGeneratorWarfare2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ReflectorLight/SmallBlockFrontLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="RemoteControl/SmallBlockRemoteControl" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SensorBlock/SmallBlockSensor" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SensorBlock/SmallBlockSensorReskin" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ShipConnector/ConnectorMedium" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ShipConnector/ConnectorSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ShipGrinder/SmallShipGrinder" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ShipWelder/SmallShipWelder" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallGatlingGun/(null)" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallGatlingGun/SmallGatlingGunWarfare2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallMissileLauncher/(null)" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallMissileLauncherReload/SmallRocketLauncherReload" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallMissileLauncher/SmallFlareLauncher" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallMissileLauncher/SmallMissileLauncherWarfare2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallGatlingGun/SmallBlockAutocannon" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallMissileLauncherReload/SmallRailgun" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SmallMissileLauncherReload/SmallBlockMediumCalibreGun" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SolarPanel/SmallBlockSolarPanel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SoundBlock/SmallBlockSoundBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TerminalBlock/SmallControlPanel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TerminalBlock/SmallBlockAccessPanel1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TerminalBlock/SmallBlockAccessPanel2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TerminalBlock/SmallBlockAccessPanel3" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TerminalBlock/SmallBlockAccessPanel4" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TextPanel/SmallTextPanel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TimerBlock/TimerBlockSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TimerBlock/TimerBlockReskinSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EventControllerBlock/EventControllerSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CameraBlock/SmallCameraBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CameraBlock/SmallCameraTopMounted" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockLargeThrust" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockSmallThrust" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockLargeThrustSciFi" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockSmallThrustSciFi" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockLargeAtmosphericThrust" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockSmallAtmosphericThrust" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockLargeAtmosphericThrustSciFi" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockSmallAtmosphericThrustSciFi" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockLargeHydrogenThrust" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockSmallHydrogenThrust" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockLargeHydrogenThrustIndustrial" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockSmallHydrogenThrustIndustrial" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockLargeModularThruster" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockSmallModularThruster" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="VirtualMass/VirtualMassSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Warhead/SmallWarhead" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallRealWheel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallRealWheel1x1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallRealWheel5x5" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallWheel1x1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallWheel2x2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallWheel3x3" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/SmallWheel5x5" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/OffroadSmallRealWheel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/OffroadSmallRealWheel1x1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/OffroadSmallRealWheel5x5" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/OffroadSmallWheel1x1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/OffroadSmallWheel2x2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/OffroadSmallWheel3x3" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Wheel/OffroadSmallWheel5x5" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SurvivalKit/SurvivalKit" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="HydrogenEngine/SmallHydrogenEngine" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/SmallBlockCockpitIndustrial" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/SmallBlockCapCockpit" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CryoChamber/SmallBlockCryoChamber" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Ladder2/LadderSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/OpenCockpitSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/RoverCockpit" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Cockpit/BuggyCockpit" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TextPanel/TransparentLCDSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ReflectorLight/RotatingLightSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Door/SmallDoor" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Door/SmallSideDoor" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CargoContainer/SmallBlockWeaponRack" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallGridBeamBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallGridBeamBlockSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallGridBeamBlockRound" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallGridBeamBlockSlope2x1Base" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallGridBeamBlockSlope2x1Tip" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallGridBeamBlockHalf" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallGridBeamBlockHalfSlope" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallGridBeamBlockEnd" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallGridBeamBlockJunction" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallGridBeamBlockTJunction" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorPanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorCenterPanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorSlopedSidePanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorSlopedPanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorHalfPanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorHalfCenterPanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorQuarterPanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedPanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedPanelTipLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedSideBasePanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedSideTipPanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedSideBasePanelLightInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedSideTipPanelLightInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorHalfSlopedPanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1HalfSlopedPanelLightRight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1HalfSlopedTipPanelLightRight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1HalfSlopedPanelLightLeft" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1HalfSlopedTipPanelLightLeft" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallRoundArmorPanelLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallRoundArmorPanelCornerLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallRoundArmorPanelFaceLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallRoundArmorPanelInvertedCornerLight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorPanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorCenterPanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorSlopedSidePanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorSlopedPanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorHalfPanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorHalfCenterPanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorQuarterPanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedPanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedPanelTipHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedSideBasePanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedSideTipPanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedSideBasePanelHeavyInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1SlopedSideTipPanelHeavyInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmorHalfSlopedPanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1HalfSlopedPanelHeavyRight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1HalfSlopedTipPanelHeavyRight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1HalfSlopedPanelHeavyLeft" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallArmor2x1HalfSlopedTipPanelHeavyLeft" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallRoundArmorPanelHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallRoundArmorPanelCornerHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallRoundArmorPanelFaceHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallRoundArmorPanelInvertedCornerHeavy" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorRaisedSlopedCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockHeavyArmorRaisedSlopedCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorSlopeTransition" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockHeavyArmorSlopeTransition" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorSlopeTransitionBase" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockHeavyArmorSlopeTransitionBase" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorSlopeTransitionBaseMirrored" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockHeavyArmorSlopeTransitionBaseMirrored" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorSlopeTransitionMirrored" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockHeavyArmorSlopeTransitionMirrored" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorSlopeTransitionTip" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockHeavyArmorSlopeTransitionTip" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorSlopeTransitionTipMirrored" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockHeavyArmorSlopeTransitionTipMirrored" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorSquareSlopedCornerBase" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockHeavyArmorSquareSlopedCornerBase" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorSquareSlopedCornerTip" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockHeavyArmorSquareSlopedCornerTip" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockArmorSquareSlopedCornerTipInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockHeavyArmorSquareSlopedCornerTipInv" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Searchlight/SmallSearchlight" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmissiveBlock/SmallNeonTubesStraight1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmissiveBlock/SmallNeonTubesStraight2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmissiveBlock/SmallNeonTubesCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmissiveBlock/SmallNeonTubesBendUp" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmissiveBlock/SmallNeonTubesBendDown" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmissiveBlock/SmallNeonTubesStraightEnd1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmissiveBlock/SmallNeonTubesStraightDown" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmissiveBlock/SmallNeonTubesU" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmissiveBlock/SmallNeonTubesT" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmissiveBlock/SmallNeonTubesCircle" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign1" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign3" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign4" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign5" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign6" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign7" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign8" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign9" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign10" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign11" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign12" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSign13" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="PathRecorderBlock/SmallPathRecorderBlock" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="BasicMissionBlock/SmallBasicMission" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="FlightMovementBlock/SmallFlightMovement" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="DefensiveCombatBlock/SmallDefensiveCombat" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="OffensiveCombatBlock/SmallOffensiveCombat" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="EmotionControllerBlock/EmotionControllerSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockLargeFlatAtmosphericThrust" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockLargeFlatAtmosphericThrustDShape" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockSmallFlatAtmosphericThrust" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Thrust/SmallBlockSmallFlatAtmosphericThrustDShape" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SolarPanel/SmallBlockColorableSolarPanel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SolarPanel/SmallBlockColorableSolarPanelCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="SolarPanel/SmallBlockColorableSolarPanelCornerInverted" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TerminalBlock/SmallControlPanelPedestal" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ButtonPanel/SmallButtonPanelPedestal" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSignEaster3" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSignEaster9" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSignEaster10" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSignEaster11" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSignEaster13" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallWarningSignEaster2" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TextPanel/SmallFullBlockLCDPanel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TextPanel/SmallDiagonalLCDPanel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TextPanel/SmallCurvedLCDPanel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/TrussSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/TrussSlopedSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/TrussAngledSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/TrussHalfSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TextPanel/HoloLCDSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBarrel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="Warhead/SmallExplosiveBarrel" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockConsoleModule" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockConsoleModuleCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/SmallBlockConsoleModuleInvertedCorner" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TextPanel/SmallBlockConsoleModuleScreens" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="ButtonPanel/SmallBlockConsoleModuleButtons" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="CubeBlock/TrussPillarSmall" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="TransponderBlock/SmallBlockTransponder" />
+<Entry Class="SmallBlocks" BlueprintSubtypeId="BroadcastController/SmallBlockBroadcastController" />
+<Entry Class="SurvivalKitIngots" BlueprintSubtypeId="Position0010_StoneOreToIngotBasic" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="Display" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="SolarCell" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="SteelPlate" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="InteriorPlate" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="MotorComponent" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="GirderComponent" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="ComputerComponent" />
+<Entry Class="BasicComponents" BlueprintSubtypeId="ConstructionComponent" />
+<Entry Class="BasicEquipment" BlueprintSubtypeId="Position0040_Datapad" />
+<Entry Class="BasicEquipment" BlueprintSubtypeId="Position0005_FlareGun" />
+<Entry Class="BasicEquipment" BlueprintSubtypeId="Position0005_FlareGunMagazine" />
+<Entry Class="BasicTools" BlueprintSubtypeId="Position0010_AngleGrinder" />
+<Entry Class="BasicTools" BlueprintSubtypeId="Position0050_HandDrill" />
+<Entry Class="BasicTools" BlueprintSubtypeId="Position0090_Welder" />
+<Entry Class="BasicWeapons" BlueprintSubtypeId="Position0010_SemiAutoPistol" />
+<Entry Class="BasicConsumables" BlueprintSubtypeId="Position0010_SemiAutoPistolMagazine" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="BulletproofGlass" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="ComputerComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="ConstructionComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="DetectorComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="Display" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="GirderComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="InteriorPlate" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="LargeTube" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="MedicalComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="MetalGrid" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="MotorComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="PowerCell" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="RadioCommunicationComponent" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="SmallTube" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="SolarCell" />
+<Entry Class="SimpleComponents" BlueprintSubtypeId="SteelPlate" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position0010_OxygenBottle" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position0020_HydrogenBottle" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position0030_Canvas" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position0040_Datapad" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position0005_FlareGun" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position0005_FlareGunMagazine" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position0007_FireworksBoxBlue" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position00071_FireworksBoxGreen" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position00072_FireworksBoxRed" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position00073_FireworksBoxYellow" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position00074_FireworksBoxPink" />
+<Entry Class="SimpleEquipment" BlueprintSubtypeId="Position00075_FireworksBoxRainbow" />
+<Entry Class="Tools" BlueprintSubtypeId="Position0090_Welder" />
+<Entry Class="Tools" BlueprintSubtypeId="Position0100_Welder2" />
+<Entry Class="Tools" BlueprintSubtypeId="Position0010_AngleGrinder" />
+<Entry Class="Tools" BlueprintSubtypeId="Position0020_AngleGrinder2" />
+<Entry Class="Tools" BlueprintSubtypeId="Position0050_HandDrill" />
+<Entry Class="Tools" BlueprintSubtypeId="Position0060_HandDrill2" />
+<Entry Class="SimpleWeapons" BlueprintSubtypeId="Position0010_SemiAutoPistol" />
+<Entry Class="SimpleWeapons" BlueprintSubtypeId="Position0020_FullAutoPistol" />
+<Entry Class="SimpleWeapons" BlueprintSubtypeId="Position0040_AutomaticRifle" />
+<Entry Class="SimpleWeapons" BlueprintSubtypeId="Position0050_RapidFireAutomaticRifle" />
+<Entry Class="Consumables" BlueprintSubtypeId="Position0010_SemiAutoPistolMagazine" />
+<Entry Class="Consumables" BlueprintSubtypeId="Position0040_AutomaticRifleGun_Mag_20rd" />
+<Entry Class="Consumables" BlueprintSubtypeId="Position0020_FullAutoPistolMagazine" />
+<Entry Class="Consumables" BlueprintSubtypeId="Position0050_RapidFireAutomaticRifleGun_Mag_50rd" />
+<Entry Class="Consumables" BlueprintSubtypeId="Position0080_NATO_25x184mmMagazine" />
+<Entry Class="Components" BlueprintSubtypeId="ConstructionComponent" />
+<Entry Class="Components" BlueprintSubtypeId="GirderComponent" />
+<Entry Class="Components" BlueprintSubtypeId="MetalGrid" />
+<Entry Class="Components" BlueprintSubtypeId="InteriorPlate" />
+<Entry Class="Components" BlueprintSubtypeId="SteelPlate" />
+<Entry Class="Components" BlueprintSubtypeId="SmallTube" />
+<Entry Class="Components" BlueprintSubtypeId="LargeTube" />
+<Entry Class="Components" BlueprintSubtypeId="MotorComponent" />
+<Entry Class="Components" BlueprintSubtypeId="Display" />
+<Entry Class="Components" BlueprintSubtypeId="BulletproofGlass" />
+<Entry Class="Components" BlueprintSubtypeId="ComputerComponent" />
+<Entry Class="Components" BlueprintSubtypeId="ReactorComponent" />
+<Entry Class="Components" BlueprintSubtypeId="ThrustComponent" />
+<Entry Class="Components" BlueprintSubtypeId="GravityGeneratorComponent" />
+<Entry Class="Components" BlueprintSubtypeId="MedicalComponent" />
+<Entry Class="Components" BlueprintSubtypeId="RadioCommunicationComponent" />
+<Entry Class="Components" BlueprintSubtypeId="DetectorComponent" />
+<Entry Class="Components" BlueprintSubtypeId="ExplosivesComponent" />
+<Entry Class="Components" BlueprintSubtypeId="SolarCell" />
+<Entry Class="Components" BlueprintSubtypeId="PowerCell" />
+<Entry Class="Components" BlueprintSubtypeId="Superconductor" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0010_AngleGrinder" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0020_AngleGrinder2" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0030_AngleGrinder3" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0040_AngleGrinder4" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0050_HandDrill" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0060_HandDrill2" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0070_HandDrill3" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0080_HandDrill4" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0090_Welder" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0100_Welder2" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0110_Welder3" />
+<Entry Class="EliteTools" BlueprintSubtypeId="Position0120_Welder4" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position0010_OxygenBottle" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position0020_HydrogenBottle" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position0030_Canvas" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position0040_Datapad" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position0005_FlareGun" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position0005_FlareGunMagazine" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position0007_FireworksBoxBlue" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position00071_FireworksBoxGreen" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position00072_FireworksBoxRed" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position00073_FireworksBoxYellow" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position00074_FireworksBoxPink" />
+<Entry Class="EliteEquipment" BlueprintSubtypeId="Position00075_FireworksBoxRainbow" />
+<Entry Class="EliteWeapons" BlueprintSubtypeId="Position0010_SemiAutoPistol" />
+<Entry Class="EliteWeapons" BlueprintSubtypeId="Position0020_FullAutoPistol" />
+<Entry Class="EliteWeapons" BlueprintSubtypeId="Position0030_EliteAutoPistol" />
+<Entry Class="EliteWeapons" BlueprintSubtypeId="Position0040_AutomaticRifle" />
+<Entry Class="EliteWeapons" BlueprintSubtypeId="Position0050_RapidFireAutomaticRifle" />
+<Entry Class="EliteWeapons" BlueprintSubtypeId="Position0060_PreciseAutomaticRifle" />
+<Entry Class="EliteWeapons" BlueprintSubtypeId="Position0070_UltimateAutomaticRifle" />
+<Entry Class="EliteWeapons" BlueprintSubtypeId="Position0080_BasicHandHeldLauncher" />
+<Entry Class="EliteWeapons" BlueprintSubtypeId="Position0090_AdvancedHandHeldLauncher" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0010_SemiAutoPistolMagazine" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0020_FullAutoPistolMagazine" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0030_ElitePistolMagazine" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0040_AutomaticRifleGun_Mag_20rd" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0050_RapidFireAutomaticRifleGun_Mag_50rd" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0060_PreciseAutomaticRifleGun_Mag_5rd" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0070_UltimateAutomaticRifleGun_Mag_30rd" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0080_NATO_25x184mmMagazine" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0090_AutocannonClip" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0100_Missile200mm" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0110_MediumCalibreAmmo" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0120_LargeCalibreAmmo" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0130_SmallRailgunAmmo" />
+<Entry Class="EliteConsumables" BlueprintSubtypeId="Position0140_LargeRailgunAmmo" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="ScrapToIronIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="ScrapIngotToIronIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="StoneOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="IronOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="NickelOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="CobaltOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="MagnesiumOreToIngot" />
+<Entry Class="CommonMetals" BlueprintSubtypeId="SiliconOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="ScrapToIronIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="ScrapIngotToIronIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="StoneOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="IronOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="NickelOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="CobaltOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="MagnesiumOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="SiliconOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="SilverOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="GoldOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="PlatinumOreToIngot" />
+<Entry Class="Ingots" BlueprintSubtypeId="UraniumOreToIngot" />
+<Entry Class="Ice" BlueprintSubtypeId="IceToOxygen" />
+<Entry Class="OxygenBottles" BlueprintSubtypeId="OxygenBottlesRefill" />
+<Entry Class="HydrogenBottles" BlueprintSubtypeId="HydrogenBottlesRefill" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0010_SemiAutoPistolMagazine" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0020_FullAutoPistolMagazine" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0030_ElitePistolMagazine" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0040_AutomaticRifleGun_Mag_20rd" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0050_RapidFireAutomaticRifleGun_Mag_50rd" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0060_PreciseAutomaticRifleGun_Mag_5rd" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0080_NATO_25x184mmMagazine" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0070_UltimateAutomaticRifleGun_Mag_30rd" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0090_AutocannonClip" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0100_Missile200mm" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0110_MediumCalibreAmmo" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0120_LargeCalibreAmmo" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0130_SmallRailgunAmmo" />
+<Entry Class="Ammo" BlueprintSubtypeId="Position0140_LargeRailgunAmmo" />
+</BlueprintClassEntries>
+</Definitions>
+ 

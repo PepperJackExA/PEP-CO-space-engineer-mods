@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PlanetGeneratorDefinitions>
+<PlanetGeneratorDefinition>
+<Id>
+<TypeId>PlanetGeneratorDefinition</TypeId>
+<SubtypeId>Triton</SubtypeId>
+</Id>
+<MesherPostprocessing xsi:type="MyObjectBuilder_VoxelMesherComponentDefinition">
+</PlanetGeneratorDefinition>
+</PlanetGeneratorDefinitions>
+</Definitions>
