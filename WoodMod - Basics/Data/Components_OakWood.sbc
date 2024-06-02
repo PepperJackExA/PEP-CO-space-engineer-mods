@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Components>
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>OakWoodLog</SubtypeId>
+            </Id>
+            <DisplayName>Oak Wood Log</DisplayName>
+            <Icon>Textures\OakWoodLog.dds</Icon>
+            <Size>
+                <X>1</X>
+                <Y>5</Y>
+                <Z>1</Z>
+            </Size>
+			<Mass>28</Mass>
+			<Volume>20</Volume>
+            <Model>Models\OakWoodLog.mwm</Model>
+            <PhysicalMaterial>Wood</PhysicalMaterial>
+            <MaxIntegrity>100</MaxIntegrity>
+			<IconSymbol>Wood</IconSymbol>
+            <DropProbability>0.9</DropProbability>
+            <Health>100</Health>
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>100</MaximumAcquisitionAmount>
+        </Component>
+		<Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>OakWoodPlank</SubtypeId>
+            </Id>
+            <DisplayName>Oak Wood Plank</DisplayName>
+            <Icon>Textures\OakWoodPlank.dds</Icon>
+            <Size>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </Size>
+			<Mass>7</Mass>
+			<Volume>5</Volume>
+            <Model>Models\OakWoodPlank.mwm</Model>
+            <PhysicalMaterial>Wood</PhysicalMaterial>
+			
+            <MaxIntegrity>100</MaxIntegrity>
+            <DropProbability>0.9</DropProbability>
+			<Health>36</Health>
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>100</MinimumOrderAmount>
+            <MaximumOrderAmount>1000</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>100</MaximumAcquisitionAmount>
+        </Component>
+    </Components>
+</Definitions>

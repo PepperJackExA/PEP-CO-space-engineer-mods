@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+			<Id>
+				<TypeId>Reactor</TypeId>
+				<SubtypeId>SmallBlockWoodGenerator</SubtypeId>
+			</Id>
+			<DisplayName>Small Wood Generator</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\nuclear_reactor_large.dds</Icon>
+			<Description>The technology in this reactor is beyond your abilities...</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="2" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\Small\HydrogenEngine.mwm</Model>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<Components>
+				<Component Subtype="OakWoodLog" Count="15" />
+			</Components>
+			<CriticalComponent Subtype="OakWoodLog" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="2" EndY="1" />
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="2" EndY="1" />
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="2" Default="true" />
+				<MountPoint Side="Top" StartX="1" StartY="0" EndX="2" EndY="2" />
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="3" EndY="1" />
+				<MountPoint Side="Front" StartX="1" StartY="1" EndX="2" EndY="2" />
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="3" EndY="1" />
+				<MountPoint Side="Back" StartX="1" StartY="1" EndX="2" EndY="2" />
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.5" File="Models\Cubes\Small\HydrogenEngine_Construction1.mwm" />
+				<Model BuildPercentUpperBound="1.0" File="Models\Cubes\Small\HydrogenEngine_Construction2.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>WoodGenerator</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>30</BuildTimeSeconds>
+			<EdgeType>Light</EdgeType>
+			<ResourceSinkGroup>Generators</ResourceSinkGroup>
+            <ResourceSourceGroup>Reactors</ResourceSourceGroup>
+			<MaxPowerOutput>1</MaxPowerOutput>
+
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+			<FuelInfos>
+				<FuelInfo>
+					<Id>
+						<TypeId>Component</TypeId>
+						<SubtypeId>OakWoodLog</SubtypeId>
+					</Id>
+				</FuelInfo>
+			</FuelInfos>
+			<PrimarySound>ArcBlockHydrogenEngine</PrimarySound>
+
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>Explosion_Warhead_02</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+
+			<AnimationSpeed>20</AnimationSpeed>
+			<AnimationSpinUpSpeed>5</AnimationSpinUpSpeed>
+			<AnimationSpinDownSpeed>5</AnimationSpinDownSpeed>
+			<PCU>25</PCU>
+			<Public>true</Public>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+			<Id>
+				<TypeId>Reactor</TypeId>
+				<SubtypeId>LargeBlockWoodGenerator</SubtypeId>
+			</Id>
+			<DisplayName>Large Wood Generator</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\HydrogenEngineLarge.dds</Icon>
+			<Description>The technology in this reactor is beyond your abilities...</Description>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\Large\HydrogenEngine.mwm</Model>
+			<Components>
+				<Component Subtype="OakWoodLog" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="OakWoodLog" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.15" StartY="0.15" EndX="0.85" EndY="1.85" Default="true" />
+				<MountPoint Side="Front" StartX="0.15" StartY="0.15" EndX="0.85" EndY="0.85" />
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\HydrogenEngine_Construction1.mwm" />
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\HydrogenEngine_Construction2.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\HydrogenEngine_Construction3.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>WoodGenerator</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>40</BuildTimeSeconds>
+
+			<ResourceSourceGroup>WoodGenerators</ResourceSourceGroup>
+			<MaxPowerOutput>2</MaxPowerOutput>
+
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+			<FuelInfos>				
+				<FuelInfo>
+					<Id>
+						<TypeId>Component</TypeId>
+						<SubtypeId>OakWoodLog</SubtypeId>
+					</Id>
+				</FuelInfo>
+			</FuelInfos>
+			<AnimationSpeed>5</AnimationSpeed>
+			<PistonAnimationMin>-0.15</PistonAnimationMin>
+			<PistonAnimationMax>0.01</PistonAnimationMax>
+			<PistonAnimationOffsets>
+				<float>0.5</float>
+				<float>0.0</float>
+				<float>0.0</float>
+				<float>0.0</float>
+				<float>0.5</float>
+				<float>0.0</float>
+				<float>0.5</float>
+				<float>0.5</float>
+				<float>0.0</float>
+				<float>0.5</float>
+			</PistonAnimationOffsets>
+			<AnimationSpinUpSpeed>5</AnimationSpinUpSpeed>
+			<AnimationSpinDownSpeed>5</AnimationSpinDownSpeed>
+			<PCU>25</PCU>
+			<IsAirTight>false</IsAirTight>
+			<Public>true</Public>
+		</Definition>
+    </CubeBlocks>
+</Definitions>
