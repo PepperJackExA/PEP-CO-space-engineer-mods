@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+        <Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+            <Id>
+                <TypeId>ShipConnector</TypeId>
+                <SubtypeId>Connector</SubtypeId>
+            </Id>
+            <DisplayName>Test Large Connector</DisplayName>
+            <BuildTimeSeconds>15</BuildTimeSeconds>
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+            <Id>
+                <TypeId>ShipConnector</TypeId>
+                <SubtypeId>ConnectorSmall</SubtypeId>
+            </Id>
+            <DisplayName>Test Small Connector</DisplayName>
+            <BuildTimeSeconds>5</BuildTimeSeconds>
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_ShipConnectorDefinition">
+            <Id>
+                <TypeId>ShipConnector</TypeId>
+                <SubtypeId>ConnectorMedium</SubtypeId>
+            </Id>
+            <DisplayName>Test Medium Connector</DisplayName>
+            <BuildTimeSeconds>10</BuildTimeSeconds>
+        </Definition>
+    </CubeBlocks>
+</Definitions>
