@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+  <!-- Start Small Ship Azimuth Large Cargo Container -->
+	<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>Azimuth_MediumContainer</SubtypeId>
+      </Id>
+      <DisplayName>TEST Azimuth Large Cargo Container</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\MedCargo.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="9" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\CargoContainers\AzCargoMedium.mwm</Model>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="165" />
+        <Component Subtype="Construction" Count="75" />
+        <Component Subtype="Computer" Count="18" />
+        <Component Subtype="Motor" Count="24" />
+        <Component Subtype="Display" Count="3" />
+        <Component Subtype="InteriorPlate" Count="60" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\CargoContainers\AzCargoMedium_Construction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\CargoContainers\AzCargoMedium_Construction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\CargoContainers\AzCargoMedium_Construction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Test_Connector</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>55</BuildTimeSeconds>
+      <Center x="2" y="2" z="5" />
+      <InventorySize>
+        <X>2.5</X>
+        <Y>7.5</Y>
+        <Z>2.5</Z>
+      </InventorySize>
+      <DamageEffectId>212</DamageEffectId>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+	  <IsAirTight>false</IsAirTight>
+    </Definition>
+<!-- End Small Ship Azimuth Large Cargo Container -->
+
+
+<!-- Start Large Ship Azimuth Medium Cargo Container -->
+	<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>Azimuth_MediumLargeContainer</SubtypeId>
+      </Id>
+      <DisplayName>Azimuth Medium Cargo Container</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\MedCargo.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\CargoContainers\AzCargoMediumLarge.mwm</Model>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="90" />
+        <Component Subtype="Construction" Count="105" />
+        <Component Subtype="MetalGrid" Count="12" />
+        <Component Subtype="SmallTube" Count="60" />
+        <Component Subtype="Motor" Count="12" />
+        <Component Subtype="Display" Count="3" />
+        <Component Subtype="Computer" Count="6" />
+        <Component Subtype="Construction" Count="15" />
+        <Component Subtype="InteriorPlate" Count="30" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\CargoContainers\AzCargoMediumLarge_Construction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\CargoContainers\AzCargoMediumLarge_Construction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\CargoContainers\AzCargoMediumLarge_Construction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Test_Connector</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>65</BuildTimeSeconds>
+      <Center x="0" y="0" z="1" />
+      <InventorySize>
+        <X>2.5</X>
+        <Y>7.5</Y>
+        <Z>2.5</Z>
+      </InventorySize>
+      <DamageEffectId>212</DamageEffectId>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+	  <IsAirTight>false</IsAirTight>
+    </Definition>
+<!-- End Large Ship Azimuth Medium Cargo Container -->
+
+
+<!-- Start Small Ship Azimuth Medium Cargo Container -->
+	<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>Azimuth_SmallContainer</SubtypeId>
+      </Id>
+      <DisplayName>Azimuth Small Cargo Container</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\Cargo.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="3" z="6" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\CargoContainers\AzCargoSmall.mwm</Model>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="60" />
+        <Component Subtype="Construction" Count="30" />
+        <Component Subtype="Computer" Count="12" />
+        <Component Subtype="Motor" Count="12" />
+        <Component Subtype="Display" Count="3" />
+        <Component Subtype="InteriorPlate" Count="30" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\CargoContainers\AzCargoSmall_Construction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\CargoContainers\AzCargoSmall_Construction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\CargoContainers\AzCargoSmall_Construction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Test_Connector</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>35</BuildTimeSeconds>
+      <Center x="1" y="1" z="3" />
+      <InventorySize>
+        <X>1.5</X>
+        <Y>4.5</Y>
+        <Z>1.5</Z>
+      </InventorySize>
+      <DamageEffectId>212</DamageEffectId>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+	  <IsAirTight>false</IsAirTight>	  
+    </Definition>
+<!-- End Small Ship Azimuth Medium Cargo Container -->
+
+<!-- Start Large Ship Azimuth Large Cargo Container -->
+	<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+      <Id>
+        <TypeId>CargoContainer</TypeId>
+        <SubtypeId>Azimuth_LargeContainer</SubtypeId>
+      </Id>
+      <DisplayName>Azimuth Large Cargo Container</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\Cargo.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="3" y="3" z="6" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\CargoContainers\AzCargoLarge.mwm</Model>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="900" />
+        <Component Subtype="Construction" Count="180" />
+        <Component Subtype="MetalGrid" Count="72" />
+        <Component Subtype="SmallTube" Count="180" />
+        <Component Subtype="Motor" Count="60" />
+        <Component Subtype="Display" Count="3" />
+        <Component Subtype="Computer" Count="24" />
+        <Component Subtype="Construction" Count="60" />
+        <Component Subtype="InteriorPlate" Count="180" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\CargoContainers\AzCargoLarge_Construction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\CargoContainers\AzCargoLarge_Construction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\CargoContainers\AzCargoLarge_Construction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Test_Connector</BlockPairName>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>115</BuildTimeSeconds>
+      <Center x="1" y="1" z="3" />
+      <InventorySize>
+        <X>7.5</X>
+        <Y>22.5</Y>
+        <Z>7.5</Z>
+      </InventorySize>
+      <DamageEffectId>212</DamageEffectId>
+      <DamagedSound>ParticleHeavyMech</DamagedSound>
+	  <IsAirTight>false</IsAirTight>
+    </Definition>
+<!-- End Large Ship Azimuth Large Cargo Container -->
+  </CubeBlocks>
+</Definitions>
