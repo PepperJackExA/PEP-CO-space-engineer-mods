@@ -29,7 +29,7 @@ namespace PepcoTreeFarm
         private static int[] probabilities = { 1, 1, 1, 3, 4, 3, 2, 1, 1, 1 };
 
         private int updateInterval = 600; // Configurable interval in ticks (10 ticks per second)
-        private string subId = "LeafTreeMedium"; // Configurable subID for the block
+        private string subId = "AppleTreeFarm"; // Configurable subID for the block
         private int tickCounter = 0;
 
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
@@ -69,6 +69,10 @@ namespace PepcoTreeFarm
                     {
                         // Define the random number of apples to drop using weighted probabilities
                         int dropAmount = GetWeightedRandomNumber();
+
+                        // Slightly damage the block
+                        float damageAmount = 0.1f; // Amount of damage to apply
+                        block.DoDamage(damageAmount, MyDamageType.Grind, true);
 
                         // Generate random positions for each apple
                         for (int i = 0; i < dropAmount; i++)
