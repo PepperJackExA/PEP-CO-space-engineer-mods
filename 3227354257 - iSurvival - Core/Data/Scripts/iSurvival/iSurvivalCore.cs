@@ -491,7 +491,7 @@ namespace PEPONE.iSurvival
             }
             catch (Exception ex)
             {
-                Echo("Fatigue exception", ex.ToString());
+                Echo("iSurvival error", ex.ToString());
             }
         }
 
