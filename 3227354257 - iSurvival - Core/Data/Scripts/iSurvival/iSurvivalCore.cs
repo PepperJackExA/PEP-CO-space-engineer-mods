@@ -278,8 +278,8 @@ namespace PEPONE.iSurvival
 
 
 
-        public static float teststamina = 0; //can be removed when we remove debug text
-        public static float testfatigue = 0; //can be removed when we remove debug text
+        //public static float teststamina = 0; //can be removed when we remove debug text
+        //public static float testfatigue = 0; //can be removed when we remove debug text
 
 
         protected override void UnloadData()
