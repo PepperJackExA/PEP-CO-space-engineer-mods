@@ -33,9 +33,9 @@ namespace PepcoTreeFarm
         // Configurable drop settings
         private Dictionary<string, DropSettings> blockDropSettings = new Dictionary<string, DropSettings>
         {
-            //"SubtypeId", new DropSettings("ItemName", MinAmount, MaxAmount, new int[] { Probabilities }, DamageAmount)
-            { "AppleTreeFarmLG", new DropSettings("Apple", 1, 5, new int[] { 1, 1, 1, 3, 4, 3, 2, 1, 1, 1 }, 1f) },
-            { "AppleTreeFarm", new DropSettings("Apple", 1, 5, new int[] { 1, 1, 1, 3, 4, 3, 2, 1, 1, 1 }, 1f) },
+            //"SubtypeId", new DropSettings("ItemName", typeof(ItemType), MinAmount, MaxAmount, new int[] { probability }, DamageAmount)
+            { "AppleTreeFarmLG", new DropSettings("SteelPlate", typeof(MyObjectBuilder_Component), 1, 5, new int[] { 1, 1, 1, 3, 4, 3, 2, 1, 1, 1 }, 1f) },
+            { "AppleTreeFarm", new DropSettings("Apple", typeof(MyObjectBuilder_ConsumableItem), 1, 5, new int[] { 1, 1, 1, 3, 4, 3, 2, 1, 1, 1 }, 1f) },
             // Add more blocks and their drop settings here
         };
 
@@ -131,11 +131,38 @@ namespace PepcoTreeFarm
                                                                             (float)(rand.NextDouble() * Math.PI * 2),
                                                                             (float)(rand.NextDouble() * Math.PI * 2));
 
-                MyObjectBuilder_ConsumableItem dropItem = MyObjectBuilderSerializer.CreateNewObject<MyObjectBuilder_ConsumableItem>(settings.ItemName);
+                // Create the object builder dynamically based on the type
+                MyObjectBuilder_PhysicalObject dropItem = CreateObjectBuilder(settings.ItemName, settings.ItemType);
                 VRage.MyFixedPoint amount = (VRage.MyFixedPoint)1;
 
                 MyFloatingObjects.Spawn(new MyPhysicalInventoryItem(amount, dropItem), dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up);
             }
+        }
+
+        private MyObjectBuilder_PhysicalObject CreateObjectBuilder(string itemName, Type itemType)
+        {
+            MyObjectBuilder_PhysicalObject dropItem = null;
+            if (itemType == typeof(MyObjectBuilder_ConsumableItem))
+            {
+                dropItem = MyObjectBuilderSerializer.CreateNewObject<MyObjectBuilder_ConsumableItem>(itemName);
+            }
+            else if (itemType == typeof(MyObjectBuilder_Ore))
+            {
+                dropItem = MyObjectBuilderSerializer.CreateNewObject<MyObjectBuilder_Ore>(itemName);
+            }
+            else if (itemType == typeof(MyObjectBuilder_Ingot))
+            {
+                dropItem = MyObjectBuilderSerializer.CreateNewObject<MyObjectBuilder_Ingot>(itemName);
+            }
+            else if (itemType == typeof(MyObjectBuilder_Component))
+            {
+                dropItem = MyObjectBuilderSerializer.CreateNewObject<MyObjectBuilder_Component>(itemName);
+            }
+            else
+            {
+                throw new Exception($"Unsupported item type: {itemType}");
+            }
+            return dropItem;
         }
 
         private int GetWeightedRandomNumber(int[] probabilities)
@@ -163,14 +190,16 @@ namespace PepcoTreeFarm
         private class DropSettings
         {
             public string ItemName { get; }
+            public Type ItemType { get; } // Changed to Type to support different item types
             public int MinAmount { get; }
             public int MaxAmount { get; }
             public int[] Probabilities { get; }
             public float DamageAmount { get; } // Added damageAmount to DropSettings
 
-            public DropSettings(string itemName, int minAmount, int maxAmount, int[] probabilities, float damageAmount)
+            public DropSettings(string itemName, Type itemType, int minAmount, int maxAmount, int[] probabilities, float damageAmount)
             {
                 ItemName = itemName;
+                ItemType = itemType;
                 MinAmount = minAmount;
                 MaxAmount = maxAmount;
                 Probabilities = probabilities;
