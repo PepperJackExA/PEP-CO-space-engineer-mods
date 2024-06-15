@@ -23,5 +23,27 @@
 			</MountPoints>
 			<BlockPairName>AppleTreeFarm</BlockPairName>
 		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>AppleTreeFarmLG</SubtypeId>
+			</Id>
+			<DisplayName>Apple Tree Farm</DisplayName>
+			<Description>{LOC:Description_TreeFarmLG}</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\TreeFarmLG.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.30" StartY="0.30" EndX="0.70" EndY="0.70"/>
+			</MountPoints>
+			<BlockPairName>TreeFarmLG</BlockPairName>
+		</Definition>
 	</CubeBlocks>
 </Definitions>

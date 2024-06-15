@@ -4,7 +4,6 @@ using Sandbox.Game;
 using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using VRage.Game.Components;
 using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.ModAPI;
@@ -24,13 +23,21 @@ namespace PepcoTreeFarm
     {
         public static Random rand = new Random();
 
-        // Define the weighted probabilities for each range
-        // Ranges 1-3 and 7-10 are less common than 4-6
-        private static int[] probabilities = { 1, 1, 1, 3, 4, 3, 2, 1, 1, 1 };
+        private int updateInterval = 300; // Configurable interval in ticks (60 ticks per second)
+        private bool loading = true;
+        private int loadingTicks = 3;
+        private bool isServer;
+        private bool isDedicated;
+        private int tickCounter = 0; // Declare tickCounter as a class-level variable
 
-        private int updateInterval = 600; // Configurable interval in ticks (10 ticks per second)
-        private string subId = "AppleTreeFarm"; // Configurable subID for the block
-        private int tickCounter = 0;
+        // Configurable drop settings
+        private Dictionary<string, DropSettings> blockDropSettings = new Dictionary<string, DropSettings>
+        {
+            //"SubtypeId", new DropSettings("ItemName", MinAmount, MaxAmount, new int[] { Probabilities }, DamageAmount)
+            { "AppleTreeFarmLG", new DropSettings("Apple", 1, 5, new int[] { 1, 1, 1, 3, 4, 3, 2, 1, 1, 1 }, 1f) },
+            { "AppleTreeFarm", new DropSettings("Apple", 1, 5, new int[] { 1, 1, 1, 3, 4, 3, 2, 1, 1, 1 }, 1f) },
+            // Add more blocks and their drop settings here
+        };
 
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
         {
@@ -38,14 +45,31 @@ namespace PepcoTreeFarm
             {
                 MyEntities.OnEntityAdd += MyEntities_OnEntityAdd;
             }
+
+            isServer = MyAPIGateway.Multiplayer.IsServer;
+            isDedicated = MyAPIGateway.Utilities.IsDedicated;
+        }
+
+        protected override void UnloadData()
+        {
+            MyEntities.OnEntityAdd -= MyEntities_OnEntityAdd;
         }
 
         public override void UpdateBeforeSimulation()
         {
+            if (loading)
+            {
+                if (loadingTicks-- <= 0)
+                {
+                    loading = false;
+                }
+                return;
+            }
+
             if (tickCounter++ >= updateInterval)
             {
                 tickCounter = 0;
-                DropApplesNearBlocks();
+                DropItemsNearBlocks();
             }
         }
 
@@ -54,7 +78,7 @@ namespace PepcoTreeFarm
             // No longer needed to handle tree addition specifically
         }
 
-        private void DropApplesNearBlocks()
+        private void DropItemsNearBlocks()
         {
             var entities = MyEntities.GetEntities();
             foreach (var entity in entities)
@@ -63,47 +87,58 @@ namespace PepcoTreeFarm
                 if (grid != null)
                 {
                     var blocks = new List<IMySlimBlock>();
-                    grid.GetBlocks(blocks, b => b.FatBlock != null && b.FatBlock.BlockDefinition.SubtypeId.ToString() == subId.ToString());
+                    // Filter blocks to those with valid SubtypeIds for dropping items
+                    grid.GetBlocks(blocks, b => b.FatBlock != null && blockDropSettings.ContainsKey(b.FatBlock.BlockDefinition.SubtypeId.ToString()));
 
                     foreach (var block in blocks)
                     {
-                        // Define the random number of apples to drop using weighted probabilities
-                        int dropAmount = GetWeightedRandomNumber();
-
-                        // Slightly damage the block
-                        float damageAmount = 0.1f; // Amount of damage to apply
-                        block.DoDamage(damageAmount, MyDamageType.Grind, true);
-
-                        // Generate random positions for each apple
-                        for (int i = 0; i < dropAmount; i++)
+                        if (IsEnvironmentSuitable(grid, block))
                         {
-                            // Generate random offsets for x and y coordinates
-                            double xOffset = rand.NextDouble() * 2 - 1; // Random value between -1 and 1
-                            double yOffset = rand.NextDouble() * 2 - 1; // Random value between -1 and 1
-
-                            // Define the position of the apple above the base of the block
-                            Vector3D applePosition = block.FatBlock.GetPosition() + (block.FatBlock.WorldMatrix.Up * (i + 1)) +
-                                                     (block.FatBlock.WorldMatrix.Right * xOffset) + (block.FatBlock.WorldMatrix.Forward * yOffset);
-
-                            // Create a random rotation for the apple
-                            Quaternion appleRotation = Quaternion.CreateFromYawPitchRoll((float)(rand.NextDouble() * Math.PI * 2),
-                                                                                 (float)(rand.NextDouble() * Math.PI * 2),
-                                                                                 (float)(rand.NextDouble() * Math.PI * 2));
-
-                            // Create the apple item
-                            MyObjectBuilder_ConsumableItem DropApple = MyObjectBuilderSerializer.CreateNewObject<MyObjectBuilder_ConsumableItem>("Apple");
-                            VRage.MyFixedPoint amount = (VRage.MyFixedPoint)1; // Each apple is a single item
-
-                            // Spawn the apple as a floating object
-                            MyFloatingObjects.Spawn(new MyPhysicalInventoryItem(amount, DropApple), applePosition, appleRotation.Up, block.FatBlock.WorldMatrix.Up);
+                            var subtypeId = block.FatBlock.BlockDefinition.SubtypeId.ToString();
+                            var settings = blockDropSettings[subtypeId];
+                            DropItems(block, settings);
+                            block.DoDamage(settings.DamageAmount, MyDamageType.Grind, true);
                         }
                     }
                 }
             }
         }
 
-        // Method to get a weighted random number based on defined probabilities
-        private int GetWeightedRandomNumber()
+        private bool IsEnvironmentSuitable(IMyCubeGrid grid, IMySlimBlock block)
+        {
+            bool isAirtight = grid.IsRoomAtPositionAirtight(block.FatBlock.Position);
+            double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(block.FatBlock.GetPosition());
+
+            // Log for debugging
+            MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Airtight: {isAirtight}, Oxygen Level: {oxygenLevel}");
+
+            // Check if the block is in an airtight room or if oxygen level is sufficient
+            return isAirtight || oxygenLevel > 0.5;
+        }
+
+        private void DropItems(IMySlimBlock block, DropSettings settings)
+        {
+            int dropAmount = GetWeightedRandomNumber(settings.Probabilities);
+            for (int i = 0; i < dropAmount; i++)
+            {
+                double xOffset = rand.NextDouble() * 2 - 1;
+                double yOffset = rand.NextDouble() * 2 - 1;
+
+                Vector3D dropPosition = block.FatBlock.GetPosition() + (block.FatBlock.WorldMatrix.Up * (i + 1)) +
+                                        (block.FatBlock.WorldMatrix.Right * xOffset) + (block.FatBlock.WorldMatrix.Forward * yOffset);
+
+                Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll((float)(rand.NextDouble() * Math.PI * 2),
+                                                                            (float)(rand.NextDouble() * Math.PI * 2),
+                                                                            (float)(rand.NextDouble() * Math.PI * 2));
+
+                MyObjectBuilder_ConsumableItem dropItem = MyObjectBuilderSerializer.CreateNewObject<MyObjectBuilder_ConsumableItem>(settings.ItemName);
+                VRage.MyFixedPoint amount = (VRage.MyFixedPoint)1;
+
+                MyFloatingObjects.Spawn(new MyPhysicalInventoryItem(amount, dropItem), dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up);
+            }
+        }
+
+        private int GetWeightedRandomNumber(int[] probabilities)
         {
             int totalWeight = 0;
             foreach (int weight in probabilities)
@@ -112,19 +147,35 @@ namespace PepcoTreeFarm
             }
 
             int randomValue = rand.Next(1, totalWeight + 1);
-
             int cumulativeWeight = 0;
             for (int i = 0; i < probabilities.Length; i++)
             {
                 cumulativeWeight += probabilities[i];
                 if (randomValue <= cumulativeWeight)
                 {
-                    return i + 1; // Return the index (which is the value itself) starting from 1
+                    return i + 1;
                 }
             }
 
-            // This should never happen if probabilities are correctly defined
-            return 1; // Default to 1 if something goes wrong
+            return 1;
+        }
+
+        private class DropSettings
+        {
+            public string ItemName { get; }
+            public int MinAmount { get; }
+            public int MaxAmount { get; }
+            public int[] Probabilities { get; }
+            public float DamageAmount { get; } // Added damageAmount to DropSettings
+
+            public DropSettings(string itemName, int minAmount, int maxAmount, int[] probabilities, float damageAmount)
+            {
+                ItemName = itemName;
+                MinAmount = minAmount;
+                MaxAmount = maxAmount;
+                Probabilities = probabilities;
+                DamageAmount = damageAmount;
+            }
         }
     }
 }
