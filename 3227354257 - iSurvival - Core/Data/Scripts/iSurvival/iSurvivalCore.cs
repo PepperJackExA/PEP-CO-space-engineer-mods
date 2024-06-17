@@ -27,7 +27,7 @@ using VRageMath;
 using Digi;
 
 
-namespace PEPONE.iSurvival
+namespace PEPCO.iSurvival
 {
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class iSurvivalSessionSettings : MySessionComponentBase
