@@ -9,10 +9,10 @@ using VRage.Game;
 using VRage.Game.Entity;
 using VRageMath;
 using VRage.Utils;
-using System.IO;
 using Sandbox.Game.Entities;
 using System.Linq;
 using VRage.Game.ModAPI.Ingame.Utilities;
+using System.IO;
 
 namespace PEPCO.iSurvival.TreeFarm
 {
@@ -44,11 +44,10 @@ namespace PEPCO.iSurvival.TreeFarm
                     settings.Load();
                     InitializeDropSettings();
                     MyAPIGateway.Utilities.MessageEntered += OnMessageEntered;
-                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", "TreeFarm mod initialized.");
                 }
                 catch (Exception ex)
                 {
-                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Initialization error: {ex.Message}");
+                    // Handle initialization error if necessary
                 }
             }
         }
@@ -56,7 +55,6 @@ namespace PEPCO.iSurvival.TreeFarm
         protected override void UnloadData()
         {
             MyAPIGateway.Utilities.MessageEntered -= OnMessageEntered;
-            MyAPIGateway.Utilities.ShowMessage("TreeFarm", "TreeFarm mod unloaded.");
         }
 
         private void OnMessageEntered(string messageText, ref bool sendToOthers)
@@ -68,11 +66,10 @@ namespace PEPCO.iSurvival.TreeFarm
                     try
                     {
                         ReloadSettings();
-                        MyAPIGateway.Utilities.ShowMessage("TreeFarm", "Configuration reloaded.");
                     }
                     catch (Exception ex)
                     {
-                        MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Reload error: {ex.Message}");
+                        // Handle reload error if necessary
                     }
                 }
                 sendToOthers = false;
@@ -96,7 +93,7 @@ namespace PEPCO.iSurvival.TreeFarm
                 }
                 catch (Exception ex)
                 {
-                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Update error: {ex.Message}");
+                    // Handle update error if necessary
                 }
             }
         }
@@ -165,8 +162,6 @@ namespace PEPCO.iSurvival.TreeFarm
                     new MyPhysicalInventoryItem((VRage.MyFixedPoint)dropAmount, dropItem),
                     dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
                 );
-
-                MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Dropped {dropAmount} items of {settings.ItemId} at {dropPosition}");
             }
             else
             {
@@ -184,8 +179,6 @@ namespace PEPCO.iSurvival.TreeFarm
                         new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, dropItem),
                         dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
                     );
-
-                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Dropped item {settings.ItemId} at {dropPosition}");
                 }
             }
             return dropAmount;
@@ -210,10 +203,7 @@ namespace PEPCO.iSurvival.TreeFarm
         {
             Type type;
             if (!itemTypeMappings.TryGetValue(itemType, out type))
-            {
-                MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Unsupported item type: {itemType}");
                 throw new Exception($"Unsupported item type: {itemType}");
-            }
 
             var dropItem = MyObjectBuilderSerializer.CreateNewObject(type) as MyObjectBuilder_PhysicalObject;
             dropItem.SubtypeName = itemName;
@@ -251,8 +241,7 @@ namespace PEPCO.iSurvival.TreeFarm
 
         private void InitializeDropSettings()
         {
-            // Reinitialize any cached or in-memory settings if needed.
-            // Currently, this function is a placeholder for any additional initialization logic.
+            // Placeholder for any additional initialization logic.
         }
 
         private void ReloadSettings()
@@ -320,13 +309,7 @@ public class TreeFarmSettings
 
                     BlockDropSettings.Add(dropSettings);
                 }
-
-                MyAPIGateway.Utilities.ShowMessage("TreeFarm", "Settings loaded successfully.");
             }
-        }
-        else
-        {
-            MyAPIGateway.Utilities.ShowMessage("TreeFarm", "Settings file not found.");
         }
     }
 
