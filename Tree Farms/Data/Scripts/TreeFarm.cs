@@ -12,6 +12,7 @@ using VRage.Utils;
 using Sandbox.Game.Entities;
 using System.Linq;
 using VRage.Game.ModAPI.Ingame.Utilities;
+using VRage.ModAPI;
 using System.IO;
 
 namespace PEPCO.iSurvival.TreeFarm
@@ -47,7 +48,7 @@ namespace PEPCO.iSurvival.TreeFarm
                 }
                 catch (Exception ex)
                 {
-                    // Handle initialization error if necessary
+                    MyLog.Default.WriteLineAndConsole($"TreeFarm Init Error: {ex.Message}");
                 }
             }
         }
@@ -69,7 +70,7 @@ namespace PEPCO.iSurvival.TreeFarm
                     }
                     catch (Exception ex)
                     {
-                        // Handle reload error if necessary
+                        MyLog.Default.WriteLineAndConsole($"TreeFarm Reload Error: {ex.Message}");
                     }
                 }
                 sendToOthers = false;
@@ -93,7 +94,7 @@ namespace PEPCO.iSurvival.TreeFarm
                 }
                 catch (Exception ex)
                 {
-                    // Handle update error if necessary
+                    MyLog.Default.WriteLineAndConsole($"TreeFarm Update Error: {ex.Message}");
                 }
             }
         }
@@ -104,7 +105,7 @@ namespace PEPCO.iSurvival.TreeFarm
 
             foreach (var entity in MyEntities.GetEntities())
             {
-                IMyCubeGrid grid = entity as IMyCubeGrid;
+                var grid = entity as IMyCubeGrid;
                 if (grid != null)
                 {
                     var blocks = new List<IMySlimBlock>();
@@ -115,8 +116,12 @@ namespace PEPCO.iSurvival.TreeFarm
                         var blockSettings = GetDropSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
                         if (blockSettings != null && blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block))
                         {
-                            int dropAmount = DropItems(block, blockSettings);
-                            block.DoDamage(blockSettings.DamageAmount * dropAmount, MyDamageType.Grind, true);
+                            if (CheckInventoryForRequiredItems(block, blockSettings))
+                            {
+                                int dropAmount = DropItems(block, blockSettings);
+                                RemoveItemsFromInventory(block, blockSettings, dropAmount);
+                                block.DoDamage(blockSettings.DamageAmount * dropAmount, MyDamageType.Grind, true);
+                            }
                         }
                     }
                 }
@@ -135,8 +140,8 @@ namespace PEPCO.iSurvival.TreeFarm
 
         private bool IsEnvironmentSuitable(IMyCubeGrid grid, IMySlimBlock block)
         {
-            var settings = GetDropSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
-            if (settings == null || !settings.EnableAirtightAndOxygen)
+            var blockSettings = GetDropSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
+            if (blockSettings == null || !blockSettings.EnableAirtightAndOxygen)
                 return true;
 
             bool isAirtight = grid.IsRoomAtPositionAirtight(block.FatBlock.Position);
@@ -145,27 +150,51 @@ namespace PEPCO.iSurvival.TreeFarm
             return isAirtight || oxygenLevel > 0.5;
         }
 
+        private bool CheckInventoryForRequiredItems(IMySlimBlock block, DropSettings blockSettings)
+        {
+            var inventory = block.FatBlock.GetInventory() as IMyInventory;
+            if (inventory == null)
+                return false;
+
+            for (int i = 0; i < blockSettings.RequiredItemTypes.Count; i++)
+            {
+                var requiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
+                var itemAmount = (VRage.MyFixedPoint)blockSettings.RequiredItemAmounts[i];
+
+                if (!inventory.ContainItems(itemAmount, requiredItemType))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private void RemoveItemsFromInventory(IMySlimBlock block, DropSettings blockSettings, int dropAmount)
+        {
+            var inventory = block.FatBlock.GetInventory() as IMyInventory;
+            if (inventory == null)
+                return;
+
+            for (int i = 0; i < blockSettings.RequiredItemTypes.Count; i++)
+            {
+                var requiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
+                var totalAmountToRemove = (VRage.MyFixedPoint)(blockSettings.RequiredItemAmounts[i] * dropAmount);
+
+                inventory.RemoveItemsOfType(totalAmountToRemove, requiredItemType);
+            }
+        }
+
         private int DropItems(IMySlimBlock block, DropSettings settings)
         {
             int dropAmount = GetWeightedRandomNumber(GenerateProbabilities(settings.MinAmount, settings.MaxAmount));
-            if (settings.StackItems)
+            for (int i = 0; i < settings.ItemTypes.Count; i++)
             {
-                Vector3D dropPosition = CalculateDropPosition(block, settings);
-                Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
-                    (float)(randomGenerator.NextDouble() * Math.PI * 2),
-                    (float)(randomGenerator.NextDouble() * Math.PI * 2),
-                    (float)(randomGenerator.NextDouble() * Math.PI * 2)
-                );
+                string itemType = settings.ItemTypes[i];
+                string itemId = settings.ItemIds[i];
+                var dropItem = CreateObjectBuilder(itemType, itemId);
 
-                var dropItem = CreateObjectBuilder(settings.ItemType, settings.ItemId);
-                MyFloatingObjects.Spawn(
-                    new MyPhysicalInventoryItem((VRage.MyFixedPoint)dropAmount, dropItem),
-                    dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
-                );
-            }
-            else
-            {
-                for (int i = 0; i < dropAmount; i++)
+                if (settings.StackItems)
                 {
                     Vector3D dropPosition = CalculateDropPosition(block, settings);
                     Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
@@ -174,20 +203,38 @@ namespace PEPCO.iSurvival.TreeFarm
                         (float)(randomGenerator.NextDouble() * Math.PI * 2)
                     );
 
-                    var dropItem = CreateObjectBuilder(settings.ItemType, settings.ItemId);
                     MyFloatingObjects.Spawn(
-                        new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, dropItem),
+                        new MyPhysicalInventoryItem((VRage.MyFixedPoint)dropAmount, dropItem),
                         dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
                     );
                 }
+                else
+                {
+                    for (int j = 0; j < dropAmount; j++)
+                    {
+                        Vector3D dropPosition = CalculateDropPosition(block, settings);
+                        Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
+                            (float)(randomGenerator.NextDouble() * Math.PI * 2),
+                            (float)(randomGenerator.NextDouble() * Math.PI * 2),
+                            (float)(randomGenerator.NextDouble() * Math.PI * 2)
+                        );
+
+                        MyFloatingObjects.Spawn(
+                            new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, dropItem),
+                            dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
+                        );
+                    }
+                }
             }
+
             return dropAmount;
         }
 
-        private Vector3D CalculateDropPosition(IMySlimBlock block, DropSettings settings)
+
+        private Vector3D CalculateDropPosition(IMySlimBlock block, DropSettings blockSettings)
         {
-            double heightOffset = randomGenerator.NextDouble() * (settings.MaxHeight - settings.MinHeight) + settings.MinHeight;
-            double radius = randomGenerator.NextDouble() * (settings.MaxRadius - settings.MinRadius) + settings.MinRadius;
+            double heightOffset = randomGenerator.NextDouble() * (blockSettings.MaxHeight - blockSettings.MinHeight) + blockSettings.MinHeight;
+            double radius = randomGenerator.NextDouble() * (blockSettings.MaxRadius - blockSettings.MinRadius) + blockSettings.MinRadius;
             double angle = randomGenerator.NextDouble() * Math.PI * 2;
 
             double xOffset = radius * Math.Cos(angle);
@@ -199,14 +246,14 @@ namespace PEPCO.iSurvival.TreeFarm
                    (block.FatBlock.WorldMatrix.Forward * yOffset);
         }
 
-        private MyObjectBuilder_PhysicalObject CreateObjectBuilder(string itemType, string itemName)
+        private MyObjectBuilder_PhysicalObject CreateObjectBuilder(string itemType, string itemId)
         {
             Type type;
             if (!itemTypeMappings.TryGetValue(itemType, out type))
                 throw new Exception($"Unsupported item type: {itemType}");
 
             var dropItem = MyObjectBuilderSerializer.CreateNewObject(type) as MyObjectBuilder_PhysicalObject;
-            dropItem.SubtypeName = itemName;
+            dropItem.SubtypeName = itemId;
             return dropItem;
         }
 
@@ -292,8 +339,6 @@ public class TreeFarmSettings
                     {
                         BlockId = section,
                         BlockType = iniParser.Get(section, nameof(DropSettings.BlockType)).ToString(),
-                        ItemType = iniParser.Get(section, nameof(DropSettings.ItemType)).ToString(),
-                        ItemId = iniParser.Get(section, nameof(DropSettings.ItemId)).ToString(),
                         MinAmount = iniParser.Get(section, nameof(DropSettings.MinAmount)).ToInt32(),
                         MaxAmount = iniParser.Get(section, nameof(DropSettings.MaxAmount)).ToInt32(),
                         DamageAmount = (float)iniParser.Get(section, nameof(DropSettings.DamageAmount)).ToDouble(),
@@ -304,8 +349,15 @@ public class TreeFarmSettings
                         SpawnTriggerInterval = iniParser.Get(section, nameof(DropSettings.SpawnTriggerInterval)).ToInt32(),
                         EnableAirtightAndOxygen = iniParser.Get(section, nameof(DropSettings.EnableAirtightAndOxygen)).ToBoolean(),
                         Enabled = iniParser.Get(section, nameof(DropSettings.Enabled)).ToBoolean(),
-                        StackItems = iniParser.Get(section, nameof(DropSettings.StackItems)).ToBoolean()
+                        StackItems = iniParser.Get(section, nameof(DropSettings.StackItems)).ToBoolean(),
+                        SpawnInsideInventory = iniParser.Get(section, nameof(DropSettings.SpawnInsideInventory)).ToBoolean()
                     };
+
+                    dropSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.ItemTypes)).ToString().Split(','));
+                    dropSettings.ItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.ItemIds)).ToString().Split(','));
+                    dropSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemTypes)).ToString().Split(','));
+                    dropSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemIds)).ToString().Split(','));
+                    dropSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
 
                     BlockDropSettings.Add(dropSettings);
                 }
@@ -325,8 +377,8 @@ public class TreeFarmSettings
         {
             var section = dropSetting.BlockId;
             iniParser.Set(section, nameof(DropSettings.BlockType), dropSetting.BlockType);
-            iniParser.Set(section, nameof(DropSettings.ItemType), dropSetting.ItemType);
-            iniParser.Set(section, nameof(DropSettings.ItemId), dropSetting.ItemId);
+            iniParser.Set(section, nameof(DropSettings.ItemTypes), string.Join(",", dropSetting.ItemTypes));
+            iniParser.Set(section, nameof(DropSettings.ItemIds), string.Join(",", dropSetting.ItemIds));
             iniParser.Set(section, nameof(DropSettings.MinAmount), dropSetting.MinAmount);
             iniParser.Set(section, nameof(DropSettings.MaxAmount), dropSetting.MaxAmount);
             iniParser.Set(section, nameof(DropSettings.DamageAmount), dropSetting.DamageAmount);
@@ -338,11 +390,15 @@ public class TreeFarmSettings
             iniParser.Set(section, nameof(DropSettings.EnableAirtightAndOxygen), dropSetting.EnableAirtightAndOxygen);
             iniParser.Set(section, nameof(DropSettings.Enabled), dropSetting.Enabled);
             iniParser.Set(section, nameof(DropSettings.StackItems), dropSetting.StackItems);
-        }
+            iniParser.Set(section, nameof(DropSettings.SpawnInsideInventory), dropSetting.SpawnInsideInventory);
+            iniParser.Set(section, nameof(DropSettings.RequiredItemTypes), string.Join(",", dropSetting.RequiredItemTypes));
+            iniParser.Set(section, nameof(DropSettings.RequiredItemIds), string.Join(",", dropSetting.RequiredItemIds));
+            iniParser.Set(section, nameof(DropSettings.RequiredItemAmounts), string.Join(",", dropSetting.RequiredItemAmounts));
 
-        using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
-        {
-            file.Write(iniParser.ToString());
+            using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
+            {
+                file.Write(iniParser.ToString());
+            }
         }
     }
 }
@@ -351,8 +407,8 @@ public class DropSettings
 {
     public string BlockId { get; set; }
     public string BlockType { get; set; }
-    public string ItemType { get; set; }
-    public string ItemId { get; set; }
+    public List<string> ItemTypes { get; set; } = new List<string>();
+    public List<string> ItemIds { get; set; } = new List<string>();
     public int MinAmount { get; set; }
     public int MaxAmount { get; set; }
     public float DamageAmount { get; set; }
@@ -363,5 +419,9 @@ public class DropSettings
     public int SpawnTriggerInterval { get; set; }
     public bool EnableAirtightAndOxygen { get; set; }
     public bool Enabled { get; set; }
-    public bool StackItems { get; set; }  // New property for stacking items
+    public bool StackItems { get; set; }
+    public bool SpawnInsideInventory { get; set; }
+    public List<string> RequiredItemTypes { get; set; } = new List<string>();
+    public List<string> RequiredItemIds { get; set; } = new List<string>();
+    public List<int> RequiredItemAmounts { get; set; } = new List<int>();
 }
