@@ -24,34 +24,39 @@ namespace PEPCO.iSurvival.TreeFarm
         private bool isLoading = true;
         private int loadingTickCount = 3;
         private static readonly Random randomGenerator = new Random();
-        private static readonly Dictionary<string, string> blockTypeMappings = new Dictionary<string, string>
-        {
-            { "CubeBlock", "MyObjectBuilder_CubeBlock" },
-            { "Motor", "MyObjectBuilder_MotorStator" },
-            { "Piston", "MyObjectBuilder_PistonBase" }
-        };
+
         private static readonly Dictionary<string, Type> itemTypeMappings = new Dictionary<string, Type>
         {
-            { "Consumable", typeof(MyObjectBuilder_ConsumableItem) },
-            { "Ore", typeof(MyObjectBuilder_Ore) },
-            { "Ingot", typeof(MyObjectBuilder_Ingot) },
-            { "Component", typeof(MyObjectBuilder_Component) }
+            { "MyObjectBuilder_ConsumableItem", typeof(MyObjectBuilder_ConsumableItem) },
+            { "MyObjectBuilder_Ore", typeof(MyObjectBuilder_Ore) },
+            { "MyObjectBuilder_Ingot", typeof(MyObjectBuilder_Ingot) },
+            { "MyObjectBuilder_Component", typeof(MyObjectBuilder_Component) }
         };
+
         public static TreeFarmSettings settings = new TreeFarmSettings();
 
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
         {
             if (MyAPIGateway.Session.IsServer)
             {
-                settings.Load();
-                settings.LoadAllDropSettings();
-                MyAPIGateway.Utilities.MessageEntered += OnMessageEntered;
+                try
+                {
+                    settings.Load();
+                    InitializeDropSettings();
+                    MyAPIGateway.Utilities.MessageEntered += OnMessageEntered;
+                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", "TreeFarm mod initialized.");
+                }
+                catch (Exception ex)
+                {
+                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Initialization error: {ex.Message}");
+                }
             }
         }
 
         protected override void UnloadData()
         {
             MyAPIGateway.Utilities.MessageEntered -= OnMessageEntered;
+            MyAPIGateway.Utilities.ShowMessage("TreeFarm", "TreeFarm mod unloaded.");
         }
 
         private void OnMessageEntered(string messageText, ref bool sendToOthers)
@@ -60,9 +65,15 @@ namespace PEPCO.iSurvival.TreeFarm
             {
                 if (MyAPIGateway.Session.IsServer)
                 {
-                    settings.Load();
-                    settings.LoadAllDropSettings();
-                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", "Configuration reloaded.");
+                    try
+                    {
+                        ReloadSettings();
+                        MyAPIGateway.Utilities.ShowMessage("TreeFarm", "Configuration reloaded.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Reload error: {ex.Message}");
+                    }
                 }
                 sendToOthers = false;
             }
@@ -79,7 +90,14 @@ namespace PEPCO.iSurvival.TreeFarm
             if (++updateTickCounter >= settings.BaseUpdateInterval)
             {
                 updateTickCounter = 0;
-                DropItemsNearBlocks();
+                try
+                {
+                    DropItemsNearBlocks();
+                }
+                catch (Exception ex)
+                {
+                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Update error: {ex.Message}");
+                }
             }
         }
 
@@ -110,12 +128,12 @@ namespace PEPCO.iSurvival.TreeFarm
 
         private bool IsValidBlock(string typeId, string subtypeId)
         {
-            return settings.BlockDropSettings.Exists(s => blockTypeMappings[s.BlockType] == typeId && s.BlockId == subtypeId);
+            return settings.BlockDropSettings.Exists(s => s.BlockType == typeId && s.BlockId == subtypeId);
         }
 
         private DropSettings GetDropSettingsForBlock(string typeId, string subtypeId)
         {
-            return settings.BlockDropSettings.Find(s => blockTypeMappings[s.BlockType] == typeId && s.BlockId == subtypeId);
+            return settings.BlockDropSettings.Find(s => s.BlockType == typeId && s.BlockId == subtypeId);
         }
 
         private bool IsEnvironmentSuitable(IMyCubeGrid grid, IMySlimBlock block)
@@ -133,7 +151,7 @@ namespace PEPCO.iSurvival.TreeFarm
         private int DropItems(IMySlimBlock block, DropSettings settings)
         {
             int dropAmount = GetWeightedRandomNumber(GenerateProbabilities(settings.MinAmount, settings.MaxAmount));
-            for (int i = 0; i < dropAmount; i++)
+            if (settings.StackItems)
             {
                 Vector3D dropPosition = CalculateDropPosition(block, settings);
                 Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
@@ -144,9 +162,31 @@ namespace PEPCO.iSurvival.TreeFarm
 
                 var dropItem = CreateObjectBuilder(settings.ItemType, settings.ItemId);
                 MyFloatingObjects.Spawn(
-                    new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, dropItem),
+                    new MyPhysicalInventoryItem((VRage.MyFixedPoint)dropAmount, dropItem),
                     dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
                 );
+
+                MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Dropped {dropAmount} items of {settings.ItemId} at {dropPosition}");
+            }
+            else
+            {
+                for (int i = 0; i < dropAmount; i++)
+                {
+                    Vector3D dropPosition = CalculateDropPosition(block, settings);
+                    Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
+                        (float)(randomGenerator.NextDouble() * Math.PI * 2),
+                        (float)(randomGenerator.NextDouble() * Math.PI * 2),
+                        (float)(randomGenerator.NextDouble() * Math.PI * 2)
+                    );
+
+                    var dropItem = CreateObjectBuilder(settings.ItemType, settings.ItemId);
+                    MyFloatingObjects.Spawn(
+                        new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, dropItem),
+                        dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
+                    );
+
+                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Dropped item {settings.ItemId} at {dropPosition}");
+                }
             }
             return dropAmount;
         }
@@ -170,7 +210,10 @@ namespace PEPCO.iSurvival.TreeFarm
         {
             Type type;
             if (!itemTypeMappings.TryGetValue(itemType, out type))
+            {
+                MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Unsupported item type: {itemType}");
                 throw new Exception($"Unsupported item type: {itemType}");
+            }
 
             var dropItem = MyObjectBuilderSerializer.CreateNewObject(type) as MyObjectBuilder_PhysicalObject;
             dropItem.SubtypeName = itemName;
@@ -206,264 +249,136 @@ namespace PEPCO.iSurvival.TreeFarm
             return 1;
         }
 
-        public class TreeFarmSettings
+        private void InitializeDropSettings()
         {
-            private const string VariableId = nameof(TreeFarmSettings);
-            private const string GlobalFileName = "TreeFarmSettings.ini";
-            private const string IniSection = "Config";
-            private const string FileExtension = ".ini";
+            // Reinitialize any cached or in-memory settings if needed.
+            // Currently, this function is a placeholder for any additional initialization logic.
+        }
 
-            public const int DEFAULT_UPDATE_INTERVAL = 60;
-            public int BaseUpdateInterval = DEFAULT_UPDATE_INTERVAL;
-            public List<ulong> playerExceptions = new List<ulong>();
+        private void ReloadSettings()
+        {
+            settings.Load();
+            InitializeDropSettings();  // Reinitialize settings
+        }
+    }
+}
 
-            public List<DropSettings> BlockDropSettings = new List<DropSettings>
+public class TreeFarmSettings
+{
+    private const string GlobalFileName = "TreeFarmSettings.ini";
+    private const string IniSection = "Config";
+
+    public int BaseUpdateInterval { get; set; } = 300;
+    public List<DropSettings> BlockDropSettings { get; set; } = new List<DropSettings>();
+
+    public void Load()
+    {
+        MyIni iniParser = new MyIni();
+
+        if (MyAPIGateway.Utilities.FileExistsInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
+        {
+            using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
             {
-                new DropSettings("CubeBlock", "AppleTreeFarmLG", "Consumable", "Apple", 1, 5, 0.1f, 1.0, 3.0, 0.5, 2.0, 10, true, true),
-                new DropSettings("CubeBlock", "AppleTreeFarm", "Consumable", "Apple", 1, 5, 0.1f, 1.0, 3.0, 0.5, 2.0, 10, true, true)
-            };
+                string text = file.ReadToEnd();
 
-            public TreeFarmSettings() { }
-
-            public void Load()
-            {
-                if (MyAPIGateway.Session.IsServer)
-                    LoadOnHost();
-                else
-                    LoadOnClient();
-            }
-
-            public void LoadOnHost()
-            {
-                MyIni iniParser = new MyIni();
-
-                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
-                {
-                    using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
-                    {
-                        string text = file.ReadToEnd();
-
-                        MyIniParseResult result;
-                        if (!iniParser.TryParse(text, out result))
-                            throw new Exception($"Config error: {result.ToString()}");
-
-                        LoadGlobalSettings(iniParser);
-                    }
-                }
-
-                SaveConfig();
-            }
-
-            public void LoadOnClient()
-            {
-                string text;
-                if (!MyAPIGateway.Utilities.GetVariable<string>(VariableId, out text))
-                    throw new Exception("No config found in sandbox.sbc!");
-
-                MyIni iniParser = new MyIni();
                 MyIniParseResult result;
                 if (!iniParser.TryParse(text, out result))
                     throw new Exception($"Config error: {result.ToString()}");
 
-                LoadGlobalSettings(iniParser);
-            }
-
-            public void LoadAllDropSettings()
-            {
-                foreach (var dropSetting in BlockDropSettings)
-                {
-                    LoadDropSetting(dropSetting.BlockId);
-                }
-            }
-
-            public void LoadDropSetting(string blockId)
-            {
-                MyIni iniParser = new MyIni();
-                string fileName = blockId + FileExtension;
-                MyLog.Default.WriteLineAndConsole($"Loading settings from file: {fileName}");
-
-                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(fileName, typeof(TreeFarmSettings)))
-                {
-                    using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(fileName, typeof(TreeFarmSettings)))
-                    {
-                        string text = file.ReadToEnd();
-
-                        MyIniParseResult result;
-                        if (!iniParser.TryParse(text, out result))
-                        {
-                            MyLog.Default.WriteLineAndConsole($"Config error: {result.ToString()}");
-                            throw new Exception($"Config error: {result.ToString()}");
-                        }
-
-                        LoadDropSetting(iniParser, blockId);
-                    }
-                }
-                else
-                {
-                    MyLog.Default.WriteLineAndConsole($"Settings file not found: {fileName}");
-                }
-            }
-
-            public void SaveConfig()
-            {
-                MyIni iniParser = new MyIni();
-                SaveGlobalSettings(iniParser);
-
-                string saveText = iniParser.ToString();
-                MyAPIGateway.Utilities.SetVariable<string>(VariableId, saveText);
-
-                if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
-                {
-                    using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
-                    {
-                        file.Write(saveText);
-                    }
-                }
-
-                SaveAllDropSettings();
-            }
-
-
-            public void SaveAllDropSettings()
-            {
-                foreach (var dropSetting in BlockDropSettings)
-                {
-                    SaveDropSetting(dropSetting);
-                }
-            }
-
-            public void SaveDropSetting(DropSettings dropSetting)
-            {
-                MyIni iniParser = new MyIni();
-                SaveDropSetting(iniParser, dropSetting);
-
-                string fileName = dropSetting.BlockId + FileExtension;
-                MyLog.Default.WriteLineAndConsole($"Saving settings to file: {fileName}");
-
-                if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(fileName, typeof(TreeFarmSettings)))
-                {
-                    using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(fileName, typeof(TreeFarmSettings)))
-                    {
-                        file.Write(iniParser.ToString());
-                    }
-                }
-            }
-
-
-            private void LoadGlobalSettings(MyIni iniParser)
-            {
+                // Load base settings
                 BaseUpdateInterval = iniParser.Get(IniSection, nameof(BaseUpdateInterval)).ToInt32(BaseUpdateInterval);
-                var configList = iniParser.Get(IniSection, nameof(playerExceptions)).ToString().Trim().Split('\n');
-                playerExceptions.Clear();
-                foreach (var config in configList)
+
+                // Load block drop settings
+                List<string> sections = new List<string>();
+                iniParser.GetSections(sections);
+
+                BlockDropSettings.Clear();  // Clear existing settings before loading new ones
+
+                foreach (var section in sections)
                 {
-                    ulong playerId;
-                    if (ulong.TryParse(config, out playerId) && playerId > 0)
+                    if (section == IniSection)
+                        continue;
+
+                    var dropSettings = new DropSettings
                     {
-                        playerExceptions.Add(playerId);
-                    }
+                        BlockId = section,
+                        BlockType = iniParser.Get(section, nameof(DropSettings.BlockType)).ToString(),
+                        ItemType = iniParser.Get(section, nameof(DropSettings.ItemType)).ToString(),
+                        ItemId = iniParser.Get(section, nameof(DropSettings.ItemId)).ToString(),
+                        MinAmount = iniParser.Get(section, nameof(DropSettings.MinAmount)).ToInt32(),
+                        MaxAmount = iniParser.Get(section, nameof(DropSettings.MaxAmount)).ToInt32(),
+                        DamageAmount = (float)iniParser.Get(section, nameof(DropSettings.DamageAmount)).ToDouble(),
+                        MinHeight = iniParser.Get(section, nameof(DropSettings.MinHeight)).ToDouble(),
+                        MaxHeight = iniParser.Get(section, nameof(DropSettings.MaxHeight)).ToDouble(),
+                        MinRadius = iniParser.Get(section, nameof(DropSettings.MinRadius)).ToDouble(),
+                        MaxRadius = iniParser.Get(section, nameof(DropSettings.MaxRadius)).ToDouble(),
+                        SpawnTriggerInterval = iniParser.Get(section, nameof(DropSettings.SpawnTriggerInterval)).ToInt32(),
+                        EnableAirtightAndOxygen = iniParser.Get(section, nameof(DropSettings.EnableAirtightAndOxygen)).ToBoolean(),
+                        Enabled = iniParser.Get(section, nameof(DropSettings.Enabled)).ToBoolean(),
+                        StackItems = iniParser.Get(section, nameof(DropSettings.StackItems)).ToBoolean()
+                    };
+
+                    BlockDropSettings.Add(dropSettings);
                 }
-            }
 
-            private void SaveGlobalSettings(MyIni iniParser)
-            {
-                iniParser.Set(IniSection, nameof(BaseUpdateInterval), BaseUpdateInterval);
-                iniParser.Set(IniSection, nameof(playerExceptions), string.Join("\n", playerExceptions));
-            }
-
-            private void LoadDropSetting(MyIni iniParser, string blockId)
-            {
-                string blockType = iniParser.Get(IniSection, $"{blockId}_BlockType").ToString();
-                string itemType = iniParser.Get(IniSection, $"{blockId}_ItemType").ToString();
-                string itemId = iniParser.Get(IniSection, $"{blockId}_ItemId").ToString();
-                int minAmount = iniParser.Get(IniSection, $"{blockId}_MinAmount").ToInt32();
-                int maxAmount = iniParser.Get(IniSection, $"{blockId}_MaxAmount").ToInt32();
-                float damageAmount = (float)iniParser.Get(IniSection, $"{blockId}_DamageAmount").ToDouble();
-                double minHeight = iniParser.Get(IniSection, $"{blockId}_MinHeight").ToDouble();
-                double maxHeight = iniParser.Get(IniSection, $"{blockId}_MaxHeight").ToDouble();
-                double minRadius = iniParser.Get(IniSection, $"{blockId}_MinRadius").ToDouble();
-                double maxRadius = iniParser.Get(IniSection, $"{blockId}_MaxRadius").ToDouble();
-                int spawnTriggerInterval = iniParser.Get(IniSection, $"{blockId}_SpawnTriggerInterval").ToInt32();
-                bool enableAirtightAndOxygen = iniParser.Get(IniSection, $"{blockId}_EnableAirtightAndOxygen").ToBoolean(true);
-                bool enabled = iniParser.Get(IniSection, $"{blockId}_Enabled").ToBoolean(true);
-
-                var existingSetting = BlockDropSettings.Find(s => s.BlockId == blockId);
-                if (existingSetting != null)
-                {
-                    existingSetting.BlockType = blockType;
-                    existingSetting.ItemType = itemType;
-                    existingSetting.ItemId = itemId;
-                    existingSetting.MinAmount = minAmount;
-                    existingSetting.MaxAmount = maxAmount;
-                    existingSetting.DamageAmount = damageAmount;
-                    existingSetting.MinHeight = minHeight;
-                    existingSetting.MaxHeight = maxHeight;
-                    existingSetting.MinRadius = minRadius;
-                    existingSetting.MaxRadius = maxRadius;
-                    existingSetting.SpawnTriggerInterval = spawnTriggerInterval;
-                    existingSetting.EnableAirtightAndOxygen = enableAirtightAndOxygen;
-                    existingSetting.Enabled = enabled;
-                }
-                else
-                {
-                    BlockDropSettings.Add(new DropSettings(blockType, blockId, itemType, itemId, minAmount, maxAmount, damageAmount, minHeight, maxHeight, minRadius, maxRadius, spawnTriggerInterval, enableAirtightAndOxygen, enabled));
-                }
-            }
-
-            private void SaveDropSetting(MyIni iniParser, DropSettings dropSetting)
-            {
-                string blockId = dropSetting.BlockId;
-
-                iniParser.Set(IniSection, $"{blockId}_BlockType", dropSetting.BlockType);
-                iniParser.Set(IniSection, $"{blockId}_ItemType", dropSetting.ItemType);
-                iniParser.Set(IniSection, $"{blockId}_ItemId", dropSetting.ItemId);
-                iniParser.Set(IniSection, $"{blockId}_MinAmount", dropSetting.MinAmount);
-                iniParser.Set(IniSection, $"{blockId}_MaxAmount", dropSetting.MaxAmount);
-                iniParser.Set(IniSection, $"{blockId}_DamageAmount", dropSetting.DamageAmount);
-                iniParser.Set(IniSection, $"{blockId}_MinHeight", dropSetting.MinHeight);
-                iniParser.Set(IniSection, $"{blockId}_MaxHeight", dropSetting.MaxHeight);
-                iniParser.Set(IniSection, $"{blockId}_MinRadius", dropSetting.MinRadius);
-                iniParser.Set(IniSection, $"{blockId}_MaxRadius", dropSetting.MaxRadius);
-                iniParser.Set(IniSection, $"{blockId}_SpawnTriggerInterval", dropSetting.SpawnTriggerInterval);
-                iniParser.Set(IniSection, $"{blockId}_EnableAirtightAndOxygen", dropSetting.EnableAirtightAndOxygen);
-                iniParser.Set(IniSection, $"{blockId}_Enabled", dropSetting.Enabled);
+                MyAPIGateway.Utilities.ShowMessage("TreeFarm", "Settings loaded successfully.");
             }
         }
-
-        public class DropSettings
+        else
         {
-            public string BlockType { get; set; }
-            public string BlockId { get; set; }
-            public string ItemType { get; set; }
-            public string ItemId { get; set; }
-            public int MinAmount { get; set; }
-            public int MaxAmount { get; set; }
-            public float DamageAmount { get; set; }
-            public double MinHeight { get; set; }
-            public double MaxHeight { get; set; }
-            public double MinRadius { get; set; }
-            public double MaxRadius { get; set; }
-            public int SpawnTriggerInterval { get; set; }
-            public bool EnableAirtightAndOxygen { get; set; } = true;
-            public bool Enabled { get; set; } = true;
-
-            public DropSettings(string blockType, string blockId, string itemType, string itemId, int minAmount, int maxAmount, float damageAmount, double minHeight, double maxHeight, double minRadius, double maxRadius, int spawnTriggerInterval, bool enableAirtightAndOxygen, bool enabled)
-            {
-                BlockType = blockType;
-                BlockId = blockId;
-                ItemType = itemType;
-                ItemId = itemId;
-                MinAmount = minAmount;
-                MaxAmount = maxAmount;
-                DamageAmount = damageAmount;
-                MinHeight = minHeight;
-                MaxHeight = maxHeight;
-                MinRadius = minRadius;
-                MaxRadius = maxRadius;
-                SpawnTriggerInterval = spawnTriggerInterval;
-                EnableAirtightAndOxygen = enableAirtightAndOxygen;
-                Enabled = enabled;
-            }
+            MyAPIGateway.Utilities.ShowMessage("TreeFarm", "Settings file not found.");
         }
     }
+
+    public void Save()
+    {
+        MyIni iniParser = new MyIni();
+
+        // Save base settings
+        iniParser.Set(IniSection, nameof(BaseUpdateInterval), BaseUpdateInterval);
+
+        // Save block drop settings
+        foreach (var dropSetting in BlockDropSettings)
+        {
+            var section = dropSetting.BlockId;
+            iniParser.Set(section, nameof(DropSettings.BlockType), dropSetting.BlockType);
+            iniParser.Set(section, nameof(DropSettings.ItemType), dropSetting.ItemType);
+            iniParser.Set(section, nameof(DropSettings.ItemId), dropSetting.ItemId);
+            iniParser.Set(section, nameof(DropSettings.MinAmount), dropSetting.MinAmount);
+            iniParser.Set(section, nameof(DropSettings.MaxAmount), dropSetting.MaxAmount);
+            iniParser.Set(section, nameof(DropSettings.DamageAmount), dropSetting.DamageAmount);
+            iniParser.Set(section, nameof(DropSettings.MinHeight), dropSetting.MinHeight);
+            iniParser.Set(section, nameof(DropSettings.MaxHeight), dropSetting.MaxHeight);
+            iniParser.Set(section, nameof(DropSettings.MinRadius), dropSetting.MinRadius);
+            iniParser.Set(section, nameof(DropSettings.MaxRadius), dropSetting.MaxRadius);
+            iniParser.Set(section, nameof(DropSettings.SpawnTriggerInterval), dropSetting.SpawnTriggerInterval);
+            iniParser.Set(section, nameof(DropSettings.EnableAirtightAndOxygen), dropSetting.EnableAirtightAndOxygen);
+            iniParser.Set(section, nameof(DropSettings.Enabled), dropSetting.Enabled);
+            iniParser.Set(section, nameof(DropSettings.StackItems), dropSetting.StackItems);
+        }
+
+        using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
+        {
+            file.Write(iniParser.ToString());
+        }
+    }
+}
+
+public class DropSettings
+{
+    public string BlockId { get; set; }
+    public string BlockType { get; set; }
+    public string ItemType { get; set; }
+    public string ItemId { get; set; }
+    public int MinAmount { get; set; }
+    public int MaxAmount { get; set; }
+    public float DamageAmount { get; set; }
+    public double MinHeight { get; set; }
+    public double MaxHeight { get; set; }
+    public double MinRadius { get; set; }
+    public double MaxRadius { get; set; }
+    public int SpawnTriggerInterval { get; set; }
+    public bool EnableAirtightAndOxygen { get; set; }
+    public bool Enabled { get; set; }
+    public bool StackItems { get; set; }  // New property for stacking items
 }
