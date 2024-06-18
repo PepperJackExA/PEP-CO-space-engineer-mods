@@ -213,7 +213,7 @@ namespace PEPCO.iSurvival.TreeFarm
             private const string IniSection = "Config";
             private const string FileExtension = ".ini";
 
-            public const int DEFAULT_UPDATE_INTERVAL = 300;
+            public const int DEFAULT_UPDATE_INTERVAL = 60;
             public int BaseUpdateInterval = DEFAULT_UPDATE_INTERVAL;
             public List<ulong> playerExceptions = new List<ulong>();
 
@@ -447,7 +447,7 @@ namespace PEPCO.iSurvival.TreeFarm
             public bool EnableAirtightAndOxygen { get; set; } = true;
             public bool Enabled { get; set; } = true;
 
-            public DropSettings(string blockType, string blockId, string itemType, string itemId, int minAmount, int maxAmount, float damageAmount, double minHeight, double maxHeight, double minRadius, double maxRadius, int spawnTriggerInterval, bool EnableAirtightAndOxygen, bool Enabled)
+            public DropSettings(string blockType, string blockId, string itemType, string itemId, int minAmount, int maxAmount, float damageAmount, double minHeight, double maxHeight, double minRadius, double maxRadius, int spawnTriggerInterval, bool enableAirtightAndOxygen, bool enabled)
             {
                 BlockType = blockType;
                 BlockId = blockId;
@@ -461,6 +461,8 @@ namespace PEPCO.iSurvival.TreeFarm
                 MinRadius = minRadius;
                 MaxRadius = maxRadius;
                 SpawnTriggerInterval = spawnTriggerInterval;
+                EnableAirtightAndOxygen = enableAirtightAndOxygen;
+                Enabled = enabled;
             }
         }
     }
