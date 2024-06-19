@@ -36,19 +36,126 @@ namespace PEPCO.iSurvival.TreeFarm
 
         public static TreeFarmSettings settings = new TreeFarmSettings();
 
+        private const string DefaultIniContent = @"
+; ==============================================
+; HOW TO USE TreeFarmSettings.ini
+; ==============================================
+; This configuration file defines the behavior of the Tree Farm mod.
+; Each section represents a different type of block and its settings for item drops.
+; 
+; [Config]
+; BaseUpdateInterval - Defines the base interval in ticks for updates.
+;
+; [SectionName]
+; BlockType - The type of block (e.g., MyObjectBuilder_CubeBlock).
+; MinAmount - Minimum number of items to drop.
+; MaxAmount - Maximum number of items to drop.
+; DamageAmount - Amount of damage to apply to the block per drop.
+; MinHeight, MaxHeight - The height range where items will spawn.
+; MinRadius, MaxRadius - The radius range around the block where items will spawn.
+; SpawnTriggerInterval - How often (in seconds) the drops will occur.
+; EnableAirtightAndOxygen - Whether to check for airtightness and oxygen level.
+; Enabled - Whether the settings for this block type are enabled.
+; StackItems - Whether to stack dropped items together.
+; SpawnInsideInventory - Whether to spawn items inside the block's inventory.
+; ItemTypes - Comma-separated list of item types to drop (e.g., MyObjectBuilder_ConsumableItem).
+; ItemIds - Comma-separated list of item IDs to drop (e.g., Apple).
+; RequiredItemTypes - Comma-separated list of required item types to be present in the block's inventory.
+; RequiredItemIds - Comma-separated list of required item IDs.
+; RequiredItemAmounts - Comma-separated list of amounts for each required item.
+;
+; Example:
+; [LargeBlockSmallContainer]
+; BlockType=MyObjectBuilder_CargoContainer
+; MinAmount=1
+; MaxAmount=5
+; DamageAmount=10.0
+; MinHeight=1.0
+; MaxHeight=5.0
+; MinRadius=2.0
+; MaxRadius=5.0
+; SpawnTriggerInterval=1
+; EnableAirtightAndOxygen=true
+; Enabled=true
+; StackItems=false
+; SpawnInsideInventory=true
+; ItemTypes=MyObjectBuilder_Ingot,MyObjectBuilder_Ingot
+; ItemIds=Iron,Gold
+; RequiredItemTypes=MyObjectBuilder_Ore,MyObjectBuilder_Ore
+; RequiredItemIds=Iron,Ice
+; RequiredItemAmounts=1,0
+
+[Config]
+BaseUpdateInterval=60
+
+[AppleTreeFarmLG]
+BlockType=MyObjectBuilder_CubeBlock
+MinAmount=1
+MaxAmount=10
+DamageAmount=1.0
+MinHeight=1.0
+MaxHeight=3.0
+MinRadius=0.5
+MaxRadius=3.0
+SpawnTriggerInterval=1
+EnableAirtightAndOxygen=true
+Enabled=true
+StackItems=false
+SpawnInsideInventory=false
+ItemTypes=MyObjectBuilder_ConsumableItem
+ItemIds=Apple
+RequiredItemTypes=NA
+RequiredItemIds=NA
+RequiredItemAmounts=0
+
+[AppleTreeFarm]
+BlockType=MyObjectBuilder_CubeBlock
+MinAmount=1
+MaxAmount=10
+DamageAmount=1.0
+MinHeight=1.0
+MaxHeight=5.0
+MinRadius=2.0
+MaxRadius=5.0
+SpawnTriggerInterval=300
+EnableAirtightAndOxygen=true
+Enabled=true
+StackItems=false
+SpawnInsideInventory=false
+ItemTypes=MyObjectBuilder_ConsumableItem
+ItemIds=Apple
+RequiredItemTypes=NA
+RequiredItemIds=NA
+RequiredItemAmounts=0
+";
+
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
         {
             if (MyAPIGateway.Session.IsServer)
             {
                 try
                 {
+                    EnsureDefaultIniFileExists();
                     settings.Load();
                     InitializeDropSettings();
                     MyAPIGateway.Utilities.MessageEntered += OnMessageEntered;
                 }
                 catch (Exception ex)
                 {
+                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Initialization error: {ex.Message}");
                     MyLog.Default.WriteLineAndConsole($"TreeFarm Init Error: {ex.Message}");
+                }
+            }
+        }
+
+
+        private void EnsureDefaultIniFileExists()
+        {
+            if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(TreeFarmSettings.GlobalFileName, typeof(TreeFarmSettings)))
+            {
+                using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(TreeFarmSettings.GlobalFileName, typeof(TreeFarmSettings)))
+                {
+                    writer.Write(DefaultIniContent);
                 }
             }
         }
@@ -67,15 +174,18 @@ namespace PEPCO.iSurvival.TreeFarm
                     try
                     {
                         ReloadSettings();
+                        MyAPIGateway.Utilities.ShowMessage("TreeFarm", "Settings reloaded successfully.");
                     }
                     catch (Exception ex)
                     {
+                        MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Error reloading settings: {ex.Message}");
                         MyLog.Default.WriteLineAndConsole($"TreeFarm Reload Error: {ex.Message}");
                     }
                 }
                 sendToOthers = false;
             }
         }
+
 
         public override void UpdateBeforeSimulation()
         {
@@ -119,8 +229,11 @@ namespace PEPCO.iSurvival.TreeFarm
                             if (CheckInventoryForRequiredItems(block, blockSettings))
                             {
                                 int dropAmount = DropItems(block, blockSettings);
-                                RemoveItemsFromInventory(block, blockSettings, dropAmount);
-                                block.DoDamage(blockSettings.DamageAmount * dropAmount, MyDamageType.Grind, true);
+                                if (dropAmount > 0)
+                                {
+                                    RemoveItemsFromInventory(block, blockSettings, dropAmount);
+                                    block.DoDamage(blockSettings.DamageAmount * dropAmount, MyDamageType.Grind, true);
+                                }
                             }
                         }
                     }
@@ -154,7 +267,10 @@ namespace PEPCO.iSurvival.TreeFarm
         {
             var inventory = block.FatBlock.GetInventory() as IMyInventory;
             if (inventory == null)
-                return false;
+            {
+                MyLog.Default.WriteLineAndConsole($"Block {block.FatBlock.BlockDefinition.SubtypeId} has no inventory. Skipping required item check.");
+                return true; // Skip check if no inventory
+            }
 
             for (int i = 0; i < blockSettings.RequiredItemTypes.Count; i++)
             {
@@ -194,23 +310,17 @@ namespace PEPCO.iSurvival.TreeFarm
                 string itemId = settings.ItemIds[i];
                 var dropItem = CreateObjectBuilder(itemType, itemId);
 
-                if (settings.StackItems)
+                if (settings.SpawnInsideInventory && block.FatBlock.HasInventory)
                 {
-                    Vector3D dropPosition = CalculateDropPosition(block, settings);
-                    Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
-                        (float)(randomGenerator.NextDouble() * Math.PI * 2),
-                        (float)(randomGenerator.NextDouble() * Math.PI * 2),
-                        (float)(randomGenerator.NextDouble() * Math.PI * 2)
-                    );
-
-                    MyFloatingObjects.Spawn(
-                        new MyPhysicalInventoryItem((VRage.MyFixedPoint)dropAmount, dropItem),
-                        dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
-                    );
+                    var inventory = block.FatBlock.GetInventory() as IMyInventory;
+                    if (inventory != null)
+                    {
+                        inventory.AddItems((VRage.MyFixedPoint)dropAmount, dropItem);
+                    }
                 }
                 else
                 {
-                    for (int j = 0; j < dropAmount; j++)
+                    if (settings.StackItems)
                     {
                         Vector3D dropPosition = CalculateDropPosition(block, settings);
                         Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
@@ -220,9 +330,26 @@ namespace PEPCO.iSurvival.TreeFarm
                         );
 
                         MyFloatingObjects.Spawn(
-                            new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, dropItem),
+                            new MyPhysicalInventoryItem((VRage.MyFixedPoint)dropAmount, dropItem),
                             dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
                         );
+                    }
+                    else
+                    {
+                        for (int j = 0; j < dropAmount; j++)
+                        {
+                            Vector3D dropPosition = CalculateDropPosition(block, settings);
+                            Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
+                                (float)(randomGenerator.NextDouble() * Math.PI * 2),
+                                (float)(randomGenerator.NextDouble() * Math.PI * 2),
+                                (float)(randomGenerator.NextDouble() * Math.PI * 2)
+                            );
+
+                            MyFloatingObjects.Spawn(
+                                new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, dropItem),
+                                dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
+                            );
+                        }
                     }
                 }
             }
@@ -301,7 +428,7 @@ namespace PEPCO.iSurvival.TreeFarm
 
 public class TreeFarmSettings
 {
-    private const string GlobalFileName = "TreeFarmSettings.ini";
+    public const string GlobalFileName = "TreeFarmSettings.ini";
     private const string IniSection = "Config";
 
     public int BaseUpdateInterval { get; set; } = 300;
