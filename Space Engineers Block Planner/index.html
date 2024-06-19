@@ -13,32 +13,35 @@
     <div id="app">
         <!-- Check if file was loaded -->
         <input type="file" id="blocksInput" @change="onGameFileUpload">
-        <p>
-            <span v-if="importObject == null">Nothing here</span>
-            <span v-else>
+        <span v-if="importObject == null">Nothing here. Please upload a game export file.</span>
+        <span v-else>
+            <p>
+
+
                 <input type="text" v-model="search" placeholder="search blocks">
-                <ul>
-                    <li v-for="block in filteredBlocks">
-                        {{ block.displayName }}
-                        <button @click="addToSelection($event, block)">+1</button>
-                    </li>
-                </ul>
-            </span>
-        </p>
-        <p>Items in the planner: {{selectedBlocks.length}}</p>
-        <ul>
-            <li v-for="(block,index) in selectedBlocks">
-                {{ block.displayName }} amount: <input type="number" v-model="block.amount">
-                <button @click="removeFromSelection($event, block, index)">remove</button>
-            </li>
-        </ul>
-        <h2>Component List</h2>
-        <button @click="calculateComponentList">Update component list</button>
-        <ul>
-            <li v-for="component in componentList">
-                {{component.componentID}}: {{component.amount}}
-            </li>
-        </ul>
+            <ul>
+                <li v-for="block in filteredBlocks">
+                    {{ block.displayName }}
+                    <button @click="addToSelection($event, block)">+1</button>
+                </li>
+            </ul>
+
+            </p>
+            <p>Items in the planner: {{selectedBlocks.length}}</p>
+            <ul>
+                <li v-for="(block,index) in selectedBlocks">
+                    {{ block.displayName }} amount: <input type="number" v-model="block.amount">
+                    <button @click="removeFromSelection($event, block, index)">remove</button>
+                </li>
+            </ul>
+            <h2>Component List</h2>
+            
+            <ul>
+                <li v-for="component in componentList">
+                    {{component.componentID}}: {{component.amount}}
+                </li>
+            </ul>
+        </span>
     </div>
 
     <script src="app.js"></script>
