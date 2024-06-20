@@ -128,7 +128,7 @@ const app = Vue.createApp({
     filteredBlocks: function(){
       if(this.blocks != null) {
         return this.blocks.filter((block) => {
-          return block.displayName.match(this.search)
+          return block.displayName.toUpperCase().match(this.search.toUpperCase())
       })
       }
       else{
