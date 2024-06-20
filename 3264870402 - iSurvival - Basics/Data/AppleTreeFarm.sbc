@@ -27,6 +27,7 @@
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\SG_MediumTreeFarm.mwm" />
 			</BuildProgressModels>
 			<BlockPairName>AppleTreeFarm</BlockPairName>
+			<PhysicalMaterial>Wood</PhysicalMaterial>
 		</Definition>
 		<Definition>
 			<Id>
@@ -54,6 +55,8 @@
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\LG_MediumTreeFarm.mwm" />
 			</BuildProgressModels>
 			<BlockPairName>AppleTreeFarm</BlockPairName>
+
+			<PhysicalMaterial>Wood</PhysicalMaterial>
 		</Definition>
 	</CubeBlocks>
 </Definitions>
