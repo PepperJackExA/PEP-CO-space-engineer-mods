@@ -15,7 +15,7 @@ using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.ModAPI;
 using System.IO;
 
-namespace PEPCO.iSurvival.TreeFarm
+namespace PEPCO.iSurvival.CustomItemSpawner
 {
     [MySessionComponentDescriptor(MyUpdateOrder.BeforeSimulation)]
     public class TreeFarm : MySessionComponentBase
@@ -38,7 +38,7 @@ namespace PEPCO.iSurvival.TreeFarm
 
         private const string DefaultIniContent = @"
 ; ==============================================
-; HOW TO USE TreeFarmSettings.ini
+; HOW TO USE CustomItemSpawner.ini
 ; ==============================================
 ; This configuration file defines the behavior of the Tree Farm mod.
 ; Each section represents a different type of block and its settings for item drops.
@@ -92,12 +92,12 @@ BaseUpdateInterval=60
 BlockType=MyObjectBuilder_CubeBlock
 MinAmount=1
 MaxAmount=10
-DamageAmount=1.0
+DamageAmount=10.0
 MinHeight=1.0
 MaxHeight=3.0
 MinRadius=0.5
 MaxRadius=3.0
-SpawnTriggerInterval=1
+SpawnTriggerInterval=300
 EnableAirtightAndOxygen=true
 Enabled=true
 StackItems=false
@@ -112,7 +112,7 @@ RequiredItemAmounts=0
 BlockType=MyObjectBuilder_CubeBlock
 MinAmount=1
 MaxAmount=10
-DamageAmount=1.0
+DamageAmount=10.0
 MinHeight=1.0
 MaxHeight=5.0
 MinRadius=2.0
@@ -428,7 +428,7 @@ RequiredItemAmounts=0
 
 public class TreeFarmSettings
 {
-    public const string GlobalFileName = "TreeFarmSettings.ini";
+    public const string GlobalFileName = "CustomItemSpawner.ini";
     private const string IniSection = "Config";
 
     public int BaseUpdateInterval { get; set; } = 300;
