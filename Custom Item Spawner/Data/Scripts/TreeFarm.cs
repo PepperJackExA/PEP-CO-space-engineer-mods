@@ -34,7 +34,7 @@ namespace PEPCO.iSurvival.CustomItemSpawner
             { "MyObjectBuilder_Component", typeof(MyObjectBuilder_Component) }
         };
 
-        public static TreeFarmSettings settings = new TreeFarmSettings();
+        public static CustomItemSpawnerSettings settings = new CustomItemSpawnerSettings();
 
         private const string DefaultIniContent = @"
 ; ==============================================
@@ -51,6 +51,8 @@ namespace PEPCO.iSurvival.CustomItemSpawner
 ; MinAmount - Minimum number of items to drop.
 ; MaxAmount - Maximum number of items to drop.
 ; DamageAmount - Amount of damage to apply to the block per drop.
+; MinHealthPercentage - Minimum health percentage required to apply damage.
+; MaxHealthPercentage - Maximum health percentage allowed for spawning.
 ; MinHeight, MaxHeight - The height range where items will spawn.
 ; MinRadius, MaxRadius - The radius range around the block where items will spawn.
 ; SpawnTriggerInterval - How often (in seconds) the drops will occur.
@@ -70,6 +72,8 @@ namespace PEPCO.iSurvival.CustomItemSpawner
 ; MinAmount=1
 ; MaxAmount=5
 ; DamageAmount=10.0
+; MinHealthPercentage=0.2
+; MaxHealthPercentage=0.8
 ; MinHeight=1.0
 ; MaxHeight=5.0
 ; MinRadius=2.0
@@ -93,6 +97,8 @@ BlockType=MyObjectBuilder_CubeBlock
 MinAmount=1
 MaxAmount=10
 DamageAmount=10.0
+MinHealthPercentage=0.2
+MaxHealthPercentage=0.8
 MinHeight=1.0
 MaxHeight=3.0
 MinRadius=0.5
@@ -113,6 +119,8 @@ BlockType=MyObjectBuilder_CubeBlock
 MinAmount=1
 MaxAmount=10
 DamageAmount=10.0
+MinHealthPercentage=0.2
+MaxHealthPercentage=0.8
 MinHeight=1.0
 MaxHeight=5.0
 MinRadius=2.0
@@ -142,8 +150,8 @@ RequiredItemAmounts=0
                 }
                 catch (Exception ex)
                 {
-                    MyAPIGateway.Utilities.ShowMessage("TreeFarm", $"Initialization error: {ex.Message}");
-                    MyLog.Default.WriteLineAndConsole($"TreeFarm Init Error: {ex.Message}");
+                    MyAPIGateway.Utilities.ShowMessage("Custom Item Spawner", $"Initialization error: {ex.Message}");
+                    MyLog.Default.WriteLineAndConsole($"Custom Item Spawner Init Error: {ex.Message}");
                 }
             }
         }
@@ -151,9 +159,9 @@ RequiredItemAmounts=0
 
         private void EnsureDefaultIniFileExists()
         {
-            if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(TreeFarmSettings.GlobalFileName, typeof(TreeFarmSettings)))
+            if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(CustomItemSpawnerSettings.GlobalFileName, typeof(CustomItemSpawnerSettings)))
             {
-                using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(TreeFarmSettings.GlobalFileName, typeof(TreeFarmSettings)))
+                using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(CustomItemSpawnerSettings.GlobalFileName, typeof(CustomItemSpawnerSettings)))
                 {
                     writer.Write(DefaultIniContent);
                 }
@@ -226,13 +234,17 @@ RequiredItemAmounts=0
                         var blockSettings = GetDropSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
                         if (blockSettings != null && blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block))
                         {
-                            if (CheckInventoryForRequiredItems(block, blockSettings))
+                            float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
+                            if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
                             {
-                                int dropAmount = DropItems(block, blockSettings);
-                                if (dropAmount > 0)
+                                if (CheckInventoryForRequiredItems(block, blockSettings))
                                 {
-                                    RemoveItemsFromInventory(block, blockSettings, dropAmount);
-                                    block.DoDamage(blockSettings.DamageAmount * dropAmount, MyDamageType.Grind, true);
+                                    int dropAmount = DropItems(block, blockSettings);
+                                    if (dropAmount > 0)
+                                    {
+                                        RemoveItemsFromInventory(block, blockSettings, dropAmount);
+                                        block.DoDamage(blockSettings.DamageAmount * dropAmount, MyDamageType.Grind, true);
+                                    }
                                 }
                             }
                         }
@@ -240,6 +252,8 @@ RequiredItemAmounts=0
                 }
             }
         }
+
+
 
         private bool IsValidBlock(string typeId, string subtypeId)
         {
@@ -426,7 +440,7 @@ RequiredItemAmounts=0
     }
 }
 
-public class TreeFarmSettings
+public class CustomItemSpawnerSettings
 {
     public const string GlobalFileName = "CustomItemSpawner.ini";
     private const string IniSection = "Config";
@@ -438,9 +452,9 @@ public class TreeFarmSettings
     {
         MyIni iniParser = new MyIni();
 
-        if (MyAPIGateway.Utilities.FileExistsInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
+        if (MyAPIGateway.Utilities.FileExistsInWorldStorage(GlobalFileName, typeof(CustomItemSpawnerSettings)))
         {
-            using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
+            using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(GlobalFileName, typeof(CustomItemSpawnerSettings)))
             {
                 string text = file.ReadToEnd();
 
@@ -469,6 +483,8 @@ public class TreeFarmSettings
                         MinAmount = iniParser.Get(section, nameof(DropSettings.MinAmount)).ToInt32(),
                         MaxAmount = iniParser.Get(section, nameof(DropSettings.MaxAmount)).ToInt32(),
                         DamageAmount = (float)iniParser.Get(section, nameof(DropSettings.DamageAmount)).ToDouble(),
+                        MinHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MinHealthPercentage)).ToDouble(), // Added here
+                        MaxHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MaxHealthPercentage)).ToDouble(), // Added here
                         MinHeight = iniParser.Get(section, nameof(DropSettings.MinHeight)).ToDouble(),
                         MaxHeight = iniParser.Get(section, nameof(DropSettings.MaxHeight)).ToDouble(),
                         MinRadius = iniParser.Get(section, nameof(DropSettings.MinRadius)).ToDouble(),
@@ -491,6 +507,8 @@ public class TreeFarmSettings
             }
         }
     }
+
+
 
     public void Save()
     {
@@ -522,7 +540,7 @@ public class TreeFarmSettings
             iniParser.Set(section, nameof(DropSettings.RequiredItemIds), string.Join(",", dropSetting.RequiredItemIds));
             iniParser.Set(section, nameof(DropSettings.RequiredItemAmounts), string.Join(",", dropSetting.RequiredItemAmounts));
 
-            using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(GlobalFileName, typeof(TreeFarmSettings)))
+            using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(GlobalFileName, typeof(CustomItemSpawnerSettings)))
             {
                 file.Write(iniParser.ToString());
             }
@@ -539,6 +557,8 @@ public class DropSettings
     public int MinAmount { get; set; }
     public int MaxAmount { get; set; }
     public float DamageAmount { get; set; }
+    public float MinHealthPercentage { get; set; } = 0.1f;
+    public float MaxHealthPercentage { get; set; } = 1.0f;
     public double MinHeight { get; set; }
     public double MaxHeight { get; set; }
     public double MinRadius { get; set; }
