@@ -18,7 +18,7 @@ using System.IO;
 namespace PEPCO.iSurvival.CustomItemSpawner
 {
     [MySessionComponentDescriptor(MyUpdateOrder.BeforeSimulation)]
-    public class TreeFarm : MySessionComponentBase
+    public class CustomItemSpawner : MySessionComponentBase
     {
         private int updateTickCounter = 0;
         private long totalUpdateTicks = 0;
