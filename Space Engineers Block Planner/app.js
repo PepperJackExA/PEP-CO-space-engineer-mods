@@ -4,9 +4,12 @@ const app = Vue.createApp({
       // importObject:"Me"
       importObject: null, //Full import file as JSON object
       blocks: null, //Block section of the import file
+      components: null,
       search: "", //Search string for block name
       selectedBlocks: [], //Array for the blocks that were selected as part of the planner
       componentList: [],
+      totalVolume: 0,
+      totalWeight: 0
     }
   },
   methods: {
@@ -24,17 +27,19 @@ const app = Vue.createApp({
         try {
           vm.importObject = JSON.parse(e.target.result)
           vm.blocks = vm.importObject.blocks
+          vm.components = vm.importObject.components
         } catch (error) {
           console.log(error)
           vm.importObject = null
           vm.blocks = null
+          vm.components = null
         }
       };
       reader.readAsText(file);
     },
     addToSelection(e,block){
-      console.log(e)
-      console.log(block.displayName)
+      // console.log(e)
+      // console.log(block.displayName)
       var amount = 1
       
       var indexLookup = this.selectedBlocks.findIndex((selectedBlock) => {
@@ -77,14 +82,14 @@ const app = Vue.createApp({
         components.forEach(componentfromBlock => {
           
           var currentComponentID = componentfromBlock.componentID
-          console.log("currentComponentID: "+currentComponentID)
+          // console.log("currentComponentID: "+currentComponentID)
           //Create variable with the amount of components required for this entry
           var currentComponentAmount = componentfromBlock.amount
           //Check if component already exists in the componentList
           var indexLookup = this.componentList.findIndex((mycomponent) => {
             return mycomponent.componentID.match(currentComponentID)
           })
-          console.log("indexLookup: "+indexLookup)
+          // console.log("indexLookup: "+indexLookup)
           // remove soon: console.log(indexLookup)
           if (indexLookup != -1){ //Component already exists in the List so we replace the current one and sum the components
             this.componentList[indexLookup] = {
@@ -98,10 +103,24 @@ const app = Vue.createApp({
               "amount":currentComponentAmount*selectedBlockAmount
             }
             this.componentList.push(addedComponents)
-            console.log(this.componentList)
+            // console.log(this.componentList)
           }
           
         });
+      });
+    },
+    calculateComponentValue(){
+      this.totalVolume = 0
+      this.totalWeight = 0
+      this.componentList.forEach(component => {
+        var componentLookup = this.components.find(element => {
+          return element.componentID.match(component.componentID)
+        })
+        var componentVolume = componentLookup.volume
+        var componentWeight = componentLookup.weight
+        var componentAmount = component.amount
+        this.totalVolume += componentVolume*componentAmount
+        this.totalWeight += componentWeight*componentAmount
       });
     }
   },
@@ -120,6 +139,9 @@ const app = Vue.createApp({
   created() {
     this.$watch("selectedBlocks", (newSelectedBlocks) => {
       this.calculateComponentList()
+    }, { deep: true });
+    this.$watch("componentList", (newComponentList) => {
+      this.calculateComponentValue()
     }, { deep: true });
   }
 })
