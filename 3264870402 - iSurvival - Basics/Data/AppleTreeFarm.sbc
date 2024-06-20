@@ -13,18 +13,19 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="5" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\Small\SG_TreeFarm.mwm</Model>
+			<Model>Models\Cubes\Apple\TreeFarm.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="10"/>
+				<Component Subtype="AppleSapling" Count="1"/>
+				<Component Subtype="FarmCompost" Count="100"/>
 			</Components>
-			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<CriticalComponent Subtype="Sapling" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.02" StartY="0.02" EndX="1.98" EndY="1.98"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.25" File="Models\Cubes\Large\SG_SapTreeFarm.mwm" />
-				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\SG_SmallTreeFarm.mwm" />
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\SG_MediumTreeFarm.mwm" />
+				<Model BuildPercentUpperBound="0.25" File="Models\Cubes\Apple\SapTreeFarm.mwm" />
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Apple\SmallTreeFarm.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Apple\MediumTreeFarm.mwm" />
 			</BuildProgressModels>
 			<BlockPairName>AppleTreeFarm</BlockPairName>
 			<PhysicalMaterial>Wood</PhysicalMaterial>
@@ -41,18 +42,19 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\Large\LG_TreeFarm.mwm</Model>
+			<Model>Models\Cubes\Apple\TreeFarm.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="10"/>
+				<Component Subtype="AppleSapling" Count="1"/>
+				<Component Subtype="FarmCompost" Count="100"/>
 			</Components>
-			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<CriticalComponent Subtype="Sapling" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.30" StartY="0.30" EndX="0.70" EndY="0.70"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.25" File="Models\Cubes\Large\LG_SapTreeFarm.mwm" />
-				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\LG_SmallTreeFarm.mwm" />
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\LG_MediumTreeFarm.mwm" />
+				<Model BuildPercentUpperBound="0.25" File="Models\Cubes\Apple\SapTreeFarm.mwm" />
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Apple\SmallTreeFarm.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Apple\MediumTreeFarm.mwm" />
 			</BuildProgressModels>
 			<BlockPairName>AppleTreeFarm</BlockPairName>
 
