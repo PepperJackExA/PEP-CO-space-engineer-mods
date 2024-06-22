@@ -134,10 +134,10 @@ RequiredItemAmounts=0
                 try
                 {
                     EnsureDefaultIniFilesExist();
+                    CopyAllCISFilesToWorldStorage();
                     LoadAllFilesFromWorldStorage();
                     settings.Load();
                     InitializeDropSettings();
-                    CopyAllCISFilesToWorldStorage();
                     MyAPIGateway.Utilities.MessageEntered += OnMessageEntered;
                 }
                 catch (Exception ex)
@@ -278,7 +278,7 @@ RequiredItemAmounts=0
             var inventory = block.FatBlock.GetInventory() as IMyInventory;
             if (inventory == null)
             {
-                LogError($"Block {block.FatBlock.BlockDefinition.SubtypeId} has no inventory. Skipping required item check.");
+                //LogError($"Block {block.FatBlock.BlockDefinition.SubtypeId} has no inventory. Skipping required item check.");
                 return true; // Skip check if no inventory
             }
 
@@ -424,16 +424,47 @@ RequiredItemAmounts=0
 
         private void InitializeDropSettings()
         {
-            // Placeholder for any additional initialization logic.
+            // Clear existing drop settings if necessary
+            settings.BlockDropSettings.Clear();
+
+            // Re-load settings from the loaded configuration
+            settings.Load();
+
+            // Initialize any additional settings or state
+            // (e.g., clear existing item drop queues, reset timers, etc.)
+
+            LogError("Drop settings initialized.");
         }
+
 
         private void ReloadSettings()
         {
             try
             {
+                
+
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Reloading settings...");
+                LogError("Reloading settings...");
+
+                // Ensure default INI files exist
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Ensure default INI files exist...");
+                LogError("Ensure default INI files exist...");
+                EnsureDefaultIniFilesExist();
+
+                // Copy all CIS files to world storage
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Copying all CIS files to world storage...");
+                LogError("Copying all CIS files to world storage...");
+                CopyAllCISFilesToWorldStorage();
+
+                // Reload all files from world storage
                 LoadAllFilesFromWorldStorage();
+
+                // Reload the main settings
                 settings.Load();
                 InitializeDropSettings();
+
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Settings reloaded successfully.");
+                LogError("Settings reloaded successfully.");
             }
             catch (Exception ex)
             {
@@ -441,6 +472,7 @@ RequiredItemAmounts=0
                 LogError($"Error reloading settings: {ex.Message}");
             }
         }
+
 
         private void CopyAllCISFilesToWorldStorage()
         {
@@ -489,7 +521,7 @@ RequiredItemAmounts=0
                     }
                     else
                     {
-                        // MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"File not found in Mod Data folder for mod {modItem.PublishedFileId}.");
+                        MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"File not found in Mod Data folder for mod {modItem.PublishedFileId}.");
                         LogError($"File not found: {modFilePath} in mod: {modItem.PublishedFileId}");
                     }
                 }
@@ -502,48 +534,22 @@ RequiredItemAmounts=0
             }
         }
 
-
-        private void LogError(string message)
-        {
-            string logFilePath = "CustomItemSpawner.log";
-            string existingContent = "";
-
-            // Read the existing content if the file exists
-            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(logFilePath, typeof(CustomItemSpawner)))
-            {
-                using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(logFilePath, typeof(CustomItemSpawner)))
-                {
-                    existingContent = reader.ReadToEnd();
-                }
-            }
-
-            // Append the new log entry
-            using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(logFilePath, typeof(CustomItemSpawner)))
-            {
-                if (!string.IsNullOrEmpty(existingContent))
-                {
-                    writer.Write(existingContent);
-                }
-                writer.WriteLine($"{DateTime.Now}: {message}");
-            }
-        }
-
         private void LoadAllFilesFromWorldStorage()
         {
             try
             {
                 // List of known configuration file names
                 List<string> knownConfigFiles = new List<string>
-        {
-            "GlobalConfig.ini",
-            "CustomItemSpawner.ini"
-        };
+                {
+                    "GlobalConfig.ini",
+                    "CustomItemSpawner.ini"
+                };
 
                 // Additional file patterns to check for
                 List<string> additionalFilePatterns = new List<string>
-        {
-            "_CIS.ini"
-        };
+                {
+                    "_CIS.ini"
+                };
 
                 // Load known config files
                 foreach (string configFileName in knownConfigFiles)
@@ -702,7 +708,30 @@ RequiredItemAmounts=0
             }
         }
 
+        private void LogError(string message)
+        {
+            string logFilePath = "CustomItemSpawner.log";
+            string existingContent = "";
 
+            // Read the existing content if the file exists
+            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(logFilePath, typeof(CustomItemSpawner)))
+            {
+                using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(logFilePath, typeof(CustomItemSpawner)))
+                {
+                    existingContent = reader.ReadToEnd();
+                }
+            }
+
+            // Append the new log entry
+            using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(logFilePath, typeof(CustomItemSpawner)))
+            {
+                if (!string.IsNullOrEmpty(existingContent))
+                {
+                    writer.Write(existingContent);
+                }
+                writer.WriteLine($"{DateTime.Now}: {message}");
+            }
+        }
     }
 
     public class CustomItemSpawnerSettings
