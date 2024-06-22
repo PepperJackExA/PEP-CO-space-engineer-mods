@@ -16,7 +16,8 @@
                     "amount":5,
                     "isCritical":true
                 }
-            ]
+            ],
+            "size": "large"
         },
         {
             "blockID":"CubeBlock",
@@ -33,7 +34,8 @@
                     "amount":3,
                     "isCritical":true
                 }
-            ]
+            ],
+            "size": "large"
         },
         {
             "blockID":"CubeBlock",
@@ -55,7 +57,21 @@
                     "amount":30,
                     "isCritical":false
                 }
-            ]
+            ],
+            "size": "large"
+        }
+    ],
+    "components":
+    [
+        {
+            "componentID":"SteelPlate",
+            "volume":5,
+            "weight":10
+        },
+        {
+            "componentID":"Computer",
+            "volume":1,
+            "weight":1
         }
     ]
 }
