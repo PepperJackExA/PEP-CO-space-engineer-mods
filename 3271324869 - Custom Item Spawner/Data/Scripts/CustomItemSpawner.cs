@@ -15,6 +15,7 @@ using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.ModAPI;
 using System.IO;
 using PEPCO.iSurvival.CustomItemSpawner;
+using static VRage.Game.MyObjectBuilder_Checkpoint;
 
 namespace PEPCO.iSurvival.CustomItemSpawner
 {
@@ -40,7 +41,7 @@ namespace PEPCO.iSurvival.CustomItemSpawner
         };
 
         public static CustomItemSpawnerSettings settings = new CustomItemSpawnerSettings();
-
+        
         private const string DefaultGlobalIniContent = @"
 ; ==============================================
 ; HOW TO USE GlobalConfig.ini
@@ -52,6 +53,7 @@ namespace PEPCO.iSurvival.CustomItemSpawner
 ;
 [Config]
 BaseUpdateInterval=60
+EnableLogging=false
 ";
 
         private const string DefaultItemSpawnerIniContent = @"
@@ -65,6 +67,7 @@ BaseUpdateInterval=60
 ; BlockType - The type of block (e.g., MyObjectBuilder_CubeBlock).
 ; MinAmount - Minimum number of items to drop.
 ; MaxAmount - Maximum number of items to drop.
+; UseWeightedDrops - Whether to use weighted drops based on probabilities to favors middle values.
 ; DamageAmount - Amount of damage to apply to the block per drop.
 ; MinHealthPercentage - Minimum health percentage required to apply damage.
 ; MaxHealthPercentage - Maximum health percentage allowed for spawning.
@@ -86,6 +89,7 @@ BaseUpdateInterval=60
 ; BlockType=MyObjectBuilder_CargoContainer
 ; MinAmount=1
 ; MaxAmount=5
+; UseWeightedDrops=false
 ; DamageAmount=10.0
 ; MinHealthPercentage=0.2
 ; MaxHealthPercentage=1
@@ -102,29 +106,7 @@ BaseUpdateInterval=60
 ; ItemIds=Iron,Gold
 ; RequiredItemTypes=MyObjectBuilder_Ore,MyObjectBuilder_Ore
 ; RequiredItemIds=Iron,Ice
-; RequiredItemAmounts=1,0
-
-[AppleTreeFarmLG]
-BlockType=MyObjectBuilder_CubeBlock
-MinAmount=1
-MaxAmount=10
-DamageAmount=0
-MinHealthPercentage=0.2
-MaxHealthPercentage=1
-MinHeight=1.0
-MaxHeight=3.0
-MinRadius=0.5
-MaxRadius=3.0
-SpawnTriggerInterval=3
-EnableAirtightAndOxygen=true
-Enabled=true
-StackItems=false
-SpawnInsideInventory=false
-ItemTypes=MyObjectBuilder_ConsumableItem
-ItemIds=Apple
-RequiredItemTypes=NA
-RequiredItemIds=NA
-RequiredItemAmounts=0
+; RequiredItemAmounts=0,0
 ";
 
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
@@ -142,7 +124,7 @@ RequiredItemAmounts=0
                 }
                 catch (Exception ex)
                 {
-                    MyAPIGateway.Utilities.ShowMessage("Custom Item Spawner", $"Initialization error: {ex.Message}");
+                    //MyAPIGateway.Utilities.ShowMessage("Custom Item Spawner", $"Initialization error: {ex.Message}");
                     LogError($"Initialization error: {ex.Message}");
                 }
             }
@@ -181,11 +163,11 @@ RequiredItemAmounts=0
                     try
                     {
                         ReloadSettings();
-                        MyAPIGateway.Utilities.ShowMessage("PEPCO", "Settings reloaded successfully.");
+                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Settings reloaded successfully.");
                     }
                     catch (Exception ex)
                     {
-                        MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Error reloading settings: {ex.Message}");
+                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Error reloading settings: {ex.Message}");
                         LogError($"Error reloading settings: {ex.Message}");
                     }
                 }
@@ -313,7 +295,21 @@ RequiredItemAmounts=0
 
         private int DropItems(IMySlimBlock block, DropSettings settings)
         {
-            int dropAmount = GetWeightedRandomNumber(GenerateProbabilities(settings.MinAmount, settings.MaxAmount));
+            // Calculate the number of items to drop based on MinAmount and MaxAmount
+           
+            int dropAmount;
+            if (settings.UseWeightedDrops)
+            {
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"UseWeightedDrops");
+                dropAmount = GetWeightedRandomNumber(settings.MinAmount, GenerateProbabilities(settings.MinAmount, settings.MaxAmount));
+
+            }
+            else
+            {
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Didn't UseWeightedDrops");
+                dropAmount = randomGenerator.Next(settings.MinAmount, settings.MaxAmount + 1);
+            }
+
             for (int i = 0; i < settings.ItemTypes.Count; i++)
             {
                 string itemType = settings.ItemTypes[i];
@@ -367,6 +363,7 @@ RequiredItemAmounts=0
             return dropAmount;
         }
 
+
         private Vector3D CalculateDropPosition(IMySlimBlock block, DropSettings blockSettings)
         {
             double heightOffset = randomGenerator.NextDouble() * (blockSettings.MaxHeight - blockSettings.MinHeight) + blockSettings.MinHeight;
@@ -407,7 +404,7 @@ RequiredItemAmounts=0
             return probabilities;
         }
 
-        private int GetWeightedRandomNumber(List<int> probabilities)
+        private int GetWeightedRandomNumber(int minAmount, List<int> probabilities)
         {
             int totalWeight = probabilities.Sum();
             int randomValue = randomGenerator.Next(1, totalWeight + 1);
@@ -417,42 +414,58 @@ RequiredItemAmounts=0
             {
                 cumulativeWeight += probabilities[i];
                 if (randomValue <= cumulativeWeight)
-                    return i + 1;
+                    return minAmount + i;
             }
-            return 1;
+            return minAmount; // In case something goes wrong, return the minimum amount
         }
+
+
 
         private void InitializeDropSettings()
         {
-            // Clear existing drop settings if necessary
+            // Clear existing drop settings
+
             settings.BlockDropSettings.Clear();
 
             // Re-load settings from the loaded configuration
             settings.Load();
 
-            // Initialize any additional settings or state
-            // (e.g., clear existing item drop queues, reset timers, etc.)
+            // Log initialized settings
+            foreach (var dropSettings in settings.BlockDropSettings)
+            {
+                LogError($"Initialized settings for {dropSettings.BlockId}: " +
+                         $"BlockType={dropSettings.BlockType}, MinAmount={dropSettings.MinAmount}, MaxAmount={dropSettings.MaxAmount}, " +
+                         $"DamageAmount={dropSettings.DamageAmount}, MinHealthPercentage={dropSettings.MinHealthPercentage}, " +
+                         $"MaxHealthPercentage={dropSettings.MaxHealthPercentage}, MinHeight={dropSettings.MinHeight}, " +
+                         $"MaxHeight={dropSettings.MaxHeight}, MinRadius={dropSettings.MinRadius}, MaxRadius={dropSettings.MaxRadius}, " +
+                         $"SpawnTriggerInterval={dropSettings.SpawnTriggerInterval}, EnableAirtightAndOxygen={dropSettings.EnableAirtightAndOxygen}, " +
+                         $"Enabled={dropSettings.Enabled}, StackItems={dropSettings.StackItems}, SpawnInsideInventory={dropSettings.SpawnInsideInventory}, " +
+                         $"ItemTypes={string.Join(",", dropSettings.ItemTypes)}, ItemIds={string.Join(",", dropSettings.ItemIds)}, " +
+                         $"RequiredItemTypes={string.Join(",", dropSettings.RequiredItemTypes)}, RequiredItemIds={string.Join(",", dropSettings.RequiredItemIds)}, " +
+                         $"RequiredItemAmounts={string.Join(",", dropSettings.RequiredItemAmounts)}");
+            }
 
             LogError("Drop settings initialized.");
         }
+
 
 
         private void ReloadSettings()
         {
             try
             {
-                
 
+                
                 MyAPIGateway.Utilities.ShowMessage("PEPCO", "Reloading settings...");
                 LogError("Reloading settings...");
 
                 // Ensure default INI files exist
-                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Ensure default INI files exist...");
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Ensure default INI files exist...");
                 LogError("Ensure default INI files exist...");
                 EnsureDefaultIniFilesExist();
 
                 // Copy all CIS files to world storage
-                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Copying all CIS files to world storage...");
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Copying all CIS files to world storage...");
                 LogError("Copying all CIS files to world storage...");
                 CopyAllCISFilesToWorldStorage();
 
@@ -460,7 +473,6 @@ RequiredItemAmounts=0
                 LoadAllFilesFromWorldStorage();
 
                 // Reload the main settings
-                settings.Load();
                 InitializeDropSettings();
 
                 MyAPIGateway.Utilities.ShowMessage("PEPCO", "Settings reloaded successfully.");
@@ -510,18 +522,18 @@ RequiredItemAmounts=0
                                 writer.Write(fileContent);
                             }
 
-                            MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"File copied to World Storage successfully from mod {modItem.PublishedFileId}.");
+                            //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"File copied to World Storage successfully from mod {modItem.PublishedFileId}.");
                             LogError($"File copied to World Storage successfully from mod {modItem.PublishedFileId}.");
                         }
                         else
                         {
-                            MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"File already exists in World Storage for mod {modItem.PublishedFileId}.");
+                            //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"File already exists in World Storage for mod {modItem.PublishedFileId}.");
                             LogError($"File already exists: {worldStorageFilePath} for mod: {modItem.PublishedFileId}");
                         }
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"File not found in Mod Data folder for mod {modItem.PublishedFileId}.");
+                        //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"File not found in Mod Data folder for mod {modItem.PublishedFileId}.");
                         LogError($"File not found: {modFilePath} in mod: {modItem.PublishedFileId}");
                     }
                 }
@@ -529,7 +541,7 @@ RequiredItemAmounts=0
             catch (Exception ex)
             {
                 MyLog.Default.WriteLine($"Error copying files to World Storage: {ex.Message}");
-                MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"Error copying files to World Storage: {ex.Message}");
+                //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"Error copying files to World Storage: {ex.Message}");
                 LogError($"Error copying files to World Storage: {ex.Message}");
             }
         }
@@ -540,31 +552,42 @@ RequiredItemAmounts=0
             {
                 // List of known configuration file names
                 List<string> knownConfigFiles = new List<string>
-                {
-                    "GlobalConfig.ini",
-                    "CustomItemSpawner.ini"
-                };
+        {
+            "GlobalConfig.ini",
+            "CustomItemSpawner.ini"
+        };
 
                 // Additional file patterns to check for
                 List<string> additionalFilePatterns = new List<string>
-                {
-                    "_CIS.ini"
-                };
+        {
+            "_CIS.ini"
+        };
+
+                // Clear existing settings
+                settings.BlockDropSettings.Clear();
 
                 // Load known config files
                 foreach (string configFileName in knownConfigFiles)
                 {
+                    //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"Looking at {configFileName}.");
+                    LogError($"Looking at {configFileName}");
                     if (MyAPIGateway.Utilities.FileExistsInWorldStorage(configFileName, typeof(CustomItemSpawner)))
                     {
+                        //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"Looking in world Storage for {configFileName}.");
+                        LogError($"Looking in world Storage for {configFileName}");
                         using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(configFileName, typeof(CustomItemSpawner)))
                         {
                             string fileContent = reader.ReadToEnd();
                             if (configFileName.Equals("GlobalConfig.ini", StringComparison.OrdinalIgnoreCase))
                             {
+                                //MyAPIGateway.Utilities.ShowMessage("GlobalConfig.ini", $"Loading GlobalConfig: {configFileName}.");
+                                LogError($"Loading GlobalConfig: {configFileName}");
                                 LoadGlobalConfig(fileContent);
                             }
                             else if (configFileName.Equals("CustomItemSpawner.ini", StringComparison.OrdinalIgnoreCase))
                             {
+                                //MyAPIGateway.Utilities.ShowMessage("CustomItemSpawnerConfig.ini", $"Loading CustomItemSpawnerConfig: {configFileName}.");
+                                LogError($"Loading CustomItemSpawnerConfig: {configFileName}");
                                 LoadCustomItemSpawnerConfig(fileContent);
                             }
                         }
@@ -574,15 +597,24 @@ RequiredItemAmounts=0
                 // Load additional CIS files
                 foreach (var modItem in MyAPIGateway.Session.Mods)
                 {
+                    //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"Looking for: {modItem.PublishedFileId} in world storage folder");
+                    LogError($"Looking for: {modItem.PublishedFileId} in world storage folder");
                     foreach (string pattern in additionalFilePatterns)
                     {
                         string cisFileName = $"{modItem.PublishedFileId}{pattern}";
+                        //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"Looking for: {modItem.PublishedFileId} in {cisFileName}");
+                        LogError($"Looking for: {modItem.PublishedFileId} in {cisFileName}");
                         if (MyAPIGateway.Utilities.FileExistsInWorldStorage(cisFileName, typeof(CustomItemSpawner)))
                         {
+                            //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"Found {modItem.PublishedFileId} in {cisFileName}");
+                            LogError($"Found {modItem.PublishedFileId} in {cisFileName}");
                             using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(cisFileName, typeof(CustomItemSpawner)))
                             {
+                                //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"Loading: {modItem.PublishedFileId} in {cisFileName}");
+                                LogError($"Loading: {modItem.PublishedFileId} in {cisFileName}");
                                 string fileContent = reader.ReadToEnd();
-                                LoadCustomItemSpawner(fileContent, cisFileName);
+                                LogError($"Contents:, {fileContent}");
+                                LoadCustomItemSpawnerConfig(fileContent);
                             }
                         }
                     }
@@ -591,10 +623,12 @@ RequiredItemAmounts=0
             catch (Exception ex)
             {
                 MyLog.Default.WriteLine($"Error loading files from World Storage: {ex.Message}");
-                MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"Error loading files from World Storage: {ex.Message}");
+                //MyAPIGateway.Utilities.ShowMessage("CIS.ini", $"Error loading files from World Storage: {ex.Message}");
                 LogError($"Error loading files from World Storage: {ex.Message}");
             }
         }
+
+
 
         private void LoadGlobalConfig(string fileContent)
         {
@@ -608,108 +642,84 @@ RequiredItemAmounts=0
 
             // Load specific global settings
             settings.BaseUpdateInterval = iniParser.Get("Config", "BaseUpdateInterval").ToInt32(60);
+            settings.EnableLogging = iniParser.Get("Config", "EnableLogging").ToBoolean(true);
         }
 
         private void LoadCustomItemSpawnerConfig(string fileContent)
         {
-            // Parse and load custom item spawner configuration settings from fileContent
-            MyIni iniParser = new MyIni();
-            MyIniParseResult result;
-            if (!iniParser.TryParse(fileContent, out result))
+            try
             {
-                throw new Exception($"Config error: {result.ToString()}");
-            }
-
-            // Load specific item spawner settings
-            List<string> sections = new List<string>();
-            iniParser.GetSections(sections);
-
-            foreach (var section in sections)
-            {
-                if (section == "Config")
-                    continue;
-
-                var dropSettings = new DropSettings
+                MyIni iniParser = new MyIni();
+                MyIniParseResult result;
+                if (!iniParser.TryParse(fileContent, out result))
                 {
-                    BlockId = section,
-                    BlockType = iniParser.Get(section, nameof(DropSettings.BlockType)).ToString(),
-                    MinAmount = iniParser.Get(section, nameof(DropSettings.MinAmount)).ToInt32(),
-                    MaxAmount = iniParser.Get(section, nameof(DropSettings.MaxAmount)).ToInt32(),
-                    DamageAmount = (float)iniParser.Get(section, nameof(DropSettings.DamageAmount)).ToDouble(),
-                    MinHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MinHealthPercentage)).ToDouble(),
-                    MaxHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MaxHealthPercentage)).ToDouble(),
-                    MinHeight = iniParser.Get(section, nameof(DropSettings.MinHeight)).ToDouble(),
-                    MaxHeight = iniParser.Get(section, nameof(DropSettings.MaxHeight)).ToDouble(),
-                    MinRadius = iniParser.Get(section, nameof(DropSettings.MinRadius)).ToDouble(),
-                    MaxRadius = iniParser.Get(section, nameof(DropSettings.MaxRadius)).ToDouble(),
-                    SpawnTriggerInterval = iniParser.Get(section, nameof(DropSettings.SpawnTriggerInterval)).ToInt32(),
-                    EnableAirtightAndOxygen = iniParser.Get(section, nameof(DropSettings.EnableAirtightAndOxygen)).ToBoolean(),
-                    Enabled = iniParser.Get(section, nameof(DropSettings.Enabled)).ToBoolean(),
-                    StackItems = iniParser.Get(section, nameof(DropSettings.StackItems)).ToBoolean(),
-                    SpawnInsideInventory = iniParser.Get(section, nameof(DropSettings.SpawnInsideInventory)).ToBoolean()
-                };
+                    throw new Exception($"Config error: {result.ToString()}");
+                }
 
-                dropSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.ItemTypes)).ToString().Split(','));
-                dropSettings.ItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.ItemIds)).ToString().Split(','));
-                dropSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemTypes)).ToString().Split(','));
-                dropSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemIds)).ToString().Split(','));
-                dropSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
+                List<string> sections = new List<string>();
+                iniParser.GetSections(sections);
 
-                settings.BlockDropSettings.Add(dropSettings);
+                foreach (var section in sections)
+                {
+                    if (section == "Config")
+                        continue;
+
+                    var dropSettings = new DropSettings
+                    {
+                        BlockId = section,
+                        BlockType = iniParser.Get(section, nameof(DropSettings.BlockType)).ToString(),
+                        MinAmount = iniParser.Get(section, nameof(DropSettings.MinAmount)).ToInt32(),
+                        MaxAmount = iniParser.Get(section, nameof(DropSettings.MaxAmount)).ToInt32(),
+                        UseWeightedDrops = iniParser.Get(section, nameof(DropSettings.UseWeightedDrops)).ToBoolean(),
+                        DamageAmount = (float)iniParser.Get(section, nameof(DropSettings.DamageAmount)).ToDouble(),
+                        MinHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MinHealthPercentage)).ToDouble(),
+                        MaxHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MaxHealthPercentage)).ToDouble(),
+                        MinHeight = iniParser.Get(section, nameof(DropSettings.MinHeight)).ToDouble(),
+                        MaxHeight = iniParser.Get(section, nameof(DropSettings.MaxHeight)).ToDouble(),
+                        MinRadius = iniParser.Get(section, nameof(DropSettings.MinRadius)).ToDouble(),
+                        MaxRadius = iniParser.Get(section, nameof(DropSettings.MaxRadius)).ToDouble(),
+                        SpawnTriggerInterval = iniParser.Get(section, nameof(DropSettings.SpawnTriggerInterval)).ToInt32(),
+                        EnableAirtightAndOxygen = iniParser.Get(section, nameof(DropSettings.EnableAirtightAndOxygen)).ToBoolean(),
+                        Enabled = iniParser.Get(section, nameof(DropSettings.Enabled)).ToBoolean(),
+                        StackItems = iniParser.Get(section, nameof(DropSettings.StackItems)).ToBoolean(),
+                        SpawnInsideInventory = iniParser.Get(section, nameof(DropSettings.SpawnInsideInventory)).ToBoolean()
+                    };
+
+                    dropSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.ItemTypes)).ToString().Split(','));
+                    dropSettings.ItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.ItemIds)).ToString().Split(','));
+                    dropSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemTypes)).ToString().Split(','));
+                    dropSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemIds)).ToString().Split(','));
+                    dropSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
+
+                    settings.BlockDropSettings.Add(dropSettings);
+
+                    // Log loaded settings
+                    LogError($"Loaded settings for {section}: " +
+                             $"BlockType={dropSettings.BlockType}, MinAmount={dropSettings.MinAmount}, MaxAmount={dropSettings.MaxAmount}, " +
+                             $"DamageAmount={dropSettings.DamageAmount}, MinHealthPercentage={dropSettings.MinHealthPercentage}, " +
+                             $"MaxHealthPercentage={dropSettings.MaxHealthPercentage}, MinHeight={dropSettings.MinHeight}, " +
+                             $"MaxHeight={dropSettings.MaxHeight}, MinRadius={dropSettings.MinRadius}, MaxRadius={dropSettings.MaxRadius}, " +
+                             $"SpawnTriggerInterval={dropSettings.SpawnTriggerInterval}, EnableAirtightAndOxygen={dropSettings.EnableAirtightAndOxygen}, " +
+                             $"Enabled={dropSettings.Enabled}, StackItems={dropSettings.StackItems}, SpawnInsideInventory={dropSettings.SpawnInsideInventory}, " +
+                             $"ItemTypes={string.Join(",", dropSettings.ItemTypes)}, ItemIds={string.Join(",", dropSettings.ItemIds)}, " +
+                             $"RequiredItemTypes={string.Join(",", dropSettings.RequiredItemTypes)}, RequiredItemIds={string.Join(",", dropSettings.RequiredItemIds)}, " +
+                             $"RequiredItemAmounts={string.Join(",", dropSettings.RequiredItemAmounts)}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MyLog.Default.WriteLine($"Error loading CustomItemSpawner config: {ex.Message}");
+                //MyAPIGateway.Utilities.ShowMessage("CustomItemSpawner.ini", $"Error loading CustomItemSpawner config: {ex.Message}");
+                LogError($"Error loading CustomItemSpawner config: {ex.Message}");
             }
         }
 
-        private void LoadCustomItemSpawner(string fileContent, string fileName)
-        {
-            // Parse and load custom item spawner configuration settings from fileContent
-            MyIni iniParser = new MyIni();
-            MyIniParseResult result;
-            if (!iniParser.TryParse(fileContent, out result))
-            {
-                throw new Exception($"Config error in file {fileName}: {result.ToString()}");
-            }
-
-            // Load specific item spawner settings
-            List<string> sections = new List<string>();
-            iniParser.GetSections(sections);
-
-            foreach (var section in sections)
-            {
-                if (section == "Config")
-                    continue;
-
-                var dropSettings = new DropSettings
-                {
-                    BlockId = section,
-                    BlockType = iniParser.Get(section, nameof(DropSettings.BlockType)).ToString(),
-                    MinAmount = iniParser.Get(section, nameof(DropSettings.MinAmount)).ToInt32(),
-                    MaxAmount = iniParser.Get(section, nameof(DropSettings.MaxAmount)).ToInt32(),
-                    DamageAmount = (float)iniParser.Get(section, nameof(DropSettings.DamageAmount)).ToDouble(),
-                    MinHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MinHealthPercentage)).ToDouble(),
-                    MaxHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MaxHealthPercentage)).ToDouble(),
-                    MinHeight = iniParser.Get(section, nameof(DropSettings.MinHeight)).ToDouble(),
-                    MaxHeight = iniParser.Get(section, nameof(DropSettings.MaxHeight)).ToDouble(),
-                    MinRadius = iniParser.Get(section, nameof(DropSettings.MinRadius)).ToDouble(),
-                    MaxRadius = iniParser.Get(section, nameof(DropSettings.MaxRadius)).ToDouble(),
-                    SpawnTriggerInterval = iniParser.Get(section, nameof(DropSettings.SpawnTriggerInterval)).ToInt32(),
-                    EnableAirtightAndOxygen = iniParser.Get(section, nameof(DropSettings.EnableAirtightAndOxygen)).ToBoolean(),
-                    Enabled = iniParser.Get(section, nameof(DropSettings.Enabled)).ToBoolean(),
-                    StackItems = iniParser.Get(section, nameof(DropSettings.StackItems)).ToBoolean(),
-                    SpawnInsideInventory = iniParser.Get(section, nameof(DropSettings.SpawnInsideInventory)).ToBoolean()
-                };
-
-                dropSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.ItemTypes)).ToString().Split(','));
-                dropSettings.ItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.ItemIds)).ToString().Split(','));
-                dropSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemTypes)).ToString().Split(','));
-                dropSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemIds)).ToString().Split(','));
-                dropSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
-
-                settings.BlockDropSettings.Add(dropSettings);
-            }
-        }
 
         private void LogError(string message)
         {
+            if (!settings.EnableLogging)
+                return;
+
             string logFilePath = "CustomItemSpawner.log";
             string existingContent = "";
 
@@ -741,12 +751,14 @@ RequiredItemAmounts=0
         private const string IniSection = "Config";
 
         public int BaseUpdateInterval { get; set; } = 300;
+        public bool EnableLogging { get; set; } = true; // Default value is true
         public List<DropSettings> BlockDropSettings { get; set; } = new List<DropSettings>();
 
         public void Load()
         {
             MyIni iniParser = new MyIni();
 
+            // Load global settings
             if (MyAPIGateway.Utilities.FileExistsInWorldStorage(GlobalFileName, typeof(CustomItemSpawnerSettings)))
             {
                 using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(GlobalFileName, typeof(CustomItemSpawnerSettings)))
@@ -759,6 +771,7 @@ RequiredItemAmounts=0
 
                     // Load base settings
                     BaseUpdateInterval = iniParser.Get(IniSection, nameof(BaseUpdateInterval)).ToInt32(BaseUpdateInterval);
+                    EnableLogging = iniParser.Get(IniSection, nameof(EnableLogging)).ToBoolean(EnableLogging);
                 }
             }
             else
@@ -766,6 +779,7 @@ RequiredItemAmounts=0
                 throw new Exception("GlobalConfig.ini not found.");
             }
 
+            // Load block drop settings from CustomItemSpawner.ini
             if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ItemSpawnerFileName, typeof(CustomItemSpawnerSettings)))
             {
                 using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(ItemSpawnerFileName, typeof(CustomItemSpawnerSettings)))
@@ -776,88 +790,76 @@ RequiredItemAmounts=0
                     if (!iniParser.TryParse(text, out result))
                         throw new Exception($"Config error: {result.ToString()}");
 
-                    // Load block drop settings
-                    List<string> sections = new List<string>();
-                    iniParser.GetSections(sections);
-
-                    foreach (var section in sections)
-                    {
-                        if (section == IniSection)
-                            continue;
-
-                        var dropSettings = new DropSettings
-                        {
-                            BlockId = section,
-                            BlockType = iniParser.Get(section, nameof(DropSettings.BlockType)).ToString(),
-                            MinAmount = iniParser.Get(section, nameof(DropSettings.MinAmount)).ToInt32(),
-                            MaxAmount = iniParser.Get(section, nameof(DropSettings.MaxAmount)).ToInt32(),
-                            DamageAmount = (float)iniParser.Get(section, nameof(DropSettings.DamageAmount)).ToDouble(),
-                            MinHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MinHealthPercentage)).ToDouble(),
-                            MaxHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MaxHealthPercentage)).ToDouble(),
-                            MinHeight = iniParser.Get(section, nameof(DropSettings.MinHeight)).ToDouble(),
-                            MaxHeight = iniParser.Get(section, nameof(DropSettings.MaxHeight)).ToDouble(),
-                            MinRadius = iniParser.Get(section, nameof(DropSettings.MinRadius)).ToDouble(),
-                            MaxRadius = iniParser.Get(section, nameof(DropSettings.MaxRadius)).ToDouble(),
-                            SpawnTriggerInterval = iniParser.Get(section, nameof(DropSettings.SpawnTriggerInterval)).ToInt32(),
-                            EnableAirtightAndOxygen = iniParser.Get(section, nameof(DropSettings.EnableAirtightAndOxygen)).ToBoolean(),
-                            Enabled = iniParser.Get(section, nameof(DropSettings.Enabled)).ToBoolean(),
-                            StackItems = iniParser.Get(section, nameof(DropSettings.StackItems)).ToBoolean(),
-                            SpawnInsideInventory = iniParser.Get(section, nameof(DropSettings.SpawnInsideInventory)).ToBoolean()
-                        };
-
-                        dropSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.ItemTypes)).ToString().Split(','));
-                        dropSettings.ItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.ItemIds)).ToString().Split(','));
-                        dropSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemTypes)).ToString().Split(','));
-                        dropSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemIds)).ToString().Split(','));
-                        dropSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
-
-                        BlockDropSettings.Add(dropSettings);
-                    }
+                    LoadBlockDropSettings(iniParser);
                 }
             }
             else
             {
                 throw new Exception("CustomItemSpawner.ini not found.");
             }
-        }
 
-        public void Save()
-        {
-            MyIni iniParser = new MyIni();
-
-            // Save base settings
-            iniParser.Set(IniSection, nameof(BaseUpdateInterval), BaseUpdateInterval);
-
-            // Save block drop settings
-            foreach (var dropSetting in BlockDropSettings)
+            // Load block drop settings from _CIS.ini files
+            foreach (var modItem in MyAPIGateway.Session.Mods)
             {
-                var section = dropSetting.BlockId;
-                iniParser.Set(section, nameof(DropSettings.BlockType), dropSetting.BlockType);
-                iniParser.Set(section, nameof(DropSettings.ItemTypes), string.Join(",", dropSetting.ItemTypes));
-                iniParser.Set(section, nameof(DropSettings.ItemIds), string.Join(",", dropSetting.ItemIds));
-                iniParser.Set(section, nameof(DropSettings.MinAmount), dropSetting.MinAmount);
-                iniParser.Set(section, nameof(DropSettings.MaxAmount), dropSetting.MaxAmount);
-                iniParser.Set(section, nameof(DropSettings.DamageAmount), dropSetting.DamageAmount);
-                iniParser.Set(section, nameof(DropSettings.MinHeight), dropSetting.MinHeight);
-                iniParser.Set(section, nameof(DropSettings.MaxHeight), dropSetting.MaxHeight);
-                iniParser.Set(section, nameof(DropSettings.MinRadius), dropSetting.MinRadius);
-                iniParser.Set(section, nameof(DropSettings.MaxRadius), dropSetting.MaxRadius);
-                iniParser.Set(section, nameof(DropSettings.SpawnTriggerInterval), dropSetting.SpawnTriggerInterval);
-                iniParser.Set(section, nameof(DropSettings.EnableAirtightAndOxygen), dropSetting.EnableAirtightAndOxygen);
-                iniParser.Set(section, nameof(DropSettings.Enabled), dropSetting.Enabled);
-                iniParser.Set(section, nameof(DropSettings.StackItems), dropSetting.StackItems);
-                iniParser.Set(section, nameof(DropSettings.SpawnInsideInventory), dropSetting.SpawnInsideInventory);
-                iniParser.Set(section, nameof(DropSettings.RequiredItemTypes), string.Join(",", dropSetting.RequiredItemTypes));
-                iniParser.Set(section, nameof(DropSettings.RequiredItemIds), string.Join(",", dropSetting.RequiredItemIds));
-                iniParser.Set(section, nameof(DropSettings.RequiredItemAmounts), string.Join(",", dropSetting.RequiredItemAmounts));
-
-                using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(ItemSpawnerFileName, typeof(CustomItemSpawnerSettings)))
+                string cisFileName = $"{modItem.PublishedFileId}_CIS.ini";
+                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(cisFileName, typeof(CustomItemSpawnerSettings)))
                 {
-                    file.Write(iniParser.ToString());
+                    using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(cisFileName, typeof(CustomItemSpawnerSettings)))
+                    {
+                        string text = file.ReadToEnd();
+
+                        MyIniParseResult result;
+                        if (!iniParser.TryParse(text, out result))
+                            throw new Exception($"Config error in {cisFileName}: {result.ToString()}");
+
+                        LoadBlockDropSettings(iniParser);
+                    }
                 }
             }
         }
+
+        private void LoadBlockDropSettings(MyIni iniParser)
+        {
+            List<string> sections = new List<string>();
+            iniParser.GetSections(sections);
+
+            foreach (var section in sections)
+            {
+                if (section == IniSection)
+                    continue;
+
+                var dropSettings = new DropSettings
+                {
+                    BlockId = section,
+                    BlockType = iniParser.Get(section, nameof(DropSettings.BlockType)).ToString(),
+                    MinAmount = iniParser.Get(section, nameof(DropSettings.MinAmount)).ToInt32(),
+                    MaxAmount = iniParser.Get(section, nameof(DropSettings.MaxAmount)).ToInt32(),
+                    UseWeightedDrops = iniParser.Get(section, nameof(DropSettings.UseWeightedDrops)).ToBoolean(),
+                    DamageAmount = (float)iniParser.Get(section, nameof(DropSettings.DamageAmount)).ToDouble(),
+                    MinHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MinHealthPercentage)).ToDouble(),
+                    MaxHealthPercentage = (float)iniParser.Get(section, nameof(DropSettings.MaxHealthPercentage)).ToDouble(),
+                    MinHeight = iniParser.Get(section, nameof(DropSettings.MinHeight)).ToDouble(),
+                    MaxHeight = iniParser.Get(section, nameof(DropSettings.MaxHeight)).ToDouble(),
+                    MinRadius = iniParser.Get(section, nameof(DropSettings.MinRadius)).ToDouble(),
+                    MaxRadius = iniParser.Get(section, nameof(DropSettings.MaxRadius)).ToDouble(),
+                    SpawnTriggerInterval = iniParser.Get(section, nameof(DropSettings.SpawnTriggerInterval)).ToInt32(),
+                    EnableAirtightAndOxygen = iniParser.Get(section, nameof(DropSettings.EnableAirtightAndOxygen)).ToBoolean(),
+                    Enabled = iniParser.Get(section, nameof(DropSettings.Enabled)).ToBoolean(),
+                    StackItems = iniParser.Get(section, nameof(DropSettings.StackItems)).ToBoolean(),
+                    SpawnInsideInventory = iniParser.Get(section, nameof(DropSettings.SpawnInsideInventory)).ToBoolean()
+                };
+
+                dropSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.ItemTypes)).ToString().Split(','));
+                dropSettings.ItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.ItemIds)).ToString().Split(','));
+                dropSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemTypes)).ToString().Split(','));
+                dropSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemIds)).ToString().Split(','));
+                dropSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(DropSettings.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
+
+                BlockDropSettings.Add(dropSettings);
+            }
+        }
     }
+
 
     public class DropSettings
     {
@@ -867,6 +869,7 @@ RequiredItemAmounts=0
         public List<string> ItemIds { get; set; } = new List<string>();
         public int MinAmount { get; set; }
         public int MaxAmount { get; set; }
+        public bool UseWeightedDrops { get; set; } // New property
         public float DamageAmount { get; set; }
         public float MinHealthPercentage { get; set; } = 0.1f;
         public float MaxHealthPercentage { get; set; } = 1.0f;
