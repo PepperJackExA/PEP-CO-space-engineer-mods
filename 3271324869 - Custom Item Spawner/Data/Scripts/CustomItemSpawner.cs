@@ -83,6 +83,7 @@ EnableLogging=false
 ; RequiredItemTypes - Comma-separated list of required item types to be present in the block's inventory.
 ; RequiredItemIds - Comma-separated list of required item IDs.
 ; RequiredItemAmounts - Comma-separated list of amounts for each required item.
+; PlayerDistanceCheck -  -1 means always on, 0 means any player online, positive value is max distance in meters
 ;
 ; Example:
 ; [LargeBlockSmallContainer]
@@ -107,6 +108,7 @@ EnableLogging=false
 ; RequiredItemTypes=MyObjectBuilder_Ore,MyObjectBuilder_Ore
 ; RequiredItemIds=Iron,Ice
 ; RequiredItemAmounts=0,0
+; PlayerDistanceCheck=0
 ";
 
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
@@ -201,6 +203,9 @@ EnableLogging=false
         {
             long baseUpdateCycles = totalUpdateTicks / settings.BaseUpdateInterval;
 
+            List<IMyPlayer> players = new List<IMyPlayer>();
+            MyAPIGateway.Players.GetPlayers(players);
+
             foreach (var entity in MyEntities.GetEntities())
             {
                 var grid = entity as IMyCubeGrid;
@@ -214,6 +219,12 @@ EnableLogging=false
                         var blockSettings = GetDropSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
                         if (blockSettings != null && blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block))
                         {
+                            if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck))
+                            {
+                                //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"!IsPlayerInRange(block, players, {blockSettings.PlayerDistanceCheck}))");
+                                continue;
+                            }
+                            //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"IsPlayerInRange(block, players, {blockSettings.PlayerDistanceCheck}))");
                             float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
                             if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
                             {
@@ -232,6 +243,41 @@ EnableLogging=false
                 }
             }
         }
+
+        private bool IsPlayerInRange(IMySlimBlock block, List<IMyPlayer> players, int playerDistanceCheck)
+        {
+            if (playerDistanceCheck == -1)
+            {
+                return true; // Always on if playerDistanceCheck is -1
+            }
+            if (playerDistanceCheck == 0)
+            {
+                return players.Count > 0; // Any player online
+            }
+
+            Vector3D blockPosition = block.FatBlock.GetPosition();
+
+            foreach (var player in players)
+            {
+                if (player.Controller != null && player.Controller.ControlledEntity != null)
+                {
+                    IMyEntity controlledEntity = player.Controller.ControlledEntity.Entity;
+                    if (controlledEntity != null)
+                    {
+                        Vector3D playerPosition = controlledEntity.GetPosition();
+                        double distance = Vector3D.Distance(playerPosition, blockPosition);
+                        if (distance <= playerDistanceCheck)
+                        {
+                            return true; // Player is within the specified max distance
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
+
+
 
         private bool IsValidBlock(string typeId, string subtypeId)
         {
@@ -682,7 +728,8 @@ EnableLogging=false
                         EnableAirtightAndOxygen = iniParser.Get(section, nameof(DropSettings.EnableAirtightAndOxygen)).ToBoolean(),
                         Enabled = iniParser.Get(section, nameof(DropSettings.Enabled)).ToBoolean(),
                         StackItems = iniParser.Get(section, nameof(DropSettings.StackItems)).ToBoolean(),
-                        SpawnInsideInventory = iniParser.Get(section, nameof(DropSettings.SpawnInsideInventory)).ToBoolean()
+                        SpawnInsideInventory = iniParser.Get(section, nameof(DropSettings.SpawnInsideInventory)).ToBoolean(),
+                        PlayerDistanceCheck = iniParser.Get(section, nameof(DropSettings.PlayerDistanceCheck)).ToInt32()
                     };
 
                     dropSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.ItemTypes)).ToString().Split(','));
@@ -701,6 +748,7 @@ EnableLogging=false
                              $"MaxHeight={dropSettings.MaxHeight}, MinRadius={dropSettings.MinRadius}, MaxRadius={dropSettings.MaxRadius}, " +
                              $"SpawnTriggerInterval={dropSettings.SpawnTriggerInterval}, EnableAirtightAndOxygen={dropSettings.EnableAirtightAndOxygen}, " +
                              $"Enabled={dropSettings.Enabled}, StackItems={dropSettings.StackItems}, SpawnInsideInventory={dropSettings.SpawnInsideInventory}, " +
+                             $"PlayerDistanceCheck={dropSettings.PlayerDistanceCheck}, " +
                              $"ItemTypes={string.Join(",", dropSettings.ItemTypes)}, ItemIds={string.Join(",", dropSettings.ItemIds)}, " +
                              $"RequiredItemTypes={string.Join(",", dropSettings.RequiredItemTypes)}, RequiredItemIds={string.Join(",", dropSettings.RequiredItemIds)}, " +
                              $"RequiredItemAmounts={string.Join(",", dropSettings.RequiredItemAmounts)}");
@@ -846,7 +894,8 @@ EnableLogging=false
                     EnableAirtightAndOxygen = iniParser.Get(section, nameof(DropSettings.EnableAirtightAndOxygen)).ToBoolean(),
                     Enabled = iniParser.Get(section, nameof(DropSettings.Enabled)).ToBoolean(),
                     StackItems = iniParser.Get(section, nameof(DropSettings.StackItems)).ToBoolean(),
-                    SpawnInsideInventory = iniParser.Get(section, nameof(DropSettings.SpawnInsideInventory)).ToBoolean()
+                    SpawnInsideInventory = iniParser.Get(section, nameof(DropSettings.SpawnInsideInventory)).ToBoolean(),
+                    PlayerDistanceCheck = iniParser.Get(section, nameof(DropSettings.PlayerDistanceCheck)).ToInt32()
                 };
 
                 dropSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(DropSettings.ItemTypes)).ToString().Split(','));
@@ -867,23 +916,25 @@ EnableLogging=false
         public string BlockType { get; set; }
         public List<string> ItemTypes { get; set; } = new List<string>();
         public List<string> ItemIds { get; set; } = new List<string>();
-        public int MinAmount { get; set; }
-        public int MaxAmount { get; set; }
-        public bool UseWeightedDrops { get; set; } // New property
-        public float DamageAmount { get; set; }
+        public int MinAmount { get; set; } = 1;
+        public int MaxAmount { get; set; } = 1;
+        public bool UseWeightedDrops { get; set; } = false;
+        public float DamageAmount { get; set; } = 0;
         public float MinHealthPercentage { get; set; } = 0.1f;
         public float MaxHealthPercentage { get; set; } = 1.0f;
-        public double MinHeight { get; set; }
-        public double MaxHeight { get; set; }
-        public double MinRadius { get; set; }
-        public double MaxRadius { get; set; }
-        public int SpawnTriggerInterval { get; set; }
-        public bool EnableAirtightAndOxygen { get; set; }
-        public bool Enabled { get; set; }
-        public bool StackItems { get; set; }
-        public bool SpawnInsideInventory { get; set; }
+        public double MinHeight { get; set; } = 1.0;
+        public double MaxHeight { get; set; } = 2.0;
+        public double MinRadius { get; set; } = 0.5;
+        public double MaxRadius { get; set; } = 2;
+        public int SpawnTriggerInterval { get; set; } = 10;
+        public bool EnableAirtightAndOxygen { get; set; } = false;
+        public bool Enabled { get; set; } = true;
+        public bool StackItems { get; set; } = false;
+        public bool SpawnInsideInventory { get; set; } = false;
         public List<string> RequiredItemTypes { get; set; } = new List<string>();
         public List<string> RequiredItemIds { get; set; } = new List<string>();
         public List<int> RequiredItemAmounts { get; set; } = new List<int>();
+        public int PlayerDistanceCheck { get; set; } = 1000;
+        
     }
 }
