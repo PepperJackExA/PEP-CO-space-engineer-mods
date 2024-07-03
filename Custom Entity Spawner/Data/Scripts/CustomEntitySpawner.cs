@@ -4,158 +4,252 @@ using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.ModAPI;
+using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.Utils;
 using VRageMath;
+using System.Linq;
+using static VRage.Game.MyObjectBuilder_Checkpoint;
+using VRage.Game.Entity;
+using VRage.ModAPI;
+using Sandbox.Engine.Utils;
+using VRage.ObjectBuilders;
 
-[MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
-public class BotSpawner : MySessionComponentBase
+
+namespace PEPCO.iSurvival.CustomSpawnerSpawner
 {
-    private static HashSet<string> validBotIds = new HashSet<string>();
-    private static BotSpawnerConfig config;
-    private long totalUpdateTicks = 0;
-
-    public override void LoadData()
+    [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
+    public class CustomEntitySpawner : MySessionComponentBase
     {
-        base.LoadData();
-        Setup();
-        LoadConfig();
-        LoadValidBotIds();
-    }
+        private static HashSet<string> validBotIds = new HashSet<string>();
+        private int updateTickCounter = 0;
+        private long totalUpdateTicks = 0;
+        private bool isLoading = true;
+        private int loadingTickCount = 3;
+        private static readonly Random randomGenerator = new Random();
 
-    public override void UpdateAfterSimulation()
-    {
-        totalUpdateTicks++;
-        DropItemsNearBlocks();
-    }
+        private const string ModDataFile = "CES.ini";
+        private const string WorldStorageFolder = "CustomEntitySpawner";
+        private const string WorldStorageFile = "CES.ini";
 
-    protected override void UnloadData()
-    {
-        base.UnloadData();
-        Unload();
-    }
-
-    public static void Setup()
-    {
-        MyAPIGateway.Utilities.MessageEntered += OnMessageEntered;
-    }
-
-    private static void OnMessageEntered(string messageText, ref bool sendToOthers)
-    {
-        var player = MyAPIGateway.Session.Player;
-
-        if (player == null || !MyAPIGateway.Session.IsUserAdmin(player.SteamUserId))
+        private static readonly Dictionary<string, Type> itemTypeMappings = new Dictionary<string, Type>
         {
-            MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Only admins can use this command.");
-            return;
-        }
+            { "MyObjectBuilder_ConsumableItem", typeof(MyObjectBuilder_ConsumableItem) },
+            { "MyObjectBuilder_Ore", typeof(MyObjectBuilder_Ore) },
+            { "MyObjectBuilder_Ingot", typeof(MyObjectBuilder_Ingot) },
+            { "MyObjectBuilder_Component", typeof(MyObjectBuilder_Component) }
+        };
 
-        if (messageText.StartsWith("/pepco spawn"))
+        public static CustomEntitySpawnerSettings settings = new CustomEntitySpawnerSettings();
+
+        private const string DefaultGlobalIniContent = @"
+; ==============================================
+; HOW TO USE GlobalConfig.ini
+; ==============================================
+";
+
+        private const string DefaultEntitySpawnerIniContent = @"
+; ==============================================
+; HOW TO USE CustomEntitySpawner.ini
+; ==============================================
+";
+
+        public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
         {
-            var parameters = messageText.Split(' ');
-            if (parameters.Length == 3)
+            if (MyAPIGateway.Session.IsServer)
             {
-                string botId = parameters[2];
-                if (validBotIds.Contains(botId))
+                try
                 {
-                    SpawnBot(botId);
+                    EnsureDefaultIniFilesExist();
+                    CopyAllCESFilesToWorldStorage();
+                    LoadAllFilesFromWorldStorage();
+                    settings.Load();
+                    InitializeBotSpawnerConfig();
+                    LoadValidBotIds();
+                    MyAPIGateway.Utilities.MessageEntered += OnMessageEntered;
                 }
-                else
+                catch (Exception ex)
                 {
-                    MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Invalid bot ID: {botId}");
+                    MyAPIGateway.Utilities.ShowMessage("Custom Entity Spawner", $"Initialization error: {ex.Message}");
+                    LogError($"Initialization error: {ex.Message}");
                 }
             }
         }
-        else if (messageText.Equals("/pepco listBots"))
+
+        private void EnsureDefaultIniFilesExist()
         {
-            ListValidBotIds();
-        }
-    }
-
-    public static void SpawnBot(string botId)
-    {
-        Random random = new Random();
-        double randomHeight = random.NextDouble() * (config.MaxHeight - config.MinHeight) + config.MinHeight;
-        double randomRadius = random.NextDouble() * (config.MaxRadius - config.MinRadius) + config.MinRadius;
-        double angle = random.NextDouble() * Math.PI * 2;
-
-        Vector3D offset = new Vector3D(
-            randomRadius * Math.Cos(angle),
-            randomHeight,
-            randomRadius * Math.Sin(angle)
-        );
-
-        Vector3D spawnPosition = MyAPIGateway.Session.Player.GetPosition() + offset;
-        MyVisualScriptLogicProvider.SpawnBot(botId, spawnPosition);
-        MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Spawned bot: {botId} at {spawnPosition}");
-    }
-
-    private static void LoadValidBotIds()
-    {
-        var botDefinitions = MyDefinitionManager.Static.GetBotDefinitions();
-        foreach (var botDefinition in botDefinitions)
-        {
-            validBotIds.Add(botDefinition.Id.SubtypeName);
-        }
-    }
-
-    private static void ListValidBotIds()
-    {
-        MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Valid bot IDs:");
-        foreach (var botId in validBotIds)
-        {
-            MyAPIGateway.Utilities.ShowMessage("BotSpawner", botId);
-        }
-    }
-
-    public static void Unload()
-    {
-        MyAPIGateway.Utilities.MessageEntered -= OnMessageEntered;
-    }
-
-    private static void LoadConfig()
-    {
-        config = BotSpawnerConfig.Load();
-        config.Save(); // Ensure a default config file is written
-    }
-
-    private void DropItemsNearBlocks()
-    {
-        long baseUpdateCycles = totalUpdateTicks / config.SpawnTriggerInterval;
-
-        List<IMyPlayer> players = new List<IMyPlayer>();
-        MyAPIGateway.Players.GetPlayers(players);
-
-        foreach (var entity in MyEntities.GetEntities())
-        {
-            var grid = entity as IMyCubeGrid;
-            if (grid != null)
+            if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(CustomEntitySpawnerSettings.GlobalFileName, typeof(CustomEntitySpawnerSettings)))
             {
-                var blocks = new List<IMySlimBlock>();
-                grid.GetBlocks(blocks, b => b.FatBlock != null && IsValidBlock(b.FatBlock.BlockDefinition.TypeIdString, b.FatBlock.BlockDefinition.SubtypeId));
-
-                foreach (var block in blocks)
+                using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(CustomEntitySpawnerSettings.GlobalFileName, typeof(CustomEntitySpawnerSettings)))
                 {
-                    var blockSettings = GetDropSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
-                    if (blockSettings != null && blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block))
-                    {
-                        if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck))
-                        {
-                            continue;
-                        }
+                    writer.Write(DefaultGlobalIniContent);
+                }
+            }
 
-                        float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
-                        if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
+            if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(CustomEntitySpawnerSettings.EntitySpawnerFileName, typeof(CustomEntitySpawnerSettings)))
+            {
+                using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(CustomEntitySpawnerSettings.EntitySpawnerFileName, typeof(CustomEntitySpawnerSettings)))
+                {
+                    writer.Write(DefaultEntitySpawnerIniContent);
+                }
+            }
+        }
+
+        protected override void UnloadData()
+        {
+            MyAPIGateway.Utilities.MessageEntered -= OnMessageEntered;
+        }
+
+        private void OnMessageEntered(string messageText, ref bool sendToOthers)
+        {
+            var player = MyAPIGateway.Session.Player;
+
+            if (player == null || !MyAPIGateway.Session.IsUserAdmin(player.SteamUserId))
+            {
+                MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Only admins can use this command.");
+                return;
+            }
+
+            if (messageText.StartsWith("/pepco spawn"))
+            {
+                var parameters = messageText.Split(' ');
+                if (parameters.Length == 3)
+                {
+                    string botId = parameters[2];
+                    if (validBotIds.Contains(botId))
+                    {
+
+                        Vector3D playerPosition = MyAPIGateway.Session.Player.GetPosition();
+
+
+                        Vector3D forwardDirection = MyAPIGateway.Session.Player.Character.WorldMatrix.Forward;
+
+
+                        Vector3D offset = forwardDirection * 10 * 2.5;
+
+
+                        Vector3D spawnPosition = playerPosition + offset;
+
+
+                        MyVisualScriptLogicProvider.SpawnBot(botId, spawnPosition);
+
+
+                        MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Spawned bot: {botId} at {spawnPosition}");
+
+                    }
+                    else
+                    {
+                        MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Invalid bot ID: {botId}");
+                    }
+                }
+            }
+            else if (messageText.Equals("/pepco listBots"))
+            {
+                ListValidBotIds();
+            }
+            else if (messageText.Equals("/pepco CES reload", StringComparison.OrdinalIgnoreCase))
+            {
+                if (MyAPIGateway.Session.IsServer)
+                {
+                    try
+                    {
+                        ReloadSettings();
+                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Settings reloaded successfully.");
+                    }
+                    catch (Exception ex)
+                    {
+                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Error reloading settings: {ex.Message}");
+                        LogError($"Error reloading settings: {ex.Message}");
+                    }
+                }
+                sendToOthers = false;
+            }
+        }
+
+        public override void UpdateBeforeSimulation()
+        {
+            MyAPIGateway.Utilities.ShowMessage("PEPCO", $"UpdateBeforeSimulation");
+            if (isLoading && loadingTickCount-- > 0)
+                return;
+
+            isLoading = false;
+            totalUpdateTicks++;
+
+            if (++updateTickCounter >= settings.BaseUpdateInterval)
+            {
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", $"updateTickCounter >= settings.BaseUpdateInterval");
+                updateTickCounter = 0;
+                try
+                {
+                    MyAPIGateway.Utilities.ShowMessage("PEPCO", $"UpdateBeforeSimulations:Try SpawnEntitiesNearBlocks");
+                    SpawnEntitiesNearBlocks();
+                }
+                catch (Exception ex)
+                {
+                    LogError($"Update error: {ex.Message}");
+                }
+            }
+        }
+
+        private static void LoadValidBotIds()
+        {
+            var botDefinitions = MyDefinitionManager.Static.GetBotDefinitions();
+            foreach (var botDefinition in botDefinitions)
+            {
+                validBotIds.Add(botDefinition.Id.SubtypeName);
+            }
+        }
+
+        private static void ListValidBotIds()
+        {
+            MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Valid bot IDs:");
+            foreach (var botId in validBotIds)
+            {
+                MyAPIGateway.Utilities.ShowMessage("BotSpawner", botId);
+            }
+        }
+
+        private void SpawnEntitiesNearBlocks()
+        {
+            long baseUpdateCycles = totalUpdateTicks / settings.BaseUpdateInterval;
+            MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Start SpawnEntitiesNearBlocks");
+            List<IMyPlayer> players = new List<IMyPlayer>();
+            MyAPIGateway.Players.GetPlayers(players);
+
+            foreach (var entity in MyEntities.GetEntities())
+            {
+                var grid = entity as IMyCubeGrid;
+                if (grid != null)
+                {
+                    var blocks = new List<IMySlimBlock>();
+                    grid.GetBlocks(blocks, b => b.FatBlock != null && IsValidBlock(b.FatBlock.BlockDefinition.TypeIdString, b.FatBlock.BlockDefinition.SubtypeId));
+
+                    foreach (var block in blocks)
+                    {
+                        var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
+                        if (blockSettings != null && blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block))
                         {
-                            if (CheckInventoryForRequiredItems(block, blockSettings))
+                            if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck))
                             {
-                                int dropAmount = DropItems(block, blockSettings);
-                                if (dropAmount > 0)
+                                continue;
+                            }
+
+                            float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
+                            if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
+                            {
+                                if (CheckInventoryForRequiredItems(block, blockSettings))
                                 {
-                                    RemoveItemsFromInventory(block, blockSettings, dropAmount);
-                                    block.DoDamage(blockSettings.DamageAmount * dropAmount, MyDamageType.Grind, true);
+                                    MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Try spawn at {block}");
+                                    int spawnAmount = SpawnEntities(block, blockSettings);
+                                    if (spawnAmount > 0)
+                                    {
+                                        RemoveItemsFromInventory(block, blockSettings, spawnAmount);
+                                        block.DoDamage(blockSettings.DamageAmount * spawnAmount, MyDamageType.Grind, true);
+                                    }
                                 }
                             }
                         }
@@ -163,117 +257,657 @@ public class BotSpawner : MySessionComponentBase
                 }
             }
         }
-    }
 
-    private static bool IsValidBlock(string typeIdString, string subtypeId)
-    {
-        // Implement your validation logic for blocks here
-        return true;
-    }
-
-    private static bool IsEnvironmentSuitable(IMyCubeGrid grid, IMySlimBlock block)
-    {
-        // Implement your logic to check if the environment is suitable for spawning
-        return true;
-    }
-
-    private static bool IsPlayerInRange(IMySlimBlock block, List<IMyPlayer> players, int distance)
-    {
-        foreach (var player in players)
+        private bool IsPlayerInRange(IMySlimBlock block, List<IMyPlayer> players, int playerDistanceCheck)
         {
-            if (Vector3D.Distance(player.GetPosition(), block.FatBlock.GetPosition()) <= distance)
+            if (playerDistanceCheck == -1)
             {
+                return true; // Always on if playerDistanceCheck is -1
+            }
+            if (playerDistanceCheck == 0)
+            {
+                return players.Count > 0; // Any player online
+            }
+
+            Vector3D blockPosition = block.FatBlock.GetPosition();
+
+            foreach (var player in players)
+            {
+                if (player.Controller != null && player.Controller.ControlledEntity != null)
+                {
+                    IMyEntity controlledEntity = player.Controller.ControlledEntity.Entity;
+                    if (controlledEntity != null)
+                    {
+                        Vector3D playerPosition = controlledEntity.GetPosition();
+                        double distance = Vector3D.Distance(playerPosition, blockPosition);
+                        if (distance <= playerDistanceCheck)
+                        {
+                            return true; // Player is within the specified max distance
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
+        private bool IsValidBlock(string typeId, string subtypeId)
+        {
+            return settings.BlockDropSettings.Exists(s => s.BlockType == typeId && s.BlockId == subtypeId);
+        }
+
+        private BotSpawnerConfig GetSpawnSettingsForBlock(string typeId, string subtypeId)
+        {
+            return settings.BlockDropSettings.Find(s => s.BlockType == typeId && s.BlockId == subtypeId);
+        }
+
+        private bool IsEnvironmentSuitable(IMyCubeGrid grid, IMySlimBlock block)
+        {
+            var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
+            if (blockSettings == null || !blockSettings.EnableAirtightAndOxygen)
                 return true;
+
+            bool isAirtight = grid.IsRoomAtPositionAirtight(block.FatBlock.Position);
+            double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(block.FatBlock.GetPosition());
+
+            return isAirtight || oxygenLevel > 0.5;
+        }
+        private bool CheckInventoryForRequiredItems(IMySlimBlock block, BotSpawnerConfig blockSettings)
+        {
+            var inventory = block.FatBlock.GetInventory() as IMyInventory;
+            if (inventory == null)
+            {
+                //LogError($"Block {block.FatBlock.BlockDefinition.SubtypeId} has no inventory. Skipping required item check.");
+                return true; // Skip check if no inventory
+            }
+
+            for (int i = 0; i < blockSettings.RequiredItemTypes.Count; i++)
+            {
+                var requiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
+                var itemAmount = (VRage.MyFixedPoint)blockSettings.RequiredItemAmounts[i];
+
+                if (!inventory.ContainItems(itemAmount, requiredItemType))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        private void RemoveItemsFromInventory(IMySlimBlock block, BotSpawnerConfig blockSettings, int dropAmount)
+        {
+            var inventory = block.FatBlock.GetInventory() as IMyInventory;
+            if (inventory == null)
+                return;
+
+            for (int i = 0; i < blockSettings.RequiredItemTypes.Count; i++)
+            {
+                var requiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
+                var totalAmountToRemove = (VRage.MyFixedPoint)(blockSettings.RequiredItemAmounts[i] * dropAmount);
+
+                inventory.RemoveItemsOfType(totalAmountToRemove, requiredItemType);
             }
         }
-        return false;
-    }
+        private int SpawnEntities(IMySlimBlock block, BotSpawnerConfig settings)
+        {
+            // Calculate the number of items to drop based on MinAmount and MaxAmount
 
-    private static bool CheckInventoryForRequiredItems(IMySlimBlock block, BotSpawnerConfig blockSettings)
-    {
-        // Implement your logic to check the inventory for required items
-        return true;
-    }
+            MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Start SpawnEntities");
+            int spawnAmount;
+            if (settings.UseWeightedDrops)
+            {
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"UseWeightedDrops");
+                spawnAmount = GetWeightedRandomNumber(settings.MinAmount, GenerateProbabilities(settings.MinAmount, settings.MaxAmount));
 
-    private static int DropItems(IMySlimBlock block, BotSpawnerConfig blockSettings)
-    {
-        // Implement your logic to drop items from the block
-        return 0;
-    }
+            }
+            else
+            {
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Didn't UseWeightedDrops");
+                spawnAmount = randomGenerator.Next(settings.MinAmount, settings.MaxAmount + 1);
+            }
 
-    private static void RemoveItemsFromInventory(IMySlimBlock block, BotSpawnerConfig blockSettings, int dropAmount)
-    {
-        // Implement your logic to remove items from the block's inventory
-    }
+            for (int i = 0; i < settings.EntityID.Count; i++)
+            {
+                string EntityID = settings.EntityID[i];
+                {
 
-    private static BotSpawnerConfig GetDropSettingsForBlock(string typeIdString, string subtypeId)
-    {
-        // Implement your logic to get the drop settings for the block
-        return config; // Use config for now as a placeholder
-    }
-}
+                    for (int j = 0; j < spawnAmount; j++)
+                    {
+                        Vector3D spawnPosition = CalculateDropPosition(block, settings);
+                        Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
+                            (float)(randomGenerator.NextDouble() * Math.PI * 2),
+                            (float)(randomGenerator.NextDouble() * Math.PI * 2),
+                            (float)(randomGenerator.NextDouble() * Math.PI * 2)
+                        );
+                        MyVisualScriptLogicProvider.SpawnBot(EntityID, spawnPosition);
+                        MyAPIGateway.Utilities.ShowMessage("PEPCO", $"{EntityID} {spawnPosition}");
+                        //  MyFloatingObjects.Spawn(
+                        //          new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, dropItem),
+                        //          dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
+                        //           MyVisualScriptLogicProvider.SpawnBot(EntityID, dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up);
+                        //    MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Spawned bot: {} at {dropPosition}");
 
-public class BotSpawnerConfig
-{
-    private const string ConfigFileName = "BotSpawnerConfig.xml";
-    public string BlockId { get; set; }
-    public string BlockType { get; set; }
-    public List<string> EntityID { get; set; } = new List<string>();
-    public int MinAmount { get; set; } = 1;
-    public int MaxAmount { get; set; } = 1;
-    public bool UseWeightedDrops { get; set; } = false;
-    public float DamageAmount { get; set; } = 0;
-    public float MinHealthPercentage { get; set; } = 0.1f;
-    public float MaxHealthPercentage { get; set; } = 1.0f;
-    public double MinHeight { get; set; } = 1.0;
-    public double MaxHeight { get; set; } = 2.0;
-    public double MinRadius { get; set; } = 0.5;
-    public double MaxRadius { get; set; } = 2;
-    public int SpawnTriggerInterval { get; set; } = 10;
-    public bool EnableAirtightAndOxygen { get; set; } = false;
-    public bool Enabled { get; set; } = true;
-    public bool StackItems { get; set; } = false;
-    public bool SpawnInsideInventory { get; set; } = false;
-    public List<string> RequiredItemTypes { get; set; } = new List<string>();
-    public List<string> RequiredItemIds { get; set; } = new List<string>();
-    public List<int> RequiredItemAmounts { get; set; } = new List<int>();
-    public int PlayerDistanceCheck { get; set; } = 1000;
+                        //            public static void SpawnBot(string EntityID, BotSpawnerConfig blockSettings)
+                        //    {
+                        //       Random random = new Random();
+                        //      double randomHeight = random.NextDouble() * (blockSettings.MaxHeight - blockSettings.MinHeight) + blockSettings.MinHeight;
+                        //     double randomRadius = random.NextDouble() * (blockSettings.MaxRadius - blockSettings.MinRadius) + blockSettings.MinRadius;
+                        //      double angle = random.NextDouble() * Math.PI * 2;
+                        //      Vector3D offset = new Vector3D(
+                        //      randomRadius * Math.Cos(angle),
+                        //      randomHeight,
+                        //         randomRadius * Math.Sin(angle)
+                        //     );
+                        //
+                        //     Vector3D spawnPosition = MyAPIGateway.Session.Player.GetPosition() + offset;
+                        //     MyVisualScriptLogicProvider.SpawnBot(EntityID, spawnPosition);
+                        //     MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Spawned bot: {EntityID} at {spawnPosition}");
+                        // }
+                        //      );
 
-    public static BotSpawnerConfig Load()
-    {
-        if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ConfigFileName, typeof(BotSpawnerConfig)))
+                    }
+                }
+            }
+
+            return spawnAmount;
+        }
+        private Vector3D CalculateDropPosition(IMySlimBlock block, BotSpawnerConfig blockSettings)
+        {
+            double heightOffset = randomGenerator.NextDouble() * (blockSettings.MaxHeight - blockSettings.MinHeight) + blockSettings.MinHeight;
+            double radius = randomGenerator.NextDouble() * (blockSettings.MaxRadius - blockSettings.MinRadius) + blockSettings.MinRadius;
+            double angle = randomGenerator.NextDouble() * Math.PI * 2;
+
+            double xOffset = radius * Math.Cos(angle);
+            double yOffset = radius * Math.Sin(angle);
+
+            return block.FatBlock.GetPosition() +
+                   (block.FatBlock.WorldMatrix.Up * heightOffset) +
+                   (block.FatBlock.WorldMatrix.Right * xOffset) +
+                   (block.FatBlock.WorldMatrix.Forward * yOffset);
+        }
+
+        private List<int> GenerateProbabilities(int minAmount, int maxAmount)
+        {
+            int range = maxAmount - minAmount + 1;
+            int middle = (range + 1) / 2;
+            var probabilities = new List<int>();
+
+            for (int i = 1; i <= range; i++)
+            {
+                int weight = i <= middle ? i : range - i + 1;
+                probabilities.Add(weight);
+            }
+            return probabilities;
+        }
+
+        private int GetWeightedRandomNumber(int minAmount, List<int> probabilities)
+        {
+            int totalWeight = probabilities.Sum();
+            int randomValue = randomGenerator.Next(1, totalWeight + 1);
+            int cumulativeWeight = 0;
+
+            for (int i = 0; i < probabilities.Count; i++)
+            {
+                cumulativeWeight += probabilities[i];
+                if (randomValue <= cumulativeWeight)
+                    return minAmount + i;
+            }
+            return minAmount; // In case something goes wrong, return the minimum amount
+        }
+        private void InitializeBotSpawnerConfig()
+        {
+            // Clear existing drop settings
+
+            settings.BlockDropSettings.Clear();
+
+            // Re-load settings from the loaded configuration
+            settings.Load();
+
+            // Log initialized settings
+            foreach (var BotSpawnerConfig in settings.BlockDropSettings)
+            {
+                LogError($"Initialized settings for {BotSpawnerConfig.BlockId}: " +
+                         $"BlockType={BotSpawnerConfig.BlockType}, MinAmount={BotSpawnerConfig.MinAmount}, MaxAmount={BotSpawnerConfig.MaxAmount}, " +
+                         $"DamageAmount={BotSpawnerConfig.DamageAmount}, MinHealthPercentage={BotSpawnerConfig.MinHealthPercentage}, " +
+                         $"MaxHealthPercentage={BotSpawnerConfig.MaxHealthPercentage}, MinHeight={BotSpawnerConfig.MinHeight}, " +
+                         $"MaxHeight={BotSpawnerConfig.MaxHeight}, MinRadius={BotSpawnerConfig.MinRadius}, MaxRadius={BotSpawnerConfig.MaxRadius}, " +
+                         $"SpawnTriggerInterval={BotSpawnerConfig.SpawnTriggerInterval}, EnableAirtightAndOxygen={BotSpawnerConfig.EnableAirtightAndOxygen}, " +
+                         $"Enabled={BotSpawnerConfig.Enabled}, " +
+                         $"EntityID={string.Join(",", BotSpawnerConfig.EntityID)}, " +
+                         $"RequiredItemTypes={string.Join(",", BotSpawnerConfig.RequiredItemTypes)}, RequiredItemIds={string.Join(",", BotSpawnerConfig.RequiredItemIds)}, " +
+                         $"RequiredItemAmounts={string.Join(",", BotSpawnerConfig.RequiredItemAmounts)}");
+            }
+
+            LogError("Drop settings initialized.");
+        }
+
+
+
+        private void ReloadSettings()
         {
             try
             {
-                using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ConfigFileName, typeof(BotSpawnerConfig)))
+
+
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Reloading settings...");
+                LogError("Reloading settings...");
+
+                // Ensure default INI files exist
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Ensure default INI files exist...");
+                LogError("Ensure default INI files exist...");
+                EnsureDefaultIniFilesExist();
+
+                // Copy all CES files to world storage
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Copying all CES files to world storage...");
+                LogError("Copying all CES files to world storage...");
+                CopyAllCESFilesToWorldStorage();
+
+                // Reload all files from world storage
+                LoadAllFilesFromWorldStorage();
+
+                // Reload the main settings
+                InitializeBotSpawnerConfig();
+
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Settings reloaded successfully.");
+                LogError("Settings reloaded successfully.");
+            }
+            catch (Exception ex)
+            {
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Error reloading settings: {ex.Message}");
+                LogError($"Error reloading settings: {ex.Message}");
+            }
+        }
+        private void CopyAllCESFilesToWorldStorage()
+        {
+            LogError("Starting CopyAllCESFilesToWorldStorage");
+            try
+            {
+                // Iterate through all mods in the current session
+                foreach (var modItem in MyAPIGateway.Session.Mods)
                 {
-                    string xmlText = reader.ReadToEnd();
-                    return MyAPIGateway.Utilities.SerializeFromXML<BotSpawnerConfig>(xmlText);
+                    // Construct the file path
+                    string modFilePath = "Data/CES.ini";
+                    LogError($"Checking for file: {modFilePath} in mod: {modItem.PublishedFileId}");
+
+                    // Check if the file exists in the mod data folder
+                    if (MyAPIGateway.Utilities.FileExistsInModLocation(modFilePath, modItem))
+                    {
+                        LogError($"File found: {modFilePath} in mod: {modItem.PublishedFileId}");
+
+                        // Determine the destination file path in world storage
+                        string worldStorageFilePath = $"{modItem.PublishedFileId}_CES.ini";
+
+                        // Check if the file already exists in world storage
+                        if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(worldStorageFilePath, typeof(CustomEntitySpawner)))
+                        {
+                            // Read the file from the mod data folder
+                            string fileContent;
+                            using (var reader = MyAPIGateway.Utilities.ReadFileInModLocation(modFilePath, modItem))
+                            {
+                                fileContent = reader.ReadToEnd();
+                            }
+
+                            // Write the file to world storage
+                            using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(worldStorageFilePath, typeof(CustomEntitySpawner)))
+                            {
+                                writer.Write(fileContent);
+                            }
+
+                            //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"File copied to World Storage successfully from mod {modItem.PublishedFileId}.");
+                            LogError($"File copied to World Storage successfully from mod {modItem.PublishedFileId}.");
+                        }
+                        else
+                        {
+                            //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"File already exists in World Storage for mod {modItem.PublishedFileId}.");
+                            LogError($"File already exists: {worldStorageFilePath} for mod: {modItem.PublishedFileId}");
+                        }
+                    }
+                    else
+                    {
+                        //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"File not found in Mod Data folder for mod {modItem.PublishedFileId}.");
+                        LogError($"File not found: {modFilePath} in mod: {modItem.PublishedFileId}");
+                    }
                 }
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                MyLog.Default.WriteLine($"Failed to load config: {e.Message}");
+                MyLog.Default.WriteLine($"Error copying files to World Storage: {ex.Message}");
+                //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Error copying files to World Storage: {ex.Message}");
+                LogError($"Error copying files to World Storage: {ex.Message}");
             }
         }
 
-        // Return default config if file not found or failed to load
-        return new BotSpawnerConfig();
+        private void LoadAllFilesFromWorldStorage()
+        {
+            try
+            {
+                // List of known configuration file names
+                List<string> knownConfigFiles = new List<string>
+        {
+            "GlobalConfig.ini",
+            "CustomEntitySpawner.ini"
+        };
+
+                // Additional file patterns to check for
+                List<string> additionalFilePatterns = new List<string>
+        {
+            "_CES.ini"
+        };
+
+                // Clear existing settings
+                settings.BlockDropSettings.Clear();
+
+                // Load known config files
+                foreach (string configFileName in knownConfigFiles)
+                {
+                    //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Looking at {configFileName}.");
+                    LogError($"Looking at {configFileName}");
+                    if (MyAPIGateway.Utilities.FileExistsInWorldStorage(configFileName, typeof(CustomEntitySpawner)))
+                    {
+                        //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Looking in world Storage for {configFileName}.");
+                        LogError($"Looking in world Storage for {configFileName}");
+                        using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(configFileName, typeof(CustomEntitySpawner)))
+                        {
+                            string fileContent = reader.ReadToEnd();
+                            if (configFileName.Equals("GlobalConfig.ini", StringComparison.OrdinalIgnoreCase))
+                            {
+                                //MyAPIGateway.Utilities.ShowMessage("GlobalConfig.ini", $"Loading GlobalConfig: {configFileName}.");
+                                LogError($"Loading GlobalConfig: {configFileName}");
+                                LoadGlobalConfig(fileContent);
+                            }
+                            else if (configFileName.Equals("CustomEntitySpawner.ini", StringComparison.OrdinalIgnoreCase))
+                            {
+                                //MyAPIGateway.Utilities.ShowMessage("CustomItemSpawnerConfig.ini", $"Loading CustomItemSpawnerConfig: {configFileName}.");
+                                LogError($"Loading CustomItemSpawnerConfig: {configFileName}");
+                                LoadCustomEntitySpawnerConfig(fileContent);
+                            }
+                        }
+                    }
+                }
+
+                // Load additional CES files
+                foreach (var modItem in MyAPIGateway.Session.Mods)
+                {
+                    //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Looking for: {modItem.PublishedFileId} in world storage folder");
+                    LogError($"Looking for: {modItem.PublishedFileId} in world storage folder");
+                    foreach (string pattern in additionalFilePatterns)
+                    {
+                        string cesFileName = $"{modItem.PublishedFileId}{pattern}";
+                        //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Looking for: {modItem.PublishedFileId} in {cesFileName}");
+                        LogError($"Looking for: {modItem.PublishedFileId} in {cesFileName}");
+                        if (MyAPIGateway.Utilities.FileExistsInWorldStorage(cesFileName, typeof(CustomEntitySpawner)))
+                        {
+                            //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Found {modItem.PublishedFileId} in {cesFileName}");
+                            LogError($"Found {modItem.PublishedFileId} in {cesFileName}");
+                            using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(cesFileName, typeof(CustomEntitySpawner)))
+                            {
+                                //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Loading: {modItem.PublishedFileId} in {cesFileName}");
+                                LogError($"Loading: {modItem.PublishedFileId} in {cesFileName}");
+                                string fileContent = reader.ReadToEnd();
+                                LogError($"Contents:, {fileContent}");
+                                LoadCustomEntitySpawnerConfig(fileContent);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MyLog.Default.WriteLine($"Error loading files from World Storage: {ex.Message}");
+                //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Error loading files from World Storage: {ex.Message}");
+                LogError($"Error loading files from World Storage: {ex.Message}");
+            }
+        }
+
+
+
+        private void LoadGlobalConfig(string fileContent)
+        {
+            // Parse and load global configuration settings from fileContent
+            MyIni iniParser = new MyIni();
+            MyIniParseResult result;
+            if (!iniParser.TryParse(fileContent, out result))
+            {
+                throw new Exception($"Config error: {result.ToString()}");
+            }
+
+            // Load specific global settings
+            settings.BaseUpdateInterval = iniParser.Get("Config", "BaseUpdateInterval").ToInt32(60);
+            settings.EnableLogging = iniParser.Get("Config", "EnableLogging").ToBoolean(true);
+        }
+
+        private void LoadCustomEntitySpawnerConfig(string fileContent)
+        {
+            try
+            {
+                MyIni iniParser = new MyIni();
+                MyIniParseResult result;
+                if (!iniParser.TryParse(fileContent, out result))
+                {
+                    throw new Exception($"Config error: {result.ToString()}");
+                }
+
+                List<string> sections = new List<string>();
+                iniParser.GetSections(sections);
+
+                foreach (var section in sections)
+                {
+                    if (section == "Config")
+                        continue;
+
+                    var botSpawnerConfig = new BotSpawnerConfig
+                    {
+                        BlockId = section,
+                        BlockType = iniParser.Get(section, nameof(BotSpawnerConfig.BlockType)).ToString(),
+                        MinAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MinAmount)).ToInt32(),
+                        MaxAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MaxAmount)).ToInt32(),
+                        UseWeightedDrops = iniParser.Get(section, nameof(BotSpawnerConfig.UseWeightedDrops)).ToBoolean(),
+                        DamageAmount = (float)iniParser.Get(section, nameof(BotSpawnerConfig.DamageAmount)).ToDouble(),
+                        MinHealthPercentage = (float)iniParser.Get(section, nameof(BotSpawnerConfig.MinHealthPercentage)).ToDouble(),
+                        MaxHealthPercentage = (float)iniParser.Get(section, nameof(BotSpawnerConfig.MaxHealthPercentage)).ToDouble(),
+                        MinHeight = iniParser.Get(section, nameof(BotSpawnerConfig.MinHeight)).ToDouble(),
+                        MaxHeight = iniParser.Get(section, nameof(BotSpawnerConfig.MaxHeight)).ToDouble(),
+                        MinRadius = iniParser.Get(section, nameof(BotSpawnerConfig.MinRadius)).ToDouble(),
+                        MaxRadius = iniParser.Get(section, nameof(BotSpawnerConfig.MaxRadius)).ToDouble(),
+                        SpawnTriggerInterval = iniParser.Get(section, nameof(BotSpawnerConfig.SpawnTriggerInterval)).ToInt32(),
+                        EnableAirtightAndOxygen = iniParser.Get(section, nameof(BotSpawnerConfig.EnableAirtightAndOxygen)).ToBoolean(),
+                        Enabled = iniParser.Get(section, nameof(BotSpawnerConfig.Enabled)).ToBoolean(),
+                        PlayerDistanceCheck = iniParser.Get(section, nameof(BotSpawnerConfig.PlayerDistanceCheck)).ToInt32()
+                    };
+
+                    botSpawnerConfig.EntityID.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.EntityID)).ToString().Split(','));
+                    botSpawnerConfig.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemTypes)).ToString().Split(','));
+                    botSpawnerConfig.RequiredItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemIds)).ToString().Split(','));
+                    botSpawnerConfig.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
+
+                    settings.BlockDropSettings.Add(botSpawnerConfig);
+
+                    // Log loaded settings
+                    LogError($"Loaded settings for {section}: " +
+                             $"BlockType={botSpawnerConfig.BlockType}, MinAmount={botSpawnerConfig.MinAmount}, MaxAmount={botSpawnerConfig.MaxAmount}, " +
+                             $"DamageAmount={botSpawnerConfig.DamageAmount}, MinHealthPercentage={botSpawnerConfig.MinHealthPercentage}, " +
+                             $"MaxHealthPercentage={botSpawnerConfig.MaxHealthPercentage}, MinHeight={botSpawnerConfig.MinHeight}, " +
+                             $"MaxHeight={botSpawnerConfig.MaxHeight}, MinRadius={botSpawnerConfig.MinRadius}, MaxRadius={botSpawnerConfig.MaxRadius}, " +
+                             $"SpawnTriggerInterval={botSpawnerConfig.SpawnTriggerInterval}, EnableAirtightAndOxygen={botSpawnerConfig.EnableAirtightAndOxygen}, " +
+                             $"Enabled={botSpawnerConfig.Enabled}, " +
+                             $"PlayerDistanceCheck={botSpawnerConfig.PlayerDistanceCheck}, " +
+                             $"EntityID={string.Join(",", botSpawnerConfig.EntityID)}, " +
+                             $"RequiredItemTypes={string.Join(",", botSpawnerConfig.RequiredItemTypes)}, RequiredItemIds={string.Join(",", botSpawnerConfig.RequiredItemIds)}, " +
+                             $"RequiredItemAmounts={string.Join(",", botSpawnerConfig.RequiredItemAmounts)}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MyLog.Default.WriteLine($"Error loading CustomEntitySpawner config: {ex.Message}");
+                //MyAPIGateway.Utilities.ShowMessage("CustomEntitySpawner.ini", $"Error loading CustomEntitySpawner config: {ex.Message}");
+                LogError($"Error loading CustomEntitySpawner config: {ex.Message}");
+            }
+        }
+
+
+        private void LogError(string message)
+        {
+            if (!settings.EnableLogging)
+                return;
+
+            string logFilePath = "CustomEntitySpawner.log";
+            string existingContent = "";
+
+            // Read the existing content if the file exists
+            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(logFilePath, typeof(CustomEntitySpawner)))
+            {
+                using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(logFilePath, typeof(CustomEntitySpawner)))
+                {
+                    existingContent = reader.ReadToEnd();
+                }
+            }
+
+            // Append the new log entry
+            using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(logFilePath, typeof(CustomEntitySpawner)))
+            {
+                if (!string.IsNullOrEmpty(existingContent))
+                {
+                    writer.Write(existingContent);
+                }
+                writer.WriteLine($"{DateTime.Now}: {message}");
+            }
+        }
     }
 
-    public void Save()
+    public class CustomEntitySpawnerSettings
     {
-        try
+        public const string GlobalFileName = "GlobalConfig.ini";
+        public const string EntitySpawnerFileName = "CustomEntitySpawner.ini";
+        private const string IniSection = "Config";
+
+        public int BaseUpdateInterval { get; set; } = 300;
+        public bool EnableLogging { get; set; } = true; // Default value is true
+        public List<BotSpawnerConfig> BlockDropSettings { get; set; } = new List<BotSpawnerConfig>();
+
+        public void Load()
         {
-            using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(ConfigFileName, typeof(BotSpawnerConfig)))
+            MyIni iniParser = new MyIni();
+
+            // Load global settings
+            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(GlobalFileName, typeof(CustomEntitySpawnerSettings)))
             {
-                string xmlText = MyAPIGateway.Utilities.SerializeToXML(this);
-                writer.Write(xmlText);
+                using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(GlobalFileName, typeof(CustomEntitySpawnerSettings)))
+                {
+                    string text = file.ReadToEnd();
+
+                    MyIniParseResult result;
+                    if (!iniParser.TryParse(text, out result))
+                        throw new Exception($"Config error: {result.ToString()}");
+
+                    // Load base settings
+                    BaseUpdateInterval = iniParser.Get(IniSection, nameof(BaseUpdateInterval)).ToInt32(BaseUpdateInterval);
+                    EnableLogging = iniParser.Get(IniSection, nameof(EnableLogging)).ToBoolean(EnableLogging);
+                }
+            }
+            else
+            {
+                throw new Exception("GlobalConfig.ini not found.");
+            }
+
+            // Load block drop settings from CustomEntitySpawner.ini
+            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(EntitySpawnerFileName, typeof(CustomEntitySpawnerSettings)))
+            {
+                using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(EntitySpawnerFileName, typeof(CustomEntitySpawnerSettings)))
+                {
+                    string text = file.ReadToEnd();
+
+                    MyIniParseResult result;
+                    if (!iniParser.TryParse(text, out result))
+                        throw new Exception($"Config error: {result.ToString()}");
+
+                    LoadBlockSpawnSettings(iniParser);
+                }
+            }
+            else
+            {
+                throw new Exception("CustomEntitySpawner.ini not found.");
+            }
+
+            // Load block drop settings from _CIS.ini files
+            foreach (var modItem in MyAPIGateway.Session.Mods)
+            {
+                string cesFileName = $"{modItem.PublishedFileId}_CIS.ini";
+                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(cesFileName, typeof(CustomEntitySpawnerSettings)))
+                {
+                    using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(cesFileName, typeof(CustomEntitySpawnerSettings)))
+                    {
+                        string text = file.ReadToEnd();
+
+                        MyIniParseResult result;
+                        if (!iniParser.TryParse(text, out result))
+                            throw new Exception($"Config error in {cesFileName}: {result.ToString()}");
+
+                        LoadBlockSpawnSettings(iniParser);
+                    }
+                }
             }
         }
-        catch (Exception e)
+        private void LoadBlockSpawnSettings(MyIni iniParser)
         {
-            MyLog.Default.WriteLine($"Failed to save config: {e.Message}");
+            List<string> sections = new List<string>();
+            iniParser.GetSections(sections);
+
+            foreach (var section in sections)
+            {
+                if (section == IniSection)
+                    continue;
+
+                var botSpawnerConfig = new BotSpawnerConfig
+                {
+                    BlockId = section,
+                    BlockType = iniParser.Get(section, nameof(BotSpawnerConfig.BlockType)).ToString(),
+                    MinAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MinAmount)).ToInt32(),
+                    MaxAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MaxAmount)).ToInt32(),
+                    UseWeightedDrops = iniParser.Get(section, nameof(BotSpawnerConfig.UseWeightedDrops)).ToBoolean(),
+                    DamageAmount = (float)iniParser.Get(section, nameof(BotSpawnerConfig.DamageAmount)).ToDouble(),
+                    MinHealthPercentage = (float)iniParser.Get(section, nameof(BotSpawnerConfig.MinHealthPercentage)).ToDouble(),
+                    MaxHealthPercentage = (float)iniParser.Get(section, nameof(BotSpawnerConfig.MaxHealthPercentage)).ToDouble(),
+                    MinHeight = iniParser.Get(section, nameof(BotSpawnerConfig.MinHeight)).ToDouble(),
+                    MaxHeight = iniParser.Get(section, nameof(BotSpawnerConfig.MaxHeight)).ToDouble(),
+                    MinRadius = iniParser.Get(section, nameof(BotSpawnerConfig.MinRadius)).ToDouble(),
+                    MaxRadius = iniParser.Get(section, nameof(BotSpawnerConfig.MaxRadius)).ToDouble(),
+                    SpawnTriggerInterval = iniParser.Get(section, nameof(BotSpawnerConfig.SpawnTriggerInterval)).ToInt32(),
+                    EnableAirtightAndOxygen = iniParser.Get(section, nameof(BotSpawnerConfig.EnableAirtightAndOxygen)).ToBoolean(),
+                    Enabled = iniParser.Get(section, nameof(BotSpawnerConfig.Enabled)).ToBoolean(),
+                    PlayerDistanceCheck = iniParser.Get(section, nameof(BotSpawnerConfig.PlayerDistanceCheck)).ToInt32()
+                };
+
+                botSpawnerConfig.EntityID.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.EntityID)).ToString().Split(','));
+                botSpawnerConfig.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemTypes)).ToString().Split(','));
+                botSpawnerConfig.RequiredItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemIds)).ToString().Split(','));
+                botSpawnerConfig.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
+
+                BlockDropSettings.Add(botSpawnerConfig);
+            }
         }
+    }
+
+    public class BotSpawnerConfig
+    {
+        public string BlockId { get; set; }
+        public string BlockType { get; set; }
+        public List<string> EntityID { get; set; } = new List<string>();
+        public int MinAmount { get; set; } = 1;
+        public int MaxAmount { get; set; } = 1;
+        public bool UseWeightedDrops { get; set; } = false;
+        public float DamageAmount { get; set; } = 0;
+        public float MinHealthPercentage { get; set; } = 0.1f;
+        public float MaxHealthPercentage { get; set; } = 1.0f;
+        public double MinHeight { get; set; } = 1.0;
+        public double MaxHeight { get; set; } = 2.0;
+        public double MinRadius { get; set; } = 0.5;
+        public double MaxRadius { get; set; } = 2;
+        public int SpawnTriggerInterval { get; set; } = 10;
+        public bool EnableAirtightAndOxygen { get; set; } = false;
+        public bool Enabled { get; set; } = true;
+        public List<string> RequiredItemTypes { get; set; } = new List<string>();
+        public List<string> RequiredItemIds { get; set; } = new List<string>();
+        public List<int> RequiredItemAmounts { get; set; } = new List<int>();
+        public int PlayerDistanceCheck { get; set; } = 1000;
+
     }
 }
