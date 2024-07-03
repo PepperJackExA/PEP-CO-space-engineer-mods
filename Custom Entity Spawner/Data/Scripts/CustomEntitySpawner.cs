@@ -19,18 +19,22 @@ using VRage.ModAPI;
 using Sandbox.Engine.Utils;
 using VRage.ObjectBuilders;
 
+using Sandbox.Common.ObjectBuilders;
+using PEPCO.iSurvival.CustomEntitySpawner;
 
-namespace PEPCO.iSurvival.CustomSpawnerSpawner
+namespace PEPCO.iSurvival.CustomEntitySpawner
 {
-    [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
+    [MySessionComponentDescriptor(MyUpdateOrder.BeforeSimulation)]
     public class CustomEntitySpawner : MySessionComponentBase
     {
         private static HashSet<string> validBotIds = new HashSet<string>();
         private int updateTickCounter = 0;
         private long totalUpdateTicks = 0;
         private bool isLoading = true;
-        private int loadingTickCount = 3;
+        private int loadingTickCount = 100;
         private static readonly Random randomGenerator = new Random();
+
+        private const int MaxEntitiesPerCycle = 1000;
 
         private const string ModDataFile = "CES.ini";
         private const string WorldStorageFolder = "CustomEntitySpawner";
@@ -62,14 +66,16 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         {
             if (MyAPIGateway.Session.IsServer)
             {
+                
                 try
                 {
+                    
                     EnsureDefaultIniFilesExist();
                     CopyAllCESFilesToWorldStorage();
                     LoadAllFilesFromWorldStorage();
                     settings.Load();
-                    InitializeBotSpawnerConfig();
                     LoadValidBotIds();
+                    InitializeBotSpawnerConfig();
                     MyAPIGateway.Utilities.MessageEntered += OnMessageEntered;
                 }
                 catch (Exception ex)
@@ -82,6 +88,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
 
         private void EnsureDefaultIniFilesExist()
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "EnsureDefaultIniFilesExist");
             if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(CustomEntitySpawnerSettings.GlobalFileName, typeof(CustomEntitySpawnerSettings)))
             {
                 using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(CustomEntitySpawnerSettings.GlobalFileName, typeof(CustomEntitySpawnerSettings)))
@@ -122,24 +129,15 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
                     string botId = parameters[2];
                     if (validBotIds.Contains(botId))
                     {
-
                         Vector3D playerPosition = MyAPIGateway.Session.Player.GetPosition();
-
-
                         Vector3D forwardDirection = MyAPIGateway.Session.Player.Character.WorldMatrix.Forward;
-
-
-                        Vector3D offset = forwardDirection * 10 * 2.5;
-
-
+                        Vector3D offset = forwardDirection * 5 * 2.5;
                         Vector3D spawnPosition = playerPosition + offset;
-
-
                         MyVisualScriptLogicProvider.SpawnBot(botId, spawnPosition);
-
-
                         MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Spawned bot: {botId} at {spawnPosition}");
 
+                        int entitiesCount = CountEntitiesInRadius(playerPosition, 10);
+                        MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"{entitiesCount} entities are within a 10-meter radius.");
                     }
                     else
                     {
@@ -158,35 +156,141 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
                     try
                     {
                         ReloadSettings();
-                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Settings reloaded successfully.");
                     }
                     catch (Exception ex)
                     {
-                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Error reloading settings: {ex.Message}");
                         LogError($"Error reloading settings: {ex.Message}");
                     }
                 }
                 sendToOthers = false;
             }
+            else if (messageText.StartsWith("/pepco kill ", StringComparison.OrdinalIgnoreCase))
+            {
+                var parameters = messageText.Split(' ');
+                if (parameters.Length >= 3)
+                {
+                    string entityName = parameters[2];
+                    double radius = 10;
+                    if (parameters.Length == 4)
+                    {
+                        double parsedRadius;
+                        if (double.TryParse(parameters[3], out parsedRadius))
+                        {
+                            radius = parsedRadius;
+                        }
+                    }
+
+                    if (MyAPIGateway.Session.IsServer)
+                    {
+                        if (entityName.Equals("all", StringComparison.OrdinalIgnoreCase))
+                        {
+                            KillAllEntities(radius);
+                        }
+                        else
+                        {
+                            KillEntitiesByName(entityName, radius);
+                        }
+                    }
+                    sendToOthers = false;
+                }
+                else
+                {
+                    MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Usage: /pepco kill <EntityName|all> [Radius]");
+                }
+            }
         }
 
-        public override void UpdateBeforeSimulation()
+        private void KillEntitiesByName(string entityName, double radius)
         {
-            MyAPIGateway.Utilities.ShowMessage("PEPCO", $"UpdateBeforeSimulation");
-            if (isLoading && loadingTickCount-- > 0)
-                return;
+            var entities = new HashSet<IMyEntity>();
+            Vector3D playerPosition = MyAPIGateway.Session.Player.GetPosition();
+            IMyCharacter playerCharacter = MyAPIGateway.Session.Player.Character;
 
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter && e.DisplayName != null && e.DisplayName.IndexOf(entityName, StringComparison.OrdinalIgnoreCase) >= 0);
+
+            int entitiesKilled = 0;
+            foreach (var entity in entities)
+            {
+                IMyCharacter character = entity as IMyCharacter;
+                if (character != null && Vector3D.Distance(character.GetPosition(), playerPosition) <= radius && character != playerCharacter)
+                {
+                    entity.Close();
+                    entitiesKilled++;
+                }
+            }
+
+            MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Killed {entitiesKilled} entities with name: {entityName} within {radius} meters.");
+
+            // Reset or update variables related to spawning if necessary
+            ResetSpawningVariables();
+        }
+
+        private void KillAllEntities(double radius)
+        {
+            var entities = new HashSet<IMyEntity>();
+            Vector3D playerPosition = MyAPIGateway.Session.Player.GetPosition();
+            IMyCharacter playerCharacter = MyAPIGateway.Session.Player.Character;
+
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
+
+            int entitiesKilled = 0;
+            foreach (var entity in entities)
+            {
+                IMyCharacter character = entity as IMyCharacter;
+                if (character != null && Vector3D.Distance(character.GetPosition(), playerPosition) <= radius && character != playerCharacter)
+                {
+                    entity.Close();
+                    entitiesKilled++;
+                }
+            }
+
+            MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Killed {entitiesKilled} entities within {radius} meters.");
+
+            // Reset or update variables related to spawning if necessary
+            ResetSpawningVariables();
+        }
+
+        private void ResetSpawningVariables()
+        {
+            // Implement logic to reset or update variables related to spawning entities
+            // Example: Reset counters or flags used in spawning logic
+            // Ensure that the conditions for spawning new entities are still valid
+        }
+
+
+
+
+        private int CountEntitiesInRadius(Vector3D position, double radius)
+        {
+            var entities = new HashSet<IMyEntity>();
+            MyAPIGateway.Entities.GetEntities(entities, e => Vector3D.Distance(e.GetPosition(), position) <= radius);
+            return entities.Count;
+        }
+
+
+
+
+
+
+        public override void UpdateBeforeSimulation()
+        {            
+
+            if (isLoading && loadingTickCount-- > 0)
+            {
+                return;
+            }
             isLoading = false;
             totalUpdateTicks++;
 
             if (++updateTickCounter >= settings.BaseUpdateInterval)
             {
-                MyAPIGateway.Utilities.ShowMessage("PEPCO", $"updateTickCounter >= settings.BaseUpdateInterval");
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"updateTickCounter >= settings.BaseUpdateInterval");
                 updateTickCounter = 0;
                 try
                 {
-                    MyAPIGateway.Utilities.ShowMessage("PEPCO", $"UpdateBeforeSimulations:Try SpawnEntitiesNearBlocks");
-                    SpawnEntitiesNearBlocks();
+                    //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"UpdateBeforeSimulations:Try SpawnEntitiesNearBlocks");
+                    int entitiesSpawned = 0;
+                    SpawnEntitiesNearBlocks(ref entitiesSpawned);
                 }
                 catch (Exception ex)
                 {
@@ -206,49 +310,59 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
 
         private static void ListValidBotIds()
         {
-            MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Valid bot IDs:");
             foreach (var botId in validBotIds)
             {
                 MyAPIGateway.Utilities.ShowMessage("BotSpawner", botId);
             }
         }
 
-        private void SpawnEntitiesNearBlocks()
+        private void SpawnEntitiesNearBlocks(ref int entitiesSpawned)
         {
-            long baseUpdateCycles = totalUpdateTicks / settings.BaseUpdateInterval;
-            MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Start SpawnEntitiesNearBlocks");
-            List<IMyPlayer> players = new List<IMyPlayer>();
-            MyAPIGateway.Players.GetPlayers(players);
+            if (entitiesSpawned < MaxEntitiesPerCycle)
+            {                
 
-            foreach (var entity in MyEntities.GetEntities())
-            {
-                var grid = entity as IMyCubeGrid;
-                if (grid != null)
+                ////MyAPIGateway.Utilities.ShowMessage("STARTTEST", "SpawnEntitiesNearBlocks");
+                long baseUpdateCycles = totalUpdateTicks / settings.BaseUpdateInterval;
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Start SpawnEntitiesNearBlocks");
+                List<IMyPlayer> players = new List<IMyPlayer>();
+                MyAPIGateway.Players.GetPlayers(players);
+
+                foreach (var entity in MyEntities.GetEntities())
                 {
-                    var blocks = new List<IMySlimBlock>();
-                    grid.GetBlocks(blocks, b => b.FatBlock != null && IsValidBlock(b.FatBlock.BlockDefinition.TypeIdString, b.FatBlock.BlockDefinition.SubtypeId));
-
-                    foreach (var block in blocks)
+                    var grid = entity as IMyCubeGrid;
+                    if (grid != null)
                     {
-                        var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
-                        if (blockSettings != null && blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block))
-                        {
-                            if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck))
-                            {
-                                continue;
-                            }
+                        var blocks = new List<IMySlimBlock>();
+                        grid.GetBlocks(blocks, b => b.FatBlock != null && IsValidBlock(b.FatBlock.BlockDefinition.TypeIdString, b.FatBlock.BlockDefinition.SubtypeId));
 
-                            float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
-                            if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
+                        foreach (var block in blocks)
+                        {
+
+                            var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
+
+                            if (blockSettings != null && blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block))
                             {
-                                if (CheckInventoryForRequiredItems(block, blockSettings))
+
+                                if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck))
                                 {
-                                    MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Try spawn at {block}");
-                                    int spawnAmount = SpawnEntities(block, blockSettings);
-                                    if (spawnAmount > 0)
+                                    continue;
+                                }
+                                float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
+                                if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
+                                {
+
+                                    //MyAPIGateway.Utilities.ShowMessage("SPAWNTEST", $"Before CheckInventoryForRequiredItems");
+                                    if (CheckInventoryForRequiredItems(block, blockSettings))
                                     {
-                                        RemoveItemsFromInventory(block, blockSettings, spawnAmount);
-                                        block.DoDamage(blockSettings.DamageAmount * spawnAmount, MyDamageType.Grind, true);
+                                        //MyAPIGateway.Utilities.ShowMessage("SPAWNTEST", $"After CheckInventoryForRequiredItems {block}");                                        
+                                        
+                                        int spawnAmount = SpawnEntities(block, blockSettings);
+                                        entitiesSpawned += spawnAmount;
+                                        if (spawnAmount > 0)
+                                        {
+                                            RemoveItemsFromInventory(block, blockSettings, spawnAmount);
+                                            block.DoDamage(blockSettings.DamageAmount * spawnAmount, MyDamageType.Grind, true);
+                                        }
                                     }
                                 }
                             }
@@ -260,6 +374,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
 
         private bool IsPlayerInRange(IMySlimBlock block, List<IMyPlayer> players, int playerDistanceCheck)
         {
+            ////MyAPIGateway.Utilities.ShowMessage("STARTTEST", "IsPlayerInRange");
             if (playerDistanceCheck == -1)
             {
                 return true; // Always on if playerDistanceCheck is -1
@@ -292,16 +407,18 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         }
         private bool IsValidBlock(string typeId, string subtypeId)
         {
-            return settings.BlockDropSettings.Exists(s => s.BlockType == typeId && s.BlockId == subtypeId);
+            ////MyAPIGateway.Utilities.ShowMessage("STARTTEST", "IsValidBlock");
+            return settings.BlockSpawnSettings.Exists(s => s.BlockType == typeId && s.BlockId == subtypeId);
         }
 
         private BotSpawnerConfig GetSpawnSettingsForBlock(string typeId, string subtypeId)
         {
-            return settings.BlockDropSettings.Find(s => s.BlockType == typeId && s.BlockId == subtypeId);
+            return settings.BlockSpawnSettings.Find(s => s.BlockType == typeId && s.BlockId == subtypeId);        
         }
 
         private bool IsEnvironmentSuitable(IMyCubeGrid grid, IMySlimBlock block)
         {
+            ////MyAPIGateway.Utilities.ShowMessage("STARTTEST", "IsEnvironmentSuitable");
             var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
             if (blockSettings == null || !blockSettings.EnableAirtightAndOxygen)
                 return true;
@@ -313,6 +430,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         }
         private bool CheckInventoryForRequiredItems(IMySlimBlock block, BotSpawnerConfig blockSettings)
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "CheckInventoryForRequiredItems");
             var inventory = block.FatBlock.GetInventory() as IMyInventory;
             if (inventory == null)
             {
@@ -335,6 +453,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         }
         private void RemoveItemsFromInventory(IMySlimBlock block, BotSpawnerConfig blockSettings, int dropAmount)
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "RemoveItemsFromInventory");
             var inventory = block.FatBlock.GetInventory() as IMyInventory;
             if (inventory == null)
                 return;
@@ -349,9 +468,8 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         }
         private int SpawnEntities(IMySlimBlock block, BotSpawnerConfig settings)
         {
-            // Calculate the number of items to drop based on MinAmount and MaxAmount
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "SpawnEntities");
 
-            MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Start SpawnEntities");
             int spawnAmount;
             if (settings.UseWeightedDrops)
             {
@@ -379,7 +497,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
                             (float)(randomGenerator.NextDouble() * Math.PI * 2)
                         );
                         MyVisualScriptLogicProvider.SpawnBot(EntityID, spawnPosition);
-                        MyAPIGateway.Utilities.ShowMessage("PEPCO", $"{EntityID} {spawnPosition}");
+                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"{EntityID} {spawnPosition}");
                         //  MyFloatingObjects.Spawn(
                         //          new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, dropItem),
                         //          dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
@@ -412,6 +530,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         }
         private Vector3D CalculateDropPosition(IMySlimBlock block, BotSpawnerConfig blockSettings)
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "CalculateDropPosition");
             double heightOffset = randomGenerator.NextDouble() * (blockSettings.MaxHeight - blockSettings.MinHeight) + blockSettings.MinHeight;
             double radius = randomGenerator.NextDouble() * (blockSettings.MaxRadius - blockSettings.MinRadius) + blockSettings.MinRadius;
             double angle = randomGenerator.NextDouble() * Math.PI * 2;
@@ -427,6 +546,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
 
         private List<int> GenerateProbabilities(int minAmount, int maxAmount)
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "GenerateProbabilities");
             int range = maxAmount - minAmount + 1;
             int middle = (range + 1) / 2;
             var probabilities = new List<int>();
@@ -441,6 +561,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
 
         private int GetWeightedRandomNumber(int minAmount, List<int> probabilities)
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "GetWeightedRandomNumber");
             int totalWeight = probabilities.Sum();
             int randomValue = randomGenerator.Next(1, totalWeight + 1);
             int cumulativeWeight = 0;
@@ -455,26 +576,26 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         }
         private void InitializeBotSpawnerConfig()
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "InitializeBotSpawnerConfig");
             // Clear existing drop settings
-
-            settings.BlockDropSettings.Clear();
+            settings.BlockSpawnSettings.Clear();
 
             // Re-load settings from the loaded configuration
             settings.Load();
 
             // Log initialized settings
-            foreach (var BotSpawnerConfig in settings.BlockDropSettings)
+            foreach (var botSpawnerConfig in settings.BlockSpawnSettings)
             {
-                LogError($"Initialized settings for {BotSpawnerConfig.BlockId}: " +
-                         $"BlockType={BotSpawnerConfig.BlockType}, MinAmount={BotSpawnerConfig.MinAmount}, MaxAmount={BotSpawnerConfig.MaxAmount}, " +
-                         $"DamageAmount={BotSpawnerConfig.DamageAmount}, MinHealthPercentage={BotSpawnerConfig.MinHealthPercentage}, " +
-                         $"MaxHealthPercentage={BotSpawnerConfig.MaxHealthPercentage}, MinHeight={BotSpawnerConfig.MinHeight}, " +
-                         $"MaxHeight={BotSpawnerConfig.MaxHeight}, MinRadius={BotSpawnerConfig.MinRadius}, MaxRadius={BotSpawnerConfig.MaxRadius}, " +
-                         $"SpawnTriggerInterval={BotSpawnerConfig.SpawnTriggerInterval}, EnableAirtightAndOxygen={BotSpawnerConfig.EnableAirtightAndOxygen}, " +
-                         $"Enabled={BotSpawnerConfig.Enabled}, " +
-                         $"EntityID={string.Join(",", BotSpawnerConfig.EntityID)}, " +
-                         $"RequiredItemTypes={string.Join(",", BotSpawnerConfig.RequiredItemTypes)}, RequiredItemIds={string.Join(",", BotSpawnerConfig.RequiredItemIds)}, " +
-                         $"RequiredItemAmounts={string.Join(",", BotSpawnerConfig.RequiredItemAmounts)}");
+                LogError($"Initialized settings for {botSpawnerConfig.BlockId}: " +
+                         $"BlockType={botSpawnerConfig.BlockType}, MinAmount={botSpawnerConfig.MinAmount}, MaxAmount={botSpawnerConfig.MaxAmount}, " +
+                         $"DamageAmount={botSpawnerConfig.DamageAmount}, MinHealthPercentage={botSpawnerConfig.MinHealthPercentage}, " +
+                         $"MaxHealthPercentage={botSpawnerConfig.MaxHealthPercentage}, MinHeight={botSpawnerConfig.MinHeight}, " +
+                         $"MaxHeight={botSpawnerConfig.MaxHeight}, MinRadius={botSpawnerConfig.MinRadius}, MaxRadius={botSpawnerConfig.MaxRadius}, " +
+                         $"SpawnTriggerInterval={botSpawnerConfig.SpawnTriggerInterval}, EnableAirtightAndOxygen={botSpawnerConfig.EnableAirtightAndOxygen}, " +
+                         $"Enabled={botSpawnerConfig.Enabled}, " +
+                         $"EntityID={string.Join(",", botSpawnerConfig.EntityID)}, " +
+                         $"RequiredItemTypes={string.Join(",", botSpawnerConfig.RequiredItemTypes)}, RequiredItemIds={string.Join(",", botSpawnerConfig.RequiredItemIds)}, " +
+                         $"RequiredItemAmounts={string.Join(",", botSpawnerConfig.RequiredItemAmounts)}");
             }
 
             LogError("Drop settings initialized.");
@@ -484,6 +605,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
 
         private void ReloadSettings()
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "ReloadSettings");
             try
             {
 
@@ -518,6 +640,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         }
         private void CopyAllCESFilesToWorldStorage()
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "CopyAllCESFilesToWorldStorage");
             LogError("Starting CopyAllCESFilesToWorldStorage");
             try
             {
@@ -578,6 +701,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
 
         private void LoadAllFilesFromWorldStorage()
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "LoadAllFilesFromWorldStorage");
             try
             {
                 // List of known configuration file names
@@ -594,7 +718,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         };
 
                 // Clear existing settings
-                settings.BlockDropSettings.Clear();
+                settings.BlockSpawnSettings.Clear();
 
                 // Load known config files
                 foreach (string configFileName in knownConfigFiles)
@@ -662,6 +786,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
 
         private void LoadGlobalConfig(string fileContent)
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "LoadGlobalConfig");
             // Parse and load global configuration settings from fileContent
             MyIni iniParser = new MyIni();
             MyIniParseResult result;
@@ -677,6 +802,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
 
         private void LoadCustomEntitySpawnerConfig(string fileContent)
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "LoadCustomEntitySpawnerConfig");
             try
             {
                 MyIni iniParser = new MyIni();
@@ -719,7 +845,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
                     botSpawnerConfig.RequiredItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemIds)).ToString().Split(','));
                     botSpawnerConfig.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
 
-                    settings.BlockDropSettings.Add(botSpawnerConfig);
+                    settings.BlockSpawnSettings.Add(botSpawnerConfig);
 
                     // Log loaded settings
                     LogError($"Loaded settings for {section}: " +
@@ -779,12 +905,13 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         public const string EntitySpawnerFileName = "CustomEntitySpawner.ini";
         private const string IniSection = "Config";
 
-        public int BaseUpdateInterval { get; set; } = 300;
+        public int BaseUpdateInterval { get; set; } = 60;
         public bool EnableLogging { get; set; } = true; // Default value is true
-        public List<BotSpawnerConfig> BlockDropSettings { get; set; } = new List<BotSpawnerConfig>();
+        public List<BotSpawnerConfig> BlockSpawnSettings { get; set; } = new List<BotSpawnerConfig>();
 
         public void Load()
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "Load");
             MyIni iniParser = new MyIni();
 
             // Load global settings
@@ -827,10 +954,10 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
                 throw new Exception("CustomEntitySpawner.ini not found.");
             }
 
-            // Load block drop settings from _CIS.ini files
+            // Load block drop settings from _CES.ini files
             foreach (var modItem in MyAPIGateway.Session.Mods)
             {
-                string cesFileName = $"{modItem.PublishedFileId}_CIS.ini";
+                string cesFileName = $"{modItem.PublishedFileId}_CES.ini";
                 if (MyAPIGateway.Utilities.FileExistsInWorldStorage(cesFileName, typeof(CustomEntitySpawnerSettings)))
                 {
                     using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(cesFileName, typeof(CustomEntitySpawnerSettings)))
@@ -848,6 +975,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
         }
         private void LoadBlockSpawnSettings(MyIni iniParser)
         {
+            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "LoadBlockSpawnSettings");
             List<string> sections = new List<string>();
             iniParser.GetSections(sections);
 
@@ -881,7 +1009,7 @@ namespace PEPCO.iSurvival.CustomSpawnerSpawner
                 botSpawnerConfig.RequiredItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemIds)).ToString().Split(','));
                 botSpawnerConfig.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
 
-                BlockDropSettings.Add(botSpawnerConfig);
+                BlockSpawnSettings.Add(botSpawnerConfig);
             }
         }
     }
