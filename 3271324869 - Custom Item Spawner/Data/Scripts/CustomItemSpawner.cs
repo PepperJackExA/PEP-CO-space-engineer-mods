@@ -246,30 +246,30 @@ EnableLogging=false
 
         private bool IsPlayerInRange(IMySlimBlock block, List<IMyPlayer> players, int playerDistanceCheck)
         {
+            // Always on if playerDistanceCheck is -1
             if (playerDistanceCheck == -1)
             {
-                return true; // Always on if playerDistanceCheck is -1
+                return true;
             }
+
+            // Any player online if playerDistanceCheck is 0
             if (playerDistanceCheck == 0)
             {
-                return players.Count > 0; // Any player online
+                return players.Count > 0;
             }
 
             Vector3D blockPosition = block.FatBlock.GetPosition();
 
             foreach (var player in players)
             {
-                if (player.Controller != null && player.Controller.ControlledEntity != null)
+                var controlledEntity = player.Controller?.ControlledEntity?.Entity;
+                if (controlledEntity != null && controlledEntity is IMyCharacter && player == MyAPIGateway.Session.LocalHumanPlayer)
                 {
-                    IMyEntity controlledEntity = player.Controller.ControlledEntity.Entity;
-                    if (controlledEntity != null)
+                    Vector3D playerPosition = controlledEntity.GetPosition();
+                    double distance = Vector3D.Distance(playerPosition, blockPosition);
+                    if (distance <= playerDistanceCheck)
                     {
-                        Vector3D playerPosition = controlledEntity.GetPosition();
-                        double distance = Vector3D.Distance(playerPosition, blockPosition);
-                        if (distance <= playerDistanceCheck)
-                        {
-                            return true; // Player is within the specified max distance
-                        }
+                        return true;
                     }
                 }
             }
