@@ -34,7 +34,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
         private int loadingTickCount = 100;
         private static readonly Random randomGenerator = new Random();
 
-        private const int MaxEntitiesPerCycle = 1000;
+        private const int MaxEntitiesPerCycle = 100000;
 
         private const string ModDataFile = "CES.ini";
         private const string WorldStorageFolder = "CustomEntitySpawner";
@@ -109,6 +109,8 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
         protected override void UnloadData()
         {
             MyAPIGateway.Utilities.MessageEntered -= OnMessageEntered;
+            validBotIds.Clear();
+            base.UnloadData();
         }
 
         private void OnMessageEntered(string messageText, ref bool sendToOthers)
@@ -221,8 +223,6 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 
             MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Killed {entitiesKilled} entities with name: {entityName} within {radius} meters.");
 
-            // Reset or update variables related to spawning if necessary
-            ResetSpawningVariables();
         }
 
         private void KillAllEntities(double radius)
@@ -245,27 +245,30 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
             }
 
             MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Killed {entitiesKilled} entities within {radius} meters.");
-
-            // Reset or update variables related to spawning if necessary
-            ResetSpawningVariables();
         }
-
-        private void ResetSpawningVariables()
-        {
-            // Implement logic to reset or update variables related to spawning entities
-            // Example: Reset counters or flags used in spawning logic
-            // Ensure that the conditions for spawning new entities are still valid
-        }
-
-
 
 
         private int CountEntitiesInRadius(Vector3D position, double radius)
         {
+
             var entities = new HashSet<IMyEntity>();
-            MyAPIGateway.Entities.GetEntities(entities, e => Vector3D.Distance(e.GetPosition(), position) <= radius);
-            return entities.Count;
+            Vector3D playerPosition = MyAPIGateway.Session.Player.GetPosition();
+            IMyCharacter playerCharacter = MyAPIGateway.Session.Player.Character;
+
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
+            int entitiesCount = 0;
+            foreach (var entity in entities)
+            {
+                IMyCharacter character = entity as IMyCharacter;
+                if (character != null && Vector3D.Distance(character.GetPosition(), playerPosition) <= radius && character != playerCharacter)
+                {
+                    entitiesCount++;
+                    
+                }
+            }
+                return entitiesCount;
         }
+
 
 
 
