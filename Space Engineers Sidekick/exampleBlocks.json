@@ -1,0 +1,77 @@
+{
+    "blocks":
+    [
+        {
+            "blockID":"CubeBlock",
+            "blockSubtypeID":"ArmourBlock",
+            "displayName":"Light Armour Block",
+            "components":[
+                {
+                    "componentID":"SteelPlate",
+                    "amount":20,
+                    "isCritical":false
+                },
+                {
+                    "componentID":"SteelPlate",
+                    "amount":5,
+                    "isCritical":true
+                }
+            ],
+            "size": "large"
+        },
+        {
+            "blockID":"CubeBlock",
+            "blockSubtypeID":"ArmourBlockCorner",
+            "displayName":"Light Armour Block Corner",
+            "components":[
+                {
+                    "componentID":"SteelPlate",
+                    "amount":12,
+                    "isCritical":false
+                },
+                {
+                    "componentID":"SteelPlate",
+                    "amount":3,
+                    "isCritical":true
+                }
+            ],
+            "size": "large"
+        },
+        {
+            "blockID":"CubeBlock",
+            "blockSubtypeID":"ArmourBlockCorner2",
+            "displayName":"Light Armour Block Corner with computers",
+            "components":[
+                {
+                    "componentID":"SteelPlate",
+                    "amount":12,
+                    "isCritical":false
+                },
+                {
+                    "componentID":"SteelPlate",
+                    "amount":3,
+                    "isCritical":true
+                },
+                {
+                    "componentID":"Computer",
+                    "amount":30,
+                    "isCritical":false
+                }
+            ],
+            "size": "large"
+        }
+    ],
+    "components":
+    [
+        {
+            "componentID":"SteelPlate",
+            "volume":5,
+            "weight":10
+        },
+        {
+            "componentID":"Computer",
+            "volume":1,
+            "weight":1
+        }
+    ]
+}

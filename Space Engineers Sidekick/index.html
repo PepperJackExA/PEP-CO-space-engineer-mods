@@ -1,0 +1,520 @@
+<html lang="en">
+
+<style>
+    * {
+        font-family: "Kanit", "Open Sans", sans-serif;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    h1 {
+        color: #d65601;
+        text-align: center;
+        font-size: 3em;
+
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .parallax {
+        background-image: url("assets/bckgrnd.png");
+        min-height: 1080px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom 108px;
+
+    }
+
+    .b-header-nav {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: black;
+    }
+
+    .top-nav-elements {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        height: 150px;
+        margin: 0 auto;
+        /* Center the container horizontally */
+    }
+
+    .b-header-logo img {
+        width: 108px;
+        height: 108px;
+        padding: 10px;
+    }
+
+    .navlinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center the navs horizontally */
+    }
+
+    .topnav,
+    .bottomnav {
+        display: flex;
+        width: 900px;
+        justify-content: space-around;
+        text-align: center;
+        flex-direction: row;
+        /* Ensure items are stacked horizontally */
+    }
+
+    .topnav a,
+    .bottomnav a {
+        text-decoration: none;
+        /* Remove underline */
+    }
+
+    .topnav a:hover,
+    .bottomnav a:hover {
+        text-decoration: underline;
+        /* Show underline on hover */
+    }
+
+    .topnav a {
+        font-size: 1rem;
+    }
+
+    .bottomnav a {
+        font-size: 1.5rem;
+    }
+
+    .separator {
+        width: 900px;
+        border: 1px solid #d65601;
+        /* Customize the line style */
+        margin: 20px 0;
+        /* Add some space around the line */
+    }
+
+
+    body {
+        margin: 0;
+        background-color: black;
+    }
+
+    .content {
+        margin: 0 auto;
+        margin-top: 150px;
+        text-align: center;
+
+    }
+
+    .file-upload {
+        border: 2px dashed #ccc;
+        padding: 20px;
+        text-align: center;
+        z-index: 10;
+        background-color: black;
+        max-width: 50%;
+        min-height: 300px;
+        margin: 0 auto;
+        /* Centers the div horizontally */
+        display: flex;
+        justify-content: center;
+        /* Centers content horizontally */
+        align-items: center;
+        /* Centers content vertically */
+    }
+
+    .file-upload input[type="file"] {
+        display: none;
+    }
+
+    .file-upload label {
+        cursor: pointer;
+    }
+
+    table {
+        margin: 0 auto;
+        width: 90%;
+        table-layout: fixed;
+
+    }
+
+    tr:not(.table-content):hover {
+        background-color: #ff6f005b;
+    }
+
+    .table-content tr:hover {
+        background-color: #ffffff00;
+    }
+
+    .block-table th,
+    td:not(.table-content) {
+        padding: 10px;
+        border-bottom: 1px solid #dddddd53;
+        /* Optional padding for cells */
+    }
+
+    .block-table th:first-child,
+    .block-table td:first-child {
+        width: 75%;
+    }
+
+    .block-table th:nth-child(2),
+    .block-table td:nth-child(2) {
+        width: 20%;
+        text-align: center;
+    }
+
+    .block-table th:nth-child(3),
+    .block-table td:nth-child(3) {
+        width: 5%;
+    }
+
+    .block-table .header td {
+        margin: 0 auto;
+        text-align: center;
+        text-decoration: bold;
+        font-size: 1.2rem;
+    }
+
+
+
+    .top-metrics {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* Enable wrap around */
+        margin: 0 auto;
+        /* Center the container horizontally */
+    }
+
+    .top-metrics span {
+        margin: 0 auto;
+        /* Center the container horizontally */
+    }
+
+    #sidekickApp {
+        background-color: rgba(0, 0, 0, 0.7);
+        min-height: 1080px;
+        max-width: 1030px;
+        margin: 0 auto;
+        /* Center the container horizontally */
+    }
+
+
+    .button{
+        background-color: #d65601;
+        /* Orange accent color */
+        color: white;
+        /* Text color */
+        padding: 5px 10px;
+        /* Padding around the text */
+        border: none;
+        /* Remove default button border */
+        border-radius: 5px;
+        /* Rounded corners */
+        cursor: pointer;
+        /* Indicate interactivity on hover */
+        /*display: inline-block; /* Allow for inline positioning */
+        text-align: center;
+        /* Center text within the button */
+        font-weight: normal;
+        /* Emphasize button text */
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        /* Smooth hover effect */
+    }
+    .pointer,
+    .numberInput,
+    .searchBox {
+
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    .numberInput input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+
+    .searchBox input,
+    .numberInput input {
+        background-color: #d65601;
+        border: none;
+    }
+
+    .searchBox input::placeholder {
+        color: white;
+        /* Replace with your desired color */
+    }
+
+    .numberInput input:focus,
+    .searchBox input:focus {
+        outline: none;
+    }
+
+    .pointer:hover {
+        background-color: black;
+        /* Black background on hover */
+        color: white;
+        /* Maintain white text on hover */
+    }
+
+    iconify-icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+
+    }
+
+    iconify-icon:hover {
+        background-color: #d65601;
+        /* Orange accent color */
+        color: white;
+        /* Text color */
+        border: none;
+        /* Remove default button border */
+        border-radius: 5px;
+        /* Rounded corners */
+        cursor: pointer;
+        /* Indicate interactivity on hover */
+        /*display: inline-block; /* Allow for inline positioning */
+        text-align: center;
+        /* Center text within the button */
+        font-weight: normal;
+        /* Emphasize button text */
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        /* Smooth hover effect */
+
+
+    }
+
+    .align-right {
+        text-align: right;
+        /* Center text within the button */
+    }
+
+    .horizontal-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .no-select {
+        user-select: none;
+    }
+
+    /* Accordion part */
+    .accordion {
+        background-color: rgba(214, 86, 1, 0.5);
+        color: hsl(0, 0%, 100%);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+        background-color: hsla(0, 0%, 80%, 0.9);
+        color: #d65601;
+    }
+
+    .accordion:after {
+        content: '\002B';
+        color: white;
+
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\2212";
+    }
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Engineers Smart Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+</head>
+
+<body>
+
+    <div class="b-header-nav">
+        <div class="top-nav-elements">
+            <a class="b-header-logo" href="#"><img src="assets/LogoUpdated.png" alt="PEPCO Logo"></a>
+            <div class="navlinks">
+                <div class="topnav">
+                    <span><a href="#home">Home</a></span>
+                    <span><a href="#news">News</a></span>
+                    <span><a href="#contact">Contact</a></span>
+                    <span><a href="#about">About</a></span>
+                </div>
+                <hr class="separator">
+                <div class="bottomnav">
+                    <span><a href="#home">Pepone modpack</a></span>
+                    <span><a href="#news">iSurvival</a></span>
+                    <span><a href="#contact">Item spawner</a></span>
+                    <span><a href="#about">SE sidekick</a></span>
+                    <span><a href="#about">EME</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="content" id="app">
+
+        <div class="parallax" @dragover.prevent="handleDragOver" @dragenter.prevent="handleDragOver"
+            @dragleave.prevent="handleDragLeave">
+            <div id="sidekickApp">
+                <h1>Space Engineers Sidekick</h1>
+                <div v-if="importObject == null">
+                    <h2>Welcome to the Space Engineers Sidekick. <p></p>Upload the .json file you created within the
+                        game to start.</h2>
+                    <div class="file-upload" @drop.prevent="handleDrop">
+                        <input type="file" id="fileInput" accept=".json" multiple="false" @change="handleFiles">
+                        <label v-if="!isDragging" for="fileInput">Drag and drop files here or click to upload</label>
+                        <label v-else for="fileInput">Drop it here</label>
+                    </div>
+                </div>
+                <div v-else>
+
+                    <div class="top-metrics">
+                        <span>Total Volume: {{totalVolume}}l</span></p>
+                        <span>Total Weight: {{totalWeight}}kg</span></p>
+                    </div>
+                    <h2 @click="visible1 = !visible1" v-bind:class="{ active: visible1 }" class="accordion" style="text-transform: uppercase;">Block List</h2>
+                    <div v-show="visible1" class="panel">
+                        <table class="block-table panel">
+                            <tr class="table-content">
+                                <td>
+                                    <div class="searchBox button">
+                                        <input style="flex-grow: 10" type="text" v-model="search"
+                                            placeholder="search blocks">
+                                        <iconify-icon icon="mdi:remove"
+                                            style="color: white; font-size: 2em; flex-grow: .5"
+                                            @click="this.search = ''"></iconify-icon>
+                                    </div>
+
+                                </td>
+                                <td class="secColumn">
+                                    Size Selection
+                                </td>
+                                <td class="secColumn">
+                                </td>
+                            </tr>
+                            <tr class="table-content" class="header">
+                                <td>Block Name</td>
+                                <td>Block Size</td>
+                                <td></td>
+                            </tr>
+                            <tr v-for="block in filteredBlocks">
+                                <td>{{ block.displayName }}</td>
+                                <td>{{ block.size }}</td>
+                                <td><iconify-icon icon="mdi:package-variant-plus"
+                                        style="color: white; font-size: 2em; flex-grow: .5"
+                                        @click="addToSelection($event, block)"></iconify-icon></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <h2 @click="visible2 = !visible2" v-bind:class="{ active: visible2 }" class="accordion" style="text-transform: uppercase;">
+                        {{ selectedBlocks.length }} Selected block{{ selectedBlocks.length != 1 ? 's' : '' }}
+                    </h2>
+                    <div v-show="visible2" class="panel">
+                        <table class="selection-table panel">
+                            <tr class="table-content" class="header">
+                                <td style="width: 50%;">Block Name</td>
+                                <td style="width: 15%;">Block Size</td>
+                                <td style="display: flex; flex-direction: row; justify-content: flex-end;">
+                                    <iconify-icon icon="mdi:nuke" style="color: white; font-size: 2em; "
+                                        @click="selectedBlocks = []"></iconify-icon>
+                                </td>
+                            </tr>
+                            <tr style="min-width: 100%;" v-for="block in selectedBlocks" :key="block.id">
+                                <td style="width: 50%;">{{ block.displayName }}</td>
+                                <td style="width: 15%;">{{ block.size }}</td>
+                                <td class="horizontal-flex">
+                                    <div class="numberInput button">
+                                        <iconify-icon class="no-select" icon="mdi:minus"
+                                            style="color: white; font-size: 2em;"
+                                            @click="decrementBlockAmount($event, block, index)"></iconify-icon>
+                                        <input style="text-align: center; width: 6em;" type="number"
+                                            v-model="block.amount" min="0">
+                                        <iconify-icon class="no-select" icon="mdi:plus"
+                                            style="color: white; font-size: 2em;"
+                                            @click="block.amount++"></iconify-icon>
+                                    </div>
+                                    <iconify-icon icon="mdi:delete"
+                                        style="color: white; font-size: 2em; margin-left: 5px;"
+                                        @click="removeFromSelection($event, block, index)"></iconify-icon>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h2 @click="visible3 = !visible3" v-bind:class="{ active: visible3 }" class="accordion" style="text-transform: uppercase;">{{componentList.length}} Component{{
+                        componentList.length !=
+                        1 ? 's' : '' }}</h2>
+                    <div v-show="visible3" class="panel">
+                        <table class="tables">
+                            <tr>
+                                <td>Component</td>
+                                <td class="align-right">Amount</td>
+                            </tr>
+                            <tr v-for="component in componentList">
+                                <td>{{component.componentID}}</td>
+                                <td class="align-right">{{component.amount}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h2 @click="visible4 = !visible4" v-bind:class="{ active: visible4 }" class="accordion" style="text-transform: uppercase;">Loadmaster output</h2>
+                    <div v-show="visible4" class="panel">
+                        <div>TM SOON</div>
+                    </div>
+                    <div style="display: flex; justify-content: flex-end; align-items: flex-end; padding-top: 2em;">
+                        <span class="button" style="width: 100px;" @click="clearInput">clear upload file</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
