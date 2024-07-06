@@ -35,7 +35,6 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
         private static readonly Random randomGenerator = new Random();
 
         private int cleanupTickCounter = 0;
-        private const int CleanupInterval = 180; // Cleanup every 600 ticks (adjust as needed)
 
         private const string ModDataFile = "CES.ini";
         private const string WorldStorageFolder = "CustomEntitySpawner";
@@ -58,6 +57,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 [Config]
 BaseUpdateInterval=60    
 EnableLogging=false
+CleanupInterval=180
 ";
 
         private const string DefaultEntitySpawnerIniContent = @"
@@ -361,7 +361,7 @@ EnableLogging=false
                     LogError($"Update error: {ex.Message}");
                 }
             }
-            if (++cleanupTickCounter >= CleanupInterval)
+            if (++cleanupTickCounter >= settings.CleanupInterval)
             {
                 cleanupTickCounter = 0;
                 try
@@ -493,16 +493,54 @@ EnableLogging=false
 
         private bool IsEnvironmentSuitable(IMyCubeGrid grid, IMySlimBlock block)
         {
-            ////MyAPIGateway.Utilities.ShowMessage("STARTTEST", "IsEnvironmentSuitable");
+
+            MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", "IsEnvironmentSuitable"); 
             var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
-            if (blockSettings == null || !blockSettings.EnableAirtightAndOxygen)
+            if (blockSettings == null)
                 return true;
 
-            bool isAirtight = grid.IsRoomAtPositionAirtight(block.FatBlock.Position);
-            double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(block.FatBlock.GetPosition());
+            if (blockSettings.EnableAirtightAndOxygen)
+            {
+                MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", "EnableAirtightAndOxygen");
+                bool isAirtight = grid.IsRoomAtPositionAirtight(block.FatBlock.Position);
+                double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(block.FatBlock.GetPosition());
+                if (!isAirtight && oxygenLevel <= 0.5)
+                    return false;
+            }
 
-            return isAirtight || oxygenLevel > 0.5;
+            if (!string.IsNullOrEmpty(blockSettings.RequiredEntity))
+            {
+                MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", "RequiredEntity");
+                return CheckForRequiredEntities(block.FatBlock.GetPosition(), blockSettings.RequiredEntity, blockSettings.RequiredEntityRadius, blockSettings.RequiredEntityNumber);
+            }
+
+            return true;
         }
+
+        private bool CheckForRequiredEntities(Vector3D blockPosition, string requiredEntity, double requiredEntityRadius, int requiredEntityNumber)
+        {
+            MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", "CheckForRequiredEntities");
+            var entities = new HashSet<IMyEntity>();
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter && e.Name != null && e.Name.IndexOf(requiredEntity, StringComparison.OrdinalIgnoreCase) >= 0);
+
+            int requiredEntityCount = 0;
+            foreach (var entity in entities)
+            {
+                MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", $"foreach (var entity in entities) {requiredEntity}");
+                if (Vector3D.Distance(entity.GetPosition(), blockPosition) <= requiredEntityRadius)
+                {
+                    requiredEntityCount++;
+                    if (requiredEntityCount >= requiredEntityNumber)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+
+
         private bool CheckInventoryForRequiredItems(IMySlimBlock block, BotSpawnerConfig blockSettings)
         {
             //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "CheckInventoryForRequiredItems");
@@ -873,11 +911,11 @@ EnableLogging=false
             // Load specific global settings
             settings.BaseUpdateInterval = iniParser.Get("Config", "BaseUpdateInterval").ToInt32(60);
             settings.EnableLogging = iniParser.Get("Config", "EnableLogging").ToBoolean(true);
+            settings.CleanupInterval = iniParser.Get("Config", "CleanupInterval").ToInt32(180);
         }
 
         private void LoadCustomEntitySpawnerConfig(string fileContent)
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "LoadCustomEntitySpawnerConfig");
             try
             {
                 MyIni iniParser = new MyIni();
@@ -912,7 +950,10 @@ EnableLogging=false
                         SpawnTriggerInterval = iniParser.Get(section, nameof(BotSpawnerConfig.SpawnTriggerInterval)).ToInt32(),
                         EnableAirtightAndOxygen = iniParser.Get(section, nameof(BotSpawnerConfig.EnableAirtightAndOxygen)).ToBoolean(),
                         Enabled = iniParser.Get(section, nameof(BotSpawnerConfig.Enabled)).ToBoolean(),
-                        PlayerDistanceCheck = iniParser.Get(section, nameof(BotSpawnerConfig.PlayerDistanceCheck)).ToInt32()
+                        PlayerDistanceCheck = iniParser.Get(section, nameof(BotSpawnerConfig.PlayerDistanceCheck)).ToInt32(),
+                        RequiredEntity = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntity)).ToString(),  // Add this line
+                        RequiredEntityRadius = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityRadius)).ToDouble(),  // Add this line
+                        RequiredEntityNumber = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityNumber)).ToInt32()  // Add this line
                     };
 
                     botSpawnerConfig.EntityID.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.EntityID)).ToString().Split(','));
@@ -929,8 +970,9 @@ EnableLogging=false
                              $"MaxHealthPercentage={botSpawnerConfig.MaxHealthPercentage}, MinHeight={botSpawnerConfig.MinHeight}, " +
                              $"MaxHeight={botSpawnerConfig.MaxHeight}, MinRadius={botSpawnerConfig.MinRadius}, MaxRadius={botSpawnerConfig.MaxRadius}, " +
                              $"SpawnTriggerInterval={botSpawnerConfig.SpawnTriggerInterval}, EnableAirtightAndOxygen={botSpawnerConfig.EnableAirtightAndOxygen}, " +
-                             $"Enabled={botSpawnerConfig.Enabled}, " +
-                             $"PlayerDistanceCheck={botSpawnerConfig.PlayerDistanceCheck}, " +
+                             $"Enabled={botSpawnerConfig.Enabled}, PlayerDistanceCheck={botSpawnerConfig.PlayerDistanceCheck}, " +
+                             $"RequiredEntity={botSpawnerConfig.RequiredEntity}, RequiredEntityRadius={botSpawnerConfig.RequiredEntityRadius}, " +
+                             $"RequiredEntityNumber={botSpawnerConfig.RequiredEntityNumber}, " +
                              $"EntityID={string.Join(",", botSpawnerConfig.EntityID)}, " +
                              $"RequiredItemTypes={string.Join(",", botSpawnerConfig.RequiredItemTypes)}, RequiredItemIds={string.Join(",", botSpawnerConfig.RequiredItemIds)}, " +
                              $"RequiredItemAmounts={string.Join(",", botSpawnerConfig.RequiredItemAmounts)}");
@@ -939,10 +981,10 @@ EnableLogging=false
             catch (Exception ex)
             {
                 MyLog.Default.WriteLine($"Error loading CustomEntitySpawner config: {ex.Message}");
-                //MyAPIGateway.Utilities.ShowMessage("CustomEntitySpawner.ini", $"Error loading CustomEntitySpawner config: {ex.Message}");
                 LogError($"Error loading CustomEntitySpawner config: {ex.Message}");
             }
         }
+
 
 
         private void LogError(string message)
@@ -982,6 +1024,8 @@ EnableLogging=false
 
         public int BaseUpdateInterval { get; set; } = 60;
         public bool EnableLogging { get; set; } = true; // Default value is true
+        public int CleanupInterval { get; set; } = 18000; //5 min;
+
         public List<BotSpawnerConfig> BlockSpawnSettings { get; set; } = new List<BotSpawnerConfig>();
 
         public void Load()
@@ -1003,6 +1047,7 @@ EnableLogging=false
                     // Load base settings
                     BaseUpdateInterval = iniParser.Get(IniSection, nameof(BaseUpdateInterval)).ToInt32(BaseUpdateInterval);
                     EnableLogging = iniParser.Get(IniSection, nameof(EnableLogging)).ToBoolean(EnableLogging);
+                    CleanupInterval = iniParser.Get(IniSection, nameof(CleanupInterval)).ToInt32(CleanupInterval);
                 }
             }
             else
@@ -1076,7 +1121,10 @@ EnableLogging=false
                     SpawnTriggerInterval = iniParser.Get(section, nameof(BotSpawnerConfig.SpawnTriggerInterval)).ToInt32(),
                     EnableAirtightAndOxygen = iniParser.Get(section, nameof(BotSpawnerConfig.EnableAirtightAndOxygen)).ToBoolean(),
                     Enabled = iniParser.Get(section, nameof(BotSpawnerConfig.Enabled)).ToBoolean(),
-                    PlayerDistanceCheck = iniParser.Get(section, nameof(BotSpawnerConfig.PlayerDistanceCheck)).ToInt32()
+                    PlayerDistanceCheck = iniParser.Get(section, nameof(BotSpawnerConfig.PlayerDistanceCheck)).ToInt32(),
+                    RequiredEntity = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntity)).ToString(),
+                    RequiredEntityRadius = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityRadius)).ToDouble(),
+                    RequiredEntityNumber = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityNumber)).ToInt32()
                 };
 
                 botSpawnerConfig.EntityID.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.EntityID)).ToString().Split(','));
@@ -1111,6 +1159,9 @@ EnableLogging=false
         public List<string> RequiredItemIds { get; set; } = new List<string>();
         public List<int> RequiredItemAmounts { get; set; } = new List<int>();
         public int PlayerDistanceCheck { get; set; } = 1000;
+        public string RequiredEntity { get; set; } = "";
+        public double RequiredEntityRadius { get; set; } = 10;
+        public int RequiredEntityNumber { get; set; } = 1;
 
     }
 }
