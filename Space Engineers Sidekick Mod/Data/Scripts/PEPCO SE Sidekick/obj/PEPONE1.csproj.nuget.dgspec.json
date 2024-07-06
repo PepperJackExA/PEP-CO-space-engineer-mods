@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Uzar\\AppData\\Roaming\\SpaceEngineers\\Mods\\Space Engineers Sidekick Mod\\Data\\Scripts\\PEPONE1\\PEPONE1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Uzar\\AppData\\Roaming\\SpaceEngineers\\Mods\\Space Engineers Sidekick Mod\\Data\\Scripts\\PEPONE1\\PEPONE1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Uzar\\AppData\\Roaming\\SpaceEngineers\\Mods\\Space Engineers Sidekick Mod\\Data\\Scripts\\PEPONE1\\PEPONE1.csproj",
+        "projectName": "PEPONE1",
+        "projectPath": "C:\\Users\\Uzar\\AppData\\Roaming\\SpaceEngineers\\Mods\\Space Engineers Sidekick Mod\\Data\\Scripts\\PEPONE1\\PEPONE1.csproj",
+        "packagesPath": "C:\\Users\\Uzar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Uzar\\AppData\\Roaming\\SpaceEngineers\\Mods\\Space Engineers Sidekick Mod\\Data\\Scripts\\PEPONE1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Uzar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "Mal.Mdk2.ModAnalyzers": {
+              "target": "Package",
+              "version": "[*, )"
+            },
+            "Mal.Mdk2.References": {
+              "target": "Package",
+              "version": "[*, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
