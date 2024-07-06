@@ -64,26 +64,31 @@ CleanupInterval=180
 ; ==============================================
 ; HOW TO USE CustomEntitySpawner.ini
 ; ==============================================
-;[LargeBlockSmallContainer]
-;BlockType=MyObjectBuilder_CargoContainer
-;MinAmount=1
-;MaxAmount=5
-;UseWeightedDrops=false
-;DamageAmount=0
-;MinHealthPercentage=0.2
-;MaxHealthPercentage=1
-;MinHeight=0.5
-;MaxHeight=2.0
-;MinRadius=0.5
-;MaxRadius=2.0
-;SpawnTriggerInterval=3
-;EnableAirtightAndOxygen=false
-;Enabled=true
-;PlayerDistanceCheck=10
-;EntityID=Wolf
-;RequiredItemTypes=MyObjectBuilder_Component
-;RequiredItemIds=SteelPlate
-;RequiredItemAmounts=0
+[LargeBlockSmallContainer]
+BlockType=MyObjectBuilder_CargoContainer
+MinAmount=1
+MaxAmount=1
+UseWeightedDrops=false
+DamageAmount=0
+MinHealthPercentage=0.2
+MaxHealthPercentage=1
+MinHeight=0.5
+MaxHeight=2.0
+MinRadius=0.5
+MaxRadius=2.0
+SpawnTriggerInterval=3
+EnableAirtightAndOxygen=false
+Enabled=true
+PlayerDistanceCheck=100
+EntityID=Wolf
+RequiredItemTypes=MyObjectBuilder_Component
+RequiredItemIds=SteelPlate
+RequiredItemAmounts=0
+RequiredEntity=Wolf
+RequiredEntityRadius=10
+RequiredEntityNumber=0
+RequireEntityNumberForTotalEntities=false
+MaxEntitiesInArea=30
 ";
 
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
@@ -394,11 +399,7 @@ CleanupInterval=180
 
         private void SpawnEntitiesNearBlocks(ref int entitiesSpawned)
         {
-
-
-            ////MyAPIGateway.Utilities.ShowMessage("STARTTEST", "SpawnEntitiesNearBlocks");
             long baseUpdateCycles = totalUpdateTicks / settings.BaseUpdateInterval;
-            //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Start SpawnEntitiesNearBlocks");
             List<IMyPlayer> players = new List<IMyPlayer>();
             MyAPIGateway.Players.GetPlayers(players);
 
@@ -412,39 +413,50 @@ CleanupInterval=180
 
                     foreach (var block in blocks)
                     {
-
                         var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
+                        int spawnIterations;
 
-                        if (blockSettings != null && blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block))
+                        if (blockSettings != null && blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block, out spawnIterations))
                         {
-
                             if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck))
                             {
                                 continue;
                             }
+
                             float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
                             if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
                             {
-
-                                //MyAPIGateway.Utilities.ShowMessage("SPAWNTEST", $"Before CheckInventoryForRequiredItems");
                                 if (CheckInventoryForRequiredItems(block, blockSettings))
                                 {
-                                    //MyAPIGateway.Utilities.ShowMessage("SPAWNTEST", $"After CheckInventoryForRequiredItems {block}");                                        
-
-                                    int spawnAmount = SpawnEntities(block, blockSettings);
-                                    if (spawnAmount > 0)
+                                    for (int i = 0; i < spawnIterations; i++)
                                     {
-                                        RemoveItemsFromInventory(block, blockSettings, spawnAmount);
-                                        block.DoDamage(blockSettings.DamageAmount * spawnAmount, MyDamageType.Grind, true);
+                                        int spawnAmount;
+                                        if (blockSettings.UseWeightedDrops)
+                                        {
+                                            spawnAmount = GetWeightedRandomNumber(blockSettings.MinAmount, GenerateProbabilities(blockSettings.MinAmount, blockSettings.MaxAmount));
+                                        }
+                                        else
+                                        {
+                                            spawnAmount = randomGenerator.Next(blockSettings.MinAmount, blockSettings.MaxAmount + 1);
+                                        }
+
+                                        if (spawnAmount > 0)
+                                        {
+                                            SpawnEntities(block, blockSettings, spawnAmount);
+                                            entitiesSpawned++;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
-
             }
         }
+
+
+
+
 
         private bool IsPlayerInRange(IMySlimBlock block, List<IMyPlayer> players, int playerDistanceCheck)
         {
@@ -491,17 +503,15 @@ CleanupInterval=180
             return settings.BlockSpawnSettings.Find(s => s.BlockType == typeId && s.BlockId == subtypeId);
         }
 
-        private bool IsEnvironmentSuitable(IMyCubeGrid grid, IMySlimBlock block)
+        private bool IsEnvironmentSuitable(IMyCubeGrid grid, IMySlimBlock block, out int spawnIterations)
         {
-
-            MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", "IsEnvironmentSuitable"); 
+            spawnIterations = 0;
             var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
             if (blockSettings == null)
                 return true;
 
             if (blockSettings.EnableAirtightAndOxygen)
             {
-                MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", "EnableAirtightAndOxygen");
                 bool isAirtight = grid.IsRoomAtPositionAirtight(block.FatBlock.Position);
                 double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(block.FatBlock.GetPosition());
                 if (!isAirtight && oxygenLevel <= 0.5)
@@ -510,14 +520,56 @@ CleanupInterval=180
 
             if (!string.IsNullOrEmpty(blockSettings.RequiredEntity))
             {
-                MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", "RequiredEntity");
-                return CheckForRequiredEntities(block.FatBlock.GetPosition(), blockSettings.RequiredEntity, blockSettings.RequiredEntityRadius, blockSettings.RequiredEntityNumber);
+                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.RequiredEntity, blockSettings.RequiredEntityRadius);
+
+                if (blockSettings.MaxEntitiesInArea == 0 && entityCount > 0)
+                {
+                    return false;
+                }
+
+                if (blockSettings.MaxEntitiesInArea > 0 && entityCount >= blockSettings.MaxEntitiesInArea)
+                {
+                    return false;
+                }
+
+                if (blockSettings.RequireEntityNumberForTotalEntities)
+                {
+                    if (entityCount >= blockSettings.RequiredEntityNumber)
+                    {
+                        spawnIterations = entityCount / blockSettings.RequiredEntityNumber;
+                        return true;
+                    }
+                }
+                else
+                {
+                    spawnIterations = entityCount >= blockSettings.RequiredEntityNumber ? 1 : 0;
+                    return entityCount >= blockSettings.RequiredEntityNumber;
+                }
             }
 
             return true;
         }
 
-        private bool CheckForRequiredEntities(Vector3D blockPosition, string requiredEntity, double requiredEntityRadius, int requiredEntityNumber)
+
+
+        private int GetEntityCountInRadius(Vector3D blockPosition, string requiredEntity, double requiredEntityRadius)
+        {
+            var entities = new HashSet<IMyEntity>();
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter && e.DisplayName != null && e.DisplayName.IndexOf(requiredEntity, StringComparison.OrdinalIgnoreCase) >= 0);
+
+            int entityCount = 0;
+            foreach (var entity in entities)
+            {
+                if (Vector3D.Distance(entity.GetPosition(), blockPosition) <= requiredEntityRadius)
+                {
+                    entityCount++;
+                }
+            }
+            return entityCount;
+        }
+
+
+        private bool CheckForRequiredEntities(Vector3D blockPosition, string requiredEntity, double requiredEntityRadius, int requiredEntityNumber, bool requireEntityNumberForTotalEntities, int MaxEntitiesInArea)
         {
             MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", "CheckForRequiredEntities");
             var entities = new HashSet<IMyEntity>();
@@ -530,16 +582,23 @@ CleanupInterval=180
                 if (Vector3D.Distance(entity.GetPosition(), blockPosition) <= requiredEntityRadius)
                 {
                     requiredEntityCount++;
-                    if (requiredEntityCount >= requiredEntityNumber)
-                    {
-                        return true;
-                    }
                 }
             }
-            return false;
+
+            if (requiredEntityCount > MaxEntitiesInArea)
+            {
+                return false;
+            }
+
+            if (requireEntityNumberForTotalEntities)
+            {
+                return requiredEntityCount >= requiredEntityNumber;
+            }
+            else
+            {
+                return requiredEntityCount > 0;
+            }
         }
-
-
 
         private bool CheckInventoryForRequiredItems(IMySlimBlock block, BotSpawnerConfig blockSettings)
         {
@@ -579,68 +638,24 @@ CleanupInterval=180
                 inventory.RemoveItemsOfType(totalAmountToRemove, requiredItemType);
             }
         }
-        private int SpawnEntities(IMySlimBlock block, BotSpawnerConfig settings)
+        private void SpawnEntities(IMySlimBlock block, BotSpawnerConfig settings, int spawnAmount)
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "SpawnEntities");
-
-            int spawnAmount;
-            if (settings.UseWeightedDrops)
-            {
-                //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"UseWeightedDrops");
-                spawnAmount = GetWeightedRandomNumber(settings.MinAmount, GenerateProbabilities(settings.MinAmount, settings.MaxAmount));
-
-            }
-            else
-            {
-                //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Didn't UseWeightedDrops");
-                spawnAmount = randomGenerator.Next(settings.MinAmount, settings.MaxAmount + 1);
-            }
-
             for (int i = 0; i < settings.EntityID.Count; i++)
             {
-                string EntityID = settings.EntityID[i];
+                string entityID = settings.EntityID[i];
+                for (int j = 0; j < spawnAmount; j++)
                 {
-
-                    for (int j = 0; j < spawnAmount; j++)
-                    {
-                        Vector3D spawnPosition = CalculateDropPosition(block, settings);
-                        Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
-                            (float)(randomGenerator.NextDouble() * Math.PI * 2),
-                            (float)(randomGenerator.NextDouble() * Math.PI * 2),
-                            (float)(randomGenerator.NextDouble() * Math.PI * 2)
-                        );
-                        MyVisualScriptLogicProvider.SpawnBot(EntityID, spawnPosition);
-                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"{EntityID} {spawnPosition}");
-                        //  MyFloatingObjects.Spawn(
-                        //          new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, dropItem),
-                        //          dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up
-                        //           MyVisualScriptLogicProvider.SpawnBot(EntityID, dropPosition, dropRotation.Up, block.FatBlock.WorldMatrix.Up);
-                        //    MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Spawned bot: {} at {dropPosition}");
-
-                        //            public static void SpawnBot(string EntityID, BotSpawnerConfig blockSettings)
-                        //    {
-                        //       Random random = new Random();
-                        //      double randomHeight = random.NextDouble() * (blockSettings.MaxHeight - blockSettings.MinHeight) + blockSettings.MinHeight;
-                        //     double randomRadius = random.NextDouble() * (blockSettings.MaxRadius - blockSettings.MinRadius) + blockSettings.MinRadius;
-                        //      double angle = random.NextDouble() * Math.PI * 2;
-                        //      Vector3D offset = new Vector3D(
-                        //      randomRadius * Math.Cos(angle),
-                        //      randomHeight,
-                        //         randomRadius * Math.Sin(angle)
-                        //     );
-                        //
-                        //     Vector3D spawnPosition = MyAPIGateway.Session.Player.GetPosition() + offset;
-                        //     MyVisualScriptLogicProvider.SpawnBot(EntityID, spawnPosition);
-                        //     MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Spawned bot: {EntityID} at {spawnPosition}");
-                        // }
-                        //      );
-
-                    }
+                    Vector3D spawnPosition = CalculateDropPosition(block, settings);
+                    Quaternion dropRotation = Quaternion.CreateFromYawPitchRoll(
+                        (float)(randomGenerator.NextDouble() * Math.PI * 2),
+                        (float)(randomGenerator.NextDouble() * Math.PI * 2),
+                        (float)(randomGenerator.NextDouble() * Math.PI * 2)
+                    );
+                    MyVisualScriptLogicProvider.SpawnBot(entityID, spawnPosition);
                 }
             }
-
-            return spawnAmount;
         }
+
         private Vector3D CalculateDropPosition(IMySlimBlock block, BotSpawnerConfig blockSettings)
         {
             //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "CalculateDropPosition");
@@ -951,9 +966,11 @@ CleanupInterval=180
                         EnableAirtightAndOxygen = iniParser.Get(section, nameof(BotSpawnerConfig.EnableAirtightAndOxygen)).ToBoolean(),
                         Enabled = iniParser.Get(section, nameof(BotSpawnerConfig.Enabled)).ToBoolean(),
                         PlayerDistanceCheck = iniParser.Get(section, nameof(BotSpawnerConfig.PlayerDistanceCheck)).ToInt32(),
-                        RequiredEntity = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntity)).ToString(),  // Add this line
-                        RequiredEntityRadius = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityRadius)).ToDouble(),  // Add this line
-                        RequiredEntityNumber = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityNumber)).ToInt32()  // Add this line
+                        RequiredEntity = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntity)).ToString(),
+                        RequiredEntityRadius = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityRadius)).ToDouble(),
+                        RequiredEntityNumber = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityNumber)).ToInt32(),
+                        RequireEntityNumberForTotalEntities = iniParser.Get(section, nameof(BotSpawnerConfig.RequireEntityNumberForTotalEntities)).ToBoolean(),
+                        MaxEntitiesInArea = iniParser.Get(section, nameof(BotSpawnerConfig.MaxEntitiesInArea)).ToInt32()
                     };
 
                     botSpawnerConfig.EntityID.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.EntityID)).ToString().Split(','));
@@ -973,6 +990,8 @@ CleanupInterval=180
                              $"Enabled={botSpawnerConfig.Enabled}, PlayerDistanceCheck={botSpawnerConfig.PlayerDistanceCheck}, " +
                              $"RequiredEntity={botSpawnerConfig.RequiredEntity}, RequiredEntityRadius={botSpawnerConfig.RequiredEntityRadius}, " +
                              $"RequiredEntityNumber={botSpawnerConfig.RequiredEntityNumber}, " +
+                             $"RequireEntityNumberForTotalEntities={botSpawnerConfig.RequireEntityNumberForTotalEntities}, " +
+                             $"MaxEntitiesInArea={botSpawnerConfig.MaxEntitiesInArea}, " +
                              $"EntityID={string.Join(",", botSpawnerConfig.EntityID)}, " +
                              $"RequiredItemTypes={string.Join(",", botSpawnerConfig.RequiredItemTypes)}, RequiredItemIds={string.Join(",", botSpawnerConfig.RequiredItemIds)}, " +
                              $"RequiredItemAmounts={string.Join(",", botSpawnerConfig.RequiredItemAmounts)}");
@@ -1124,7 +1143,9 @@ CleanupInterval=180
                     PlayerDistanceCheck = iniParser.Get(section, nameof(BotSpawnerConfig.PlayerDistanceCheck)).ToInt32(),
                     RequiredEntity = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntity)).ToString(),
                     RequiredEntityRadius = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityRadius)).ToDouble(),
-                    RequiredEntityNumber = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityNumber)).ToInt32()
+                    RequiredEntityNumber = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityNumber)).ToInt32(),
+                    RequireEntityNumberForTotalEntities = iniParser.Get(section, nameof(BotSpawnerConfig.RequireEntityNumberForTotalEntities)).ToBoolean(),
+                    MaxEntitiesInArea = iniParser.Get(section, nameof(BotSpawnerConfig.MaxEntitiesInArea)).ToInt32()
                 };
 
                 botSpawnerConfig.EntityID.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.EntityID)).ToString().Split(','));
@@ -1161,7 +1182,9 @@ CleanupInterval=180
         public int PlayerDistanceCheck { get; set; } = 1000;
         public string RequiredEntity { get; set; } = "";
         public double RequiredEntityRadius { get; set; } = 10;
-        public int RequiredEntityNumber { get; set; } = 1;
+        public int RequiredEntityNumber { get; set; } = 0;
+        public bool RequireEntityNumberForTotalEntities { get; set; } = false;
+        public int MaxEntitiesInArea { get; set; } = 10;
 
     }
 }
