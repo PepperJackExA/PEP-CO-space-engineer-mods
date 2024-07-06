@@ -10,7 +10,7 @@ using VRage.Voxels;
 using VRageMath;
 using VRageRender;
 
-namespace PEPCO.iSurvival.ShowOres
+namespace YourName.ModName.PepcoOreDetector.Data
 {
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
     public class PepcoShowOresCommand : MySessionComponentBase
