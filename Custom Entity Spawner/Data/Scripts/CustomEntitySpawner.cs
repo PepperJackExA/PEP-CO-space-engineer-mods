@@ -13,7 +13,6 @@ using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.Utils;
 using VRageMath;
 using System.Linq;
-using static VRage.Game.MyObjectBuilder_Checkpoint;
 using VRage.Game.Entity;
 using VRage.ModAPI;
 using Sandbox.Engine.Utils;
@@ -98,7 +97,6 @@ MaxEntitiesInArea=30
 
                 try
                 {
-
                     EnsureDefaultIniFilesExist();
                     CopyAllCESFilesToWorldStorage();
                     LoadAllFilesFromWorldStorage();
@@ -117,7 +115,6 @@ MaxEntitiesInArea=30
 
         private void EnsureDefaultIniFilesExist()
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "EnsureDefaultIniFilesExist");
             if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(CustomEntitySpawnerSettings.GlobalFileName, typeof(CustomEntitySpawnerSettings)))
             {
                 using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(CustomEntitySpawnerSettings.GlobalFileName, typeof(CustomEntitySpawnerSettings)))
@@ -228,7 +225,6 @@ MaxEntitiesInArea=30
                 {
                     MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Usage: /pepco kill <EntityName|all> [Radius]");
                 }
-
             }
             else if (messageText.Equals("/pepco cleanup dead", StringComparison.OrdinalIgnoreCase))
             {
@@ -247,6 +243,7 @@ MaxEntitiesInArea=30
                 sendToOthers = false;
             }
         }
+
         private void CleanupDeadEntities()
         {
             var entities = new HashSet<IMyEntity>();
@@ -268,11 +265,8 @@ MaxEntitiesInArea=30
             {
                 return true;
             }
-
-            // Add other criteria for different types of entities if necessary
             return false;
         }
-
 
         private void KillEntitiesByName(string entityName, double radius)
         {
@@ -294,7 +288,6 @@ MaxEntitiesInArea=30
             }
 
             MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Killed {entitiesKilled} entities with name: {entityName} within {radius} meters.");
-
         }
 
         private void KillAllEntities(double radius)
@@ -319,10 +312,8 @@ MaxEntitiesInArea=30
             MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Killed {entitiesKilled} entities within {radius} meters.");
         }
 
-
         private int CountEntitiesInRadius(Vector3D position, double radius)
         {
-
             var entities = new HashSet<IMyEntity>();
             Vector3D playerPosition = MyAPIGateway.Session.Player.GetPosition();
             IMyCharacter playerCharacter = MyAPIGateway.Session.Player.Character;
@@ -335,7 +326,6 @@ MaxEntitiesInArea=30
                 if (character != null && Vector3D.Distance(character.GetPosition(), playerPosition) <= radius && character != playerCharacter)
                 {
                     entitiesCount++;
-
                 }
             }
             return entitiesCount;
@@ -343,7 +333,6 @@ MaxEntitiesInArea=30
 
         public override void UpdateBeforeSimulation()
         {
-
             if (isLoading && loadingTickCount-- > 0)
             {
                 return;
@@ -353,11 +342,9 @@ MaxEntitiesInArea=30
 
             if (++updateTickCounter >= settings.BaseUpdateInterval)
             {
-                //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"updateTickCounter >= settings.BaseUpdateInterval");
                 updateTickCounter = 0;
                 try
                 {
-                    //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"UpdateBeforeSimulations:Try SpawnEntitiesNearBlocks");
                     int entitiesSpawned = 0;
                     SpawnEntitiesNearBlocks(ref entitiesSpawned);
                 }
@@ -454,19 +441,13 @@ MaxEntitiesInArea=30
             }
         }
 
-
-
-
-
         private bool IsPlayerInRange(IMySlimBlock block, List<IMyPlayer> players, int playerDistanceCheck)
         {
-            // Always on if playerDistanceCheck is -1
             if (playerDistanceCheck == -1)
             {
                 return true;
             }
 
-            // Any player online if playerDistanceCheck is 0
             if (playerDistanceCheck == 0)
             {
                 return players.Count > 0;
@@ -491,10 +472,8 @@ MaxEntitiesInArea=30
             return false;
         }
 
-
         private bool IsValidBlock(string typeId, string subtypeId)
         {
-            ////MyAPIGateway.Utilities.ShowMessage("STARTTEST", "IsValidBlock");
             return settings.BlockSpawnSettings.Exists(s => s.BlockType == typeId && s.BlockId == subtypeId);
         }
 
@@ -550,8 +529,6 @@ MaxEntitiesInArea=30
             return true;
         }
 
-
-
         private int GetEntityCountInRadius(Vector3D blockPosition, string requiredEntity, double requiredEntityRadius)
         {
             var entities = new HashSet<IMyEntity>();
@@ -568,46 +545,12 @@ MaxEntitiesInArea=30
             return entityCount;
         }
 
-
-        private bool CheckForRequiredEntities(Vector3D blockPosition, string requiredEntity, double requiredEntityRadius, int requiredEntityNumber, bool requireEntityNumberForTotalEntities, int MaxEntitiesInArea)
-        {
-            MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", "CheckForRequiredEntities");
-            var entities = new HashSet<IMyEntity>();
-            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter && e.Name != null && e.Name.IndexOf(requiredEntity, StringComparison.OrdinalIgnoreCase) >= 0);
-
-            int requiredEntityCount = 0;
-            foreach (var entity in entities)
-            {
-                MyAPIGateway.Utilities.ShowMessage("EnityRadiusTest", $"foreach (var entity in entities) {requiredEntity}");
-                if (Vector3D.Distance(entity.GetPosition(), blockPosition) <= requiredEntityRadius)
-                {
-                    requiredEntityCount++;
-                }
-            }
-
-            if (requiredEntityCount > MaxEntitiesInArea)
-            {
-                return false;
-            }
-
-            if (requireEntityNumberForTotalEntities)
-            {
-                return requiredEntityCount >= requiredEntityNumber;
-            }
-            else
-            {
-                return requiredEntityCount > 0;
-            }
-        }
-
         private bool CheckInventoryForRequiredItems(IMySlimBlock block, BotSpawnerConfig blockSettings)
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "CheckInventoryForRequiredItems");
             var inventory = block.FatBlock.GetInventory() as IMyInventory;
             if (inventory == null)
             {
-                //LogError($"Block {block.FatBlock.BlockDefinition.SubtypeId} has no inventory. Skipping required item check.");
-                return true; // Skip check if no inventory
+                return true;
             }
 
             for (int i = 0; i < blockSettings.RequiredItemTypes.Count; i++)
@@ -623,9 +566,9 @@ MaxEntitiesInArea=30
 
             return true;
         }
+
         private void RemoveItemsFromInventory(IMySlimBlock block, BotSpawnerConfig blockSettings, int dropAmount)
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "RemoveItemsFromInventory");
             var inventory = block.FatBlock.GetInventory() as IMyInventory;
             if (inventory == null)
                 return;
@@ -638,6 +581,7 @@ MaxEntitiesInArea=30
                 inventory.RemoveItemsOfType(totalAmountToRemove, requiredItemType);
             }
         }
+
         private void SpawnEntities(IMySlimBlock block, BotSpawnerConfig settings, int spawnAmount)
         {
             for (int i = 0; i < settings.EntityID.Count; i++)
@@ -658,7 +602,6 @@ MaxEntitiesInArea=30
 
         private Vector3D CalculateDropPosition(IMySlimBlock block, BotSpawnerConfig blockSettings)
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "CalculateDropPosition");
             double heightOffset = randomGenerator.NextDouble() * (blockSettings.MaxHeight - blockSettings.MinHeight) + blockSettings.MinHeight;
             double radius = randomGenerator.NextDouble() * (blockSettings.MaxRadius - blockSettings.MinRadius) + blockSettings.MinRadius;
             double angle = randomGenerator.NextDouble() * Math.PI * 2;
@@ -674,7 +617,6 @@ MaxEntitiesInArea=30
 
         private List<int> GenerateProbabilities(int minAmount, int maxAmount)
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "GenerateProbabilities");
             int range = maxAmount - minAmount + 1;
             int middle = (range + 1) / 2;
             var probabilities = new List<int>();
@@ -689,7 +631,6 @@ MaxEntitiesInArea=30
 
         private int GetWeightedRandomNumber(int minAmount, List<int> probabilities)
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "GetWeightedRandomNumber");
             int totalWeight = probabilities.Sum();
             int randomValue = randomGenerator.Next(1, totalWeight + 1);
             int cumulativeWeight = 0;
@@ -700,18 +641,14 @@ MaxEntitiesInArea=30
                 if (randomValue <= cumulativeWeight)
                     return minAmount + i;
             }
-            return minAmount; // In case something goes wrong, return the minimum amount
+            return minAmount;
         }
+
         private void InitializeBotSpawnerConfig()
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "InitializeBotSpawnerConfig");
-            // Clear existing drop settings
             settings.BlockSpawnSettings.Clear();
-
-            // Re-load settings from the loaded configuration
             settings.Load();
 
-            // Log initialized settings
             foreach (var botSpawnerConfig in settings.BlockSpawnSettings)
             {
                 LogError($"Initialized settings for {botSpawnerConfig.BlockId}: " +
@@ -729,32 +666,16 @@ MaxEntitiesInArea=30
             LogError("Drop settings initialized.");
         }
 
-
-
         private void ReloadSettings()
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "ReloadSettings");
             try
             {
-
-
                 MyAPIGateway.Utilities.ShowMessage("PEPCO", "Reloading settings...");
                 LogError("Reloading settings...");
 
-                // Ensure default INI files exist
-                //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Ensure default INI files exist...");
-                LogError("Ensure default INI files exist...");
                 EnsureDefaultIniFilesExist();
-
-                // Copy all CES files to world storage
-                //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Copying all CES files to world storage...");
-                LogError("Copying all CES files to world storage...");
                 CopyAllCESFilesToWorldStorage();
-
-                // Reload all files from world storage
                 LoadAllFilesFromWorldStorage();
-
-                // Reload the main settings
                 InitializeBotSpawnerConfig();
 
                 MyAPIGateway.Utilities.ShowMessage("PEPCO", "Settings reloaded successfully.");
@@ -766,55 +687,45 @@ MaxEntitiesInArea=30
                 LogError($"Error reloading settings: {ex.Message}");
             }
         }
+
         private void CopyAllCESFilesToWorldStorage()
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "CopyAllCESFilesToWorldStorage");
             LogError("Starting CopyAllCESFilesToWorldStorage");
             try
             {
-                // Iterate through all mods in the current session
                 foreach (var modItem in MyAPIGateway.Session.Mods)
                 {
-                    // Construct the file path
                     string modFilePath = "Data/CES.ini";
                     LogError($"Checking for file: {modFilePath} in mod: {modItem.PublishedFileId}");
 
-                    // Check if the file exists in the mod data folder
                     if (MyAPIGateway.Utilities.FileExistsInModLocation(modFilePath, modItem))
                     {
                         LogError($"File found: {modFilePath} in mod: {modItem.PublishedFileId}");
 
-                        // Determine the destination file path in world storage
                         string worldStorageFilePath = $"{modItem.PublishedFileId}_CES.ini";
 
-                        // Check if the file already exists in world storage
                         if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(worldStorageFilePath, typeof(CustomEntitySpawner)))
                         {
-                            // Read the file from the mod data folder
                             string fileContent;
                             using (var reader = MyAPIGateway.Utilities.ReadFileInModLocation(modFilePath, modItem))
                             {
                                 fileContent = reader.ReadToEnd();
                             }
 
-                            // Write the file to world storage
                             using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(worldStorageFilePath, typeof(CustomEntitySpawner)))
                             {
                                 writer.Write(fileContent);
                             }
 
-                            //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"File copied to World Storage successfully from mod {modItem.PublishedFileId}.");
                             LogError($"File copied to World Storage successfully from mod {modItem.PublishedFileId}.");
                         }
                         else
                         {
-                            //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"File already exists in World Storage for mod {modItem.PublishedFileId}.");
                             LogError($"File already exists: {worldStorageFilePath} for mod: {modItem.PublishedFileId}");
                         }
                     }
                     else
                     {
-                        //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"File not found in Mod Data folder for mod {modItem.PublishedFileId}.");
                         LogError($"File not found: {modFilePath} in mod: {modItem.PublishedFileId}");
                     }
                 }
@@ -822,77 +733,62 @@ MaxEntitiesInArea=30
             catch (Exception ex)
             {
                 MyLog.Default.WriteLine($"Error copying files to World Storage: {ex.Message}");
-                //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Error copying files to World Storage: {ex.Message}");
                 LogError($"Error copying files to World Storage: {ex.Message}");
             }
         }
 
         private void LoadAllFilesFromWorldStorage()
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "LoadAllFilesFromWorldStorage");
             try
             {
-                // List of known configuration file names
                 List<string> knownConfigFiles = new List<string>
-        {
-            "GlobalConfig.ini",
-            "CustomEntitySpawner.ini"
-        };
+                {
+                    "GlobalConfig.ini",
+                    "CustomEntitySpawner.ini"
+                };
 
-                // Additional file patterns to check for
                 List<string> additionalFilePatterns = new List<string>
-        {
-            "_CES.ini"
-        };
+                {
+                    "_CES.ini"
+                };
 
-                // Clear existing settings
                 settings.BlockSpawnSettings.Clear();
 
-                // Load known config files
                 foreach (string configFileName in knownConfigFiles)
                 {
-                    //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Looking at {configFileName}.");
                     LogError($"Looking at {configFileName}");
                     if (MyAPIGateway.Utilities.FileExistsInWorldStorage(configFileName, typeof(CustomEntitySpawner)))
                     {
-                        //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Looking in world Storage for {configFileName}.");
                         LogError($"Looking in world Storage for {configFileName}");
                         using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(configFileName, typeof(CustomEntitySpawner)))
                         {
                             string fileContent = reader.ReadToEnd();
                             if (configFileName.Equals("GlobalConfig.ini", StringComparison.OrdinalIgnoreCase))
                             {
-                                //MyAPIGateway.Utilities.ShowMessage("GlobalConfig.ini", $"Loading GlobalConfig: {configFileName}.");
                                 LogError($"Loading GlobalConfig: {configFileName}");
                                 LoadGlobalConfig(fileContent);
                             }
                             else if (configFileName.Equals("CustomEntitySpawner.ini", StringComparison.OrdinalIgnoreCase))
                             {
-                                //MyAPIGateway.Utilities.ShowMessage("CustomItemSpawnerConfig.ini", $"Loading CustomItemSpawnerConfig: {configFileName}.");
-                                LogError($"Loading CustomItemSpawnerConfig: {configFileName}");
+                                LogError($"Loading CustomEntitySpawnerConfig: {configFileName}");
                                 LoadCustomEntitySpawnerConfig(fileContent);
                             }
                         }
                     }
                 }
 
-                // Load additional CES files
                 foreach (var modItem in MyAPIGateway.Session.Mods)
                 {
-                    //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Looking for: {modItem.PublishedFileId} in world storage folder");
                     LogError($"Looking for: {modItem.PublishedFileId} in world storage folder");
                     foreach (string pattern in additionalFilePatterns)
                     {
                         string cesFileName = $"{modItem.PublishedFileId}{pattern}";
-                        //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Looking for: {modItem.PublishedFileId} in {cesFileName}");
                         LogError($"Looking for: {modItem.PublishedFileId} in {cesFileName}");
                         if (MyAPIGateway.Utilities.FileExistsInWorldStorage(cesFileName, typeof(CustomEntitySpawner)))
                         {
-                            //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Found {modItem.PublishedFileId} in {cesFileName}");
                             LogError($"Found {modItem.PublishedFileId} in {cesFileName}");
                             using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(cesFileName, typeof(CustomEntitySpawner)))
                             {
-                                //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Loading: {modItem.PublishedFileId} in {cesFileName}");
                                 LogError($"Loading: {modItem.PublishedFileId} in {cesFileName}");
                                 string fileContent = reader.ReadToEnd();
                                 LogError($"Contents:, {fileContent}");
@@ -905,17 +801,12 @@ MaxEntitiesInArea=30
             catch (Exception ex)
             {
                 MyLog.Default.WriteLine($"Error loading files from World Storage: {ex.Message}");
-                //MyAPIGateway.Utilities.ShowMessage("CES.ini", $"Error loading files from World Storage: {ex.Message}");
                 LogError($"Error loading files from World Storage: {ex.Message}");
             }
         }
 
-
-
         private void LoadGlobalConfig(string fileContent)
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "LoadGlobalConfig");
-            // Parse and load global configuration settings from fileContent
             MyIni iniParser = new MyIni();
             MyIniParseResult result;
             if (!iniParser.TryParse(fileContent, out result))
@@ -923,7 +814,6 @@ MaxEntitiesInArea=30
                 throw new Exception($"Config error: {result.ToString()}");
             }
 
-            // Load specific global settings
             settings.BaseUpdateInterval = iniParser.Get("Config", "BaseUpdateInterval").ToInt32(60);
             settings.EnableLogging = iniParser.Get("Config", "EnableLogging").ToBoolean(true);
             settings.CleanupInterval = iniParser.Get("Config", "CleanupInterval").ToInt32(180);
@@ -980,7 +870,6 @@ MaxEntitiesInArea=30
 
                     settings.BlockSpawnSettings.Add(botSpawnerConfig);
 
-                    // Log loaded settings
                     LogError($"Loaded settings for {section}: " +
                              $"BlockType={botSpawnerConfig.BlockType}, MinAmount={botSpawnerConfig.MinAmount}, MaxAmount={botSpawnerConfig.MaxAmount}, " +
                              $"DamageAmount={botSpawnerConfig.DamageAmount}, MinHealthPercentage={botSpawnerConfig.MinHealthPercentage}, " +
@@ -1004,8 +893,6 @@ MaxEntitiesInArea=30
             }
         }
 
-
-
         private void LogError(string message)
         {
             if (!settings.EnableLogging)
@@ -1014,7 +901,6 @@ MaxEntitiesInArea=30
             string logFilePath = "CustomEntitySpawner.log";
             string existingContent = "";
 
-            // Read the existing content if the file exists
             if (MyAPIGateway.Utilities.FileExistsInWorldStorage(logFilePath, typeof(CustomEntitySpawner)))
             {
                 using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(logFilePath, typeof(CustomEntitySpawner)))
@@ -1023,7 +909,6 @@ MaxEntitiesInArea=30
                 }
             }
 
-            // Append the new log entry
             using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(logFilePath, typeof(CustomEntitySpawner)))
             {
                 if (!string.IsNullOrEmpty(existingContent))
@@ -1042,17 +927,15 @@ MaxEntitiesInArea=30
         private const string IniSection = "Config";
 
         public int BaseUpdateInterval { get; set; } = 60;
-        public bool EnableLogging { get; set; } = true; // Default value is true
-        public int CleanupInterval { get; set; } = 18000; //5 min;
+        public bool EnableLogging { get; set; } = true;
+        public int CleanupInterval { get; set; } = 18000;
 
         public List<BotSpawnerConfig> BlockSpawnSettings { get; set; } = new List<BotSpawnerConfig>();
 
         public void Load()
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "Load");
             MyIni iniParser = new MyIni();
 
-            // Load global settings
             if (MyAPIGateway.Utilities.FileExistsInWorldStorage(GlobalFileName, typeof(CustomEntitySpawnerSettings)))
             {
                 using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(GlobalFileName, typeof(CustomEntitySpawnerSettings)))
@@ -1063,7 +946,6 @@ MaxEntitiesInArea=30
                     if (!iniParser.TryParse(text, out result))
                         throw new Exception($"Config error: {result.ToString()}");
 
-                    // Load base settings
                     BaseUpdateInterval = iniParser.Get(IniSection, nameof(BaseUpdateInterval)).ToInt32(BaseUpdateInterval);
                     EnableLogging = iniParser.Get(IniSection, nameof(EnableLogging)).ToBoolean(EnableLogging);
                     CleanupInterval = iniParser.Get(IniSection, nameof(CleanupInterval)).ToInt32(CleanupInterval);
@@ -1074,7 +956,6 @@ MaxEntitiesInArea=30
                 throw new Exception("GlobalConfig.ini not found.");
             }
 
-            // Load block drop settings from CustomEntitySpawner.ini
             if (MyAPIGateway.Utilities.FileExistsInWorldStorage(EntitySpawnerFileName, typeof(CustomEntitySpawnerSettings)))
             {
                 using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(EntitySpawnerFileName, typeof(CustomEntitySpawnerSettings)))
@@ -1093,7 +974,6 @@ MaxEntitiesInArea=30
                 throw new Exception("CustomEntitySpawner.ini not found.");
             }
 
-            // Load block drop settings from _CES.ini files
             foreach (var modItem in MyAPIGateway.Session.Mods)
             {
                 string cesFileName = $"{modItem.PublishedFileId}_CES.ini";
@@ -1112,9 +992,9 @@ MaxEntitiesInArea=30
                 }
             }
         }
+
         private void LoadBlockSpawnSettings(MyIni iniParser)
         {
-            //MyAPIGateway.Utilities.ShowMessage("STARTTEST", "LoadBlockSpawnSettings");
             List<string> sections = new List<string>();
             iniParser.GetSections(sections);
 
@@ -1185,6 +1065,5 @@ MaxEntitiesInArea=30
         public int RequiredEntityNumber { get; set; } = 0;
         public bool RequireEntityNumberForTotalEntities { get; set; } = false;
         public int MaxEntitiesInArea { get; set; } = 10;
-
     }
 }
