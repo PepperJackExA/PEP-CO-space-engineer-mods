@@ -14,6 +14,8 @@ const app = Vue.createApp({
       visible2: false,
       visible3: false,
       visible4: false,
+      visibleBlockData: false,
+      selectedBlocksString: localStorage.getItem("selectedBlocks")
     }
   },
   methods: {
@@ -158,6 +160,7 @@ const app = Vue.createApp({
         var componentWeight = componentLookup.weight
         var componentAmount = component.amount
         this.totalVolume += componentVolume * componentAmount
+        this.totalVolume = Math.round(this.totalVolume * 1000);
         this.totalWeight += componentWeight * componentAmount
       });
     },
@@ -192,6 +195,10 @@ const app = Vue.createApp({
       } else {
         this.sizeFilter = "large/small"; // Toggle back to empty string
       }
+    },
+    updateSelectedBlocks(){
+      this.selectedBlocks = JSON.parse(this.selectedBlocksString) || this.selectedBlocks
+      
     }
   },
   computed: {
@@ -205,11 +212,12 @@ const app = Vue.createApp({
       } else {
         return null;
       }
-    }
+    },
   },
   created() {
     this.$watch("selectedBlocks", (newSelectedBlocks) => {
       this.calculateComponentList(),
+      this.selectedBlocksString = JSON.stringify(this.selectedBlocks)
         localStorage.setItem('selectedBlocks', JSON.stringify(this.selectedBlocks));
     }, { deep: true });
     this.$watch("componentList", (newComponentList) => {

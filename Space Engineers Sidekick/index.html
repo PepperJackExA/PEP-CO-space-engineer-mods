@@ -229,7 +229,7 @@
         /* Emphasize button text */
         transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         /* Smooth hover effect */
-        min-height: 32px;
+        line-height: 32px;
 
     }
     .pointer,
@@ -241,7 +241,7 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
-        margin-top: 5px;
+
         text-align: center;
     }
 
@@ -411,7 +411,7 @@
                 <div v-else>
 
                     <div class="top-metrics">
-                        <span>Total Volume: {{totalVolume*1000 | round0}}l</span></p>
+                        <span>Total Volume: {{totalVolume}}l</span></p>
                         <span>Total Weight: {{totalWeight}}kg</span></p>
                     </div>
                     <h2 @click="visible1 = !visible1" v-bind:class="{ active: visible1 }" class="accordion" style="text-transform: uppercase;">Block List ({{filteredBlocks.length}})</h2>
@@ -444,7 +444,7 @@
                             <tr v-for="block in filteredBlocks" :key="block.id" :title="componentDisplay(block)">
                                 <td >{{ block.displayName }}</td>
                                 <td>{{ block.size }}</td>
-                                <td><iconify-icon icon="mdi:package-variant-plus"
+                                <td><iconify-icon class="no-select" icon="mdi:package-variant-plus"
                                         style="color: white; font-size: 2em; flex-grow: .5"
                                         @click="addToSelection($event, block)"></iconify-icon></td>
                             </tr>
@@ -455,6 +455,10 @@
                         Selected blocks ({{ selectedBlocks.length }})
                     </h2>
                     <div v-show="visible2" class="panel">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-left: 1em;">
+                            <span class="button no-select" style="width: 100px;" @click="visibleBlockData = !visibleBlockData">show data</span>
+                            <input class="button searchBox" v-show="visibleBlockData" style="flex-grow: 2; min-height: 42px; margin-left: 1em;" type="text" v-model="selectedBlocksString" @change="updateSelectedBlocks" placeholder="search blocks">
+                        </div>
                         <table class="selection-table panel">
                             <tr class="table-content" class="header">
                                 <td style="width: 50%;">Block Name</td>
