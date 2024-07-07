@@ -5,6 +5,7 @@ const app = Vue.createApp({
       isDragging: false,
       importObject: localStorage.getItem("importObject") ? JSON.parse(localStorage.getItem("importObject")) : null,
       search: "", //Search string for block name
+      sizeFilter: "large/small",
       selectedBlocks: localStorage.getItem("selectedBlocks") ? JSON.parse(localStorage.getItem("selectedBlocks")) : [], //Array for the blocks that were selected as part of the planner
       componentList: [],
       totalVolume: 0,
@@ -129,12 +130,14 @@ const app = Vue.createApp({
           if (indexLookup != -1) { //Component already exists in the List so we replace the current one and sum the components
             this.componentList[indexLookup] = {
               "componentID": currentComponentID,
+              "componentDisplayName": componentfromBlock.displayName,
               "amount": this.componentList[indexLookup].amount + (currentComponentAmount * selectedBlockAmount)
             }
           }
           else { //Component doesn't exist so we create the entry from scratch
             var addedComponents = {
               "componentID": componentfromBlock.componentID,
+              "componentDisplayName": componentfromBlock.displayName,
               "amount": currentComponentAmount * selectedBlockAmount
             }
             this.componentList.push(addedComponents)
@@ -166,17 +169,41 @@ const app = Vue.createApp({
       this.importObject = null
       localStorage.setItem('importObject', JSON.stringify(this.importObject));
       localStorage.setItem('selectedBlocks', JSON.stringify(this.selectedBlocks));
+    },
+    componentDisplay(block){
+      var displayString = []
+      var index = 0
+      block.components.forEach(component => {
+        displayString.push(component.displayName + ": " + (component.amount + (index <= block.isCritical ? " (functional)" : "")))
+          index++
+        })
+        displayString = displayString.join("\n")
+        if (block.modContext != "()") {
+          displayString += "\nMod: "+block.modContext
+        }
+        else displayString += "\nMod: Vanilla";
+        return displayString
+    },
+    toggleSizeFilter() {
+      if (this.sizeFilter === "large/small") {
+        this.sizeFilter = "large";
+      } else if (this.sizeFilter === "large") {
+        this.sizeFilter = "small";
+      } else {
+        this.sizeFilter = "large/small"; // Toggle back to empty string
+      }
     }
   },
   computed: {
     filteredBlocks: function () {
       if (this.importObject.blocks != null) {
         return this.importObject.blocks.filter((block) => {
-          return block.displayName.toUpperCase().match(this.search.toUpperCase())
-        })
-      }
-      else {
-        return null
+          const displayNameMatches = block.displayName.toUpperCase().includes(this.search.toUpperCase());
+          const sizeMatches = this.sizeFilter === "large/small" || block.size.toUpperCase() === this.sizeFilter.toUpperCase();
+          return displayNameMatches && sizeMatches;
+        });
+      } else {
+        return null;
       }
     }
   },

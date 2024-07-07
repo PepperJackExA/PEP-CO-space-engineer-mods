@@ -229,6 +229,8 @@
         /* Emphasize button text */
         transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
         /* Smooth hover effect */
+        min-height: 32px;
+
     }
     .pointer,
     .numberInput,
@@ -240,6 +242,7 @@
         align-items: center;
         margin: 0 auto;
         margin-top: 5px;
+        text-align: center;
     }
 
     input[type="number"]::-webkit-outer-spin-button,
@@ -408,10 +411,10 @@
                 <div v-else>
 
                     <div class="top-metrics">
-                        <span>Total Volume: {{totalVolume}}l</span></p>
+                        <span>Total Volume: {{totalVolume*1000 | round0}}l</span></p>
                         <span>Total Weight: {{totalWeight}}kg</span></p>
                     </div>
-                    <h2 @click="visible1 = !visible1" v-bind:class="{ active: visible1 }" class="accordion" style="text-transform: uppercase;">Block List</h2>
+                    <h2 @click="visible1 = !visible1" v-bind:class="{ active: visible1 }" class="accordion" style="text-transform: uppercase;">Block List ({{filteredBlocks.length}})</h2>
                     <div v-show="visible1" class="panel">
                         <table class="block-table panel">
                             <tr class="table-content">
@@ -425,8 +428,10 @@
                                     </div>
 
                                 </td>
-                                <td class="secColumn">
-                                    Size Selection
+                                <td  @click="toggleSizeFilter" >
+                                    <span class="button pointer" style="justify-content: space-around;">
+                                        {{this.sizeFilter}}
+                                    </span>
                                 </td>
                                 <td class="secColumn">
                                 </td>
@@ -436,8 +441,8 @@
                                 <td>Block Size</td>
                                 <td></td>
                             </tr>
-                            <tr v-for="block in filteredBlocks">
-                                <td>{{ block.displayName }}</td>
+                            <tr v-for="block in filteredBlocks" :key="block.id" :title="componentDisplay(block)">
+                                <td >{{ block.displayName }}</td>
                                 <td>{{ block.size }}</td>
                                 <td><iconify-icon icon="mdi:package-variant-plus"
                                         style="color: white; font-size: 2em; flex-grow: .5"
@@ -447,7 +452,7 @@
                     </div>
 
                     <h2 @click="visible2 = !visible2" v-bind:class="{ active: visible2 }" class="accordion" style="text-transform: uppercase;">
-                        {{ selectedBlocks.length }} Selected block{{ selectedBlocks.length != 1 ? 's' : '' }}
+                        Selected blocks ({{ selectedBlocks.length }})
                     </h2>
                     <div v-show="visible2" class="panel">
                         <table class="selection-table panel">
@@ -480,9 +485,8 @@
                             </tr>
                         </table>
                     </div>
-                    <h2 @click="visible3 = !visible3" v-bind:class="{ active: visible3 }" class="accordion" style="text-transform: uppercase;">{{componentList.length}} Component{{
-                        componentList.length !=
-                        1 ? 's' : '' }}</h2>
+                    <h2 @click="visible3 = !visible3" v-bind:class="{ active: visible3 }" class="accordion" style="text-transform: uppercase;">Components ({{componentList.length}})
+                       </h2>
                     <div v-show="visible3" class="panel">
                         <table class="tables">
                             <tr>
@@ -490,7 +494,7 @@
                                 <td class="align-right">Amount</td>
                             </tr>
                             <tr v-for="component in componentList">
-                                <td>{{component.componentID}}</td>
+                                <td>{{component.componentDisplayName}}</td>
                                 <td class="align-right">{{component.amount}}</td>
                             </tr>
                         </table>
