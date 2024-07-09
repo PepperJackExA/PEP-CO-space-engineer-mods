@@ -56,38 +56,38 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 [Config]
 BaseUpdateInterval=60    
 EnableLogging=false
-CleanupInterval=180
+CleanupInterval=9000
 ";
 
         private const string DefaultEntitySpawnerIniContent = @"
 ; ==============================================
 ; HOW TO USE CustomEntitySpawner.ini
 ; ==============================================
-[LargeBlockSmallContainer]
-BlockType=MyObjectBuilder_CargoContainer
-MinAmount=1
-MaxAmount=1
-UseWeightedDrops=false
-DamageAmount=0
-MinHealthPercentage=0.2
-MaxHealthPercentage=1
-MinHeight=0.5
-MaxHeight=2.0
-MinRadius=0.5
-MaxRadius=2.0
-SpawnTriggerInterval=3
-EnableAirtightAndOxygen=false
-Enabled=true
-PlayerDistanceCheck=100
-EntityID=Wolf
-RequiredItemTypes=MyObjectBuilder_Component
-RequiredItemIds=SteelPlate
-RequiredItemAmounts=0
-RequiredEntity=Wolf
-RequiredEntityRadius=10
-RequiredEntityNumber=0
-RequireEntityNumberForTotalEntities=false
-MaxEntitiesInArea=30
+;[LargeBlockSmallContainer]
+;BlockType=MyObjectBuilder_CargoContainer
+;MinAmount=1
+;MaxAmount=1
+;UseWeightedDrops=false
+;DamageAmount=0
+;MinHealthPercentage=0.2
+;MaxHealthPercentage=1
+;MinHeight=0.5
+;MaxHeight=2.0
+;MinRadius=0.5
+;MaxRadius=2.0
+;SpawnTriggerInterval=3
+;EnableAirtightAndOxygen=false
+;Enabled=true
+;PlayerDistanceCheck=100
+;EntityID=Wolf
+;RequiredItemTypes=MyObjectBuilder_Component
+;RequiredItemIds=SteelPlate
+;RequiredItemAmounts=0
+;RequiredEntity=Wolf
+;RequiredEntityRadius=10
+;RequiredEntityNumber=0
+;RequireEntityNumberForTotalEntities=false
+;MaxEntitiesInArea=30
 ";
 
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
