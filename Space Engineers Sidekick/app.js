@@ -4,6 +4,7 @@ const app = Vue.createApp({
       isLoaded: false,
       isDragging: false,
       importObject: localStorage.getItem("importObject") ? JSON.parse(localStorage.getItem("importObject")) : null,
+      importText: "",
       search: "", //Search string for block name
       sizeFilter: "large/small",
       selectedBlocks: localStorage.getItem("selectedBlocks") ? JSON.parse(localStorage.getItem("selectedBlocks")) : [], //Array for the blocks that were selected as part of the planner
@@ -15,7 +16,8 @@ const app = Vue.createApp({
       visible3: false,
       visible4: false,
       visibleBlockData: false,
-      selectedBlocksString: localStorage.getItem("selectedBlocks")
+      selectedBlocksString: localStorage.getItem("selectedBlocks"),
+      icons: []
     }
   },
   methods: {
@@ -199,20 +201,50 @@ const app = Vue.createApp({
     updateSelectedBlocks(){
       this.selectedBlocks = JSON.parse(this.selectedBlocksString) || this.selectedBlocks
       
-    }
-  },
-  computed: {
-    filteredBlocks: function () {
-      if (this.importObject.blocks != null) {
-        return this.importObject.blocks.filter((block) => {
-          const displayNameMatches = block.displayName.toUpperCase().includes(this.search.toUpperCase());
-          const sizeMatches = this.sizeFilter === "large/small" || block.size.toUpperCase() === this.sizeFilter.toUpperCase();
-          return displayNameMatches && sizeMatches;
-        });
-      } else {
-        return null;
+    },
+    updateImportObject(value) {
+      this.clearInput()
+      
+      try {
+        this.importObject = JSON.parse(value)
+        localStorage.setItem('importObject', JSON.stringify(this.importObject))
+        this.importText = ""
+      } catch (error) {
+        console.log(error)
+        this.importObject = null
+        this.importText = ""
       }
     },
+    lookupIcon(block){
+      var indexLookup = this.icons.findIndex((iconName) => {
+        return iconName == block.icon
+      })
+      if (indexLookup != -1) return 'assets/Icons/'+block.icon+'.png'
+      else return 'assets/Icons/Symbol_X.png'
+      }
+  },
+  computed: {
+    filteredBlocks() {
+      if (this.importObject.blocks != null) {
+        return this.importObject.blocks
+          .filter((block) => {
+            const displayNameMatches = block.displayName.toUpperCase().includes(this.search.toUpperCase());
+            const sizeMatches = this.sizeFilter === "large/small" || block.size.toUpperCase() === this.sizeFilter.toUpperCase();
+            return displayNameMatches && sizeMatches;
+          })
+          .sort((a, b) => {
+            if (a.displayName.toUpperCase() < b.displayName.toUpperCase()) {
+              return -1;
+            }
+            if (a.displayName.toUpperCase() > b.displayName.toUpperCase()) {
+              return 1;
+            }
+            return 0;
+          });
+      } else {
+        return [];
+      }
+    }
   },
   created() {
     this.$watch("selectedBlocks", (newSelectedBlocks) => {
@@ -224,6 +256,18 @@ const app = Vue.createApp({
       this.calculateComponentValue()
     }, { deep: true });
     this.calculateComponentList()
+  },
+  async mounted() {
+    try {
+      const response = await fetch('assets/Icons/icons.json');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      this.icons = data.icons;
+    } catch (error) {
+      console.error('Error fetching the icon assets:', error);
+    }
   }
 });
 

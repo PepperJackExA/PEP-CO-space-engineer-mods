@@ -1,5 +1,6 @@
 ﻿using Digi;
 using Sandbox.Definitions;
+using Sandbox.Game;
 using Sandbox.Game.Entities.Cube;
 using Sandbox.ModAPI;
 using System;
@@ -14,7 +15,6 @@ using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.ModAPI;
 using VRage.Library.Collections;
-using static Sandbox.Game.Replication.History.MySnapshotHistory;
 
 namespace PEPONE_Sidekick
 {
@@ -113,8 +113,8 @@ namespace PEPONE_Sidekick
                 VRage.Utils.MyClipboardHelper.SetClipboard(outputString);
                 MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Your sidekick export was successful!\n" +
                     $"The data has been copied to your clipboard. Just go ahead and paste it into the sidekick web app.");
-                
 
+                MyVisualScriptLogicProvider.OpenSteamOverlayLocal("https://steamcommunity.com/sharedfiles/filedetails/?id=3283057514");
             }
 
 

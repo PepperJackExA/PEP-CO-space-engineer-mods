@@ -112,6 +112,15 @@
 
     }
 
+    .flex-center {
+        /* Centers the div horizontally */
+        display: flex;
+        justify-content: center;
+        /* Centers content horizontally */
+        align-items: center;
+        /* Centers content vertically */
+    }
+
     .file-upload {
         border: 2px dashed #ccc;
         padding: 20px;
@@ -121,12 +130,6 @@
         max-width: 50%;
         min-height: 300px;
         margin: 0 auto;
-        /* Centers the div horizontally */
-        display: flex;
-        justify-content: center;
-        /* Centers content horizontally */
-        align-items: center;
-        /* Centers content vertically */
     }
 
     .file-upload input[type="file"] {
@@ -209,7 +212,7 @@
     }
 
 
-    .button{
+    .button {
         background-color: #d65601;
         /* Orange accent color */
         color: white;
@@ -232,6 +235,7 @@
         line-height: 32px;
 
     }
+
     .pointer,
     .numberInput,
     .searchBox {
@@ -352,7 +356,6 @@
     .active:after {
         content: "\2212";
     }
-
 </style>
 
 <head>
@@ -402,11 +405,19 @@
                 <div v-if="importObject == null">
                     <h2>Welcome to the Space Engineers Sidekick. <p></p>Upload the .json file you created within the
                         game to start.</h2>
-                    <div class="file-upload" @drop.prevent="handleDrop">
-                        <input type="file" id="fileInput" accept=".json" multiple="false" @change="handleFiles">
-                        <label v-if="!isDragging" for="fileInput">Drag and drop files here or click to upload</label>
-                        <label v-else for="fileInput">Drop it here</label>
+                    <div class="flex-center" @drop.prevent="handleDrop" style="flex-direction: row;">
+                        <div class="file-upload flex-center">
+                            <input type="file" id="fileInput" accept=".json" multiple="false" @change="handleFiles">
+                            <label v-if="!isDragging" for="fileInput">Drag and drop files here or click to
+                                upload</label>
+                            <label v-else for="fileInput">Drop it here</label>
+                        </div>
+                        <div class="file-upload searchBox" style="margin: 0 auto;">
+                            <input class="searchBox button" style="min-width: 300px; min-height: 300px;" type="text" placeholder="paste your content from the mod here"
+                            @change="updateImportObject($event.target.value)">
+                        </div>
                     </div>
+
                 </div>
                 <div v-else>
 
@@ -414,13 +425,14 @@
                         <span>Total Volume: {{totalVolume}}l</span></p>
                         <span>Total Weight: {{totalWeight}}kg</span></p>
                     </div>
-                    <h2 @click="visible1 = !visible1" v-bind:class="{ active: visible1 }" class="accordion" style="text-transform: uppercase;">Block List ({{filteredBlocks.length}})</h2>
+                    <h2 @click="visible1 = !visible1" v-bind:class="{ active: visible1 }" class="accordion"
+                        style="text-transform: uppercase;">Block List ({{filteredBlocks.length}})</h2>
                     <div v-show="visible1" class="panel">
                         <table class="block-table panel">
                             <tr class="table-content">
                                 <td>
                                     <div class="searchBox button">
-                                        <input style="flex-grow: 10" type="text" v-model="search"
+                                        <input class="searchBox" style="flex-grow: 10" type="text" v-model="search"
                                             placeholder="search blocks">
                                         <iconify-icon icon="mdi:remove"
                                             style="color: white; font-size: 2em; flex-grow: .5"
@@ -428,7 +440,7 @@
                                     </div>
 
                                 </td>
-                                <td  @click="toggleSizeFilter" >
+                                <td @click="toggleSizeFilter">
                                     <span class="button pointer" style="justify-content: space-around;">
                                         {{this.sizeFilter}}
                                     </span>
@@ -442,7 +454,11 @@
                                 <td></td>
                             </tr>
                             <tr v-for="block in filteredBlocks" :key="block.id" :title="componentDisplay(block)">
-                                <td >{{ block.displayName }}</td>
+                                <td style="display: flex; justify-content: flex-start; align-items: center; width: auto;">
+                                    <img :src="lookupIcon(block)"
+                                        style="width: 2em; margin-right: 1em;" alt="">
+                                    {{ block.displayName }}
+                                </td>
                                 <td>{{ block.size }}</td>
                                 <td><iconify-icon class="no-select" icon="mdi:package-variant-plus"
                                         style="color: white; font-size: 2em; flex-grow: .5"
@@ -451,13 +467,19 @@
                         </table>
                     </div>
 
-                    <h2 @click="visible2 = !visible2" v-bind:class="{ active: visible2 }" class="accordion" style="text-transform: uppercase;">
+                    <h2 @click="visible2 = !visible2" v-bind:class="{ active: visible2 }" class="accordion"
+                        style="text-transform: uppercase;">
                         Selected blocks ({{ selectedBlocks.length }})
                     </h2>
                     <div v-show="visible2" class="panel">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-left: 1em;">
-                            <span class="button no-select" style="width: 100px;" @click="visibleBlockData = !visibleBlockData">show data</span>
-                            <input class="button searchBox" v-show="visibleBlockData" style="flex-grow: 2; min-height: 42px; margin-left: 1em;" type="text" v-model="selectedBlocksString" @change="updateSelectedBlocks" placeholder="search blocks">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-left: 1em;">
+                            <span class="button no-select" style="width: 100px;"
+                                @click="visibleBlockData = !visibleBlockData">show data</span>
+                            <input class="button searchBox" v-show="visibleBlockData"
+                                style="flex-grow: 2; min-height: 42px; margin-left: 1em;" type="text"
+                                v-model="selectedBlocksString" @change="updateSelectedBlocks"
+                                placeholder="search blocks">
                         </div>
                         <table class="selection-table panel">
                             <tr class="table-content" class="header">
@@ -489,8 +511,9 @@
                             </tr>
                         </table>
                     </div>
-                    <h2 @click="visible3 = !visible3" v-bind:class="{ active: visible3 }" class="accordion" style="text-transform: uppercase;">Components ({{componentList.length}})
-                       </h2>
+                    <h2 @click="visible3 = !visible3" v-bind:class="{ active: visible3 }" class="accordion"
+                        style="text-transform: uppercase;">Components ({{componentList.length}})
+                    </h2>
                     <div v-show="visible3" class="panel">
                         <table class="tables">
                             <tr>
@@ -503,7 +526,8 @@
                             </tr>
                         </table>
                     </div>
-                    <h2 @click="visible4 = !visible4" v-bind:class="{ active: visible4 }" class="accordion" style="text-transform: uppercase;">Loadmaster output</h2>
+                    <h2 @click="visible4 = !visible4" v-bind:class="{ active: visible4 }" class="accordion"
+                        style="text-transform: uppercase;">Loadmaster output</h2>
                     <div v-show="visible4" class="panel">
                         <div>TM SOON</div>
                     </div>
