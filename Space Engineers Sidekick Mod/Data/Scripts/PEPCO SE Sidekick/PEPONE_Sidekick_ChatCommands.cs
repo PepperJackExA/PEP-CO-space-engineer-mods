@@ -30,12 +30,14 @@ namespace PEPONE_Sidekick
         {
             try
             {
-                if (!messageText.StartsWith(MainCommand))
+                if (!messageText.ToUpper().StartsWith(MainCommand.ToUpper()))
                     return;
 
                 sendToOthers = false;
 
-                Mod.HelloPepper();
+                bool exportToFile = messageText.ToUpper().EndsWith("FILE");
+
+                Mod.ExportBlocks(exportToFile);
 
             }
             catch (Exception ex) {
