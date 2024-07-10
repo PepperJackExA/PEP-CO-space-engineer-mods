@@ -12,7 +12,7 @@ const app = Vue.createApp({
       totalVolume: 0,
       totalWeight: 0,
       visible1: false,
-      visible2: false,
+      visible2: true,
       visible3: false,
       visible4: false,
       visibleBlockData: false,
@@ -65,19 +65,13 @@ const app = Vue.createApp({
       })
       // console.log(indexLookup)
       if (indexLookup != -1) {
-        this.selectedBlocks[indexLookup] = {
-          "displayName": block.displayName,
-          "size": block.size,
-          "amount": amount + this.selectedBlocks[indexLookup].amount
-        }
+        this.selectedBlocks[indexLookup].amount += amount
       }
       else {
-        var addedBlock = {
-          "displayName": block.displayName,
-          "size": block.size,
-          "amount": amount
-        }
+        var addedBlock = block
+        addedBlock.amount = amount
         this.selectedBlocks.push(addedBlock)
+        //console.log(addedBlock)
       }
       // 3. Sort the selectedBlocks array alphabetically by displayName
       this.selectedBlocks.sort((blockA, blockB) => {
@@ -148,6 +142,16 @@ const app = Vue.createApp({
             // console.log(this.componentList)
           }
 
+          this.componentList.sort((a, b) => {
+            if (a.componentDisplayName < b.componentDisplayName) {
+              return -1;
+            }
+            if (a.componentDisplayName > b.componentDisplayName) {
+              return 1;
+            }
+            return 0;
+          });
+
         });
       });
     },
@@ -162,7 +166,6 @@ const app = Vue.createApp({
         var componentWeight = componentLookup.weight
         var componentAmount = component.amount
         this.totalVolume += componentVolume * componentAmount
-        this.totalVolume = Math.round(this.totalVolume * 1000);
         this.totalWeight += componentWeight * componentAmount
       });
     },
@@ -175,19 +178,37 @@ const app = Vue.createApp({
       localStorage.setItem('importObject', JSON.stringify(this.importObject));
       localStorage.setItem('selectedBlocks', JSON.stringify(this.selectedBlocks));
     },
-    componentDisplay(block){
-      var displayString = []
-      var index = 0
-      block.components.forEach(component => {
-        displayString.push(component.displayName + ": " + (component.amount + (index <= block.isCritical ? " (functional)" : "")))
-          index++
-        })
-        displayString = displayString.join("\n")
+    componentDisplay(block) {
+      // Initialize an array to hold the display strings
+      var displayString = [];
+      var index = 0;
+    
+      try {
+        // Iterate over each component in the block
+        block.components.forEach(component => {
+          // Construct the display string for each component
+          displayString.push(component.displayName + ": " + (component.amount + (index <= block.isCritical ? " (functional)" : " (optional)")));
+          index++;
+        });
+    
+        // Join the array into a single string with newline characters
+        displayString = displayString.join("\n");
+    
+        // Add mod context information to the display string
         if (block.modContext != "()") {
-          displayString += "\nMod: "+block.modContext
+          displayString += "\nMod: " + block.modContext.replace(".sbm","");
+        } else {
+          displayString += "\nMod: Vanilla";
         }
-        else displayString += "\nMod: Vanilla";
-        return displayString
+    
+      } catch (error) {
+        // Handle any errors that occur during the process
+        console.error('Error generating component display:', error);
+        return 'Error generating component display';
+      }
+    
+      // Return the final display string
+      return displayString;
     },
     toggleSizeFilter() {
       if (this.sizeFilter === "large/small") {
@@ -221,6 +242,9 @@ const app = Vue.createApp({
       })
       if (indexLookup != -1) return 'assets/Icons/'+block.icon+'.png'
       else return 'assets/Icons/Symbol_X.png'
+      },
+        roundToZero(value) {
+          return Math.round(value);
       }
   },
   computed: {

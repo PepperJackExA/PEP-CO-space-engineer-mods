@@ -1,0 +1,406 @@
+* {
+    font-family: "Kanit", "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+h1 {
+    color: #d65601;
+    text-align: center;
+    font-size: 3em;
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.parallax {
+    background-image: url("assets/bckgrnd.png");
+    min-height: 1080px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom 108px;
+
+}
+
+.b-header-nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: black;
+}
+
+.top-nav-elements {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: 150px;
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+.b-header-logo img {
+    width: 108px;
+    height: 108px;
+    padding: 10px;
+}
+
+.navlinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the navs horizontally */
+}
+
+.topnav,
+.bottomnav {
+    display: flex;
+    width: 900px;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+    /* Ensure items are stacked horizontally */
+}
+
+.topnav a,
+.bottomnav a {
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.topnav a:hover,
+.bottomnav a:hover {
+    text-decoration: underline;
+    /* Show underline on hover */
+}
+
+.topnav a {
+    font-size: 1rem;
+}
+
+.bottomnav a {
+    font-size: 1.5rem;
+}
+
+.separator {
+    width: 900px;
+    border: 1px solid #d65601;
+    /* Customize the line style */
+    margin: 20px 0;
+    /* Add some space around the line */
+}
+
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.content {
+    margin: 0 auto;
+    margin-top: 150px;
+    text-align: center;
+
+}
+
+.flex-center {
+    /* Centers the div horizontally */
+    display: flex;
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+}
+
+.file-upload {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+    background-color: black;
+    max-width: 50%;
+    min-height: 300px;
+    margin: 0 auto;
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-upload label {
+    cursor: pointer;
+}
+
+table {
+    margin: 0 auto;
+    width: 90%;
+    table-layout: fixed;
+
+}
+
+tr:not(.table-content):hover {
+    background-color: #ff6f005b;
+}
+
+.table-content tr:hover {
+    background-color: #ffffff00;
+}
+
+.table-content td {
+    height: 100%;
+}
+
+.block-table th,
+td:not(.table-content) {
+    padding: 10px;
+    border-bottom: 1px solid #dddddd53;
+    /* Optional padding for cells */
+}
+
+.block-table th:first-child,
+.block-table td:first-child {
+    width: 75%;
+}
+
+.block-table th:nth-child(2),
+.block-table td:nth-child(2) {
+    width: 20%;
+    text-align: center;
+}
+
+.block-table th:nth-child(3),
+.block-table td:nth-child(3) {
+    width: 5%;
+}
+
+.block-table .header td {
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: bold;
+    font-size: 1.2rem;
+}
+
+
+
+.top-metrics {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Enable wrap around */
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+.top-metrics span {
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+#sidekickApp {
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 1080px;
+    max-width: 1030px;
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+
+.button {
+    background-color: #d65601;
+    /* Orange accent color */
+    color: white;
+    /* Text color */
+    padding: 5px 10px;
+    /* Padding around the text */
+    border: none;
+    /* Remove default button border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Indicate interactivity on hover */
+    /*display: inline-block; /* Allow for inline positioning */
+    text-align: center;
+    /* Center text within the button */
+    font-weight: normal;
+    /* Emphasize button text */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    /* Smooth hover effect */
+    line-height: 32px;
+
+}
+
+.pointer,
+.numberInput,
+.searchBox {
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.numberInput input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+.searchBox input,
+.numberInput input {
+    background-color: #d65601;
+    border: none;
+}
+
+.searchBox input::placeholder {
+    color: white;
+    /* Replace with your desired color */
+}
+
+.numberInput input:focus,
+.searchBox input:focus {
+    outline: none;
+}
+
+.pointer:hover {
+    background-color: black;
+    /* Black background on hover */
+    color: white;
+    /* Maintain white text on hover */
+}
+
+iconify-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+
+}
+
+iconify-icon:hover {
+    background-color: #d65601;
+    /* Orange accent color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* Remove default button border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Indicate interactivity on hover */
+    /*display: inline-block; /* Allow for inline positioning */
+    text-align: center;
+    /* Center text within the button */
+    font-weight: normal;
+    /* Emphasize button text */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    /* Smooth hover effect */
+
+
+}
+
+.align-right {
+    text-align: right;
+    /* Center text within the button */
+}
+
+.horizontal-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.no-select {
+    user-select: none;
+}
+
+/* Accordion part */
+.accordion {
+    background-color: rgba(214, 86, 1, 0.5);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: hsla(0, 0%, 80%, 0.9);
+    color: #d65601;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: white;
+
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+/* Alternative table setup #IHateHTMLTables */
+
+#selected-blocks-table{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.header span{
+    font-weight: bold;
+    font-size: 1.2rem
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid #dddddd53;
+}
+
+.firstColumn {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px;
+
+}
+
+.secondColumn {
+    display: flex;
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.thirdColumn {
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 10px;
+}
