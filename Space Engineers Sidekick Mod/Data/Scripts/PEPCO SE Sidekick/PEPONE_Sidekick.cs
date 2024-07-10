@@ -82,9 +82,23 @@ namespace PEPONE_Sidekick
                 if (def.Public)
                 {
                     string jsonString = "";
+                    string iconString = "";
+
+                    //Remove the unnecessary parts of the icon path
+                    iconString = def.Icons?.First().Split('\\').Last();
+                    iconString = iconString.Split(new[] { '/' }).Last();
+
+                    //Remove the .dds
+                    iconString = iconString.Replace(".dds", "");
 
 
-                    jsonString = $"{{ \"componentID\": \"{def.Id}\", \"componentDisplayName\": \"{def.DisplayNameText}\", \"volume\": {def.Volume}, \"weight\": {def.Mass} }}";
+                    jsonString = $"{{ " +
+                        $"\"componentID\": \"{def.Id}\", " +
+                        $"\"componentDisplayName\": \"{def.DisplayNameText}\", " +
+                        $"\"volume\": {def.Volume}, " +
+                        $"\"weight\": {def.Mass} " +
+                        $"\"icon\": \"{iconString}\"" + 
+                        $"}}";
 
                     //Log.Info(jsonString);
                     componentList.Add($"{jsonString}");
