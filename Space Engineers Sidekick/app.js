@@ -330,6 +330,7 @@ const app = Vue.createApp({
       if (newSelectedBlocksString !== oldSelectedBlocksString) {
         try {
           this.selectedBlocks = JSON.parse(this.selectedBlocksString) || [];
+          this.calculateComponentList();
         } catch (error) {
           console.error("Error parsing selected blocks:", error);
           // Handle the error here, e.g. show an error message to the user
