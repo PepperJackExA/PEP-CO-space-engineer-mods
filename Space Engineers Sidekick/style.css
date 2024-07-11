@@ -389,7 +389,7 @@ iconify-icon:hover {
 
 }
 
-.secondColumn {
+:is(#selected-blocks-table) .secondColumn {
     display: flex;
     width: 15%;
     align-items: center;
@@ -397,10 +397,36 @@ iconify-icon:hover {
     margin: 10px;
 }
 
-.thirdColumn {
+#selected-blocks-table .thirdColumn {
     display: flex;
     width: 25%;
     align-items: center;
     justify-content: flex-end;
     margin: 10px;
 }
+
+#components-table{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+#components-table .firstColumn {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px;
+
+}
+
+#components-table .secondColumn {
+    display: flex;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+/* End of style.css */

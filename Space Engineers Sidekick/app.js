@@ -1,3 +1,27 @@
+// add inline documentation
+
+/**
+ * Vue application instance.
+ * @typedef {Object} App
+ * @property {boolean} isLoaded - Indicates if the app is loaded.
+ * @property {boolean} isDragging - Indicates if an element is being dragged.
+ * @property {Object} importObject - The imported object from local storage.
+ * @property {string} importText - The imported text.
+ * @property {string} search - The search string for block name.
+ * @property {string} sizeFilter - The size filter for blocks.
+ * @property {Array} selectedBlocks - The array of selected blocks.
+ * @property {Array} componentList - The list of components.
+ * @property {number} totalVolume - The total volume of components.
+ * @property {number} totalWeight - The total weight of components.
+ * @property {boolean} visible1 - Indicates if the first element is visible.
+ * @property {boolean} visible2 - Indicates if the second element is visible.
+ * @property {boolean} visible3 - Indicates if the third element is visible.
+ * @property {boolean} visible4 - Indicates if the fourth element is visible.
+ * @property {boolean} visibleBlockData - Indicates if the block data is visible.
+ * @property {string} selectedBlocksString - The string representation of selected blocks.
+ * @property {Array} icons - The array of icons.
+ */
+
 const app = Vue.createApp({
   data() {
     return {
@@ -21,26 +45,44 @@ const app = Vue.createApp({
     }
   },
   methods: {
+    /**
+     * Handles the drag over event.
+     * @param {Event} event - The drag over event.
+     */
     handleDragOver(event) {
-      // console.log("this.isDragging = ", this.isDragging);
       event.preventDefault();
       this.isDragging = true;
     },
+    /**
+     * Handles the drag leave event.
+     * @param {Event} event - The drag leave event.
+     */
     handleDragLeave(event) {
       event.preventDefault();
       this.isDragging = false;
     },
+    /**
+     * Handles the drop event.
+     * @param {Event} event - The drop event.
+     */
     handleDrop(event) {
       event.preventDefault();
       this.isDragging = false;
       const files = event.dataTransfer.files;
       this.handleFiles({ target: { files } });
     },
+    /**
+     * Handles the file input event.
+     * @param {Event} event - The file input event.
+     */
     handleFiles(event) {
-      // console.log('Files:', event.target.files);
       const files = event.target.files;
       this.parseFile(files[0]);
     },
+    /**
+     * Parses the file.
+     * @param {File} file - The file to parse.
+     */
     parseFile(file) {
       var reader = new FileReader();
 
@@ -55,15 +97,18 @@ const app = Vue.createApp({
       };
       reader.readAsText(file);
     },
+    /**
+     * Adds a block to the selection.
+     * @param {Event} e - The event object.
+     * @param {Object} block - The block to add.
+     */
     addToSelection(e, block) {
-      // console.log(e)
-      // console.log(block.displayName)
       var amount = 1
 
       var indexLookup = this.selectedBlocks.findIndex((selectedBlock) => {
-        return selectedBlock.displayName == block.displayName
+        return selectedBlock.uniqueID == block.uniqueID
       })
-      // console.log(indexLookup)
+
       if (indexLookup != -1) {
         this.selectedBlocks[indexLookup].amount += amount
       }
@@ -71,75 +116,100 @@ const app = Vue.createApp({
         var addedBlock = block
         addedBlock.amount = amount
         this.selectedBlocks.push(addedBlock)
-        //console.log(addedBlock)
       }
-      // 3. Sort the selectedBlocks array alphabetically by displayName
+
       this.selectedBlocks.sort((blockA, blockB) => {
         const nameA = blockA.displayName.toLowerCase(); // Case-insensitive sorting
         const nameB = blockB.displayName.toLowerCase();
         return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
       });
+      this.calculateComponentList();
     },
+    incrementBlockAmount(event, block, index) {
+      block.amount++
+      this.calculateComponentList();
+    },
+    /**
+     * Decrements the amount of a block.
+     * @param {Event} event - The event object.
+     * @param {Object} block - The block to decrement.
+     * @param {number} index - The index of the block in the selectedBlocks array.
+     */
     decrementBlockAmount(event, block, index) {
-      // Use the event, block, and index here
       if (block.amount > 0) {
         block.amount--;
       } else {
         this.selectedBlocks.splice(index, 1)
       }
+      this.calculateComponentList();
     },
+    /**
+     * Removes a block from the selection.
+     * @param {Event} e - The event object.
+     * @param {Object} block - The block to remove.
+     * @param {number} index - The index of the block in the selectedBlocks array.
+     */
     removeFromSelection(e, block, index) {
-
       var indexLookup = this.selectedBlocks.findIndex((selectedBlock) => {
-        return selectedBlock.displayName == block.displayName
+        return selectedBlock.uniqueID == block.uniqueID
       })
-      // console.log(block)
-      // console.log(indexLookup)
       this.selectedBlocks.splice(indexLookup, 1)
+      this.calculateComponentList();
     },
+    /**
+     * Calculates the component list based on the selected blocks.
+     */
     calculateComponentList() {
-      this.componentList = []
-      //Take the blocks in selectedBlocks, iterate them, check if they already exist in the componentList and add the corresponding amount of components to the componentList
-      this.selectedBlocks.forEach(selectedBlock => {
+      try {
+        if (!this.importObject) {
+          throw new Error("Import object is null or undefined");
+        }
+        if (!this.importObject.blocks) {
+          throw new Error("Blocks array is missing in the import object");
+        }
+        if (!Array.isArray(this.importObject.blocks)) {
+          throw new Error("Blocks is not an array");
+        }
+        if (!this.importObject.components) {
+          throw new Error("Components array is missing in the import object");
+        }
+        if (!Array.isArray(this.importObject.components)) {
+          throw new Error("Components is not an array");
+        }
+      } catch (error) {
+        console.error("Error in import object:", error);
+        // Handle the error here, e.g. show an error message to the user
+      }
 
-        var searchBlockName = selectedBlock.displayName
-        //Create a variable with the number of blocks in the selection list
-        var selectedBlockAmount = selectedBlock.amount
-        //Lookup the block from the defaultBlockList (blocks)
+      this.componentList = []
+      this.selectedBlocks.forEach(selectedBlock => {
         var defaultBlock = this.importObject.blocks.find((myBlock) => {
-          return myBlock.displayName.match(searchBlockName)
+          return myBlock.uniqueID.match(selectedBlock.uniqueID)
         })
-        //Create a variable with the components
         var components = defaultBlock.components
 
-        //Iterate the components
         components.forEach(componentfromBlock => {
-
           var currentComponentID = componentfromBlock.componentID
-          // console.log("currentComponentID: "+currentComponentID)
-          //Create variable with the amount of components required for this entry
           var currentComponentAmount = componentfromBlock.amount
-          //Check if component already exists in the componentList
           var indexLookup = this.componentList.findIndex((mycomponent) => {
             return mycomponent.componentID.match(currentComponentID)
           })
-          // console.log("indexLookup: "+indexLookup)
-          // remove soon: console.log(indexLookup)
-          if (indexLookup != -1) { //Component already exists in the List so we replace the current one and sum the components
-            this.componentList[indexLookup] = {
-              "componentID": currentComponentID,
-              "componentDisplayName": componentfromBlock.displayName,
-              "amount": this.componentList[indexLookup].amount + (currentComponentAmount * selectedBlockAmount)
-            }
+
+          if (indexLookup != -1) {
+            this.componentList[indexLookup].amount += (currentComponentAmount * selectedBlock.amount)
           }
-          else { //Component doesn't exist so we create the entry from scratch
-            var addedComponents = {
-              "componentID": componentfromBlock.componentID,
-              "componentDisplayName": componentfromBlock.displayName,
-              "amount": currentComponentAmount * selectedBlockAmount
-            }
+          else {
+            var addedComponents = { ...componentfromBlock };
+            addedComponents.amount = currentComponentAmount * selectedBlock.amount
+            addedComponents.icon = this.importObject.components.find(element => {
+              return element.componentID.match(currentComponentID)
+            }).icon
+
+            /*console.log(this.importObject.components.find(element => {
+              return element.componentID.match(currentComponentID)
+            })
+            )*/
             this.componentList.push(addedComponents)
-            // console.log(this.componentList)
           }
 
           this.componentList.sort((a, b) => {
@@ -155,6 +225,9 @@ const app = Vue.createApp({
         });
       });
     },
+    /**
+     * Calculates the total volume and weight of the components.
+     */
     calculateComponentValue() {
       this.totalVolume = 0
       this.totalWeight = 0
@@ -169,6 +242,9 @@ const app = Vue.createApp({
         this.totalWeight += componentWeight * componentAmount
       });
     },
+    /**
+     * Clears the input and resets the app state.
+     */
     clearInput() {
       this.totalVolume = 0
       this.totalWeight = 0
@@ -178,38 +254,39 @@ const app = Vue.createApp({
       localStorage.setItem('importObject', JSON.stringify(this.importObject));
       localStorage.setItem('selectedBlocks', JSON.stringify(this.selectedBlocks));
     },
+    /**
+     * Generates the display string for a block's components.
+     * @param {Object} block - The block object.
+     * @returns {string} - The display string for the block's components.
+     */
     componentDisplay(block) {
-      // Initialize an array to hold the display strings
       var displayString = [];
       var index = 0;
-    
+
       try {
-        // Iterate over each component in the block
         block.components.forEach(component => {
-          // Construct the display string for each component
           displayString.push(component.displayName + ": " + (component.amount + (index <= block.isCritical ? " (functional)" : " (optional)")));
           index++;
         });
-    
-        // Join the array into a single string with newline characters
+
         displayString = displayString.join("\n");
-    
-        // Add mod context information to the display string
+
         if (block.modContext != "()") {
-          displayString += "\nMod: " + block.modContext.replace(".sbm","");
+          displayString += "\nMod: " + block.modContext.replace(".sbm", "");
         } else {
           displayString += "\nMod: Vanilla";
         }
-    
+
       } catch (error) {
-        // Handle any errors that occur during the process
         console.error('Error generating component display:', error);
         return 'Error generating component display';
       }
-    
-      // Return the final display string
+
       return displayString;
     },
+    /**
+     * Toggles the size filter for blocks.
+     */
     toggleSizeFilter() {
       if (this.sizeFilter === "large/small") {
         this.sizeFilter = "large";
@@ -219,13 +296,34 @@ const app = Vue.createApp({
         this.sizeFilter = "large/small"; // Toggle back to empty string
       }
     },
-    updateSelectedBlocks(){
-      this.selectedBlocks = JSON.parse(this.selectedBlocksString) || this.selectedBlocks
+    /**
+     * Updates the selected blocks based on the selectedBlocksString.
+     */
+    updateSelectedBlocks() {
+
+      // Convert both to JSON strings to compare their structure, not their reference
+      const newSelectedBlocksString = this.selectedBlocksString
+      const oldSelectedBlocksString = JSON.stringify(this.selectedBlocks);
+
+      // Proceed only if there's an actual change in the selected blocks
+      if (newSelectedBlocksString !== oldSelectedBlocksString) {
+        try {
+          this.selectedBlocks = JSON.parse(this.selectedBlocksString) || [];
+        } catch (error) {
+          console.error("Error parsing selected blocks:", error);
+          // Handle the error here, e.g. show an error message to the user
+          this.selectedBlocks = [];
+        }
+      }
       
     },
+    /**
+     * Updates the import object.
+     * @param {string} value - The new import object value.
+     */
     updateImportObject(value) {
       this.clearInput()
-      
+
       try {
         this.importObject = JSON.parse(value)
         localStorage.setItem('importObject', JSON.stringify(this.importObject))
@@ -236,18 +334,33 @@ const app = Vue.createApp({
         this.importText = ""
       }
     },
-    lookupIcon(block){
+    /**
+     * Looks up the icon for an object.
+     * @param {Object} object - The object to lookup the icon for.
+     * @returns {string} - The path to the icon image.
+     */
+    lookupIcon(object) {
+      iconInput = object.icon;
       var indexLookup = this.icons.findIndex((iconName) => {
-        return iconName == block.icon
+        return iconName == iconInput
       })
-      if (indexLookup != -1) return 'assets/Icons/'+block.icon+'.png'
+      if (indexLookup != -1) return 'assets/Icons/' + iconInput + '.png'
       else return 'assets/Icons/Symbol_X.png'
-      },
-        roundToZero(value) {
-          return Math.round(value);
-      }
+    },
+    /**
+     * Rounds a value to zero.
+     * @param {number} value - The value to round.
+     * @returns {number} - The rounded value.
+     */
+    roundToZero(value) {
+      return Math.round(value);
+    }
   },
   computed: {
+    /**
+     * Filters the blocks based on the search string.
+     * @returns {Array} - The filtered blocks.
+     */
     filteredBlocks() {
       if (this.importObject.blocks != null) {
         return this.importObject.blocks
@@ -271,27 +384,30 @@ const app = Vue.createApp({
     }
   },
   created() {
-    this.$watch("selectedBlocks", (newSelectedBlocks) => {
-      this.calculateComponentList(),
-      this.selectedBlocksString = JSON.stringify(this.selectedBlocks)
+    this.$watch("selectedBlocks", (newSelectedBlocks, oldSelectedBlocks) => {
+      
+//        this.calculateComponentList();
+        this.selectedBlocksString = JSON.stringify(this.selectedBlocks)
         localStorage.setItem('selectedBlocks', JSON.stringify(this.selectedBlocks));
     }, { deep: true });
+  
     this.$watch("componentList", (newComponentList) => {
-      this.calculateComponentValue()
+      this.calculateComponentValue();
     }, { deep: true });
-    this.calculateComponentList()
+  
+    // Initial calculation to set up the component list based on the initially selected blocks
+    this.calculateComponentList();
   },
   async mounted() {
-    try {
-      const response = await fetch('assets/Icons/icons.json');
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
-      this.icons = data.icons;
-    } catch (error) {
-      console.error('Error fetching the icon assets:', error);
+    const response = await fetch('assets/Icons/');
+    const text = await response.text();
+    const regex = /assets\/Icons\/(\w+)\.png/gi;
+    const fileNames = [];
+    let match;
+    while ((match = regex.exec(text)) !== null) {
+      fileNames.push(match[1]);
     }
+    this.icons = fileNames;
   }
 });
 

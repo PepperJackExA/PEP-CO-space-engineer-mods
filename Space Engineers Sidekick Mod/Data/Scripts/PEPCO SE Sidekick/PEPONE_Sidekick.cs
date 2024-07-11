@@ -65,6 +65,7 @@ namespace PEPONE_Sidekick
                     jsonString = $"{{" +
                         $"\"typeId\": \"{def.Id.TypeId}\", " +
                         $"\"subtypeID\": \"{def.Id.SubtypeId}\", " +
+                        $"\"uniqueID\": \"{def.Id.TypeId}/{def.Id.SubtypeId}\", " +
                         $"\"size\": \"{def.CubeSize}\", \"displayName\": \"{def.DisplayNameText}\", " +
                         $"\"components\": [{string.Join(",", blockComponentList)}], " +
                         $"\"isCritical\": {def.CriticalGroup.ToString()}, " +
@@ -96,7 +97,7 @@ namespace PEPONE_Sidekick
                         $"\"componentID\": \"{def.Id}\", " +
                         $"\"componentDisplayName\": \"{def.DisplayNameText}\", " +
                         $"\"volume\": {def.Volume}, " +
-                        $"\"weight\": {def.Mass} " +
+                        $"\"weight\": {def.Mass}, " +
                         $"\"icon\": \"{iconString}\"" + 
                         $"}}";
 

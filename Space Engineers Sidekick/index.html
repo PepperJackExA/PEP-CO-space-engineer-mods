@@ -125,7 +125,7 @@
                             <input class="button searchBox" v-show="visibleBlockData"
                                 style="flex-grow: 2; min-height: 42px; margin-left: 1em;" type="text"
                                 v-model="selectedBlocksString" @change="updateSelectedBlocks"
-                                placeholder="search blocks">
+                                placeholder="paste here">
                         </div>
                         <div id="selected-blocks-table">
                             <div class="row header">
@@ -158,7 +158,7 @@
                                             v-model="block.amount" min="0">
                                         <iconify-icon class="no-select" icon="mdi:plus"
                                             style="color: white; font-size: 2em;"
-                                            @click="block.amount++"></iconify-icon>
+                                            @click="incrementBlockAmount($event, block, index)"></iconify-icon>
                                     </div>
                                     <iconify-icon icon="mdi:delete"
                                         style="color: white; font-size: 2em; margin-left: 5px;"
@@ -171,16 +171,25 @@
                         style="text-transform: uppercase;">Components ({{componentList.length}})
                     </h2>
                     <div v-show="visible3">
-                        <table class="tables">
-                            <tr>
-                                <td>Component</td>
-                                <td class="align-right">Amount</td>
-                            </tr>
-                            <tr v-for="component in componentList">
-                                <td>{{component.componentDisplayName}}</td>
-                                <td class="align-right">{{component.amount}}</td>
-                            </tr>
-                        </table>
+                        <div id="components-table">
+                            <div class="row header">
+                                <div class="firstColumn">
+                                    <span>Component</span>
+                                </div>
+                                <div class="secondColumn">
+                                    <span>Amount</span>
+                                </div>
+                            </div>
+                            <div class="row" v-for="component in componentList" :key="component.id">
+                                <div class="firstColumn">
+                                   <img :src="lookupIcon(component)" style="width: 2em; margin-right: 1em;" alt="">
+                                   <span>{{component.displayName}}</span>
+                                </div>
+                                <div class="secondColumn" >
+                                    <span>{{component.amount}}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <h2 @click="visible4 = !visible4" v-bind:class="{ active: visible4 }" class="accordion"
                         style="text-transform: uppercase;">Loadmaster output</h2>
