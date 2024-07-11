@@ -56,38 +56,38 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 [Config]
 BaseUpdateInterval=60    
 EnableLogging=false
-CleanupInterval=180
+CleanupInterval=9000
 ";
 
         private const string DefaultEntitySpawnerIniContent = @"
 ; ==============================================
 ; HOW TO USE CustomEntitySpawner.ini
 ; ==============================================
-[LargeBlockSmallContainer]
-BlockType=MyObjectBuilder_CargoContainer
-MinAmount=1
-MaxAmount=1
-UseWeightedDrops=false
-DamageAmount=0
-MinHealthPercentage=0.2
-MaxHealthPercentage=1
-MinHeight=0.5
-MaxHeight=2.0
-MinRadius=0.5
-MaxRadius=2.0
-SpawnTriggerInterval=3
-EnableAirtightAndOxygen=false
-Enabled=true
-PlayerDistanceCheck=100
-EntityID=Wolf
-RequiredItemTypes=MyObjectBuilder_Component
-RequiredItemIds=SteelPlate
-RequiredItemAmounts=0
-RequiredEntity=Wolf
-RequiredEntityRadius=10
-RequiredEntityNumber=0
-RequireEntityNumberForTotalEntities=false
-MaxEntitiesInArea=30
+;[LargeBlockSmallContainer]
+;BlockType=MyObjectBuilder_CargoContainer
+;MinAmount=1
+;MaxAmount=1
+;UseWeightedDrops=false
+;DamageAmount=0
+;MinHealthPercentage=0.2
+;MaxHealthPercentage=1
+;MinHeight=0.5
+;MaxHeight=2.0
+;MinRadius=0.5
+;MaxRadius=2.0
+;SpawnTriggerInterval=3
+;EnableAirtightAndOxygen=false
+;Enabled=true
+;PlayerDistanceCheck=100
+;EntityID=Wolf
+;RequiredItemTypes=MyObjectBuilder_Component
+;RequiredItemIds=SteelPlate
+;RequiredItemAmounts=0
+;RequiredEntity=Wolf
+;RequiredEntityRadius=10
+;RequiredEntityNumber=0
+;RequireEntityNumberForTotalEntities=false
+;MaxEntitiesInArea=30
 ";
 
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
@@ -400,37 +400,41 @@ MaxEntitiesInArea=30
 
                     foreach (var block in blocks)
                     {
-                        var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
-                        int spawnIterations;
-
-                        if (blockSettings != null && blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block, out spawnIterations))
+                        foreach (var blockSettings in settings.BlockSpawnSettings)
                         {
-                            if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck))
+                            if (block.FatBlock.BlockDefinition.TypeIdString == blockSettings.BlockType && block.FatBlock.BlockDefinition.SubtypeId == blockSettings.BlockId)
                             {
-                                continue;
-                            }
-
-                            float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
-                            if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
-                            {
-                                if (CheckInventoryForRequiredItems(block, blockSettings))
+                                int spawnIterations;
+                                if (blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block, out spawnIterations))
                                 {
-                                    for (int i = 0; i < spawnIterations; i++)
+                                    if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck))
                                     {
-                                        int spawnAmount;
-                                        if (blockSettings.UseWeightedDrops)
-                                        {
-                                            spawnAmount = GetWeightedRandomNumber(blockSettings.MinAmount, GenerateProbabilities(blockSettings.MinAmount, blockSettings.MaxAmount));
-                                        }
-                                        else
-                                        {
-                                            spawnAmount = randomGenerator.Next(blockSettings.MinAmount, blockSettings.MaxAmount + 1);
-                                        }
+                                        continue;
+                                    }
 
-                                        if (spawnAmount > 0)
+                                    float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
+                                    if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
+                                    {
+                                        if (CheckInventoryForRequiredItems(block, blockSettings))
                                         {
-                                            SpawnEntities(block, blockSettings, spawnAmount);
-                                            entitiesSpawned++;
+                                            for (int i = 0; i < spawnIterations; i++)
+                                            {
+                                                int spawnAmount;
+                                                if (blockSettings.UseWeightedDrops)
+                                                {
+                                                    spawnAmount = GetWeightedRandomNumber(blockSettings.MinAmount, GenerateProbabilities(blockSettings.MinAmount, blockSettings.MaxAmount));
+                                                }
+                                                else
+                                                {
+                                                    spawnAmount = randomGenerator.Next(blockSettings.MinAmount, blockSettings.MaxAmount + 1);
+                                                }
+
+                                                if (spawnAmount > 0)
+                                                {
+                                                    SpawnEntities(block, blockSettings, spawnAmount);
+                                                    entitiesSpawned++;
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -840,7 +844,7 @@ MaxEntitiesInArea=30
 
                     var botSpawnerConfig = new BotSpawnerConfig
                     {
-                        BlockId = section,
+                        BlockId = iniParser.Get(section, nameof(BotSpawnerConfig.BlockId)).ToString(section), // Fallback to section name if BlockId is not present
                         BlockType = iniParser.Get(section, nameof(BotSpawnerConfig.BlockType)).ToString(),
                         MinAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MinAmount)).ToInt32(),
                         MaxAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MaxAmount)).ToInt32(),
@@ -870,8 +874,8 @@ MaxEntitiesInArea=30
 
                     settings.BlockSpawnSettings.Add(botSpawnerConfig);
 
-                    LogError($"Loaded settings for {section}: " +
-                             $"BlockType={botSpawnerConfig.BlockType}, MinAmount={botSpawnerConfig.MinAmount}, MaxAmount={botSpawnerConfig.MaxAmount}, " +
+                    LogError($"Loaded settings for section {section}: " +
+                             $"BlockId={botSpawnerConfig.BlockId}, BlockType={botSpawnerConfig.BlockType}, MinAmount={botSpawnerConfig.MinAmount}, MaxAmount={botSpawnerConfig.MaxAmount}, " +
                              $"DamageAmount={botSpawnerConfig.DamageAmount}, MinHealthPercentage={botSpawnerConfig.MinHealthPercentage}, " +
                              $"MaxHealthPercentage={botSpawnerConfig.MaxHealthPercentage}, MinHeight={botSpawnerConfig.MinHeight}, " +
                              $"MaxHeight={botSpawnerConfig.MaxHeight}, MinRadius={botSpawnerConfig.MinRadius}, MaxRadius={botSpawnerConfig.MaxRadius}, " +
@@ -1005,7 +1009,7 @@ MaxEntitiesInArea=30
 
                 var botSpawnerConfig = new BotSpawnerConfig
                 {
-                    BlockId = section,
+                    BlockId = iniParser.Get(section, nameof(BotSpawnerConfig.BlockId)).ToString(),
                     BlockType = iniParser.Get(section, nameof(BotSpawnerConfig.BlockType)).ToString(),
                     MinAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MinAmount)).ToInt32(),
                     MaxAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MaxAmount)).ToInt32(),
