@@ -399,16 +399,28 @@ const app = Vue.createApp({
     this.calculateComponentList();
   },
   async mounted() {
-    const response = await fetch('assets/Icons/');
-    const text = await response.text();
-    const regex = /assets\/Icons\/(\w+)\.png/gi;
-    const fileNames = [];
-    let match;
-    while ((match = regex.exec(text)) !== null) {
-      fileNames.push(match[1]);
+    try {
+      const response = await fetch('assets/Icons/icons.json');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      this.icons = data.icons;
+    } catch (error) {
+      console.error('Error fetching the icon assets:', error);
     }
-    this.icons = fileNames;
   }
+  // async mounted() {
+  //   const response = await fetch('assets/Icons/');
+  //   const text = await response.text();
+  //   const regex = /assets\/Icons\/(\w+)\.png/gi;
+  //   const fileNames = [];
+  //   let match;
+  //   while ((match = regex.exec(text)) !== null) {
+  //     fileNames.push(match[1]);
+  //   }
+  //   this.icons = fileNames;
+  // }
 });
 
 app.mount('#app')
