@@ -33,6 +33,8 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
         private int loadingTickCount = 100;
         private static readonly Random randomGenerator = new Random();
 
+        private HashSet<string> loadedFiles = new HashSet<string>();
+
         private int cleanupTickCounter = 0;
 
         private const string ModDataFile = "CES.ini";
@@ -192,6 +194,11 @@ CleanupInterval=9000
                 }
                 sendToOthers = false;
             }
+            else if (messageText.Equals("/pepco CES list", StringComparison.OrdinalIgnoreCase)) // New command
+            {
+                ListAllBlocksAndSpawns();
+                sendToOthers = false;
+            }
             else if (messageText.StartsWith("/pepco kill ", StringComparison.OrdinalIgnoreCase))
             {
                 var parameters = messageText.Split(' ');
@@ -241,6 +248,20 @@ CleanupInterval=9000
                     }
                 }
                 sendToOthers = false;
+            }
+        }
+        private void ListAllBlocksAndSpawns()
+        {
+            if (settings.BlockSpawnSettings.Count == 0)
+            {
+                MyAPIGateway.Utilities.ShowMessage("CustomEntitySpawner", "No block spawn settings found.");
+                return;
+            }
+
+            foreach (var blockSettings in settings.BlockSpawnSettings)
+            {
+                string message = $"BlockId: {blockSettings.BlockId}, BlockType: {blockSettings.BlockType}, Entities: {string.Join(", ", blockSettings.EntityID)}";
+                MyAPIGateway.Utilities.ShowMessage("CustomEntitySpawner", message);
             }
         }
 
@@ -745,25 +766,28 @@ CleanupInterval=9000
         {
             try
             {
+                HashSet<string> loadedFiles = new HashSet<string>(); // Set to track loaded files
+
                 List<string> knownConfigFiles = new List<string>
-                {
-                    "GlobalConfig.ini",
-                    "CustomEntitySpawner.ini"
-                };
+        {
+            "GlobalConfig.ini",
+            "CustomEntitySpawner.ini"
+        };
 
                 List<string> additionalFilePatterns = new List<string>
-                {
-                    "_CES.ini"
-                };
+        {
+            "_CES.ini"
+        };
 
-                settings.BlockSpawnSettings.Clear();
+                settings.BlockSpawnSettings.Clear(); // Clear existing settings to avoid duplicates
 
+                // Load known config files
                 foreach (string configFileName in knownConfigFiles)
                 {
                     LogError($"Looking at {configFileName}");
-                    if (MyAPIGateway.Utilities.FileExistsInWorldStorage(configFileName, typeof(CustomEntitySpawner)))
+                    if (MyAPIGateway.Utilities.FileExistsInWorldStorage(configFileName, typeof(CustomEntitySpawner)) && !loadedFiles.Contains(configFileName))
                     {
-                        LogError($"Looking in world Storage for {configFileName}");
+                        LogError($"Found in world storage: {configFileName}");
                         using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(configFileName, typeof(CustomEntitySpawner)))
                         {
                             string fileContent = reader.ReadToEnd();
@@ -777,27 +801,35 @@ CleanupInterval=9000
                                 LogError($"Loading CustomEntitySpawnerConfig: {configFileName}");
                                 LoadCustomEntitySpawnerConfig(fileContent);
                             }
+                            loadedFiles.Add(configFileName);
+                            ShowMessageIfLoggingEnabled($"Loaded: {configFileName}");
                         }
                     }
                 }
 
+                // Load additional mod-specific config files
                 foreach (var modItem in MyAPIGateway.Session.Mods)
                 {
                     LogError($"Looking for: {modItem.PublishedFileId} in world storage folder");
                     foreach (string pattern in additionalFilePatterns)
                     {
                         string cesFileName = $"{modItem.PublishedFileId}{pattern}";
-                        LogError($"Looking for: {modItem.PublishedFileId} in {cesFileName}");
-                        if (MyAPIGateway.Utilities.FileExistsInWorldStorage(cesFileName, typeof(CustomEntitySpawner)))
+                        LogError($"Checking for: {cesFileName} in mod: {modItem.PublishedFileId}");
+                        if (MyAPIGateway.Utilities.FileExistsInWorldStorage(cesFileName, typeof(CustomEntitySpawner)) && !loadedFiles.Contains(cesFileName))
                         {
-                            LogError($"Found {modItem.PublishedFileId} in {cesFileName}");
+                            LogError($"Found {cesFileName} in world storage");
                             using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(cesFileName, typeof(CustomEntitySpawner)))
                             {
-                                LogError($"Loading: {modItem.PublishedFileId} in {cesFileName}");
                                 string fileContent = reader.ReadToEnd();
-                                LogError($"Contents:, {fileContent}");
+                                LogError($"Loading config from: {cesFileName}");
                                 LoadCustomEntitySpawnerConfig(fileContent);
+                                loadedFiles.Add(cesFileName);
+                                ShowMessageIfLoggingEnabled($"Addon Loaded: {cesFileName}");
                             }
+                        }
+                        else
+                        {
+                            LogError($"Not found: {cesFileName}");
                         }
                     }
                 }
@@ -806,6 +838,14 @@ CleanupInterval=9000
             {
                 MyLog.Default.WriteLine($"Error loading files from World Storage: {ex.Message}");
                 LogError($"Error loading files from World Storage: {ex.Message}");
+            }
+        }
+
+        private void ShowMessageIfLoggingEnabled(string message)
+        {
+            if (settings.EnableLogging)
+            {
+                MyAPIGateway.Utilities.ShowMessage("CES:", message);
             }
         }
 
@@ -874,8 +914,7 @@ CleanupInterval=9000
 
                     settings.BlockSpawnSettings.Add(botSpawnerConfig);
 
-                    LogError($"Loaded settings for section {section}: " +
-                             $"BlockId={botSpawnerConfig.BlockId}, BlockType={botSpawnerConfig.BlockType}, MinAmount={botSpawnerConfig.MinAmount}, MaxAmount={botSpawnerConfig.MaxAmount}, " +
+                    LogError($"Loaded settings for section {section}: BlockId={botSpawnerConfig.BlockId}, BlockType={botSpawnerConfig.BlockType}, MinAmount={botSpawnerConfig.MinAmount}, MaxAmount={botSpawnerConfig.MaxAmount}, " +
                              $"DamageAmount={botSpawnerConfig.DamageAmount}, MinHealthPercentage={botSpawnerConfig.MinHealthPercentage}, " +
                              $"MaxHealthPercentage={botSpawnerConfig.MaxHealthPercentage}, MinHeight={botSpawnerConfig.MinHeight}, " +
                              $"MaxHeight={botSpawnerConfig.MaxHeight}, MinRadius={botSpawnerConfig.MinRadius}, MaxRadius={botSpawnerConfig.MaxRadius}, " +
