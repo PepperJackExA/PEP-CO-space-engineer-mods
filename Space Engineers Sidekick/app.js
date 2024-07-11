@@ -36,12 +36,13 @@ const app = Vue.createApp({
       totalVolume: 0,
       totalWeight: 0,
       visible1: false,
-      visible2: true,
+      visible2: false,
       visible3: false,
       visible4: false,
       visibleBlockData: false,
       selectedBlocksString: localStorage.getItem("selectedBlocks"),
-      icons: []
+      icons: [],
+      copied: false
     }
   },
   methods: {
@@ -197,6 +198,7 @@ const app = Vue.createApp({
 
           if (indexLookup != -1) {
             this.componentList[indexLookup].amount += (currentComponentAmount * selectedBlock.amount)
+            this.componentList[indexLookup].blocks.push(selectedBlock.displayName)
           }
           else {
             var addedComponents = { ...componentfromBlock };
@@ -204,6 +206,7 @@ const app = Vue.createApp({
             addedComponents.icon = this.importObject.components.find(element => {
               return element.componentID.match(currentComponentID)
             }).icon
+            addedComponents.blocks = [selectedBlock.displayName]
 
             /*console.log(this.importObject.components.find(element => {
               return element.componentID.match(currentComponentID)
@@ -284,6 +287,24 @@ const app = Vue.createApp({
 
       return displayString;
     },
+    blockDisplay(component) {
+      var displayString = [];
+      var blocks = [...new Set(component.blocks)];
+
+      try {
+        blocks.forEach(block => {
+          displayString.push(block);
+        });
+
+        displayString = displayString.join("\n");
+
+      } catch (error) {
+        console.error('Error generating component display:', error);
+        return 'Error generating component display';
+      }
+
+      return displayString;
+    },
     /**
      * Toggles the size filter for blocks.
      */
@@ -354,6 +375,13 @@ const app = Vue.createApp({
      */
     roundToZero(value) {
       return Math.round(value);
+    },
+    copyToClipboard(input) {
+      navigator.clipboard.writeText(input)
+      this.copied = true
+      setTimeout(() => {
+        this.copied = false;
+      }, 2000);
     }
   },
   computed: {
@@ -381,6 +409,13 @@ const app = Vue.createApp({
       } else {
         return [];
       }
+    },
+    loadmasterOutput() {
+      var outputstring = ""
+      this.componentList.forEach(component => {
+        outputstring += component.componentID.replace("MyObjectBuilder_","") + "=" + component.amount + "\n"
+      });
+      return outputstring;
     }
   },
   created() {
