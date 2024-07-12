@@ -21,6 +21,7 @@ using VRage.ObjectBuilders;
 using Sandbox.Common.ObjectBuilders;
 using PEPCO.iSurvival.CustomEntitySpawner;
 using System.Collections.Immutable;
+using Sandbox.Game.Entities.Character;
 
 namespace PEPCO.iSurvival.CustomEntitySpawner
 {
@@ -55,11 +56,16 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
         private const string DefaultGlobalIniContent = @"
 ; ==============================================
 ; HOW TO USE GlobalConfig.ini
-; ==============================================
+; ==============================================C
+;BaseUpdateInterval 60 = 1 second
+;EnableLogging will enable the storage log file and some ingame messages
+;CleanupInterval 60 = 1 second
+;GlobalMaxEntities Required Items will be lost if this is not set lower then server Max entities setting.
 [Config]
 BaseUpdateInterval=60    
 EnableLogging=false
-CleanupInterval=9000
+CleanupInterval=0
+GlobalMaxEntities=30
 ";
 
         private const string DefaultEntitySpawnerIniContent = @"
@@ -396,6 +402,29 @@ CleanupInterval=9000
                 }
                 sendToOthers = false;
             }
+            else if (messageText.Equals("/pepco show all", StringComparison.OrdinalIgnoreCase))
+            {
+                ShowAllEntities();
+                sendToOthers = false;
+            }
+        }
+        private void ShowAllEntities()
+        {
+            var entities = new HashSet<IMyEntity>();
+            IMyCharacter playerCharacter = MyAPIGateway.Session.Player.Character;
+            MyAPIGateway.Entities.GetEntities(entities);
+            foreach (var entity in entities)
+            {
+                var character = entity as IMyCharacter;
+                if (entity is IMyCharacter && character != playerCharacter && !character.IsDead)
+                {
+                    string entityType = entity.GetType().Name;
+                    string entityName = entity.DisplayName ?? "Unnamed";
+
+                    MyAPIGateway.Utilities.ShowMessage("Entity", $"Type: {entityType}, Name: {entityName}");
+
+                }
+            }
         }
         private void ListAllBlocksAndSpawns()
         {
@@ -521,17 +550,21 @@ CleanupInterval=9000
                     LogError($"Update error: {ex.Message}");
                 }
             }
-            if (++cleanupTickCounter >= settings.CleanupInterval)
+            if (settings.CleanupInterval != 0)              
+                {
+                   if (++cleanupTickCounter >= settings.CleanupInterval)
             {
-                cleanupTickCounter = 0;
-                try
-                {
-                    CleanupDeadEntities();
-                }
-                catch (Exception ex)
-                {
-                    LogError($"Cleanup error: {ex.Message}");
-                }
+                        cleanupTickCounter = 0;
+                        try
+                        {
+                            CleanupDeadEntities();
+                        }
+                        catch (Exception ex)
+                        {
+                            LogError($"Cleanup error: {ex.Message}");
+                        }
+                    }
+                   
             }
         }
 
@@ -582,9 +615,26 @@ CleanupInterval=9000
 
                                     float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
                                     if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
-                                    {                                        
+                                    {
                                         if (CheckInventoryForRequiredItems(block, blockSettings))
                                         {
+                                            // Check if the global max entities limit has been reached
+                                            
+                                            int currentEntityCount = GetTotalEntityCount();
+                                            ShowMessageIfLoggingEnabled($"Total Entities: {currentEntityCount}");
+
+                                            
+                                                if (currentEntityCount >= settings.GlobalMaxEntities)
+                                            {
+                                                
+                                                
+                                                
+                                                    ShowMessageIfLoggingEnabled($"Entities:{currentEntityCount}. Global max entities limit exceeded.");
+                                                
+                                                    //CleanupDeadEntities();
+                                                    return;
+                                            }
+                                            else
                                             for (int i = 0; i < spawnIterations; i++)
                                             {
                                                 int spawnAmount;
@@ -613,6 +663,25 @@ CleanupInterval=9000
             }
         }
 
+        private int GetTotalEntityCount()
+        {
+            var entities = new HashSet<IMyEntity>();
+            MyAPIGateway.Entities.GetEntities(entities, entity =>
+            {
+
+                IMyCharacter playerCharacter = MyAPIGateway.Session.Player.Character;
+                // Check if entity is IMyCharacter but not playerCharacter or dead
+                var character = entity as IMyCharacter;
+                if (entity is IMyCharacter && character != playerCharacter && !character.IsDead)
+                {
+                    return true;
+                }
+
+                return false; // exclude other entities
+            });
+
+            return entities.Count;
+        }     
         private bool IsPlayerInRange(IMySlimBlock block, List<IMyPlayer> players, int playerDistanceCheck)
         {
             if (playerDistanceCheck == -1)
@@ -660,6 +729,15 @@ CleanupInterval=9000
             var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
             if (blockSettings == null)
                 return true;
+            var functionalBlock = block.FatBlock as IMyFunctionalBlock;
+            if (functionalBlock != null)
+            {
+                if (!functionalBlock.IsFunctional || !functionalBlock.Enabled || !functionalBlock.IsWorking)
+                {
+                    return false;
+                }
+
+            }
 
             if (blockSettings.EnableAirtightAndOxygen)
             {
@@ -1007,6 +1085,8 @@ CleanupInterval=9000
             if (settings.EnableLogging)
             {
                 MyAPIGateway.Utilities.ShowMessage("CES:", message);
+                LogError($"CES: {message}");
+
             }
         }
 
@@ -1022,6 +1102,7 @@ CleanupInterval=9000
             settings.BaseUpdateInterval = iniParser.Get("Config", "BaseUpdateInterval").ToInt32(60);
             settings.EnableLogging = iniParser.Get("Config", "EnableLogging").ToBoolean(true);
             settings.CleanupInterval = iniParser.Get("Config", "CleanupInterval").ToInt32(180);
+            settings.GlobalMaxEntities = iniParser.Get("Config", "GlobalMaxEntities").ToInt32(100); // Load new setting
         }
 
         private void LoadCustomEntitySpawnerConfig(string fileContent)
@@ -1139,6 +1220,7 @@ CleanupInterval=9000
         public int BaseUpdateInterval { get; set; } = 60;
         public bool EnableLogging { get; set; } = true;
         public int CleanupInterval { get; set; } = 18000;
+        public int GlobalMaxEntities { get; set; } = 32;
 
         public List<BotSpawnerConfig> BlockSpawnSettings { get; set; } = new List<BotSpawnerConfig>();
 
@@ -1159,6 +1241,7 @@ CleanupInterval=9000
                     BaseUpdateInterval = iniParser.Get(IniSection, nameof(BaseUpdateInterval)).ToInt32(BaseUpdateInterval);
                     EnableLogging = iniParser.Get(IniSection, nameof(EnableLogging)).ToBoolean(EnableLogging);
                     CleanupInterval = iniParser.Get(IniSection, nameof(CleanupInterval)).ToInt32(CleanupInterval);
+                    GlobalMaxEntities = iniParser.Get(IniSection, nameof(GlobalMaxEntities)).ToInt32(GlobalMaxEntities); // Load new setting
                 }
             }
             else
