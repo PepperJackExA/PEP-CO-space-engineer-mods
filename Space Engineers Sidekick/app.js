@@ -35,14 +35,15 @@ const app = Vue.createApp({
       componentList: [],
       totalVolume: 0,
       totalWeight: 0,
-      visible1: false,
-      visible2: false,
-      visible3: false,
-      visible4: false,
+      blockHeaderVisible: false,
+      selectionHeaderVisible: false,
+      componentHeaderVisible: false,
+      loadmasterHeaderVisible: false,
       visibleBlockData: false,
       selectedBlocksString: localStorage.getItem("selectedBlocks"),
       icons: [],
-      copied: false
+      copied: false,
+      loadmasterDivisor: 1
     }
   },
   methods: {
@@ -249,13 +250,17 @@ const app = Vue.createApp({
      * Clears the input and resets the app state.
      */
     clearInput() {
-      this.totalVolume = 0
-      this.totalWeight = 0
-      this.componentList = []
-      this.selectedBlocks = []
-      this.importObject = null
-      localStorage.setItem('importObject', JSON.stringify(this.importObject));
-      localStorage.setItem('selectedBlocks', JSON.stringify(this.selectedBlocks));
+
+      if (confirm('Are you sure?')) {
+        this.totalVolume = 0
+        this.totalWeight = 0
+        this.componentList = []
+        this.selectedBlocks = []
+        this.importObject = null
+        localStorage.setItem('importObject', JSON.stringify(this.importObject));
+        localStorage.setItem('selectedBlocks', JSON.stringify(this.selectedBlocks));
+      } 
+
     },
     /**
      * Generates the display string for a block's components.
@@ -337,7 +342,7 @@ const app = Vue.createApp({
           this.selectedBlocks = [];
         }
       }
-      
+
     },
     /**
      * Updates the import object.
@@ -383,6 +388,28 @@ const app = Vue.createApp({
       setTimeout(() => {
         this.copied = false;
       }, 2000);
+    },
+    topFunction() {
+      const scrollTo = 0; // Define the value for scrollTo
+      window.scrollTo({
+        top: scrollTo,
+        behavior: 'smooth'
+      });
+    },
+    scrollToElement(input) {
+      const element = document.getElementById(input);
+      const rect = element.getBoundingClientRect();
+      const elementTop = rect.top + window.scrollY;
+      const scrollTo = elementTop - 150; // Add a margin of 150px
+      window.scrollTo({
+        top: scrollTo,
+        behavior: 'smooth'
+      });
+      this[input+'Visible'] = true;
+    },
+    clearSelectedBlocks() {
+      this.selectedBlocks = [];
+      this.calculateComponentList();
     }
   },
   computed: {
@@ -414,23 +441,23 @@ const app = Vue.createApp({
     loadmasterOutput() {
       var outputstring = ""
       this.componentList.forEach(component => {
-        outputstring += component.componentID.replace("MyObjectBuilder_","") + "=" + component.amount + "\n"
+        outputstring += component.componentID.replace("MyObjectBuilder_", "") + "=" + Math.ceil(component.amount / this.loadmasterDivisor) + "\n";
       });
       return outputstring;
     }
   },
   created() {
     this.$watch("selectedBlocks", (newSelectedBlocks, oldSelectedBlocks) => {
-      
-//        this.calculateComponentList();
-        this.selectedBlocksString = JSON.stringify(this.selectedBlocks)
-        localStorage.setItem('selectedBlocks', JSON.stringify(this.selectedBlocks));
+
+      //        this.calculateComponentList();
+      this.selectedBlocksString = JSON.stringify(this.selectedBlocks)
+      localStorage.setItem('selectedBlocks', JSON.stringify(this.selectedBlocks));
     }, { deep: true });
-  
+
     this.$watch("componentList", (newComponentList) => {
       this.calculateComponentValue();
     }, { deep: true });
-  
+
     // Initial calculation to set up the component list based on the initially selected blocks
     this.calculateComponentList();
   },

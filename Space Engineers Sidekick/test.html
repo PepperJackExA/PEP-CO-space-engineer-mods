@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Element</title>
+    <style>
+        #scrollButton {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 1500px;">
+        <h1 id="targetElement" style="margin-top: 1400px;">Target Element</h1>
+    </div>
+    <button id="scrollButton" onclick="scrollToElement()">Scroll to Element</button>
+
+    <script>
+        const targetElement = document.getElementById('targetElement');
+        const scrollButton = document.getElementById('scrollButton');
+
+        window.addEventListener('scroll', () => {
+            const rect = targetElement.getBoundingClientRect();
+            if (rect.top < 0 || rect.bottom > window.innerHeight) {
+                scrollButton.style.display = 'block';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        });
+
+        function scrollToElement() {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            targetElement.focus();
+        }
+    </script>
+</body>
+</html>
