@@ -360,19 +360,19 @@ iconify-icon:hover {
 
 /* Alternative table setup #IHateHTMLTables */
 
-#selected-blocks-table{
+#selected-blocks-table {
     width: 90%;
     display: flex;
     margin: 0 auto;
     flex-direction: column;
 }
 
-.header span{
+.header span {
     font-weight: bold;
     font-size: 1.2rem
 }
 
-.row{
+.row {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -389,7 +389,7 @@ iconify-icon:hover {
 
 }
 
-.secondColumn {
+:is(#selected-blocks-table) .secondColumn {
     display: flex;
     width: 15%;
     align-items: center;
@@ -397,10 +397,74 @@ iconify-icon:hover {
     margin: 10px;
 }
 
-.thirdColumn {
+#selected-blocks-table .thirdColumn {
     display: flex;
     width: 25%;
     align-items: center;
     justify-content: flex-end;
     margin: 10px;
 }
+
+#components-table {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+#components-table .firstColumn {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px;
+
+}
+
+#components-table .secondColumn {
+    display: flex;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#clearInput {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 2em;
+}
+#clearInputButton:hover{
+    background-color: red;
+}
+
+#buttonbar button:hover {
+    background-color: #555;
+}
+
+#buttonbar {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+}
+
+
+#buttonbar button {
+    margin: 5px;
+    width: 100px;
+    display: block;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #d65601;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+
+
+/* End of style.css */
