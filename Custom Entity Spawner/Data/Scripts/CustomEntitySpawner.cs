@@ -20,6 +20,7 @@ using VRage.ObjectBuilders;
 
 using Sandbox.Common.ObjectBuilders;
 using PEPCO.iSurvival.CustomEntitySpawner;
+using System.Collections.Immutable;
 
 namespace PEPCO.iSurvival.CustomEntitySpawner
 {
@@ -65,7 +66,150 @@ CleanupInterval=9000
 ; ==============================================
 ; HOW TO USE CustomEntitySpawner.ini
 ; ==============================================
-;[LargeBlockSmallContainer]
+; This file configures the spawning behavior of entities around specific block types.
+; Each section must be unigue.
+;[SomethingUniqueHere]
+
+; BlockId specifies the unique identifier for the block.
+; Example: SmallBlockSmallContainer for a small cargo container.
+; List of options: Any valid block ID.
+; BlockType specifies the type of block for which this configuration applies.
+; Example: MyObjectBuilder_CargoContainer for cargo containers.
+; List of options: MyObjectBuilder_CargoContainer, MyObjectBuilder_Refinery, MyObjectBuilder_Assembler, etc.
+;BlockType=MyObjectBuilder_CargoContainer
+
+; MinAmount is the minimum number of entities to spawn when conditions are met.
+; Example: 1
+; List of options: Any positive integer.
+;MinAmount=1
+
+; MaxAmount is the maximum number of entities to spawn when conditions are met.
+; Example: 1
+; List of options: Any positive integer.
+;MaxAmount=1
+
+; UseWeightedDrops determines if the number of entities spawned should use weighted probabilities.
+; Values: true or false
+; Example: false
+;UseWeightedDrops=false
+
+; DamageAmount is the amount of damage to apply to the block each time entities are spawned.
+; Example: 0
+; List of options: Any non-negative float value.
+;DamageAmount=0
+
+; MinHealthPercentage is the minimum health percentage the block must have to allow spawning.
+; Example: 0.2 (20%)
+; List of options: Any float value between 0 and 1.
+;MinHealthPercentage=0.2
+
+; MaxHealthPercentage is the maximum health percentage the block can have to allow spawning.
+; Example: 1 (100%)
+; List of options: Any float value between 0 and 1.
+;MaxHealthPercentage=1
+
+; MinHeight is the minimum height offset for spawning entities.
+; Example: 0.5
+; List of options: Any non-negative float value.
+;MinHeight=0.5
+
+; MaxHeight is the maximum height offset for spawning entities.
+; Example: 2.0
+; List of options: Any non-negative float value.
+;MaxHeight=2.0
+
+; MinRadius is the minimum radius for spawning entities around the block.
+; Example: 0.5
+; List of options: Any non-negative float value.
+;MinRadius=0.5
+
+; MaxRadius is the maximum radius for spawning entities around the block.
+; Example: 2.0
+; List of options: Any non-negative float value.
+;MaxRadius=2.0
+
+; SpawnTriggerInterval is the interval in update ticks for triggering entity spawn.
+; Example: 3 (every 3 updates)
+; List of options: Any positive integer.
+;SpawnTriggerInterval=3
+
+; EnableAirtightAndOxygen determines if airtight and oxygen levels are considered for spawning.
+; Values: true or false
+; Example: false
+;EnableAirtightAndOxygen=false
+
+; Enabled specifies whether this configuration is active.
+; Values: true or false
+; Example: true
+;Enabled=true
+
+; PlayerDistanceCheck is the maximum distance from a player for spawning entities.
+; Example: 100 (100 meters)
+; List of options: Any positive integer, -1 to disable the check.
+;PlayerDistanceCheck=100
+
+; EntityID specifies the ID of the entities to spawn.
+; Example: Wolf
+; List of options: Any valid entity ID such as Wolf, Spider, etc.
+;EntityID=Wolf
+
+; RequiredItemTypes specifies the types of items required in the inventory for spawning (to be removed).
+; Example: MyObjectBuilder_Component
+; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
+;RequiredItemTypes=MyObjectBuilder_Component
+
+; RequiredItemIds specifies the IDs of the required items (to be removed).
+; Example: SteelPlate
+; List of options: Any valid item ID such as SteelPlate, Iron, etc.
+;RequiredItemIds=SteelPlate
+
+; RequiredItemAmounts specifies the amounts of the required items (to be removed).
+; Example: 5
+; List of options: Any positive integer.
+;RequiredItemAmounts=5
+
+; PermanentRequiredItemTypes specifies the types of items required in the inventory for spawning (not removed).
+; Example: MyObjectBuilder_Ore
+; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
+;PermanentRequiredItemTypes=MyObjectBuilder_Ore
+
+; PermanentRequiredItemIds specifies the IDs of the permanent required items (not removed).
+; Example: Iron
+; List of options: Any valid item ID such as Iron, SteelPlate, etc.
+;PermanentRequiredItemIds=Iron
+
+; PermanentRequiredItemAmounts specifies the amounts of the permanent required items (not removed).
+; Example: 10
+; List of options: Any positive integer.
+;PermanentRequiredItemAmounts=10
+
+; RequiredEntity specifies the entity type required in the vicinity for spawning.
+; Example: Wolf
+; List of options: Any valid entity ID such as Wolf, Spider, etc.
+;RequiredEntity=Wolf
+
+; RequiredEntityRadius is the radius within which the required entity must be present.
+; Example: 10 (10 meters)
+; List of options: Any positive float value.
+;RequiredEntityRadius=10
+
+; RequiredEntityNumber is the number of required entities needed for spawning.
+; Example: 0 (no specific number required)
+; List of options: Any positive integer.
+;RequiredEntityNumber=0
+
+; RequireEntityNumberForTotalEntities determines if the required entity number is for the total entities.
+; Values: true or false
+; Example: false
+;RequireEntityNumberForTotalEntities=false
+
+; MaxEntitiesInArea is the maximum number of entities allowed in the area for spawning.
+; Example: 30
+; List of options: Any positive integer.
+;MaxEntitiesInArea=30
+
+;[pepcoTestWolfSpawner_LGSmallContatiner]
+;BlockId=SmallBlockSmallContainer
 ;BlockType=MyObjectBuilder_CargoContainer
 ;MinAmount=1
 ;MaxAmount=1
@@ -82,9 +226,12 @@ CleanupInterval=9000
 ;Enabled=true
 ;PlayerDistanceCheck=100
 ;EntityID=Wolf
-;RequiredItemTypes=MyObjectBuilder_Component
-;RequiredItemIds=SteelPlate
-;RequiredItemAmounts=0
+;RequiredItemTypes=MyObjectBuilder_Component,MyObjectBuilder_Component
+;RequiredItemIds=SteelPlate,InteriorPlate
+;RequiredItemAmounts=1,1
+;PermanentRequiredItemTypes=MyObjectBuilder_Ore,MyObjectBuilder_Ore
+;PermanentRequiredItemIds=Iron,Gold
+;PermanentRequiredItemAmounts=1,1
 ;RequiredEntity=Wolf
 ;RequiredEntityRadius=10
 ;RequiredEntityNumber=0
@@ -435,7 +582,7 @@ CleanupInterval=9000
 
                                     float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
                                     if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
-                                    {
+                                    {                                        
                                         if (CheckInventoryForRequiredItems(block, blockSettings))
                                         {
                                             for (int i = 0; i < spawnIterations; i++)
@@ -589,6 +736,17 @@ CleanupInterval=9000
                 }
             }
 
+            for (int i = 0; i < blockSettings.PermanentRequiredItemTypes.Count; i++)
+            {
+                var permanentRequiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.PermanentRequiredItemTypes[i]], blockSettings.PermanentRequiredItemIds[i]);
+                var permanentItemAmount = (VRage.MyFixedPoint)blockSettings.PermanentRequiredItemAmounts[i];
+
+                if (!inventory.ContainItems(permanentItemAmount, permanentRequiredItemType))
+                {
+                    return false;
+                }
+            }
+
             return true;
         }
 
@@ -620,7 +778,10 @@ CleanupInterval=9000
                         (float)(randomGenerator.NextDouble() * Math.PI * 2),
                         (float)(randomGenerator.NextDouble() * Math.PI * 2)
                     );
+                    // Attempt to spawn the entity
                     MyVisualScriptLogicProvider.SpawnBot(entityID, spawnPosition);
+                    RemoveItemsFromInventory(block, settings, spawnAmount);
+
                 }
             }
         }
@@ -912,6 +1073,9 @@ CleanupInterval=9000
                     botSpawnerConfig.RequiredItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemIds)).ToString().Split(','));
                     botSpawnerConfig.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
 
+                    botSpawnerConfig.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemTypes)).ToString().Split(','));
+                    botSpawnerConfig.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemIds)).ToString().Split(','));
+                    botSpawnerConfig.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
                     settings.BlockSpawnSettings.Add(botSpawnerConfig);
 
                     LogError($"Loaded settings for section {section}: BlockId={botSpawnerConfig.BlockId}, BlockType={botSpawnerConfig.BlockType}, MinAmount={botSpawnerConfig.MinAmount}, MaxAmount={botSpawnerConfig.MaxAmount}, " +
@@ -926,7 +1090,10 @@ CleanupInterval=9000
                              $"MaxEntitiesInArea={botSpawnerConfig.MaxEntitiesInArea}, " +
                              $"EntityID={string.Join(",", botSpawnerConfig.EntityID)}, " +
                              $"RequiredItemTypes={string.Join(",", botSpawnerConfig.RequiredItemTypes)}, RequiredItemIds={string.Join(",", botSpawnerConfig.RequiredItemIds)}, " +
-                             $"RequiredItemAmounts={string.Join(",", botSpawnerConfig.RequiredItemAmounts)}");
+                             $"RequiredItemAmounts={string.Join(",", botSpawnerConfig.RequiredItemAmounts)}" +
+                             $"PermanentRequiredItemTypes={string.Join(",", botSpawnerConfig.PermanentRequiredItemTypes)}, " +
+                             $"PermanentRequiredItemIds={string.Join(",", botSpawnerConfig.PermanentRequiredItemIds)}, " +
+                             $"PermanentRequiredItemAmounts={string.Join(",", botSpawnerConfig.PermanentRequiredItemAmounts)}");
                 }
             }
             catch (Exception ex)
@@ -1076,6 +1243,9 @@ CleanupInterval=9000
                 botSpawnerConfig.RequiredItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemIds)).ToString().Split(','));
                 botSpawnerConfig.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
 
+                botSpawnerConfig.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemTypes)).ToString().Split(','));
+                botSpawnerConfig.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemIds)).ToString().Split(','));
+                botSpawnerConfig.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
                 BlockSpawnSettings.Add(botSpawnerConfig);
             }
         }
@@ -1102,6 +1272,9 @@ CleanupInterval=9000
         public List<string> RequiredItemTypes { get; set; } = new List<string>();
         public List<string> RequiredItemIds { get; set; } = new List<string>();
         public List<int> RequiredItemAmounts { get; set; } = new List<int>();
+        public List<string> PermanentRequiredItemTypes { get; set; } = new List<string>();
+        public List<string> PermanentRequiredItemIds { get; set; } = new List<string>();
+        public List<int> PermanentRequiredItemAmounts { get; set; } = new List<int>();
         public int PlayerDistanceCheck { get; set; } = 1000;
         public string RequiredEntity { get; set; } = "";
         public double RequiredEntityRadius { get; set; } = 10;
