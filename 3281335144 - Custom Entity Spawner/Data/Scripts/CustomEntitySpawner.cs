@@ -33,6 +33,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
         private long totalUpdateTicks = 0;
         private bool isLoading = true;
         private int loadingTickCount = 100;
+        private bool scriptPaused = false;
         private static readonly Random randomGenerator = new Random();
 
         private HashSet<string> loadedFiles = new HashSet<string>();
@@ -346,6 +347,20 @@ GlobalMaxEntities=30
 
         private void HandlePepcoCommand(string[] command, ref bool sendToOthers)
         {
+            if (command[1].ToLower() == "pause")
+            {
+                scriptPaused = !scriptPaused;
+                MyAPIGateway.Utilities.ShowMessage("Custom Entity Spawner", $"Script is now {(scriptPaused ? "paused" : "resumed")}.");
+                sendToOthers = false;
+                return;
+            }
+
+            if (scriptPaused)
+            {
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Script is currently paused.");
+                return;
+            }
+
             switch (command[1].ToLower())
             {
                 case "spawn":
@@ -373,6 +388,11 @@ GlobalMaxEntities=30
                         ShowAllEntities();
                         sendToOthers = false;
                     }
+                    break;
+                case "logging":
+                    settings.EnableLogging = !settings.EnableLogging;
+                    MyAPIGateway.Utilities.ShowMessage("Custom Entity Spawner", $"Logging is now {(settings.EnableLogging ? "enabled" : "disabled")}.");
+                    sendToOthers = false;
                     break;
                 case "help":
                     ShowHelp();
@@ -474,7 +494,9 @@ GlobalMaxEntities=30
         "/pepco cleanup dead - Cleans up dead entities.",
         "/pepco show all - Shows all entities.",
         "/pepco spawn <BotID> - Spawns a bot with the specified ID.",
-        "/pepco listBots - Lists all valid bot IDs."
+        "/pepco listBots - Lists all valid bot IDs.",
+        "/pepco logging - Enable debug logging",
+        "/pepco pause - pause script"
     };
 
             foreach (var command in commands)
@@ -665,7 +687,11 @@ GlobalMaxEntities=30
             long baseUpdateCycles = totalUpdateTicks / settings.BaseUpdateInterval;
             List<IMyPlayer> players = new List<IMyPlayer>();
             MyAPIGateway.Players.GetPlayers(players);
-
+            if (scriptPaused)
+            {
+                LogError("Script is currently paused.");
+                return;
+            }
             foreach (var entity in MyEntities.GetEntities())
             {
                 var grid = entity as IMyCubeGrid;
@@ -696,11 +722,11 @@ GlobalMaxEntities=30
                                             if (blockSettings.EnableEntitySpawning)
                                             {
                                                 int currentEntityCount = GetTotalEntityCount();
-                                                ShowMessageIfLoggingEnabled($"Total Entities: {currentEntityCount}");
+                                                LogError($"Total Entities: {currentEntityCount}");
 
                                                 if (currentEntityCount >= settings.GlobalMaxEntities)
                                                 {
-                                                    ShowMessageIfLoggingEnabled($"Entities:{currentEntityCount}. Global max entities limit exceeded.");
+                                                    LogError($"Entities:{currentEntityCount}. Global max entities limit exceeded.");
                                                     return;
                                                 }
                                             }
@@ -726,7 +752,7 @@ GlobalMaxEntities=30
 
                                                     if (itemSpawnAmount > 0)
                                                     {
-                                                        SpawnItems(block, blockSettings, itemSpawnAmount);
+                                                        SpawnItems(block, blockSettings);
                                                     }
                                                 }
                                             }
@@ -807,34 +833,49 @@ GlobalMaxEntities=30
             spawnIterations = 0;
             var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
             if (blockSettings == null)
+            {
+                LogError($"Has cargo check {block.FatBlock.DisplayName} we will make it work");
                 return true;
-
+            }
             var functionalBlock = block.FatBlock as IMyFunctionalBlock;
             if (functionalBlock != null)
             {
                 if (!functionalBlock.IsFunctional || !functionalBlock.Enabled || !functionalBlock.IsWorking)
                 {
+                    LogError($"functionalBlock check {block.FatBlock.DisplayName} can't work here");
                     return false;
                 }
             }
-
+            // New condition to check MaxEntitiesInArea within MaxEntitiesRadius
+            if (blockSettings.MaxEntitiesInArea > 0)
+            {
+                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius);
+                if (entityCount >= blockSettings.MaxEntitiesInArea)
+                {
+                    LogError($"Entity count {entityCount} exceeds MaxEntitiesInArea {blockSettings.MaxEntitiesInArea}");
+                    return false;
+                }
+            }
             if (blockSettings.EnableAirtightAndOxygen)
             {
                 bool isAirtight = grid.IsRoomAtPositionAirtight(block.FatBlock.Position);
                 double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(block.FatBlock.GetPosition());
                 if (!isAirtight && oxygenLevel <= 0.5)
+                {
+                    LogError($"EnableAirtightAndOxygen check {block.FatBlock.DisplayName} can't work here");
                     return false;
+                }
             }
-
+            
             if (!string.IsNullOrEmpty(blockSettings.RequiredEntity))
             {
                 int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.RequiredEntityRadius);
-
-                if (blockSettings.MaxEntitiesInArea > 0 && entityCount >= blockSettings.MaxEntitiesInArea)
+                
+                if (blockSettings.RequiredEntityNumber > 0 && entityCount >= blockSettings.RequiredEntityNumber)
                 {
                     return false;
                 }
-
+                
                 if (blockSettings.RequireEntityNumberForTotalEntities)
                 {
                     if (entityCount >= blockSettings.RequiredEntityNumber)
@@ -843,6 +884,7 @@ GlobalMaxEntities=30
                         return true;
                     }
                 }
+
                 else
                 {
                     spawnIterations = entityCount >= blockSettings.RequiredEntityNumber ? 1 : 0;
@@ -850,20 +892,10 @@ GlobalMaxEntities=30
                 }
             }
 
-            // New condition to check MaxEntitiesInArea within MaxEntitiesRadius
-            if (blockSettings.MaxEntitiesInArea > 0)
-            {
-                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius);
-                if (entityCount >= blockSettings.MaxEntitiesInArea)
-                {
-                    return false;
-                }
-            }
+           
 
             return true;
         }
-
-
 
         private int GetEntityCountInRadius(Vector3D position, double radius)
         {
@@ -880,6 +912,22 @@ GlobalMaxEntities=30
             }
             return entityCount;
         }
+        private void LogEntityCount(Vector3D position, double radius)
+        {
+            var entities = new HashSet<IMyEntity>();
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
+
+            int entityCount = 0;
+            foreach (var entity in entities)
+            {
+                if (Vector3D.Distance(entity.GetPosition(), position) <= radius)
+                {
+                    entityCount++;
+                }
+            }
+            LogError($"Entity count within {radius} meters: {entityCount}");
+        }
+
 
         private bool CheckInventoryForRequiredItems(IMySlimBlock block, BotSpawnerConfig blockSettings)
         {
@@ -946,10 +994,10 @@ GlobalMaxEntities=30
                             (float)(randomGenerator.NextDouble() * Math.PI * 2)
                         );
                         MyVisualScriptLogicProvider.SpawnBot(entityID, spawnPosition);
-
-                        if (settings.SpawnItemsWithEntities && settings.EnableItemSpawning)
+                        if (settings.SpawnItemsWithEntities)
                         {
-                            SpawnItems(block, settings, spawnAmount);
+                            SpawnItems(block, settings);
+                            
                         }
                     }
                 }
@@ -958,7 +1006,8 @@ GlobalMaxEntities=30
 
 
 
-        private void SpawnItems(IMySlimBlock block, BotSpawnerConfig settings, int spawnAmount)
+
+        private void SpawnItems(IMySlimBlock block, BotSpawnerConfig settings)
         {
             for (int k = 0; k < settings.ItemTypes.Count; k++)
             {
@@ -1245,7 +1294,7 @@ GlobalMaxEntities=30
                                 LoadCustomEntitySpawnerConfig(fileContent);
                             }
                             loadedFiles.Add(configFileName);
-                            ShowMessageIfLoggingEnabled($"Loaded: {configFileName}");
+                            LogError($"Loaded: {configFileName}");
                         }
                     }
                 }
@@ -1267,7 +1316,7 @@ GlobalMaxEntities=30
                                 LogError($"Loading config from: {cesFileName}");
                                 LoadCustomEntitySpawnerConfig(fileContent);
                                 loadedFiles.Add(cesFileName);
-                                ShowMessageIfLoggingEnabled($"Addon Loaded: {cesFileName}");
+                                LogError($"Addon Loaded: {cesFileName}");
                             }
                         }
                         else
@@ -1284,15 +1333,6 @@ GlobalMaxEntities=30
             }
         }
 
-        private void ShowMessageIfLoggingEnabled(string message)
-        {
-            if (settings.EnableLogging)
-            {
-                MyAPIGateway.Utilities.ShowMessage("CES:", message);
-                LogError($"CES: {message}");
-
-            }
-        }
 
         private void LoadGlobalConfig(string fileContent)
         {
@@ -1424,7 +1464,14 @@ GlobalMaxEntities=30
                 }
                 writer.WriteLine($"{DateTime.Now}: {message}");
             }
+
+            var player = MyAPIGateway.Session.Player;
+            if (player != null && MyAPIGateway.Session.IsUserAdmin(player.SteamUserId))
+            {
+                MyAPIGateway.Utilities.ShowMessage("CES", message);
+            }
         }
+
     }
 
     public class CustomEntitySpawnerSettings
@@ -1520,6 +1567,7 @@ GlobalMaxEntities=30
                     PlayerDistanceCheck = iniParser.Get(section, nameof(BotSpawnerConfig.PlayerDistanceCheck)).ToInt32(),
                     EnableEntitySpawning = iniParser.Get(section, nameof(BotSpawnerConfig.EnableEntitySpawning)).ToBoolean(true),
                     EnableItemSpawning = iniParser.Get(section, nameof(BotSpawnerConfig.EnableItemSpawning)).ToBoolean(true),
+                    SpawnItemsWithEntities = iniParser.Get(section, nameof(BotSpawnerConfig.SpawnItemsWithEntities)).ToBoolean(false),
                     MinEntityAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MinEntityAmount)).ToInt32(),
                     MaxEntityAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MaxEntityAmount)).ToInt32(),
                     MinItemAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MinItemAmount)).ToInt32(),
