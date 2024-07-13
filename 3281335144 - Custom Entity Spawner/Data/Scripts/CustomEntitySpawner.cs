@@ -73,32 +73,105 @@ GlobalMaxEntities=30
 ; HOW TO USE CustomEntitySpawner.ini
 ; ==============================================
 ; This file configures the spawning behavior of entities around specific block types.
-; Each section must be unigue.
+; Each section must be unique.
 ;[SomethingUniqueHere]
 
+; Block settings
 ; BlockId specifies the unique identifier for the block.
 ; Example: SmallBlockSmallContainer for a small cargo container.
 ; List of options: Any valid block ID.
+;BlockId=SmallBlockSmallContainer
+
 ; BlockType specifies the type of block for which this configuration applies.
 ; Example: MyObjectBuilder_CargoContainer for cargo containers.
 ; List of options: MyObjectBuilder_CargoContainer, MyObjectBuilder_Refinery, MyObjectBuilder_Assembler, etc.
 ;BlockType=MyObjectBuilder_CargoContainer
 
-; MinAmount is the minimum number of entities to spawn when conditions are met.
+; Enabled specifies whether this configuration is active.
+; Values: true or false
+; Example: true
+;Enabled=true
+
+; PlayerDistanceCheck is the maximum distance from a player for spawning entities.
+; Example: 100 (100 meters)
+; List of options: Any positive integer, -1 to disable the check.
+;PlayerDistanceCheck=100
+
+; Entity spawning settings
+; EnableEntitySpawning specifies whether entities should be spawned.
+; Values: true or false
+;EnableEntitySpawning=true
+
+; EntityID specifies the ID of the entities to spawn.
+; Example: Wolf
+; List of options: Any valid entity ID such as Wolf, Spider, etc.
+;EntityID=Wolf
+
+; MinEntityAmount is the minimum number of entities to spawn when conditions are met.
 ; Example: 1
 ; List of options: Any positive integer.
-;MinAmount=1
+;MinEntityAmount=1
 
-; MaxAmount is the maximum number of entities to spawn when conditions are met.
+; MaxEntityAmount is the maximum number of entities to spawn when conditions are met.
 ; Example: 1
 ; List of options: Any positive integer.
-;MaxAmount=1
+;MaxEntityAmount=1
 
-; UseWeightedDrops determines if the number of entities spawned should use weighted probabilities.
+; MaxEntitiesInArea is the maximum number of entities allowed in the area for spawning.
+; Example: 30
+; List of options: Any positive integer.
+;MaxEntitiesInArea=30
+
+; MaxEntitiesRadius is the radius (in meters) within which the MaxEntitiesInArea limit is checked.
+; This radius is spherical, meaning it is measured in 3D space.
+; Example: 100 (100 meters)
+; List of options: Any positive float value.
+;MaxEntitiesRadius=100
+
+
+; Item spawning settings
+; EnableItemSpawning specifies whether items should be spawned.
+; Values: true or false
+;EnableItemSpawning=true
+
+; ItemTypes specifies the types of items to spawn.
+; Example: MyObjectBuilder_Component
+; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
+;ItemTypes=MyObjectBuilder_Component
+
+; ItemIds specifies the IDs of the items to spawn.
+; Example: SteelPlate
+; List of options: Any valid item ID such as SteelPlate, Iron, etc.
+;ItemIds=SteelPlate
+
+; MinItemAmount is the minimum number of items to spawn when conditions are met.
+; Example: 1
+; List of options: Any positive integer.
+;MinItemAmount=1
+
+; MaxItemAmount is the maximum number of items to spawn when conditions are met.
+; Example: 1
+; List of options: Any positive integer.
+;MaxItemAmount=1
+
+; UseWeightedDrops determines if the number of items spawned should use weighted probabilities.
 ; Values: true or false
 ; Example: false
 ;UseWeightedDrops=false
 
+; StackItems specifies whether items should be stacked when spawned.
+; Values: true or false
+;StackItems=false
+
+; SpawnInsideInventory specifies whether items should be spawned inside the inventory of the block.
+; Values: true or false
+;SpawnInsideInventory=false
+
+; SpawnItemsWithEntities specifies whether items should be spawned only when an entity is spawned.
+; Values: true or false
+;SpawnItemsWithEntities=true
+
+; Environmental conditions
 ; DamageAmount is the amount of damage to apply to the block each time entities are spawned.
 ; Example: 0
 ; List of options: Any non-negative float value.
@@ -144,51 +217,39 @@ GlobalMaxEntities=30
 ; Example: false
 ;EnableAirtightAndOxygen=false
 
-; Enabled specifies whether this configuration is active.
-; Values: true or false
-; Example: true
-;Enabled=true
-
-; PlayerDistanceCheck is the maximum distance from a player for spawning entities.
-; Example: 100 (100 meters)
-; List of options: Any positive integer, -1 to disable the check.
-;PlayerDistanceCheck=100
-
-; EntityID specifies the ID of the entities to spawn.
-; Example: Wolf
-; List of options: Any valid entity ID such as Wolf, Spider, etc.
-;EntityID=Wolf
-
+; Required items for spawning (to be removed)
 ; RequiredItemTypes specifies the types of items required in the inventory for spawning (to be removed).
 ; Example: MyObjectBuilder_Component
 ; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
-;RequiredItemTypes=MyObjectBuilder_Component
+;RequiredItemTypes=MyObjectBuilder_Component,MyObjectBuilder_Component
 
 ; RequiredItemIds specifies the IDs of the required items (to be removed).
 ; Example: SteelPlate
 ; List of options: Any valid item ID such as SteelPlate, Iron, etc.
-;RequiredItemIds=SteelPlate
+;RequiredItemIds=SteelPlate,InteriorPlate
 
 ; RequiredItemAmounts specifies the amounts of the required items (to be removed).
 ; Example: 5
 ; List of options: Any positive integer.
-;RequiredItemAmounts=5
+;RequiredItemAmounts=1,1
 
+; Permanent required items for spawning (not removed)
 ; PermanentRequiredItemTypes specifies the types of items required in the inventory for spawning (not removed).
 ; Example: MyObjectBuilder_Ore
 ; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
-;PermanentRequiredItemTypes=MyObjectBuilder_Ore
+;PermanentRequiredItemTypes=MyObjectBuilder_Ore,MyObjectBuilder_Ore
 
 ; PermanentRequiredItemIds specifies the IDs of the permanent required items (not removed).
 ; Example: Iron
 ; List of options: Any valid item ID such as Iron, SteelPlate, etc.
-;PermanentRequiredItemIds=Iron
+;PermanentRequiredItemIds=Iron,Gold
 
 ; PermanentRequiredItemAmounts specifies the amounts of the permanent required items (not removed).
 ; Example: 10
 ; List of options: Any positive integer.
-;PermanentRequiredItemAmounts=10
+;PermanentRequiredItemAmounts=1,1
 
+; Required entities in the vicinity for spawning
 ; RequiredEntity specifies the entity type required in the vicinity for spawning.
 ; Example: Wolf
 ; List of options: Any valid entity ID such as Wolf, Spider, etc.
@@ -212,36 +273,6 @@ GlobalMaxEntities=30
 ; MaxEntitiesInArea is the maximum number of entities allowed in the area for spawning.
 ; Example: 30
 ; List of options: Any positive integer.
-;MaxEntitiesInArea=30
-
-;[pepcoTestWolfSpawner_LGSmallContatiner]
-;BlockId=SmallBlockSmallContainer
-;BlockType=MyObjectBuilder_CargoContainer
-;MinAmount=1
-;MaxAmount=1
-;UseWeightedDrops=false
-;DamageAmount=0
-;MinHealthPercentage=0.2
-;MaxHealthPercentage=1
-;MinHeight=0.5
-;MaxHeight=2.0
-;MinRadius=0.5
-;MaxRadius=2.0
-;SpawnTriggerInterval=3
-;EnableAirtightAndOxygen=false
-;Enabled=true
-;PlayerDistanceCheck=100
-;EntityID=Wolf
-;RequiredItemTypes=MyObjectBuilder_Component,MyObjectBuilder_Component
-;RequiredItemIds=SteelPlate,InteriorPlate
-;RequiredItemAmounts=1,1
-;PermanentRequiredItemTypes=MyObjectBuilder_Ore,MyObjectBuilder_Ore
-;PermanentRequiredItemIds=Iron,Gold
-;PermanentRequiredItemAmounts=1,1
-;RequiredEntity=Wolf
-;RequiredEntityRadius=10
-;RequiredEntityNumber=0
-;RequireEntityNumberForTotalEntities=false
 ;MaxEntitiesInArea=30
 ";
 
@@ -662,7 +693,6 @@ GlobalMaxEntities=30
                                     {
                                         if (CheckInventoryForRequiredItems(block, blockSettings))
                                         {
-                                            // Check if the global max entities limit has been reached
                                             if (blockSettings.EnableEntitySpawning)
                                             {
                                                 int currentEntityCount = GetTotalEntityCount();
@@ -679,9 +709,7 @@ GlobalMaxEntities=30
                                             {
                                                 if (blockSettings.EnableEntitySpawning)
                                                 {
-                                                    int entitySpawnAmount = blockSettings.UseWeightedDrops ?
-                                                        GetWeightedRandomNumber(blockSettings.MinEntityAmount, GenerateProbabilities(blockSettings.MinEntityAmount, blockSettings.MaxEntityAmount)) :
-                                                        randomGenerator.Next(blockSettings.MinEntityAmount, blockSettings.MaxEntityAmount + 1);
+                                                    int entitySpawnAmount = randomGenerator.Next(blockSettings.MinEntityAmount, blockSettings.MaxEntityAmount + 1);
 
                                                     if (entitySpawnAmount > 0)
                                                     {
@@ -690,7 +718,7 @@ GlobalMaxEntities=30
                                                     }
                                                 }
 
-                                                if (blockSettings.EnableItemSpawning)
+                                                if (!blockSettings.SpawnItemsWithEntities && blockSettings.EnableItemSpawning)
                                                 {
                                                     int itemSpawnAmount = blockSettings.UseWeightedDrops ?
                                                         GetWeightedRandomNumber(blockSettings.MinItemAmount, GenerateProbabilities(blockSettings.MinItemAmount, blockSettings.MaxItemAmount)) :
@@ -711,6 +739,7 @@ GlobalMaxEntities=30
                 }
             }
         }
+
 
 
         private int GetTotalEntityCount()
@@ -779,6 +808,7 @@ GlobalMaxEntities=30
             var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
             if (blockSettings == null)
                 return true;
+
             var functionalBlock = block.FatBlock as IMyFunctionalBlock;
             if (functionalBlock != null)
             {
@@ -786,7 +816,6 @@ GlobalMaxEntities=30
                 {
                     return false;
                 }
-
             }
 
             if (blockSettings.EnableAirtightAndOxygen)
@@ -799,12 +828,7 @@ GlobalMaxEntities=30
 
             if (!string.IsNullOrEmpty(blockSettings.RequiredEntity))
             {
-                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.RequiredEntity, blockSettings.RequiredEntityRadius);
-
-                if (blockSettings.MaxEntitiesInArea == 0 && entityCount > 0)
-                {
-                    return false;
-                }
+                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.RequiredEntityRadius);
 
                 if (blockSettings.MaxEntitiesInArea > 0 && entityCount >= blockSettings.MaxEntitiesInArea)
                 {
@@ -813,7 +837,7 @@ GlobalMaxEntities=30
 
                 if (blockSettings.RequireEntityNumberForTotalEntities)
                 {
-                    if (blockSettings.RequiredEntityNumber != 0 && entityCount >= blockSettings.RequiredEntityNumber)
+                    if (entityCount >= blockSettings.RequiredEntityNumber)
                     {
                         spawnIterations = entityCount / blockSettings.RequiredEntityNumber;
                         return true;
@@ -826,19 +850,30 @@ GlobalMaxEntities=30
                 }
             }
 
+            // New condition to check MaxEntitiesInArea within MaxEntitiesRadius
+            if (blockSettings.MaxEntitiesInArea > 0)
+            {
+                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius);
+                if (entityCount >= blockSettings.MaxEntitiesInArea)
+                {
+                    return false;
+                }
+            }
+
             return true;
         }
 
 
-        private int GetEntityCountInRadius(Vector3D blockPosition, string requiredEntity, double requiredEntityRadius)
+
+        private int GetEntityCountInRadius(Vector3D position, double radius)
         {
             var entities = new HashSet<IMyEntity>();
-            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter && e.DisplayName != null && e.DisplayName.IndexOf(requiredEntity, StringComparison.OrdinalIgnoreCase) >= 0);
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
 
             int entityCount = 0;
             foreach (var entity in entities)
             {
-                if (Vector3D.Distance(entity.GetPosition(), blockPosition) <= requiredEntityRadius)
+                if (Vector3D.Distance(entity.GetPosition(), position) <= radius)
                 {
                     entityCount++;
                 }
@@ -1308,6 +1343,7 @@ GlobalMaxEntities=30
                         MaxItemAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MaxItemAmount)).ToInt32(),
                         UseWeightedDrops = iniParser.Get(section, nameof(BotSpawnerConfig.UseWeightedDrops)).ToBoolean(),
                         MaxEntitiesInArea = iniParser.Get(section, nameof(BotSpawnerConfig.MaxEntitiesInArea)).ToInt32(),
+                        MaxEntitiesRadius = iniParser.Get(section, nameof(BotSpawnerConfig.MaxEntitiesRadius)).ToDouble(100), // Default value of 100
                         StackItems = iniParser.Get(section, nameof(BotSpawnerConfig.StackItems)).ToBoolean(),
                         SpawnInsideInventory = iniParser.Get(section, nameof(BotSpawnerConfig.SpawnInsideInventory)).ToBoolean(),
                         DamageAmount = (float)iniParser.Get(section, nameof(BotSpawnerConfig.DamageAmount)).ToDouble(),
@@ -1335,6 +1371,21 @@ GlobalMaxEntities=30
                     botSpawnerConfig.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemIds)).ToString().Split(','));
                     botSpawnerConfig.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
                     settings.BlockSpawnSettings.Add(botSpawnerConfig);
+
+                    LogError($"Loaded settings for section {section}: BlockId={botSpawnerConfig.BlockId}, BlockType={botSpawnerConfig.BlockType}, " +
+                             $"Enabled={botSpawnerConfig.Enabled}, PlayerDistanceCheck={botSpawnerConfig.PlayerDistanceCheck}, " +
+                             $"EnableEntitySpawning={botSpawnerConfig.EnableEntitySpawning}, EnableItemSpawning={botSpawnerConfig.EnableItemSpawning}, " +
+                             $"SpawnItemsWithEntities={botSpawnerConfig.SpawnItemsWithEntities}, MinEntityAmount={botSpawnerConfig.MinEntityAmount}, " +
+                             $"MaxEntityAmount={botSpawnerConfig.MaxEntityAmount}, MinItemAmount={botSpawnerConfig.MinItemAmount}, " +
+                             $"MaxItemAmount={botSpawnerConfig.MaxItemAmount}, UseWeightedDrops={botSpawnerConfig.UseWeightedDrops}, " +
+                             $"MaxEntitiesInArea={botSpawnerConfig.MaxEntitiesInArea}, MaxEntitiesRadius={botSpawnerConfig.MaxEntitiesRadius}, " +
+                             $"StackItems={botSpawnerConfig.StackItems}, SpawnInsideInventory={botSpawnerConfig.SpawnInsideInventory}, " +
+                             $"DamageAmount={botSpawnerConfig.DamageAmount}, MinHealthPercentage={botSpawnerConfig.MinHealthPercentage}, " +
+                             $"MaxHealthPercentage={botSpawnerConfig.MaxHealthPercentage}, MinHeight={botSpawnerConfig.MinHeight}, " +
+                             $"MaxHeight={botSpawnerConfig.MaxHeight}, MinRadius={botSpawnerConfig.MinRadius}, MaxRadius={botSpawnerConfig.MaxRadius}, " +
+                             $"SpawnTriggerInterval={botSpawnerConfig.SpawnTriggerInterval}, EnableAirtightAndOxygen={botSpawnerConfig.EnableAirtightAndOxygen}, " +
+                             $"RequiredEntity={botSpawnerConfig.RequiredEntity}, RequiredEntityRadius={botSpawnerConfig.RequiredEntityRadius}, " +
+                             $"RequiredEntityNumber={botSpawnerConfig.RequiredEntityNumber}, RequireEntityNumberForTotalEntities={botSpawnerConfig.RequireEntityNumberForTotalEntities}");
                 }
             }
             catch (Exception ex)
@@ -1343,6 +1394,7 @@ GlobalMaxEntities=30
                 LogError($"Error loading CustomEntitySpawner config: {ex.Message}");
             }
         }
+
 
 
 
@@ -1474,6 +1526,7 @@ GlobalMaxEntities=30
                     MaxItemAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MaxItemAmount)).ToInt32(),
                     UseWeightedDrops = iniParser.Get(section, nameof(BotSpawnerConfig.UseWeightedDrops)).ToBoolean(),
                     MaxEntitiesInArea = iniParser.Get(section, nameof(BotSpawnerConfig.MaxEntitiesInArea)).ToInt32(),
+                    MaxEntitiesRadius = iniParser.Get(section, nameof(BotSpawnerConfig.MaxEntitiesRadius)).ToDouble(100), // Default value of 100
                     StackItems = iniParser.Get(section, nameof(BotSpawnerConfig.StackItems)).ToBoolean(),
                     SpawnInsideInventory = iniParser.Get(section, nameof(BotSpawnerConfig.SpawnInsideInventory)).ToBoolean(),
                     DamageAmount = (float)iniParser.Get(section, nameof(BotSpawnerConfig.DamageAmount)).ToDouble(),
@@ -1545,6 +1598,7 @@ GlobalMaxEntities=30
         public int RequiredEntityNumber { get; set; } = 0;
         public bool RequireEntityNumberForTotalEntities { get; set; } = false;
         public int MaxEntitiesInArea { get; set; } = 10;
+        public double MaxEntitiesRadius { get; set; } = 100;
     }
 }
 
