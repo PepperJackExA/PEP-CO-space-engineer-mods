@@ -249,9 +249,9 @@ const app = Vue.createApp({
     /**
      * Clears the input and resets the app state.
      */
-    clearInput() {
+    clearInput(userInput = false) {
 
-      if (confirm('Are you sure?')) {
+      if (!userInput || confirm('Are you sure?')) {
         this.totalVolume = 0
         this.totalWeight = 0
         this.componentList = []
@@ -259,7 +259,7 @@ const app = Vue.createApp({
         this.importObject = null
         localStorage.setItem('importObject', JSON.stringify(this.importObject));
         localStorage.setItem('selectedBlocks', JSON.stringify(this.selectedBlocks));
-      } 
+      }
 
     },
     /**
@@ -348,18 +348,36 @@ const app = Vue.createApp({
      * Updates the import object.
      * @param {string} value - The new import object value.
      */
-    updateImportObject(value) {
+    updateImportObject(value, fromClipBoard) {
       this.clearInput()
-
-      try {
-        this.importObject = JSON.parse(value)
-        localStorage.setItem('importObject', JSON.stringify(this.importObject))
-        this.importText = ""
-      } catch (error) {
-        console.log(error)
-        this.importObject = null
-        this.importText = ""
+      console.log(fromClipBoard)
+      if (fromClipBoard) {
+        //Replace the value with the clipboard value
+        var value = navigator.clipboard.readText().then(text => {
+          try {
+            this.importObject = JSON.parse(text)
+            localStorage.setItem('importObject', JSON.stringify(this.importObject))
+            this.importText = ""
+          } catch (error) {
+            console.log(error)
+            this.importObject = null
+            this.importText = ""
+          }
+        });
       }
+      else {
+
+        try {
+          this.importObject = JSON.parse(value)
+          localStorage.setItem('importObject', JSON.stringify(this.importObject))
+          this.importText = ""
+        } catch (error) {
+          console.log(error)
+          this.importObject = null
+          this.importText = ""
+        }
+      }
+
     },
     /**
      * Looks up the icon for an object.
@@ -405,11 +423,52 @@ const app = Vue.createApp({
         top: scrollTo,
         behavior: 'smooth'
       });
-      this[input+'Visible'] = true;
+      this[input + 'Visible'] = true;
     },
     clearSelectedBlocks() {
       this.selectedBlocks = [];
       this.calculateComponentList();
+    },
+    pasteFromClipboard() {
+      navigator.clipboard.readText().then(text => {
+        var clipboardText = text;
+        // Check if the clipboard text is a valid JSON string
+        try {
+          var blocks = JSON.parse(clipboardText);
+          var selectedBlocksConstructor;
+          this.selectedBlocks = [];
+          //Print all blocks to console
+          blocks.forEach(block => {
+
+            amount = 1;
+            var indexLookup = this.importObject.blocks.findIndex((selectedBlock) => {
+              return selectedBlock.uniqueID == block.uniqueID
+            })
+
+            if (indexLookup != -1) {
+              //create a new object to avoid reference issues
+              var addedBlock = { ...this.importObject.blocks[indexLookup] }
+              addedBlock.amount = block.amount
+              this.selectedBlocks.push(addedBlock)
+            }
+            else {
+              //Alert user that unknown block found in clipboard and that he should re-import the block list
+              alert("Unknown block found in clipboard, please re-import the block list")
+            }
+
+            this.selectedBlocks.sort((blockA, blockB) => {
+              const nameA = blockA.displayName.toLowerCase(); // Case-insensitive sorting
+              const nameB = blockB.displayName.toLowerCase();
+              return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
+            });
+            this.calculateComponentList();
+          });
+
+        } catch (error) {
+          console.error("Error parsing clipboard text:", error);
+          // Handle the error here, e.g. show an error message to the user
+        }
+      });
     }
   },
   computed: {
