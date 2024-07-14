@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Engineers Smart Assistant</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -61,7 +61,11 @@
                         <div class="file-upload searchBox" style="margin: 0 auto;">
                             <input class="searchBox button" style="min-width: 300px; min-height: 300px;" type="text"
                                 placeholder="paste your content from the mod here"
-                                @change="updateImportObject($event.target.value)">
+                                @change="updateImportObject($event.target.value,false)">
+                        </div>
+                        <div class="file-upload searchBox" style="margin: 0 auto;">
+                            <span class="searchBox button" style="min-width: 200px; min-height: 300px; padding: 0px; display: flex; justify-content: center; align-items: center;"
+                                @click="updateImportObject($event.target.value,true)">Paste from Clipboard</span>
                         </div>
                     </div>
 
@@ -134,8 +138,10 @@
                             <span class="button no-select" style="width: 100px;"
                                 @click="visibleBlockData = !visibleBlockData">show data</span>
                             <input class="button searchBox" v-show="visibleBlockData"
-                                style="flex-grow: 2; min-height: 42px; margin-left: 1em;" type="text"
+                                style="flex-grow: 2; min-height: 42px; margin-left: 1em; margin-right: 1em;" type="text"
                                 v-model="selectedBlocksString" @change="updateSelectedBlocks" placeholder="paste here">
+                            <span class="button no-select" style="width: 100px;"
+                                @click="pasteFromClipboard">from Clipb.</span>
                         </div>
                         <div id="selected-blocks-table">
                             <div class="row header">
@@ -237,7 +243,7 @@
 
                     </div>
                     <div id="clearInput">
-                        <span id="clearInputButton" class="button" style="width: fit-content;" @click="clearInput">clear
+                        <span id="clearInputButton" class="button" style="width: fit-content;" @click="clearInput(true)">clear
                             upload file</span>
 
                     </div>
