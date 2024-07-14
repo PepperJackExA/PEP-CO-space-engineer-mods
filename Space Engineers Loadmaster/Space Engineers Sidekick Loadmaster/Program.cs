@@ -24,12 +24,11 @@ namespace IngameScript
     partial class Program : MyGridProgram
     {
 
-        string exclusionTag = "Excl";
+        string excludedInventoryTag = "Excl";
         string primaryConnectorTag = "PrimCo"; //This better be unique or else you void any non-existing warranty
 
         // You shall not pass this line
 
-        string loadmasterInput;
         double totalCargoVolume;
         double totalCargoVolumeLarge;
         double totalCargoVolumeSmall;
@@ -111,7 +110,7 @@ namespace IngameScript
                     string output = "";
 
                     // Only consider blocks on the same grid as the programmable block with cargo, not production blocks and blocks connected to the primary connector if they don't have an exclusion tag in their name
-                    GridTerminalSystem.GetBlocksOfType<IMyTerminalBlock>(cargoContainerList, c => c.CubeGrid == Me.CubeGrid && c.HasInventory && c.GetInventory(0).CanTransferItemTo(primaryConnector.GetInventory(0), itemSmall) && !(c is IMyProductionBlock) && !c.CustomName.Contains(exclusionTag));
+                    GridTerminalSystem.GetBlocksOfType<IMyTerminalBlock>(cargoContainerList, c => c.CubeGrid == Me.CubeGrid && c.HasInventory && c.GetInventory(0).CanTransferItemTo(primaryConnector.GetInventory(0), itemSmall) && !(c is IMyProductionBlock) && !c.CustomName.Contains(excludedInventoryTag));
 
                     cargoDefinition.Clear();
 
