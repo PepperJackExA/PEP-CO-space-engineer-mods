@@ -388,6 +388,25 @@ GlobalMaxEntities=30
                         ShowAllEntities();
                         sendToOthers = false;
                     }
+                    if (command.Length == 4)
+                    {
+                        string entityId = command[2];
+                        double radius;
+                        
+                        if (double.TryParse(command[3], out radius))
+                        {
+                            ShowEntities(entityId, radius);
+                            sendToOthers = false;
+                        }
+                        else
+                        {
+                            MyAPIGateway.Utilities.ShowMessage("PEPCO", "Invalid radius. Usage: /pepco show <entityID> <radius>");
+                        }
+                    }
+                    else
+                    {
+                        MyAPIGateway.Utilities.ShowMessage("PEPCO", "Usage: /pepco show <entityID> <radius>");
+                    }
                     break;
                 case "logging":
                     settings.EnableLogging = !settings.EnableLogging;
@@ -403,6 +422,34 @@ GlobalMaxEntities=30
                     break;
             }
         }
+
+
+        private void ShowEntities(string entitySubtypeId, double radius)
+        {
+            var entities = new HashSet<IMyEntity>();
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
+
+            int entityCount = 0;
+            foreach (var entity in entities)
+            {
+                string entityCurrentSubtypeId = (entity as MyEntity)?.DefinitionId?.SubtypeId.ToString();
+
+                if (entityCurrentSubtypeId != null && entityCurrentSubtypeId.Equals(entitySubtypeId, StringComparison.OrdinalIgnoreCase) &&
+                    Vector3D.Distance(entity.GetPosition(), MyAPIGateway.Session.Player.GetPosition()) <= radius)
+                {
+                    entityCount++;
+                    string entityType = entity.GetType().Name;
+                    Vector3D entityPosition = entity.GetPosition();
+
+                    MyAPIGateway.Utilities.ShowMessage("Entity", $"Type: {entityType}, SubtypeId: {entityCurrentSubtypeId}, Location: {entityPosition}");
+                }
+            }
+
+            MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Total entities of subtype '{entitySubtypeId}' within {radius} meters: {entityCount}");
+        }
+
+
+
 
         private void HandleSpawnCommand(string[] command)
         {
@@ -516,13 +563,14 @@ GlobalMaxEntities=30
                 if (entity is IMyCharacter && character != playerCharacter && !character.IsDead)
                 {
                     string entityType = entity.GetType().Name;
-                    string entityName = entity.DisplayName ?? "Unnamed";
+                    string entitySubtypeId = (entity as MyEntity)?.DefinitionId?.SubtypeId.ToString() ?? "Unnamed";
+                    Vector3D entityPosition = entity.GetPosition();
 
-                    MyAPIGateway.Utilities.ShowMessage("Entity", $"Type: {entityType}, Name: {entityName}");
-
+                    MyAPIGateway.Utilities.ShowMessage("Entity", $"Type: {entityType}, SubtypeId: {entitySubtypeId}, Location: {entityPosition}");
                 }
             }
         }
+
         private void ListAllBlocksAndSpawns()
         {
             if (settings.BlockSpawnSettings.Count == 0)
@@ -562,27 +610,29 @@ GlobalMaxEntities=30
             return false;
         }
 
-        private void KillEntitiesByName(string entityName, double radius)
+        private void KillEntitiesByName(string entitySubtypeId, double radius)
         {
             var entities = new HashSet<IMyEntity>();
             Vector3D playerPosition = MyAPIGateway.Session.Player.GetPosition();
             IMyCharacter playerCharacter = MyAPIGateway.Session.Player.Character;
 
-            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter && e.DisplayName != null && e.DisplayName.IndexOf(entityName, StringComparison.OrdinalIgnoreCase) >= 0);
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
 
             int entitiesKilled = 0;
             foreach (var entity in entities)
             {
                 IMyCharacter character = entity as IMyCharacter;
-                if (character != null && Vector3D.Distance(character.GetPosition(), playerPosition) <= radius && character != playerCharacter)
+                string entitySubtypeIdCurrent = (entity as MyEntity)?.DefinitionId?.SubtypeId.ToString();
+                if (character != null && Vector3D.Distance(character.GetPosition(), playerPosition) <= radius && character != playerCharacter && entitySubtypeIdCurrent != null && entitySubtypeIdCurrent.IndexOf(entitySubtypeId, StringComparison.OrdinalIgnoreCase) >= 0)
                 {
                     entity.Close();
                     entitiesKilled++;
                 }
             }
 
-            MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Killed {entitiesKilled} entities with name: {entityName} within {radius} meters.");
+            MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Killed {entitiesKilled} entities with SubtypeId: {entitySubtypeId} within {radius} meters.");
         }
+
 
         private void KillAllEntities(double radius)
         {
@@ -834,70 +884,75 @@ GlobalMaxEntities=30
             var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
             if (blockSettings == null)
             {
-                LogError($"Has cargo check {block.FatBlock.DisplayName} we will make it work");
-                return true;
+                LogError($"Block settings not found for {block.FatBlock.BlockDefinition.TypeIdString}, {block.FatBlock.BlockDefinition.SubtypeId}");
+                return false;
             }
+
             var functionalBlock = block.FatBlock as IMyFunctionalBlock;
-            if (functionalBlock != null)
+            if (functionalBlock != null && (!functionalBlock.IsFunctional || !functionalBlock.Enabled || !functionalBlock.IsWorking))
             {
-                if (!functionalBlock.IsFunctional || !functionalBlock.Enabled || !functionalBlock.IsWorking)
-                {
-                    LogError($"functionalBlock check {block.FatBlock.DisplayName} can't work here");
-                    return false;
-                }
+                LogError($"Functional block {block.FatBlock.BlockDefinition.SubtypeId} is not functional, enabled, or working");
+                return false;
             }
-            // New condition to check MaxEntitiesInArea within MaxEntitiesRadius
+
             if (blockSettings.MaxEntitiesInArea > 0)
             {
-                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius);
+                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, null);
+                LogError($"Entity count {entityCount} within radius {blockSettings.MaxEntitiesRadius}");
                 if (entityCount >= blockSettings.MaxEntitiesInArea)
                 {
                     LogError($"Entity count {entityCount} exceeds MaxEntitiesInArea {blockSettings.MaxEntitiesInArea}");
                     return false;
                 }
             }
+
             if (blockSettings.EnableAirtightAndOxygen)
             {
                 bool isAirtight = grid.IsRoomAtPositionAirtight(block.FatBlock.Position);
                 double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(block.FatBlock.GetPosition());
+                LogError($"Airtight: {isAirtight}, OxygenLevel: {oxygenLevel}");
                 if (!isAirtight && oxygenLevel <= 0.5)
                 {
-                    LogError($"EnableAirtightAndOxygen check {block.FatBlock.DisplayName} can't work here");
+                    LogError($"Airtight and oxygen conditions not met for {block.FatBlock.BlockDefinition.SubtypeId}");
                     return false;
                 }
             }
-            
+
             if (!string.IsNullOrEmpty(blockSettings.RequiredEntity))
             {
-                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.RequiredEntityRadius);
-                
-                if (blockSettings.RequiredEntityNumber > 0 && entityCount >= blockSettings.RequiredEntityNumber)
-                {
-                    return false;
-                }
-                
+                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.RequiredEntityRadius, blockSettings.RequiredEntity);
+                LogError($"Required entity {blockSettings.RequiredEntity} count: {entityCount} within radius: {blockSettings.RequiredEntityRadius}");
+
                 if (blockSettings.RequireEntityNumberForTotalEntities)
                 {
                     if (entityCount >= blockSettings.RequiredEntityNumber)
                     {
                         spawnIterations = entityCount / blockSettings.RequiredEntityNumber;
+                        LogError($"Spawn iterations set to {spawnIterations} based on entity count");
                         return true;
                     }
                 }
-
                 else
                 {
-                    spawnIterations = entityCount >= blockSettings.RequiredEntityNumber ? 1 : 0;
-                    return entityCount >= blockSettings.RequiredEntityNumber;
+                    if (entityCount >= blockSettings.RequiredEntityNumber)
+                    {
+                        spawnIterations = 1;
+                        LogError($"Spawn iterations set to 1 based on entity count");
+                        return true;
+                    }
+                    else
+                    {
+                        LogError($"Entity count {entityCount} is less than required {blockSettings.RequiredEntityNumber}");
+                        return false;
+                    }
                 }
             }
 
-           
-
+            spawnIterations = 1; // Default to 1 if no specific requirements are set
             return true;
         }
 
-        private int GetEntityCountInRadius(Vector3D position, double radius)
+        private int GetEntityCountInRadius(Vector3D position, double radius, string requiredEntitySubtypeId)
         {
             var entities = new HashSet<IMyEntity>();
             MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
@@ -907,11 +962,19 @@ GlobalMaxEntities=30
             {
                 if (Vector3D.Distance(entity.GetPosition(), position) <= radius)
                 {
-                    entityCount++;
+                    string entitySubtypeIdCurrent = (entity as MyEntity)?.DefinitionId?.SubtypeId.ToString();
+                    if (string.IsNullOrEmpty(requiredEntitySubtypeId) || entitySubtypeIdCurrent != null && entitySubtypeIdCurrent.Equals(requiredEntitySubtypeId, StringComparison.OrdinalIgnoreCase))
+                    {
+                        entityCount++;
+                    }
                 }
             }
+
+            LogError($"Total entities of type '{requiredEntitySubtypeId}' found within radius {radius}: {entityCount}");
             return entityCount;
         }
+
+
         private void LogEntityCount(Vector3D position, double radius)
         {
             var entities = new HashSet<IMyEntity>();
