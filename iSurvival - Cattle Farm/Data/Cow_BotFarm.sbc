@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+        <Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+            <Id>
+                <TypeId>CargoContainer</TypeId>
+                <SubtypeId>FeedTrough_Cow_Farm</SubtypeId>
+            </Id>
+            <DisplayName>Cow Farm Feed Trough</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\FeedTrough.png</Icon>
+            <Description>Description_MediumCargoContainer</Description>
+            <CubeSize>Small</CubeSize>
+            <GuiVisible>false</GuiVisible>
+            <BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="1" z="4"/>
+            <ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\small\FeedTrough.mwm</Model>
+            <Components>
+                <Component Subtype="CowFarm" Count="1" />
+				<Component Subtype="Hay" Count="1000" />
+            </Components>
+            <CriticalComponent Subtype="SteelPlate" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="4.00"/>
+			</MountPoints>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\CargoContainerMediumConstruction_1.mwm" />
+            </BuildProgressModels>
+			<BlockPairName>FeedTrough</BlockPairName>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>14</BuildTimeSeconds>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>10</PCU>
+            <IsAirTight>true</IsAirTight>
+        </Definition>
+    </CubeBlocks>
+	<EntityContainers>
+		<Container>
+			<Id>
+				<TypeId>CargoContainer</TypeId>
+				<SubtypeId>SmallCow_BotFarm</SubtypeId>
+			</Id>
+			<DefaultComponents>
+				<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="SmallCow_BotFarm" ForceCreate="true"/>
+			</DefaultComponents>
+		</Container>
+	</EntityContainers>
+	<EntityComponents>
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>SmallCow_BotFarm</SubtypeId>
+			</Id>
+			<Size x="0.5" y="0.5" z="0.5" />
+		</EntityComponent>
+	</EntityComponents>
+</Definitions>
