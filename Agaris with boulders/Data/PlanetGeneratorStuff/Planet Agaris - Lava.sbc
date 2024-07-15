@@ -1227,7 +1227,24 @@
         </Rule>
       </Item>
 	  
-	  
+	  	  <!--Undersea copper boulders-->
+	  	      <Item>
+        <Biomes>
+          <Biome>10</Biome>
+        </Biomes>
+        <Materials>
+          <Material>AlienSandSea</Material>
+		  <Material>DarkSoilSea</Material>
+        </Materials>
+        <Items>
+			<Item TypeId="MyObjectBuilder_VoxelMapStorageDefinition" GroupId="stone_largestone" ModifierId="Copper" Density="0.25" />
+        </Items>
+        <Rule>
+          <Height Min="0" Max="0.7"/>
+          <Latitude Min="0" Max="90"/>
+          <Slope Min="0" Max="90"/>
+        </Rule>
+      </Item>
 	  
 	  
 	      <Item>
