@@ -392,7 +392,7 @@ GlobalMaxEntities=30
                     {
                         string entityId = command[2];
                         double radius;
-                        
+
                         if (double.TryParse(command[3], out radius))
                         {
                             ShowEntities(entityId, radius);
@@ -756,119 +756,205 @@ GlobalMaxEntities=30
                     {
                         foreach (var blockSettings in settings.BlockSpawnSettings)
                         {
-                            if (block.FatBlock.BlockDefinition.TypeIdString == blockSettings.BlockType && block.FatBlock.BlockDefinition.SubtypeId == blockSettings.BlockId)
+                            if (IsValidBlockForSpawning(block, blockSettings, baseUpdateCycles, players))
                             {
-                                int spawnIterations;
-                                if (blockSettings.Enabled && baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0 && IsEnvironmentSuitable(grid, block, out spawnIterations))
-                                {
-                                    if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck))
-                                    {
-                                        continue;
-                                    }
-
-                                    float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
-                                    if (blockHealthPercentage >= blockSettings.MinHealthPercentage && blockHealthPercentage <= blockSettings.MaxHealthPercentage)
-                                    {
-                                        bool entitiesSpawnedThisCycle = false;
-                                        if (CheckInventoryForRequiredItems(block, blockSettings))
-                                        {
-                                            // Check for entity spawning conditions first
-                                            if (blockSettings.EnableEntitySpawning)
-                                            {
-                                                int currentGlobalEntityCount = GetTotalEntityCount();
-                                                LogError($"Total Entities: {currentGlobalEntityCount}");
-
-                                                if (currentGlobalEntityCount < settings.GlobalMaxEntities)
-                                                {
-                                                    int currentEntityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, null, false);
-                                                    LogError($"Current Entities in Radius: {currentEntityCount}");
-
-                                                    if (currentEntityCount < blockSettings.MaxEntitiesInArea)
-                                                    {
-                                                        for (int i = 0; i < spawnIterations; i++)
-                                                        {
-                                                            int entitySpawnAmount = randomGenerator.Next(blockSettings.MinEntityAmount, blockSettings.MaxEntityAmount + 1);
-                                                            if (entitySpawnAmount > 0)
-                                                            {
-                                                                if (blockSettings.RequireEntityCenterOn)
-                                                                {
-                                                                    CenterSpawnAroundEntities(block, blockSettings, entitySpawnAmount);
-                                                                }
-                                                                else
-                                                                {
-                                                                    SpawnEntities(block, blockSettings, entitySpawnAmount);
-                                                                }
-
-                                                                // Apply damage based on the block's total health
-                                                                float maxHealth = block.MaxIntegrity;
-                                                                float damageAmount = maxHealth * (blockSettings.DamageAmount / 100.0f) * entitySpawnAmount;
-                                                                block.DoDamage(damageAmount, MyDamageType.Grind, true);
-
-                                                                entitiesSpawned++;
-                                                                entitiesSpawnedThisCycle = true;
-                                                            }
-                                                        }
-                                                    }
-                                                    else
-                                                    {
-                                                        LogError($"Entity spawn limit reached: {currentEntityCount} entities within radius {blockSettings.MaxEntitiesRadius}");
-                                                    }
-                                                }
-                                                else
-                                                {
-                                                    LogError($"Entity global limit reached: {currentGlobalEntityCount} entities");
-                                                }
-                                            }
-
-                                            // Independent check for item spawning
-                                            if (blockSettings.EnableItemSpawning)
-                                            {
-                                                for (int i = 0; i < spawnIterations; i++)
-                                                {
-                                                    int itemSpawnAmount = blockSettings.UseWeightedDrops ?
-                                                        GetWeightedRandomNumber(blockSettings.MinItemAmount, GenerateProbabilities(blockSettings.MinItemAmount, blockSettings.MaxItemAmount)) :
-                                                        randomGenerator.Next(blockSettings.MinItemAmount, blockSettings.MaxItemAmount + 1);
-
-                                                    if (itemSpawnAmount > 0)
-                                                    {
-                                                        if (blockSettings.RequireEntityCenterOn)
-                                                        {
-                                                            LogError("Start Centeraroundentity run");
-                                                            CenterSpawnItemsAroundEntities(block, blockSettings, itemSpawnAmount);
-
-                                                        }
-                                                        else
-                                                        {
-                                                            LogError($"Spawn at {block}");
-                                                            SpawnItems(block, blockSettings);
-                                                        }
-
-                                                        // Apply damage based on the block's total health
-                                                        float maxHealth = block.MaxIntegrity;
-                                                        float damageAmount = maxHealth * (blockSettings.DamageAmount / 100.0f) * itemSpawnAmount;
-                                                        block.DoDamage(damageAmount, MyDamageType.Grind, true);
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        // Remove items from inventory only if entities were spawned
-                                        if (entitiesSpawnedThisCycle)
-                                        {
-                                            RemoveItemsFromInventory(block, blockSettings, 1);
-                                        }
-                                        else
-                                        {
-                                            // If no entities were spawned, log the reason
-                                            LogError("Entities not spawned due to entity limit. Proceeding with item spawning.");
-                                        }
-                                    }
-                                }
+                                ProcessBlockSpawning(block, blockSettings, ref entitiesSpawned);
                             }
                         }
                     }
                 }
             }
         }
+
+        private bool IsValidBlockForSpawning(IMySlimBlock block, BotSpawnerConfig blockSettings, long baseUpdateCycles, List<IMyPlayer> players)
+        {
+            if (!blockSettings.Enabled) return false;
+            if (baseUpdateCycles % blockSettings.SpawnTriggerInterval != 0) return false;
+            if (!IsEnvironmentSuitable(block, blockSettings)) return false;
+            if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck)) return false;
+            if (!AreRequiredEntitiesInVicinity(block, blockSettings)) return false;
+
+            float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
+            if (blockHealthPercentage < blockSettings.MinHealthPercentage || blockHealthPercentage > blockSettings.MaxHealthPercentage)
+                return false;
+
+            if (!CheckInventoryForRequiredItems(block, blockSettings)) return false;
+
+            return true;
+        }
+
+        private bool IsEnvironmentSuitable(IMySlimBlock block, BotSpawnerConfig blockSettings)
+        {
+            // Assuming grid is the IMyCubeGrid that contains the block
+            var grid = block.CubeGrid;
+                if (blockSettings.RequiredEntityNumber > 0)
+                {
+
+                LogError($"RequiredEntityNumber={blockSettings.RequiredEntityNumber}");
+                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, null, false);
+                if (entityCount >= blockSettings.MaxEntitiesInArea)
+                {
+                    LogError($"Entity spawn limit reached: {entityCount} entities within radius {blockSettings.MaxEntitiesRadius}");
+                    return false;
+                }
+                }
+
+
+            if (blockSettings.EnableAirtightAndOxygen)
+            {
+                bool isAirtight = grid.IsRoomAtPositionAirtight(block.FatBlock.Position);
+                double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(block.FatBlock.GetPosition());
+                LogError($"Airtight: {isAirtight}, OxygenLevel: {oxygenLevel}");
+                if (!isAirtight && oxygenLevel <= 0.5)
+                {
+                    LogError($"Airtight and oxygen conditions not met for {block.FatBlock.BlockDefinition.SubtypeId}");
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+
+
+        private void ProcessBlockSpawning(IMySlimBlock block, BotSpawnerConfig blockSettings, ref int entitiesSpawned)
+        {
+            bool entitiesSpawnedThisCycle = false;
+
+            if (blockSettings.EnableEntitySpawning)
+            {
+                int currentGlobalEntityCount = GetTotalEntityCount();
+                LogError($"Total Entities: {currentGlobalEntityCount}");
+
+                if (currentGlobalEntityCount >= settings.GlobalMaxEntities)
+                {
+                    LogError($"Entity global limit reached: {currentGlobalEntityCount} entities");
+                    return;
+                }
+
+                int currentEntityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, null, false);
+                LogError($"Current Entities in Radius: {currentEntityCount}");
+
+                if (currentEntityCount >= blockSettings.MaxEntitiesInArea)
+                {
+                    LogError($"Entity spawn limit reached: {currentEntityCount} entities within radius {blockSettings.MaxEntitiesRadius}");
+                    return;
+                }
+
+                SpawnEntitiesAndApplyDamage(block, blockSettings, ref entitiesSpawned, ref entitiesSpawnedThisCycle);
+            }
+
+            if (blockSettings.EnableItemSpawning)
+            {
+                SpawnItemsAndApplyDamage(block, blockSettings);
+            }
+
+            if (entitiesSpawnedThisCycle)
+            {
+                RemoveItemsFromInventory(block, blockSettings, 1);
+            }
+        }
+
+        private void SpawnEntitiesAndApplyDamage(IMySlimBlock block, BotSpawnerConfig blockSettings, ref int entitiesSpawned, ref bool entitiesSpawnedThisCycle)
+        {
+            int spawnIterations = 1; // Default spawn iterations
+            for (int i = 0; i < spawnIterations; i++)
+            {
+                int entitySpawnAmount = randomGenerator.Next(blockSettings.MinEntityAmount, blockSettings.MaxEntityAmount + 1);
+                if (entitySpawnAmount > 0)
+                {
+                    if (blockSettings.RequireEntityCenterOn)
+                    {
+                        CenterSpawnAroundEntities(block, blockSettings, entitySpawnAmount);
+                    }
+                    else
+                    {
+                        SpawnEntities(block, blockSettings, entitySpawnAmount);
+                    }
+
+                    ApplyDamageToBlock(block, blockSettings, entitySpawnAmount);
+
+                    entitiesSpawned++;
+                    entitiesSpawnedThisCycle = true;
+                }
+            }
+        }
+
+        private void SpawnItemsAndApplyDamage(IMySlimBlock block, BotSpawnerConfig blockSettings)
+        {
+            int spawnIterations = 1; // Default spawn iterations
+            for (int i = 0; i < spawnIterations; i++)
+            {
+                int itemSpawnAmount = blockSettings.UseWeightedDrops ?
+                    GetWeightedRandomNumber(blockSettings.MinItemAmount, GenerateProbabilities(blockSettings.MinItemAmount, blockSettings.MaxItemAmount)) :
+                    randomGenerator.Next(blockSettings.MinItemAmount, blockSettings.MaxItemAmount + 1);
+
+                if (itemSpawnAmount > 0)
+                {
+                    if (blockSettings.RequireEntityCenterOn)
+                    {
+                        LogError("Start Centeraroundentity run");
+                        CenterSpawnItemsAroundEntities(block, blockSettings, itemSpawnAmount);
+                    }
+                    else
+                    {
+                        LogError($"Spawn at {block}");
+                        SpawnItems(block, blockSettings);
+                    }
+
+                    ApplyDamageToBlock(block, blockSettings, itemSpawnAmount);
+                }
+            }
+        }
+
+        private void ApplyDamageToBlock(IMySlimBlock block, BotSpawnerConfig blockSettings, int amount)
+        {
+            float maxHealth = block.MaxIntegrity;
+            float damageAmount = maxHealth * (blockSettings.DamageAmount / 100.0f) * amount;
+            block.DoDamage(damageAmount, MyDamageType.Grind, true);
+        }
+
+        private bool AreRequiredEntitiesInVicinity(IMySlimBlock block, BotSpawnerConfig blockSettings)
+        {
+            if (blockSettings.RequiredEntityNumber > 0)
+            {
+                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.RequiredEntityRadius, blockSettings.RequiredEntity, blockSettings.RequireEntityNumberForTotalEntities);
+                LogError($"AreRequiredEntitiesInVicinity check: {entityCount >= blockSettings.RequiredEntityNumber}");
+                return entityCount >= blockSettings.RequiredEntityNumber;
+            }
+            return true;
+        }
+
+
+
+
+
+
+        private int GetEntityCountInRadius(Vector3D position, double radius, string requiredEntitySubtypeId, bool excludeDeadEntities = false)
+        {
+            var entities = new HashSet<IMyEntity>();
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
+
+            int entityCount = 0;
+
+            foreach (var entity in entities)
+            {
+                string entityCurrentSubtypeId = (entity as MyEntity)?.DefinitionId?.SubtypeId.ToString();
+                if (entityCurrentSubtypeId != null && entityCurrentSubtypeId.Equals(requiredEntitySubtypeId, StringComparison.OrdinalIgnoreCase) &&
+                    Vector3D.Distance(entity.GetPosition(), MyAPIGateway.Session.Player.GetPosition()) <= radius)
+                {
+                    entityCount++;
+                    string entityType = entity.GetType().Name;
+                    Vector3D entityPosition = entity.GetPosition();
+
+                    //LogError($"Type: {entityType}, SubtypeId: {entityCurrentSubtypeId}, Location: {entityPosition}");
+                }
+            }
+            LogError($"Total entities of type '{requiredEntitySubtypeId}' found within radius {radius}: {entityCount}");
+            return entityCount;
+        }
+
+
 
 
 
@@ -930,130 +1016,9 @@ GlobalMaxEntities=30
             return settings.BlockSpawnSettings.Find(s => s.BlockType == typeId && s.BlockId == subtypeId);
         }
 
-        private bool IsEnvironmentSuitable(IMyCubeGrid grid, IMySlimBlock block, out int spawnIterations)
-        {
-            spawnIterations = 0;
-            var blockSettings = GetSpawnSettingsForBlock(block.FatBlock.BlockDefinition.TypeIdString, block.FatBlock.BlockDefinition.SubtypeId);
-            if (blockSettings == null)
-            {
-                LogError($"Block settings not found for {block.FatBlock.BlockDefinition.TypeIdString}, {block.FatBlock.BlockDefinition.SubtypeId}");
-                return false;
-            }
-
-            var functionalBlock = block.FatBlock as IMyFunctionalBlock;
-            if (functionalBlock != null && (!functionalBlock.IsFunctional || !functionalBlock.Enabled || !functionalBlock.IsWorking))
-            {
-                LogError($"Functional block {block.FatBlock.BlockDefinition.SubtypeId} is not functional, enabled, or working");
-                return false;
-            }
-
-            if (blockSettings.EnableEntitySpawning)
-            {
-                if (blockSettings.MaxEntitiesInArea > 0)
-                {
-                    int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, blockSettings.EntityID.ToString(), true);
-                    LogError($"Entity count {entityCount} within radius {blockSettings.MaxEntitiesRadius}");
-                    if (entityCount >= blockSettings.MaxEntitiesInArea)
-                    {
-                        LogError($"Entity count {entityCount} exceeds MaxEntitiesInArea {blockSettings.MaxEntitiesInArea}");
-                        return false;
-                    }
-                }
-            }
-
-            if (blockSettings.EnableAirtightAndOxygen)
-            {
-                bool isAirtight = grid.IsRoomAtPositionAirtight(block.FatBlock.Position);
-                double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(block.FatBlock.GetPosition());
-                LogError($"Airtight: {isAirtight}, OxygenLevel: {oxygenLevel}");
-                if (!isAirtight && oxygenLevel <= 0.5)
-                {
-                    LogError($"Airtight and oxygen conditions not met for {block.FatBlock.BlockDefinition.SubtypeId}");
-                    return false;
-                }
-            }
-
-            if (!string.IsNullOrEmpty(blockSettings.RequiredEntity))
-            {
-                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.RequiredEntityRadius, blockSettings.RequiredEntity, true);
-                LogError($"Required entity {blockSettings.RequiredEntity} count: {entityCount} within radius: {blockSettings.RequiredEntityRadius}");
-
-                if (blockSettings.RequireEntityNumberForTotalEntities)
-                {
-                    if (entityCount >= blockSettings.RequiredEntityNumber)
-                    {
-                        spawnIterations = entityCount / blockSettings.RequiredEntityNumber;
-                        LogError($"Spawn iterations set to {spawnIterations} based on entity count");
-                        return true;
-                    }
-                }
-                else
-                {
-                    if (entityCount >= blockSettings.RequiredEntityNumber)
-                    {
-                        spawnIterations = 1;
-                        LogError($"Spawn iterations set to 1 based on entity count");
-                        return true;
-                    }
-                    else
-                    {
-                        LogError($"Entity count {entityCount} is less than required {blockSettings.RequiredEntityNumber}");
-                        return false;
-                    }
-                }
-            }
-
-            spawnIterations = 1;
-            LogError($"spawnIterations=1 no match found");
-            return true;
-        }
 
 
 
-        private int GetEntityCountInRadius(Vector3D position, double radius, string requiredEntitySubtypeId, bool excludeDeadEntities = false)
-        {
-            var entities = new HashSet<IMyEntity>();
-            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
-
-            int entityCount = 0;
-
-            foreach (var entity in entities)
-            {
-                string entityCurrentSubtypeId = (entity as MyEntity)?.DefinitionId?.SubtypeId.ToString();
-                if (entityCurrentSubtypeId != null && entityCurrentSubtypeId.Equals(requiredEntitySubtypeId, StringComparison.OrdinalIgnoreCase) &&
-                    Vector3D.Distance(entity.GetPosition(), MyAPIGateway.Session.Player.GetPosition()) <= radius)
-                {
-                    entityCount++;
-                    string entityType = entity.GetType().Name;
-                    Vector3D entityPosition = entity.GetPosition();
-
-                    LogError($"Type: {entityType}, SubtypeId: {entityCurrentSubtypeId}, Location: {entityPosition}");
-                }
-            }
-            LogError($"Total entities of type '{requiredEntitySubtypeId}' found within radius {radius}: {entityCount}");
-            return entityCount;
-        }
-
-
-
-
-
-
-        private void LogEntityCount(Vector3D position, double radius)
-        {
-            var entities = new HashSet<IMyEntity>();
-            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
-
-            int entityCount = 0;
-            foreach (var entity in entities)
-            {
-                if (Vector3D.Distance(entity.GetPosition(), position) <= radius)
-                {
-                    entityCount++;
-                }
-            }
-            LogError($"Entity count within {radius} meters: {entityCount}");
-        }
 
 
         private bool CheckInventoryForRequiredItems(IMySlimBlock block, BotSpawnerConfig blockSettings)
@@ -1069,8 +1034,9 @@ GlobalMaxEntities=30
                 var requiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
                 var itemAmount = (VRage.MyFixedPoint)blockSettings.RequiredItemAmounts[i];
 
-                if (!inventory.ContainItems(itemAmount, requiredItemType))
+                if (itemAmount > 0 && !inventory.ContainItems(itemAmount, requiredItemType))
                 {
+                    LogError($"Required item missing: {requiredItemType} with amount {itemAmount} in block {block.FatBlock.DisplayName}");
                     return false;
                 }
             }
@@ -1080,8 +1046,9 @@ GlobalMaxEntities=30
                 var permanentRequiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.PermanentRequiredItemTypes[i]], blockSettings.PermanentRequiredItemIds[i]);
                 var permanentItemAmount = (VRage.MyFixedPoint)blockSettings.PermanentRequiredItemAmounts[i];
 
-                if (!inventory.ContainItems(permanentItemAmount, permanentRequiredItemType))
+                if (permanentItemAmount > 0 && !inventory.ContainItems(permanentItemAmount, permanentRequiredItemType))
                 {
+                    LogError($"Permanent required item missing: {permanentRequiredItemType} with amount {permanentItemAmount} in block {block.FatBlock.DisplayName}");
                     return false;
                 }
             }
@@ -1142,7 +1109,7 @@ GlobalMaxEntities=30
                         if (settings.SpawnItemsWithEntities)
                         {
                             SpawnItems(block, settings);
-                            
+
                         }
                     }
                 }
@@ -1164,16 +1131,19 @@ GlobalMaxEntities=30
 
                 if (settings.SpawnInsideInventory)
                 {
+                    LogError($"Spawn Item: {itemId} in cargod");
                     PlaceItemInCargo(block, itemType, itemId, amount, settings.StackItems);
                 }
                 else
                 {
                     if (position != null)
                     {
+                        LogError($"Spawn Item: {itemId} at Entity");
                         SpawnItemNearPosition(position.Value, itemType, itemId, amount, settings.StackItems, settings);
                     }
                     else
                     {
+                        LogError($"Spawn Item: {itemId} at Block");
                         SpawnItemNearBlock(block, itemType, itemId, amount, settings.StackItems, settings);
                     }
                 }
@@ -1352,7 +1322,7 @@ GlobalMaxEntities=30
                     {
                         Vector3D spawnCenter = entity.GetPosition();
                         for (int i = 0; i < spawnAmount; i++)
-                        {                            
+                        {
                             MyVisualScriptLogicProvider.SpawnBot(settings.EntityID.FirstOrDefault(), entity.PositionComp.GetPosition());
                         }
                     }
@@ -1360,7 +1330,7 @@ GlobalMaxEntities=30
             }
         }
 
-        
+
         private List<int> GenerateProbabilities(int minAmount, int maxAmount)
         {
             int range = maxAmount - minAmount + 1;
@@ -1906,7 +1876,7 @@ GlobalMaxEntities=30
         public string RequiredEntity { get; set; } = "";
         public double RequiredEntityRadius { get; set; } = 10;
         public int RequiredEntityNumber { get; set; } = 0;
-        public bool RequireEntityNumberForTotalEntities { get; set; } = false;        
+        public bool RequireEntityNumberForTotalEntities { get; set; } = false;
         public int MaxEntitiesInArea { get; set; } = 10;
         public double MaxEntitiesRadius { get; set; } = 100;
         public bool RequireEntityCenterOn { get; set; } = false;
