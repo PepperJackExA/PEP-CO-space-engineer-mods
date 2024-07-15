@@ -441,11 +441,11 @@ GlobalMaxEntities=30
                     string entityType = entity.GetType().Name;
                     Vector3D entityPosition = entity.GetPosition();
 
-                    MyAPIGateway.Utilities.ShowMessage("Entity", $"Type: {entityType}, SubtypeId: {entityCurrentSubtypeId}, Location: {entityPosition}");
+                    LogError($"Type: {entityType}, SubtypeId: {entityCurrentSubtypeId}, Location: {entityPosition}");
                 }
             }
 
-            MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Total entities of subtype '{entitySubtypeId}' within {radius} meters: {entityCount}");
+            LogError($"Total entities of subtype '{entitySubtypeId}' within {radius} meters: {entityCount}");
         }
 
 
@@ -798,6 +798,12 @@ GlobalMaxEntities=30
                                                                 {
                                                                     SpawnEntities(block, blockSettings, entitySpawnAmount);
                                                                 }
+
+                                                                // Apply damage based on the block's total health
+                                                                float maxHealth = block.MaxIntegrity;
+                                                                float damageAmount = maxHealth * (blockSettings.DamageAmount / 100.0f) * entitySpawnAmount;
+                                                                block.DoDamage(damageAmount, MyDamageType.Grind, true);
+
                                                                 entitiesSpawned++;
                                                                 entitiesSpawnedThisCycle = true;
                                                             }
@@ -829,12 +835,18 @@ GlobalMaxEntities=30
                                                         {
                                                             LogError("Start Centeraroundentity run");
                                                             CenterSpawnItemsAroundEntities(block, blockSettings, itemSpawnAmount);
+
                                                         }
                                                         else
                                                         {
                                                             LogError($"Spawn at {block}");
                                                             SpawnItems(block, blockSettings);
                                                         }
+
+                                                        // Apply damage based on the block's total health
+                                                        float maxHealth = block.MaxIntegrity;
+                                                        float damageAmount = maxHealth * (blockSettings.DamageAmount / 100.0f) * itemSpawnAmount;
+                                                        block.DoDamage(damageAmount, MyDamageType.Grind, true);
                                                     }
                                                 }
                                             }
@@ -857,6 +869,7 @@ GlobalMaxEntities=30
                 }
             }
         }
+
 
 
 
@@ -991,6 +1004,7 @@ GlobalMaxEntities=30
             }
 
             spawnIterations = 1;
+            LogError($"spawnIterations=1 no match found");
             return true;
         }
 
@@ -1013,7 +1027,7 @@ GlobalMaxEntities=30
                     string entityType = entity.GetType().Name;
                     Vector3D entityPosition = entity.GetPosition();
 
-                    MyAPIGateway.Utilities.ShowMessage("Entity", $"Type: {entityType}, SubtypeId: {entityCurrentSubtypeId}, Location: {entityPosition}");
+                    LogError($"Type: {entityType}, SubtypeId: {entityCurrentSubtypeId}, Location: {entityPosition}");
                 }
             }
             LogError($"Total entities of type '{requiredEntitySubtypeId}' found within radius {radius}: {entityCount}");
