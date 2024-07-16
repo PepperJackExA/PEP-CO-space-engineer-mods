@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>TerminalBlock</TypeId>
+				<SubtypeId>BallastTank</SubtypeId>
+			</Id>
+			<DisplayName>{LOC:DisplayName_BallastTank}</DisplayName>
+			<Description>{LOC:Description_BallastTank}</Description>
+			<Icon>Textures\GUI\Icons\Cubes\BallastTank.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\BallastTank.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10"/>
+				<Component Subtype="Computer" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<BlockPairName>BallastTank</BlockPairName>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
