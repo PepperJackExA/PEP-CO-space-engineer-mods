@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<Model Name="FeedTroughVar2">
+	<Parameter Name="RescaleFactor">1.0</Parameter>
+	<Parameter Name="Centered">false</Parameter>
+	<Parameter Name="RescaleToLengthInMeters">false</Parameter>
+	<Material Name="Grass_old">
+		<Parameter Name="Technique">MESH</Parameter>
+		<Parameter Name="ColorMetalTexture">Textures\Voxels\Grass_old_cm.dds</Parameter>
+		<Parameter Name="NormalGlossTexture">Textures\Voxels\Grass_old_ng.dds</Parameter>
+		<Parameter Name="AddMapsTexture">Textures\Voxels\Dummy_add.dds</Parameter>
+	</Material>
+	<Material Name="Metal_Dull">
+		<Parameter Name="Technique">MESH</Parameter>
+		<Parameter Name="ColorMetalTexture">Textures\Models\Cubes\Aluminium_cm.dds</Parameter>
+		<Parameter Name="NormalGlossTexture">Textures\Models\Cubes\AluminiumDull_ng.dds</Parameter>
+	</Material>
+	<Material Name="MetalMilitary">
+		<Parameter Name="Technique">MESH</Parameter>
+		<Parameter Name="ColorMetalTexture">Textures\Models\Cubes\MetalMilitary_cm.dds</Parameter>
+		<Parameter Name="NormalGlossTexture">Textures\Models\Cubes\MetalMilitary_ng.dds</Parameter>
+		<Parameter Name="AddMapsTexture">Textures\Models\Cubes\MetalMilitary_add.dds</Parameter>
+	</Material>
+</Model>
