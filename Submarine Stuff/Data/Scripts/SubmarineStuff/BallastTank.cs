@@ -20,6 +20,8 @@ using SubmarineStuff;
 using Sandbox.Game.Entities.Cube;
 using Sandbox.Game;
 using VRage;
+using Jakaria.API;
+using VRage.Game.Entity;
 
 namespace SubmarineStuff
 {
@@ -30,6 +32,7 @@ namespace SubmarineStuff
 
         IMyTerminalBlock block;
 
+        private MyEntity _entity;
 
         public const float maxFillLevel = 100;
         public const float minFillLevel = 0;
@@ -59,6 +62,8 @@ namespace SubmarineStuff
             NeedsUpdate = MyEntityUpdateEnum.BEFORE_NEXT_FRAME;
 
             block = (IMyTerminalBlock)Entity;
+            _entity = Entity as MyEntity;
+
         }
 
         public override void UpdateBeforeSimulation10()
@@ -117,6 +122,12 @@ namespace SubmarineStuff
                 MyInventory inv = (MyInventory)block.GetInventory();
                 inv.ExternalMass = (MyFixedPoint)(202 + (ballastTank_Fill/100) * 3614);
                 inv.Refresh();
+
+
+                Log.Info($"Fill Level: {ballastTank_Fill}\n" +
+                    $"PercentUnderwater: {WaterModAPI.Entity_FluidDepth(_entity)}\n" +
+                    $"(MyEntity)_entity is null: {_entity == null}" +
+                    $"Entity: {_entity.DisplayName}%");
 
             }
             catch (Exception e)
