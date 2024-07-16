@@ -8,8 +8,10 @@ using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.ModAPI;
 using VRage.Utils;
+using PEPCO.iSurvival.Core;
+using PEPCO.iSurvival.Log;
 
-namespace Digi
+namespace PEPCO.iSurvival.Log
 {
     /// <summary>
     /// <para>Standalone logger, does not require any setup.</para>
@@ -18,9 +20,9 @@ namespace Digi
     /// </summary>
     /// Thank you oh most amazing Digi!
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate, priority: int.MaxValue)]
-    public class Log : MySessionComponentBase
+    public class iSurvivalLog : MySessionComponentBase
     {
-        private static Log instance;
+        private static iSurvivalLog instance;
         private static Handler handler;
         private static bool unloaded = false;
 
@@ -220,7 +222,7 @@ namespace Digi
 
         private class Handler
         {
-            private Log sessionComp;
+            private iSurvivalLog sessionComp;
             private string modName = string.Empty;
 
             private TextWriter writer;
@@ -255,7 +257,7 @@ namespace Digi
             {
             }
 
-            public void Init(Log sessionComp)
+            public void Init(iSurvivalLog sessionComp)
             {
                 if(writer != null)
                     return; // already initialized
@@ -273,7 +275,7 @@ namespace Digi
 
                 WorkshopId = GetWorkshopID(sessionComp.ModContext.ModId);
 
-                writer = MyAPIGateway.Utilities.WriteFileInLocalStorage(FILE, typeof(Log));
+                writer = MyAPIGateway.Utilities.WriteFileInLocalStorage(FILE, typeof(iSurvivalLog));
 
                 #region Pre-init messages
                 if(preInitMessages != null)

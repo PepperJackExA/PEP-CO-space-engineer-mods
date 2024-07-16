@@ -62,55 +62,55 @@
 					<X>0.329</X>
 					<Y>0.086</Y>
 				</Offset>
-        <VoxelHandPosition>
-          <X>0.76</X>
-          <Y>0.982</Y>
-        </VoxelHandPosition>
+				<VoxelHandPosition>
+					<X>0.76</X>
+					<Y>0.982</Y>
+				</VoxelHandPosition>
 				<Size>
 					<X>0.042</X>
 					<Y>0.011</Y>
 				</Size>
 				<Texture>ToolBarColorVariant</Texture>
 			</ColorPanelStyle>
-            <VisibleCondition xsi:type="Condition">
-                <Operator>And</Operator>
-                <Terms>
-                    <Term xsi:type="StatCondition">
-                        <StatId>controller_mode</StatId>
-                        <Operator>Equal</Operator>
-                        <Value>0</Value>
-                    </Term>
-                    <Term xsi:type="StatCondition">
-                        <StatId>hud_mode</StatId>
-                        <Operator>Above</Operator>
-                        <Value>0</Value>
-                    </Term>
-                </Terms>
-            </VisibleCondition>
+			<VisibleCondition xsi:type="Condition">
+				<Operator>And</Operator>
+				<Terms>
+					<Term xsi:type="StatCondition">
+						<StatId>controller_mode</StatId>
+						<Operator>Equal</Operator>
+						<Value>0</Value>
+					</Term>
+					<Term xsi:type="StatCondition">
+						<StatId>hud_mode</StatId>
+						<Operator>Above</Operator>
+						<Value>0</Value>
+					</Term>
+				</Terms>
+			</VisibleCondition>
 		</Toolbar>
 
-        <DPad>
-            <CenterPosition>
-                <X>0.645</X>
-                <Y>0.905</Y>
-            </CenterPosition>
-            <OriginAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</OriginAlign>
-            <VisibleCondition xsi:type="Condition">
-                <Operator>And</Operator>
-                <Terms>
-                    <Term xsi:type="StatCondition">
-                        <StatId>controller_mode</StatId>
-                        <Operator>Equal</Operator>
-                        <Value>1</Value>
-                    </Term>
-                    <Term xsi:type="StatCondition">
-                        <StatId>hud_mode</StatId>
-                        <Operator>Above</Operator>
-                        <Value>0</Value>
-                    </Term>
-                </Terms>
-            </VisibleCondition>
-        </DPad>
+		<DPad>
+			<CenterPosition>
+				<X>0.645</X>
+				<Y>0.905</Y>
+			</CenterPosition>
+			<OriginAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</OriginAlign>
+			<VisibleCondition xsi:type="Condition">
+				<Operator>And</Operator>
+				<Terms>
+					<Term xsi:type="StatCondition">
+						<StatId>controller_mode</StatId>
+						<Operator>Equal</Operator>
+						<Value>1</Value>
+					</Term>
+					<Term xsi:type="StatCondition">
+						<StatId>hud_mode</StatId>
+						<Operator>Above</Operator>
+						<Value>0</Value>
+					</Term>
+				</Terms>
+			</VisibleCondition>
+		</DPad>
 
 		<GravityIndicator>
 			<OffsetPx>
@@ -123,7 +123,7 @@
 			</SizePx>
 			<VelocitySizePx>
 				<X>18</X>
-				<Y>18</Y>        
+				<Y>18</Y>
 			</VelocitySizePx>
 			<FillTexture>GravityIndicator_fill</FillTexture>
 			<OverlayTexture>GravityIndicator_circles</OverlayTexture>
@@ -299,7 +299,7 @@
 							<W>0.8</W>
 						</ColorMask>
 
-						<FadeOutTimeMs>500</FadeOutTimeMs>      
+						<FadeOutTimeMs>500</FadeOutTimeMs>
 						<FadeInTimeMs>100</FadeInTimeMs>
 
 					</StatStyle>
@@ -335,38 +335,38 @@
 
 					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>controlled_dampeners</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>387</X>
-              <Y>-135</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>45</X>
-              <Y>40</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>controlled_dampeners</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>387</X>
+							<Y>-135</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>45</X>
+							<Y>40</Y>
+						</SizePx>
 
-            
-            <VisibleCondition xsi:type="StatCondition">
-            <Operator>Equal</Operator>
-            <Value>0.5</Value>
-            <StatId>controlled_dampeners</StatId>
-          </VisibleCondition>
 
-          <Texture>DampenersAuto</Texture>
-          <ColorMask>
-            <X>0.734375</X>
-            <Y>0.9137254901960784</Y>
-            <Z>0.9647058823529412</Z>
-            <W>0.2</W>
-          </ColorMask>
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Equal</Operator>
+							<Value>0.5</Value>
+							<StatId>controlled_dampeners</StatId>
+						</VisibleCondition>
 
-          <FadeOutTimeMs>500</FadeOutTimeMs>
-          <FadeInTimeMs>100</FadeInTimeMs>
+						<Texture>DampenersAuto</Texture>
+						<ColorMask>
+							<X>0.734375</X>
+							<Y>0.9137254901960784</Y>
+							<Z>0.9647058823529412</Z>
+							<W>0.2</W>
+						</ColorMask>
 
-          </StatStyle>
-          
+						<FadeOutTimeMs>500</FadeOutTimeMs>
+						<FadeInTimeMs>100</FadeInTimeMs>
+
+					</StatStyle>
+
 					<!--Dampeners Text-->
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
@@ -389,7 +389,7 @@
 						<Scale>0.5</Scale>
 						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 
-						<FadeInTimeMs>100</FadeInTimeMs>      
+						<FadeInTimeMs>100</FadeInTimeMs>
 						<FadeOutTimeMs>500</FadeOutTimeMs>
 
 					</StatStyle>
@@ -415,63 +415,63 @@
 						<Scale>0.6</Scale>
 						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 
-						<FadeInTimeMs>100</FadeInTimeMs>      
+						<FadeInTimeMs>100</FadeInTimeMs>
 						<FadeOutTimeMs>500</FadeOutTimeMs>
 
 					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <OffsetPx>
-              <X>379</X>
-              <Y>-115</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>60</X>
-              <Y>60</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<OffsetPx>
+							<X>379</X>
+							<Y>-115</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>60</X>
+							<Y>60</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="StatCondition">
-              <Operator>Equal</Operator>
-              <Value>0.5</Value>
-              <StatId>controlled_dampeners</StatId>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Equal</Operator>
+							<Value>0.5</Value>
+							<StatId>controlled_dampeners</StatId>
+						</VisibleCondition>
 
-            <Text>{LOC:Dampeners}</Text>
-            <Font>White</Font>
-            <Scale>0.5</Scale>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+						<Text>{LOC:Dampeners}</Text>
+						<Font>White</Font>
+						<Scale>0.5</Scale>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 
-            <FadeInTimeMs>100</FadeInTimeMs>
-            <FadeOutTimeMs>500</FadeOutTimeMs>
+						<FadeInTimeMs>100</FadeInTimeMs>
+						<FadeOutTimeMs>500</FadeOutTimeMs>
 
-          </StatStyle>
+					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <OffsetPx>
-              <X>379</X>
-              <Y>-100</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>60</X>
-              <Y>60</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<OffsetPx>
+							<X>379</X>
+							<Y>-100</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>60</X>
+							<Y>60</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="StatCondition">
-              <Operator>Equal</Operator>
-              <Value>0.5</Value>
-              <StatId>controlled_dampeners</StatId>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Equal</Operator>
+							<Value>0.5</Value>
+							<StatId>controlled_dampeners</StatId>
+						</VisibleCondition>
 
-            <Text>{LOC:AUTO}</Text>
-            <Font>White</Font>
-            <Scale>0.6</Scale>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+						<Text>{LOC:AUTO}</Text>
+						<Font>White</Font>
+						<Scale>0.6</Scale>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 
-            <FadeInTimeMs>100</FadeInTimeMs>
-            <FadeOutTimeMs>500</FadeOutTimeMs>
+						<FadeInTimeMs>100</FadeInTimeMs>
+						<FadeOutTimeMs>500</FadeOutTimeMs>
 
-          </StatStyle>
-          
+					</StatStyle>
+
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>379</X>
@@ -554,20 +554,20 @@
 						<FadeInTimeMs>100</FadeInTimeMs>
 						<FadeOutTimeMs>500</FadeOutTimeMs>
 
-						<VisibleCondition xsi:type="Condition">			
-						<Operator>And</Operator>
-						<Terms>
-							<Term xsi:type="StatCondition">
-								<StatId>hud_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>1</Value>
-							</Term>
-							<Term xsi:type="StatCondition">
-								<StatId>controller_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>0</Value>
-							</Term>
-						</Terms>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>hud_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>1</Value>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>controller_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>0</Value>
+								</Term>
+							</Terms>
 						</VisibleCondition>
 
 						<Text>{LOC:CycleHUD} - {GAME_CONTROL:TOGGLE_HUD}</Text>
@@ -576,7 +576,7 @@
 						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 
 					</StatStyle>
-					
+
 					<!--Dampeners Keybind-->
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 
@@ -592,20 +592,20 @@
 						<FadeInTimeMs>100</FadeInTimeMs>
 						<FadeOutTimeMs>500</FadeOutTimeMs>
 
-						<VisibleCondition xsi:type="Condition">			
-						<Operator>And</Operator>
-						<Terms>
-							<Term xsi:type="StatCondition">
-								<StatId>hud_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>1</Value>
-							</Term>
-							<Term xsi:type="StatCondition">
-								<StatId>controller_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>0</Value>
-							</Term>
-						</Terms>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>hud_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>1</Value>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>controller_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>0</Value>
+								</Term>
+							</Terms>
 						</VisibleCondition>
 
 						<Text>{GAME_CONTROL:DAMPING}</Text>
@@ -956,20 +956,20 @@
 						<FadeInTimeMs>100</FadeInTimeMs>
 						<FadeOutTimeMs>500</FadeOutTimeMs>
 
-						<VisibleCondition xsi:type="Condition">			
-						<Operator>And</Operator>
-						<Terms>
-							<Term xsi:type="StatCondition">
-								<StatId>hud_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>1</Value>
-							</Term>
-							<Term xsi:type="StatCondition">
-								<StatId>controller_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>0</Value>
-							</Term>
-						</Terms>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>hud_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>1</Value>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>controller_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>0</Value>
+								</Term>
+							</Terms>
 						</VisibleCondition>
 
 						<Text>{GAME_CONTROL:THRUSTS}</Text>
@@ -1107,20 +1107,20 @@
 						<FadeInTimeMs>100</FadeInTimeMs>
 						<FadeOutTimeMs>500</FadeOutTimeMs>
 
-						<VisibleCondition xsi:type="Condition">			
-						<Operator>And</Operator>
-						<Terms>
-							<Term xsi:type="StatCondition">
-								<StatId>hud_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>1</Value>
-							</Term>
-							<Term xsi:type="StatCondition">
-								<StatId>controller_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>0</Value>
-							</Term>
-						</Terms>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>hud_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>1</Value>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>controller_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>0</Value>
+								</Term>
+							</Terms>
 						</VisibleCondition>
 
 						<Text>{GAME_CONTROL:BROADCASTING}</Text>
@@ -1258,20 +1258,20 @@
 						<FadeInTimeMs>100</FadeInTimeMs>
 						<FadeOutTimeMs>500</FadeOutTimeMs>
 
-						<VisibleCondition xsi:type="Condition">			
-						<Operator>And</Operator>
-						<Terms>
-							<Term xsi:type="StatCondition">
-								<StatId>hud_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>1</Value>
-							</Term>
-							<Term xsi:type="StatCondition">
-								<StatId>controller_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>0</Value>
-							</Term>
-						</Terms>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>hud_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>1</Value>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>controller_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>0</Value>
+								</Term>
+							</Terms>
 						</VisibleCondition>
 
 						<Text>{GAME_CONTROL:HEADLIGHTS}</Text>
@@ -1328,23 +1328,20 @@
 
 					<!-- PLAYER STAT PROGRESS BARS -->
 
-<!-- 
-            Fatigue
-            ...............................................................................
-          -->
-          
+					<!-- 
+    Fatigue
+    ...............................................................................
+-->
 					<StatStyle xsi:type="MyObjectBuilder_ProgressBarStatVisualStyle">
 						<StatId>player_fatigue</StatId>
-
 						<OffsetPx>
 							<X>68</X>
-							<Y>-155</Y>
+							<Y>-175</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
 							<Y>9</Y>
 						</SizePx>
-
 						<BlinkCondition xsi:type="StatCondition">
 							<StatId>player_fatigue</StatId>
 							<Value>0.25</Value>
@@ -1370,12 +1367,11 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>0.6</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
-						</Blink>	
-
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
 						<SimpleStyle>
 							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
-							<ProgressTexture>ProgressBar_Bar</ProgressTexture>              
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
 							<ProgressTextureOffsetPx>
 								<X>0</X>
 								<Y>0</Y>
@@ -1394,25 +1390,22 @@
 							</BackgroundColorMask>
 						</SimpleStyle>
 					</StatStyle>
-          
+
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<StatId>player_fatigue</StatId>
-
 						<OffsetPx>
 							<X>231</X>
-							<Y>-155</Y>
+							<Y>-175</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
 							<Y>16</Y>
 						</SizePx>
-
 						<BlinkCondition xsi:type="StatCondition">
 							<StatId>player_fatigue</StatId>
 							<Value>0.25</Value>
 							<Operator>Below</Operator>
 						</BlinkCondition>
-            
 						<Blink>
 							<ColorMask>
 								<X>1</X>
@@ -1428,50 +1421,12 @@
 						<Scale>0.7</Scale>
 						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 					</StatStyle>
-<!--
-					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-						<StatId>player_fatigue</StatId>
-
-						<OffsetPx>
-							<X>40</X>
-							<Y>-163</Y>
-						</OffsetPx>
-						<SizePx>
-							<X>24</X>
-							<Y>24</Y>
-						</SizePx>
-
-						<BlinkCondition xsi:type="StatCondition">
-							<StatId>player_fatigue</StatId>
-							<Value>0.25</Value>
-							<Operator>Below</Operator>
-						</BlinkCondition>
-						<Blink>
-							<ColorMask>
-								<X>1</X>
-								<Y>0</Y>
-								<Z>0</Z>
-								<W>1</W>
-							</ColorMask>
-							<MinAlpha>1</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>
-						</Blink>	
-						<Texture>FatigueIcon</Texture>
-						<ColorMask>
-							<X>0.734375</X>
-							<Y>0.9137254901960784</Y>
-							<Z>0.9647058823529412</Z>
-							<W>1</W>
-						</ColorMask>
-					</StatStyle>
--->
 
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>64</X>
-							<Y>-155</Y>
+							<Y>-175</Y>
 						</OffsetPx>
-
 						<Text>Fatigue</Text>
 						<Font>Blue</Font>
 						<Scale>0.5</Scale>
@@ -1479,170 +1434,19 @@
 					</StatStyle>
 
 					<!-- 
-            Hunger
-            ...............................................................................
-          -->
-					<StatStyle xsi:type="MyObjectBuilder_ProgressBarStatVisualStyle">
-						<StatId>player_hunger</StatId>
-
-						<OffsetPx>
-							<X>68</X>
-							<Y>-125</Y>
-						</OffsetPx>
-						<SizePx>
-							<X>150</X>
-							<Y>9</Y>
-						</SizePx>
-
-						<BlinkCondition xsi:type="StatCondition">
-							<StatId>player_hunger</StatId>
-							<Value>0.25</Value>
-							<Operator>Below</Operator>
-							<ProgressColorMask>
-								<X>1</X>
-								<Y>0</Y>
-								<Z>0</Z>
-								<W>1</W>
-							</ProgressColorMask>
-							<BackgroundColorMask>
-								<X>1</X>
-								<Y>0</Y>
-								<Z>0</Z>
-								<W>1</W>
-							</BackgroundColorMask>
-						</BlinkCondition>
-						<Blink>
-							<ColorMask>
-								<X>1</X>
-								<Y>0</Y>
-								<Z>0</Z>
-								<W>1</W>
-							</ColorMask>
-							<MinAlpha>0.6</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
-						</Blink>	
-
-						<SimpleStyle>
-							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
-							<ProgressTexture>ProgressBar_Bar</ProgressTexture>              
-							<ProgressTextureOffsetPx>
-								<X>0</X>
-								<Y>0</Y>
-							</ProgressTextureOffsetPx>
-							<ProgressColorMask>
-								<X>0.734375</X>
-								<Y>0.9137254901960784</Y>
-								<Z>0.9647058823529412</Z>
-								<W>1</W>
-							</ProgressColorMask>
-							<BackgroundColorMask>
-								<X>0.3137</X>
-								<Y>0.3607</Y>
-								<Z>0.4039</Z>
-								<W>1</W>
-							</BackgroundColorMask>
-						</SimpleStyle>
-					</StatStyle>
-
-					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-						<StatId>player_hunger</StatId>
-
-						<OffsetPx>
-							<X>231</X>
-							<Y>-125</Y>
-						</OffsetPx>
-						<SizePx>
-							<X>16</X>
-							<Y>16</Y>
-						</SizePx>
-
-						<BlinkCondition xsi:type="StatCondition">
-							<StatId>player_hunger</StatId>
-							<Value>0.25</Value>
-							<Operator>Below</Operator>
-
-						</BlinkCondition>
-						<Blink>
-							<ColorMask>
-								<X>1</X>
-								<Y>0</Y>
-								<Z>0</Z>
-								<W>1</W>
-							</ColorMask>
-						</Blink>
-						<Percentage>true</Percentage>
-						<Precision>0</Precision>
-						<Text>{STAT}</Text>
-						<Font>White</Font>
-						<Scale>0.7</Scale>
-						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-					</StatStyle>
-<!--
-					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-						<StatId>player_hunger</StatId>
-
-						<OffsetPx>
-							<X>40</X>
-							<Y>-138</Y>
-						</OffsetPx>
-						<SizePx>
-							<X>24</X>
-							<Y>24</Y>
-						</SizePx>
-
-						<BlinkCondition xsi:type="StatCondition">
-							<StatId>player_hunger</StatId>
-							<Value>0.25</Value>
-							<Operator>Below</Operator>
-						</BlinkCondition>
-						<Blink>
-							<ColorMask>
-								<X>1</X>
-								<Y>0</Y>
-								<Z>0</Z>
-								<W>1</W>
-							</ColorMask>
-							<MinAlpha>1</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>
-						</Blink>	
-						<Texture>HungerIcon</Texture>
-						<ColorMask>
-							<X>0.734375</X>
-							<Y>0.9137254901960784</Y>
-							<Z>0.9647058823529412</Z>
-							<W>1</W>
-						</ColorMask>
-					</StatStyle>
+    Stamina
+    ...............................................................................
 -->
-					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-						<OffsetPx>
-							<X>64</X>
-							<Y>-125</Y>
-						</OffsetPx>
-
-						<Text>Hunger</Text>
-						<Font>Blue</Font>
-						<Scale>0.5</Scale>
-						<TextAlign>HORISONTAL_RIGHT_AND_VERTICAL_CENTER</TextAlign>
-					</StatStyle>
-
-					<!-- 
-            Stamina
-            ...............................................................................
-          -->
-
 					<StatStyle xsi:type="MyObjectBuilder_ProgressBarStatVisualStyle">
 						<StatId>player_stamina</StatId>
-
 						<OffsetPx>
 							<X>68</X>
-							<Y>-140</Y>
+							<Y>-155</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
 							<Y>9</Y>
 						</SizePx>
-
 						<BlinkCondition xsi:type="StatCondition">
 							<StatId>player_stamina</StatId>
 							<Value>0.25</Value>
@@ -1670,7 +1474,6 @@
 							<MinAlpha>0.6</MinAlpha>
 							<MaxAlpha>1</MaxAlpha>
 						</Blink>
-
 						<SimpleStyle>
 							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
 							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
@@ -1695,22 +1498,19 @@
 
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<StatId>player_stamina</StatId>
-
 						<OffsetPx>
 							<X>231</X>
-							<Y>-140</Y>
+							<Y>-155</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
 							<Y>16</Y>
 						</SizePx>
-
 						<BlinkCondition xsi:type="StatCondition">
 							<StatId>player_stamina</StatId>
 							<Value>0.25</Value>
 							<Operator>Below</Operator>
 						</BlinkCondition>
-
 						<Blink>
 							<ColorMask>
 								<X>1</X>
@@ -1726,21 +1526,93 @@
 						<Scale>0.7</Scale>
 						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 					</StatStyle>
-					<!--
-					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-						<StatId>player_stamina</StatId>
 
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
-							<X>40</X>
-							<Y>-163</Y>
+							<X>64</X>
+							<Y>-155</Y>
+						</OffsetPx>
+						<Text>Stamina</Text>
+						<Font>Blue</Font>
+						<Scale>0.5</Scale>
+						<TextAlign>HORISONTAL_RIGHT_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
+
+					<!-- 
+    Hunger
+    ...............................................................................
+-->
+					<StatStyle xsi:type="MyObjectBuilder_ProgressBarStatVisualStyle">
+						<StatId>player_hunger</StatId>
+						<OffsetPx>
+							<X>68</X>
+							<Y>-135</Y>
 						</OffsetPx>
 						<SizePx>
-							<X>24</X>
-							<Y>24</Y>
+							<X>150</X>
+							<Y>9</Y>
 						</SizePx>
-
 						<BlinkCondition xsi:type="StatCondition">
-							<StatId>player_stamina</StatId>
+							<StatId>player_hunger</StatId>
+							<Value>0.25</Value>
+							<Operator>Below</Operator>
+							<ProgressColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ProgressColorMask>
+							<BackgroundColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</BackgroundColorMask>
+						</BlinkCondition>
+						<Blink>
+							<ColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ColorMask>
+							<MinAlpha>0.6</MinAlpha>
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
+						<SimpleStyle>
+							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
+							<ProgressTextureOffsetPx>
+								<X>0</X>
+								<Y>0</Y>
+							</ProgressTextureOffsetPx>
+							<ProgressColorMask>
+								<X>0.734375</X>
+								<Y>0.9137254901960784</Y>
+								<Z>0.9647058823529412</Z>
+								<W>1</W>
+							</ProgressColorMask>
+							<BackgroundColorMask>
+								<X>0.3137</X>
+								<Y>0.3607</Y>
+								<Z>0.4039</Z>
+								<W>1</W>
+							</BackgroundColorMask>
+						</SimpleStyle>
+					</StatStyle>
+
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>player_hunger</StatId>
+						<OffsetPx>
+							<X>231</X>
+							<Y>-135</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>16</X>
+							<Y>16</Y>
+						</SizePx>
+						<BlinkCondition xsi:type="StatCondition">
+							<StatId>player_hunger</StatId>
 							<Value>0.25</Value>
 							<Operator>Below</Operator>
 						</BlinkCondition>
@@ -1751,36 +1623,136 @@
 								<Z>0</Z>
 								<W>1</W>
 							</ColorMask>
-							<MinAlpha>1</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>
-						</Blink>	
-						<Texture>StaminaIcon</Texture>
-						<ColorMask>
-							<X>0.734375</X>
-							<Y>0.9137254901960784</Y>
-							<Z>0.9647058823529412</Z>
-							<W>1</W>
-						</ColorMask>
+						</Blink>
+						<Percentage>true</Percentage>
+						<Precision>0</Precision>
+						<Text>{STAT}</Text>
+						<Font>White</Font>
+						<Scale>0.7</Scale>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 					</StatStyle>
--->
 
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>64</X>
-							<Y>-140</Y>
+							<Y>-135</Y>
 						</OffsetPx>
-
-						<Text>Stamina</Text>
+						<Text>Hunger</Text>
 						<Font>Blue</Font>
 						<Scale>0.5</Scale>
 						<TextAlign>HORISONTAL_RIGHT_AND_VERTICAL_CENTER</TextAlign>
 					</StatStyle>
-					
+
+					<!-- 
+    Water
+    ...............................................................................
+-->
+					<StatStyle xsi:type="MyObjectBuilder_ProgressBarStatVisualStyle">
+						<StatId>player_water</StatId>
+						<OffsetPx>
+							<X>68</X>
+							<Y>-115</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>9</Y>
+						</SizePx>
+						<BlinkCondition xsi:type="StatCondition">
+							<StatId>player_water</StatId>
+							<Value>0.25</Value>
+							<Operator>Below</Operator>
+							<ProgressColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ProgressColorMask>
+							<BackgroundColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</BackgroundColorMask>
+						</BlinkCondition>
+						<Blink>
+							<ColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ColorMask>
+							<MinAlpha>0.6</MinAlpha>
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
+						<SimpleStyle>
+							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
+							<ProgressTextureOffsetPx>
+								<X>0</X>
+								<Y>0</Y>
+							</ProgressTextureOffsetPx>
+							<ProgressColorMask>
+								<X>0.734375</X>
+								<Y>0.9137254901960784</Y>
+								<Z>0.9647058823529412</Z>
+								<W>1</W>
+							</ProgressColorMask>
+							<BackgroundColorMask>
+								<X>0.3137</X>
+								<Y>0.3607</Y>
+								<Z>0.4039</Z>
+								<W>1</W>
+							</BackgroundColorMask>
+						</SimpleStyle>
+					</StatStyle>
+
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>player_water</StatId>
+						<OffsetPx>
+							<X>231</X>
+							<Y>-115</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>16</X>
+							<Y>16</Y>
+						</SizePx>
+						<BlinkCondition xsi:type="StatCondition">
+							<StatId>player_water</StatId>
+							<Value>0.25</Value>
+							<Operator>Below</Operator>
+						</BlinkCondition>
+						<Blink>
+							<ColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ColorMask>
+						</Blink>
+						<Percentage>true</Percentage>
+						<Precision>0</Precision>
+						<Text>{STAT}</Text>
+						<Font>White</Font>
+						<Scale>0.7</Scale>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
+
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<OffsetPx>
+							<X>64</X>
+							<Y>-115</Y>
+						</OffsetPx>
+						<Text>Water</Text>
+						<Font>Blue</Font>
+						<Scale>0.5</Scale>
+						<TextAlign>HORISONTAL_RIGHT_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
+
 					<!-- 
             HEALTH
             ...............................................................................
-          -->                 
-          
+          -->
+
 					<StatStyle xsi:type="MyObjectBuilder_ProgressBarStatVisualStyle">
 						<StatId>player_health</StatId>
 
@@ -1818,12 +1790,12 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>0.6</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
-						</Blink>	
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
 
 						<SimpleStyle>
 							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
-							<ProgressTexture>ProgressBar_Bar</ProgressTexture>              
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
 							<ProgressTextureOffsetPx>
 								<X>0</X>
 								<Y>0</Y>
@@ -1903,7 +1875,7 @@
 							</ColorMask>
 							<MinAlpha>1</MinAlpha>
 							<MaxAlpha>1</MaxAlpha>
-						</Blink>	
+						</Blink>
 						<Texture>HealthIcon</Texture>
 						<ColorMask>
 							<X>0.734375</X>
@@ -1942,11 +1914,11 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>0.6</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
-						</Blink>	
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
 						<SimpleStyle>
 							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
-							<ProgressTexture>ProgressBar_Bar</ProgressTexture>              
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
 							<ProgressTextureOffsetPx>
 								<X>0</X>
 								<Y>0</Y>
@@ -2024,7 +1996,7 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>1</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>							
+							<MaxAlpha>1</MaxAlpha>
 						</Blink>
 						<Texture>OxygenIcon</Texture>
 						<ColorMask>
@@ -2051,7 +2023,7 @@
 							<StatId>player_oxygen_bottles</StatId>
 							<Value>0</Value>
 							<Operator>Above</Operator>
-						</VisibleCondition>         
+						</VisibleCondition>
 
 						<Texture>Bottle</Texture>
 						<ColorMask>
@@ -2076,7 +2048,7 @@
 							<StatId>player_oxygen_bottles</StatId>
 							<Value>1</Value>
 							<Operator>Above</Operator>
-						</VisibleCondition>  
+						</VisibleCondition>
 
 						<Texture>Bottle</Texture>
 						<ColorMask>
@@ -2101,7 +2073,7 @@
 							<StatId>player_oxygen_bottles</StatId>
 							<Value>2</Value>
 							<Operator>Above</Operator>
-						</VisibleCondition>  
+						</VisibleCondition>
 
 						<Texture>Bottle</Texture>
 						<ColorMask>
@@ -2127,7 +2099,7 @@
 							<StatId>player_oxygen_bottles</StatId>
 							<Value>3</Value>
 							<Operator>Above</Operator>
-						</VisibleCondition>  
+						</VisibleCondition>
 
 						<Texture>HealthIcon</Texture>
 						<ColorMask>
@@ -2167,11 +2139,11 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>0.6</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
-						</Blink>	
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
 						<SimpleStyle>
 							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
-							<ProgressTexture>ProgressBar_Bar</ProgressTexture>              
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
 							<ProgressTextureOffsetPx>
 								<X>0</X>
 								<Y>0</Y>
@@ -2250,7 +2222,7 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>1</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
+							<MaxAlpha>1</MaxAlpha>
 						</Blink>
 						<Texture>EnergyIcon</Texture>
 						<ColorMask>
@@ -2292,11 +2264,11 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>0.6</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
-						</Blink>					
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
 						<SimpleStyle>
 							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
-							<ProgressTexture>ProgressBar_Bar</ProgressTexture>              
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
 							<ProgressTextureOffsetPx>
 								<X>0</X>
 								<Y>0</Y>
@@ -2374,7 +2346,7 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>1</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
+							<MaxAlpha>1</MaxAlpha>
 						</Blink>
 						<Texture>HydrogenIcon</Texture>
 						<ColorMask>
@@ -2401,7 +2373,7 @@
 							<StatId>player_hydrogen_bottles</StatId>
 							<Value>0</Value>
 							<Operator>Above</Operator>
-						</VisibleCondition>  
+						</VisibleCondition>
 
 						<Texture>Bottle</Texture>
 						<ColorMask>
@@ -2426,7 +2398,7 @@
 							<StatId>player_hydrogen_bottles</StatId>
 							<Value>1</Value>
 							<Operator>Above</Operator>
-						</VisibleCondition>  
+						</VisibleCondition>
 
 						<Texture>Bottle</Texture>
 						<ColorMask>
@@ -2451,7 +2423,7 @@
 							<StatId>player_hydrogen_bottles</StatId>
 							<Value>2</Value>
 							<Operator>Above</Operator>
-						</VisibleCondition>  
+						</VisibleCondition>
 
 						<Texture>Bottle</Texture>
 						<ColorMask>
@@ -2476,7 +2448,7 @@
 							<StatId>player_hydrogen_bottles</StatId>
 							<Value>3</Value>
 							<Operator>Above</Operator>
-						</VisibleCondition>  
+						</VisibleCondition>
 
 						<Texture>HealthIcon</Texture>
 						<ColorMask>
@@ -2507,11 +2479,11 @@
 							<Operator>Above</Operator>
 							<Value>0</Value>
 						</Term>
-                        <Term xsi:type="StatCondition">
-                            <StatId>controller_mode</StatId>
-                            <Operator>Equal</Operator>
-                            <Value>0</Value>
-                        </Term>
+						<Term xsi:type="StatCondition">
+							<StatId>controller_mode</StatId>
+							<Operator>Equal</Operator>
+							<Value>0</Value>
+						</Term>
 					</Terms>
 				</VisibleCondition>
 
@@ -2541,7 +2513,7 @@
 
 
 
-					<!--Atmoshpere Status--> 
+					<!--Atmoshpere Status-->
 					<!--Below 10%-->
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<StatId>environment_oxygen_level</StatId>
@@ -2731,398 +2703,398 @@
 					</StatStyle>
 
 
-          <!--Temperature Status-->
-          <!--Extreme freeze-->
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <OffsetPx>
-              <X>280</X>
-              <Y>-21</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>19</X>
-              <Y>19</Y>
-            </SizePx>
+					<!--Temperature Status-->
+					<!--Extreme freeze-->
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<OffsetPx>
+							<X>280</X>
+							<Y>-21</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>19</X>
+							<Y>19</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="StatCondition">
-              <Operator>Below</Operator>
-              <Value>0.125</Value>
-              <StatId>environment_temperature_level</StatId>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Below</Operator>
+							<Value>0.125</Value>
+							<StatId>environment_temperature_level</StatId>
+						</VisibleCondition>
 
-            <Texture>TemperatureIcon</Texture>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.27</Y>
-              <Z>0.27</Z>
-              <W>0.9</W>
-            </ColorMask>
-          </StatStyle>
+						<Texture>TemperatureIcon</Texture>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.27</Y>
+							<Z>0.27</Z>
+							<W>0.9</W>
+						</ColorMask>
+					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>255</X>
-              <Y>-88</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>150</X>
-              <Y>150</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>255</X>
+							<Y>-88</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>150</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="StatCondition">
-              <Operator>Below</Operator>
-              <Value>0.125</Value>
-              <StatId>environment_temperature_level</StatId>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Below</Operator>
+							<Value>0.125</Value>
+							<StatId>environment_temperature_level</StatId>
+						</VisibleCondition>
 
-            <Text>{LOC:TemperatureFreeze}</Text>
-            <Precision>0</Precision>
-            <Font>Red</Font>
-            <Scale>0.60</Scale>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-          </StatStyle>
+						<Text>{LOC:TemperatureFreeze}</Text>
+						<Precision>0</Precision>
+						<Font>Red</Font>
+						<Scale>0.60</Scale>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
 
-          <!--Cold-->
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <OffsetPx>
-              <X>280</X>
-              <Y>-21</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>19</X>
-              <Y>19</Y>
-            </SizePx>
+					<!--Cold-->
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<OffsetPx>
+							<X>280</X>
+							<Y>-21</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>19</X>
+							<Y>19</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.125</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.375</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.125</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.375</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
 
-            <Texture>TemperatureIcon</Texture>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>0.9</W>
-            </ColorMask>
-          </StatStyle>
+						<Texture>TemperatureIcon</Texture>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>0.9</W>
+						</ColorMask>
+					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>245</X>
-              <Y>-88</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>150</X>
-              <Y>150</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>245</X>
+							<Y>-88</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>150</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.125</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.375</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.125</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.375</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
 
-            <Text>{LOC:TemperatureCold}</Text>
-            <Precision>0</Precision>
-            <Font>White</Font>
-            <Scale>0.60</Scale>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>1</W>
-            </ColorMask>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-          </StatStyle>
+						<Text>{LOC:TemperatureCold}</Text>
+						<Precision>0</Precision>
+						<Font>White</Font>
+						<Scale>0.60</Scale>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>1</W>
+						</ColorMask>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
 
-          <!--Cozy-->
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <OffsetPx>
-              <X>280</X>
-              <Y>-21</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>19</X>
-              <Y>19</Y>
-            </SizePx>
+					<!--Cozy-->
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<OffsetPx>
+							<X>280</X>
+							<Y>-21</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>19</X>
+							<Y>19</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.375</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.625</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
-            
-            <!--<VisibleCondition xsi:type="StatCondition">
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.375</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.625</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
+
+						<!--<VisibleCondition xsi:type="StatCondition">
               <Operator>Above</Operator>
               <Value>0.4</Value>
               <StatId>environment_temperature_level</StatId>
             </VisibleCondition>-->
 
-            <Texture>TemperatureIcon</Texture>
-            <ColorMask>
-              <X>0.27</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>0.9</W>
-            </ColorMask>
-          </StatStyle>
+						<Texture>TemperatureIcon</Texture>
+						<ColorMask>
+							<X>0.27</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>0.9</W>
+						</ColorMask>
+					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>245</X>
-              <Y>-88</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>150</X>
-              <Y>150</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>245</X>
+							<Y>-88</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>150</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.375</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.625</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
-
-            <Text>{LOC:TemperatureWarm}</Text>
-            <Precision>0</Precision>
-            <Font>White</Font>
-            <Scale>0.60</Scale>
-            <ColorMask>
-              <X>0.27</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>1</W>
-            </ColorMask>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-          </StatStyle>
-
-          <!--Hot-->
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <OffsetPx>
-              <X>280</X>
-              <Y>-21</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>19</X>
-              <Y>19</Y>
-            </SizePx>
-
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.625</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.875</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
-
-            <Texture>TemperatureIcon</Texture>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>0.9</W>
-            </ColorMask>
-          </StatStyle>
-
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>245</X>
-              <Y>-88</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>150</X>
-              <Y>150</Y>
-            </SizePx>
-
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.625</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.875</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
-
-            <Text>{LOC:TemperatureHot}</Text>
-            <Precision>0</Precision>
-            <Font>White</Font>
-            <Scale>0.60</Scale>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>1</W>
-            </ColorMask>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-          </StatStyle>
-
-          <!--Extreme Hot-->
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <OffsetPx>
-              <X>280</X>
-              <Y>-21</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>19</X>
-              <Y>19</Y>
-            </SizePx>
-
-            <VisibleCondition xsi:type="StatCondition">
-              <Operator>Above</Operator>
-              <Value>0.875</Value>
-              <StatId>environment_temperature_level</StatId>
-            </VisibleCondition>
-
-            <Texture>TemperatureIcon</Texture>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.27</Y>
-              <Z>0.27</Z>
-              <W>0.9</W>
-            </ColorMask>
-          </StatStyle>
-
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>255</X>
-              <Y>-88</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>150</X>
-              <Y>150</Y>
-            </SizePx>
-
-            <VisibleCondition xsi:type="StatCondition">
-              <Operator>Above</Operator>
-              <Value>0.875</Value>
-              <StatId>environment_temperature_level</StatId>
-            </VisibleCondition>
-
-
-            <Text>{LOC:TemperatureInferno}</Text>
-            <Precision>0</Precision>
-            <Font>White</Font>
-            <Scale>0.60</Scale>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.27</Y>
-              <Z>0.27</Z>
-              <W>1</W>
-            </ColorMask>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-          </StatStyle>
-		  
-
-                    <!--ColorPicker Keybind-->
-                    <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-
-                        <OffsetPx>
-                            <X>385</X>
-                            <Y>-22</Y>
-                        </OffsetPx>
-                        <SizePx>
-                            <X>16</X>
-                            <Y>16</Y>
-                        </SizePx>
-
-                        <FadeInTimeMs>100</FadeInTimeMs>
-                        <FadeOutTimeMs>500</FadeOutTimeMs>
-
-                        <VisibleCondition xsi:type="Condition">			
-						<Operator>And</Operator>
-						<Terms>
-							<Term xsi:type="StatCondition">
-								<StatId>hud_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>1</Value>
-							</Term>
-							<Term xsi:type="StatCondition">
-								<StatId>controller_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>0</Value>
-							</Term>
-						</Terms>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.375</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.625</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
 						</VisibleCondition>
 
-                        <Text>{GAME_CONTROL:LANDING_GEAR}</Text>
-                        <Font>White</Font>
-                        <Scale>0.6</Scale>
-                        <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+						<Text>{LOC:TemperatureWarm}</Text>
+						<Precision>0</Precision>
+						<Font>White</Font>
+						<Scale>0.60</Scale>
+						<ColorMask>
+							<X>0.27</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>1</W>
+						</ColorMask>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
 
-                    </StatStyle>
-		  
-          
+					<!--Hot-->
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<OffsetPx>
+							<X>280</X>
+							<Y>-21</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>19</X>
+							<Y>19</Y>
+						</SizePx>
+
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.625</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.875</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
+
+						<Texture>TemperatureIcon</Texture>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>0.9</W>
+						</ColorMask>
+					</StatStyle>
+
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>245</X>
+							<Y>-88</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>150</Y>
+						</SizePx>
+
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.625</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.875</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
+
+						<Text>{LOC:TemperatureHot}</Text>
+						<Precision>0</Precision>
+						<Font>White</Font>
+						<Scale>0.60</Scale>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>1</W>
+						</ColorMask>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
+
+					<!--Extreme Hot-->
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<OffsetPx>
+							<X>280</X>
+							<Y>-21</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>19</X>
+							<Y>19</Y>
+						</SizePx>
+
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Above</Operator>
+							<Value>0.875</Value>
+							<StatId>environment_temperature_level</StatId>
+						</VisibleCondition>
+
+						<Texture>TemperatureIcon</Texture>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.27</Y>
+							<Z>0.27</Z>
+							<W>0.9</W>
+						</ColorMask>
+					</StatStyle>
+
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>255</X>
+							<Y>-88</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>150</Y>
+						</SizePx>
+
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Above</Operator>
+							<Value>0.875</Value>
+							<StatId>environment_temperature_level</StatId>
+						</VisibleCondition>
+
+
+						<Text>{LOC:TemperatureInferno}</Text>
+						<Precision>0</Precision>
+						<Font>White</Font>
+						<Scale>0.60</Scale>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.27</Y>
+							<Z>0.27</Z>
+							<W>1</W>
+						</ColorMask>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
+
+
+					<!--ColorPicker Keybind-->
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+
+						<OffsetPx>
+							<X>385</X>
+							<Y>-22</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>16</X>
+							<Y>16</Y>
+						</SizePx>
+
+						<FadeInTimeMs>100</FadeInTimeMs>
+						<FadeOutTimeMs>500</FadeOutTimeMs>
+
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>hud_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>1</Value>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>controller_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>0</Value>
+								</Term>
+							</Terms>
+						</VisibleCondition>
+
+						<Text>{GAME_CONTROL:LANDING_GEAR}</Text>
+						<Font>White</Font>
+						<Scale>0.6</Scale>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+
+					</StatStyle>
+
+
 					<!-- Drilling indicator -->
 					<StatStyle xsi:type="MyObjectBuilder_ProgressBarStatVisualStyle">
 						<StatId>player_inventory_capacity</StatId>
@@ -3155,11 +3127,11 @@
 								<Z>0</Z>
 								<W>1</W>
 							</ColorMask>
-						</Blink>						
+						</Blink>
 
 						<SimpleStyle>
 							<BackgroundTexture>DrillBarBackground</BackgroundTexture>
-							<ProgressTexture>DrillBarProgress</ProgressTexture>              
+							<ProgressTexture>DrillBarProgress</ProgressTexture>
 							<ProgressTextureOffsetPx>
 								<X>0</X>
 								<Y>0</Y>
@@ -3179,46 +3151,46 @@
 						</SimpleStyle>
 					</StatStyle>
 
-          <!--Inventory Keybind-->
+					<!--Inventory Keybind-->
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 
-            <OffsetPx>
-              <X>-355</X>
-              <Y>-152</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>16</X>
-              <Y>16</Y>
-            </SizePx>
+						<OffsetPx>
+							<X>-355</X>
+							<Y>-152</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>16</X>
+							<Y>16</Y>
+						</SizePx>
 
-            <FadeInTimeMs>100</FadeInTimeMs>
-            <FadeOutTimeMs>500</FadeOutTimeMs>
+						<FadeInTimeMs>100</FadeInTimeMs>
+						<FadeOutTimeMs>500</FadeOutTimeMs>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>controlled_is_turret</StatId>
-                  <Operator>Below</Operator>
-                  <Value>1</Value>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>hud_mode</StatId>
-                  <Operator>Equal</Operator>
-                  <Value>1</Value>
-                </Term>
-              </Terms>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>controlled_is_turret</StatId>
+									<Operator>Below</Operator>
+									<Value>1</Value>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>hud_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>1</Value>
+								</Term>
+							</Terms>
+						</VisibleCondition>
 
-            <Text>{GAME_CONTROL:INVENTORY}</Text>
-            <Font>White</Font>
-            <Scale>0.8</Scale>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+						<Text>{GAME_CONTROL:INVENTORY}</Text>
+						<Font>White</Font>
+						<Scale>0.8</Scale>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 
-          </StatStyle>
-          
-          <!--Inventory Icon-->
+					</StatStyle>
+
+					<!--Inventory Icon-->
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>-330</X>
@@ -3478,9 +3450,9 @@
 						<Scale>0.5</Scale>
 						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 
-					</StatStyle>						
+					</StatStyle>
 
-					
+
 					<!--Block Rotate On-->
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
@@ -3586,8 +3558,8 @@
 						<FadeOutTimeMs>500</FadeOutTimeMs>
 						<Texture>F1Icon</Texture>
 
-					</StatStyle>					
-					
+					</StatStyle>
+
 					<!--F1 Magnifying Glass Keybind-->
 
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
@@ -3615,7 +3587,7 @@
 						<Scale>0.6</Scale>
 						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 					</StatStyle>
-					
+
 					<!--Toobar Config G Screen Keybind-->
 
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
@@ -3643,7 +3615,7 @@
 						<Scale>0.6</Scale>
 						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 
-					</StatStyle>	
+					</StatStyle>
 
 					<!--Toobar Tabs Keybind -->
 
@@ -3661,20 +3633,20 @@
 						<FadeInTimeMs>100</FadeInTimeMs>
 						<FadeOutTimeMs>500</FadeOutTimeMs>
 
-						<VisibleCondition xsi:type="Condition">			
-						<Operator>And</Operator>
-						<Terms>
-							<Term xsi:type="StatCondition">
-								<StatId>hud_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>1</Value>
-							</Term>
-							<Term xsi:type="StatCondition">
-								<StatId>controller_mode</StatId>
-								<Operator>Equal</Operator>
-								<Value>0</Value>
-							</Term>
-						</Terms>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>hud_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>1</Value>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>controller_mode</StatId>
+									<Operator>Equal</Operator>
+									<Value>0</Value>
+								</Term>
+							</Terms>
 						</VisibleCondition>
 
 						<Text>CTRL + {LOC:Number}</Text>
@@ -3682,11 +3654,11 @@
 						<Scale>0.6</Scale>
 						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
 
-					</StatStyle>	
+					</StatStyle>
 
 
 
-					
+
 					<!--Grid Mirror On-->
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 
@@ -3992,7 +3964,7 @@
         </StatStyles>
       </StatControl>-->
 
-            
+
 			<!--********************************************************************************************************************************************************************************************
       ****************************************** CenterPlateController *************************** CenterPlateController ******************************* CenterPlateController **************************
       ************************************************************************************************************************************************************************************************-->
@@ -4010,11 +3982,11 @@
 							<Operator>Above</Operator>
 							<Value>0</Value>
 						</Term>
-                        <Term xsi:type="StatCondition">
-                            <StatId>controller_mode</StatId>
-                            <Operator>Equal</Operator>
-                            <Value>1</Value>
-                        </Term>
+						<Term xsi:type="StatCondition">
+							<StatId>controller_mode</StatId>
+							<Operator>Equal</Operator>
+							<Value>1</Value>
+						</Term>
 					</Terms>
 				</VisibleCondition>
 
@@ -4044,7 +4016,7 @@
 
 
 
-					<!--Atmoshpere Status--> 
+					<!--Atmoshpere Status-->
 					<!--Below 10%-->
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<StatId>environment_oxygen_level</StatId>
@@ -4234,358 +4206,358 @@
 					</StatStyle>
 
 
-          <!--Temperature Status-->
-          <!--Extreme freeze-->
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <OffsetPx>
-              <X>410</X>
-              <Y>-21</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>19</X>
-              <Y>19</Y>
-            </SizePx>
+					<!--Temperature Status-->
+					<!--Extreme freeze-->
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<OffsetPx>
+							<X>410</X>
+							<Y>-21</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>19</X>
+							<Y>19</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="StatCondition">
-              <Operator>Below</Operator>
-              <Value>0.125</Value>
-              <StatId>environment_temperature_level</StatId>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Below</Operator>
+							<Value>0.125</Value>
+							<StatId>environment_temperature_level</StatId>
+						</VisibleCondition>
 
-            <Texture>TemperatureIcon</Texture>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.27</Y>
-              <Z>0.27</Z>
-              <W>0.9</W>
-            </ColorMask>
-          </StatStyle>
+						<Texture>TemperatureIcon</Texture>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.27</Y>
+							<Z>0.27</Z>
+							<W>0.9</W>
+						</ColorMask>
+					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>385</X>
-              <Y>-88</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>150</X>
-              <Y>150</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>385</X>
+							<Y>-88</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>150</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="StatCondition">
-              <Operator>Below</Operator>
-              <Value>0.125</Value>
-              <StatId>environment_temperature_level</StatId>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Below</Operator>
+							<Value>0.125</Value>
+							<StatId>environment_temperature_level</StatId>
+						</VisibleCondition>
 
-            <Text>{LOC:TemperatureFreeze}</Text>
-            <Precision>0</Precision>
-            <Font>Red</Font>
-            <Scale>0.60</Scale>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-          </StatStyle>
+						<Text>{LOC:TemperatureFreeze}</Text>
+						<Precision>0</Precision>
+						<Font>Red</Font>
+						<Scale>0.60</Scale>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
 
-          <!--Cold-->
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <OffsetPx>
-              <X>410</X>
-              <Y>-21</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>19</X>
-              <Y>19</Y>
-            </SizePx>
+					<!--Cold-->
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<OffsetPx>
+							<X>410</X>
+							<Y>-21</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>19</X>
+							<Y>19</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.125</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.375</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.125</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.375</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
 
-            <Texture>TemperatureIcon</Texture>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>0.9</W>
-            </ColorMask>
-          </StatStyle>
+						<Texture>TemperatureIcon</Texture>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>0.9</W>
+						</ColorMask>
+					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>375</X>
-              <Y>-88</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>150</X>
-              <Y>150</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>375</X>
+							<Y>-88</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>150</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.125</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.375</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.125</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.375</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
 
-            <Text>{LOC:TemperatureCold}</Text>
-            <Precision>0</Precision>
-            <Font>White</Font>
-            <Scale>0.60</Scale>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>1</W>
-            </ColorMask>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-          </StatStyle>
+						<Text>{LOC:TemperatureCold}</Text>
+						<Precision>0</Precision>
+						<Font>White</Font>
+						<Scale>0.60</Scale>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>1</W>
+						</ColorMask>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
 
-          <!--Cozy-->
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <OffsetPx>
-              <X>410</X>
-              <Y>-21</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>19</X>
-              <Y>19</Y>
-            </SizePx>
+					<!--Cozy-->
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<OffsetPx>
+							<X>410</X>
+							<Y>-21</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>19</X>
+							<Y>19</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.375</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.625</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
-            
-            <!--<VisibleCondition xsi:type="StatCondition">
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.375</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.625</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
+
+						<!--<VisibleCondition xsi:type="StatCondition">
               <Operator>Above</Operator>
               <Value>0.4</Value>
               <StatId>environment_temperature_level</StatId>
             </VisibleCondition>-->
 
-            <Texture>TemperatureIcon</Texture>
-            <ColorMask>
-              <X>0.27</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>0.9</W>
-            </ColorMask>
-          </StatStyle>
+						<Texture>TemperatureIcon</Texture>
+						<ColorMask>
+							<X>0.27</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>0.9</W>
+						</ColorMask>
+					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>375</X>
-              <Y>-88</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>150</X>
-              <Y>150</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>375</X>
+							<Y>-88</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>150</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.375</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.625</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.375</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.625</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
 
-            <Text>{LOC:TemperatureWarm}</Text>
-            <Precision>0</Precision>
-            <Font>White</Font>
-            <Scale>0.60</Scale>
-            <ColorMask>
-              <X>0.27</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>1</W>
-            </ColorMask>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-          </StatStyle>
+						<Text>{LOC:TemperatureWarm}</Text>
+						<Precision>0</Precision>
+						<Font>White</Font>
+						<Scale>0.60</Scale>
+						<ColorMask>
+							<X>0.27</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>1</W>
+						</ColorMask>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
 
-          <!--Hot-->
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <OffsetPx>
-              <X>410</X>
-              <Y>-21</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>19</X>
-              <Y>19</Y>
-            </SizePx>
+					<!--Hot-->
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<OffsetPx>
+							<X>410</X>
+							<Y>-21</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>19</X>
+							<Y>19</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.625</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.875</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.625</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.875</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
 
-            <Texture>TemperatureIcon</Texture>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>0.9</W>
-            </ColorMask>
-          </StatStyle>
+						<Texture>TemperatureIcon</Texture>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>0.9</W>
+						</ColorMask>
+					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>375</X>
-              <Y>-88</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>150</X>
-              <Y>150</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>375</X>
+							<Y>-88</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>150</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="Condition">
-              <Operator>And</Operator>
-              <Terms>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.625</Value>
-                  <Operator>Above</Operator>
-                </Term>
-                <Term xsi:type="StatCondition">
-                  <StatId>environment_temperature_level</StatId>
-                  <Value>0.875</Value>
-                  <Operator>Below</Operator>
-                </Term>
-              </Terms>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="Condition">
+							<Operator>And</Operator>
+							<Terms>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.625</Value>
+									<Operator>Above</Operator>
+								</Term>
+								<Term xsi:type="StatCondition">
+									<StatId>environment_temperature_level</StatId>
+									<Value>0.875</Value>
+									<Operator>Below</Operator>
+								</Term>
+							</Terms>
+						</VisibleCondition>
 
-            <Text>{LOC:TemperatureHot}</Text>
-            <Precision>0</Precision>
-            <Font>White</Font>
-            <Scale>0.60</Scale>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.9</Y>
-              <Z>0.27</Z>
-              <W>1</W>
-            </ColorMask>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-          </StatStyle>
+						<Text>{LOC:TemperatureHot}</Text>
+						<Precision>0</Precision>
+						<Font>White</Font>
+						<Scale>0.60</Scale>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.9</Y>
+							<Z>0.27</Z>
+							<W>1</W>
+						</ColorMask>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
 
-          <!--Extreme Hot-->
-          <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <OffsetPx>
-              <X>410</X>
-              <Y>-21</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>19</X>
-              <Y>19</Y>
-            </SizePx>
+					<!--Extreme Hot-->
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<OffsetPx>
+							<X>410</X>
+							<Y>-21</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>19</X>
+							<Y>19</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="StatCondition">
-              <Operator>Above</Operator>
-              <Value>0.875</Value>
-              <StatId>environment_temperature_level</StatId>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Above</Operator>
+							<Value>0.875</Value>
+							<StatId>environment_temperature_level</StatId>
+						</VisibleCondition>
 
-            <Texture>TemperatureIcon</Texture>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.27</Y>
-              <Z>0.27</Z>
-              <W>0.9</W>
-            </ColorMask>
-          </StatStyle>
+						<Texture>TemperatureIcon</Texture>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.27</Y>
+							<Z>0.27</Z>
+							<W>0.9</W>
+						</ColorMask>
+					</StatStyle>
 
-          <StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
-            <StatId>environment_temperature_level</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>385</X>
-              <Y>-88</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>150</X>
-              <Y>150</Y>
-            </SizePx>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>environment_temperature_level</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>385</X>
+							<Y>-88</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>150</Y>
+						</SizePx>
 
-            <VisibleCondition xsi:type="StatCondition">
-              <Operator>Above</Operator>
-              <Value>0.875</Value>
-              <StatId>environment_temperature_level</StatId>
-            </VisibleCondition>
+						<VisibleCondition xsi:type="StatCondition">
+							<Operator>Above</Operator>
+							<Value>0.875</Value>
+							<StatId>environment_temperature_level</StatId>
+						</VisibleCondition>
 
 
-            <Text>{LOC:TemperatureInferno}</Text>
-            <Precision>0</Precision>
-            <Font>White</Font>
-            <Scale>0.60</Scale>
-            <ColorMask>
-              <X>0.9</X>
-              <Y>0.27</Y>
-              <Z>0.27</Z>
-              <W>1</W>
-            </ColorMask>
-            <TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
-          </StatStyle>
-                    <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<Text>{LOC:TemperatureInferno}</Text>
+						<Precision>0</Precision>
+						<Font>White</Font>
+						<Scale>0.60</Scale>
+						<ColorMask>
+							<X>0.9</X>
+							<Y>0.27</Y>
+							<Z>0.27</Z>
+							<W>1</W>
+						</ColorMask>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>99</X>
 							<Y>-213</Y>
@@ -4598,92 +4570,92 @@
 
 						<Texture>InventoryRadialBackground</Texture>
 					</StatStyle>
-                    
-                    <StatStyle xsi:type="MyObjectBuilder_CircularProgressBarStatVisualStyle">
-                        <StatId>player_inventory_capacity</StatId>
-                        <StatCriticalValue>0</StatCriticalValue>
-                        <OffsetPx>
-                            <X>149</X>
-                            <Y>-163</Y>
-                        </OffsetPx>
-                        <SizePx>
-                            <X>120</X>
-                            <Y>120</Y>
-                        </SizePx>
 
-                        <NumberOfSegments>30</NumberOfSegments>
-                        <SegmentTexture>InventorySegment</SegmentTexture>
-                        <FirstSegmentTexture>FirstInventorySegment</FirstSegmentTexture>
-                        <LastSegmentTexture>LastInventorySegment</LastSegmentTexture>
-                        <SegmentSizePx>
-                            <X>6</X>
-                            <Y>12</Y>
-                        </SegmentSizePx>
-                        <SegmentOrigin>
-                            <X>50</X>
-                            <Y>50</Y>
-                        </SegmentOrigin>
-                        <SpacingAngle>5</SpacingAngle>
-                        <AngleOffset>0</AngleOffset>
-                        <Animate>false</Animate>
-                        <ShowEmptySegments>false</ShowEmptySegments>
+					<StatStyle xsi:type="MyObjectBuilder_CircularProgressBarStatVisualStyle">
+						<StatId>player_inventory_capacity</StatId>
+						<StatCriticalValue>0</StatCriticalValue>
+						<OffsetPx>
+							<X>149</X>
+							<Y>-163</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>120</X>
+							<Y>120</Y>
+						</SizePx>
 
-                        <EmptySegmentColorMask>
-                            <X>0.734375</X>
-                            <Y>0.9137254901960784</Y>
-                            <Z>0.9647058823529412</Z>
-                            <W>0.2</W>
-                        </EmptySegmentColorMask>
-                        <FullSegmentColorMask>
-                            <X>0.734375</X>
-                            <Y>0.9137254901960784</Y>
-                            <Z>0.9647058823529412</Z>
-                            <W>1</W>
-                        </FullSegmentColorMask>
-                        <AnimatedSegmentColorMask>
-                            <X>0.834375</X>
-                            <Y>0.9837254901960784</Y>
-                            <Z>0.9947058823529412</Z>
-                            <W>0.7</W>
-                        </AnimatedSegmentColorMask>
+						<NumberOfSegments>30</NumberOfSegments>
+						<SegmentTexture>InventorySegment</SegmentTexture>
+						<FirstSegmentTexture>FirstInventorySegment</FirstSegmentTexture>
+						<LastSegmentTexture>LastInventorySegment</LastSegmentTexture>
+						<SegmentSizePx>
+							<X>6</X>
+							<Y>12</Y>
+						</SegmentSizePx>
+						<SegmentOrigin>
+							<X>50</X>
+							<Y>50</Y>
+						</SegmentOrigin>
+						<SpacingAngle>5</SpacingAngle>
+						<AngleOffset>0</AngleOffset>
+						<Animate>false</Animate>
+						<ShowEmptySegments>false</ShowEmptySegments>
 
-                        <FadeInTimeMs>100</FadeInTimeMs>
-                        <FadeOutTimeMs>500</FadeOutTimeMs>
+						<EmptySegmentColorMask>
+							<X>0.734375</X>
+							<Y>0.9137254901960784</Y>
+							<Z>0.9647058823529412</Z>
+							<W>0.2</W>
+						</EmptySegmentColorMask>
+						<FullSegmentColorMask>
+							<X>0.734375</X>
+							<Y>0.9137254901960784</Y>
+							<Z>0.9647058823529412</Z>
+							<W>1</W>
+						</FullSegmentColorMask>
+						<AnimatedSegmentColorMask>
+							<X>0.834375</X>
+							<Y>0.9837254901960784</Y>
+							<Z>0.9947058823529412</Z>
+							<W>0.7</W>
+						</AnimatedSegmentColorMask>
 
-                        <BlinkCondition xsi:type="StatCondition">
-                            <StatId>player_inventory_capacity</StatId>
-                            <Value>0.79</Value>
-                            <Operator>Above</Operator>
-                        </BlinkCondition>
+						<FadeInTimeMs>100</FadeInTimeMs>
+						<FadeOutTimeMs>500</FadeOutTimeMs>
 
-                        <Blink>
-                            <MinAlpha>0.8</MinAlpha>
-                            <MaxAlpha>1</MaxAlpha>
-                            <IntervalMs>2000</IntervalMs>
-                            <ColorMask>
-                                <X>1</X>
-                                <Y>0</Y>
-                                <Z>0</Z>
-                                <W>1</W>
-                            </ColorMask>
-                        </Blink>
-                    </StatStyle>
-                    
-                    <StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
-                        <OffsetPx>
-                            <X>92</X>
-                            <Y>-98</Y>
-                        </OffsetPx>
-                        <SizePx>
-                            <X>18</X>
-                            <Y>27</Y>
-                        </SizePx>
+						<BlinkCondition xsi:type="StatCondition">
+							<StatId>player_inventory_capacity</StatId>
+							<Value>0.79</Value>
+							<Operator>Above</Operator>
+						</BlinkCondition>
 
-                        <FadeInTimeMs>100</FadeInTimeMs>
-                        <FadeOutTimeMs>500</FadeOutTimeMs>
+						<Blink>
+							<MinAlpha>0.8</MinAlpha>
+							<MaxAlpha>1</MaxAlpha>
+							<IntervalMs>2000</IntervalMs>
+							<ColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ColorMask>
+						</Blink>
+					</StatStyle>
 
-                        <Texture>BackpackIcon</Texture>
-                    </StatStyle>
+					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
+						<OffsetPx>
+							<X>92</X>
+							<Y>-98</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>18</X>
+							<Y>27</Y>
+						</SizePx>
+
+						<FadeInTimeMs>100</FadeInTimeMs>
+						<FadeOutTimeMs>500</FadeOutTimeMs>
+
+						<Texture>BackpackIcon</Texture>
+					</StatStyle>
 
 					<!-- GRAVITY -->
 					<!--A-Gravity-->
@@ -4900,7 +4872,7 @@
 						</ColorMask>
 
 					</StatStyle>
-                    
+
 					<!--Block Rotate On-->
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
@@ -5099,7 +5071,7 @@
 						<Texture>HealthLow</Texture>
 
 					</StatStyle>
-					
+
 					<!-- Capacity -->
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
@@ -5123,7 +5095,7 @@
 						<BlinkCondition xsi:type="StatCondition">
 							<StatId>player_inventory_full</StatId>
 							<Value>0.5</Value>
-							<Operator>Above</Operator>             
+							<Operator>Above</Operator>
 						</BlinkCondition>
 
 
@@ -5139,11 +5111,11 @@
 				<VisibleCondition xsi:type="Condition">
 					<Operator>And</Operator>
 					<Terms>
-            <Term xsi:type="StatCondition">
-              <StatId>controlled_is_grid</StatId>
-              <Operator>Above</Operator>
-              <Value>0</Value>
-            </Term>
+						<Term xsi:type="StatCondition">
+							<StatId>controlled_is_grid</StatId>
+							<Operator>Above</Operator>
+							<Value>0</Value>
+						</Term>
 						<Term xsi:type="StatCondition">
 							<StatId>controlled_is_turret</StatId>
 							<Operator>Below</Operator>
@@ -5345,7 +5317,7 @@
 							<W>0.2</W>
 						</ColorMask>
 						<TextAlign>HORISONTAL_RIGHT_AND_VERTICAL_CENTER</TextAlign>
-					</StatStyle>		  
+					</StatStyle>
 
 					<!--Estimated Energy Remaining Value On-->
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
@@ -5376,7 +5348,7 @@
 							<W>0.8</W>
 						</ColorMask>
 						<TextAlign>HORISONTAL_RIGHT_AND_VERTICAL_CENTER</TextAlign>
-					</StatStyle>			  
+					</StatStyle>
 
 					<!--Estimated Energy Remaining ICON ON-->
 
@@ -5405,7 +5377,7 @@
 							<Z>1</Z>
 							<W>1</W>
 						</ColorMask>
-					</StatStyle>		  
+					</StatStyle>
 
 					<!--Estimated Energy Remaining ICON OFF-->
 
@@ -5434,7 +5406,7 @@
 							<Z>1</Z>
 							<W>0.2</W>
 						</ColorMask>
-					</StatStyle>			  
+					</StatStyle>
 
 					<!--Energy Progress Bar-->
 
@@ -5469,13 +5441,13 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>0.6</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
+							<MaxAlpha>1</MaxAlpha>
 						</Blink>
-						<Inverted>true</Inverted>  
+						<Inverted>true</Inverted>
 
 						<SimpleStyle>
 							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
-							<ProgressTexture>ProgressBar_Bar</ProgressTexture>              
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
 							<ProgressTextureOffsetPx>
 								<X>0</X>
 								<Y>0</Y>
@@ -5527,8 +5499,8 @@
 								<Y>0</Y>
 								<Z>0</Z>
 								<W>1</W>
-							</ColorMask>							
-						</Blink>							
+							</ColorMask>
+						</Blink>
 
 						<Percentage>true</Percentage>
 						<Precision>0</Precision>
@@ -5610,8 +5582,8 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>1</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
-						</Blink>	
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
 						<Texture>EnergyIcon</Texture>
 					</StatStyle>
 
@@ -5669,14 +5641,14 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>0.6</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
-						</Blink>	
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
 
 						<Inverted>true</Inverted>
 
 						<SimpleStyle>
 							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
-							<ProgressTexture>ProgressBar_Bar</ProgressTexture>              
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
 							<ProgressTextureOffsetPx>
 								<X>0</X>
 								<Y>0</Y>
@@ -5726,7 +5698,7 @@
 								<Z>0</Z>
 								<W>1</W>
 							</ColorMask>
-						</Blink>						
+						</Blink>
 
 						<Percentage>true</Percentage>
 						<Precision>0</Precision>
@@ -5801,8 +5773,8 @@
 								<W>1</W>
 							</ColorMask>
 							<MinAlpha>1</MinAlpha>
-							<MaxAlpha>1</MaxAlpha>								
-						</Blink>	
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
 						<Texture>HydrogenIcon</Texture>
 					</StatStyle>
 
@@ -5964,7 +5936,7 @@
 
 						<FadeInTimeMs>100</FadeInTimeMs>
 						<FadeOutTimeMs>500</FadeOutTimeMs>
-						
+
 						<VisibleCondition xsi:type="Condition">
 							<Operator>And</Operator>
 							<Terms>
@@ -6396,7 +6368,7 @@
 
 						<FadeInTimeMs>100</FadeInTimeMs>
 						<FadeOutTimeMs>500</FadeOutTimeMs>
-						
+
 						<VisibleCondition xsi:type="Condition">
 							<Operator>And</Operator>
 							<Terms>
@@ -6466,69 +6438,72 @@
 			<!-- Grid Stats -->
 		</StatControls>
 
-    <Crosshair><!--StatControl-->
-        <Position>
-          <X>0</X>
-          <Y>0</Y>
-        </Position>
-        <OriginAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</OriginAlign>
+		<Crosshair>
+			<!--StatControl-->
+			<Position>
+				<X>0</X>
+				<Y>0</Y>
+			</Position>
+			<OriginAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</OriginAlign>
 
-        <VisibleCondition xsi:type="StatCondition">
-          <StatId>controlled_reloading</StatId>
-          <Value>0</Value>
-          <Operator>Above</Operator>
-        </VisibleCondition>
+			<VisibleCondition xsi:type="StatCondition">
+				<StatId>controlled_reloading</StatId>
+				<Value>0</Value>
+				<Operator>Above</Operator>
+			</VisibleCondition>
 
-        <ApplyHudScale>true</ApplyHudScale>
-        <StatStyles>
-          <!--Reload-->
-          <StatStyle xsi:type="MyObjectBuilder_CircularProgressBarStatVisualStyle">
-            <StatId>controlled_reloading</StatId>
-            <StatCriticalValue>0</StatCriticalValue>
-            <OffsetPx>
-              <X>-25</X>
-              <Y>-25</Y>
-            </OffsetPx>
-            <SizePx>
-              <X>50</X>
-              <Y>50</Y>
-            </SizePx>
+			<ApplyHudScale>true</ApplyHudScale>
+			<StatStyles>
+				<!--Reload-->
+				<StatStyle xsi:type="MyObjectBuilder_CircularProgressBarStatVisualStyle">
+					<StatId>controlled_reloading</StatId>
+					<StatCriticalValue>0</StatCriticalValue>
+					<OffsetPx>
+						<X>-25</X>
+						<Y>-25</Y>
+					</OffsetPx>
+					<SizePx>
+						<X>50</X>
+						<Y>50</Y>
+					</SizePx>
 
-            <NumberOfSegments>14</NumberOfSegments>
-            <SegmentTexture>ReloadCircle</SegmentTexture>
-            <SegmentSizePx>
-              <X>11</X>
-              <Y>11</Y>
-            </SegmentSizePx>
-            <SegmentOrigin><!--SizePx/2-SegmentSizePx because why not-->
-              <X>0</X>
-              <Y>14</Y>
-            </SegmentOrigin>
-            <SpacingAngle>26</SpacingAngle>
-            <AngleOffset>90</AngleOffset>
-            <Animate>false</Animate>
-            <ShowEmptySegments>false</ShowEmptySegments>
+					<NumberOfSegments>14</NumberOfSegments>
+					<SegmentTexture>ReloadCircle</SegmentTexture>
+					<SegmentSizePx>
+						<X>11</X>
+						<Y>11</Y>
+					</SegmentSizePx>
+					<SegmentOrigin>
+						<!--SizePx/2-SegmentSizePx because why not-->
+						<X>0</X>
+						<Y>14</Y>
+					</SegmentOrigin>
+					<SpacingAngle>26</SpacingAngle>
+					<AngleOffset>90</AngleOffset>
+					<Animate>false</Animate>
+					<ShowEmptySegments>false</ShowEmptySegments>
 
-            <EmptySegmentColorMask>
-              <X>0.734375</X>
-              <Y>0.9137254901960784</Y>
-              <Z>0.9647058823529412</Z>
-              <W>0.2</W>
-            </EmptySegmentColorMask>
-            <FullSegmentColorMask>
-              <X>0.734375</X>
-              <Y>0.9137254901960784</Y>
-              <Z>0.9647058823529412</Z>
-              <W>1</W>
-            </FullSegmentColorMask>
-            <AnimatedSegmentColorMask>
-              <X>0.834375</X>
-              <Y>0.9837254901960784</Y>
-              <Z>0.9947058823529412</Z>
-              <W>0.7</W>
-            </AnimatedSegmentColorMask>
-          </StatStyle>
-        </StatStyles>
-    </Crosshair><!--/StatControl-->
+					<EmptySegmentColorMask>
+						<X>0.734375</X>
+						<Y>0.9137254901960784</Y>
+						<Z>0.9647058823529412</Z>
+						<W>0.2</W>
+					</EmptySegmentColorMask>
+					<FullSegmentColorMask>
+						<X>0.734375</X>
+						<Y>0.9137254901960784</Y>
+						<Z>0.9647058823529412</Z>
+						<W>1</W>
+					</FullSegmentColorMask>
+					<AnimatedSegmentColorMask>
+						<X>0.834375</X>
+						<Y>0.9837254901960784</Y>
+						<Z>0.9947058823529412</Z>
+						<W>0.7</W>
+					</AnimatedSegmentColorMask>
+				</StatStyle>
+			</StatStyles>
+		</Crosshair>
+		<!--/StatControl-->
 	</Definition>
 </Definitions>

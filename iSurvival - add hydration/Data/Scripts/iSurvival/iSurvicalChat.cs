@@ -2,20 +2,20 @@
 using Sandbox.ModAPI;
 using VRage.Game.ModAPI.Ingame.Utilities;
 using IMyProgrammableBlock = Sandbox.ModAPI.Ingame.IMyProgrammableBlock;
-using Digi;
+using PEPCO.iSurvival.Core;
+using VRage.Game.ModAPI;
+using PEPCO.iSurvival.Log;
 
-namespace PEPONE.iSurvival
+namespace PEPCO.iSurvival.Chat
 {
     public class ChatCommands : IDisposable
     {
         const string MainCommand = "/iSurvival";
-
         readonly iSurvivalSessionSettings Mod;
 
         public ChatCommands(iSurvivalSessionSettings mod)
         {
             Mod = mod;
-
             MyAPIGateway.Utilities.MessageEntered += MessageEntered;
         }
 
@@ -32,109 +32,57 @@ namespace PEPONE.iSurvival
                     return;
 
                 sendToOthers = false;
-
                 var thisPlayer = MyAPIGateway.Session.LocalHumanPlayer;
 
-                bool isAdmin = false;
-
-                if (thisPlayer.PromoteLevel == MyPromoteLevel.Admin || thisPlayer.PromoteLevel == MyPromoteLevel.Owner)
-                {
-
-                    isAdmin = true;
-
-                }
+                bool isAdmin = thisPlayer.PromoteLevel == MyPromoteLevel.Admin || thisPlayer.PromoteLevel == MyPromoteLevel.Owner;
 
                 if (!isAdmin)
                 {
-                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"BRAAAAA! You no admin!");
+                    MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, "BRAAAAA! You no admin!");
+                    return;
                 }
 
-
-                //start cleaning the message from the command tag
-                string cleanCommand = messageText.Replace(MainCommand, "");
-
-                //Clean to lower caps
-                cleanCommand = cleanCommand.ToLower();
-
-                //Clean white spaces
-                cleanCommand = cleanCommand.Replace(" ", "");
-
-
-                //switch (cmd)
-                //{
-                //    case TextPtr s when s.StartsWithCaseInsensitive("exempt"):
-                //        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", Mod.Settings.playerExceptions)}");
-                //        break;
-                //    //case "addexemption":
-                //    //    Mod.Settings.playerExceptions.Add(MyAPIGateway.Session.LocalHumanPlayer.SteamUserId);
-                //    //    Mod.UpdateSettings();
-                //    //    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Added exemption for player with id {MyAPIGateway.Session.LocalHumanPlayer.SteamUserId}");
-                //    //    break;
-                //    //case "removeexemption":
-                //    //    Mod.Settings.playerRemovedExceptions = MyAPIGateway.Session.LocalHumanPlayer.SteamUserId;
-                //    //    Mod.UpdateSettings();
-                //    //    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Removed exemption for player with id {MyAPIGateway.Session.LocalHumanPlayer.SteamUserId}");
-                //    //    break;
-
-                //    //case TextPtr s when "staminadrainmultiplier":
-                //    //    string temp = cleanCommand.Replace("staminadrainmultiplier", "");
-                //    //    float staminadrainmultiplier;
-                //    //    if (float.TryParse(temp, out staminadrainmultiplier))
-                //    //    {
-                //    //        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"New staminadrainmultiplier: {staminadrainmultiplier}");
-                //    //    }
-                //    //    else
-                //    //    {
-                //    //        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Not a valid command: {messageText}");
-                //    //    }
-                //        break;
-                //    default:
-                //        MyAPIGateway.Utilities.ShowMessage(Log.ModName, "Available commands:");
-                //        MyAPIGateway.Utilities.ShowMessage($"{MainCommand} exempt", "shows the SteamIDs of all exempt players");
-                //        MyAPIGateway.Utilities.ShowMessage($"{MainCommand} addexemption", "adds the SteamID of the current user to the list of exempt players");
-                //        MyAPIGateway.Utilities.ShowMessage($"{MainCommand} removeexemption", "removes the SteamID of the current user from the list of exempt players");
-                //        break;
-                //}
+                // Clean and process the command
+                string cleanCommand = messageText.Replace(MainCommand, "").ToLower().Replace(" ", "");
 
                 if (cleanCommand.StartsWith("exempt"))
                 {
-                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", iSurvivalSessionSettings.playerExceptions)}");
+                    MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Exempt player ids: {String.Join(",", iSurvivalSessionSettings.playerExceptions)}");
                     return;
                 }
                 else if (cleanCommand.StartsWith("addexemption"))
                 {
                     Mod.Settings.playerExceptions.Add(thisPlayer.SteamUserId);
                     Mod.UpdateSettings();
-                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", iSurvivalSessionSettings.playerExceptions)}");
+                    MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Exempt player ids: {String.Join(",", iSurvivalSessionSettings.playerExceptions)}");
                     return;
                 }
                 else if (cleanCommand.StartsWith("removeexemption"))
                 {
                     Mod.Settings.playerExceptions.RemoveAll(x => x == thisPlayer.SteamUserId);
                     Mod.UpdateSettings();
-                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Exempt player ids: {String.Join(",", iSurvivalSessionSettings.playerExceptions)}");
+                    MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Exempt player ids: {String.Join(",", iSurvivalSessionSettings.playerExceptions)}");
                     return;
                 }
                 else if (cleanCommand.StartsWith("reloadconfig"))
                 {
-                    
                     Mod.LoadData();
-                    MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Reloaded configuration from file.");
+                    MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, "Reloaded configuration from file.");
                     return;
                 }
                 else if (cleanCommand.StartsWith("staminadrainmultiplier"))
                 {
-                    string temp = cleanCommand.Replace("staminadrainmultiplier","");
+                    string temp = cleanCommand.Replace("staminadrainmultiplier", "");
                     float staminadrainmultiplier;
                     if (float.TryParse(temp, out staminadrainmultiplier))
                     {
                         Mod.Settings.staminadrainmultiplier = staminadrainmultiplier;
                         Mod.UpdateSettings();
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"New staminadrainmultiplier: {iSurvivalSessionSettings.staminadrainmultiplier}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"New staminadrainmultiplier: {iSurvivalSessionSettings.staminadrainmultiplier}");
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Not a valid command: {messageText}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Not a valid command: {messageText}");
                     }
                     return;
                 }
@@ -146,11 +94,11 @@ namespace PEPONE.iSurvival
                     {
                         Mod.Settings.fatiguedrainmultiplier = value;
                         Mod.UpdateSettings();
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"New fatiguedrainmultiplier: {iSurvivalSessionSettings.fatiguedrainmultiplier}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"New fatiguedrainmultiplier: {iSurvivalSessionSettings.fatiguedrainmultiplier}");
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Not a valid command: {messageText}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Not a valid command: {messageText}");
                     }
                     return;
                 }
@@ -162,11 +110,11 @@ namespace PEPONE.iSurvival
                     {
                         Mod.Settings.healthdrainmultiplier = value;
                         Mod.UpdateSettings();
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"New healthdrainmultiplier: {iSurvivalSessionSettings.healthdrainmultiplier}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"New healthdrainmultiplier: {iSurvivalSessionSettings.healthdrainmultiplier}");
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Not a valid command: {messageText}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Not a valid command: {messageText}");
                     }
                     return;
                 }
@@ -178,11 +126,11 @@ namespace PEPONE.iSurvival
                     {
                         Mod.Settings.hungerdrainmultiplier = value;
                         Mod.UpdateSettings();
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"New hungerdrainmultiplier: {iSurvivalSessionSettings.hungerdrainmultiplier}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"New hungerdrainmultiplier: {iSurvivalSessionSettings.hungerdrainmultiplier}");
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Not a valid command: {messageText}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Not a valid command: {messageText}");
                     }
                     return;
                 }
@@ -194,11 +142,11 @@ namespace PEPONE.iSurvival
                     {
                         Mod.Settings.staminaincreasemultiplier = value;
                         Mod.UpdateSettings();
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"New staminaincreasemultiplier: {iSurvivalSessionSettings.staminaincreasemultiplier}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"New staminaincreasemultiplier: {iSurvivalSessionSettings.staminaincreasemultiplier}");
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Not a valid command: {messageText}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Not a valid command: {messageText}");
                     }
                     return;
                 }
@@ -210,11 +158,11 @@ namespace PEPONE.iSurvival
                     {
                         Mod.Settings.fatigueincreasemultiplier = value;
                         Mod.UpdateSettings();
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"New fatigueincreasemultiplier: {iSurvivalSessionSettings.fatigueincreasemultiplier}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"New fatigueincreasemultiplier: {iSurvivalSessionSettings.fatigueincreasemultiplier}");
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Not a valid command: {messageText}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Not a valid command: {messageText}");
                     }
                     return;
                 }
@@ -226,11 +174,11 @@ namespace PEPONE.iSurvival
                     {
                         Mod.Settings.healthincreasemultiplier = value;
                         Mod.UpdateSettings();
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"New healthincreasemultiplier: {iSurvivalSessionSettings.healthincreasemultiplier}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"New healthincreasemultiplier: {iSurvivalSessionSettings.healthincreasemultiplier}");
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Not a valid command: {messageText}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Not a valid command: {messageText}");
                     }
                     return;
                 }
@@ -242,27 +190,27 @@ namespace PEPONE.iSurvival
                     {
                         Mod.Settings.hungerincreasemultiplier = value;
                         Mod.UpdateSettings();
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"New hungerincreasemultiplier: {iSurvivalSessionSettings.hungerincreasemultiplier}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"New hungerincreasemultiplier: {iSurvivalSessionSettings.hungerincreasemultiplier}");
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage(Log.ModName, $"Not a valid command: {messageText}");
+                        MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, $"Not a valid command: {messageText}");
                     }
                     return;
                 }
 
-                MyAPIGateway.Utilities.ShowMessage(Log.ModName, "Available commands:");
+                MyAPIGateway.Utilities.ShowMessage(PEPCO.iSurvival.Log.iSurvivalLog.ModName, "Available commands:");
                 MyAPIGateway.Utilities.ShowMessage($"{MainCommand} reloadconfig", "hot reloads the config file so you don't need to restart");
                 MyAPIGateway.Utilities.ShowMessage($"{MainCommand} exempt", "shows the SteamIDs of all exempt players");
                 MyAPIGateway.Utilities.ShowMessage($"{MainCommand} addexemption", "adds the SteamID of the current user to the list of exempt players");
                 MyAPIGateway.Utilities.ShowMessage($"{MainCommand} removeexemption", "removes the SteamID of the current user from the list of exempt players");
-                MyAPIGateway.Utilities.ShowMessage($"{MainCommand} *multiplier <float>", "changes the corrsponding multiplier:" +
+                MyAPIGateway.Utilities.ShowMessage($"{MainCommand} *multiplier <float>", "changes the corresponding multiplier:" +
                     "\nstaminadrainmultiplier\nfatiguedrainmultiplier\nhealthdrainmultiplier\nhungerdrainmultiplier\nstaminaincreasemultiplier\nfatigueincreasemultiplier\nhealthincreasemultiplier\nhungerincreasemultiplier\n");
 
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                PEPCO.iSurvival.Log.iSurvivalLog.Error(e);
             }
         }
     }
