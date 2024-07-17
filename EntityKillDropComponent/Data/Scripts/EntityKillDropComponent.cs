@@ -11,46 +11,65 @@ using System.Collections.Generic;
 using VRage.Game.ModAPI.Ingame;
 using VRage;
 using VRage.Game.Entity;
+using VRage.Game.ModAPI.Interfaces;
 
 namespace YourNamespace
 {
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
-    public class EntityKillDropComponent : MySessionComponentBase
+    public class EntityHitDropComponent : MySessionComponentBase
     {
         private static readonly MyStringHash RequiredItemSubtypeId = MyStringHash.GetOrCompute("Cow");
         private static readonly MyStringHash SpecificCharacterSubtypeId = MyStringHash.GetOrCompute("Cow_Bot");
         private static readonly MyDefinitionId DropComponentId = new MyDefinitionId(typeof(MyObjectBuilder_Component), "Cow");
         private const int DropAmount = 1;
+        private bool isInitialized = false;
 
         public override void LoadData()
         {
-            MyAPIGateway.Entities.OnEntityAdd += OnEntityAdd;
+            MyLog.Default.WriteLine("EntityHitDropComponent Mod Loaded");
+            MyAPIGateway.Utilities.ShowMessage("EntityHitDropComponent", "Mod Loaded");
         }
 
         protected override void UnloadData()
         {
-            MyAPIGateway.Entities.OnEntityAdd -= OnEntityAdd;
+            MyLog.Default.WriteLine("EntityHitDropComponent Mod Unloaded");
+            MyAPIGateway.Utilities.ShowMessage("EntityHitDropComponent", "Mod Unloaded");
+            // No need to unregister the damage handler
         }
 
-        private void OnEntityAdd(VRage.ModAPI.IMyEntity entity)
+        public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
         {
-            var character = entity as IMyCharacter;
-            if (character != null && character.Definition.Id.SubtypeId == SpecificCharacterSubtypeId)
+            base.Init(sessionComponent);
+
+            if (MyAPIGateway.Session?.DamageSystem != null)
             {
-                character.OnClosing += OnCharacterClosing;
+                MyAPIGateway.Session.DamageSystem.RegisterBeforeDamageHandler(0, OnEntityHit);
+                isInitialized = true;
             }
         }
 
-        private void OnCharacterClosing(VRage.ModAPI.IMyEntity entity)
+        private void OnEntityHit(object target, ref MyDamageInformation info)
         {
-            var character = entity as IMyCharacter;
-            if (character != null)
+            var character = target as IMyCharacter;
+            if (character != null && character.Definition.Id.SubtypeId == SpecificCharacterSubtypeId)
             {
-                var player = MyAPIGateway.Players.GetPlayerControllingEntity(character);
+                MyAPIGateway.Utilities.ShowMessage("EntityHitDropComponent", "Cow_Bot was hit");
 
-                if (player != null && HasRequiredItem(player))
+                var attackerEntity = MyAPIGateway.Entities.GetEntityById(info.AttackerId);
+                var player = MyAPIGateway.Players.GetPlayerControllingEntity(attackerEntity);
+
+                if (player != null)
                 {
-                    DropComponent(character.GetPosition());
+                    MyAPIGateway.Utilities.ShowMessage("EntityHitDropComponent", $"Cow_Bot hit by player: {player.DisplayName}");
+                    if (HasRequiredItem(player))
+                    {
+                        MyAPIGateway.Utilities.ShowMessage("EntityHitDropComponent", "Player has the required item");
+                        DropComponent(character.GetPosition());
+                    }
+                    else
+                    {
+                        MyAPIGateway.Utilities.ShowMessage("EntityHitDropComponent", "Player does not have the required item");
+                    }
                 }
             }
         }
@@ -64,8 +83,9 @@ namespace YourNamespace
                 inventory.GetItems(items);
                 foreach (var item in items)
                 {
-                        if (item.Type.TypeId == typeof(MyObjectBuilder_Component).Name && item.Type.SubtypeId == RequiredItemSubtypeId.ToString())
+                    if (item.Type.TypeId.ToString() == typeof(MyObjectBuilder_Component).Name && item.Type.SubtypeId.ToString() == RequiredItemSubtypeId.ToString())
                     {
+                        MyAPIGateway.Utilities.ShowMessage("EntityHitDropComponent", "Found required item in player inventory");
                         return true;
                     }
                 }
@@ -83,6 +103,8 @@ namespace YourNamespace
 
             // Spawn the item at the given position with specified orientation
             MyFloatingObjects.Spawn(inventoryItem, position, Vector3D.Up, Vector3D.Up);
+
+            MyAPIGateway.Utilities.ShowMessage("EntityHitDropComponent", $"Dropped component at position: {position}");
         }
     }
 }
