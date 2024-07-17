@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   
-    <EntityComponents>
-
-        <EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
-            <Id>
-                <TypeId>Inventory</TypeId>
-                <SubtypeId>BallastTank</SubtypeId>
-            </Id>
-            <Size x="0" y="0" z="0" />
-        </EntityComponent>
-
-
-
-
-    </EntityComponents>
-
+	<EntityComponents>
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>BallastTank</SubtypeId>
+			</Id>
+			<Size x="0" y="0" z="0"/>
+		</EntityComponent>
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>ReverseThruster</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>A1B2C3D4-5678-9ABC-DEF0-1234567890AB</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+	</EntityComponents>
 </Definitions>

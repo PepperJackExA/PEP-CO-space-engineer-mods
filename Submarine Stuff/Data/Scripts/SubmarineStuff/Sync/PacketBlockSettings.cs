@@ -12,11 +12,11 @@ namespace SubmarineStuff.Sync
         public long EntityId;
 
         [ProtoMember(2)]
-        public SubmarineStuffBlockSettings Settings;
+        public BallastTankBlockSettings Settings;
 
         public PacketBlockSettings() { } // Empty constructor required for deserialization
 
-        public void Send(long entityId, SubmarineStuffBlockSettings settings)
+        public void Send(long entityId, BallastTankBlockSettings settings)
         {
             EntityId = entityId;
             Settings = settings;
@@ -34,7 +34,7 @@ namespace SubmarineStuff.Sync
             if (block == null)
                 return;
 
-            var logic = block.GameLogic?.GetAs<MyBallastTankBlock>();
+            var logic = block.GameLogic?.GetAs<BallastTankLogic>();
 
             if (logic == null)
                 return;

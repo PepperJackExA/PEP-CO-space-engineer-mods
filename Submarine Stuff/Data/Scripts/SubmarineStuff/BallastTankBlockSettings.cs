@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SubmarineStuff
 {
     [ProtoContract(UseProtoMembersOnly = true)]
-    public class SubmarineStuffBlockSettings
+    public class BallastTankBlockSettings
     {
         [ProtoMember(1)]
         public float ballastTank_Fill;

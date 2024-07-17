@@ -15,7 +15,7 @@ using SubmarineStuff;
 
 namespace SubmarineStuff
 {
-    public class SubmarineStuffControls
+    public class BallastTankTerminalControls
     {
 
         const string IdPrefix = "SubmarineStuffEngine_"; // highly recommended to tag your properties/actions like this to avoid colliding with other mods'
@@ -36,7 +36,7 @@ namespace SubmarineStuff
         static bool CustomVisibleCondition(IMyTerminalBlock b)
         {
             // only visible for the blocks having this gamelogic comp
-            return b?.GameLogic?.GetAs<MyBallastTankBlock>() != null;
+            return b?.GameLogic?.GetAs<BallastTankLogic>() != null;
         }
 
         static void CreateControls()
@@ -67,11 +67,11 @@ namespace SubmarineStuff
 
                 c.Setter = (b, v) =>
                 {
-                    var logic = b?.GameLogic?.GetAs<MyBallastTankBlock>();
+                    var logic = b?.GameLogic?.GetAs<BallastTankLogic>();
                     if (logic != null)
                         logic.ballastTank_Fill = MathHelper.Clamp(v, 0f, 100f); // just a heads up that the given value here is not clamped by the game, a mod or PB can give lower or higher than the limits!
                 };
-                c.Getter = (b) => b?.GameLogic?.GetAs<MyBallastTankBlock>()?.ballastTank_Fill ?? 0;
+                c.Getter = (b) => b?.GameLogic?.GetAs<BallastTankLogic>()?.ballastTank_Fill ?? 0;
 
                 c.SetLimits(0f, 100f);
                 //c.SetLimits((b) => 0, (b) => 10); // overload with callbacks to define limits based on the block instance.
@@ -81,7 +81,7 @@ namespace SubmarineStuff
                 // called when the value changes so that you can display it next to the label
                 c.Writer = (b, sb) =>
                 {
-                    var logic = b?.GameLogic?.GetAs<MyBallastTankBlock>();
+                    var logic = b?.GameLogic?.GetAs<BallastTankLogic>();
                     if (logic != null)
                     {
                         float val = logic.ballastTank_Fill;
@@ -101,7 +101,7 @@ namespace SubmarineStuff
 
                 c.Action = (b) =>
                 {
-                    var logic = b?.GameLogic?.GetAs<MyBallastTankBlock>();
+                    var logic = b?.GameLogic?.GetAs<BallastTankLogic>();
                     if (logic != null)
                         logic.ballastTank_Fill = 0f;
                     slider.UpdateVisual();
@@ -116,9 +116,9 @@ namespace SubmarineStuff
         {
             // yes, there's only one type of action
             {
-                var a = MyAPIGateway.TerminalControls.CreateAction<IMyTerminalBlock>(IdPrefix + "SubmarineStuffAction");
+                var a = MyAPIGateway.TerminalControls.CreateAction<IMyTerminalBlock>(IdPrefix + "SubmarineStuffActionFlood");
 
-                a.Name = new StringBuilder("Submarine Stuff Action");
+                a.Name = new StringBuilder("Flood tanks");
 
                 // If the action is visible for grouped blocks (as long as they all have this action).
                 a.ValidForGroups = true;
@@ -131,14 +131,62 @@ namespace SubmarineStuff
                 // Called when the toolbar slot is triggered
                 // Should not be unassigned.
                 a.Action = (b) => {
-                    var logic = b?.GameLogic?.GetAs<MyBallastTankBlock>();
+                    var logic = b?.GameLogic?.GetAs<BallastTankLogic>();
+                    logic.ballastTank_Fill = 100f;
+                };
+
+                // The status of the action, shown in toolbar icon text and can also be read by mods or PBs.
+                a.Writer = (b, sb) =>
+                {
+                    var logic = b?.GameLogic?.GetAs<BallastTankLogic>();
+                    sb.Append($"{logic.ballastTank_Fill}%");
+                };
+
+                // What toolbar types to NOT allow this action for.
+                // Can be left unassigned to allow all toolbar types.
+                // The below are the options used by jumpdrive's Jump action as an example.
+                //a.InvalidToolbarTypes = new List<MyToolbarType>()
+                //{
+                //    MyToolbarType.ButtonPanel,
+                //    MyToolbarType.Character,
+                //    MyToolbarType.Seat
+                //};
+                // PB checks if it's valid for ButtonPanel before allowing the action to be invoked.
+
+                // Wether the action is to be visible for the given block instance.
+                // Can be left unassigned as it defaults to true.
+                // Warning: gets called per tick while in toolbar for each block there, including each block in groups.
+                //   It also can be called by mods or PBs.
+                a.Enabled = CustomVisibleCondition;
+
+                MyAPIGateway.TerminalControls.AddAction<IMyTerminalBlock>(a);
+            }
+
+            // yes, there's only one type of action
+            {
+                var a = MyAPIGateway.TerminalControls.CreateAction<IMyTerminalBlock>(IdPrefix + "SubmarineStuffActionBlow");
+
+                a.Name = new StringBuilder("Blow balast");
+
+                // If the action is visible for grouped blocks (as long as they all have this action).
+                a.ValidForGroups = true;
+
+                // The icon shown in the list and top-right of the block icon in toolbar.
+                a.Icon = @"Textures\GUI\Icons\Actions\CharacterToggle.dds";
+                // For paths inside the mod folder you need to supply an absolute path which can be retrieved from a session or gamelogic comp's ModContext.
+                //a.Icon = Path.Combine(context.ModPath, @"Textures\YourIcon.dds");
+
+                // Called when the toolbar slot is triggered
+                // Should not be unassigned.
+                a.Action = (b) => {
+                    var logic = b?.GameLogic?.GetAs<BallastTankLogic>();
                     logic.ballastTank_Fill = 0f;
                 };
 
                 // The status of the action, shown in toolbar icon text and can also be read by mods or PBs.
                 a.Writer = (b, sb) =>
                 {
-                    var logic = b?.GameLogic?.GetAs<MyBallastTankBlock>();
+                    var logic = b?.GameLogic?.GetAs<BallastTankLogic>();
                     sb.Append($"{logic.ballastTank_Fill}%");
                 };
 
