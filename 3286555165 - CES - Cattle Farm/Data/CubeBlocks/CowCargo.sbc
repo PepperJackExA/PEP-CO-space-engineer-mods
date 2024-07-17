@@ -1,41 +1,35 @@
 <?xml version="1.0" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<CubeBlocks>
-		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
 			<Id>
-				<TypeId>Refinery</TypeId>
+				<TypeId>CargoContainer</TypeId>
 				<SubtypeId>CattleCargo</SubtypeId>
 			</Id>
-			<DisplayName>Cow Cargo Refinery</DisplayName>
+			<DisplayName>Cow Cargo Container</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\Cow.png</Icon>
-			<Description>Refinery for processing cows.</Description>
+			<Description>Container for storing cows.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="3"/>
 			<ModelOffset x="0" y="0" z="0" />
 			<Model>Models\Cubes\Small\CargoContainerMedium.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="110" />
-				<Component Subtype="Hay" Count="1000" />
+				<Component Subtype="SteelPlate" Count="10" />
+				<Component Subtype="Hay" Count="50" />
 			</Components>
 			<CriticalComponent Subtype="Hay" Index="0" />
 			<MirroringZ>Y</MirroringZ>
 			<MirroringY>Z</MirroringY>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Small\BasicRefineryConstruction_1.mwm" />
-				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Small\BasicRefineryConstruction_2.mwm" />
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\BasicRefineryConstruction_3.mwm" />
-			</BuildProgressModels>
+                <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Small\CargoContainerMediumConstruction_1.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Small\CargoContainerMediumConstruction_2.mwm" />
+            </BuildProgressModels>
 			<BlockPairName>CattleCargo</BlockPairName>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>14</BuildTimeSeconds>
-			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<ResourceSinkGroup>CargoContainer</ResourceSinkGroup>
 			<InventoryMaxVolume>4</InventoryMaxVolume>
-			<InventorySize>
-				<X>1</X>
-				<Y>1</Y>
-				<Z>1</Z>
-			</InventorySize>
 			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
 			<OperationalPowerConsumption>0.33</OperationalPowerConsumption>
 			<BlueprintClasses>
@@ -46,8 +40,6 @@
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<PrimarySound>BlockRafinery</PrimarySound>
-			<ActionSound />
-				<PrimarySound>BlockRafineryProcess</PrimarySound>
 				<EmissiveColorPreset>Default</EmissiveColorPreset>
 				<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
 				<DestroySound>WepSmallWarheadExpl</DestroySound>
@@ -56,53 +48,14 @@
 				<IsAirTight>false</IsAirTight>
 			</Definition>
 	</CubeBlocks>
-
-	<BlueprintClasses>
-		<Class>
-			<Id>
-				<TypeId>BlueprintClassDefinition</TypeId>
-				<SubtypeId>CattleCargo</SubtypeId>
-			</Id>
-			<DisplayName>DisplayName_BlueprintClass_SurvivalKitIngots</DisplayName>
-			<Description>Description_BlueprintClass_SurvivalKitIngots</Description>
-			<Icon>Textures\GUI\Icons\buttons\Ingots.dds</Icon>
-			<HighlightIcon>Textures\GUI\Icons\buttons\Ingots.dds</HighlightIcon>
-			<FocusIcon>Textures\GUI\Icons\buttons\IngotsFocus.dds</FocusIcon>
-			<InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
-		</Class>
-	</BlueprintClasses>
-
-	<BlueprintClassEntries>
-		<Entry Class="CattleCargo" BlueprintSubtypeId="CattleCargo_Cow_FarmingCompost" />
-	</BlueprintClassEntries>
-
-	<Blueprints>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>CattleCargo_Cow_FarmingCompost</SubtypeId>
-			</Id>
-			<DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
-			<Icon>Textures\GUI\Icons\FarmingCompost.dds</Icon>
-			<Prerequisites>
-				<Item Amount="1" TypeId="Component" SubtypeId="Cow" />
-			</Prerequisites>
-			<Results>
-				<Item Amount="1" TypeId="Component" SubtypeId="Cow" />
-				<Item Amount="1" TypeId="Component" SubtypeId="FarmCompost" />
-			</Results>
-			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
-		</Blueprint>
-	</Blueprints>
-
 	<EntityContainers>
 		<Container>
 			<Id>
-				<TypeId>Refinery</TypeId>
+				<TypeId>CargoContainer</TypeId>
 				<SubtypeId>CattleCargo</SubtypeId>
 			</Id>
 			<DefaultComponents>
-				<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="CattleCargoInventory" ForceCreate="true"/>
+				<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="CattleCargo" ForceCreate="true"/>
 			</DefaultComponents>
 		</Container>
 	</EntityContainers>
@@ -111,15 +64,15 @@
 		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
 			<Id>
 				<TypeId>Inventory</TypeId>
-				<SubtypeId>CattleCargoInventory</SubtypeId>
+				<SubtypeId>CattleCargo</SubtypeId>
 			</Id>
 			<Size x="1" y="1" z="1" />
-			<InventoryConstraint IsWhitelist="true">
+			<InputConstraint IsWhitelist="true">
 				<Entry>
 					<TypeId>Component</TypeId>
 					<SubtypeId>Cow</SubtypeId>
 				</Entry>
-			</InventoryConstraint>
+			</InputConstraint>
 		</EntityComponent>
 	</EntityComponents>
 </Definitions>

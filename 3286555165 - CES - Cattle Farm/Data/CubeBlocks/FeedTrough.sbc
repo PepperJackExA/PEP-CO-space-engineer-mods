@@ -12,7 +12,7 @@
             <CubeSize>Small</CubeSize>
             <GuiVisible>false</GuiVisible>
             <BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="2" y="1" z="4"/>
+			<Size x="1" y="1" z="4"/>
             <ModelOffset x="0" y="0" z="0" />
 			<Model>Models\Cubes\small\FeedTrough.mwm</Model>
             <Components>
@@ -51,7 +51,13 @@
 				<TypeId>Inventory</TypeId>
 				<SubtypeId>FeedTrough</SubtypeId>
 			</Id>
-			<Size x="0.5" y="0.5" z="0.5" />
+			<Size x="1" y="1" z="1" />
+			<InputConstraint IsWhitelist="true">
+				<Entry>
+					<TypeId>Component</TypeId>
+					<SubtypeId>Cow</SubtypeId>
+				</Entry>
+			</InputConstraint>
 		</EntityComponent>
 	</EntityComponents>
 </Definitions>
