@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<CubeBlocks>
-        <Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
+		<Definition xsi:type="MyObjectBuilder_CargoContainerDefinition">
             <Id>
                 <TypeId>CargoContainer</TypeId>
                 <SubtypeId>FeedTrough</SubtypeId>
@@ -12,14 +12,14 @@
             <CubeSize>Small</CubeSize>
             <GuiVisible>false</GuiVisible>
             <BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="2" y="1" z="4"/>
+			<Size x="1" y="1" z="4"/>
             <ModelOffset x="0" y="0" z="0" />
 			<Model>Models\Cubes\small\FeedTrough.mwm</Model>
             <Components>
-                <Component Subtype="CowFarm" Count="1" />
+                <Component Subtype="SteelPlate" Count="10" />
 				<Component Subtype="Hay" Count="1000" />
             </Components>
-            <CriticalComponent Subtype="SteelPlate" Index="0" />
+            <CriticalComponent Subtype="Hay" Index="0" />
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="4.00"/>
 			</MountPoints>
@@ -51,7 +51,13 @@
 				<TypeId>Inventory</TypeId>
 				<SubtypeId>FeedTrough</SubtypeId>
 			</Id>
-			<Size x="0.5" y="0.5" z="0.5" />
+			<Size x="1" y="1" z="1" />
+			<InputConstraint IsWhitelist="true">
+				<Entry>
+					<TypeId>Component</TypeId>
+					<SubtypeId>Cow</SubtypeId>
+				</Entry>
+			</InputConstraint>
 		</EntityComponent>
 	</EntityComponents>
 </Definitions>
