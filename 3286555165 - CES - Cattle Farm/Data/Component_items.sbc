@@ -1,6 +1,34 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<Components>
+	<Components>
+		<!---
+        COW FARM ITEMS
+        -->
+		<!-- Cow spawn item -->
+		<Component>
+			<Id>
+				<TypeId>Component</TypeId>
+				<SubtypeId>Cow</SubtypeId>
+			</Id>
+			<DisplayName>Cow</DisplayName>
+			<Description>Put into feed trough to spawn a cow.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\Cow.png</Icon>
+			<Size x="1" y="1" z="1"/>
+			<Mass>8</Mass>
+			<Volume>10000</Volume>
+			<Model>Models\Cubes\Small\CargoContainerMedium.mwm</Model>
+			<PhysicalMaterial>Stone</PhysicalMaterial>
+			<MaxIntegrity>30</MaxIntegrity>
+			<DropProbability>0.5</DropProbability>
+			<Health>18</Health>
+			<MinimumOfferAmount>1000</MinimumOfferAmount>
+			<MaximumOfferAmount>5000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>1000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
+			<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+		</Component>
 		<Component>
 			<Id>
 				<TypeId>Component</TypeId>
@@ -26,7 +54,6 @@
 			<MinimumOrderAmount>100</MinimumOrderAmount>
 			<MaximumOrderAmount>1000</MaximumOrderAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
-
 			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
 			<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
 		</Component>
@@ -55,32 +82,6 @@
 			<MinimumOrderAmount>100</MinimumOrderAmount>
 			<MaximumOrderAmount>1000</MaximumOrderAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
-
-			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
-			<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
-		</Component>
-<Component>
-			<Id>
-				<TypeId>Component</TypeId>
-				<SubtypeId>CowFarm</SubtypeId>
-			</Id>
-			<DisplayName>Cow Farm Feed Trough</DisplayName>
-			<Description>Cow Farm used to create your own... cows.</Description>
-			<Icon>Textures\GUI\Icons\Cubes\FeedTrough.png</Icon>
-			<Size x="2" y="1" z="4"/>w
-			<Mass>8</Mass>
-			<Volume>2</Volume>
-			<Model>Models\Cubes\small\FeedTrough.mwm</Model>
-			<PhysicalMaterial>Stone</PhysicalMaterial>
-			<MaxIntegrity>30</MaxIntegrity>
-			<DropProbability>0.5</DropProbability>
-			<Health>18</Health>
-			<MinimumOfferAmount>1000</MinimumOfferAmount>
-			<MaximumOfferAmount>5000</MaximumOfferAmount>
-			<MinimumOrderAmount>100</MinimumOrderAmount>
-			<MaximumOrderAmount>1000</MaximumOrderAmount>
-			<CanPlayerOrder>true</CanPlayerOrder>
-
 			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
 			<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
 		</Component>
