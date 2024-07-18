@@ -198,7 +198,7 @@ namespace Jakaria.API
         public static float Entity_FluidPressure(MyEntity entity) => _Entity_FluidPressure?.Invoke(entity) ?? 0;
 
         /// <summary>
-        /// Depth of the entity in the fluid. Unit is m (Meters) Positive is above water, negative is below water. Returns NaN when no water is present
+        /// Depth of the entity in the fluid. Unit is m (Meters) Positive is above water, negative is below water. Returns PositiveInfinity when no water is present
         /// </summary>
         public static double Entity_FluidDepth(MyEntity entity) => _Entity_FluidDepth?.Invoke(entity) ?? double.PositiveInfinity;
 
@@ -320,7 +320,7 @@ namespace Jakaria.API
                         _Entity_CenterOfBuoyancy = TryGetMethod<Func<MyEntity, Vector3D>>(ModAPIMethods, "EntityGetCenterOfBuoyancy");
                         _Entity_DragForce = TryGetMethod<Func<MyEntity, Vector3D>>(ModAPIMethods, "EntityGetDragForce");
                         _Entity_PercentUnderwater = TryGetMethod<Func<MyEntity, float>>(ModAPIMethods, "EntityGetPercentUnderwater");
-    }
+                    }
                     catch (Exception e)
                     {
                         MyAPIGateway.Utilities.ShowMessage("WaterMod", "Mod '" + ModName + "' encountered an error when registering the Water Mod API, see log for more info.");
@@ -340,7 +340,7 @@ namespace Jakaria.API
         private T TryGetMethod<T>(Dictionary<string, Delegate> modContent, string methodName) where T : class
         {
             Delegate method;
-            if(modContent.TryGetValue(methodName, out method))
+            if (modContent.TryGetValue(methodName, out method))
             {
                 return method as T;
             }
@@ -351,3 +351,4 @@ namespace Jakaria.API
         }
     }
 }
+
