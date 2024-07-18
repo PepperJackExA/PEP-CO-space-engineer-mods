@@ -740,7 +740,6 @@ GlobalMaxEntities=30
 
             if (scriptPaused)
             {
-                LogError("Script is currently paused.");
                 return;
             }
 
@@ -791,7 +790,7 @@ GlobalMaxEntities=30
                 {
 
                 LogError($"RequiredEntityNumber={blockSettings.RequiredEntityNumber}");
-                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, null, false);
+                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, "All", true);
                 if (entityCount >= blockSettings.MaxEntitiesInArea)
                 {
                     LogError($"Entity spawn limit reached: {entityCount} entities within radius {blockSettings.MaxEntitiesRadius}");
@@ -832,7 +831,7 @@ GlobalMaxEntities=30
                     return;
                 }
 
-                int currentEntityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, null, false);
+                int currentEntityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, "All", true);
                 LogError($"Current Entities in Radius: {currentEntityCount}");
 
                 if (currentEntityCount >= blockSettings.MaxEntitiesInArea)
@@ -911,14 +910,18 @@ GlobalMaxEntities=30
         {
             float maxHealth = block.MaxIntegrity;
             float damageAmount = maxHealth * (blockSettings.DamageAmount / 100.0f) * amount;
-            block.DoDamage(damageAmount, MyDamageType.Grind, true);
+            //block.DoDamage(damageAmount, MyDamageType.Destruction, true);
+            block.SpawnFirstItemInConstructionStockpile();
+            block.IncreaseMountLevel(damageAmount * 1, block.OwnerId, null, MyAPIGateway.Session.WelderSpeedMultiplier, true);
+
+            LogError($"Damage {block.CurrentDamage} {block.BuildLevelRatio}");
         }
 
         private bool AreRequiredEntitiesInVicinity(IMySlimBlock block, BotSpawnerConfig blockSettings)
         {
             if (blockSettings.RequiredEntityNumber > 0)
             {
-                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.RequiredEntityRadius, blockSettings.RequiredEntity, blockSettings.RequireEntityNumberForTotalEntities);
+                int entityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.RequiredEntityRadius, blockSettings.RequiredEntity, true);
                 LogError($"AreRequiredEntitiesInVicinity check: {entityCount >= blockSettings.RequiredEntityNumber}");
                 return entityCount >= blockSettings.RequiredEntityNumber;
             }
@@ -936,21 +939,32 @@ GlobalMaxEntities=30
             MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
 
             int entityCount = 0;
+          
 
             foreach (var entity in entities)
             {
-                string entityCurrentSubtypeId = (entity as MyEntity)?.DefinitionId?.SubtypeId.ToString();
-                if (entityCurrentSubtypeId != null && entityCurrentSubtypeId.Equals(requiredEntitySubtypeId, StringComparison.OrdinalIgnoreCase) &&
-                    Vector3D.Distance(entity.GetPosition(), MyAPIGateway.Session.Player.GetPosition()) <= radius)
+                if ((requiredEntitySubtypeId.Equals("All")) && (excludeDeadEntities = true))
                 {
                     entityCount++;
                     string entityType = entity.GetType().Name;
                     Vector3D entityPosition = entity.GetPosition();
 
-                    //LogError($"Type: {entityType}, SubtypeId: {entityCurrentSubtypeId}, Location: {entityPosition}");
+                }
+                else
+                {
+                    string entityCurrentSubtypeId = (entity as MyEntity)?.DefinitionId?.SubtypeId.ToString();
+                    if (entityCurrentSubtypeId != null && entityCurrentSubtypeId.Equals(requiredEntitySubtypeId, StringComparison.OrdinalIgnoreCase) &&
+                        Vector3D.Distance(entity.GetPosition(), MyAPIGateway.Session.Player.GetPosition()) <= radius)
+                    {
+                        entityCount++;
+                        string entityType = entity.GetType().Name;
+                        Vector3D entityPosition = entity.GetPosition();
+
+                        LogError($"Total entities of type '{requiredEntitySubtypeId}' found within radius {radius}: {entityCount}");
+                    }
                 }
             }
-            LogError($"Total entities of type '{requiredEntitySubtypeId}' found within radius {radius}: {entityCount}");
+            
             return entityCount;
         }
 
