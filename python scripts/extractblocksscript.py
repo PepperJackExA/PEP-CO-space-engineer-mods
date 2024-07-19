@@ -55,7 +55,7 @@ def process_files(directory, output_directory):
 
 
 directory = r'C:\\Program Files (x86)\Steam\steamapps\\common\SpaceEngineers\\Content\Data'  # Replace with the actual directory path
-output_directory = r'C:\\Users\\ljdug\AppData\\Roaming\SpaceEngineers\\Mods\signalupdate'  # Replace with the desired output directory path
+output_directory = r'C:\\Users\\ljdug\AppData\\Roaming\SpaceEngineers\\Mods\\Testing'  # Replace with the desired output directory path
 os.makedirs(output_directory, exist_ok=True)
 
 custom_lines_at_beginning = ['<?xml version="1.0" encoding="utf-8"?>']

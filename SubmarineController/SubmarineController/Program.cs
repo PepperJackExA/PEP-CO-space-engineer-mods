@@ -39,19 +39,8 @@ namespace IngameScript
                 primaryRemoteControl = _remoteControls[0];
             }
 
-            //Echo a concatenated string of the _tanks' names
-            string tankNames = "";
-            foreach (IMyTerminalBlock tank in _tanks)
-            {
-                if (tank.GetProperty("SubmarineStuffEngine_BallastTrimSlider") != null)
-                {
-                    tankNames += tank.CustomName + "\n" + tank.GetValueFloat("SubmarineStuffEngine_BallastTrimSlider").ToString() + "\n";
-                }
-                tank.SetValueFloat("SubmarineStuffEngine_BallastTrimSlider", 0.5f);
-            }
+            Runtime.UpdateFrequency = UpdateFrequency.Update100;
 
-            tankNames += "Primary Remote Control: " + primaryRemoteControl.GetValue<Vector3>("SubmarineStuffEngine_Boyancy");
-            Echo(tankNames);
         }
 
         public void Save()
@@ -66,15 +55,15 @@ namespace IngameScript
 
         public void Main(string argument, UpdateType updateSource)
         {
-            // The main entry point of the script, invoked every time
-            // one of the programmable block's Run actions are invoked,
-            // or the script updates itself. The updateSource argument
-            // describes where the update came from. Be aware that the
-            // updateSource is a  bitfield  and might contain more than 
-            // one update type.
-            // 
-            // The method itself is required, but the arguments above
-            // can be removed if not needed.
+
+            //Echo a concatenated string of the _tanks' names
+            string output = "";
+
+            output += $"UZAR did this:\n" +
+                $"boyancyForce: {primaryRemoteControl.GetValue<float>("SubmarineStuffEngine_BuoyancyRatio")}\n" +
+                $"";
+            Echo(output);
+            Me.GetSurface(0).WriteText(output);
         }
     }
 }

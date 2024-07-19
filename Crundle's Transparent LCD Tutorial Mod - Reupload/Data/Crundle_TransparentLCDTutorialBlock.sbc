@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<BlueprintClassEntries>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="TextPanel/Crundle_TransparentLCDTutorialBlock" />
+	</BlueprintClassEntries>
+	
+	<CategoryClasses>
+    <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+		<Id>
+			<TypeId>GuiBlockCategoryDefinition</TypeId>
+			<SubtypeId/>
+		</Id>
+		<DisplayName>crundle's LCDTutorial</DisplayName>
+		<Name>crundle's LCDTutorial</Name>
+		<ItemIds>
+			<string>TextPanel/Crundle_TransparentLCDTutorialBlock</string>
+		</ItemIds>
+		</Category>
+	</CategoryClasses>
+	
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+			<Id>
+				<TypeId>TextPanel</TypeId>
+				<SubtypeId>Crundle_TransparentLCDTutorialBlock</SubtypeId>
+			</Id>
+			<DisplayName>TransparentLCD TutorialBlock</DisplayName>
+			<Description>A TutorialBlock for TransparentLCDs by crundle</Description>
+			<Icon>Textures\GUI\Icons\Crundle_TransparentLCDTutorialBlock_Icon.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Crundle_TransparentLCDTutorialBlock.mwm</Model>
+			<Components>
+				<Component Count="10" Subtype="SteelPlate"/>
+			</Components>
+			<CriticalComponent Index="0" Subtype="SteelPlate"/>
+			<BlockPairName>Crundle_TransparentLCDTutorialBlock</BlockPairName>
+			<MaxScreenRenderDistance>120</MaxScreenRenderDistance>
+			<GuiVisible>false</GuiVisible>
+            <ScreenWidth>1</ScreenWidth>
+            <ScreenHeight>1</ScreenHeight>
+			<TextureResolution>512</TextureResolution>
+			<ScreenAreas>
+               <ScreenArea Name="TransparentScreenArea" DisplayName="ScreenArea" TextureResolution="512" ScreenWidth="1" ScreenHeight="1"/>
+			   <ScreenArea Name="TransparentScreenArea90" DisplayName="ScreenArea90" TextureResolution="512" ScreenWidth="1" ScreenHeight="1"/>
+			   <ScreenArea Name="TransparentScreenArea180" DisplayName="ScreenArea180" TextureResolution="512" ScreenWidth="1" ScreenHeight="1"/>
+			   <ScreenArea Name="TransparentScreenArea270" DisplayName="ScreenArea270" TextureResolution="512" ScreenWidth="1" ScreenHeight="1"/>
+            </ScreenAreas>
+			<PanelMaterialName>TransparentScreenArea</PanelMaterialName>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
+
