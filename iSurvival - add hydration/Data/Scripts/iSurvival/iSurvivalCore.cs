@@ -7,25 +7,19 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using VRage.Game.Components;
 using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.ModAPI;
 using VRage.ObjectBuilders;
-using VRage;
-using Sandbox.Game.Components;
-using Sandbox.Game.Entities;
-using Sandbox.Game.EntityComponents;
-using Sandbox.Game.Weapons;
-using System.Runtime.ConstrainedExecution;
-using VRage.Game;
-using VRage.Game.Entity;
-using VRage.Game.ModAPI;
-using VRage.Game.ModAPI.Interfaces;
 using VRage.Utils;
 using VRageMath;
 using PEPCO.iSurvival.Chat;
 using PEPCO.iSurvival.Log;
+using Sandbox.Game.Components;
+using Sandbox.Game.Entities;
+using VRage.Game.ModAPI;
+using VRage.Game;
+using VRage;
 
 namespace PEPCO.iSurvival.Core
 {
@@ -34,8 +28,7 @@ namespace PEPCO.iSurvival.Core
     {
         public iSurvivalSettings Settings = new iSurvivalSettings();
 
-        // changable varialbles
-
+        // Configurable multipliers for different stats
         public static float staminadrainmultiplier = 1;
         public static float fatiguedrainmultiplier = 1;
         public static float healthdrainmultiplier = 1;
@@ -57,28 +50,22 @@ namespace PEPCO.iSurvival.Core
         public override void LoadData()
         {
             Settings.Load();
-            staminadrainmultiplier = Settings.staminadrainmultiplier;
-            fatiguedrainmultiplier = Settings.fatiguedrainmultiplier;
-            healthdrainmultiplier = Settings.healthdrainmultiplier;
-            hungerdrainmultiplier = Settings.hungerdrainmultiplier;
-            waterdrainmultiplier = Settings.waterdrainmultiplier;
-            sanitydrainmultiplier = Settings.sanitydrainmultiplier;
-
-            staminaincreasemultiplier = Settings.staminaincreasemultiplier;
-            fatigueincreasemultiplier = Settings.fatigueincreasemultiplier;
-            healthincreasemultiplier = Settings.healthincreasemultiplier;
-            hungerincreasemultiplier = Settings.hungerincreasemultiplier;
-            waterincreasemultiplier = Settings.waterincreasemultiplier;
-            sanityincreasemultiplier = Settings.sanityincreasemultiplier;
-
+            ApplySettings();
             playerExceptions = Settings.playerExceptions.Distinct().ToList();
-
             ChatCommands = new ChatCommands(this);
         }
 
+        // Updates settings and applies them
         public void UpdateSettings()
         {
             Settings.SaveConfigAfterChatUpdate();
+            ApplySettings();
+            playerExceptions = Settings.playerExceptions.Distinct().ToList();
+        }
+
+        // Applies settings from the configuration to the session variables
+        private void ApplySettings()
+        {
             staminadrainmultiplier = Settings.staminadrainmultiplier;
             fatiguedrainmultiplier = Settings.fatiguedrainmultiplier;
             healthdrainmultiplier = Settings.healthdrainmultiplier;
@@ -92,8 +79,6 @@ namespace PEPCO.iSurvival.Core
             hungerincreasemultiplier = Settings.hungerincreasemultiplier;
             waterincreasemultiplier = Settings.waterincreasemultiplier;
             sanityincreasemultiplier = Settings.sanityincreasemultiplier;
-
-            playerExceptions = Settings.playerExceptions.Distinct().ToList();
         }
 
         protected override void UnloadData()
@@ -103,10 +88,11 @@ namespace PEPCO.iSurvival.Core
 
         public class iSurvivalSettings
         {
-            const string VariableId = nameof(iSurvivalSettings); // IMPORTANT: must be unique as it gets written in a shared space (sandbox.sbc)
-            const string FileName = "iSurvivalSettings.ini"; // the file that gets saved to world storage under your mod's folder
+            const string VariableId = nameof(iSurvivalSettings);
+            const string FileName = "iSurvivalSettings.ini";
             const string IniSection = "Config";
 
+            // Multipliers for different stats
             public float staminadrainmultiplier = 1;
             public float fatiguedrainmultiplier = 1;
             public float healthdrainmultiplier = 1;
@@ -122,13 +108,53 @@ namespace PEPCO.iSurvival.Core
             public float sanityincreasemultiplier = 1;
 
             public List<ulong> playerExceptions = new List<ulong>();
-            public ulong playerRemovedExceptions;
 
-            public iSurvivalSettings()
+            // Loads settings based on whether the session is server or client
+            public void Load()
             {
-
+                if (MyAPIGateway.Session.IsServer)
+                    LoadOnHost();
+                else
+                    LoadOnClient();
             }
 
+            // Loads settings on the server
+            public void LoadOnHost()
+            {
+                MyIni iniParser = new MyIni();
+
+                // Load file if exists then save it regardless so that it can be sanitized and updated
+                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(FileName, typeof(iSurvivalSettings)))
+                {
+                    using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(FileName, typeof(iSurvivalSettings)))
+                    {
+                        string text = file.ReadToEnd();
+                        MyIniParseResult result;
+                        if (!iniParser.TryParse(text, out result))
+                            throw new Exception($"Config error: {result}");
+                        LoadConfig(iniParser);
+                    }
+                }
+
+                SaveConfig(iniParser);
+                SaveToStorage(iniParser.ToString());
+            }
+
+            // Loads settings on the client
+            public void LoadOnClient()
+            {
+                string text;
+                if (!MyAPIGateway.Utilities.GetVariable<string>(VariableId, out text))
+                    throw new Exception("No config found in sandbox.sbc!");
+
+                MyIni iniParser = new MyIni();
+                MyIniParseResult result;
+                if (!iniParser.TryParse(text, out result))
+                    throw new Exception($"Config error: {result}");
+                LoadConfig(iniParser);
+            }
+
+            // Loads configuration from the ini parser
             public void LoadConfig(MyIni iniParser)
             {
                 staminadrainmultiplier = (float)iniParser.Get(IniSection, nameof(staminadrainmultiplier)).ToDouble(staminadrainmultiplier);
@@ -145,18 +171,19 @@ namespace PEPCO.iSurvival.Core
                 waterincreasemultiplier = (float)iniParser.Get(IniSection, nameof(waterincreasemultiplier)).ToDouble(waterincreasemultiplier);
                 sanityincreasemultiplier = (float)iniParser.Get(IniSection, nameof(sanityincreasemultiplier)).ToDouble(sanityincreasemultiplier);
 
-                //Get the player list from the ini and split it to an array
-                var configList = iniParser.Get(IniSection, nameof(playerExceptions)).ToString().Trim().Split('\n');
-                foreach (var config in configList)
-                {
-                    ulong playerId;
-                    if (ulong.TryParse(config, out playerId) && playerId > 0)
+                // Get the player list from the ini and split it to an array
+                playerExceptions = iniParser.Get(IniSection, nameof(playerExceptions)).ToString().Trim().Split('\n')
+                    .Select(config =>
                     {
-                        playerExceptions.Add(playerId);
-                    }
-                }
+                        ulong playerId;
+                        return ulong.TryParse(config, out playerId) ? playerId : 0;
+                    })
+                    .Where(playerId => playerId > 0)
+                    .ToList();
+
             }
 
+            // Saves configuration to the ini parser
             public void SaveConfig(MyIni iniParser)
             {
                 iniParser.Set(IniSection, nameof(staminadrainmultiplier), staminadrainmultiplier);
@@ -173,100 +200,27 @@ namespace PEPCO.iSurvival.Core
                 iniParser.Set(IniSection, nameof(waterincreasemultiplier), waterincreasemultiplier);
                 iniParser.Set(IniSection, nameof(sanityincreasemultiplier), sanityincreasemultiplier);
 
-                var myarray = playerExceptions.Distinct().ToArray();
-
-                iniParser.Set(IniSection, nameof(playerExceptions), string.Join("\n", myarray));
+                iniParser.Set(IniSection, nameof(playerExceptions), string.Join("\n", playerExceptions.Distinct().ToArray()));
                 iniParser.SetComment(IniSection, nameof(playerExceptions), "Add the IDs of players who should be exempt from the iSurvival mod");
-
             }
 
+            // Saves configuration after chat update
             public void SaveConfigAfterChatUpdate()
             {
-
                 MyIni iniParser = new MyIni();
-
-                iniParser.Set(IniSection, nameof(staminadrainmultiplier), staminadrainmultiplier);
-                iniParser.Set(IniSection, nameof(fatiguedrainmultiplier), fatiguedrainmultiplier);
-                iniParser.Set(IniSection, nameof(healthdrainmultiplier), healthdrainmultiplier);
-                iniParser.Set(IniSection, nameof(hungerdrainmultiplier), hungerdrainmultiplier);
-                iniParser.Set(IniSection, nameof(waterdrainmultiplier), waterdrainmultiplier);
-                iniParser.Set(IniSection, nameof(sanitydrainmultiplier), sanitydrainmultiplier);
-
-                iniParser.Set(IniSection, nameof(staminaincreasemultiplier), staminaincreasemultiplier);
-                iniParser.Set(IniSection, nameof(fatigueincreasemultiplier), fatigueincreasemultiplier);
-                iniParser.Set(IniSection, nameof(healthincreasemultiplier), healthincreasemultiplier);
-                iniParser.Set(IniSection, nameof(hungerincreasemultiplier), hungerincreasemultiplier);
-                iniParser.Set(IniSection, nameof(waterincreasemultiplier), waterincreasemultiplier);
-                iniParser.Set(IniSection, nameof(sanityincreasemultiplier), sanityincreasemultiplier);
-
-                var myarray = playerExceptions.Distinct().ToArray();
-
-                iniParser.Set(IniSection, nameof(playerExceptions), string.Join("\n", myarray));
-                iniParser.SetComment(IniSection, nameof(playerExceptions), "Add the IDs of players who should be exempt from the iSurvival mod");
-
-                string saveText = iniParser.ToString();
-                MyAPIGateway.Utilities.SetVariable<string>(VariableId, saveText);
-
-                using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(FileName, typeof(iSurvivalSettings)))
-                {
-                    file.Write(saveText);
-                }
-
-            }
-
-
-            public void Load()
-            {
-                if (MyAPIGateway.Session.IsServer)
-                    LoadOnHost();
-                else
-                    LoadOnClient();
-            }
-
-            public void LoadOnHost()
-            {
-                MyIni iniParser = new MyIni();
-
-                // load file if exists then save it regardless so that it can be sanitized and updated
-                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(FileName, typeof(iSurvivalSettings)))
-                {
-                    using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(FileName, typeof(iSurvivalSettings)))
-                    {
-                        string text = file.ReadToEnd();
-
-                        MyIniParseResult result;
-                        if (!iniParser.TryParse(text, out result))
-                            throw new Exception($"Config error: {result.ToString()}");
-
-                        LoadConfig(iniParser);
-                    }
-                }
-
-
-                iniParser.Clear(); // remove any existing settings that might no longer exist
                 SaveConfig(iniParser);
+                SaveToStorage(iniParser.ToString());
+            }
 
-                string saveText = iniParser.ToString();
+            // Saves configuration to world storage
+            private void SaveToStorage(string saveText)
+            {
                 MyAPIGateway.Utilities.SetVariable<string>(VariableId, saveText);
 
                 using (TextWriter file = MyAPIGateway.Utilities.WriteFileInWorldStorage(FileName, typeof(iSurvivalSettings)))
                 {
                     file.Write(saveText);
                 }
-            }
-
-            public void LoadOnClient()
-            {
-                string text;
-                if (!MyAPIGateway.Utilities.GetVariable<string>(VariableId, out text))
-                    throw new Exception("No config found in sandbox.sbc!");
-
-                MyIni iniParser = new MyIni();
-                MyIniParseResult result;
-                if (!iniParser.TryParse(text, out result))
-                    throw new Exception($"Config error: {result.ToString()}");
-
-                LoadConfig(iniParser);
             }
         }
     }
@@ -274,7 +228,6 @@ namespace PEPCO.iSurvival.Core
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
     public class iSurvivalSession : MySessionComponentBase
     {
-
         public static ushort modId = 19008;
         public static int runCount = 0;
         public static Random rand = new Random();
@@ -290,16 +243,15 @@ namespace PEPCO.iSurvival.Core
             MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(modId, OnMessageReceived);
         }
 
+        // Main update method called every simulation frame
         public override void UpdateAfterSimulation()
         {
             try
             {
-                // Only run every quarter of a second
-                if (++runCount % 15 > 0)
+                if (++runCount % 15 > 0) // Run every quarter of a second
                     return;
 
-                // Blinking during load screen causes crash, don't load messagehandler on clients for 30s
-                if (!MyAPIGateway.Multiplayer.IsServer && loadWait > 0)
+                if (!MyAPIGateway.Multiplayer.IsServer && loadWait > 0) // Delay loading message handler for clients
                 {
                     if (--loadWait == 0)
                         MyAPIGateway.Multiplayer.RegisterSecureMessageHandler(modId, OnMessageReceived);
@@ -307,157 +259,18 @@ namespace PEPCO.iSurvival.Core
                 }
 
                 foreach (var playerId in blinkList)
+                {
                     if (playerId == MyVisualScriptLogicProvider.GetLocalPlayerId())
                         blink(false);
                     else
                         MyAPIGateway.Multiplayer.SendMessageTo(modId, Encoding.ASCII.GetBytes("unblink"), MyVisualScriptLogicProvider.GetSteamId(playerId), true);
+                }
                 blinkList.Clear();
 
-                // Check for recharging or using toilet every second
-                if (runCount % 60 > 0)
+                if (runCount % 60 > 0) // Run every second
                     return;
 
-                var players = new List<IMyPlayer>();
-                MyAPIGateway.Multiplayer.Players.GetPlayers(players, p => p.Character != null && p.Character.ToString().Contains("Astronaut"));
-
-                // Loop through all players
-                foreach (IMyPlayer player in players)
-                {
-                    if (iSurvivalSessionSettings.playerExceptions.FindIndex(x => x == MyAPIGateway.Session.LocalHumanPlayer.SteamUserId) != -1) continue;
-
-                    var statComp = player.Character?.Components.Get<MyEntityStatComponent>();
-                    if (statComp == null)
-                        continue;
-
-                    MyEntityStat fatigue = GetPlayerStat(statComp, "Fatigue");
-                    MyEntityStat hunger = GetPlayerStat(statComp, "Hunger");
-                    MyEntityStat stamina = GetPlayerStat(statComp, "Stamina");
-                    MyEntityStat health = GetPlayerStat(statComp, "Health");
-                    MyEntityStat water = GetPlayerStat(statComp, "Water");
-                    MyEntityStat sanity = GetPlayerStat(statComp, "Sanity");
-
-                    // Skip player if any of the stat's is missing
-                    if (fatigue == null || hunger == null || stamina == null || water == null || sanity == null)
-                        continue;
-
-                    // Checks if player is sitting in a block
-                    var block = player.Controller?.ControlledEntity?.Entity as IMyCubeBlock;
-                    if (block != null)
-                    {
-                        var blockDef = block.BlockDefinition.ToString();
-                        if (blockDef.Contains("CryoChamber"))
-                        {
-                            stamina.Increase(5f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                            fatigue.Increase(5f * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
-                            sanity.Increase(5f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-                            return;
-                        }
-                        else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
-                        {
-                            fatigue.Increase(10f, null); // Because the throne is a place for relaxation
-                            stamina.Increase(10f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                            water.Increase(10f * iSurvivalSessionSettings.waterincreasemultiplier, null);
-                            sanity.Increase(10f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-                            if (hunger.Value > 20)
-                            {
-                                hunger.Decrease(2f * iSurvivalSessionSettings.hungerdrainmultiplier, null); // Drains your hunger stat -> Makes you more hungry
-                                player.Character.GetInventory(0).AddItems((MyFixedPoint)0.1f, (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
-                            }
-                        }
-                    }
-
-                    // Check for running state every second
-                    if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sitting)
-                    {
-                        stamina.Increase(4f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                        fatigue.Increase(0.5f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                    }
-                    else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Standing)
-                    {
-                        stamina.Increase(1.5f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                    }
-                    else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Sprinting)
-                    {
-                        if (stamina.Value > 0)
-                        {
-                            playerinventoryfillfactor = player.Character.GetInventory().VolumeFillFactor;
-                            stamina.Decrease((5 * playerinventoryfillfactor + 1) * iSurvivalSessionSettings.staminadrainmultiplier, null);
-                            water.Decrease((0.5f * playerinventoryfillfactor + 1) * iSurvivalSessionSettings.waterdrainmultiplier, null);
-                        }
-                    }
-                    else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Crouching)
-                    {
-                        stamina.Increase(2.5f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                        fatigue.Increase(0.25f * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
-                        sanity.Increase(0.25f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-                        if (runCount < 300)
-                            continue;
-                        fatigue.Increase(0.01f * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
-                    }
-                    else if (player.Character.CurrentMovementState == MyCharacterMovementEnum.Jump)
-                    {
-                        if (stamina.Value > 0)
-                        {
-                            playerinventoryfillfactor = player.Character.GetInventory().VolumeFillFactor;
-                            stamina.Decrease((10 * playerinventoryfillfactor + 1) * iSurvivalSessionSettings.staminadrainmultiplier, null);
-                            water.Decrease((1 * playerinventoryfillfactor + 1) * iSurvivalSessionSettings.waterdrainmultiplier, null);
-                        }
-                    }
-                    else if (stamina.Value > 0)
-                    {
-                        playerinventoryfillfactor = player.Character.GetInventory().VolumeFillFactor;
-                        stamina.Decrease((playerinventoryfillfactor + 0.5f) * iSurvivalSessionSettings.staminadrainmultiplier, null);
-                        water.Decrease((playerinventoryfillfactor / 2 + 0.1f) * iSurvivalSessionSettings.waterdrainmultiplier, null);
-                    }
-
-                    if (hunger.Value < 1 && fatigue.Value < 1 && water.Value < 1 && sanity.Value < 1) // All hunger, fatigue, water, and sanity are 0
-                    {
-                        health.Decrease(5 * iSurvivalSessionSettings.healthdrainmultiplier, null);
-                        sanity.Decrease(5 * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-                    }
-                    else if (hunger.Value < 1 || fatigue.Value < 1 || water.Value < 1 || sanity.Value < 1) // Either hunger, fatigue, water, or sanity are 0
-                    {
-                        health.Decrease(1 * iSurvivalSessionSettings.healthdrainmultiplier, null);
-                    }
-                    if (stamina.Value < 10)
-                    {
-                        fatigue.Decrease(1 * iSurvivalSessionSettings.fatiguedrainmultiplier, null);
-                        if (stamina.Value < 1)
-                        {
-                            health.Decrease(5 * iSurvivalSessionSettings.healthdrainmultiplier, null);
-                            sanity.Decrease(5 * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-                        }
-                    }
-
-                    if (hunger.Value > 20 && health.Value < 100)
-                    {
-                        health.Increase(1 * iSurvivalSessionSettings.healthincreasemultiplier, null);
-                        hunger.Decrease(1 * iSurvivalSessionSettings.hungerdrainmultiplier, null);
-                    }
-                    if (fatigue.Value > 0 && stamina.Value < 90)
-                    {
-                        fatigue.Decrease(((100 - hunger.Value) / 100) * iSurvivalSessionSettings.fatiguedrainmultiplier, null);
-                        stamina.Increase(2 * ((100 - hunger.Value) / 100) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                    }
-                    if (runCount < 300)
-                        continue;
-
-                    hunger.Decrease((((100 / (100 - (stamina.Value + fatigue.Value))) / 2) / 10 + 0.001f) * -1 * iSurvivalSessionSettings.hungerdrainmultiplier, null);
-
-                    if (stamina.Value < 100 && fatigue.Value < 100)
-                    {
-                        hunger.Decrease(((100 - fatigue.Value) / 100) * iSurvivalSessionSettings.hungerdrainmultiplier, null);
-                    }
-
-                    if (fatigue.Value > 20 || rand.Next((int)fatigue.Value) > 0)
-                        continue;
-
-                    blinkList.Add(player.IdentityId);
-                    if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
-                        blink(true);
-                    else if (MyAPIGateway.Multiplayer.IsServer)
-                        MyAPIGateway.Multiplayer.SendMessageTo(modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
-                }
+                ProcessPlayers();
 
                 if (runCount > 299)
                     runCount = 0;
@@ -468,7 +281,191 @@ namespace PEPCO.iSurvival.Core
             }
         }
 
-        #region Background processes
+        // Processes all players in the game
+        private void ProcessPlayers()
+        {
+            var players = new List<IMyPlayer>();
+            MyAPIGateway.Multiplayer.Players.GetPlayers(players, p => p.Character != null && p.Character.ToString().Contains("Astronaut"));
+
+            foreach (IMyPlayer player in players)
+            {
+                if (iSurvivalSessionSettings.playerExceptions.Contains(MyAPIGateway.Session.LocalHumanPlayer.SteamUserId)) continue;
+
+                var statComp = player.Character?.Components.Get<MyEntityStatComponent>();
+                if (statComp == null)
+                    continue;
+
+                MyEntityStat fatigue, hunger, stamina, health, water, sanity;
+                if (!statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue) ||
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Hunger"), out hunger) ||
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina) ||
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Health"), out health) ||
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water) ||
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Sanity"), out sanity))
+                    continue;
+
+                ProcessPlayerMovement(player, statComp, stamina, fatigue, hunger, water, sanity, health);
+            }
+        }
+
+        // Processes the player's movement and updates stats accordingly
+        private void ProcessPlayerMovement(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
+        {
+            var block = player.Controller?.ControlledEntity?.Entity as IMyCubeBlock;
+            if (block != null)
+            {
+                ProcessBlockEffects(player, block, stamina, fatigue, water, sanity, hunger);
+                return;
+            }
+
+            ProcessMovementEffects(player, statComp, stamina, fatigue, hunger, water, sanity, health);
+        }
+
+        // Applies effects if the player is in certain blocks (CryoChamber, Toilet, etc.)
+        private void ProcessBlockEffects(IMyPlayer player, IMyCubeBlock block, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat water, MyEntityStat sanity, MyEntityStat hunger)
+        {
+            var blockDef = block.BlockDefinition.ToString();
+            if (blockDef.Contains("CryoChamber"))
+            {
+                stamina.Increase(5f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                fatigue.Increase(5f * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
+                sanity.Increase(5f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+            }
+            else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
+            {
+                fatigue.Increase(10f, null);
+                stamina.Increase(10f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                water.Increase(10f * iSurvivalSessionSettings.waterincreasemultiplier, null);
+                sanity.Increase(10f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+                if (hunger.Value > 20)
+                {
+                    hunger.Decrease(2f * iSurvivalSessionSettings.hungerdrainmultiplier, null);
+                    player.Character.GetInventory(0).AddItems((MyFixedPoint)0.1f, (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
+                }
+            }
+        }
+
+        // Applies effects based on the player's movement state
+        private void ProcessMovementEffects(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
+        {
+            var movementState = player.Character.CurrentMovementState;
+            switch (movementState)
+            {
+                case MyCharacterMovementEnum.Sitting:
+                    stamina.Increase(4f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                    fatigue.Increase(0.5f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                    break;
+                case MyCharacterMovementEnum.Standing:
+                    stamina.Increase(1.5f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                    break;
+                case MyCharacterMovementEnum.Sprinting:
+                    ProcessSprintingEffect(player, stamina, water);
+                    break;
+                case MyCharacterMovementEnum.Crouching:
+                    stamina.Increase(2.5f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                    fatigue.Increase(0.25f * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
+                    sanity.Increase(0.25f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+                    if (runCount < 300)
+                        return;
+                    fatigue.Increase(0.01f * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
+                    break;
+                case MyCharacterMovementEnum.Jump:
+                    ProcessJumpingEffect(player, stamina, water);
+                    break;
+                default:
+                    ProcessDefaultMovementEffect(player, stamina, water);
+                    break;
+            }
+
+            ProcessHealthAndSanityEffects(player, stamina, fatigue, hunger, water, sanity, health);
+        }
+
+        // Processes effects for sprinting
+        private void ProcessSprintingEffect(IMyPlayer player, MyEntityStat stamina, MyEntityStat water)
+        {
+            if (stamina.Value > 0)
+            {
+                playerinventoryfillfactor = player.Character.GetInventory().VolumeFillFactor;
+                stamina.Decrease((5 * playerinventoryfillfactor + 1) * iSurvivalSessionSettings.staminadrainmultiplier, null);
+                water.Decrease((0.5f * playerinventoryfillfactor + 1) * iSurvivalSessionSettings.waterdrainmultiplier, null);
+            }
+        }
+
+        // Processes effects for jumping
+        private void ProcessJumpingEffect(IMyPlayer player, MyEntityStat stamina, MyEntityStat water)
+        {
+            if (stamina.Value > 0)
+            {
+                playerinventoryfillfactor = player.Character.GetInventory().VolumeFillFactor;
+                stamina.Decrease((10 * playerinventoryfillfactor + 1) * iSurvivalSessionSettings.staminadrainmultiplier, null);
+                water.Decrease((1 * playerinventoryfillfactor + 1) * iSurvivalSessionSettings.waterdrainmultiplier, null);
+            }
+        }
+
+        // Processes effects for default movement state
+        private void ProcessDefaultMovementEffect(IMyPlayer player, MyEntityStat stamina, MyEntityStat water)
+        {
+            if (stamina.Value > 0)
+            {
+                playerinventoryfillfactor = player.Character.GetInventory().VolumeFillFactor;
+                stamina.Decrease((playerinventoryfillfactor + 0.5f) * iSurvivalSessionSettings.staminadrainmultiplier, null);
+                water.Decrease((playerinventoryfillfactor / 2 + 0.1f) * iSurvivalSessionSettings.waterdrainmultiplier, null);
+            }
+        }
+
+        // Processes effects on health and sanity based on other stats
+        private void ProcessHealthAndSanityEffects(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
+        {
+            if (hunger.Value < 1 && fatigue.Value < 1 && water.Value < 1 && sanity.Value < 1)
+            {
+                health.Decrease(5 * iSurvivalSessionSettings.healthdrainmultiplier, null);
+                sanity.Decrease(5 * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+            }
+            else if (hunger.Value < 1 || fatigue.Value < 1 || water.Value < 1 || sanity.Value < 1)
+            {
+                health.Decrease(1 * iSurvivalSessionSettings.healthdrainmultiplier, null);
+            }
+            if (stamina.Value < 10)
+            {
+                fatigue.Decrease(1 * iSurvivalSessionSettings.fatiguedrainmultiplier, null);
+                if (stamina.Value < 1)
+                {
+                    health.Decrease(5 * iSurvivalSessionSettings.healthdrainmultiplier, null);
+                    sanity.Decrease(5 * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+                }
+            }
+
+            if (hunger.Value > 20 && health.Value < 100)
+            {
+                health.Increase(1 * iSurvivalSessionSettings.healthincreasemultiplier, null);
+                hunger.Decrease(1 * iSurvivalSessionSettings.hungerdrainmultiplier, null);
+            }
+            if (fatigue.Value > 0 && stamina.Value < 90)
+            {
+                fatigue.Decrease(((100 - hunger.Value) / 100) * iSurvivalSessionSettings.fatiguedrainmultiplier, null);
+                stamina.Increase(2 * ((100 - hunger.Value) / 100) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+            }
+            if (runCount < 300)
+                return;
+
+            hunger.Decrease((((100 / (100 - (stamina.Value + fatigue.Value))) / 2) / 10 + 0.001f) * -1 * iSurvivalSessionSettings.hungerdrainmultiplier, null);
+
+            if (stamina.Value < 100 && fatigue.Value < 100)
+            {
+                hunger.Decrease(((100 - fatigue.Value) / 100) * iSurvivalSessionSettings.hungerdrainmultiplier, null);
+            }
+
+            if (fatigue.Value > 20 || rand.Next((int)fatigue.Value) > 0)
+                return;
+
+            blinkList.Add(player.IdentityId);
+            if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
+                blink(true);
+            else if (MyAPIGateway.Multiplayer.IsServer)
+                MyAPIGateway.Multiplayer.SendMessageTo(modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
+        }
+
+        // Background process for receiving messages
         private void OnMessageReceived(ushort modId, byte[] data, ulong sender, bool reliable)
         {
             try
@@ -482,12 +479,14 @@ namespace PEPCO.iSurvival.Core
             }
         }
 
+        // Triggers the blink effect
         public void blink(bool blink)
         {
             MyVisualScriptLogicProvider.ScreenColorFadingSetColor(Color.Black, 0L);
             MyVisualScriptLogicProvider.ScreenColorFadingStart(0.25f, blink, 0L);
         }
 
+        // Retrieves the specified stat from the player's stat component
         private MyEntityStat GetPlayerStat(MyEntityStatComponent statComp, string statName)
         {
             MyEntityStat stat;
@@ -495,15 +494,16 @@ namespace PEPCO.iSurvival.Core
             return stat;
         }
 
+        // Logs messages to the console
         public static void Echo(string msg1, string msg2 = "")
         {
-            MyLog.Default.WriteLineAndConsole(msg1 + ": " + msg2);
+            MyLog.Default.WriteLineAndConsole($"{msg1}: {msg2}");
         }
     }
 
+    // HUD Stat for Player Fatigue
     public class MyStatPlayerFatigue : IMyHudStat
     {
-
         public MyStatPlayerFatigue()
         {
             Id = MyStringHash.GetOrCompute("player_fatigue");
@@ -546,12 +546,12 @@ namespace PEPCO.iSurvival.Core
                 CurrentValue = Fatigue.Value / Fatigue.MaxValue;
         }
 
-        public override string ToString() => string.Format("{0:0}", (float)(CurrentValue * 100.0));
+        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
+    // HUD Stat for Player Water
     public class MyStatPlayerWater : IMyHudStat
     {
-
         public MyStatPlayerWater()
         {
             Id = MyStringHash.GetOrCompute("player_water");
@@ -594,12 +594,12 @@ namespace PEPCO.iSurvival.Core
                 CurrentValue = Water.Value / Water.MaxValue;
         }
 
-        public override string ToString() => string.Format("{0:0}", (float)(CurrentValue * 100.0));
+        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
+    // HUD Stat for Player Hunger
     public class MyStatPlayerHunger : IMyHudStat
     {
-
         public MyStatPlayerHunger()
         {
             Id = MyStringHash.GetOrCompute("player_hunger");
@@ -643,12 +643,12 @@ namespace PEPCO.iSurvival.Core
                 CurrentValue = Hunger.Value / Hunger.MaxValue;
         }
 
-        public override string ToString() => string.Format("{0:0}", (float)(CurrentValue * 100.0));
+        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
+    // HUD Stat for Player Stamina
     public class MyStatPlayerStamina : IMyHudStat
     {
-
         public MyStatPlayerStamina()
         {
             Id = MyStringHash.GetOrCompute("player_stamina");
@@ -691,12 +691,12 @@ namespace PEPCO.iSurvival.Core
                 CurrentValue = Stamina.Value / Stamina.MaxValue;
         }
 
-        public override string ToString() => string.Format("{0:0}", (float)(CurrentValue * 100.0));
+        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
+    // HUD Stat for Player Sanity
     public class MyStatPlayerSanity : IMyHudStat
     {
-
         public MyStatPlayerSanity()
         {
             Id = MyStringHash.GetOrCompute("player_sanity");
@@ -739,7 +739,6 @@ namespace PEPCO.iSurvival.Core
                 CurrentValue = Sanity.Value / Sanity.MaxValue;
         }
 
-        public override string ToString() => string.Format("{0:0}", (float)(CurrentValue * 100.0));
+        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 }
-#endregion
