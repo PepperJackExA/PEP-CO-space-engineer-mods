@@ -9,6 +9,10 @@
 			<Stats>
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Sanity</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>Fatigue</SubtypeId>
 				</Stat>
 				<Stat>
@@ -68,7 +72,7 @@
 				<TypeId>MyObjectBuilder_EntityStat</TypeId>
 				<SubtypeId>Sanity</SubtypeId>
 			</Id>
-			<Name>Fatigue</Name>
+			<Name>Sanity</Name>
 			<MinValue>0</MinValue>
 			<DefaultValue>100</DefaultValue>
 			<MaxValue>100</MaxValue>
