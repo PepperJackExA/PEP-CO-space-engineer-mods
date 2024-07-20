@@ -27,6 +27,22 @@
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>Water</SubtypeId>
 				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>SpaceCharacterHealth</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Oxygen</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Energy</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Hydrogen</SubtypeId>
+				</Stat>
 			</Stats>
 			<Scripts>
 				<Script>SpaceStatEffect</Script>
@@ -58,6 +74,22 @@
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>Water</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>SpaceCharacterHealth</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Oxygen</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Energy</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Hydrogen</SubtypeId>
 				</Stat>
 			</Stats>
 			<Scripts>
@@ -117,6 +149,50 @@
 				<SubtypeId>Water</SubtypeId>
 			</Id>
 			<Name>Water</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>SpaceCharacterHealth</SubtypeId>
+			</Id>
+			<Name>Health</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Oxygen</SubtypeId>
+			</Id>
+			<Name>Oxygen</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Energy</SubtypeId>
+			</Id>
+			<Name>Energy</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Hydrogen</SubtypeId>
+			</Id>
+			<Name>Hydrogen</Name>
 			<MinValue>0</MinValue>
 			<DefaultValue>100</DefaultValue>
 			<MaxValue>100</MaxValue>
