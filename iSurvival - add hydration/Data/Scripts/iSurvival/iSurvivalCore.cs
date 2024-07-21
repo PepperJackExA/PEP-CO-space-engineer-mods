@@ -590,14 +590,14 @@ namespace PEPCO.iSurvival.Core
             stamina.Increase(iSurvivalSessionSettings.SittingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier * iSurvivalSessionSettings.ProcessSittingEffectMultiplier, null);
             fatigue.Increase(iSurvivalSessionSettings.SittingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier * iSurvivalSessionSettings.ProcessSittingEffectMultiplier, null);
 
-            MyAPIGateway.Utilities.ShowMessage("Sitting", "Stamina increased, Fatigue increased");
+            //MyAPIGateway.Utilities.ShowMessage("Sitting", "Stamina increased, Fatigue increased");
         }
 
         private void ProcessStandingEffect(IMyPlayer player, MyEntityStat stamina)
         {
             stamina.Increase(iSurvivalSessionSettings.StandingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier * iSurvivalSessionSettings.ProcessStandingEffectMultiplier, null);
 
-            MyAPIGateway.Utilities.ShowMessage("Standing", "Stamina increased");
+            //MyAPIGateway.Utilities.ShowMessage("Standing", "Stamina increased");
         }
 
         private void ProcessCrouchingEffect(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue)
@@ -605,49 +605,49 @@ namespace PEPCO.iSurvival.Core
             stamina.Increase(iSurvivalSessionSettings.CrouchingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier * iSurvivalSessionSettings.ProcessCrouchingEffectMultiplier, null);
             fatigue.Increase(iSurvivalSessionSettings.CrouchingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier * iSurvivalSessionSettings.ProcessCrouchingEffectMultiplier, null);
 
-            MyAPIGateway.Utilities.ShowMessage("Crouching", "Stamina increased, Fatigue increased");
+            //MyAPIGateway.Utilities.ShowMessage("Crouching", "Stamina increased, Fatigue increased");
         }
 
         private void ProcessCrouchWalkingEffect(IMyPlayer player, MyEntityStat stamina)
         {
             stamina.Increase(iSurvivalSessionSettings.CrouchWalkStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier * iSurvivalSessionSettings.ProcessCrouchWalkingEffectMultiplier, null);
 
-            MyAPIGateway.Utilities.ShowMessage("Crouch Walking", "Stamina increased");
+            //MyAPIGateway.Utilities.ShowMessage("Crouch Walking", "Stamina increased");
         }
 
         private void ProcessWalkingEffect(IMyPlayer player, MyEntityStat stamina)
         {
             stamina.Increase(iSurvivalSessionSettings.WalkingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier * iSurvivalSessionSettings.ProcessWalkingEffectMultiplier, null);
 
-            MyAPIGateway.Utilities.ShowMessage("Walking", "Stamina increased");
+            //MyAPIGateway.Utilities.ShowMessage("Walking", "Stamina increased");
         }
 
         private void ProcessRunningEffect(IMyPlayer player, MyEntityStat stamina)
         {
             stamina.Decrease(iSurvivalSessionSettings.RunningStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier * iSurvivalSessionSettings.ProcessRunningEffectMultiplier, null);
 
-            MyAPIGateway.Utilities.ShowMessage("Running", "Stamina decreased, Water decreased");
+            //MyAPIGateway.Utilities.ShowMessage("Running", "Stamina decreased, Water decreased");
         }
 
         private void ProcessLadderEffect(IMyPlayer player, MyEntityStat stamina)
         {
             stamina.Decrease(iSurvivalSessionSettings.LadderStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier * iSurvivalSessionSettings.ProcessLadderEffectMultiplier, null);
 
-            MyAPIGateway.Utilities.ShowMessage("Ladder", "Stamina decreased, Water decreased");
+            //MyAPIGateway.Utilities.ShowMessage("Ladder", "Stamina decreased, Water decreased");
         }
 
         private void ProcessFlyingEffect(IMyPlayer player, MyEntityStat stamina)
         {
             stamina.Decrease(iSurvivalSessionSettings.FlyingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier * iSurvivalSessionSettings.ProcessFlyingEffectMultiplier, null);
 
-            MyAPIGateway.Utilities.ShowMessage("Flying", "Stamina decreased, Water decreased");
+            //MyAPIGateway.Utilities.ShowMessage("Flying", "Stamina decreased, Water decreased");
         }
 
         private void ProcessFallingEffect(IMyPlayer player, MyEntityStat stamina)
         {
             stamina.Decrease(iSurvivalSessionSettings.FallingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier * iSurvivalSessionSettings.ProcessFallingEffectMultiplier, null);
 
-            MyAPIGateway.Utilities.ShowMessage("Falling", "Stamina decreased, Water decreased");
+            //MyAPIGateway.Utilities.ShowMessage("Falling", "Stamina decreased, Water decreased");
         }
 
         private void ProcessSprintingEffect(IMyPlayer player, MyEntityStat stamina, MyEntityStat water)
@@ -657,7 +657,7 @@ namespace PEPCO.iSurvival.Core
                 stamina.Decrease(iSurvivalSessionSettings.SprintingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier * iSurvivalSessionSettings.ProcessSprintingEffectMultiplier, null);
                 water.Decrease(iSurvivalSessionSettings.SprintingWaterDecrease * iSurvivalSessionSettings.waterdrainmultiplier * iSurvivalSessionSettings.ProcessSprintingEffectMultiplier, null);
 
-                MyAPIGateway.Utilities.ShowMessage("Sprinting", "Stamina decreased, Water decreased");
+                //MyAPIGateway.Utilities.ShowMessage("Sprinting", "Stamina decreased, Water decreased");
             }
         }
 
@@ -667,7 +667,7 @@ namespace PEPCO.iSurvival.Core
             {
                 stamina.Decrease(iSurvivalSessionSettings.JumpingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier * iSurvivalSessionSettings.ProcessJumpingEffectMultiplier, null);
 
-                MyAPIGateway.Utilities.ShowMessage("Jumping", "Stamina decreased, Water decreased");
+                //MyAPIGateway.Utilities.ShowMessage("Jumping", "Stamina decreased, Water decreased");
             }
         }
 
@@ -682,7 +682,7 @@ namespace PEPCO.iSurvival.Core
                 stamina.Decrease(staminaEffect, null);
                 water.Decrease(waterEffect, null);
 
-                MyAPIGateway.Utilities.ShowMessage("Movement", $"Stamina decreased by {staminaEffect}, Water decreased by {waterEffect}");
+                //MyAPIGateway.Utilities.ShowMessage("Movement", $"Stamina decreased by {staminaEffect}, Water decreased by {waterEffect}");
             }
         }
         // Processes effects on health and sanity based on other stats
@@ -693,12 +693,12 @@ namespace PEPCO.iSurvival.Core
             {
                 health.Decrease(5 * iSurvivalSessionSettings.healthdrainmultiplier, null);
                 sanity.Decrease(5 * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-                MyAPIGateway.Utilities.ShowMessage("Health", "Health and sanity decreased due to critical levels of hunger, fatigue, water, and sanity.");
+                //MyAPIGateway.Utilities.ShowMessage("Health", "Health and sanity decreased due to critical levels of hunger, fatigue, water, and sanity.");
             }
             else if (hunger.Value < 1 || fatigue.Value < 1 || water.Value < 1 || sanity.Value < 1)
             {
                 health.Decrease(1 * iSurvivalSessionSettings.healthdrainmultiplier, null);
-                MyAPIGateway.Utilities.ShowMessage("Health", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
+                //MyAPIGateway.Utilities.ShowMessage("Health", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
             }
 
             if (stamina.Value < 10)
@@ -708,7 +708,7 @@ namespace PEPCO.iSurvival.Core
                 {
                     health.Decrease(5 * iSurvivalSessionSettings.healthdrainmultiplier, null);
                     sanity.Decrease(5 * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-                    MyAPIGateway.Utilities.ShowMessage("Health", "Health and sanity decreased due to critically low stamina.");
+                    //MyAPIGateway.Utilities.ShowMessage("Health", "Health and sanity decreased due to critically low stamina.");
                 }
             }
 
@@ -716,14 +716,14 @@ namespace PEPCO.iSurvival.Core
             {
                 health.Increase(1 * iSurvivalSessionSettings.healthincreasemultiplier, null);
                 hunger.Decrease(1 * iSurvivalSessionSettings.hungerdrainmultiplier, null);
-                MyAPIGateway.Utilities.ShowMessage("Health", "Health increased and hunger decreased.");
+                //MyAPIGateway.Utilities.ShowMessage("Health", "Health increased and hunger decreased.");
             }
 
             if (fatigue.Value > 0 && stamina.Value < 90)
             {
                 fatigue.Decrease(((100 - hunger.Value) / 100) * iSurvivalSessionSettings.fatiguedrainmultiplier, null);
                 stamina.Increase(2 * ((100 - hunger.Value) / 100) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                MyAPIGateway.Utilities.ShowMessage("Health", "Fatigue decreased and stamina increased.");
+                //MyAPIGateway.Utilities.ShowMessage("Health", "Fatigue decreased and stamina increased.");
             }
 
             if (runCount < 300) return;
@@ -760,12 +760,12 @@ namespace PEPCO.iSurvival.Core
                     inventory.AddItems((MyFixedPoint)organicsAmount, (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
                     inventory.AddItems((MyFixedPoint)organicsAmount, (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Ice")));
 
-                    MyAPIGateway.Utilities.ShowMessage("Organics", $"Collected {organicsAmount} organics and ice based on hunger and water levels.");
+                    //MyAPIGateway.Utilities.ShowMessage("Organics", $"Collected {organicsAmount} organics and ice based on hunger and water levels.");
                 }
             }
             else
             {
-                MyAPIGateway.Utilities.ShowMessage("Organics", "You need a SteelPlate in your inventory to collect organics and ice.");
+                //MyAPIGateway.Utilities.ShowMessage("Organics", "You need a SteelPlate in your inventory to collect organics and ice.");
             }
         }
 
