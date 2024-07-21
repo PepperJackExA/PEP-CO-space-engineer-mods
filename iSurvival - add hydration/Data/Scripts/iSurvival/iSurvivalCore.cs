@@ -35,7 +35,6 @@ namespace PEPCO.iSurvival.Core
         public static float hungerdrainmultiplier = 1;
         public static float waterdrainmultiplier = 1;
         public static float sanitydrainmultiplier = 1;
-        public static float oxygendrainmultiplier = 1;
 
         public static float staminaincreasemultiplier = 1;
         public static float fatigueincreasemultiplier = 1;
@@ -43,7 +42,6 @@ namespace PEPCO.iSurvival.Core
         public static float hungerincreasemultiplier = 1;
         public static float waterincreasemultiplier = 1;
         public static float sanityincreasemultiplier = 1;
-        public static float oxygenincreasemultiplier = 1;
 
         // Multipliers for Process Effects
         public static float ProcessSittingEffectMultiplier = 1;
@@ -460,36 +458,35 @@ namespace PEPCO.iSurvival.Core
                 if (statComp == null)
                     continue;
 
-                MyEntityStat fatigue, hunger, stamina, health, water, sanity, oxygen;
+                MyEntityStat fatigue, hunger, stamina, health, water, sanity;
                 if (!statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue) ||
                     !statComp.TryGetStat(MyStringHash.GetOrCompute("Hunger"), out hunger) ||
                     !statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina) ||
                     !statComp.TryGetStat(MyStringHash.GetOrCompute("Health"), out health) ||
                     !statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water) ||
-                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Sanity"), out sanity) ||
-                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Oxygen"), out oxygen))
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Sanity"), out sanity))
 
                     continue;
 
-                ProcessPlayerMovement(player, statComp, stamina, fatigue, hunger, water, sanity, health, oxygen);
+                ProcessPlayerMovement(player, statComp, stamina, fatigue, hunger, water, sanity, health);
             }
         }
 
         // Processes the player's movement and updates stats accordingly
-        private void ProcessPlayerMovement(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health, MyEntityStat oxygen)
+        private void ProcessPlayerMovement(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
         {
             var block = player.Controller?.ControlledEntity?.Entity as IMyCubeBlock;
             if (block != null)
             {
-                ProcessBlockEffects(player, block, stamina, fatigue, water, sanity, hunger, oxygen);
+                ProcessBlockEffects(player, block, stamina, fatigue, water, sanity, hunger);
                 return;
             }
 
-            ProcessMovementEffects(player, statComp, stamina, fatigue, hunger, water, sanity, health, oxygen);
+            ProcessMovementEffects(player, statComp, stamina, fatigue, hunger, water, sanity, health);
         }
 
         // Applies effects if the player is in certain blocks (CryoChamber, Toilet, etc.)
-        private void ProcessBlockEffects(IMyPlayer player, IMyCubeBlock block, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat water, MyEntityStat sanity, MyEntityStat hunger, MyEntityStat oxygen)
+        private void ProcessBlockEffects(IMyPlayer player, IMyCubeBlock block, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat water, MyEntityStat sanity, MyEntityStat hunger)
         {
             var blockDef = block.BlockDefinition.ToString();
             if (blockDef.Contains("CryoChamber"))
@@ -497,7 +494,6 @@ namespace PEPCO.iSurvival.Core
                 stamina.Increase(5f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
                 fatigue.Increase(5f * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
                 sanity.Increase(5f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-                oxygen.Increase(5f * iSurvivalSessionSettings.oxygenincreasemultiplier, null);
             }
             else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
             {
@@ -513,7 +509,7 @@ namespace PEPCO.iSurvival.Core
 
 
         // Applies effects based on the player's movement state
-        private void ProcessMovementEffects(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health, MyEntityStat oxygen)
+        private void ProcessMovementEffects(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
         {
             var movementState = player.Character.CurrentMovementState;
             switch (movementState)
@@ -576,11 +572,11 @@ namespace PEPCO.iSurvival.Core
                     ProcessJumpingEffect(player, stamina);
                     break;
                 default:
-                    ProcessDefaultMovementEffect(player, stamina, water, hunger, oxygen, fatigue, sanity);
+                    ProcessDefaultMovementEffect(player, stamina, water, hunger, fatigue, sanity);
                     break;
             }
 
-            ProcessHealthAndSanityEffects(player, stamina, fatigue, hunger, water, sanity, health, oxygen);
+            ProcessHealthAndSanityEffects(player, stamina, fatigue, hunger, water, sanity, health);
         }
 
 
@@ -625,8 +621,7 @@ namespace PEPCO.iSurvival.Core
         private void ProcessRunningEffect(IMyPlayer player, MyEntityStat stamina)
         {
             stamina.Decrease(iSurvivalSessionSettings.RunningStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier * iSurvivalSessionSettings.ProcessRunningEffectMultiplier, null);
-
-            //MyAPIGateway.Utilities.ShowMessage("Running", "Stamina decreased, Water decreased");
+           
         }
 
         private void ProcessLadderEffect(IMyPlayer player, MyEntityStat stamina)
@@ -671,7 +666,7 @@ namespace PEPCO.iSurvival.Core
             }
         }
 
-        private void ProcessDefaultMovementEffect(IMyPlayer player, MyEntityStat stamina, MyEntityStat water, MyEntityStat hunger, MyEntityStat oxygen, MyEntityStat fatigue, MyEntityStat sanity)
+        private void ProcessDefaultMovementEffect(IMyPlayer player, MyEntityStat stamina, MyEntityStat water, MyEntityStat hunger, MyEntityStat fatigue, MyEntityStat sanity)
         {
             if (stamina.Value > 0)
             {
@@ -686,7 +681,7 @@ namespace PEPCO.iSurvival.Core
             }
         }
         // Processes effects on health and sanity based on other stats
-        private void ProcessHealthAndSanityEffects(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health, MyEntityStat oxygen)
+        private void ProcessHealthAndSanityEffects(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
         {
             ProcessOrganicCollection(player, hunger, water);
             if (hunger.Value < 1 && fatigue.Value < 1 && water.Value < 1 && sanity.Value < 1)
@@ -746,8 +741,9 @@ namespace PEPCO.iSurvival.Core
 
         private void ProcessOrganicCollection(IMyPlayer player, MyEntityStat hunger, MyEntityStat water)
         {
+            string recycleItem = "MyObjectBuilder_Component/SteelPlate";
             var inventory = player.Character.GetInventory();
-            MyDefinitionId requiredItemDefinition = MyDefinitionId.Parse("MyObjectBuilder_Component/SteelPlate"); // Change this to the required item
+            MyDefinitionId requiredItemDefinition = MyDefinitionId.Parse($"{recycleItem}"); // Change this to the required item
             MyFixedPoint requiredItemAmount = 1; // Set the required amount
 
             if (inventory.ContainItems(requiredItemAmount, requiredItemDefinition))
@@ -1053,4 +1049,5 @@ namespace PEPCO.iSurvival.Core
 
         public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
+    
 }

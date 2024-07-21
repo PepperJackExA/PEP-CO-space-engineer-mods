@@ -73,6 +73,9 @@ namespace PEPCO.iSurvival.Chat
                     case "help":
                         DisplayAvailableCommands();
                         return;
+                    case "liststats":
+                        ListPlayerStats(thisPlayer);
+                        return;
                     default:
                         UpdateMultiplier(commandParts);
                         return;
@@ -83,6 +86,31 @@ namespace PEPCO.iSurvival.Chat
                 iSurvivalLog.Error(e);
             }
         }
+
+        void ListPlayerStats(IMyPlayer player)
+        {
+            var character = player.Character;
+            if (character == null)
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Player character not found.");
+                return;
+            }
+
+            var statComponent = character.Components.Get<MyEntityStatComponent>();
+            if (statComponent == null)
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Stat component not found.");
+                return;
+            }
+
+            MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Player stat IDs:");
+            foreach (var stat in statComponent.Stats)
+            {
+                MyAPIGateway.Utilities.ShowMessage("stat", $"{stat.ToString()}: {stat.Value}");
+            }
+        }
+
+
 
         void HandleHealCommand(string[] parts, IMyPlayer player)
         {
@@ -214,6 +242,7 @@ namespace PEPCO.iSurvival.Chat
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} removeexemption", "Removes the SteamID of the current user from the list of exempt players.");
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} reloadconfig", "Reloads the configuration from the file.");
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} <config_option> <value>", "Sets the specified multiplier to the given value (e.g., staminadrainmultiplier, fatiguedrainmultiplier, etc.).");
+            MyAPIGateway.Utilities.ShowMessage($"{MainCommand} liststats", "Lists all player stat IDs.");
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} help", "Displays this help message.");
         }
 
