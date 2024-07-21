@@ -71,14 +71,12 @@ namespace PEPCO.iSurvival.Chat
                         HandleHealCommand(commandParts, thisPlayer);
                         return;
                     case "help":
-                        DisplayHelp();
+                        DisplayAvailableCommands();
                         return;
                     default:
                         UpdateMultiplier(commandParts);
                         return;
                 }
-
-                DisplayAvailableCommands();
             }
             catch (Exception e)
             {
@@ -215,20 +213,9 @@ namespace PEPCO.iSurvival.Chat
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} addexemption", "Adds the SteamID of the current user to the list of exempt players.");
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} removeexemption", "Removes the SteamID of the current user from the list of exempt players.");
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} reloadconfig", "Reloads the configuration from the file.");
-            MyAPIGateway.Utilities.ShowMessage($"{MainCommand} <multiplier> <value>", "Sets the specified multiplier to the given value (e.g., staminadrainmultiplier, fatiguedrainmultiplier, etc.).");
+            MyAPIGateway.Utilities.ShowMessage($"{MainCommand} <config_option> <value>", "Sets the specified multiplier to the given value (e.g., staminadrainmultiplier, fatiguedrainmultiplier, etc.).");
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} help", "Displays this help message.");
         }
 
-        void DisplayHelp()
-        {
-            MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Available commands:");
-            MyAPIGateway.Utilities.ShowMessage("/pepco heal <stat|all> <percentage>", "Sets the specified stat or all stats to the given percentage.");
-            MyAPIGateway.Utilities.ShowMessage("/pepco exempt", "Shows the SteamIDs of all exempt players.");
-            MyAPIGateway.Utilities.ShowMessage("/pepco addexemption", "Adds the SteamID of the current user to the list of exempt players.");
-            MyAPIGateway.Utilities.ShowMessage("/pepco removeexemption", "Removes the SteamID of the current user from the list of exempt players.");
-            MyAPIGateway.Utilities.ShowMessage("/pepco reloadconfig", "Reloads the configuration from the file.");
-            MyAPIGateway.Utilities.ShowMessage("/pepco <multiplier> <value>", "Sets the specified multiplier to the given value (e.g., staminadrainmultiplier, fatiguedrainmultiplier, etc.).");
-            MyAPIGateway.Utilities.ShowMessage("/pepco help", "Displays this help message.");
-        }
     }
 }
