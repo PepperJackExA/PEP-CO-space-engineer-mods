@@ -453,7 +453,7 @@ const app = Vue.createApp({
             }
             else {
               //Alert user that unknown block found in clipboard and that he should re-import the block list
-              alert("Unknown block found in clipboard, please re-import the block list")
+              alert("Unknown block: " + block.uniqueID +" found in clipboard, please re-import the block list")
             }
 
             this.selectedBlocks.sort((blockA, blockB) => {
