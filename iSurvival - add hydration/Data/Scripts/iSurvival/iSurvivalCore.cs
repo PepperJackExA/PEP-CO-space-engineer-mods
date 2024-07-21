@@ -20,7 +20,6 @@ using Sandbox.Game.Entities;
 using VRage.Game.ModAPI;
 using VRage.Game;
 using VRage;
-using System.IO.Ports;
 
 namespace PEPCO.iSurvival.Core
 {
@@ -477,18 +476,27 @@ namespace PEPCO.iSurvival.Core
         // Processes the player's movement and updates stats accordingly
         private void ProcessPlayerMovement(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
         {
+
             var block = player.Controller?.ControlledEntity?.Entity as IMyCubeBlock;
             if (block != null)
             {
-                ProcessBlockEffects(player, block, stamina, fatigue, water, sanity, hunger);
+                ProcessBlockEffects(player, statComp, block, stamina, fatigue, water, sanity, hunger, health);
                 return;
             }
 
             ProcessMovementEffects(player, statComp, stamina, fatigue, hunger, water, sanity, health);
+            ProcessNormalEffects(player, statComp, stamina, fatigue, hunger, water, sanity, health);
+        }
+        private void ProcessNormalEffects(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
+        {
+            ProcessHealthAndSanityEffects(player, stamina, fatigue, hunger, water, sanity, health);
+            ProcessOrganicCollection(player, hunger, water);
+            ConstantStaminaRecovery(stamina, hunger, water, fatigue, health, sanity);
+            OxygenLevelEnvironmentalFactor(player);
         }
 
         // Applies effects if the player is in certain blocks (CryoChamber, Toilet, etc.)
-        private void ProcessBlockEffects(IMyPlayer player, IMyCubeBlock block, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat water, MyEntityStat sanity, MyEntityStat hunger)
+        private void ProcessBlockEffects(IMyPlayer player, MyEntityStatComponent statComp, IMyCubeBlock block, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat water, MyEntityStat sanity, MyEntityStat hunger, MyEntityStat health)
         {
             var blockDef = block.BlockDefinition.SubtypeId.ToString();
             if (blockDef.Contains("Bed"))
@@ -511,8 +519,9 @@ namespace PEPCO.iSurvival.Core
                     player.Character.GetInventory(0).AddItems((MyFixedPoint)0.1f, (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
                 }
             }
-            else ProcessSittingEffect(player, stamina, fatigue, sanity);
-
+            else ProcessSittingEffect(player, statComp, stamina, fatigue, hunger, water, sanity, health);
+            {
+            }
         }
 
 
@@ -584,17 +593,20 @@ namespace PEPCO.iSurvival.Core
                     break;
             }
 
-            ProcessHealthAndSanityEffects(player, stamina, fatigue, hunger, water, sanity, health);
         }
 
 
         // START Movement Processing
-        private void ProcessSittingEffect(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat sanity)
+        private void ProcessSittingEffect(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
         {
-            stamina.Increase(iSurvivalSessionSettings.SittingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier * iSurvivalSessionSettings.ProcessSittingEffectMultiplier, null);
-            fatigue.Increase(iSurvivalSessionSettings.SittingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier * iSurvivalSessionSettings.ProcessSittingEffectMultiplier, null);
-            if (sanity.Value < 25) sanity.Increase(0.5f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-            //MyAPIGateway.Utilities.ShowMessage("Sitting", "Stamina increased, Fatigue increased");
+
+            var averageVitalStats = ((hunger.Value + sanity.Value + water.Value + (fatigue.Value * 2) + (health.Value / 2)) / 5);
+            if (sanity.Value < 25) sanity.Increase((averageVitalStats / 100) * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+            if (stamina.Value < 100) stamina.Increase((averageVitalStats / 100) * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+            if (fatigue.Value < 100) fatigue.Increase((averageVitalStats / 200) * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
+            MyAPIGateway.Utilities.ShowMessage("sitting:", $"{averageVitalStats} = {(averageVitalStats / 100)}");
+
+            ProcessNormalEffects(player, statComp, stamina, fatigue, hunger, water, sanity, health);
         }
 
         private void ProcessStandingEffect(IMyPlayer player, MyEntityStat stamina)
@@ -693,11 +705,44 @@ namespace PEPCO.iSurvival.Core
                 water.Decrease(waterEffect, null);
             }
         }
+        // Sanity balance mechanic
+        private void UpdateSanity(MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat health, MyEntityStat sanity)
+        {
+            // Calculate the average of the vital stats
+            var averageVitalStats = ((hunger.Value + sanity.Value + water.Value + fatigue.Value + (health.Value / 2)) / 5);
+
+            // If all vital stats are above 50, increase sanity if it's below 50
+            if (averageVitalStats > 50 && sanity.Value < 25)
+            {
+                sanity.Increase((averageVitalStats / 1000) * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+            }
+
+            // If any vital stat is below 50, decrease sanity if it's above 50
+            if (averageVitalStats < 75 && sanity.Value > 25)
+            {
+                sanity.Decrease((averageVitalStats / 1000) * iSurvivalSessionSettings.sanitydrainmultiplier, null);
+            }
+
+            // Display sanity update message
+            //MyAPIGateway.Utilities.ShowMessage("Sanity:", $"{averageVitalStats} = {(averageVitalStats / 1000)}");
+        }
+
+        private void ConstantStaminaRecovery(MyEntityStat stamina, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat health, MyEntityStat sanity)
+        {
+            // Constant stamina recovery based on sanity and food levels
+            if (stamina.Value < 100)
+            {
+                var averageVitalStats = ((hunger.Value + sanity.Value + water.Value + (fatigue.Value * 2) + (health.Value / 2)) / 5);
+
+                stamina.Increase((averageVitalStats / 50) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                MyAPIGateway.Utilities.ShowMessage("Constant:", $"{averageVitalStats} = {(averageVitalStats / 50)}");
+            }
+        }
         // Processes effects on health and sanity based on other stats
         private void ProcessHealthAndSanityEffects(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
         {
+            UpdateSanity(hunger, water, fatigue, health, sanity);
             float environmentalFactor = WeatherEffects.GetEnvironmentalFactor(player);
-            ProcessOrganicCollection(player, hunger, water);
 
             // Decrease health and sanity if all critical stats are very low
             if (hunger.Value < 1 && fatigue.Value < 1 && water.Value < 1 && sanity.Value < 1)
@@ -714,30 +759,6 @@ namespace PEPCO.iSurvival.Core
                 //MyAPIGateway.Utilities.ShowMessage("Health", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
             }
 
-            // Constant stamina recovery based on sanity and food levels
-            if (stamina.Value < 100)
-            {
-                float sanityRecoveryMultiplier = (sanity.Value > 50) ? 1 - ((sanity.Value - 50) / 100) : 1 + ((50 - sanity.Value) / 50);
-                float foodRecoveryMultiplier = hunger.Value / 100;
-                float staminaRecoveryRate = iSurvivalSessionSettings.staminaincreasemultiplier * sanityRecoveryMultiplier * foodRecoveryMultiplier;
-
-                stamina.Increase(staminaRecoveryRate, null);
-            }
-            if (fatigue.Value < 100 && hunger.Value > 80)
-            {
-                // Calculate the multiplier based on sanity levels
-                float sanityRecoveryMultiplier = (sanity.Value > 50) ? 1 - ((sanity.Value - 50) / 100) : 1 + ((50 - sanity.Value) / 50);
-
-                // Calculate the multiplier based on hunger levels
-                float foodRecoveryMultiplier = hunger.Value / 100;
-
-                // Calculate the recovery rate for fatigue
-                float fatigueRecoveryRate = iSurvivalSessionSettings.fatigueincreasemultiplier * sanityRecoveryMultiplier * foodRecoveryMultiplier;
-
-                // Increase fatigue and decrease hunger
-                fatigue.Increase(fatigueRecoveryRate * environmentalFactor, null);
-                hunger.Decrease(fatigueRecoveryRate * environmentalFactor, null);
-            }
 
             // Calculate the dynamic fatigue drain based on stamina and sanity if stamina is actively draining
             if (stamina.Value < 1)
@@ -869,46 +890,52 @@ namespace PEPCO.iSurvival.Core
             }
         }
 
-        public enum WeatherCondition
-        {
-            Clear,
-            Rain,
-            Storm,
-            Heatwave,
-            Cold
-        }
         public class WeatherEffects
         {
             public static float GetEnvironmentalFactor(IMyPlayer player)
             {
-                WeatherCondition currentWeather = GetCurrentWeather(player);
-                switch (currentWeather)
+                Vector3D playerPosition = player.GetPosition();
+                string currentWeather = MyVisualScriptLogicProvider.GetWeather(playerPosition);
+                MyAPIGateway.Utilities.ShowMessage("Weather", $"Current: {currentWeather}");
+
+                if (currentWeather.ToLower().Contains("clear"))
                 {
-                    case WeatherCondition.Clear:
-                        return 1.0f; // No effect
-                    case WeatherCondition.Rain:
-                        return 1.1f; // Slightly increased drain due to discomfort
-                    case WeatherCondition.Storm:
-                        return 1.3f; // Higher drain due to harsh conditions
-                    case WeatherCondition.Heatwave:
-                        return 1.5f; // Much higher drain, especially for water
-                    case WeatherCondition.Cold:
-                        return 1.2f; // Increased drain due to cold stress
-                    default:
-                        return 1.0f;
+                    return 1.0f; // No effect
+                }
+                else if (currentWeather.ToLower().Contains("rain"))
+                {
+                    return 1.1f; // Slightly increased drain due to discomfort
+                }
+                else if (currentWeather.ToLower().Contains("storm"))
+                {
+                    return 1.3f; // Higher drain due to harsh conditions
+                }
+                else if (currentWeather.ToLower().Contains("sand"))
+                {
+                    return 1.5f; // Much higher drain, especially for water
+                }
+                else if (currentWeather.ToLower().Contains("snow"))
+                {
+                    return 1.2f; // Increased drain due to cold stress
+                }
+                else
+                {
+                    return 1.0f; // Default effect
                 }
             }
-            private static WeatherCondition GetCurrentWeather(IMyPlayer player)
-            {
-                // Placeholder logic to determine current weather
-                // This should be replaced with actual game logic
-                // Example: use player's location or other in-game variables to determine weather
-                return WeatherCondition.Clear; // Default to clear weather
-            }
         }
-        private float GetEnvironmentalFactor(IMyPlayer player)
+
+        private void OxygenLevelEnvironmentalFactor(IMyPlayer player)
         {
-            return 1.0f; // Placeholder, should be replaced with actual environmental factors
+            double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(player.GetPosition());
+            bool isAirtight = grid.IsRoomAtPositionAirtight(player.GetPosition());
+
+            MyAPIGateway.Utilities.ShowMessage("Weather", $"Current: {oxygenLevel}");
+            //if (oxygenLevel <= 0.5) ;
+
+
+
+            //return 1.0f; // Placeholder, should be replaced with actual environmental factors
         }
 
         // END Movement Processing

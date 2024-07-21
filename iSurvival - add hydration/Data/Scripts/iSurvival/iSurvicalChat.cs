@@ -13,7 +13,7 @@ namespace PEPCO.iSurvival.Chat
 {
     public class ChatCommands : IDisposable
     {
-        const string MainCommand = "/pepco";
+        const string MainCommand = "/isurvival";
         readonly iSurvivalSessionSettings Mod;
 
         public ChatCommands(iSurvivalSessionSettings mod)
