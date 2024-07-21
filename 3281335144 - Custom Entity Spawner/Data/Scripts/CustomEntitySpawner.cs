@@ -748,7 +748,7 @@ GlobalMaxEntities=30
                 var grid = entity as IMyCubeGrid;
                 if (grid != null)
                 {
-                    var blocks = new List<IMySlimBlock>();
+                   var blocks = new List<IMySlimBlock>();
                     grid.GetBlocks(blocks, b => b.FatBlock != null && IsValidBlock(b.FatBlock.BlockDefinition.TypeIdString, b.FatBlock.BlockDefinition.SubtypeId));
 
                     foreach (var block in blocks)
@@ -910,11 +910,17 @@ GlobalMaxEntities=30
         {
             float maxHealth = block.MaxIntegrity;
             float damageAmount = maxHealth * (blockSettings.DamageAmount / 100.0f) * amount;
-            //block.DoDamage(damageAmount, MyDamageType.Destruction, true);
-            block.SpawnFirstItemInConstructionStockpile();
-            block.IncreaseMountLevel(damageAmount * 1, block.OwnerId, null, MyAPIGateway.Session.WelderSpeedMultiplier, true);
-
-            LogError($"Damage {block.CurrentDamage} {block.BuildLevelRatio}");
+            LogError($"{amount}");
+            if (blockSettings.Repair == false)
+                block.DoDamage(damageAmount, MyDamageType.Destruction, true);
+            else
+            {
+                for (int i = 0; i <= (blockSettings.DamageAmount * amount); i++)
+                {
+                    block.SpawnFirstItemInConstructionStockpile();
+                }
+                block.IncreaseMountLevel(blockSettings.DamageAmount * amount, block.OwnerId, null, MyAPIGateway.Session.WelderSpeedMultiplier, true);
+            }
         }
 
         private bool AreRequiredEntitiesInVicinity(IMySlimBlock block, BotSpawnerConfig blockSettings)
@@ -1629,6 +1635,7 @@ GlobalMaxEntities=30
                         StackItems = iniParser.Get(section, nameof(BotSpawnerConfig.StackItems)).ToBoolean(),
                         SpawnInsideInventory = iniParser.Get(section, nameof(BotSpawnerConfig.SpawnInsideInventory)).ToBoolean(),
                         DamageAmount = (float)iniParser.Get(section, nameof(BotSpawnerConfig.DamageAmount)).ToDouble(),
+                        Repair = iniParser.Get(section, nameof(BotSpawnerConfig.Repair)).ToBoolean(),
                         MinHealthPercentage = (float)iniParser.Get(section, nameof(BotSpawnerConfig.MinHealthPercentage)).ToDouble(),
                         MaxHealthPercentage = (float)iniParser.Get(section, nameof(BotSpawnerConfig.MaxHealthPercentage)).ToDouble(),
                         MinHeight = iniParser.Get(section, nameof(BotSpawnerConfig.MinHeight)).ToDouble(),
@@ -1663,7 +1670,7 @@ GlobalMaxEntities=30
                              $"MaxItemAmount={botSpawnerConfig.MaxItemAmount}, UseWeightedDrops={botSpawnerConfig.UseWeightedDrops}, " +
                              $"MaxEntitiesInArea={botSpawnerConfig.MaxEntitiesInArea}, MaxEntitiesRadius={botSpawnerConfig.MaxEntitiesRadius}, " +
                              $"StackItems={botSpawnerConfig.StackItems}, SpawnInsideInventory={botSpawnerConfig.SpawnInsideInventory}, " +
-                             $"DamageAmount={botSpawnerConfig.DamageAmount}, MinHealthPercentage={botSpawnerConfig.MinHealthPercentage}, " +
+                             $"DamageAmount={botSpawnerConfig.DamageAmount}, Repair={botSpawnerConfig.Repair},MinHealthPercentage={botSpawnerConfig.MinHealthPercentage}, " +
                              $"MaxHealthPercentage={botSpawnerConfig.MaxHealthPercentage}, MinHeight={botSpawnerConfig.MinHeight}, " +
                              $"MaxHeight={botSpawnerConfig.MaxHeight}, MinRadius={botSpawnerConfig.MinRadius}, MaxRadius={botSpawnerConfig.MaxRadius}, " +
                              $"SpawnTriggerInterval={botSpawnerConfig.SpawnTriggerInterval}, EnableAirtightAndOxygen={botSpawnerConfig.EnableAirtightAndOxygen}, " +
@@ -1822,6 +1829,7 @@ GlobalMaxEntities=30
                     StackItems = iniParser.Get(section, nameof(BotSpawnerConfig.StackItems)).ToBoolean(),
                     SpawnInsideInventory = iniParser.Get(section, nameof(BotSpawnerConfig.SpawnInsideInventory)).ToBoolean(),
                     DamageAmount = (float)iniParser.Get(section, nameof(BotSpawnerConfig.DamageAmount)).ToDouble(),
+                    Repair = iniParser.Get(section, nameof(BotSpawnerConfig.Repair)).ToBoolean(),
                     MinHealthPercentage = (float)iniParser.Get(section, nameof(BotSpawnerConfig.MinHealthPercentage)).ToDouble(),
                     MaxHealthPercentage = (float)iniParser.Get(section, nameof(BotSpawnerConfig.MaxHealthPercentage)).ToDouble(),
                     MinHeight = iniParser.Get(section, nameof(BotSpawnerConfig.MinHeight)).ToDouble(),
@@ -1871,6 +1879,7 @@ GlobalMaxEntities=30
         public int MaxItemAmount { get; set; } = 1;
         public bool UseWeightedDrops { get; set; } = false;
         public float DamageAmount { get; set; } = 0;
+        public bool Repair { get; set; } = false;
         public float MinHealthPercentage { get; set; } = 0.1f;
         public float MaxHealthPercentage { get; set; } = 1.0f;
         public double MinHeight { get; set; } = 1.0;

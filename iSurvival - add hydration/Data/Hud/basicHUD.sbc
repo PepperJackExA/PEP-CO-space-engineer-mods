@@ -1326,13 +1326,113 @@
 						<Texture>Magboots</Texture>
 					</StatStyle>
 					<!-- PLAYER STAT PROGRESS BARS -->
+					<!-- Sanity -->
+					<StatStyle xsi:type="MyObjectBuilder_ProgressBarStatVisualStyle">
+						<StatId>player_sanity</StatId>
+						<OffsetPx>
+							<X>68</X>
+							<Y>-161</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>150</X>
+							<Y>9</Y>
+						</SizePx>
+						<BlinkCondition xsi:type="StatCondition">
+							<StatId>player_sanity</StatId>
+							<Value>0.25</Value>
+							<Operator>Below</Operator>
+							<ProgressColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ProgressColorMask>
+							<BackgroundColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</BackgroundColorMask>
+						</BlinkCondition>
+						<Blink>
+							<ColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ColorMask>
+							<MinAlpha>0.6</MinAlpha>
+							<MaxAlpha>1</MaxAlpha>
+						</Blink>
+						<SimpleStyle>
+							<BackgroundTexture>ProgressBar_Background</BackgroundTexture>
+							<ProgressTexture>ProgressBar_Bar</ProgressTexture>
+							<ProgressTextureOffsetPx>
+								<X>0</X>
+								<Y>0</Y>
+							</ProgressTextureOffsetPx>
+							<ProgressColorMask>
+								<X>0.734375</X>
+								<Y>0.9137254901960784</Y>
+								<Z>0.9647058823529412</Z>
+								<W>1</W>
+							</ProgressColorMask>
+							<BackgroundColorMask>
+								<X>0.3137</X>
+								<Y>0.3607</Y>
+								<Z>0.4039</Z>
+								<W>1</W>
+							</BackgroundColorMask>
+						</SimpleStyle>
+					</StatStyle>
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<StatId>player_sanity</StatId>
+						<OffsetPx>
+							<X>231</X>
+							<Y>-161</Y>
+						</OffsetPx>
+						<SizePx>
+							<X>16</X>
+							<Y>16</Y>
+						</SizePx>
+						<BlinkCondition xsi:type="StatCondition">
+							<StatId>player_sanity</StatId>
+							<Value>0.25</Value>
+							<Operator>Below</Operator>
+						</BlinkCondition>
+						<Blink>
+							<ColorMask>
+								<X>1</X>
+								<Y>0</Y>
+								<Z>0</Z>
+								<W>1</W>
+							</ColorMask>
+						</Blink>
+						<Percentage>true</Percentage>
+						<Precision>0</Precision>
+						<Text>{STAT}</Text>
+						<Font>White</Font>
+						<Scale>0.7</Scale>
+						<TextAlign>HORISONTAL_CENTER_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
+
+					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
+						<OffsetPx>
+							<X>64</X>
+							<Y>-161</Y>
+						</OffsetPx>
+						<Text>Sanity</Text>
+						<Font>Blue</Font>
+						<Scale>0.5</Scale>
+						<TextAlign>HORISONTAL_RIGHT_AND_VERTICAL_CENTER</TextAlign>
+					</StatStyle>
 
 					<!-- Fatigue -->
 					<StatStyle xsi:type="MyObjectBuilder_ProgressBarStatVisualStyle">
 						<StatId>player_fatigue</StatId>
 						<OffsetPx>
 							<X>68</X>
-							<Y>-160</Y>
+							<Y>-144</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
@@ -1390,7 +1490,7 @@
 						<StatId>player_fatigue</StatId>
 						<OffsetPx>
 							<X>231</X>
-							<Y>-160</Y>
+							<Y>-144</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1420,7 +1520,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>64</X>
-							<Y>-160</Y>
+							<Y>-144</Y>
 						</OffsetPx>
 						<Text>Fatigue</Text>
 						<Font>Blue</Font>
@@ -1433,7 +1533,7 @@
 						<StatId>player_stamina</StatId>
 						<OffsetPx>
 							<X>68</X>
-							<Y>-140</Y>
+							<Y>-127</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
@@ -1492,7 +1592,7 @@
 						<StatId>player_stamina</StatId>
 						<OffsetPx>
 							<X>231</X>
-							<Y>-140</Y>
+							<Y>-127</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1522,7 +1622,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>64</X>
-							<Y>-140</Y>
+							<Y>-127</Y>
 						</OffsetPx>
 						<Text>Stamina</Text>
 						<Font>Blue</Font>
@@ -1535,7 +1635,7 @@
 						<StatId>player_hunger</StatId>
 						<OffsetPx>
 							<X>68</X>
-							<Y>-120</Y>
+							<Y>-110</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
@@ -1594,7 +1694,7 @@
 						<StatId>player_hunger</StatId>
 						<OffsetPx>
 							<X>231</X>
-							<Y>-120</Y>
+							<Y>-110</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1624,7 +1724,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>64</X>
-							<Y>-120</Y>
+							<Y>-110</Y>
 						</OffsetPx>
 						<Text>Hunger</Text>
 						<Font>Blue</Font>
@@ -1636,7 +1736,7 @@
 						<StatId>player_water</StatId>
 						<OffsetPx>
 							<X>68</X>
-							<Y>-100</Y>
+							<Y>-93</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
@@ -1695,7 +1795,7 @@
 						<StatId>player_water</StatId>
 						<OffsetPx>
 							<X>231</X>
-							<Y>-100</Y>
+							<Y>-93</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1725,7 +1825,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>64</X>
-							<Y>-100</Y>
+							<Y>-93</Y>
 						</OffsetPx>
 						<Text>Water</Text>
 						<Font>Blue</Font>
@@ -1738,7 +1838,7 @@
 						<StatId>player_health</StatId>
 						<OffsetPx>
 							<X>68</X>
-							<Y>-80</Y>
+							<Y>-76</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
@@ -1797,7 +1897,7 @@
 						<StatId>player_health</StatId>
 						<OffsetPx>
 							<X>231</X>
-							<Y>-80</Y>
+							<Y>-76</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1827,7 +1927,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>64</X>
-							<Y>-80</Y>
+							<Y>-76</Y>
 						</OffsetPx>
 						<Text>Health</Text>
 						<Font>Blue</Font>
@@ -1840,7 +1940,7 @@
 						<StatId>player_oxygen</StatId>
 						<OffsetPx>
 							<X>68</X>
-							<Y>-80</Y>
+							<Y>-59</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
@@ -1887,7 +1987,7 @@
 						<StatId>player_oxygen</StatId>
 						<OffsetPx>
 							<X>231</X>
-							<Y>-80</Y>
+							<Y>-59</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -1917,7 +2017,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>64</X>
-							<Y>-80</Y>
+							<Y>-59</Y>
 						</OffsetPx>
 						<Text>Oxygen</Text>
 						<Font>Blue</Font>
@@ -1929,7 +2029,7 @@
 						<StatId>player_energy</StatId>
 						<OffsetPx>
 							<X>68</X>
-							<Y>-60</Y>
+							<Y>-42</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
@@ -1976,7 +2076,7 @@
 						<StatId>player_energy</StatId>
 						<OffsetPx>
 							<X>231</X>
-							<Y>-60</Y>
+							<Y>-42</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -2006,7 +2106,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>64</X>
-							<Y>-60</Y>
+							<Y>-42</Y>
 						</OffsetPx>
 						<Text>Power</Text>
 						<Font>Blue</Font>
@@ -2019,7 +2119,7 @@
 						<StatId>player_hydrogen</StatId>
 						<OffsetPx>
 							<X>68</X>
-							<Y>-40</Y>
+							<Y>-25</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>150</X>
@@ -2066,7 +2166,7 @@
 						<StatId>player_hydrogen</StatId>
 						<OffsetPx>
 							<X>231</X>
-							<Y>-40</Y>
+							<Y>-25</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>16</X>
@@ -2096,7 +2196,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_TextStatVisualStyle">
 						<OffsetPx>
 							<X>64</X>
-							<Y>-40</Y>
+							<Y>-25</Y>
 						</OffsetPx>
 						<Text>Hydrogen</Text>
 						<Font>Blue</Font>
@@ -2108,7 +2208,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>74</X>
-							<Y>-42</Y>
+							<Y>-27</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>18</X>
@@ -2131,7 +2231,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>97</X>
-							<Y>-42</Y>
+							<Y>-27</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>18</X>
@@ -2154,7 +2254,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>120</X>
-							<Y>-42</Y>
+							<Y>-27</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>18</X>
@@ -2177,7 +2277,7 @@
 					<StatStyle xsi:type="MyObjectBuilder_ImageStatVisualStyle">
 						<OffsetPx>
 							<X>141</X>
-							<Y>-46</Y>
+							<Y>-31</Y>
 						</OffsetPx>
 						<SizePx>
 							<X>11</X>
