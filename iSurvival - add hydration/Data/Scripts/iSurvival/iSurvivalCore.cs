@@ -492,7 +492,7 @@ namespace PEPCO.iSurvival.Core
             ProcessHealthAndSanityEffects(player, stamina, fatigue, hunger, water, sanity, health);
             ProcessOrganicCollection(player, hunger, water);
             ConstantStaminaRecovery(stamina, hunger, water, fatigue, health, sanity);
-            OxygenLevelEnvironmentalFactor(player);
+            
         }
 
         // Applies effects if the player is in certain blocks (CryoChamber, Toilet, etc.)
@@ -706,11 +706,19 @@ namespace PEPCO.iSurvival.Core
             }
         }
         // Sanity balance mechanic
-        private void UpdateSanity(MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat health, MyEntityStat sanity)
+        private void UpdateSanity(IMyPlayer player, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat health, MyEntityStat sanity)
         {
+
+            float environmentalFactor = WeatherEffects.GetEnvironmentalFactor(player);
             // Calculate the average of the vital stats
             var averageVitalStats = ((hunger.Value + sanity.Value + water.Value + fatigue.Value + (health.Value / 2)) / 5);
-
+            var decreaseFactor = (100 - averageVitalStats) / 100;
+            var oxygenLevel = OxygenLevelEnvironmentalFactor(player);
+            if (oxygenLevel < 0.8)
+            {
+                sanity.Decrease((decreaseFactor / 100) * iSurvivalSessionSettings.sanitydrainmultiplier * environmentalFactor, null);
+                MyAPIGateway.Utilities.ShowMessage("Sanity:", $"oxygen: {oxygenLevel} = {(decreaseFactor / 10)* environmentalFactor} env:{environmentalFactor}");
+            }
             // If all vital stats are above 50, increase sanity if it's below 50
             if (averageVitalStats > 50 && sanity.Value < 25)
             {
@@ -720,7 +728,7 @@ namespace PEPCO.iSurvival.Core
             // If any vital stat is below 50, decrease sanity if it's above 50
             if (averageVitalStats < 75 && sanity.Value > 25)
             {
-                sanity.Decrease((averageVitalStats / 1000) * iSurvivalSessionSettings.sanitydrainmultiplier, null);
+                sanity.Decrease((averageVitalStats / 1000) * iSurvivalSessionSettings.sanitydrainmultiplier * environmentalFactor, null);
             }
 
             // Display sanity update message
@@ -735,13 +743,13 @@ namespace PEPCO.iSurvival.Core
                 var averageVitalStats = ((hunger.Value + sanity.Value + water.Value + (fatigue.Value * 2) + (health.Value / 2)) / 5);
 
                 stamina.Increase((averageVitalStats / 50) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                MyAPIGateway.Utilities.ShowMessage("Constant:", $"{averageVitalStats} = {(averageVitalStats / 50)}");
+                //MyAPIGateway.Utilities.ShowMessage("Constant:", $"{averageVitalStats} = {(averageVitalStats / 50)}");
             }
         }
         // Processes effects on health and sanity based on other stats
         private void ProcessHealthAndSanityEffects(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
         {
-            UpdateSanity(hunger, water, fatigue, health, sanity);
+            UpdateSanity(player, hunger, water, fatigue, health, sanity);
             float environmentalFactor = WeatherEffects.GetEnvironmentalFactor(player);
 
             // Decrease health and sanity if all critical stats are very low
@@ -925,17 +933,15 @@ namespace PEPCO.iSurvival.Core
             }
         }
 
-        private void OxygenLevelEnvironmentalFactor(IMyPlayer player)
-        {
-            double oxygenLevel = MyAPIGateway.Session.OxygenProviderSystem.GetOxygenInPoint(player.GetPosition());
-            bool isAirtight = grid.IsRoomAtPositionAirtight(player.GetPosition());
-
+        private double OxygenLevelEnvironmentalFactor(IMyPlayer player)
+{
+            double oxygenLevel = MyAPIGateway.Session.Player.Character.OxygenLevel;
             MyAPIGateway.Utilities.ShowMessage("Weather", $"Current: {oxygenLevel}");
-            //if (oxygenLevel <= 0.5) ;
+            return oxygenLevel;
 
 
 
-            //return 1.0f; // Placeholder, should be replaced with actual environmental factors
+
         }
 
         // END Movement Processing
