@@ -16,9 +16,13 @@
 			<Model>Models\Cubes\large\GlobeGimmick.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="10"/>
+				<Component Subtype="Computer" Count="10"/>
 			</Components>
 			<CriticalComponent Subtype="SteelPlate" Index="0"/>
 			<BlockPairName>GlobeGimmick</BlockPairName>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true"/>
+			</MountPoints>
 		</Definition>
 	</CubeBlocks>
 </Definitions>
