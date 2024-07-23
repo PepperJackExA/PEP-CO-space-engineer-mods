@@ -14,8 +14,6 @@ using VRage.ObjectBuilders;
 using VRage.Utils;
 using VRageMath;
 using PEPCO.iSurvival.Chat;
-using PEPCO.iSurvival.Log;
-using PEPCO.iSurvival.Core;
 using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
 using VRage.Game.ModAPI;
@@ -502,7 +500,7 @@ namespace PEPCO.iSurvival.Core
             var blockDef = block.BlockDefinition.SubtypeId.ToString();
             if (blockDef.Contains("Bed"))
             {
-                
+
                 stamina.Increase(2f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
                 fatigue.Increase(1f * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
                 var averageVitalStats = ((hunger.Value + sanity.Value + water.Value + fatigue.Value + (health.Value / 2)) / 5);
@@ -722,7 +720,7 @@ namespace PEPCO.iSurvival.Core
         // Sanity balance mechanic
         private void UpdateSanity(IMyPlayer player, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat health, MyEntityStat sanity)
         {
-            
+
             // Calculate the average of the vital stats
             var averageVitalStats = ((hunger.Value + sanity.Value + water.Value + fatigue.Value + (health.Value / 2)) / 5);
             var decreaseFactor = (100 - averageVitalStats) / 1000;
@@ -734,7 +732,7 @@ namespace PEPCO.iSurvival.Core
             {
                 if (sanity.Value < (averageVitalStats - 10))
                 {
-                    sanity.Increase((averageVitalStats/500) * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+                    sanity.Increase((averageVitalStats / 500) * iSurvivalSessionSettings.sanityincreasemultiplier, null);
 
                     //MyAPIGateway.Utilities.ShowMessage("Sanity:", $"full oxygen: {oxygenLevel} average:{averageVitalStats-10} Increase:{(averageVitalStats/1000) * environmentalFactor} env:{environmentalFactor}");
                 }
@@ -751,7 +749,7 @@ namespace PEPCO.iSurvival.Core
             {
 
             }
-            
+
             if (sanity.Value < averageVitalStats - 30)
             {
                 sanity.Increase((averageVitalStats / 1000) * iSurvivalSessionSettings.sanityincreasemultiplier, null);
@@ -906,7 +904,7 @@ namespace PEPCO.iSurvival.Core
         }
 
 
-        
+
 
         public class WeatherEffects
         {
