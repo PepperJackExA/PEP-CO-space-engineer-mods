@@ -147,7 +147,7 @@
 			</Id>
 			<DisplayName>Farm Compost</DisplayName>
 			<Description>Farm compost used to keep your farms going.</Description>
-			<Icon>Textures\GUI\Icons\ore_biomass.dds</Icon>
+			<Icon>Textures\GUI\Icons\FarmingCompost.png</Icon>
 			<Size>
 				<X>0.2</X>
 				<Y>0.1</Y>
@@ -155,7 +155,7 @@
 			</Size>
 			<Mass>8</Mass>
 			<Volume>2</Volume>
-			<Model>Models\Components\construction_components_component.mwm</Model>
+			<Model>Models\Cubes\Small\FarmingCompost.mwm</Model>
 			<PhysicalMaterial>Stone</PhysicalMaterial>
 			<MaxIntegrity>30</MaxIntegrity>
 			<DropProbability>0.5</DropProbability>
@@ -219,9 +219,10 @@
 			<Model>Models\AppleJuiceBottle.mwm</Model>
 			<PhysicalMaterial>None</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Fatigue" Value="0.05" Time="10"/>
+				<Stat Name="Fatigue" Value="0.05" Time="5"/>
 				<Stat Name="Stamina" Value="0.1" Time="5"/>
 				<Stat Name="Hunger" Value="0.05" Time="2"/>
+				<Stat Name="Water" Value="0.1" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>100</MinimalPricePerUnit>
 			<MinimumOfferAmount>1000</MinimumOfferAmount>
@@ -250,6 +251,7 @@
 				<Stat Name="Fatigue" Value="0.05" Time="2"/>
 				<Stat Name="Stamina" Value="0.05" Time="2"/>
 				<Stat Name="Hunger" Value="0.05" Time="2"/>
+				<Stat Name="Water" Value="0.05" Time="2"/>
 			</Stats>
 			<MinimalPricePerUnit>50</MinimalPricePerUnit>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
