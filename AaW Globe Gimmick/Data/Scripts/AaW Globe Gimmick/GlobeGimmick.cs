@@ -12,12 +12,18 @@ using Digi;
 using Sandbox.Game.Entities;
 using static VRageRender.MyBillboard;
 using System.Numerics;
+using static Sandbox.Game.Entities.MyCubeGrid;
 
 namespace PEPCO
 {
     [MyEntityComponentDescriptor(typeof(MyObjectBuilder_TerminalBlock), false, "GlobeGimmick")]
     public class GlobeGimmickLogic : MyGameLogicComponent
     {
+
+
+
+        private const float MAX_DISTANCE_SQ = 100 * 100; // player camera must be under this distance (squared) to see the subpart spinning
+
 
 
         private IMyTerminalBlock block;
@@ -56,12 +62,14 @@ namespace PEPCO
                 }
                 
                 //Stop updating yourself
-                NeedsUpdate = MyEntityUpdateEnum.NONE;
+                NeedsUpdate = MyEntityUpdateEnum.EACH_FRAME;
             }
             catch (Exception e)
             {
                 Log.Error(e);
             }
         }
+
+       
     }
 }
