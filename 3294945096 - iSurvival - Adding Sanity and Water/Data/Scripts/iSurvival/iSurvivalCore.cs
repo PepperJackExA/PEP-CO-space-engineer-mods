@@ -2,6 +2,7 @@
 using Sandbox.Game;
 using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
+using Sandbox.Game.Entities.Character.Components;
 using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
@@ -376,18 +377,29 @@ namespace PEPCO.iSurvival.Core
         }
 
         // Processes all players in the game
+        // Processes all players in the game
         private void ProcessPlayers()
         {
             var players = new List<IMyPlayer>();
-            MyAPIGateway.Multiplayer.Players.GetPlayers(players, p => p.Character != null && p.Character.ToString().Contains("Astronaut"));
+            MyAPIGateway.Multiplayer.Players.GetPlayers(players, p =>
+                p.Character != null &&
+                p.Character.ToString().Contains("Astronaut") &&
+                p.Character.IsPlayer &&
+                !p.Character.IsDead &&
+                p.Character.Integrity > 0
+            );
 
             foreach (IMyPlayer player in players)
             {
-                if (iSurvivalSessionSettings.playerExceptions.Contains(MyAPIGateway.Session.LocalHumanPlayer.SteamUserId)) continue;
+                // Ensure player and its character are valid
+                if (player == null || player.Character == null) continue;
 
-                var statComp = player.Character?.Components.Get<MyEntityStatComponent>();
-                if (statComp == null)
+                // Skip players in the exception list
+                if (iSurvivalSessionSettings.playerExceptions.Contains(player.SteamUserId))
                     continue;
+
+                var statComp = player.Character.Components?.Get<MyEntityStatComponent>();
+                if (statComp == null) continue;
 
                 MyEntityStat fatigue, hunger, stamina, health, water, sanity;
                 if (!statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue) ||
@@ -396,25 +408,26 @@ namespace PEPCO.iSurvival.Core
                     !statComp.TryGetStat(MyStringHash.GetOrCompute("Health"), out health) ||
                     !statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water) ||
                     !statComp.TryGetStat(MyStringHash.GetOrCompute("Sanity"), out sanity))
-
                     continue;
-                currentAveragestats = (((hunger.Value + (sanity.Value / 2) + water.Value + (fatigue.Value * 2) + (health.Value / 2)) / 5));
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"average: {currentAveragestats}");
 
-                playerinventoryfillfactor = (1 + (player.Character.GetInventory().VolumeFillFactor) * iSurvivalSessionSettings.playerinventoryfillMultiplyer);
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"GetInventory:{playerinventoryfillfactor}");
+                currentAveragestats = (hunger.Value + (sanity.Value / 2) + water.Value + (fatigue.Value * 2) + (health.Value / 2)) / 5;
+                // MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"average: {currentAveragestats}");
+
+                playerinventoryfillfactor = 1 + (player.Character.GetInventory()?.VolumeFillFactor ?? 0) * iSurvivalSessionSettings.playerinventoryfillMultiplyer;
+                // MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"GetInventory:{playerinventoryfillfactor}");
+
                 ProcessPlayerMovement(player, statComp, stamina, fatigue, hunger, water, sanity, health);
             }
         }
-        public float ProcessDrain(IMyPlayer player)
-        {
-            return (1 + ((100 - currentAveragestats) / 100) * playerinventoryfillfactor / (1 + OxygenLevelEnvironmentalFactor(player)) * (GetEnvironmentalFactor(player)));
 
+        private float ProcessDrain(IMyPlayer player)
+        {
+            return 1 + ((100 - currentAveragestats) / 100) * playerinventoryfillfactor / (1 + OxygenLevelEnvironmentalFactor(player)) * GetEnvironmentalFactor(player);
         }
 
-        public float ProcessIncrease(IMyPlayer player)
+        private float ProcessIncrease(IMyPlayer player)
         {
-            return (1 + (currentAveragestats / 100) / playerinventoryfillfactor * (1 + OxygenLevelEnvironmentalFactor(player)) / (GetEnvironmentalFactor(player)));
+            return 1 + (currentAveragestats / 100) / playerinventoryfillfactor * (1 + OxygenLevelEnvironmentalFactor(player)) / GetEnvironmentalFactor(player);
         }
 
         // Processes the player's movement and updates stats accordingly
@@ -439,10 +452,8 @@ namespace PEPCO.iSurvival.Core
             var blockDef = block.BlockDefinition.SubtypeId.ToString();
             if (blockDef.Contains("Cryo")) return;
 
-
             if (blockDef.Contains("Bed"))
             {
-
                 stamina.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
                 fatigue.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
                 if (sanity.Value < currentAveragestats)
@@ -462,7 +473,6 @@ namespace PEPCO.iSurvival.Core
                 }
             }
             else ProcessSittingEffect(player, statComp, stamina, fatigue, hunger, water, sanity, health);
-
         }
 
 
@@ -471,28 +481,22 @@ namespace PEPCO.iSurvival.Core
         {
             ProcessWaterUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);
             ProcessHungerUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);
-            ProcessFatigueUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);            
+            ProcessFatigueUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);
             ProcessHealthAndSanityEffects(player, stamina, fatigue, hunger, water, sanity, health);
             var movementState = player.Character.CurrentMovementState;
             switch (movementState)
             {
-                //case MyCharacterMovementEnum.Sitting:
-                //    ProcessSittingEffect(player, stamina, fatigue);
-                //    break;
                 case MyCharacterMovementEnum.Standing:
                 case MyCharacterMovementEnum.RotatingLeft:
                 case MyCharacterMovementEnum.RotatingRight:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessStandingEffect");
                     ProcessStandingEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Sprinting:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessSprintingEffect");
                     ProcessSprintingEffect(player, stamina, water);
                     break;
                 case MyCharacterMovementEnum.Crouching:
                 case MyCharacterMovementEnum.CrouchRotatingLeft:
                 case MyCharacterMovementEnum.CrouchRotatingRight:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessCrouchingEffect");
                     ProcessCrouchingEffect(player, stamina, fatigue);
                     break;
                 case MyCharacterMovementEnum.CrouchWalking:
@@ -503,7 +507,6 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.CrouchWalkingRightFront:
                 case MyCharacterMovementEnum.CrouchStrafingLeft:
                 case MyCharacterMovementEnum.CrouchStrafingRight:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessCrouchWalkingEffect");
                     ProcessCrouchWalkingEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Walking:
@@ -512,7 +515,6 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.WalkStrafingRight:
                 case MyCharacterMovementEnum.WalkingRightBack:
                 case MyCharacterMovementEnum.WalkingRightFront:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessWalkingEffect");
                     ProcessWalkingEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Running:
@@ -523,34 +525,26 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.RunningRightFront:
                 case MyCharacterMovementEnum.RunStrafingLeft:
                 case MyCharacterMovementEnum.RunStrafingRight:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessRunningEffect");
                     ProcessRunningEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.LadderUp:
                 case MyCharacterMovementEnum.LadderDown:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessLadderEffect");
                     ProcessLadderEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Flying:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessFlyingEffect");
                     ProcessFlyingEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Falling:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessFallingEffect");
                     ProcessFallingEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Jump:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessJumpingEffect");
                     ProcessJumpingEffect(player, stamina);
                     break;
                 default:
-                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessDefaultMovementEffect");
-                    //ProcessDefaultMovementEffect(player, stamina, water, hunger, fatigue, sanity);
+                    // Handle other movement states or do nothing
                     break;
             }
-
         }
-
 
         // START Movement Processing
         private void ProcessSittingEffect(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
@@ -859,14 +853,17 @@ namespace PEPCO.iSurvival.Core
 
         private float OxygenLevelEnvironmentalFactor(IMyPlayer player)
         {
-            // return current oxygen level at player
-            return MyAPIGateway.Session.Player.Character.OxygenLevel;
+            // Ensure player and its character are valid
+            if (player == null || player.Character == null) return 1.0f;
 
+            // Ensure character has oxygen properties
+            var character = player.Character;
+            var oxygenComponent = character.Components?.Get<MyCharacterOxygenComponent>();
 
-
-
-
+            // Return the oxygen level if available, otherwise return a default factor
+            return oxygenComponent?.EnvironmentOxygenLevel ?? 1.0f;
         }
+
 
         // END Movement Processing
         // Background process for receiving messages
