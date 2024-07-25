@@ -22,7 +22,7 @@ using Sandbox.Game.EntityComponents;
 
 namespace PEPCO
 {
-    [MyEntityComponentDescriptor(typeof(MyObjectBuilder_TerminalBlock), false, "MercatorMap")]
+    [MyEntityComponentDescriptor(typeof(MyObjectBuilder_TerminalBlock), false, "MercatorMap", "SG_MercatorMap")]
     public class MercatorMapLogic : MyGameLogicComponent
     {
 
@@ -33,6 +33,9 @@ namespace PEPCO
         //Subpart name
         private const string subpartName = "MercPlane"; // what I called it
 
+        //Subpart map names
+        private static readonly List<string> subpartMapNames = new List<string> { "AgarisMap" };
+
         //Subpart operation
         private bool subpartFirstFind = true; // used for storing the subpart Worldmatrix on first find
 
@@ -41,17 +44,27 @@ namespace PEPCO
 
         //Screen dimensions
         private const double screenWidth = 4.5;
-        private const double screenHeight = screenWidth * 0.5;
+        private const double screenHeight = 2.25;
+
+        //Chevron dimension limits
+        public const float minChevronScale = 0.1f;
+        public const float maxChevronScale = 10f;
+
+        //Chevron strength limits
+        public const float minChevronStrength= 0.1f;
+        public const float maxChevronStrengt = 10f;
 
         private Vector3 baseSouth = new Vector3(0f, 1f, 0f);
 
-        //For rotating the indicator towards the bearing
+        //For rotating the indicator towards the heading
         private Vector3 rotationAxis = Vector3.Forward; // rotation axis for the subpart
 
         //For the distance check
         private const float maxDistanceSquared = 100 * 100; // player camera must be closer than this distance (squared) to see the gimmick's details
 
-        //THe mod stroage component UID
+        private MatrixD lastPositionComponent;
+
+        //The mod stroage component UID
         public readonly Guid SETTINGS_GUID = new Guid("4D3C2B1A-8765-CBA9-0FED-BA0987654321");
 
         public readonly MercatorMapBlockSettings Settings = new MercatorMapBlockSettings();
@@ -68,6 +81,7 @@ namespace PEPCO
                 Settings.mercatorMapOffset = value;
 
                 SettingsChanged();
+                UpdateMap(block);
             }
         }
 
@@ -79,6 +93,31 @@ namespace PEPCO
                 Settings.mercatorMapChevronColor = value;
 
                 SettingsChanged();
+                UpdateMap(block);
+            }
+        }
+
+        public float mercatorMapChevronScale
+        {
+            get { return Settings.mercatorMapChevronScale; }
+            set
+            {
+                Settings.mercatorMapChevronScale = MathHelper.Clamp(value,minChevronScale,maxChevronScale);
+
+                SettingsChanged();
+                UpdateMap(block);
+            }
+        }
+
+        public float mercatorMapChevronStrength
+        {
+            get { return Settings.mercatorMapChevronStrength; }
+            set
+            {
+                Settings.mercatorMapChevronStrength = MathHelper.Clamp(value, minChevronStrength, maxChevronStrengt);
+
+                SettingsChanged();
+                UpdateMap(block);
             }
         }
 
@@ -97,7 +136,7 @@ namespace PEPCO
                 // If we are on a dedicated server, do nothing
                 if (MyAPIGateway.Utilities.IsDedicated)
                 {
-                    Log.Info("This mod does nothing on dedicated servers.");
+                    //Log.Info("This mod does nothing on dedicated servers.");
                     return;
                 }
 
@@ -105,11 +144,17 @@ namespace PEPCO
                 // If the block is not ignore
                 if (block?.CubeGrid?.Physics == null)
                 {
-                    Log.Info("Block or grid has no physics, skipping.");
+                    //Log.Info("Block or grid has no physics, skipping.");
                     return;
                 }
 
                 MercatorMapTerminalControls.DoOnce(ModContext);
+
+                // set default settings
+                Settings.mercatorMapChevronScale = 1.0f;
+                Settings.mercatorMapChevronColor = new Color(255,0,255,0);
+                Settings.mercatorMapChevronStrength = 10.0f;
+
 
                 LoadSettings();
 
@@ -147,10 +192,9 @@ namespace PEPCO
                 if (loadedSettings != null)
                 {
                     Settings.mercatorMapOffset = loadedSettings.mercatorMapOffset;
-                    Settings.mercatorMapChevronColorRed = loadedSettings.mercatorMapChevronColorRed;
-                    Settings.mercatorMapChevronColorGreen = loadedSettings.mercatorMapChevronColorGreen;
-                    Settings.mercatorMapChevronColorBlue = loadedSettings.mercatorMapChevronColorBlue;
+                    Settings.mercatorMapChevronScale = loadedSettings.mercatorMapChevronScale;
                     Settings.mercatorMapChevronColor = loadedSettings.mercatorMapChevronColor;
+                    Settings.mercatorMapChevronStrength = loadedSettings.mercatorMapChevronStrength;
                     return;
                 }
             }
@@ -178,17 +222,18 @@ namespace PEPCO
             block.Storage.SetValue(SETTINGS_GUID, Convert.ToBase64String(MyAPIGateway.Utilities.SerializeToBinary(Settings)));
         }
 
-        public override void UpdateBeforeSimulation10()
-        {
-            try
-            {
-                SyncSettings();
-            }
-            catch (Exception e)
-            {
-                Log.Error(e);
-            }
-        }
+        //public override void UpdateBeforeSimulation10()
+        //{
+        //    try
+        //    {
+        //        Log.Info("UpdateBeforeSimulation10");
+        //        SyncSettings();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Log.Error(e);
+        //    }
+        //}
 
         void SettingsChanged()
         {
@@ -232,7 +277,21 @@ namespace PEPCO
             // If the block is too far away, return
             if (Vector3D.DistanceSquared(MyAPIGateway.Session.Camera.Position, block.GetPosition()) > maxDistanceSquared) return;
 
+            // Only update if the block has moved
+            if (block.PositionComp.WorldMatrixRef == lastPositionComponent)
+            {
+                //Log.Info("Block has not moved, skipping.");
+                return;
+            }
 
+            // Update the lastPositionComponent 
+            lastPositionComponent = block.PositionComp.WorldMatrixRef;
+
+            UpdateMap(block);
+        }
+
+        private void UpdateMap(IMyTerminalBlock block)
+        {
             //Log.Info("Updating the subpart");
             try
             {
@@ -242,103 +301,119 @@ namespace PEPCO
                 // Vectors for the rotation
                 MyPlanet planet = MyGamePruningStructure.GetClosestPlanet(blockPosition);
 
-                //Test if the closest planet has Agaris in its name
-                if (planet != null && planet.Name.Contains("Agaris"))
+                if (planet == null) return; // no planet found
+
+                //Test if the planet has the subtype "Agaris"
+                if (!planet.StorageName.StartsWith("Planet Agaris")) return;
+
+                // Get the Planet position
+                Vector3D planetPosition = planet.PositionComp.GetPosition();
+
+                // Get the vector from the block to the planet
+                Vector3D blockToPlanet = Vector3D.Normalize(blockPosition - planetPosition);
+
+                double latitude = Math.Asin(blockToPlanet.Y / blockToPlanet.Length());
+                double latFraction = latitude / (Math.PI / 2);
+                double longitude = Math.Atan2(blockToPlanet.X, blockToPlanet.Z);
+                double lonFraction = longitude / Math.PI;
+
+                // Find the direction the block is facing
+                Vector3 blockRotForwardVector = block.WorldMatrix.Rotation.Forward;
+
+                // Get block position normal (up in reference to the planet)
+                Vector3D relativeBlockPos = block.GetPosition() - planetPosition;
+                Vector3 relativeBlockPosNormal = Vector3.Normalize(relativeBlockPos);
+
+                // Get north normal (north relative to the planet)
+                Vector3D relativeNorth = planetPosition + new Vector3D(0f, planet.AverageRadius, 0f);
+
+                Vector3D blockToNorth = Vector3D.Cross(relativeNorth - blockPosition, planetPosition - blockPosition);
+                Vector3 blockRelativeNorthNormal = Vector3.Normalize(blockToNorth);
+
+                // Calculate the axes offset introduced by the planet's curve on the block
+                Matrix relativeBlockPosNormalOffset;
+                Matrix.CreateRotationFromTwoVectors(ref relativeBlockPosNormal, ref baseSouth, out relativeBlockPosNormalOffset);
+
+                // Apply that offset to the block's forward direction and north
+                Vector3 blockRotForwardVectorCorrected = Vector3.Transform(blockRotForwardVector, relativeBlockPosNormalOffset);
+                Vector3 blockRelativeNorthNormalCorrected = Vector3.Transform(blockRelativeNorthNormal, relativeBlockPosNormalOffset);
+
+                float blockAzimuth, blockElevation, northAzimuth, northElevation;
+
+                // Calculate the block's azimuth and elevation from its forward direction
+                Vector3.GetAzimuthAndElevation(blockRotForwardVectorCorrected, out blockAzimuth, out blockElevation);
+
+                // Calculate the north direction azimuth and elevation from its direction
+                Vector3.GetAzimuthAndElevation(blockRelativeNorthNormalCorrected, out northAzimuth, out northElevation);
+
+                // Calculate the heading in radians
+                float heading = blockAzimuth - northAzimuth;
+                if (heading < 0)
                 {
-                    // Get the Planet position
-                    Vector3D planetPosition = planet.PositionComp.GetPosition();
+                    heading += 2 * (float)Math.PI;
+                }
+                else if (heading > 2 * (float)Math.PI)
+                {
+                    heading -= 2 * (float)Math.PI;
+                }
 
-                    // Get the vector from the block to the planet
-                    Vector3D blockToPlanet = Vector3D.Normalize(blockPosition - planetPosition);
+                // Output the heading
+                //Log.Info($"heading: {heading} radians");
 
-                    double latitude = Math.Asin(blockToPlanet.Y / blockToPlanet.Length());
-                    double latFraction = latitude / (Math.PI / 2);
-                    double longitude = Math.Atan2(blockToPlanet.X, blockToPlanet.Z);
-                    double lonFraction = longitude / Math.PI;
-
-                    // Find the direction the block is facing
-                    Vector3 blockRotForwardVector = block.WorldMatrix.Rotation.Forward;
-
-                    // Get block position normal (up in reference to the planet)
-                    Vector3D relativeBlockPos = block.GetPosition() - planetPosition;
-                    Vector3 relativeBlockPosNormal = Vector3.Normalize(relativeBlockPos);
-
-                    // Get north normal (north relative to the planet)
-                    Vector3D relativeNorth = planetPosition + new Vector3D(0f, planet.AverageRadius, 0f);
-
-                    Vector3D blockToNorth = Vector3D.Cross(relativeNorth - blockPosition, planetPosition - blockPosition);
-                    Vector3 blockRelativeNorthNormal = Vector3.Normalize(blockToNorth);
-
-                    // Calculate the axes offset introduced by the planet's curve on the block
-                    Matrix relativeBlockPosNormalOffset;
-                    Matrix.CreateRotationFromTwoVectors(ref relativeBlockPosNormal, ref baseSouth, out relativeBlockPosNormalOffset);
-
-                    // Apply that offset to the block's forward direction and north
-                    Vector3 blockRotForwardVectorCorrected = Vector3.Transform(blockRotForwardVector, relativeBlockPosNormalOffset);
-                    Vector3 blockRelativeNorthNormalCorrected = Vector3.Transform(blockRelativeNorthNormal, relativeBlockPosNormalOffset);
-
-                    float blockAzimuth, blockElevation, northAzimuth, northElevation;
-
-                    // Calculate the block's azimuth and elevation from its forward direction
-                    Vector3.GetAzimuthAndElevation(blockRotForwardVectorCorrected, out blockAzimuth, out blockElevation);
-
-                    // Calculate the north direction azimuth and elevation from its direction
-                    Vector3.GetAzimuthAndElevation(blockRelativeNorthNormalCorrected, out northAzimuth, out northElevation);
-
-                    // Calculate the bearing in radians
-                    float bearing = blockAzimuth - northAzimuth;
-                    if (bearing < 0)
+                // If the subpart is found
+                if (block.TryGetSubpart(subpartName, out subpart))
+                {
+                    if (subpartFirstFind)
                     {
-                        bearing += 2 * (float)Math.PI;
-                    }
-                    else if (bearing > 2 * (float)Math.PI)
-                    {
-                        bearing -= 2 * (float)Math.PI;
+                        // Store the original position only once
+                        subpartLocalMatrix = subpart.PositionComp.LocalMatrixRef;
+
+                        subpartFirstFind = false;
                     }
 
-                    // Output the bearing
-                    //Log.Info($"Bearing: {bearing} radians");
+                    // Calculate the rotation axis
+                    rotationAxis = Vector3D.Up;
 
-                    // If the subpart is found
-                    if (block.TryGetSubpart(subpartName, out subpart))
+                    //Degrees to radians
+
+
+                    // Apply the rotation
+                    Matrix finalMatrix = Matrix.CreateFromAxisAngle(rotationAxis, heading + (float)(0.5 * Math.PI) + (float)(-Math.PI + mercatorMapOffset * 0.5 * Math.PI)); // 90 degrees is added to make the chevron point north because I don't know why it doesn't --- + (float)(0.5 * Math.PI)
+                    finalMatrix *= subpartLocalMatrix;
+
+                    // Apply the offsetMatrix to the subpart
+                    //subpart.PositionComp.SetLocalMatrix(ref offsetMatrix);
+
+                    // Use the original position so that manipulations are not cumulative
+                    Matrix offsetMatrix = subpartLocalMatrix;
+                    Matrix translationMatrix;
+
+
+                    //Adjust the screenwidth and height for small grid
+                    if (block.CubeGrid.GridSizeEnum == MyCubeSize.Small)
                     {
-                        if (subpartFirstFind)
-                        {
-                            // Store the original position only once
-                            subpartLocalMatrix = subpart.PositionComp.LocalMatrixRef;
-
-                            subpartFirstFind = false;
-                        }
-
-                        // Calculate the rotation axis
-                        rotationAxis = Vector3D.Up;
-
-                        //Degrees to radians
-
-
-                        // Apply the rotation
-                        Matrix finalMatrix = Matrix.CreateFromAxisAngle(rotationAxis, bearing + (float)(0.5 * Math.PI) + (float)(-Math.PI + mercatorMapOffset * 0.5 *Math.PI)); // 90 degrees is added to make the chevron point north because I don't know why it doesn't --- + (float)(0.5 * Math.PI)
-                        finalMatrix *= subpartLocalMatrix;
-
-                        // Apply the offsetMatrix to the subpart
-                        //subpart.PositionComp.SetLocalMatrix(ref offsetMatrix);
-
-                        // Use the original position so that manipulations are not cumulative
-                        Matrix offsetMatrix = subpartLocalMatrix;
-
                         // Apply the translation first
-                        Matrix translationMatrix = Matrix.CreateTranslation((float)(-1 * lonFraction * screenWidth * 0.5), (float)(1 * latFraction * screenHeight * 0.5), 0f);
-                        offsetMatrix *= translationMatrix;
-
-                        //Combine the matrices
-                        finalMatrix.Translation = offsetMatrix.Translation;
-
-                        Log.Info(finalMatrix.Scale.ToString());
-
-                        subpart.PositionComp.SetLocalMatrix(ref finalMatrix);
-
-                        subpart.SetEmissiveParts("Emissive0", mercatorMapChevronColor, 10f);
+                        translationMatrix = Matrix.CreateTranslation((float)(-1 * lonFraction * screenWidth * 0.2 * 0.5), (float)(1 * latFraction * screenHeight * 0.2 * 0.5), 0f);
                     }
+                    else
+                    {
+                        // Apply the translation first
+                        translationMatrix = Matrix.CreateTranslation((float)(-1 * lonFraction * screenWidth * 0.5), (float)(1 * latFraction * screenHeight * 0.5), 0f);
+                    }
+                    // Combine the matrices
+                    offsetMatrix *= translationMatrix;
+
+                    //Keep the orientation and take the offset translation
+                    finalMatrix.Translation = offsetMatrix.Translation;
+
+                    //Apply the chevron scale
+                    finalMatrix = Matrix.CreateScale(mercatorMapChevronScale) * finalMatrix;
+
+                    //Apply the final matrix to the subpart
+                    subpart.PositionComp.SetLocalMatrix(ref finalMatrix);
+
+                    //Set emissive parts on the subpart
+                    subpart.SetEmissiveParts("Emissive0", mercatorMapChevronColor, mercatorMapChevronStrength);
                 }
             }
             catch (Exception e)

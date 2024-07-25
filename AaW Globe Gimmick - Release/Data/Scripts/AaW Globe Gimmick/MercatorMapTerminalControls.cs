@@ -23,7 +23,7 @@ namespace PEPCO
 
         static bool Done = false;
 
-        public static void DoOnce(IMyModContext context) // called by GyroLogic.cs
+        public static void DoOnce(IMyModContext context) // called by MercatorMapLogic.cs
         {
             if (Done)
                 return;
@@ -70,6 +70,64 @@ namespace PEPCO
                     var logic = b?.GameLogic?.GetAs<MercatorMapLogic>();
                     if (logic != null)
                         logic.mercatorMapChevronColor = color;
+                };
+
+                MyAPIGateway.TerminalControls.AddControl<IMyTerminalBlock>(c);
+            }
+
+            {
+                var c = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlSlider, IMyTerminalBlock>(IdPrefix + "ChevronScale");
+                c.Title = MyStringId.GetOrCompute("Chevron Scale");
+                c.Tooltip = MyStringId.GetOrCompute("Changes the scale of the chevron on your map!");
+                c.SupportsMultipleBlocks = false;
+                c.Visible = CustomVisibleCondition;
+
+                c.Setter = (b, v) =>
+                {
+                    var logic = b?.GameLogic?.GetAs<MercatorMapLogic>();
+                    if (logic != null)
+                        logic.mercatorMapChevronScale = MathHelper.Clamp(v, 0.1f, 10f); // just a heads up that the given value here is not clamped by the game, a mod or PB can give lower or higher than the limits!
+                };
+                c.Getter = (b) => b?.GameLogic?.GetAs<MercatorMapLogic>()?.mercatorMapChevronScale ?? 1;
+
+                c.SetLimits(0.1f, 10f);
+                c.Writer = (b, sb) =>
+                {
+                    var logic = b?.GameLogic?.GetAs<MercatorMapLogic>();
+                    if (logic != null)
+                    {
+                        float val = logic.mercatorMapChevronScale;
+                        sb.Append(Math.Round(val, 2));
+                    }
+                };
+
+                MyAPIGateway.TerminalControls.AddControl<IMyTerminalBlock>(c);
+            }
+
+            {
+                var c = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlSlider, IMyTerminalBlock>(IdPrefix + "ChevronStrength");
+                c.Title = MyStringId.GetOrCompute("Chevron Strength");
+                c.Tooltip = MyStringId.GetOrCompute("Changes the glow of the chevron on your map!");
+                c.SupportsMultipleBlocks = false;
+                c.Visible = CustomVisibleCondition;
+
+                c.Setter = (b, v) =>
+                {
+                    var logic = b?.GameLogic?.GetAs<MercatorMapLogic>();
+                    if (logic != null)
+                        logic.mercatorMapChevronStrength = MathHelper.Clamp(v, 0.1f, 10f); // just a heads up that the given value here is not clamped by the game, a mod or PB can give lower or higher than the limits!
+                };
+                c.Getter = (b) => b?.GameLogic?.GetAs<MercatorMapLogic>()?.mercatorMapChevronStrength ?? 10;
+
+                c.SetLimits(0.1f, 10f);
+                c.Writer = (b, sb) =>
+                {
+                    var logic = b?.GameLogic?.GetAs<MercatorMapLogic>();
+                    if (logic != null)
+                    {
+                        float val = logic.mercatorMapChevronStrength;
+                        sb.Append(Math.Round(val, 2));
+                    }
                 };
 
                 MyAPIGateway.TerminalControls.AddControl<IMyTerminalBlock>(c);
