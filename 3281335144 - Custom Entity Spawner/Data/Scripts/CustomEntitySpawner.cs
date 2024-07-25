@@ -748,14 +748,17 @@ GlobalMaxEntities=30
                 var grid = entity as IMyCubeGrid;
                 if (grid != null)
                 {
-                   var blocks = new List<IMySlimBlock>();
-                    grid.GetBlocks(blocks, b => b.FatBlock != null && IsValidBlock(b.FatBlock.BlockDefinition.TypeIdString, b.FatBlock.BlockDefinition.SubtypeId));
+                    var blocks = new List<IMySlimBlock>();
+                    grid.GetBlocks(blocks, b => b.FatBlock != null);
 
                     foreach (var block in blocks)
                     {
                         foreach (var blockSettings in settings.BlockSpawnSettings)
                         {
-                            if (IsValidBlockForSpawning(block, blockSettings, baseUpdateCycles, players))
+                            // Validate the block with its settings
+                            if (block.FatBlock.BlockDefinition.TypeIdString == blockSettings.BlockType &&
+                                block.FatBlock.BlockDefinition.SubtypeId == blockSettings.BlockId &&
+                                IsValidBlockForSpawning(block, blockSettings, baseUpdateCycles, players))
                             {
                                 ProcessBlockSpawning(block, blockSettings, ref entitiesSpawned);
                             }
@@ -764,6 +767,7 @@ GlobalMaxEntities=30
                 }
             }
         }
+
 
         private bool IsValidBlockForSpawning(IMySlimBlock block, BotSpawnerConfig blockSettings, long baseUpdateCycles, List<IMyPlayer> players)
         {
@@ -823,8 +827,6 @@ GlobalMaxEntities=30
             if (blockSettings.EnableEntitySpawning)
             {
                 int currentGlobalEntityCount = GetTotalEntityCount();
-                LogError($"Total Entities: {currentGlobalEntityCount}");
-
                 if (currentGlobalEntityCount >= settings.GlobalMaxEntities)
                 {
                     LogError($"Entity global limit reached: {currentGlobalEntityCount} entities");
@@ -832,8 +834,6 @@ GlobalMaxEntities=30
                 }
 
                 int currentEntityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, "All", true);
-                LogError($"Current Entities in Radius: {currentEntityCount}");
-
                 if (currentEntityCount >= blockSettings.MaxEntitiesInArea)
                 {
                     LogError($"Entity spawn limit reached: {currentEntityCount} entities within radius {blockSettings.MaxEntitiesRadius}");
@@ -853,6 +853,7 @@ GlobalMaxEntities=30
                 RemoveItemsFromInventory(block, blockSettings, 1);
             }
         }
+
 
         private void SpawnEntitiesAndApplyDamage(IMySlimBlock block, BotSpawnerConfig blockSettings, ref int entitiesSpawned, ref bool entitiesSpawnedThisCycle)
         {
@@ -1151,7 +1152,7 @@ GlobalMaxEntities=30
 
                 if (settings.SpawnInsideInventory)
                 {
-                    LogError($"Spawn Item: {itemId} in cargod");
+                    LogError($"Spawn Item: {itemId} in cargo");
                     PlaceItemInCargo(block, itemType, itemId, amount, settings.StackItems);
                 }
                 else
@@ -1169,6 +1170,7 @@ GlobalMaxEntities=30
                 }
             }
         }
+
 
 
 

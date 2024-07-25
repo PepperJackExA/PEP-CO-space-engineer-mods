@@ -82,16 +82,16 @@ namespace PEPCO.iSurvival.RecycleFilters
             {
                 if (water.Value < waterValueLast)
                 {
-                    inventory.AddItems((MyFixedPoint)((waterValueLast - CurrentWaterValue)),
+                    inventory.AddItems((MyFixedPoint)((waterValueLast - CurrentWaterValue)/10),
                         (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Ice"))); 
 
-                    MyAPIGateway.Utilities.ShowMessage("water", $"Collected {(waterValueLast - CurrentWaterValue)} last:{waterValueLast} current: {CurrentWaterValue}");
+                    //MyAPIGateway.Utilities.ShowMessage("water", $"Collected {(waterValueLast - CurrentWaterValue)} last:{waterValueLast} current: {CurrentWaterValue}");
                 }
                 if (hunger.Value < hungerValueLast)
                 {
-                    inventory.AddItems((MyFixedPoint)((hungerValueLast - currentHungerValue)),
+                    inventory.AddItems((MyFixedPoint)((hungerValueLast - currentHungerValue)/10),
                     (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
-                    MyAPIGateway.Utilities.ShowMessage("hunger", $"Collected {(hungerValueLast - currentHungerValue)}  last:{hungerValueLast} current: {currentHungerValue}");
+                    //MyAPIGateway.Utilities.ShowMessage("hunger", $"Collected {(hungerValueLast - currentHungerValue)}  last:{hungerValueLast} current: {currentHungerValue}");
                 }                
 
             }
