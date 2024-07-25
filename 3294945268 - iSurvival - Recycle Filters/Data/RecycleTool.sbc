@@ -160,7 +160,30 @@
             <FlameEffect>WelderFlame</FlameEffect>
         </HandItem>
     </HandItems>
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="Farming" BlueprintSubtypeId="RecyclerTier1" />
+		<Entry Class="SimpleEquipment" BlueprintSubtypeId="RecyclerTier1" />
+	</BlueprintClassEntries>
+	<!-- Blueprints -->
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>RecyclerTier1</SubtypeId>
+			</Id>
+			<DisplayName>Recycler Tier 1</DisplayName>
+			<Icon>Textures\GUI\Icons\Recycler_Tier1.png</Icon>
+			<Prerequisites>
+				<Item Amount="100" TypeId="Ingot" SubtypeId="Stone" />
+				<Item Amount="10" TypeId="Component" SubtypeId="SteelPlate" />
+			</Prerequisites>
+			<Result Amount="100" TypeId="PhysicalGunObject" SubtypeId="Recycler_Tier1" />
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
 <PhysicalItems>
+	<!-- Physical Items -->
 <PhysicalItem>
             <Id>
                 <TypeId>PhysicalGunObject</TypeId>
