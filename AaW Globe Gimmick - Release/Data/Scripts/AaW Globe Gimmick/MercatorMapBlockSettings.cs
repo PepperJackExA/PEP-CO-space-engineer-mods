@@ -15,17 +15,12 @@ namespace PEPCO
         public long mercatorMapOffset;
 
         [ProtoMember(5)]
-        public int mercatorMapChevronColorRed;
+        public float mercatorMapChevronScale;
 
         [ProtoMember(15)]
-        public int mercatorMapChevronColorGreen;
+        public float mercatorMapChevronStrength;
 
         [ProtoMember(25)]
-        public int mercatorMapChevronColorBlue;
-
-        [ProtoMember(35)]
         public Color mercatorMapChevronColor;
-
-
     }
 }

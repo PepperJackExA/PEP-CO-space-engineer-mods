@@ -8,7 +8,7 @@
 			</Id>
 			<DisplayName>{LOC:DisplayName_MercatorMap}</DisplayName>
 			<Description>{LOC:Description_MercatorMap}</Description>
-			<Icon>Textures\GUI\Icons\Cubes\BS.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\MercatorMap.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="2" y="1" z="1"/>
@@ -25,6 +25,38 @@
 				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\large\MercatorMap_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\MercatorMap_BS3.mwm"/>
 			</BuildProgressModels>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>TerminalBlock</TypeId>
+				<SubtypeId>SG_MercatorMap</SubtypeId>
+			</Id>
+			<DisplayName>{LOC:DisplayName_SG_MercatorMap}</DisplayName>
+			<Description>{LOC:Description_SG_MercatorMap}</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SG_MercatorMap.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG_MercatorMap.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="4"/>
+				<Component Subtype="Computer" Count="4"/>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\small\SG_MercatorMap_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\small\SG_MercatorMap_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG_MercatorMap_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>MercatorMap</BlockPairName>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+			</MountPoints>
 		</Definition>
 	</CubeBlocks>
 </Definitions>
