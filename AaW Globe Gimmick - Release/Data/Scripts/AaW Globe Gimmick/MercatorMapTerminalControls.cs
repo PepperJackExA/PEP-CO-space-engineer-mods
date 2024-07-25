@@ -148,7 +148,7 @@ namespace PEPCO
                 c.SupportsMultipleBlocks = false;
                 c.Visible = CustomVisibleCondition;
 
-                c.Getter = (b) => b?.GameLogic?.GetAs<MercatorMapLogic>()?.mercatorMapOffset ?? 0;
+                c.Getter = (b) => b?.GameLogic?.GetAs<MercatorMapLogic>()?.mercatorMapOffset ?? 2;
                 c.Setter = (b, key) => {
                 
 
@@ -160,9 +160,9 @@ namespace PEPCO
                 c.ComboBoxContent = (list) =>
                 {
                     list.Add(new MyTerminalControlComboBoxItem() { Key = 0, Value = MyStringId.GetOrCompute("Block's front") });
-                    list.Add(new MyTerminalControlComboBoxItem() { Key = 1, Value = MyStringId.GetOrCompute("Block's left") });
+                    list.Add(new MyTerminalControlComboBoxItem() { Key = 1, Value = MyStringId.GetOrCompute("Block's right") });
                     list.Add(new MyTerminalControlComboBoxItem() { Key = 2, Value = MyStringId.GetOrCompute("Block's rear") });
-                    list.Add(new MyTerminalControlComboBoxItem() { Key = 3, Value = MyStringId.GetOrCompute("Block's right") });
+                    list.Add(new MyTerminalControlComboBoxItem() { Key = 3, Value = MyStringId.GetOrCompute("Block's left") });
                 };
 
                 MyAPIGateway.TerminalControls.AddControl<IMyTerminalBlock>(c);
