@@ -141,22 +141,22 @@ namespace PEPCO.iSurvival.Core
             public float sanityincreasemultiplier = 1;
 
             //base movemenet numbers
-            public float FallingStaminaDecrease = 0.2f;
-            public float CrouchingFatigueIncrease = 0.25f;
+            public float FallingStaminaDecrease = 0.25f;
+            public float CrouchingFatigueIncrease = 0.5f;
             public float CrouchingStaminaIncrease = 2.5f;
             public float CrouchWalkStaminaIncrease = 1f;
-            public float FlyingStaminaDecrease = 0.3f;
-            public float JumpingStaminaDecrease = 10f;
+            public float FlyingStaminaDecrease = 0.25f;
+            public float JumpingStaminaDecrease = 2f;
             public float LadderStaminaDecrease = 0.1f;
-            public float RunningStaminaDecrease = 0.2f;
-            public float SittingFatigueIncrease = 0.5f;
-            public float SittingStaminaIncrease = 4f;
-            public float SprintingStaminaDecrease = 5f;
-            public float StandingStaminaIncrease = 1.5f;
-            public float WalkingStaminaIncrease = 1f;
+            public float RunningStaminaDecrease = 1f;
+            public float SittingFatigueIncrease = 2f;
+            public float SittingStaminaIncrease = 2.5f;
+            public float SprintingStaminaDecrease = 4f;
+            public float StandingStaminaIncrease = 1f;
+            public float WalkingStaminaIncrease = 0.5f;
 
             //inventory multiplyer
-            public float playerinventoryfillMultiplyer = 2f;
+            public float playerinventoryfillMultiplyer = 4f;
 
 
 
@@ -317,7 +317,10 @@ namespace PEPCO.iSurvival.Core
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
     public class iSurvivalSession : MySessionComponentBase
     {
-        public static float previousStaminaValue = 0;
+        public static float previousStaminaValueforFatigueUpdate = 0;
+        public static float previousStaminaValueforHungerUpdate = 0;
+        public static float previousStaminaValueforWaterUpdate = 0;
+
         public static ushort modId = 19008;
         public static int runCount = 0;
         public static Random rand = new Random();
@@ -396,10 +399,10 @@ namespace PEPCO.iSurvival.Core
 
                     continue;
                 currentAveragestats = (((hunger.Value + (sanity.Value / 2) + water.Value + (fatigue.Value * 2) + (health.Value / 2)) / 5));
-                MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"average: {currentAveragestats}");
+                //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"average: {currentAveragestats}");
 
                 playerinventoryfillfactor = (1 + (player.Character.GetInventory().VolumeFillFactor) * iSurvivalSessionSettings.playerinventoryfillMultiplyer);
-                MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"GetInventory:{playerinventoryfillfactor}");
+                //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"GetInventory:{playerinventoryfillfactor}");
                 ProcessPlayerMovement(player, statComp, stamina, fatigue, hunger, water, sanity, health);
             }
         }
@@ -436,19 +439,17 @@ namespace PEPCO.iSurvival.Core
             var blockDef = block.BlockDefinition.SubtypeId.ToString();
             if (blockDef.Contains("Cryo")) return;
 
-            ProcessHealthAndSanityEffects(player, stamina, fatigue, hunger, water, sanity, health);
-            ProcessFatigueUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);
+
             if (blockDef.Contains("Bed"))
             {
 
-                stamina.Increase(2f * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                fatigue.Increase(1f * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
+                stamina.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                fatigue.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
                 if (sanity.Value < currentAveragestats)
                 {
                     sanity.Increase(0.5f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-
-                    //MyAPIGateway.Utilities.ShowMessage("Bed:", $"{currentAveragestats-10}");
                 }
+                return;
             }
             else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
             {
@@ -468,7 +469,9 @@ namespace PEPCO.iSurvival.Core
         // Applies effects based on the player's movement state
         private void ProcessMovementEffects(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
         {
-            ProcessFatigueUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);
+            ProcessWaterUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);
+            ProcessHungerUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);
+            ProcessFatigueUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);            
             ProcessHealthAndSanityEffects(player, stamina, fatigue, hunger, water, sanity, health);
             var movementState = player.Character.CurrentMovementState;
             switch (movementState)
@@ -479,17 +482,17 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.Standing:
                 case MyCharacterMovementEnum.RotatingLeft:
                 case MyCharacterMovementEnum.RotatingRight:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessStandingEffect");
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessStandingEffect");
                     ProcessStandingEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Sprinting:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessSprintingEffect");
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessSprintingEffect");
                     ProcessSprintingEffect(player, stamina, water);
                     break;
                 case MyCharacterMovementEnum.Crouching:
                 case MyCharacterMovementEnum.CrouchRotatingLeft:
                 case MyCharacterMovementEnum.CrouchRotatingRight:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessCrouchingEffect");
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessCrouchingEffect");
                     ProcessCrouchingEffect(player, stamina, fatigue);
                     break;
                 case MyCharacterMovementEnum.CrouchWalking:
@@ -500,7 +503,7 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.CrouchWalkingRightFront:
                 case MyCharacterMovementEnum.CrouchStrafingLeft:
                 case MyCharacterMovementEnum.CrouchStrafingRight:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessCrouchWalkingEffect");
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessCrouchWalkingEffect");
                     ProcessCrouchWalkingEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Walking:
@@ -509,7 +512,7 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.WalkStrafingRight:
                 case MyCharacterMovementEnum.WalkingRightBack:
                 case MyCharacterMovementEnum.WalkingRightFront:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessWalkingEffect");
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessWalkingEffect");
                     ProcessWalkingEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Running:
@@ -520,29 +523,29 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.RunningRightFront:
                 case MyCharacterMovementEnum.RunStrafingLeft:
                 case MyCharacterMovementEnum.RunStrafingRight:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessRunningEffect");
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessRunningEffect");
                     ProcessRunningEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.LadderUp:
                 case MyCharacterMovementEnum.LadderDown:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessLadderEffect");
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessLadderEffect");
                     ProcessLadderEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Flying:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessFlyingEffect");
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessFlyingEffect");
                     ProcessFlyingEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Falling:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessFallingEffect");
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessFallingEffect");
                     ProcessFallingEffect(player, stamina);
                     break;
                 case MyCharacterMovementEnum.Jump:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessJumpingEffect");
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessJumpingEffect");
                     ProcessJumpingEffect(player, stamina);
                     break;
                 default:
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessDefaultMovementEffect");
-                    ProcessDefaultMovementEffect(player, stamina, water, hunger, fatigue, sanity);
+                    //MyAPIGateway.Utilities.ShowMessage("iSurvival:", $"Movement: ProcessDefaultMovementEffect");
+                    //ProcessDefaultMovementEffect(player, stamina, water, hunger, fatigue, sanity);
                     break;
             }
 
@@ -553,15 +556,20 @@ namespace PEPCO.iSurvival.Core
         private void ProcessSittingEffect(IMyPlayer player, MyEntityStatComponent statComp, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
         {
 
+            ProcessWaterUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);
+            ProcessHungerUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);
+            ProcessFatigueUpdateEffects(player, stamina, fatigue, hunger, water, sanity, health);
+            ProcessHealthAndSanityEffects(player, stamina, fatigue, hunger, water, sanity, health);
+
             if (fatigue.Value < currentAveragestats)
             {
-                MyAPIGateway.Utilities.ShowMessage("sitting:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.SittingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier}");
-                fatigue.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
+                //MyAPIGateway.Utilities.ShowMessage("sitting:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.SittingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier}");
+                fatigue.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.SittingFatigueIncrease*iSurvivalSessionSettings.fatigueincreasemultiplier, null);
             }
             if (stamina.Value < currentAveragestats)
             {
-                MyAPIGateway.Utilities.ShowMessage("sitting:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.SittingStaminaIncrease * iSurvivalSessionSettings.sanityincreasemultiplier}");
-                stamina.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+                //MyAPIGateway.Utilities.ShowMessage("sitting:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.SittingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier}");
+                stamina.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.SittingStaminaIncrease*iSurvivalSessionSettings.staminaincreasemultiplier, null);
             }
 
         }
@@ -570,7 +578,7 @@ namespace PEPCO.iSurvival.Core
         {
             if (stamina.Value < currentAveragestats)
             {
-                MyAPIGateway.Utilities.ShowMessage("Standing:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.StandingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("Standing:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.StandingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier}");
                 stamina.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.StandingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier, null);
             }
         }
@@ -579,12 +587,12 @@ namespace PEPCO.iSurvival.Core
         {
             if (stamina.Value < currentAveragestats)
             {
-                MyAPIGateway.Utilities.ShowMessage("Crouching:", $"Stamina Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.CrouchingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("Crouching:", $"Stamina Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.CrouchingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier}");
                 stamina.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.CrouchingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier, null);
             }
             if (fatigue.Value < currentAveragestats)
             {
-                MyAPIGateway.Utilities.ShowMessage("Crouching:", $"Fatigue Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.CrouchingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("Crouching:", $"Fatigue Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.CrouchingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier}");
                 fatigue.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.CrouchingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
             }
         }
@@ -593,7 +601,7 @@ namespace PEPCO.iSurvival.Core
         {
             if (stamina.Value < currentAveragestats)
             {
-                MyAPIGateway.Utilities.ShowMessage("CrouchWalking:", $"stamina Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.CrouchingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("CrouchWalking:", $"stamina Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.CrouchingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier}");
                 stamina.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.CrouchWalkStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier, null);
             }
             //MyAPIGateway.Utilities.ShowMessage("Crouch Walking", "Stamina increased");
@@ -603,7 +611,7 @@ namespace PEPCO.iSurvival.Core
         {
             if (stamina.Value < currentAveragestats)
             {
-                MyAPIGateway.Utilities.ShowMessage("Walking:", $"stamina Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.WalkingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("Walking:", $"stamina Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.WalkingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier}");
                 stamina.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.WalkingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier, null);
             }
             //MyAPIGateway.Utilities.ShowMessage("Walking", "Stamina increased");
@@ -611,14 +619,14 @@ namespace PEPCO.iSurvival.Core
 
         private void ProcessRunningEffect(IMyPlayer player, MyEntityStat stamina)
         {
-            MyAPIGateway.Utilities.ShowMessage("Running:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.RunningStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
+            //MyAPIGateway.Utilities.ShowMessage("Running:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.RunningStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
             stamina.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.RunningStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier, null);
 
         }
 
         private void ProcessLadderEffect(IMyPlayer player, MyEntityStat stamina)
         {
-            MyAPIGateway.Utilities.ShowMessage("Ladder:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.LadderStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
+            //MyAPIGateway.Utilities.ShowMessage("Ladder:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.LadderStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
             stamina.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.LadderStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier, null);
 
             //MyAPIGateway.Utilities.ShowMessage("Ladder", "Stamina decreased, Water decreased");
@@ -626,15 +634,15 @@ namespace PEPCO.iSurvival.Core
 
         private void ProcessFlyingEffect(IMyPlayer player, MyEntityStat stamina)
         {
-            MyAPIGateway.Utilities.ShowMessage("Flying:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.FlyingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
-            stamina.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.FlyingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier, null);
+            //MyAPIGateway.Utilities.ShowMessage("Flying:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.FlyingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
+            stamina.Decrease(ProcessDrain(player)* playerinventoryfillfactor * iSurvivalSessionSettings.FlyingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier, null);
 
             //MyAPIGateway.Utilities.ShowMessage("Flying", "Stamina decreased, Water decreased");
         }
 
         private void ProcessFallingEffect(IMyPlayer player, MyEntityStat stamina)
         {
-            MyAPIGateway.Utilities.ShowMessage("Falling:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.FallingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
+            //MyAPIGateway.Utilities.ShowMessage("Falling:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.FallingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
             stamina.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.FallingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier, null);
 
             //MyAPIGateway.Utilities.ShowMessage("Falling", "Stamina decreased, Water decreased");
@@ -644,7 +652,7 @@ namespace PEPCO.iSurvival.Core
         {
             if (stamina.Value > 0)
             {
-                MyAPIGateway.Utilities.ShowMessage("Sprinting:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.SprintingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("Sprinting:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.SprintingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
                 stamina.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.SprintingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier, null);
 
                 //MyAPIGateway.Utilities.ShowMessage("Sprinting", "Stamina decreased, Water decreased");
@@ -655,7 +663,7 @@ namespace PEPCO.iSurvival.Core
         {
             if (stamina.Value > 0)
             {
-                MyAPIGateway.Utilities.ShowMessage("Jumping:", $"Stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.JumpingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("Jumping:", $"Stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.JumpingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
                 stamina.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.JumpingStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier, null);
 
                 //MyAPIGateway.Utilities.ShowMessage("Jumping", "Stamina decreased, Water decreased");
@@ -666,7 +674,7 @@ namespace PEPCO.iSurvival.Core
         {
             if (stamina.Value > 0)
             {
-                MyAPIGateway.Utilities.ShowMessage("Default:", $"Increase:{ProcessIncrease(player)} = Decrease:{ProcessDrain(player)}.... YOU SHOULD NOT SEE THIS let pepperjack Know what you did to get this!");
+                //MyAPIGateway.Utilities.ShowMessage("Default:", $"Increase:{ProcessIncrease(player)} = Decrease:{ProcessDrain(player)}.... YOU SHOULD NOT SEE THIS let pepperjack Know what you did to get this!");
             }
         }
 
@@ -678,12 +686,12 @@ namespace PEPCO.iSurvival.Core
             // Sanity balance mechanic
             if (sanity.Value < currentAveragestats - 50)
             {
-                MyAPIGateway.Utilities.ShowMessage("UpdateSanity:", $"Sanity Increase:{(ProcessDrain(player) / 60) * iSurvivalSessionSettings.sanityincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("UpdateSanity:", $"Sanity Increase:{(ProcessDrain(player) / 60) * iSurvivalSessionSettings.sanityincreasemultiplier}");
                 sanity.Increase((ProcessDrain(player) / 60) * iSurvivalSessionSettings.sanityincreasemultiplier, null);
             }
             else if (sanity.Value > currentAveragestats - 50)
             {
-                MyAPIGateway.Utilities.ShowMessage("UpdateSanity:", $"Sanity Decrease:{(ProcessDrain(player) / 60) * iSurvivalSessionSettings.sanityincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("UpdateSanity:", $"Sanity Decrease:{(ProcessDrain(player) / 60) * iSurvivalSessionSettings.sanityincreasemultiplier}");
                 sanity.Decrease((ProcessDrain(player) / 60) * iSurvivalSessionSettings.sanityincreasemultiplier, null);
             }
 
@@ -691,49 +699,48 @@ namespace PEPCO.iSurvival.Core
             if (hunger.Value < 1)
             {
                 health.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.healthdrainmultiplier, null);
-                MyAPIGateway.Utilities.ShowMessage("Health", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
+                //MyAPIGateway.Utilities.ShowMessage("Health", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
             }
             if (fatigue.Value < 1)
             {
                 health.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.healthdrainmultiplier, null);
-                MyAPIGateway.Utilities.ShowMessage("fatigue", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
+                //MyAPIGateway.Utilities.ShowMessage("fatigue", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
             }
             if (water.Value < 1)
             {
                 health.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.healthdrainmultiplier, null);
-                MyAPIGateway.Utilities.ShowMessage("water", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
+                //MyAPIGateway.Utilities.ShowMessage("water", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
             }
             if (sanity.Value < 1)
             {
                 health.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.healthdrainmultiplier, null);
-                MyAPIGateway.Utilities.ShowMessage("sanity", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
+                //MyAPIGateway.Utilities.ShowMessage("sanity", "Health decreased due to low levels of hunger, fatigue, water, or sanity.");
             }
             if (stamina.Value < 1)
             {
                 health.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.healthdrainmultiplier, null);
-                MyAPIGateway.Utilities.ShowMessage("Health", "Health and sanity decreased due to critically low stamina.");
+                //MyAPIGateway.Utilities.ShowMessage("Health", "Health and sanity decreased due to critically low stamina.");
             }
 
 
             //Increase health and decrease hunger if hunger is above 20 and health is below 100
             if ((health.Value < (currentAveragestats)))
             {
-                MyAPIGateway.Utilities.ShowMessage("regen:", $"Health Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.healthincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("regen:", $"Health Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.healthincreasemultiplier}");
                 health.Increase(ProcessIncrease(player) * iSurvivalSessionSettings.healthincreasemultiplier, null);
 
-                MyAPIGateway.Utilities.ShowMessage("regen:", $"Hunger Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.hungerdrainmultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("regen:", $"Hunger Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.hungerdrainmultiplier}");
                 hunger.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.hungerdrainmultiplier, null);
 
-                MyAPIGateway.Utilities.ShowMessage("regen:", $"Sanity Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.sanityincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("regen:", $"Sanity Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.sanityincreasemultiplier}");
                 sanity.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.sanitydrainmultiplier, null);
 
-                MyAPIGateway.Utilities.ShowMessage("regen:", $"Water Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.waterincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("regen:", $"Water Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.waterincreasemultiplier}");
                 water.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.waterdrainmultiplier, null);
 
-                MyAPIGateway.Utilities.ShowMessage("regen:", $"Water Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.fatigueincreasemultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("regen:", $"Water Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.fatigueincreasemultiplier}");
                 fatigue.Decrease(ProcessDrain(player) * iSurvivalSessionSettings.fatiguedrainmultiplier, null);
-                //MyAPIGateway.Utilities.ShowMessage("Health", "Health increased and hunger decreased.");
-            }
+                }
             if (runCount < 300) return;
 
             //StaminaLowEffect(player, stamina, fatigue, hunger, water, sanity, health);
@@ -752,18 +759,57 @@ namespace PEPCO.iSurvival.Core
             // extra if over averagestats
             if (fatigue.Value > (currentAveragestats - ((hunger.Value + water.Value) / 2)))
             {
-                MyAPIGateway.Utilities.ShowMessage("FatigueUpdate:", $"fatigue Decrease:{(ProcessDrain(player) / 60) * iSurvivalSessionSettings.fatiguedrainmultiplier}");
+                //MyAPIGateway.Utilities.ShowMessage("FatigueUpdate:", $"fatigue Decrease:{(ProcessDrain(player) / 60) * iSurvivalSessionSettings.fatiguedrainmultiplier}");
                 fatigue.Decrease((ProcessDrain(player) / 60) * iSurvivalSessionSettings.fatiguedrainmultiplier, null);
             }
 
             // extra if using stamina
-            if (stamina.Value < previousStaminaValue)
+            if (stamina.Value < previousStaminaValueforFatigueUpdate)
             {
-                MyAPIGateway.Utilities.ShowMessage("previousStaminaValue:", $"fatigue Decrease:{(ProcessDrain(player) / 10) * (previousStaminaValue - stamina.Value)}");
-                fatigue.Decrease((ProcessDrain(player) / 10) * (previousStaminaValue - stamina.Value), null);
+                //MyAPIGateway.Utilities.ShowMessage("previousStaminaValue:", $"fatigue Decrease:{(ProcessDrain(player) / 10) * (previousStaminaValue - stamina.Value)}");
+                fatigue.Decrease((ProcessDrain(player) / 10) * (previousStaminaValueforFatigueUpdate - stamina.Value) * iSurvivalSessionSettings.fatiguedrainmultiplier, null);
 
             }
-            previousStaminaValue = stamina.Value;
+            previousStaminaValueforFatigueUpdate = stamina.Value;
+
+
+        }
+        private void ProcessWaterUpdateEffects(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
+        {
+            // constant fatigue drain
+            water.Decrease((ProcessDrain(player) / 60) / GetEnvironmentalFactor(player) * iSurvivalSessionSettings.waterdrainmultiplier, null);
+
+            // extra if over averagestats
+            if (water.Value > currentAveragestats)
+            {
+                //MyAPIGateway.Utilities.ShowMessage("FatigueUpdate:", $"fatigue Decrease:{(ProcessDrain(player) / 60) * iSurvivalSessionSettings.fatiguedrainmultiplier}");
+                water.Decrease((ProcessDrain(player) / 60) / GetEnvironmentalFactor(player) * iSurvivalSessionSettings.waterdrainmultiplier, null);
+            }
+
+            // extra if using stamina
+            if (stamina.Value < previousStaminaValueforWaterUpdate)
+            {
+                //MyAPIGateway.Utilities.ShowMessage("previousStaminaValue:", $"fatigue Decrease:{(ProcessDrain(player) / 10) * (previousStaminaValue - stamina.Value)}");
+                water.Decrease((ProcessDrain(player) / 10) * (previousStaminaValueforWaterUpdate - stamina.Value) / GetEnvironmentalFactor(player) * iSurvivalSessionSettings.waterdrainmultiplier, null);
+
+            }
+            previousStaminaValueforWaterUpdate = stamina.Value;
+
+
+        }
+        private void ProcessHungerUpdateEffects(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
+        {
+            // constant fatigue drain
+            hunger.Decrease((ProcessDrain(player) / 60) / GetEnvironmentalFactor(player) * iSurvivalSessionSettings.hungerdrainmultiplier, null);
+
+            // extra if over averagestats
+            if (hunger.Value > currentAveragestats)
+            {
+                //MyAPIGateway.Utilities.ShowMessage("FatigueUpdate:", $"fatigue Decrease:{(ProcessDrain(player) / 60) * iSurvivalSessionSettings.fatiguedrainmultiplier}");
+                hunger.Decrease((ProcessDrain(player) / 60) / GetEnvironmentalFactor(player) * iSurvivalSessionSettings.hungerdrainmultiplier, null);
+            }
+
+            previousStaminaValueforHungerUpdate = stamina.Value;
 
 
         }
