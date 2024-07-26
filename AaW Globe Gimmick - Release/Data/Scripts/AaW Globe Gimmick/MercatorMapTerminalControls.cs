@@ -60,16 +60,15 @@ namespace PEPCO
             {
                 var c = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlColor, IMyTerminalBlock>(IdPrefix + "ChevronColor");
                 c.Title = MyStringId.GetOrCompute("Chevron Color");
-                c.Tooltip = MyStringId.GetOrCompute("Changes the color of your chevron!");
-                c.SupportsMultipleBlocks = false;
                 c.Visible = CustomVisibleCondition;
-
                 c.Getter = (b) => b?.GameLogic?.GetAs<MercatorMapLogic>()?.mercatorMapChevronColor ?? new Color(255,0,255,1);
                 c.Setter = (b, color) => {
 
                     var logic = b?.GameLogic?.GetAs<MercatorMapLogic>();
                     if (logic != null)
                         logic.mercatorMapChevronColor = color;
+                    c.Tooltip = MyStringId.GetOrCompute("Changes the color of your chevron!");
+                    c.SupportsMultipleBlocks = false;
                 };
 
                 MyAPIGateway.TerminalControls.AddControl<IMyTerminalBlock>(c);
