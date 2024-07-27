@@ -16,9 +16,9 @@
 			<Model>Models\Cubes\Small\CargoContainerMedium.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="10" />
-				<Component Subtype="Hay" Count="50" />
+				<Component Subtype="SteelPlate" Count="50" />
 			</Components>
-			<CriticalComponent Subtype="Hay" Index="0" />
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
 			<MirroringZ>Y</MirroringZ>
 			<MirroringY>Z</MirroringY>
 			<BuildProgressModels>

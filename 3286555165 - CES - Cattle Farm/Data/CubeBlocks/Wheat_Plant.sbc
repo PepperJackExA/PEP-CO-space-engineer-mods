@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Wheat_Plant</SubtypeId>
+			</Id>
+			<DisplayName>{LOC:DisplayName_Wheat_Plant}</DisplayName>
+			<Description>{LOC:Description_Wheat_Plant}</Description>
+			<Icon>Textures\GUI\Icons\Cubes\HayBale.png</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\Wheat_Plant.mwm</Model>
+			<Components>
+				<Component Subtype="Wheat" Count="1"/>
+				<Component Subtype="FarmCompost" Count="10"/>
+
+			</Components>
+			<CriticalComponent Subtype="FarmCompost" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.22" StartY="0.25" EndX="0.78" EndY="0.75"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\small\Wheat_Plant_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\small\Wheat_Plant_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\Wheat_Plant_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>Wheat_Plant</BlockPairName>
+		</Definition>
+	</CubeBlocks>
+	<EntityComponenets>
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Wheat_Plant</SubtypeId>
+			</Id>
+			<Size x="1" y="1" z="1"/>
+			<InputConstraint Whitelist="true" Description="Wheat Plant" Icons="Textures\GUI\Icons\Cubes\HayBale.png">
+				<Entry>
+					<TypeId>Component</TypeId>
+					<SubtypeId>Wheat</SubtypeId>
+				</Entry>				
+			</InputConstraint>
+		</EntityComponent>
+	</EntityComponenets>
+	<EntityContainers>
+		<Container>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Wheat_Plant</SubtypeId>
+			</Id>
+			<DefaultComponents>
+				<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="Wheat_Plant" ForceCreate="true"/>
+			</DefaultComponents>
+		</Container>
+	</EntityContainers>
+	<Components>
+	<Component>
+		<Id>
+			<TypeId>Component</TypeId>
+			<SubtypeId>Wheat</SubtypeId>
+		</Id>
+		<DisplayName>Wheat</DisplayName>
+		<Description>Wheat.. cows eat it too</Description>
+		<Icon>Textures\GUI\Icons\Cubes\HayBale.png</Icon>
+		<Size>
+			<X>1</X>
+			<Y>1</Y>
+			<Z>1</Z>
+		</Size>
+		<Mass>8</Mass>
+		<Volume>2</Volume>
+		<Model>Models\Cubes\small\HayBale.mwm</Model>
+		<PhysicalMaterial>Stone</PhysicalMaterial>
+		<MaxIntegrity>30</MaxIntegrity>
+		<DropProbability>0.5</DropProbability>
+		<Health>18</Health>
+		<MinimumOfferAmount>1000</MinimumOfferAmount>
+		<MaximumOfferAmount>5000</MaximumOfferAmount>
+		<MinimumOrderAmount>100</MinimumOrderAmount>
+		<MaximumOrderAmount>1000</MaximumOrderAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+		<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
+		<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+	</Component>
+	</Components>
+</Definitions>

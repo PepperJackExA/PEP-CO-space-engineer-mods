@@ -17,9 +17,9 @@
 			<Model>Models\Cubes\small\FeedTrough.mwm</Model>
             <Components>
                 <Component Subtype="SteelPlate" Count="10" />
-				<Component Subtype="Hay" Count="1000" />
+				<Component Subtype="SteelPlate" Count="1000" />
             </Components>
-            <CriticalComponent Subtype="Hay" Index="0" />
+            <CriticalComponent Subtype="SteelPlate" Index="0" />
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="4.00"/>
 			</MountPoints>

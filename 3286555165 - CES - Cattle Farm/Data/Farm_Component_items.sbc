@@ -35,33 +35,6 @@
 		</Component>
 		
 		<!--- Plants -->
-		<Component>
-			<Id>
-				<TypeId>Component</TypeId>
-				<SubtypeId>Hay</SubtypeId>
-			</Id>
-			<DisplayName>Hay</DisplayName>
-			<Description>Hay.. cows eat it</Description>
-			<Icon>Textures\GUI\Icons\Cubes\HayBale.png</Icon>
-			<Size>
-				<X>1</X>
-				<Y>1</Y>
-				<Z>1</Z>
-			</Size>
-			<Mass>8</Mass>
-			<Volume>2</Volume>
-			<Model>Models\Cubes\small\HayBale.mwm</Model>
-			<PhysicalMaterial>Stone</PhysicalMaterial>
-			<MaxIntegrity>30</MaxIntegrity>
-			<DropProbability>0.5</DropProbability>
-			<Health>18</Health>
-			<MinimumOfferAmount>1000</MinimumOfferAmount>
-			<MaximumOfferAmount>5000</MaximumOfferAmount>
-			<MinimumOrderAmount>100</MinimumOrderAmount>
-			<MaximumOrderAmount>1000</MaximumOrderAmount>
-			<CanPlayerOrder>true</CanPlayerOrder>
-			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
-			<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
-		</Component>
+		
 	</Components>
 </Definitions>
