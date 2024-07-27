@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>PlanterBox</SubtypeId>
+			</Id>
+			<DisplayName>Planter Box</DisplayName>
+			<Description>Used to grow plants!</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="1" z="3" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\small\PlanterBox.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0" StartY="0" EndX="3" EndY="1" />
+				<MountPoint Side="Front" StartX="0" StartY="0" EndX="3" EndY="1" />
+				<MountPoint Side="Left" StartX="0" StartY="0" EndX="3" EndY="1" />
+				<MountPoint Side="Right" StartX="0" StartY="0" EndX="3" EndY="1" />
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" />
+				<MountPoint Side="Top" StartX="0" StartY="0" EndX="3" EndY="3" CouplingTag="PlanterBox" />
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\PlanterBox_BS1.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\PlanterBox_BS2.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>PlanterBox</BlockPairName>
+		</Definition>
+	</CubeBlocks>
+	<EntityComponents>
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>PlanterBox</SubtypeId>
+			</Id>
+			<Size x="1" y="3" z="3" />
+			<InputConstraint Whitelist="true" Description="Planter Box" Icons="Textures\GUI\Icons\AstronautBackpack.dds">
+				<Entry>
+					<TypeId>Component</TypeId>
+					<SubtypeId>FarmCompost</SubtypeId>
+				</Entry>
+				<Entry>
+					<TypeId>Component</TypeId>
+					<SubtypeId>Wheat</SubtypeId>
+				</Entry>
+				<Entry>
+					<TypeId>ConsumableItem</TypeId>
+					<SubtypeId>Worm</SubtypeId>
+				</Entry>
+			</InputConstraint>
+		</EntityComponent>
+	</EntityComponents>
+	<EntityContainers>
+		<Container>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>PlanterBox</SubtypeId>
+			</Id>
+			<DefaultComponents>
+				<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="PlanterBox" ForceCreate="true" />
+			</DefaultComponents>
+		</Container>
+	</EntityContainers>
+</Definitions>
