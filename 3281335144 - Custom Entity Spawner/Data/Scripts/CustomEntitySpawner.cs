@@ -760,6 +760,7 @@ GlobalMaxEntities=30
                                 block.FatBlock.BlockDefinition.SubtypeId == blockSettings.BlockId &&
                                 IsValidBlockForSpawning(block, blockSettings, baseUpdateCycles, players))
                             {
+                                
                                 ProcessBlockSpawning(block, blockSettings, ref entitiesSpawned);
                             }
                         }
@@ -823,7 +824,7 @@ GlobalMaxEntities=30
         private void ProcessBlockSpawning(IMySlimBlock block, BotSpawnerConfig blockSettings, ref int entitiesSpawned)
         {
             bool entitiesSpawnedThisCycle = false;
-
+            RemoveItemsFromInventory(block, blockSettings);
             if (blockSettings.EnableEntitySpawning)
             {
                 int currentGlobalEntityCount = GetTotalEntityCount();
@@ -842,16 +843,12 @@ GlobalMaxEntities=30
 
                 SpawnEntitiesAndApplyDamage(block, blockSettings, ref entitiesSpawned, ref entitiesSpawnedThisCycle);
             }
-
             if (blockSettings.EnableItemSpawning)
             {
                 SpawnItemsAndApplyDamage(block, blockSettings);
             }
 
-            if (entitiesSpawnedThisCycle)
-            {
-                RemoveItemsFromInventory(block, blockSettings, 1);
-            }
+            
         }
 
 
@@ -1077,12 +1074,12 @@ GlobalMaxEntities=30
             return true;
         }
 
-        private void RemoveItemsFromInventory(IMySlimBlock block, BotSpawnerConfig blockSettings, int dropAmount)
+        private void RemoveItemsFromInventory(IMySlimBlock block, BotSpawnerConfig blockSettings)
         {
             var inventory = block.FatBlock.GetInventory() as IMyInventory;
             if (inventory == null)
             {
-                //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Inventory not found.");
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Inventory not found.");
                 LogError("Inventory not found for block.");
                 return;
             }
@@ -1090,18 +1087,18 @@ GlobalMaxEntities=30
             for (int i = 0; i < blockSettings.RequiredItemTypes.Count; i++)
             {
                 var requiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
-                var totalAmountToRemove = (VRage.MyFixedPoint)(blockSettings.RequiredItemAmounts[i] * dropAmount);
+                var totalAmountToRemove = (VRage.MyFixedPoint)(blockSettings.RequiredItemAmounts[i]);
                 if (totalAmountToRemove > 0)
                 {
                     if (inventory.ContainItems(totalAmountToRemove, requiredItemType))
                     {
                         inventory.RemoveItemsOfType(totalAmountToRemove, requiredItemType);
-                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Removed {totalAmountToRemove} of {requiredItemType} from inventory.");
+                        MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Removed {totalAmountToRemove} of {requiredItemType} from inventory.");
                         LogError($"Removed {totalAmountToRemove} of {requiredItemType} from inventory.");
                     }
                     else
                     {
-                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Insufficient items: {totalAmountToRemove} of {requiredItemType} in inventory.");
+                        MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Insufficient items: {totalAmountToRemove} of {requiredItemType} in inventory.");
                         LogError($"Insufficient items: {totalAmountToRemove} of {requiredItemType} in inventory.");
                     }
                 }
