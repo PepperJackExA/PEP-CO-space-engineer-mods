@@ -7,8 +7,18 @@
 				<SubtypeId>PlanterBox</SubtypeId>
 			</Id>
 			<DisplayName>Planter Box</DisplayName>
-			<Description>Used to grow plants!</Description>
-			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<Description>
+				<![CDATA[The Planter Box is an essential component for your farming operations. It allows you to grow various crops, providing a sustainable source of food and resources for your colonies.
+
+**Usage:**
+- **Worms:** Early game food! Put FarmCompost into the planter and it will creat worms.  Put gravel in with the Worms to create more FarmCompost! 
+- **Planting:** Place the Planter Box in a suitable location and add place plants ontop to start growing crops.
+- **Growing:** You must first fully "build" each plant ontop.
+- **Harvesting:** Once they are done producing make sure to empty the crops to use as food for your livestock or trade with other players.
+- **Crafting:** Future products will be introduced!
+                ]]>
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\PlanterBox.png</Icon>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="1" z="3" />
@@ -52,6 +62,10 @@
 				<Entry>
 					<TypeId>ConsumableItem</TypeId>
 					<SubtypeId>Worm</SubtypeId>
+				</Entry>
+				<Entry>
+					<TypeId>Ore</TypeId>
+					<SubtypeId>Stone</SubtypeId>
 				</Entry>
 			</InputConstraint>
 		</EntityComponent>

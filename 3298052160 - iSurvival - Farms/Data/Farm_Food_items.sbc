@@ -19,11 +19,9 @@
 			<Model>Models\Item\Worm.mwm</Model>
 			<PhysicalMaterial>None</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Fatigue" Value="0.05" Time="5"/>
-				<Stat Name="Stamina" Value="0.1" Time="5"/>
-				<Stat Name="Hunger" Value="0.05" Time="2"/>
-				<Stat Name="Water" Value="0.1" Time="5"/>
-				<Stat Name="Sanity" Value="-0.1" Time ="1"/>
+				<Stat Name="Hunger" Value="0.1" Time="1"/>
+				<Stat Name="Water" Value="0.1" Time="1"/>
+				<Stat Name="Sanity" Value="-0.01" Time ="1"/>
 			</Stats>
 			<MinimalPricePerUnit>100</MinimalPricePerUnit>
 			<MinimumOfferAmount>1000</MinimumOfferAmount>

@@ -41,7 +41,14 @@
 					<SubtypeId>Wheat</SubtypeId>
 				</Id>
 				<DisplayName>Wheat</DisplayName>
-				<Description>Wheat.. cows eat it too</Description>
+				<Description>
+					<![CDATA[Wheat is a versatile and essential crop for your farming needs. It is used in crafting and feeding livestock. Grow Wheat to sustain your cattle and produce Raw Steak and Milk.
+                
+**Usage:**
+- Feeding: Use Wheat in Feed Troughs to ensure your livestock, such as cows, are well-fed and healthy.
+
+                ]]>
+				</Description>
 				<Icon>Textures\GUI\Icons\Items\HayBale.png</Icon>
 				<Size>
 					<X>1</X>
@@ -50,7 +57,7 @@
 				</Size>
 				<Mass>0.001</Mass>
 				<Volume>0.001</Volume>
-				<Model>Models\Cubes\small\HayBale.mwm</Model>
+				<Model>Models\Item\HayBale.mwm</Model>
 				<PhysicalMaterial>Organics</PhysicalMaterial>
 				<MaxIntegrity>30</MaxIntegrity>
 				<DropProbability>0.5</DropProbability>

@@ -1079,7 +1079,7 @@ GlobalMaxEntities=30
             var inventory = block.FatBlock.GetInventory() as IMyInventory;
             if (inventory == null)
             {
-                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Inventory not found.");
+                //MyAPIGateway.Utilities.ShowMessage("PEPCO", "Inventory not found.");
                 LogError("Inventory not found for block.");
                 return;
             }
@@ -1093,12 +1093,12 @@ GlobalMaxEntities=30
                     if (inventory.ContainItems(totalAmountToRemove, requiredItemType))
                     {
                         inventory.RemoveItemsOfType(totalAmountToRemove, requiredItemType);
-                        MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Removed {totalAmountToRemove} of {requiredItemType} from inventory.");
+                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Removed {totalAmountToRemove} of {requiredItemType} from inventory.");
                         LogError($"Removed {totalAmountToRemove} of {requiredItemType} from inventory.");
                     }
                     else
                     {
-                        MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Insufficient items: {totalAmountToRemove} of {requiredItemType} in inventory.");
+                        //MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Insufficient items: {totalAmountToRemove} of {requiredItemType} in inventory.");
                         LogError($"Insufficient items: {totalAmountToRemove} of {requiredItemType} in inventory.");
                     }
                 }
