@@ -6,9 +6,23 @@
                 <TypeId>CargoContainer</TypeId>
                 <SubtypeId>FeedTrough</SubtypeId>
             </Id>
-            <DisplayName>Farm 3Feed Trough</DisplayName>
+            <DisplayName>Farm Feed Trough</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\FeedTrough.png</Icon>
-            <Description>Description_MediumCargoContainer</Description>
+			<Description>
+				<![CDATA[Here's how to use it:
+				
+1. **Feeding Animals**: The Feed Trough is designed to feed 'Cow_Bot' entities around it. Keep the Trough repaired as it will take "damage" as the cows feed. 
+
+2. **Spawning Conditions**:
+ - Two Cow's need to be within a 100-meter radius around the Feed Trough and the Trough needs to be 50% repaired or more. 
+ - The Feed Trough will check the player's distance (up to 1000 meters).
+ - For spawning "Farming Compost", the Feed Trough checks for nearby 'Cow_Bot' entities and spawns 'FarmCompost' components on the Cow itself so you need to manually collect or setup collectors.
+
+3. **Maintenance**: Regularly check and refill the Feed Trough with Wheat to ensure continuous spawning.
+
+4. **Environmental Conditions**: The Feed Trough operates best in areas with adequate oxygen and airtight conditions.
+                ]]>
+			</Description>
             <CubeSize>Small</CubeSize>
             <GuiVisible>false</GuiVisible>
             <BlockTopology>TriangleMesh</BlockTopology>
@@ -17,7 +31,7 @@
 			<Model>Models\Cubes\small\FeedTrough.mwm</Model>
             <Components>
                 <Component Subtype="SteelPlate" Count="10" />
-				<Component Subtype="SteelPlate" Count="1000" />
+				<Component Subtype="Wheat" Count="1000" />
             </Components>
             <CriticalComponent Subtype="SteelPlate" Index="0" />
 			<MountPoints>
