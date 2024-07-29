@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<PhysicalItems>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Worm</SubtypeId>
+			</Id>
+			<DisplayName>Worm</DisplayName>
+			<Description>Worms are good for fishing... you can eat them if needed...</Description>
+			<Icon>Textures\GUI\Icons\Items\Worm.png</Icon>
+			<Size>
+				<X>0.1</X>
+				<Y>0.1</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>0.1</Mass>
+			<Volume>0.1</Volume>
+			<Model>Models\Item\Worm.mwm</Model>
+			<PhysicalMaterial>None</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.1" Time="1"/>
+				<Stat Name="Water" Value="0.1" Time="1"/>
+				<Stat Name="Sanity" Value="-0.01" Time ="1"/>
+			</Stats>
+			<MinimalPricePerUnit>100</MinimalPricePerUnit>
+			<MinimumOfferAmount>1000</MinimumOfferAmount>
+			<MaximumOfferAmount>10000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+	</PhysicalItems>
+</Definitions>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ContainerTypes>
+  <ContainerType CountMin="1" CountMax="1">
+            <Id>
+                <TypeId>ContainerTypeDefinition</TypeId>
+                <SubtypeId>WolfLoot</SubtypeId>
+            </Id>
+            <Items>
+                <Item AmountMin="10" AmountMax="20">
+                    <Frequency>1.0</Frequency>
+                    <Id>
+                        <TypeId>ConsumableItem</TypeId>
+                        <SubtypeId>RawSteak</SubtypeId>
+                    </Id>
+                </Item>
+			</Items>
+        </ContainerType>
+        </ContainerTypes>
+
+</Definitions>
