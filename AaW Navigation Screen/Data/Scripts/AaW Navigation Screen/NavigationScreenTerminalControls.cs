@@ -168,6 +168,31 @@ namespace PEPCO
                 MyAPIGateway.TerminalControls.AddControl<IMyTextPanel>(c);
             }
 
+            {
+                var c = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlCombobox, IMyTextPanel>(IdPrefix + "MapZoom");
+                c.Title = MyStringId.GetOrCompute("MapZoom");
+                c.Tooltip = MyStringId.GetOrCompute("Zooms your map to the current quadrant");
+                c.SupportsMultipleBlocks = false;
+                c.Visible = CustomVisibleCondition;
+
+                c.Getter = (b) => b?.GameLogic?.GetAs<NavigationScreenLogic>()?.NavigationScreenZoom ?? 0;
+                c.Setter = (b, key) => {
+
+
+                    var logic = b?.GameLogic?.GetAs<NavigationScreenLogic>();
+                    if (logic != null)
+                        logic.NavigationScreenZoom = (int)key;
+
+                };
+                c.ComboBoxContent = (list) =>
+                {
+                    list.Add(new MyTerminalControlComboBoxItem() { Key = 0, Value = MyStringId.GetOrCompute("Zoom 0") });
+                    list.Add(new MyTerminalControlComboBoxItem() { Key = 1, Value = MyStringId.GetOrCompute("Zoom 1") });
+                };
+
+                MyAPIGateway.TerminalControls.AddControl<IMyTextPanel>(c);
+            }
+
 
         }
     }

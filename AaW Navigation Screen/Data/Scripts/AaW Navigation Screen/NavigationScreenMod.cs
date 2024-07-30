@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 using VRage.Game.Components;
 using Digi;
 using PEPCO.Sync;
+using Sandbox.Game.Entities;
+using VRage.Game.Entity;
+using VRage.ModAPI;
 
 namespace PEPCO
 {
-    [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
+    [MySessionComponentDescriptor(MyUpdateOrder.BeforeSimulation)]
     public class NavigationScreenMod : MySessionComponentBase
     {
         private const string MOD_NAME = "AaW Navigation Screen";
@@ -25,6 +28,11 @@ namespace PEPCO
         public bool IsInit = false;
         public bool IsPlayer = false;
 
+        public readonly List<MyEntity> Entities = new List<MyEntity>();
+        public readonly List<MyPlanet> Planets = new List<MyPlanet>();
+
+        private Func<IMyEntity, bool> entityFilterCached;
+
         public override void LoadData()
         {
             Instance = this;
@@ -37,6 +45,8 @@ namespace PEPCO
 
             IsPlayer = !(MyAPIGateway.Session.IsServer && MyAPIGateway.Utilities.IsDedicated);
 
+            entityFilterCached = new Func<IMyEntity, bool>(EntityFilter);
+            MyAPIGateway.Entities.GetEntities(null, entityFilterCached);
         }
 
         protected override void UnloadData()
@@ -48,6 +58,35 @@ namespace PEPCO
 
             Log.Close();
             Instance = null;
+        }
+        public override void UpdateBeforeSimulation()
+        {
+            //Set update to none
+            if (!IsInit)
+            {
+                IsInit = true;
+                try
+                {
+                    MyAPIGateway.Entities.GetEntities(null, entityFilterCached);
+                }
+                catch (Exception e)
+                {
+                    Log.Error(e);
+                }
+            }
+
+            
+        }
+
+
+        private bool EntityFilter(IMyEntity ent)
+        {
+            var p = ent as MyPlanet;
+
+            if (p != null)
+                Planets.Add(p);
+
+            return false; // don't add to the list, it's null
         }
     }
 }
