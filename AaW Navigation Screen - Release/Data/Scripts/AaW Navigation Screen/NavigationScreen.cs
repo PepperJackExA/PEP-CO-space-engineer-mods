@@ -33,11 +33,7 @@ using CollisionLayers = Sandbox.Engine.Physics.MyPhysics.CollisionLayers;
 
 namespace PEPCO
 {
-    [MyEntityComponentDescriptor(typeof(MyObjectBuilder_TextPanel), false, "NavigationScreen", "SG_NavigationScreen")]
-
-
-
-
+    [MyEntityComponentDescriptor(typeof(MyObjectBuilder_TextPanel), false, "MercatorMap", "SG_MercatorMap", "SG_MercatorMap_Large")]
     public class NavigationScreenLogic : MyGameLogicComponent
     {
 
@@ -47,10 +43,6 @@ namespace PEPCO
         //The entities
         IMyTerminalBlock block; // the block itself
         IMyTextSurfaceProvider blockAsTextSurfaceProvider; // the block as a text surface provider
-        private MyEntitySubpart subpart; // the subpart itself
-
-        //Subpart name
-        private const string subpartName = "MercPlane"; // what I called it
 
         // Update the MapLookup class to include the subpartName and planetOffset properties
         class MapLookup
@@ -70,18 +62,6 @@ namespace PEPCO
             { MyStringHash.GetOrCompute("Planet Thora 4"), new MapLookup { mapTextureName = "AaWThora4_Planet", planetOffset = 1 } }
         };
 
-        //Subpart operation
-        private bool subpartFirstFind = true; // used for storing the subpart Worldmatrix on first find
-
-        //Test if map screen needs an update
-        private bool mapScreenNeedsUpdate = true;
-
-        //Subpart orientation
-        private Matrix subpartLocalMatrix; // keeping the matrix here because subparts are being re-created on paint, resetting their orientations
-
-        //Screen dimensions
-        private const float screenWidth = 4.0f;
-        private const float screenHeight = 2.0f;
 
         //Chevron dimension limits
         public const float minChevronScale = 0.1f;
@@ -124,7 +104,7 @@ namespace PEPCO
         private MatrixD lastPositionComponent;
 
         //For the planet check
-        private MyPlanet currentPlanet;
+        public MyPlanet currentPlanet;
 
         //The mod stroage component UID
         public readonly Guid SETTINGS_GUID = new Guid("4D3C2B1A-8765-CBA9-0FED-BA0987654321");
@@ -222,15 +202,24 @@ namespace PEPCO
 
             
 
+            // If there is no planet, return
+            if (currentPlanet == null)
+            {
+                builder.AppendLine($"Planet: none\n");
+                return;
+            }
+            else
+            {
+                //builder.Clear();
+                builder.Append($"Planet: {currentPlanet?.Generator?.Id.SubtypeName.ToString()}\n" +
+                    $"Heading: {MathHelper.ToDegrees(heading)}°\n" +
+                    $"Longitude: {longitudeOutput}\n" +
+                    $"Latitude: {latitudeOutput}\n" +
+                    $"Zoom: {NavigationScreenZoom}\n" +
+                    $"Misc: \n" +
+                    $"Planet offset: {planetOffset}");
+            }
 
-            //builder.Clear();
-            builder.Append($"Planet: {currentPlanet.Generator.Id.SubtypeName.ToString()}\n" +
-                $"Heading: {heading}\n" +
-                $"Longitude: {longitudeOutput}\n" +
-                $"Latitude: {latitudeOutput}\n" +
-                $"Zoom: {NavigationScreenZoom}\n" +
-                $"Misc: \n" +
-                $"Planet offset: {planetOffset}");
 
         }
 
@@ -254,7 +243,7 @@ namespace PEPCO
                     return;
                 }
 
-                //HideNavigationScreenControls.DoOnce(); //Hide the default terminal controls
+                HideNavigationScreenControls.DoOnce(); //Hide the default terminal controls
                 NavigationScreenTerminalControls.DoOnce(ModContext); //Add the custom terminal controls
 
 
@@ -381,7 +370,7 @@ namespace PEPCO
 
                         currentPlanet = FindClosestPlanet(); // Find the closest planet
 
-                        GetNavigationData(); // Get the navigation data
+                        if (currentPlanet != null) GetNavigationData(); // Get the navigation data
 
                     }
                     else
@@ -448,7 +437,9 @@ namespace PEPCO
                 else if (planetOffset == 1) // Lezuno
                 {
                     //Log.Info("Lezuno");
-                    longitude = Math.Atan2(normalizedBlockToPlanet.Z, -normalizedBlockToPlanet.X);
+                    // was longitude = Math.Atan2(normalizedBlockToPlanet.Z, -normalizedBlockToPlanet.X);
+                    // tried longitude = Math.Atan2(normalizedBlockToPlanet.Z, -normalizedBlockToPlanet.X);
+                    longitude = Math.Atan2(-normalizedBlockToPlanet.Z, -normalizedBlockToPlanet.X); // THis seems to work
                 }
 
                 longitudeOutput = Math.Abs(MathHelper.ToDegrees(longitude)).ToString("0.00") + "° " + (longitude*-1 > 0 ? "E" : "W");
@@ -495,7 +486,7 @@ namespace PEPCO
                 heading -= (float)(Math.PI / 2);
 
                 //Accounting for the block orientation
-                heading += (float)(-Math.PI + NavigationScreenOffset * 0.5 * Math.PI); // 90 degrees is added to make the chevron point north because I don't know why it doesn't --- + (float)(0.5 * Math.PI)
+                heading -= (float)(NavigationScreenOffset * 0.5 * Math.PI);
 
                 if (heading < 0)
                 {
@@ -513,12 +504,12 @@ namespace PEPCO
 
 
             }
+            
+
             catch (Exception e)
             {
-                //Log the error
-                Log.Error("Error in GetNavigationData: " + e);
-
-
+                //Log the error with stack trace
+                Log.Error("Error in GetNavigationData: " + e + "\n" + e.StackTrace);
             }
         }
 
@@ -556,298 +547,6 @@ namespace PEPCO
             return base.IsSerialized();
         }
 
-        private void UpdateMapChevron()
-        {
-            ////Log.Info("Updating the subpart");
-            //try
-            //{
-            //    // Vector for the block position
-            //    Vector3D blockPosition = block.GetPosition();
-
-            //    // Get the Planet position
-            //    Vector3D planetPosition = currentPlanet.PositionComp.GetPosition();
-
-            //    // Get the vector from the block to the planet
-            //    Vector3D blockToPlanet = blockPosition - planetPosition;
-
-            //    // Define a small threshold to account for floating-point precision errors
-            //    const double epsilon = 1e-10;
-
-            //    Vector3D normalizedBlockToPlanet;
-
-            //    // Calculate the length squared of the vector
-            //    double lengthSquared = blockToPlanet.LengthSquared();
-
-            //    // Normalize the vector if its length squared is greater than the threshold
-            //    if (lengthSquared > epsilon)
-            //    {
-            //        normalizedBlockToPlanet = blockToPlanet / Math.Sqrt(lengthSquared);
-            //    }
-            //    else
-            //    {
-            //        // Handle the case where the vector length is too small
-            //        normalizedBlockToPlanet = Vector3D.Zero;
-            //    }
-
-            //    // Calculate latitude
-            //    double latitude = Math.Asin(normalizedBlockToPlanet.Y);
-            //    double latFraction = latitude / (Math.PI / 2);
-            //    latitudeOutput = Math.Abs(MathHelper.ToDegrees(latitude)).ToString("0.00") + "° " + (latitude > 0 ? "N" : "S");
-
-            //    double longitude;
-            //    // Calculate longitude
-            //    if (planetOffset == 1) // Agaris and Moon
-            //    {
-            //        Log.Info("Agaris and Moon");
-            //        longitude = Math.Atan2(-normalizedBlockToPlanet.X, -normalizedBlockToPlanet.Z);
-            //    }
-            //    else if (planetOffset == 2) // Lezuno
-            //    {
-            //        Log.Info("Lezuno");
-            //        longitude = Math.Atan2(normalizedBlockToPlanet.Z, -normalizedBlockToPlanet.X);
-            //    }
-            //    else
-            //    {
-            //        Log.Info("Other planets");
-            //        longitude = Math.Atan2(-normalizedBlockToPlanet.Z, -normalizedBlockToPlanet.X);
-            //    }
-
-            //    longitudeOutput = Math.Abs(MathHelper.ToDegrees(longitude)).ToString("0.00") + "° " + (longitude > 0 ? "E" : "W");
-
-            //    // Output the results
-
-            //    double lonFraction = longitude / Math.PI;
-
-
-
-            //    quadrant.X = (longitude > 0 ? 1 : 0);
-            //    quadrant.Y = (latitude > 0 ? 1 : 0);
-
-            //    //Update the map if the quadrant has changed
-            //    if (quadrant != previousquadrant)
-            //    {
-            //        UpdateMapScreen();
-            //        previousquadrant = quadrant;
-            //    }
-
-            //    // Find the direction the block is facing
-            //    Vector3 blockRotForwardVector = block.WorldMatrix.Rotation.Forward;
-
-            //    // Get block position normal (up in reference to the planet)
-            //    Vector3D relativeBlockPos = block.GetPosition() - planetPosition;
-            //    Vector3 relativeBlockPosNormal = Vector3.Normalize(relativeBlockPos);
-
-            //    // Get north normal (north relative to the planet)
-            //    Vector3D relativeNorth = planetPosition + new Vector3D(0f, currentPlanet.AverageRadius, 0f);
-
-            //    Vector3D blockToNorth = Vector3D.Cross(relativeNorth - blockPosition, planetPosition - blockPosition);
-            //    Vector3 blockRelativeNorthNormal = Vector3.Normalize(blockToNorth);
-
-            //    // Calculate the axes offset introduced by the planet's curve on the block
-            //    Matrix relativeBlockPosNormalOffset;
-            //    Matrix.CreateRotationFromTwoVectors(ref relativeBlockPosNormal, ref baseSouth, out relativeBlockPosNormalOffset);
-
-            //    // Apply that offset to the block's forward direction and north
-            //    Vector3 blockRotForwardVectorCorrected = Vector3.Transform(blockRotForwardVector, relativeBlockPosNormalOffset);
-            //    Vector3 blockRelativeNorthNormalCorrected = Vector3.Transform(blockRelativeNorthNormal, relativeBlockPosNormalOffset);
-
-            //    float blockAzimuth, blockElevation, northAzimuth, northElevation;
-
-            //    // Calculate the block's azimuth and elevation from its forward direction
-            //    Vector3.GetAzimuthAndElevation(blockRotForwardVectorCorrected, out blockAzimuth, out blockElevation);
-
-            //    // Calculate the north direction azimuth and elevation from its direction
-            //    Vector3.GetAzimuthAndElevation(blockRelativeNorthNormalCorrected, out northAzimuth, out northElevation);
-
-            //    // Calculate the heading in radians
-            //    heading = blockAzimuth - northAzimuth;
-            //    if (heading < 0)
-            //    {
-            //        heading += 2 * (float)Math.PI;
-            //    }
-            //    else if (heading > 2 * (float)Math.PI)
-            //    {
-            //        heading -= 2 * (float)Math.PI;
-            //    }
-
-            //    // Output the heading
-            //    //Log.Info($"heading: {heading} radians");
-
-            //    // If the subpart is found
-            //    if (block.TryGetSubpart(subpartName, out subpart))
-            //    {
-            //        if (subpartFirstFind)
-            //        {
-            //            // Store the original position only once
-            //            subpartLocalMatrix = subpart.PositionComp.LocalMatrixRef;
-
-            //            subpartFirstFind = false;
-            //        }
-
-            //        // Calculate the rotation axis
-            //        rotationAxis = Vector3D.Up;
-
-            //        //Degrees to radians
-
-
-            //        // Apply the rotation
-            //        Matrix finalMatrix = Matrix.CreateFromAxisAngle(rotationAxis, heading + (float)(0.5 * Math.PI) + (float)(-Math.PI + NavigationScreenOffset * 0.5 * Math.PI)); // 90 degrees is added to make the chevron point north because I don't know why it doesn't --- + (float)(0.5 * Math.PI)
-            //        finalMatrix *= subpartLocalMatrix;
-
-            //        // Apply the offsetMatrix to the subpart
-            //        //subpart.PositionComp.SetLocalMatrix(ref offsetMatrix);
-
-            //        // Use the original position so that manipulations are not cumulative
-            //        Matrix offsetMatrix = subpartLocalMatrix;
-            //        Matrix translationMatrix;
-
-
-            //        //If zoom is 0
-            //        if (NavigationScreenZoom == 0)
-            //        {
-            //            //Adjust the screenwidth and height for small grid
-            //            if (block.CubeGrid.GridSizeEnum == MyCubeSize.Small)
-            //            {
-            //                // Apply the translation first
-            //                translationMatrix = Matrix.CreateTranslation((float)(lonFraction * screenWidth * 0.2 * 0.5), (float)(latFraction * screenHeight * 0.2 * 0.5), 0f);
-            //            }
-            //            else
-            //            {
-            //                // Apply the translation first
-            //                translationMatrix = Matrix.CreateTranslation((float)(lonFraction * screenWidth * 0.5), (float)(latFraction * screenHeight * 0.5), 0f);
-            //            }
-            //        }
-            //        else
-            //        {
-            //            float xOffset = (quadrant.X == 0 ? 0.5f : -0.5f) * screenWidth + (float)lonFraction * screenWidth;
-            //            float yOffset = (quadrant.Y == 0 ? 0.5f : -0.5f) * screenHeight + (float)latFraction * screenHeight;
-            //            if (debug) Log.Info($"xOffset: {xOffset}");
-            //            if (debug) Log.Info($"yOffset: {yOffset}");
-            //            if (debug) Log.Info($"latFraction: {latFraction}");
-            //            if (debug) Log.Info($"lonFraction: {lonFraction}");
-
-            //            //Adjust the screenwidth and height for small grid
-            //            if (block.CubeGrid.GridSizeEnum == MyCubeSize.Small)
-            //            {
-            //                // Apply the translation first
-            //                translationMatrix = Matrix.CreateTranslation((float)(lonFraction * screenWidth * 0.2 * 0.5), (float)(latFraction * screenHeight * 0.2 * 0.5), 0f);
-            //            }
-            //            else
-            //            {
-            //                // Apply the translation first
-            //                //translationMatrix = Matrix.CreateTranslation((float)(quadrant.Item1 == 0 ? 0.5 : -0.5 * screenWidth), (float)(quadrant.Item2 == 0 ? 0.5 : -0.5 * screenHeight), 0f);
-            //                translationMatrix = Matrix.CreateTranslation(xOffset, yOffset, 0f);
-            //            }
-            //        }
-
-
-
-            //        // Combine the matrices
-            //        offsetMatrix *= translationMatrix;
-
-            //        //Keep the orientation and take the offset translation
-            //        finalMatrix.Translation = offsetMatrix.Translation;
-
-            //        //Apply the chevron scale
-            //        finalMatrix = Matrix.CreateScale(NavigationScreenChevronScale) * finalMatrix;
-
-            //        //Apply the final matrix to the subpart
-            //        subpart.PositionComp.SetLocalMatrix(ref finalMatrix);
-
-            //        //Set emissive parts on the subpart
-            //        subpart.SetEmissiveParts("Emissive0", NavigationScreenChevronColor, NavigationScreenChevronStrength);
-            //    }
-            //}
-            //catch (Exception e)
-            //{
-            //    //Log the error
-            //    Log.Error("Error in MoveSubpart: " + e);
-            //}
-        }
-
-        private void setMapScreenToError()
-        {
-            try
-            {
-                var textPanel = block as IMyTextSurfaceProvider; // Get the block to get the screens
-                if (textPanel != null)
-                {
-                    //textPanel.GetSurface(0).ContentType = VRage.Game.GUI.TextPanel.ContentType.TEXT_AND_IMAGE;
-                    textPanel.GetSurface(0).ClearImagesFromSelection();
-                    textPanel.GetSurface(0).AddImageToSelection("Error_Planet");
-                }
-                else
-                {
-                    //Log the error
-                    Log.Error("Error: No text panel found");
-                }
-            }
-            catch (Exception e)
-            {
-                //Log the error
-                Log.Error("Error in setMapScreenToError: " + e);
-            }
-        }
-
-        private void SetMapScreenToNoPlanet()
-        {
-            try
-            {
-                var textPanel = block as IMyTextSurfaceProvider; // Get the block to get the screens
-                if (textPanel != null)
-                {
-                    //textPanel.GetSurface(0).ContentType = VRage.Game.GUI.TextPanel.ContentType.TEXT_AND_IMAGE;
-                    textPanel.GetSurface(0).ClearImagesFromSelection();
-                    textPanel.GetSurface(0).AddImageToSelection("Error_Gravity"); //Change soon
-                }
-                else
-                {
-                    //Log the error
-                    Log.Error("Error: No text panel found");
-                }
-            }
-            catch (Exception e)
-            {
-                //Log the error
-                Log.Error("Error in setMapScreenToError: " + e);
-            }
-        }
-
-        private void HideSubpart()
-        {
-            try
-            {
-                if (subpart != null)
-                {
-                    subpart.Render.Visible = false;
-                }
-                else
-                {
-                    if (block.TryGetSubpart(subpartName, out subpart)) subpart.Render.Visible = false; // First get the subpart and then hide it
-                }
-            }
-            catch (Exception e)
-            {
-                //Log the error
-                Log.Error("Error in hideSubpart: " + e);
-            }
-        }
-
-        private void ShowSubpart()
-        {
-            try
-            {
-                if (subpart != null)
-                {
-                    subpart.Render.Visible = true;
-                }
-            }
-            catch (Exception e)
-            {
-                //Log the error
-                Log.Error("Error in showSubpart: " + e);
-            }
-        }
 
         private bool BlockInGravity()
         {
@@ -890,8 +589,7 @@ namespace PEPCO
                 MapLookup mapLookup;
 
                 //Set the mapName to the closest planet lookup
-                mapTable.TryGetValue(closestPlanet.Generator.Id.SubtypeId, out mapLookup);
-                if (mapLookup != null)
+                if (mapTable.TryGetValue(closestPlanet.Generator.Id.SubtypeId, out mapLookup))
                 {
                     mapName = mapLookup.mapTextureName;
                     planetOffset = mapLookup.planetOffset;

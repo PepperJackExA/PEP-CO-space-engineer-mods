@@ -11,6 +11,8 @@ using VRageMath;
 using VRageRender;
 using Digi;
 using System.Collections.Generic;
+using VRage.Game.Entity;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace PEPCO
 {
@@ -28,6 +30,8 @@ namespace PEPCO
         
         RectangleF _viewport;
         bool zoomed = false;
+
+        NavigationScreenLogic logic;
 
         public NavigationScreenTSS(IMyTextSurface surface, IMyCubeBlock block, Vector2 size) : base(surface, block, size)
         {
@@ -59,44 +63,56 @@ namespace PEPCO
             {
                 base.Run(); // do not remove
 
+                logic = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>(); // get the gamelogic comp from the block
                 //Test if the block fits the required gamelogic
-                if (TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>() != null) Draw();
+                if (logic != null)
+                {
+                    if (logic.currentPlanet != null)
+                    {
+                        MatrixD camWM = MyAPIGateway.Session.Camera.WorldMatrix;
+
+                        const double MaxDistance = 15;
+
+                        //If distance between camera and block is more than 15 meters return
+                        if (Vector3D.Distance(camWM.Translation, TerminalBlock.GetPosition()) > MaxDistance) return;
+
+
+                        //Proceeds only if the player is looking at the screen
+                        if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.PageDown) || MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Down))
+                        {
+                            logic.NavigationScreenZoom++;
+                        }
+                        else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.PageUp) || MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Up))
+                        {
+                            logic.NavigationScreenZoom--;
+                        }
+                        else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.End) || MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Left))
+                        {
+                            logic.NavigationScreenZoom = 1;
+                        }
+                        else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Home) || MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Right))
+                        {
+                            logic.NavigationScreenZoom = 10;
+                        }
+
+
+                        if (logic.mapName == "Error_Planet") // if the map name is "Error_Planet" then the planet is not mapped
+                        {
+                            DrawUnmappedPlanet();
+                            return;
+                        }
+
+                        Draw();
+                    }
+                    else
+                    {
+                        DrawNoPlanet();
+                    }
+                }
                 else throw new Exception("Oh noes an error :}");
 
 
-                MatrixD camWM = MyAPIGateway.Session.Camera.WorldMatrix;
-
-                const double MaxDistance = 15;
-
-                //If distance between camera and block is more than 15 meters return
-                if (Vector3D.Distance(camWM.Translation, TerminalBlock.GetPosition()) > MaxDistance) return;
-
                 
-                //Proceeds only if the player is looking at the screen
-                if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.PageDown))
-                {
-                    var logic = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>();
-                    if (logic != null)
-                        logic.NavigationScreenZoom++;
-                }
-                else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.PageUp))
-                {
-                    var logic = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>();
-                    if (logic != null)
-                        logic.NavigationScreenZoom--;
-                }
-                else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.End))
-                {
-                    var logic = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>();
-                    if (logic != null)
-                        logic.NavigationScreenZoom = 1;
-                }
-                else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Home))
-                {
-                    var logic = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>();
-                    if (logic != null)
-                        logic.NavigationScreenZoom = 10;
-                }
 
 
             }
@@ -133,6 +149,7 @@ namespace PEPCO
 
             string mapName = logic.mapName;
 
+
             float zoomMultiplier = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>()?.NavigationScreenZoom ?? 1;
             //Log.Info($"Multiplier: {zoomMultiplier}");
 
@@ -154,7 +171,7 @@ namespace PEPCO
 
 
 
-            // Create background sprite
+            // Create the center map sprite
             var sprite = new MySprite()
             {
                 Type = SpriteType.TEXTURE,
@@ -165,21 +182,17 @@ namespace PEPCO
                 Alignment = TextAlignment.CENTER
             };
 
-            
 
-
-
+            // Create the surrounding map sprites
             var spriteLeft = sprite;
             spriteLeft.Position -= new Vector2(screenSize.X * zoomMultiplier, 0);
             var spriteRight = sprite;
             spriteRight.Position += new Vector2(screenSize.X * zoomMultiplier, 0);
-            
-
             var spriteLeftUp = sprite;
             spriteLeftUp.Position -= new Vector2(screenSize.X/2 * zoomMultiplier, screenSize.Y * zoomMultiplier);
             spriteLeftUp.Size = new Vector2(screenSize.X, -screenSize.Y) * zoomMultiplier;
             var spriteRightUp = sprite;
-            spriteRightUp.Position += new Vector2(screenSize.X * zoomMultiplier, -screenSize.Y * zoomMultiplier);
+            spriteRightUp.Position += new Vector2(screenSize.X/2 * zoomMultiplier, -screenSize.Y * zoomMultiplier);
             spriteRightUp.Size = new Vector2(screenSize.X, -screenSize.Y) * zoomMultiplier;
             var spriteLeftDown = sprite;
             spriteLeftDown.Position -= new Vector2(screenSize.X/2 * zoomMultiplier, -screenSize.Y * zoomMultiplier);
@@ -197,24 +210,84 @@ namespace PEPCO
             frame.Add(spriteRightDown);
 
 
+            string mapMarkerData = "Triangle";
+            Vector2 markerSize = new Vector2(25, 50) * (float)NavigationScreenChevronScale;
+
+            //Test if the block is on a static grid
+            if (TerminalBlock.CubeGrid.IsStatic)
+            {
+                mapMarkerData = "Circle";
+                markerSize = new Vector2(50, 50) * (float)NavigationScreenChevronScale;
+            }
+
             //Add a sprite with the width of the screen and 5% of the height
             var mapMarker = new MySprite()
             {
                 Type = SpriteType.TEXTURE,
-                Data = "Triangle",
+                Data = mapMarkerData,
                 Position = _viewport.Center,
-                Size = new Vector2(25,50) * (float)NavigationScreenChevronScale,
+                Size = markerSize,
                 RotationOrScale = (float)heading,                //Rotate the sprite by the heading
                 Color = NavigationScreenChevronColor,
                 Alignment = TextAlignment.CENTER
             };
             frame.Add(mapMarker);
 
-            AddBackground(frame, Color.Black);
-
             frame.Dispose(); // send sprites to the screen
 
             zoomed = false;
+        }
+
+        void DrawNoPlanet()
+        {
+            // Calculate the viewport offset by centering the surface size onto the texture size
+            _viewport = new RectangleF(
+                (Surface.TextureSize - Surface.SurfaceSize) / 2f,
+                Surface.SurfaceSize
+            );
+
+            var frame = Surface.DrawFrame();
+
+            // Create the center map sprite
+            var sprite = new MySprite()
+            {
+                Type = SpriteType.TEXTURE,
+                Data = "Error_Gravity",
+                Position = _viewport.Center,
+                Size = _viewport.Size,
+                Color = Color.White.Alpha(1f),
+                Alignment = TextAlignment.CENTER
+            };
+
+            frame.Add(sprite);
+
+            frame.Dispose();
+        }
+
+        void DrawUnmappedPlanet()
+        {
+            // Calculate the viewport offset by centering the surface size onto the texture size
+            _viewport = new RectangleF(
+                (Surface.TextureSize - Surface.SurfaceSize) / 2f,
+                Surface.SurfaceSize
+            );
+
+            var frame = Surface.DrawFrame();
+
+            // Create the center map sprite
+            var sprite = new MySprite()
+            {
+                Type = SpriteType.TEXTURE,
+                Data = "Error_Planet",
+                Position = _viewport.Center,
+                Size = _viewport.Size,
+                Color = Color.White.Alpha(1f),
+                Alignment = TextAlignment.CENTER
+            };
+
+            frame.Add(sprite);
+
+            frame.Dispose();
         }
 
         void DrawError(Exception e)
