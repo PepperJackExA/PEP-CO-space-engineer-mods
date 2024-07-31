@@ -2,6 +2,7 @@
 using VRage.Game.Components;
 using VRage.Game.ModAPI.Ingame.Utilities;
 using System;
+using System.Collections.Generic;
 using VRage.Utils;
 
 namespace PEPCO
@@ -11,6 +12,9 @@ namespace PEPCO
     {
         private const string ClientConfigFileName = "PEPCOClientSettings.ini";
         private const string ServerConfigFileName = "PEPCOServerSettings.ini";
+
+        private static MyIni clientIni = new MyIni();
+        private static MyIni serverIni = new MyIni();
 
         public static int ClientExampleSetting { get; private set; } = 42;
         public static int ServerExampleSetting { get; private set; } = 84;
@@ -60,15 +64,14 @@ namespace PEPCO
                 using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
                 {
                     var text = reader.ReadToEnd();
-                    var ini = new MyIni();
                     MyIniParseResult result;
-                    if (!ini.TryParse(text, out result))
+                    if (!clientIni.TryParse(text, out result))
                     {
                         MyLog.Default.WriteLineAndConsole($"Failed to parse client settings: {result}");
                         return;
                     }
 
-                    ClientExampleSetting = ini.Get("ClientSettings", "ExampleSetting").ToInt32(ClientExampleSetting);
+                    ClientExampleSetting = clientIni.Get("ClientSettings", "ExampleSetting").ToInt32(ClientExampleSetting);
                 }
             }
         }
@@ -80,27 +83,25 @@ namespace PEPCO
                 using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
                 {
                     var text = reader.ReadToEnd();
-                    var ini = new MyIni();
                     MyIniParseResult result;
-                    if (!ini.TryParse(text, out result))
+                    if (!serverIni.TryParse(text, out result))
                     {
                         MyLog.Default.WriteLineAndConsole($"Failed to parse server settings: {result}");
                         return;
                     }
 
-                    ServerExampleSetting = ini.Get("ServerSettings", "ExampleSetting").ToInt32(ServerExampleSetting);
+                    ServerExampleSetting = serverIni.Get("ServerSettings", "ExampleSetting").ToInt32(ServerExampleSetting);
                 }
             }
         }
 
         private static void SaveClientConfig()
         {
-            var ini = new MyIni();
-            ini.Set("ClientSettings", "ExampleSetting", ClientExampleSetting);
+            clientIni.Set("ClientSettings", "ExampleSetting", ClientExampleSetting);
 
             using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
             {
-                writer.Write(ini.ToString());
+                writer.Write(clientIni.ToString());
             }
         }
 
@@ -108,7 +109,7 @@ namespace PEPCO
         {
             if (ini == null)
             {
-                ini = new MyIni();
+                ini = serverIni;
                 ini.Set("ServerSettings", "ExampleSetting", ServerExampleSetting);
             }
 
@@ -120,18 +121,17 @@ namespace PEPCO
 
         private static void UpdateServerSetting(string section, string key, string value)
         {
-            var ini = new MyIni();
             if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
             {
                 using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
                 {
                     var text = reader.ReadToEnd();
-                    ini.TryParse(text);
+                    serverIni.TryParse(text);
                 }
             }
-            ini.Set(section, key, value);
+            serverIni.Set(section, key, value);
 
-            SaveServerConfig(ini);
+            SaveServerConfig(serverIni);
             LoadServerConfig(); // Reload config after updating
         }
 
@@ -204,20 +204,19 @@ namespace PEPCO
 
             private static void UpdateClientSetting(string section, string key, string value)
             {
-                var ini = new MyIni();
                 if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
                 {
                     using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
                     {
                         var text = reader.ReadToEnd();
-                        ini.TryParse(text);
+                        clientIni.TryParse(text);
                     }
                 }
-                ini.Set(section, key, value);
+                clientIni.Set(section, key, value);
 
                 using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
                 {
-                    writer.Write(ini.ToString());
+                    writer.Write(clientIni.ToString());
                 }
                 LoadClientConfig(); // Reload config after updating
             }
@@ -254,12 +253,34 @@ namespace PEPCO
 
             private static void ShowClientSettings()
             {
-                MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Client ExampleSetting: {ClientExampleSetting}");
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Client Settings:");
+                var clientSections = new List<string>();
+                clientIni.GetSections(clientSections);
+                foreach (var section in clientSections)
+                {
+                    var keys = new List<MyIniKey>();
+                    clientIni.GetKeys(section, keys);
+                    foreach (var key in keys)
+                    {
+                        MyAPIGateway.Utilities.ShowMessage("PEPCO", $"{section}.{key.Name}: {clientIni.Get(key).ToString()}");
+                    }
+                }
             }
 
             private static void ShowServerSettings()
             {
-                MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Server ExampleSetting: {ServerExampleSetting}");
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Server Settings:");
+                var serverSections = new List<string>();
+                serverIni.GetSections(serverSections);
+                foreach (var section in serverSections)
+                {
+                    var keys = new List<MyIniKey>();
+                    serverIni.GetKeys(section, keys);
+                    foreach (var key in keys)
+                    {
+                        MyAPIGateway.Utilities.ShowMessage("PEPCO", $"{section}.{key.Name}: {serverIni.Get(key).ToString()}");
+                    }
+                }
             }
         }
     }
