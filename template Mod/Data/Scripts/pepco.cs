@@ -15,8 +15,8 @@ namespace PEPCO
         private const string ClientConfigFileName = "PEPCOClientSettings.ini";
         private const string ServerConfigFileName = "PEPCOServerSettings.ini";
 
-        private static MyIni clientIni = new MyIni();
-        private static MyIni serverIni = new MyIni();
+        public static MyIni clientIni = new MyIni();
+        public static MyIni serverIni = new MyIni();
 
         public static int ClientExampleSetting { get; private set; } = 42;
         public static int ServerExampleSetting { get; private set; } = 84;
@@ -304,6 +304,12 @@ namespace PEPCO
                             }
                             sendToOthers = false;
                         }
+                        else if (args.Length > 2 && args[1].Equals("show", StringComparison.OrdinalIgnoreCase) && args[2].Equals("server", StringComparison.OrdinalIgnoreCase))
+                        {
+                            var requestPacket = new PacketRequestServerSettings();
+                            requestPacket.Send();
+                            sendToOthers = false;
+                        }
                     }
                 }
                 catch (Exception e)
@@ -432,14 +438,16 @@ namespace PEPCO
             }
         }
 
+        [ProtoContract(UseProtoMembersOnly = true)]
         public class NavigationScreenBlockSettings
         {
+            [ProtoMember(1)]
             public int ExampleSetting { get; set; }
         }
 
         public static class Networking
         {
-            private const ushort NetworkId = 32988;
+            private const ushort NetworkId = 1234;
 
             public static void Init()
             {
@@ -500,6 +508,8 @@ namespace PEPCO
     [ProtoContract]
     [ProtoInclude(100, typeof(PacketUpdateServerSetting))]
     [ProtoInclude(101, typeof(PacketBlockSettings))]
+    [ProtoInclude(102, typeof(PacketRequestServerSettings))]
+    [ProtoInclude(103, typeof(PacketResponseServerSettings))]
     public class PacketBase
     {
         [ProtoMember(1)]
@@ -553,6 +563,63 @@ namespace PEPCO
             catch (Exception e)
             {
                 MyLog.Default.WriteLineAndConsole($"Error in PacketUpdateServerSetting.Received: {e.Message}");
+            }
+        }
+    }
+
+    [ProtoContract(UseProtoMembersOnly = true)]
+    public class PacketRequestServerSettings : PacketBase
+    {
+        public PacketRequestServerSettings() { } // Empty constructor required for deserialization
+
+        public void Send()
+        {
+            if (!MyAPIGateway.Multiplayer.IsServer)
+            {
+                Networking.SendToServer(this);
+            }
+        }
+
+        public override void Received(ref bool relay)
+        {
+            try
+            {
+                if (MyAPIGateway.Multiplayer.IsServer)
+                {
+                    var responsePacket = new PacketResponseServerSettings(SingleFileMod.serverIni.ToString());
+                    Networking.RelayToClients(responsePacket);
+                }
+            }
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in PacketRequestServerSettings.Received: {e.Message}");
+            }
+        }
+    }
+
+    [ProtoContract(UseProtoMembersOnly = true)]
+    public class PacketResponseServerSettings : PacketBase
+    {
+        [ProtoMember(1)]
+        public string ServerSettings { get; set; }
+
+        public PacketResponseServerSettings() { } // Empty constructor required for deserialization
+
+        public PacketResponseServerSettings(string serverSettings)
+        {
+            ServerSettings = serverSettings;
+        }
+
+        public override void Received(ref bool relay)
+        {
+            try
+            {
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Server Settings:");
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", ServerSettings);
+            }
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in PacketResponseServerSettings.Received: {e.Message}");
             }
         }
     }
