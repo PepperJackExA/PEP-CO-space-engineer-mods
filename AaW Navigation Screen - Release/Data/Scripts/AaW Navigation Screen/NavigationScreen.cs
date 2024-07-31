@@ -25,7 +25,9 @@ using System.Linq;
 using Sandbox.Definitions;
 using VRage;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
-
+using Sandbox.Game.Entities.Cube;
+using VRage.Game.ModAPI;
+using CollisionLayers = Sandbox.Engine.Physics.MyPhysics.CollisionLayers;
 
 
 
@@ -60,18 +62,13 @@ namespace PEPCO
         // Update the mapTable initialization code to use the MapLookup class
         private Dictionary<MyStringHash, MapLookup> mapTable = new Dictionary<MyStringHash, MapLookup>()
         {
-            { MyStringHash.GetOrCompute("Planet Thora 4"), new MapLookup { mapTextureName = "AaWThora4_Planet", planetOffset = 2 } },
-            { MyStringHash.GetOrCompute("Planet Agaris"), new MapLookup { mapTextureName = "AaWAgaris_Planet", planetOffset = 1 } },
-            { MyStringHash.GetOrCompute("Planet Crait"), new MapLookup { mapTextureName = "AaWCrait_Planet", planetOffset = 2 } },
-            { MyStringHash.GetOrCompute("Agaris II"), new MapLookup { mapTextureName = "AaWAgarisII_Planet", planetOffset = 1 } },
-            { MyStringHash.GetOrCompute("Planet Lezuno"), new MapLookup { mapTextureName = "AaWLezuno_Planet", planetOffset = 2 } },
-            { MyStringHash.GetOrCompute("Planet Lorus"), new MapLookup { mapTextureName = "AaWLorus_Planet", planetOffset = 2 } }
+            { MyStringHash.GetOrCompute("Planet Agaris"), new MapLookup { mapTextureName = "AaWAgaris_Planet", planetOffset = 0 } },
+            { MyStringHash.GetOrCompute("Agaris II"), new MapLookup { mapTextureName = "AaWAgarisII_Planet", planetOffset = 0 } },
+            { MyStringHash.GetOrCompute("Planet Crait"), new MapLookup { mapTextureName = "AaWCrait_Planet", planetOffset = 1 } },
+            { MyStringHash.GetOrCompute("Planet Lezuno"), new MapLookup { mapTextureName = "AaWLezuno_Planet", planetOffset = 1 } },
+            { MyStringHash.GetOrCompute("Planet Lorus"), new MapLookup { mapTextureName = "AaWLorus_Planet", planetOffset = 1 } },
+            { MyStringHash.GetOrCompute("Planet Thora 4"), new MapLookup { mapTextureName = "AaWThora4_Planet", planetOffset = 1 } }
         };
-
-
-        Vector2 quadrant; // Used for zooming in on the map
-        Vector2 previousquadrant; // Used for zooming in on the map
-
 
         //Subpart operation
         private bool subpartFirstFind = true; // used for storing the subpart Worldmatrix on first find
@@ -100,13 +97,17 @@ namespace PEPCO
 
 
         //For the planet check & for showing on the map
-        private double latitude, longitude; //For arranging the chevron on the map
-        private float heading, gravity; //For rotating the chevron towards the heading
+        public double latitude; //For arranging the chevron on the map
+        public double longitude;//For arranging the chevron on the map
+        public double latitudeFraction; //For arranging the chevron on the map
+        public double longitudeFraction; //For arranging the chevron on the map
+        public float heading; //For rotating the chevron towards the heading
+        public float gravity; //For rotating the chevron towards the heading
+        public string mapName; //For the map name
+
         private bool inGravity = false; //For checking if the block is in gravity
         string longitudeOutput; 
         string latitudeOutput;
-
-        MapLookup planetLookup;
 
         //Required for the map since sometimes the planet is rotated funny
         private float planetOffset;
@@ -224,11 +225,11 @@ namespace PEPCO
 
             //builder.Clear();
             builder.Append($"Planet: {currentPlanet.Generator.Id.SubtypeName.ToString()}\n" +
-                $"Orientation:\n{currentPlanet.PositionComp.WorldMatrixRef.GetOrientation().Rotation.Col0}\n{currentPlanet.PositionComp.WorldMatrixRef.GetOrientation().Rotation.Col1}\n{currentPlanet.PositionComp.WorldMatrixRef.GetOrientation().Rotation.Col2}\n" +
+                $"Heading: {heading}\n" +
                 $"Longitude: {longitudeOutput}\n" +
                 $"Latitude: {latitudeOutput}\n" +
                 $"Zoom: {NavigationScreenZoom}\n" +
-                $"Misc: {quadrant.X}{quadrant.Y}\n" +
+                $"Misc: \n" +
                 $"Planet offset: {planetOffset}");
 
         }
@@ -269,20 +270,14 @@ namespace PEPCO
 
                 if (blockAsTextSurfaceProvider != null)
                 {
-                    blockAsTextSurfaceProvider.GetSurface(0).ContentType = VRage.Game.GUI.TextPanel.ContentType.SCRIPT;
-                    blockAsTextSurfaceProvider.GetSurface(0).FontSize = 1.0f;
-                    blockAsTextSurfaceProvider.GetSurface(0).Alignment = VRage.Game.GUI.TextPanel.TextAlignment.CENTER;
-                    blockAsTextSurfaceProvider.GetSurface(0).TextPadding = 0.0f;
-                    blockAsTextSurfaceProvider.GetSurface(0).Script = "NavigationScreenTSS";
-                    blockAsTextSurfaceProvider.GetSurface(0).ScriptBackgroundColor = new Color(0,0,0);
-
+                    ApplyDefaultBlockScript(); // Apply the default script to the block
                 }
 
                 LoadSettings();
 
                 SaveSettings(); // required for IsSerialized()
 
-
+                
 
                 //Good to go
                 NeedsUpdate = MyEntityUpdateEnum.EACH_10TH_FRAME;
@@ -290,6 +285,23 @@ namespace PEPCO
             catch (Exception e)
             {
                 Log.Error(e);
+            }
+        }
+
+        private void ApplyDefaultBlockScript()
+        {
+            try
+            {
+                blockAsTextSurfaceProvider.GetSurface(0).ContentType = VRage.Game.GUI.TextPanel.ContentType.SCRIPT; // Set the content type to script
+                blockAsTextSurfaceProvider.GetSurface(0).FontSize = 1.0f; // Set the font size
+                blockAsTextSurfaceProvider.GetSurface(0).Alignment = VRage.Game.GUI.TextPanel.TextAlignment.CENTER; // Set the alignment
+                blockAsTextSurfaceProvider.GetSurface(0).TextPadding = 0.0f; // Set the text padding
+                blockAsTextSurfaceProvider.GetSurface(0).Script = "NavigationScreenTSS"; // Set the script to the NavigationScreenTSS
+                blockAsTextSurfaceProvider.GetSurface(0).ScriptBackgroundColor = new Color(0, 0, 0); // Set the script background color
+            }
+            catch (Exception e)
+            {
+                Log.Error("Error in ApplyDefaultBlockScript: " + e);
             }
         }
 
@@ -351,10 +363,8 @@ namespace PEPCO
         {
             try
             {
-                Log.Info("UpdateBeforeSimulation10");
+                if (debug) Log.Info("UpdateBeforeSimulation10");
                 SyncSettings();
-
-                if (debug) Log.Info("UpdateAfterSimulation()", "UpdateAfterSimulation", 10000);
 
                 // If the block is not valid, return
                 if (block?.CubeGrid?.Physics == null || block.MarkedForClose || block.Closed) return;
@@ -365,65 +375,19 @@ namespace PEPCO
 
                 try
                 {
-                    gravity = GetGravityAtBlock(); // Get the gravity at the block
 
-                    inGravity = gravity > 0; // Test if block is in natural gravity
-
-                    if (debug) Log.Info("In gravity: " + inGravity);
-
-                    if (currentPlanet != FindClosestPlanet())
+                    if (BlockInGravity())
                     {
-                        // Find the closest planet
-                        currentPlanet = FindClosestPlanet();
-                        mapScreenNeedsUpdate = true;
-                    }
 
-                    if (inGravity) // Change in planet detected
-                    {
-                        if (debug) Log.Info($"block.GetPosition(): {block.GetPosition()}");
+                        currentPlanet = FindClosestPlanet(); // Find the closest planet
 
-                        if (debug) Log.Info("Current planet: " + currentPlanet?.Generator.Id.SubtypeId);
+                        GetNavigationData(); // Get the navigation data
 
-                        // Update the map screen to show the planet
-                        if (mapScreenNeedsUpdate)
-                        {
-                            UpdateMapScreen();
-                            mapScreenNeedsUpdate = false;
-                            if (debug) Log.Info("Map screen updated");
-                        }
-
-                        if (planetLookup != null)
-                        {
-                            // Show the subpart
-                            ShowSubpart();
-                            if (debug) Log.Info("Subpart shown");
-                        }
-                        else
-                        {
-                            // Hide the subpart
-                            HideSubpart();
-                            if (debug) Log.Info("Subpart hidden");
-                        }
-
-                        // Only update if the block has moved
-                        if (block?.PositionComp?.WorldMatrixRef != lastPositionComponent)
-                        {
-                            // Update the map chevron
-                            UpdateMapChevron();
-
-                            lastPositionComponent = block.PositionComp.WorldMatrixRef;
-                        }
                     }
                     else
                     {
                         // Clear the last planet
                         currentPlanet = null;
-
-                        // Update the screen to show no planet
-                        SetMapScreenToNoPlanet();
-
-                        // Hide the subpart
-                        HideSubpart();
                     }
                 }
                 catch (NullReferenceException nullRefEx)
@@ -440,6 +404,121 @@ namespace PEPCO
             catch (Exception e)
             {
                 Log.Error(e);
+            }
+        }
+
+        private void GetNavigationData()
+        {
+            try
+            {
+                // Define a small threshold to account for floating-point precision errors
+                const double epsilon = 1e-10;
+
+                Vector3D blockPosition = block.GetPosition(); //Block position as vector                
+                Vector3D planetPosition = currentPlanet.PositionComp.GetPosition(); //Planet position as vector
+                Vector3D blockToPlanet = blockPosition - planetPosition; // Get the vector from the block to the planet
+                Vector3D normalizedBlockToPlanet; //Normalized vector for the calculation of the latitude and longitude
+
+                double lengthSquared = blockToPlanet.LengthSquared(); // Calculate the length squared of the vector
+
+                // Normalize the vector if its length squared is greater than the threshold
+                if (lengthSquared > epsilon)
+                {
+                    normalizedBlockToPlanet = blockToPlanet / Math.Sqrt(lengthSquared);
+                }
+                else
+                {
+                    // Handle the case where the vector length is too small
+                    normalizedBlockToPlanet = Vector3D.Zero;
+                }
+
+                // Calculate latitude
+                latitude = Math.Asin(normalizedBlockToPlanet.Y);
+                latitudeFraction = latitude / (Math.PI / 2);
+
+                //For the custom data
+                latitudeOutput = Math.Abs(MathHelper.ToDegrees(latitude)).ToString("0.00") + "° " + (latitude > 0 ? "N" : "S");
+
+                // Calculate longitude
+                if (planetOffset == 0) // Agaris and Moon
+                {
+                    //Log.Info("Agaris and Moon");
+                    longitude = Math.Atan2(normalizedBlockToPlanet.X, -normalizedBlockToPlanet.Z);
+                }
+                else if (planetOffset == 1) // Lezuno
+                {
+                    //Log.Info("Lezuno");
+                    longitude = Math.Atan2(normalizedBlockToPlanet.Z, -normalizedBlockToPlanet.X);
+                }
+
+                longitudeOutput = Math.Abs(MathHelper.ToDegrees(longitude)).ToString("0.00") + "° " + (longitude*-1 > 0 ? "E" : "W");
+
+                // Output the results
+
+                longitudeFraction = longitude / Math.PI;
+
+                // Find the direction the block is facing
+                Vector3 blockRotForwardVector = block.WorldMatrix.Rotation.Backward;
+
+                // Get block position normal (up in reference to the planet)
+                Vector3D relativeBlockPos = block.GetPosition() - planetPosition;
+                Vector3 relativeBlockPosNormal = Vector3.Normalize(relativeBlockPos);
+
+                // Get north normal (north relative to the planet)
+                Vector3D relativeNorth = planetPosition + new Vector3D(0f, currentPlanet.AverageRadius, 0f);
+
+                Vector3D blockToNorth = Vector3D.Cross(relativeNorth - blockPosition, planetPosition - blockPosition);
+                Vector3 blockRelativeNorthNormal = Vector3.Normalize(blockToNorth);
+
+                // Calculate the axes offset introduced by the planet's curve on the block
+                Matrix relativeBlockPosNormalOffset;
+                Matrix.CreateRotationFromTwoVectors(ref relativeBlockPosNormal, ref baseSouth, out relativeBlockPosNormalOffset);
+
+                // Apply that offset to the block's forward direction and north
+                Vector3 blockRotForwardVectorCorrected = Vector3.Transform(blockRotForwardVector, relativeBlockPosNormalOffset);
+                Vector3 blockRelativeNorthNormalCorrected = Vector3.Transform(blockRelativeNorthNormal, relativeBlockPosNormalOffset);
+
+                float blockAzimuth, blockElevation, northAzimuth, northElevation;
+
+                // Calculate the block's azimuth and elevation from its forward direction
+                Vector3.GetAzimuthAndElevation(blockRotForwardVectorCorrected, out blockAzimuth, out blockElevation);
+
+                // Calculate the north direction azimuth and elevation from its direction
+                Vector3.GetAzimuthAndElevation(blockRelativeNorthNormalCorrected, out northAzimuth, out northElevation);
+
+                // Calculate the heading in radians
+                heading = blockAzimuth - northAzimuth;
+
+                heading *= -1; //For some reason the rotation is off
+
+                //Add another correction 
+                heading -= (float)(Math.PI / 2);
+
+                //Accounting for the block orientation
+                heading += (float)(-Math.PI + NavigationScreenOffset * 0.5 * Math.PI); // 90 degrees is added to make the chevron point north because I don't know why it doesn't --- + (float)(0.5 * Math.PI)
+
+                if (heading < 0)
+                {
+                    heading += 2 * (float)Math.PI;
+                }
+                else if (heading > 2 * (float)Math.PI)
+                {
+                    heading -= 2 * (float)Math.PI;
+                }
+
+
+
+                // Output the heading
+                //Log.Info($"heading: {heading} radians");
+
+
+            }
+            catch (Exception e)
+            {
+                //Log the error
+                Log.Error("Error in GetNavigationData: " + e);
+
+
             }
         }
 
@@ -686,69 +765,6 @@ namespace PEPCO
             //}
         }
 
-        private void UpdateMapScreen()
-        {
-            //Error handling
-            try
-            {
-                MyStringHash currentPlanetName = currentPlanet.Generator.Id.SubtypeId;
-                if (debug) Log.Info("Updating map screen " + currentPlanetName);
-
-                var mapSurface = blockAsTextSurfaceProvider.GetSurface(0); // Get the surface to display the map
-
-                mapSurface.ClearImagesFromSelection(); // Clear the images from the screen
-                if (debug)
-                {
-
-                    //textPanel.GetSurface(0).ContentType = VRage.Game.GUI.TextPanel.ContentType.TEXT_AND_IMAGE;
-                    mapSurface.ClearImagesFromSelection();
-
-                    List<string> images = new List<string>();
-                    mapSurface.GetSelectedImages(images);
-                    Log.Info($"Images: {string.Join(", ", images)}");
-                }
-
-
-
-
-                //was the map found?
-                if (!mapTable.TryGetValue(currentPlanetName, out planetLookup))
-                {
-                    //Log the error
-                    //Log.Info("Error: Map not found for planet " + currentPlanetName);
-                    setMapScreenToError();
-                }
-                else
-                {
-                    planetOffset = planetLookup.planetOffset; // Get the planet offset from the lookup
-                    string mapName = planetLookup.mapTextureName; // Get the map name from the lookup
-                    //If the mapName was found, update the map
-                    if (NavigationScreenZoom == 0)
-                    {
-                        //If zoom 0 show the planet
-                        mapSurface.AddImageToSelection(mapName);
-                        if (debug) Log.Info("Zoom 0: " + mapName);
-                    }
-                    else
-                    {
-                        //If zoom 1 show the zoomed in quadrant
-                        mapSurface.AddImageToSelection(mapName + "_" + quadrant.X + quadrant.Y);
-                        if (debug) Log.Info("Zoom 1: " + mapName + "_" + quadrant);
-                    }
-                }
-
-
-
-
-
-            }
-            catch (Exception e)
-            {
-                //Log the error
-                Log.Error("Error in UpdateMapSubparts: " + e);
-            }
-
-        }
         private void setMapScreenToError()
         {
             try
@@ -833,20 +849,20 @@ namespace PEPCO
             }
         }
 
-        private float GetGravityAtBlock()
+        private bool BlockInGravity()
         {
             try
             {
                 float gravityValue;
                 MyAPIGateway.Physics.CalculateNaturalGravityAt(block.GetPosition(), out gravityValue);
 
-                return gravityValue;
+                return gravityValue > 0;
             }
             catch (Exception e)
             {
                 //Log the error
                 Log.Error("Error in getGravityAtBlock: " + e);
-                return 0;
+                return false;
             }
         }
 
@@ -869,6 +885,23 @@ namespace PEPCO
 
             if (closestPlanet != null)
             {
+                if (debug) Log.Info("Closest planet: " + closestPlanet.Generator.Id.SubtypeName);
+
+                MapLookup mapLookup;
+
+                //Set the mapName to the closest planet lookup
+                mapTable.TryGetValue(closestPlanet.Generator.Id.SubtypeId, out mapLookup);
+                if (mapLookup != null)
+                {
+                    mapName = mapLookup.mapTextureName;
+                    planetOffset = mapLookup.planetOffset;
+                }
+                else
+                {
+                    mapName = "Error_Planet";
+                    planetOffset = 0;
+                }
+
                 return closestPlanet;
             }
             else

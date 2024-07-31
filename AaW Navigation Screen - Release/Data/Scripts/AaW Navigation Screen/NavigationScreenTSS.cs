@@ -10,6 +10,7 @@ using VRage.Utils;
 using VRageMath;
 using VRageRender;
 using Digi;
+using System.Collections.Generic;
 
 namespace PEPCO
 {
@@ -63,6 +64,41 @@ namespace PEPCO
                 else throw new Exception("Oh noes an error :}");
 
 
+                MatrixD camWM = MyAPIGateway.Session.Camera.WorldMatrix;
+
+                const double MaxDistance = 15;
+
+                //If distance between camera and block is more than 15 meters return
+                if (Vector3D.Distance(camWM.Translation, TerminalBlock.GetPosition()) > MaxDistance) return;
+
+                
+                //Proceeds only if the player is looking at the screen
+                if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.PageDown))
+                {
+                    var logic = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>();
+                    if (logic != null)
+                        logic.NavigationScreenZoom++;
+                }
+                else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.PageUp))
+                {
+                    var logic = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>();
+                    if (logic != null)
+                        logic.NavigationScreenZoom--;
+                }
+                else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.End))
+                {
+                    var logic = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>();
+                    if (logic != null)
+                        logic.NavigationScreenZoom = 1;
+                }
+                else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Home))
+                {
+                    var logic = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>();
+                    if (logic != null)
+                        logic.NavigationScreenZoom = 10;
+                }
+
+
             }
             catch (Exception e) // no reason to crash the entire game just for an LCD script, but do NOT ignore them either, nag user so they report it :}
             {
@@ -78,9 +114,30 @@ namespace PEPCO
                 (Surface.TextureSize - Surface.SurfaceSize) / 2f,
                 Surface.SurfaceSize
             );
+
             Vector2 screenSize = Surface.SurfaceSize;
             Vector2 screenCorner = (Surface.TextureSize - screenSize) * 0.5f;
 
+            var logic = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>(); // get the gamelogic comp from the block
+
+            if (logic == null) return; // if the block doesn't have the comp, don't draw anything
+
+            double lonFraction = logic.longitudeFraction;
+            double latFraction = logic.latitudeFraction;
+
+            double NavigationScreenChevronScale = logic.NavigationScreenChevronScale;
+
+            Color NavigationScreenChevronColor = logic.NavigationScreenChevronColor;
+
+            double heading = logic.heading;
+
+            string mapName = logic.mapName;
+
+            float zoomMultiplier = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>()?.NavigationScreenZoom ?? 1;
+            //Log.Info($"Multiplier: {zoomMultiplier}");
+
+            // was            Vector2 offsetVector = new Vector2(1 + (float)lonFraction, 1 + (float)latFraction);
+            Vector2 offsetVector = new Vector2(1 + (float)lonFraction * zoomMultiplier, 1 + (float)latFraction * zoomMultiplier);
 
             var frame = Surface.DrawFrame();
 
@@ -93,23 +150,67 @@ namespace PEPCO
             // the colors in the terminal are Surface.ScriptBackgroundColor and Surface.ScriptForegroundColor, the other ones without Script in name are for text/image mode.
 
 
-            float multiplier = TerminalBlock?.GameLogic?.GetAs<NavigationScreenLogic>()?.NavigationScreenZoom ?? 1;
-            Log.Info($"Multiplier: {multiplier}");
+
+
+
 
             // Create background sprite
             var sprite = new MySprite()
             {
                 Type = SpriteType.TEXTURE,
-                Data = "AaWAgarisII_Planet",
-                Position = _viewport.Center,
-                Size = screenSize * multiplier,
-                Color = Color.White.Alpha(0.66f),
+                Data = mapName,
+                Position = _viewport.Center * offsetVector,
+                Size = screenSize * zoomMultiplier,
+                Color = Color.White.Alpha(1f),
                 Alignment = TextAlignment.CENTER
             };
 
-            frame.Add(sprite);
+            
 
-            // add more sprites and stuff
+
+
+            var spriteLeft = sprite;
+            spriteLeft.Position -= new Vector2(screenSize.X * zoomMultiplier, 0);
+            var spriteRight = sprite;
+            spriteRight.Position += new Vector2(screenSize.X * zoomMultiplier, 0);
+            
+
+            var spriteLeftUp = sprite;
+            spriteLeftUp.Position -= new Vector2(screenSize.X/2 * zoomMultiplier, screenSize.Y * zoomMultiplier);
+            spriteLeftUp.Size = new Vector2(screenSize.X, -screenSize.Y) * zoomMultiplier;
+            var spriteRightUp = sprite;
+            spriteRightUp.Position += new Vector2(screenSize.X * zoomMultiplier, -screenSize.Y * zoomMultiplier);
+            spriteRightUp.Size = new Vector2(screenSize.X, -screenSize.Y) * zoomMultiplier;
+            var spriteLeftDown = sprite;
+            spriteLeftDown.Position -= new Vector2(screenSize.X/2 * zoomMultiplier, -screenSize.Y * zoomMultiplier);
+            spriteLeftDown.Size = new Vector2(screenSize.X, -screenSize.Y) * zoomMultiplier;
+            var spriteRightDown = sprite;
+            spriteRightDown.Position += new Vector2(screenSize.X / 2 * zoomMultiplier, screenSize.Y * zoomMultiplier);
+            spriteRightDown.Size = new Vector2(screenSize.X, -screenSize.Y) * zoomMultiplier;
+
+            frame.Add(sprite);
+            frame.Add(spriteLeft);
+            frame.Add(spriteRight);
+            frame.Add(spriteLeftUp);
+            frame.Add(spriteRightUp);
+            frame.Add(spriteLeftDown);
+            frame.Add(spriteRightDown);
+
+
+            //Add a sprite with the width of the screen and 5% of the height
+            var mapMarker = new MySprite()
+            {
+                Type = SpriteType.TEXTURE,
+                Data = "Triangle",
+                Position = _viewport.Center,
+                Size = new Vector2(25,50) * (float)NavigationScreenChevronScale,
+                RotationOrScale = (float)heading,                //Rotate the sprite by the heading
+                Color = NavigationScreenChevronColor,
+                Alignment = TextAlignment.CENTER
+            };
+            frame.Add(mapMarker);
+
+            AddBackground(frame, Color.Black);
 
             frame.Dispose(); // send sprites to the screen
 

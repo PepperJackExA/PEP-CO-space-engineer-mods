@@ -808,6 +808,7 @@ namespace PEPCO
                 if (subpart != null)
                 {
                     subpart.Render.Visible = false;
+                    Log.Info("Subpart hidden ");
                 }
                 else
                 {

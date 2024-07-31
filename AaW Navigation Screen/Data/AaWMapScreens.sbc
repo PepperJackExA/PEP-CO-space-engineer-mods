@@ -232,5 +232,20 @@
 			</Id>
 			<TexturePath>Textures\Maps\Error_Gravity.dds</TexturePath>
 		</LCDTextureDefinition>
+		<!--The misc screens-->
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>BlackGround</SubtypeId>
+			</Id>
+			<TexturePath>Textures\BlackGround.dds</TexturePath>
+		</LCDTextureDefinition>
+		<LCDTextureDefinition>
+			<Id>
+				<TypeId>LCDTextureDefinition</TypeId>
+				<SubtypeId>PEPCO_Logo</SubtypeId>
+			</Id>
+			<TexturePath>Textures\PEPCO_Logo.dds</TexturePath>
+		</LCDTextureDefinition>
 	</LCDTextures>
 </Definitions>
