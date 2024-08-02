@@ -61,13 +61,13 @@ namespace PEPCO
         }
         public override void UpdateBeforeSimulation()
         {
-            //Set update to none
+            // This is called every tick before the simulation is updated but only runs once
             if (!IsInit)
             {
                 IsInit = true;
                 try
                 {
-                    MyAPIGateway.Entities.GetEntities(null, entityFilterCached);
+                    MyAPIGateway.Entities.GetEntities(null, entityFilterCached); //Get all entities in the game and filter them to find planets
                 }
                 catch (Exception e)
                 {
@@ -79,12 +79,12 @@ namespace PEPCO
         }
 
 
-        private bool EntityFilter(IMyEntity ent)
+        private bool EntityFilter(IMyEntity ent) //This is a filter for the entities that returns true if the entity is a planet
         {
-            var p = ent as MyPlanet;
+            var p = ent as MyPlanet; //Is this entity a planet?
 
             if (p != null)
-                Planets.Add(p);
+                Planets.Add(p); //Look, we found a planet!
 
             return false; // don't add to the list, it's null
         }
