@@ -1,13 +1,10 @@
 ﻿using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using VRage.Game.ModAPI.Ingame.Utilities;
-using System.Linq;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
 using VRageMath;
-
 using Sandbox.Definitions;
 using Sandbox.Game;
 using Sandbox.Game.Entities;
@@ -23,15 +20,15 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
         public static CustomEntitySpawnerSettings settings = new CustomEntitySpawnerSettings();
         public static CustomEntitySpawner CESspawner = new CustomEntitySpawner();
         public static PEPCO_LogError log = new PEPCO_LogError();
-
         public static HashSet<string> validBotIds = new HashSet<string>();
+
+        private const string CommandPrefix = "/pepco";
+
+        #region Command Handling
 
         public void OnMessageEntered(string messageText, ref bool sendToOthers)
         {
-            if (!MyAPIGateway.Session.IsServer)
-            {
-                return;
-            }
+            if (!MyAPIGateway.Session.IsServer) return;
 
             var player = MyAPIGateway.Session.Player;
 
@@ -42,39 +39,19 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
             }
 
             var command = messageText.Split(' ');
-            switch (command[0].ToLower())
+            if (command[0].Equals(CommandPrefix, StringComparison.OrdinalIgnoreCase))
             {
-                case "/pepco":
-                    HandlePepcoCommand(command, ref sendToOthers);
-                    break;
+                HandlePepcoCommand(command, ref sendToOthers);
             }
         }
-        private void ReloadSettings()
-        {
-            try
-            {
-                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Reloading settings...");
-                log.LogError("Reloading settings...");
 
-                CESspawner.EnsureDefaultIniFilesExist();
-                CESspawner.CopyAllCESFilesToWorldStorage();
-                CESspawner.LoadAllFilesFromWorldStorage();
-                CESspawner.InitializeBotSpawnerConfig();
-
-                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Settings reloaded successfully.");
-                log.LogError("Settings reloaded successfully.");
-            }
-            catch (Exception ex)
-            {
-                MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Error reloading settings: {ex.Message}");
-                log.LogError($"Error reloading settings: {ex.Message}");
-            }
-        }
         public void HandlePepcoCommand(string[] command, ref bool sendToOthers)
         {
-            if (command[1].ToLower() == "pause")
+            if (command.Length < 2) return;
+
+            if (command[1].Equals("pause", StringComparison.OrdinalIgnoreCase))
             {
-                CESspawner.PauseScript();                
+                CESspawner.PauseScript();
                 sendToOthers = false;
                 return;
             }
@@ -101,38 +78,14 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
                     HandleKillCommand(command, ref sendToOthers);
                     break;
                 case "cleanup":
-                    if (command.Length > 2 && command[2].ToLower() == "dead")
+                    if (command.Length > 2 && command[2].Equals("dead", StringComparison.OrdinalIgnoreCase))
                     {
                         CleanupDeadEntities();
                         sendToOthers = false;
                     }
                     break;
                 case "show":
-                    if (command.Length > 2 && command[2].ToLower() == "all")
-                    {
-                        ShowAllEntities();
-                        sendToOthers = false;
-                    }
-                    if (command.Length == 4)
-                    {
-                        string entityId = command[2];
-                        double radius;
-
-                        if (double.TryParse(command[3], out radius))
-                        {
-                            ShowEntities(entityId, radius);
-                            sendToOthers = false;
-                            
-                        }
-                        else
-                        {
-                            MyAPIGateway.Utilities.ShowMessage("PEPCO", "Invalid radius. Usage: /pepco show <entityID> <radius>");
-                        }
-                    }
-                    else
-                    {
-                        MyAPIGateway.Utilities.ShowMessage("PEPCO", "Usage: /pepco show <entityID> <radius>");
-                    }
+                    HandleShowCommand(command, ref sendToOthers);
                     break;
                 case "logging":
                     settings.EnableLogging = !settings.EnableLogging;
@@ -148,6 +101,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
                     break;
             }
         }
+
         private void HandleSpawnCommand(string[] command)
         {
             if (command.Length == 3)
@@ -192,14 +146,114 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
                 }
             }
         }
-        public static void LoadValidBotIds()
+
+        private void HandleKillCommand(string[] command, ref bool sendToOthers)
         {
-            var botDefinitions = MyDefinitionManager.Static.GetBotDefinitions();
-            foreach (var botDefinition in botDefinitions)
+            if (command.Length >= 3)
             {
-                validBotIds.Add(botDefinition.Id.SubtypeName);
+                string entityName = command[2];
+                double radius = 10;
+                if (command.Length == 4)
+                {
+                    double parsedRadius;
+                    if (double.TryParse(command[3], out parsedRadius))
+                    {
+                        radius = parsedRadius;
+                    }
+                }
+
+                if (entityName.Equals("all", StringComparison.OrdinalIgnoreCase))
+                {
+                    KillAllEntities(radius);
+                }
+                else
+                {
+                    KillEntitiesByName(entityName, radius);
+                }
+                sendToOthers = false;
+            }
+            else
+            {
+                MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Usage: /pepco kill <EntityName|all> [Radius]");
             }
         }
+
+        private void HandleShowCommand(string[] command, ref bool sendToOthers)
+        {
+            if (command.Length > 2 && command[2].Equals("all", StringComparison.OrdinalIgnoreCase))
+            {
+                ShowAllEntities();
+                sendToOthers = false;
+            }
+            else if (command.Length == 4)
+            {
+                string entityId = command[2];
+                double radius;
+                if (double.TryParse(command[3], out radius))
+                {
+                    ShowEntities(entityId, radius);
+                    sendToOthers = false;
+                }
+                else
+                {
+                    MyAPIGateway.Utilities.ShowMessage("PEPCO", "Invalid radius. Usage: /pepco show <entityID> <radius>");
+                }
+            }
+            else
+            {
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Usage: /pepco show <entityID> <radius>");
+            }
+        }
+
+        private void ShowHelp()
+        {
+            var commands = new List<string>
+            {
+                "/pepco help - Displays this help message.",
+                "/pepco CES reload - Reloads the Custom Entity Spawner settings.",
+                "/pepco CES list - Lists all blocks and their spawn settings.",
+                "/pepco kill <EntityName|all> [Radius] - Kills entities by name or all entities within a radius.",
+                "/pepco cleanup dead - Cleans up dead entities.",
+                "/pepco show all - Shows all entities.",
+                "/pepco show <entityID> <radius> - Shows entities of a specific ID within a radius.",
+                "/pepco spawn <BotID> - Spawns a bot with the specified ID.",
+                "/pepco listBots - Lists all valid bot IDs.",
+                "/pepco logging - Enable or disable debug logging.",
+                "/pepco pause - Pause script execution."
+            };
+
+            foreach (var command in commands)
+            {
+                MyAPIGateway.Utilities.ShowMessage("PEPCO Commands", command);
+            }
+        }
+
+        #endregion
+
+        #region Entity Operations
+
+        private void ReloadSettings()
+        {
+            try
+            {
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Reloading settings...");
+                log.LogError("Reloading settings...");
+
+                CESspawner.EnsureDefaultIniFilesExist();
+                CESspawner.CopyAllCESFilesToWorldStorage();
+                CESspawner.LoadAllFilesFromWorldStorage();
+                CESspawner.InitializeBotSpawnerConfig();
+
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Settings reloaded successfully.");
+                log.LogError("Settings reloaded successfully.");
+            }
+            catch (Exception ex)
+            {
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Error reloading settings: {ex.Message}");
+                log.LogError($"Error reloading settings: {ex.Message}");
+            }
+        }
+
         private void ListAllBlocksAndSpawns()
         {
             if (settings.BlockSpawnSettings.Count == 0)
@@ -214,6 +268,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
                 MyAPIGateway.Utilities.ShowMessage("CustomEntitySpawner", message);
             }
         }
+
         private void KillAllEntities(double radius)
         {
             var entities = new HashSet<IMyEntity>();
@@ -236,59 +291,6 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
             MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Killed {entitiesKilled} entities within {radius} meters.");
         }
 
-        private int CountEntitiesInRadius(Vector3D position, double radius)
-        {
-            var entities = new HashSet<IMyEntity>();
-            Vector3D playerPosition = MyAPIGateway.Session.Player.GetPosition();
-            IMyCharacter playerCharacter = MyAPIGateway.Session.Player.Character;
-
-            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
-            int entitiesCount = 0;
-            foreach (var entity in entities)
-            {
-                IMyCharacter character = entity as IMyCharacter;
-                if (character != null && Vector3D.Distance(character.GetPosition(), playerPosition) <= radius && character != playerCharacter)
-                {
-                    entitiesCount++;
-                }
-            }
-            return entitiesCount;
-        }
-
-       
-        private void HandleKillCommand(string[] command, ref bool sendToOthers)
-        {
-            if (command.Length >= 3)
-            {
-                string entityName = command[2];
-                double radius = 10;
-                if (command.Length == 4)
-                {
-                    double parsedRadius;
-                    if (double.TryParse(command[3], out parsedRadius))
-                    {
-                        radius = parsedRadius;
-                    }
-                }
-
-                //if (MyAPIGateway.Session.IsServer)
-                //{
-                if (entityName.Equals("all", StringComparison.OrdinalIgnoreCase))
-                {
-                    KillAllEntities(radius);
-                }
-                else
-                {
-                    KillEntitiesByName(entityName, radius);
-                }
-                //}
-                sendToOthers = false;
-            }
-            else
-            {
-                MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Usage: /pepco kill <EntityName|all> [Radius]");
-            }
-        }
         private void KillEntitiesByName(string entitySubtypeId, double radius)
         {
             var entities = new HashSet<IMyEntity>();
@@ -311,27 +313,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 
             MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Killed {entitiesKilled} entities with SubtypeId: {entitySubtypeId} within {radius} meters.");
         }
-        private void ShowHelp()
-        {
-            var commands = new List<string>
-    {
-        "/pepco help - Displays this help message.",
-        "/pepco CES reload - Reloads the Custom Entity Spawner settings.",
-        "/pepco CES list - Lists all blocks and their spawn settings.",
-        "/pepco kill <EntityName|all> [Radius] - Kills entities by name or all entities within a radius.",
-        "/pepco cleanup dead - Cleans up dead entities.",
-        "/pepco show all - Shows all entities.",
-        "/pepco spawn <BotID> - Spawns a bot with the specified ID.",
-        "/pepco listBots - Lists all valid bot IDs.",
-        "/pepco logging - Enable debug logging",
-        "/pepco pause - pause script"
-    };
 
-            foreach (var command in commands)
-            {
-                MyAPIGateway.Utilities.ShowMessage("PEPCO Commands", command);
-            }
-        }
         private void ShowEntities(string entitySubtypeId, double radius)
         {
             var entities = new HashSet<IMyEntity>();
@@ -355,6 +337,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 
             log.LogError($"Total entities of subtype '{entitySubtypeId}' within {radius} meters: {entityCount}");
         }
+
         private void ShowAllEntities()
         {
             var entities = new HashSet<IMyEntity>();
@@ -371,13 +354,6 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 
                     MyAPIGateway.Utilities.ShowMessage("Entity", $"Type: {entityType}, SubtypeId: {entitySubtypeId}, Location: {entityPosition}");
                 }
-            }
-        }
-        private static void ListValidBotIds()
-        {
-            foreach (var botId in validBotIds)
-            {
-                MyAPIGateway.Utilities.ShowMessage("BotSpawner", botId);
             }
         }
 
@@ -405,5 +381,46 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
             return false;
         }
 
+        private int CountEntitiesInRadius(Vector3D position, double radius)
+        {
+            var entities = new HashSet<IMyEntity>();
+            Vector3D playerPosition = MyAPIGateway.Session.Player.GetPosition();
+            IMyCharacter playerCharacter = MyAPIGateway.Session.Player.Character;
+
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
+            int entitiesCount = 0;
+            foreach (var entity in entities)
+            {
+                IMyCharacter character = entity as IMyCharacter;
+                if (character != null && Vector3D.Distance(character.GetPosition(), playerPosition) <= radius && character != playerCharacter)
+                {
+                    entitiesCount++;
+                }
+            }
+            return entitiesCount;
+        }
+
+        #endregion
+
+        #region Utility Methods
+
+        public static void LoadValidBotIds()
+        {
+            var botDefinitions = MyDefinitionManager.Static.GetBotDefinitions();
+            foreach (var botDefinition in botDefinitions)
+            {
+                validBotIds.Add(botDefinition.Id.SubtypeName);
+            }
+        }
+
+        private static void ListValidBotIds()
+        {
+            foreach (var botId in validBotIds)
+            {
+                MyAPIGateway.Utilities.ShowMessage("BotSpawner", botId);
+            }
+        }
+
+        #endregion
     }
 }
