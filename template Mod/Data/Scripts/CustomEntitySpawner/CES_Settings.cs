@@ -9,10 +9,12 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 {
     public class CustomEntitySpawnerSettings
     {
+        // Constants for file names
         public const string GlobalFileName = "GlobalConfig.ini";
         public const string EntitySpawnerFileName = "CustomEntitySpawner.ini";
         private const string IniSection = "Config";
 
+        // Settings properties
         public int BaseUpdateInterval { get; set; } = 60;
         public bool EnableLogging { get; set; } = true;
         public int CleanupInterval { get; set; } = 18000;
@@ -20,68 +22,54 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 
         public List<BotSpawnerConfig> BlockSpawnSettings { get; set; } = new List<BotSpawnerConfig>();
 
+        // Load settings from configuration files
         public void Load()
         {
             MyIni iniParser = new MyIni();
 
-            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(GlobalFileName, typeof(CustomEntitySpawnerSettings)))
-            {
-                using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(GlobalFileName, typeof(CustomEntitySpawnerSettings)))
-                {
-                    string text = file.ReadToEnd();
+            // Load Global Configuration
+            LoadIniFile(GlobalFileName, iniParser);
+            BaseUpdateInterval = iniParser.Get(IniSection, nameof(BaseUpdateInterval)).ToInt32(BaseUpdateInterval);
+            EnableLogging = iniParser.Get(IniSection, nameof(EnableLogging)).ToBoolean(EnableLogging);
+            CleanupInterval = iniParser.Get(IniSection, nameof(CleanupInterval)).ToInt32(CleanupInterval);
+            GlobalMaxEntities = iniParser.Get(IniSection, nameof(GlobalMaxEntities)).ToInt32(GlobalMaxEntities);
 
-                    MyIniParseResult result;
-                    if (!iniParser.TryParse(text, out result))
-                        throw new Exception($"Config error: {result.ToString()}");
+            // Load Entity Spawner Configuration
+            LoadIniFile(EntitySpawnerFileName, iniParser);
+            LoadBlockSpawnSettings(iniParser);
 
-                    BaseUpdateInterval = iniParser.Get(IniSection, nameof(BaseUpdateInterval)).ToInt32(BaseUpdateInterval);
-                    EnableLogging = iniParser.Get(IniSection, nameof(EnableLogging)).ToBoolean(EnableLogging);
-                    CleanupInterval = iniParser.Get(IniSection, nameof(CleanupInterval)).ToInt32(CleanupInterval);
-                    GlobalMaxEntities = iniParser.Get(IniSection, nameof(GlobalMaxEntities)).ToInt32(GlobalMaxEntities); // Load new setting
-                }
-            }
-            else
-            {
-                throw new Exception("GlobalConfig.ini not found.");
-            }
-
-            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(EntitySpawnerFileName, typeof(CustomEntitySpawnerSettings)))
-            {
-                using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(EntitySpawnerFileName, typeof(CustomEntitySpawnerSettings)))
-                {
-                    string text = file.ReadToEnd();
-
-                    MyIniParseResult result;
-                    if (!iniParser.TryParse(text, out result))
-                        throw new Exception($"Config error: {result.ToString()}");
-
-                    LoadBlockSpawnSettings(iniParser);
-                }
-            }
-            else
-            {
-                throw new Exception("CustomEntitySpawner.ini not found.");
-            }
-
+            // Load configurations from all mods
             foreach (var modItem in MyAPIGateway.Session.Mods)
             {
                 string cesFileName = $"{modItem.PublishedFileId}_CES.ini";
                 if (MyAPIGateway.Utilities.FileExistsInWorldStorage(cesFileName, typeof(CustomEntitySpawnerSettings)))
                 {
-                    using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(cesFileName, typeof(CustomEntitySpawnerSettings)))
-                    {
-                        string text = file.ReadToEnd();
-
-                        MyIniParseResult result;
-                        if (!iniParser.TryParse(text, out result))
-                            throw new Exception($"Config error in {cesFileName}: {result.ToString()}");
-
-                        LoadBlockSpawnSettings(iniParser);
-                    }
+                    LoadIniFile(cesFileName, iniParser);
+                    LoadBlockSpawnSettings(iniParser);
                 }
             }
         }
 
+        // Helper method to load an INI file
+        private void LoadIniFile(string fileName, MyIni iniParser)
+        {
+            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(fileName, typeof(CustomEntitySpawnerSettings)))
+            {
+                using (TextReader file = MyAPIGateway.Utilities.ReadFileInWorldStorage(fileName, typeof(CustomEntitySpawnerSettings)))
+                {
+                    string text = file.ReadToEnd();
+                    MyIniParseResult result;
+                    if (!iniParser.TryParse(text, out result))
+                        throw new Exception($"Config error in {fileName}: {result}");
+                }
+            }
+            else
+            {
+                throw new Exception($"{fileName} not found.");
+            }
+        }
+
+        // Load block spawn settings from INI sections
         private void LoadBlockSpawnSettings(MyIni iniParser)
         {
             List<string> sections = new List<string>();
@@ -107,7 +95,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
                     MaxItemAmount = iniParser.Get(section, nameof(BotSpawnerConfig.MaxItemAmount)).ToInt32(1),
                     UseWeightedDrops = iniParser.Get(section, nameof(BotSpawnerConfig.UseWeightedDrops)).ToBoolean(false),
                     MaxEntitiesInArea = iniParser.Get(section, nameof(BotSpawnerConfig.MaxEntitiesInArea)).ToInt32(30),
-                    MaxEntitiesRadius = iniParser.Get(section, nameof(BotSpawnerConfig.MaxEntitiesRadius)).ToDouble(100), // Default value of 100
+                    MaxEntitiesRadius = iniParser.Get(section, nameof(BotSpawnerConfig.MaxEntitiesRadius)).ToDouble(100),
                     StackItems = iniParser.Get(section, nameof(BotSpawnerConfig.StackItems)).ToBoolean(false),
                     SpawnInsideInventory = iniParser.Get(section, nameof(BotSpawnerConfig.SpawnInsideInventory)).ToBoolean(false),
                     DamageAmount = (float)iniParser.Get(section, nameof(BotSpawnerConfig.DamageAmount)).ToDouble(0),
@@ -125,9 +113,9 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
                     RequiredEntityNumber = iniParser.Get(section, nameof(BotSpawnerConfig.RequiredEntityNumber)).ToInt32(0),
                     RequireEntityNumberForTotalEntities = iniParser.Get(section, nameof(BotSpawnerConfig.RequireEntityNumberForTotalEntities)).ToBoolean(false),
                     RequireEntityCenterOn = iniParser.Get(section, nameof(BotSpawnerConfig.RequireEntityCenterOn)).ToBoolean(false)
-
                 };
 
+                // Parse and add lists
                 botSpawnerConfig.EntityID.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.EntityID)).ToString().Split(','));
                 botSpawnerConfig.ItemTypes.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.ItemTypes)).ToString().Split(','));
                 botSpawnerConfig.ItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.ItemIds)).ToString().Split(','));
