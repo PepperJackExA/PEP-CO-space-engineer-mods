@@ -2,9 +2,10 @@
 using VRage.Game.Components;
 using VRage.Game.ModAPI.Ingame.Utilities;
 using System;
-using System.Collections.Generic;
 using VRage.Utils;
 using ProtoBuf;
+using System.Collections.Generic;
+using static PEPCO.SingleFileMod;
 
 namespace PEPCO
 {
@@ -13,6 +14,7 @@ namespace PEPCO
     {
         private const string ClientConfigFileName = "PEPCOClientSettings.ini";
         private const string ServerConfigFileName = "PEPCOServerSettings.ini";
+
         public static MyIni clientIni = new MyIni();
         public static MyIni serverIni = new MyIni();
 
@@ -21,169 +23,217 @@ namespace PEPCO
 
         public override void BeforeStart()
         {
-            if (MyAPIGateway.Session.IsServer)
+            try
             {
-                CreateServerConfigIfNotExists();
-                LoadServerConfig();
-            }
-            else
-            {
+                if (MyAPIGateway.Session.IsServer)
+                {
+                    CreateServerConfigIfNotExists();
+                    LoadServerConfig();
+                }
                 LoadClientConfig();
+                CommandHandler.Init();
+                Networking.Init();
             }
-            CommandHandler.Init();
-            Networking.Init();
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in BeforeStart: {e.Message}");
+            }
         }
 
         protected override void UnloadData()
         {
-            if (MyAPIGateway.Session.IsServer)
+            try
             {
-                SaveServerConfig();
-            }
-            else
-            {
+                if (MyAPIGateway.Session.IsServer)
+                {
+                    SaveServerConfig();
+                }
                 SaveClientConfig();
+                CommandHandler.Unload();
+                Networking.Close();
             }
-            CommandHandler.Unload();
-            Networking.Close();
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in UnloadData: {e.Message}");
+            }
         }
 
         private static void CreateServerConfigIfNotExists()
         {
-            if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
+            try
             {
-                SaveServerConfig();
+                if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
+                {
+                    SaveServerConfig();
+                }
+            }
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in CreateServerConfigIfNotExists: {e.Message}");
             }
         }
 
         private static void LoadConfig()
         {
-            if (MyAPIGateway.Session.IsServer)
+            try
             {
-                LoadServerConfig();
+                if (MyAPIGateway.Session.IsServer)
+                {
+                    LoadServerConfig();
+                }
+                LoadClientConfig();
             }
-            LoadClientConfig();
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in LoadConfig: {e.Message}");
+            }
         }
 
         private static void LoadClientConfig()
         {
-            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
+            try
             {
-                using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
+                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
                 {
-                    var text = reader.ReadToEnd();
-                    MyIniParseResult result;
-                    if (!clientIni.TryParse(text, out result))
+                    using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
                     {
-                        MyLog.Default.WriteLineAndConsole($"Failed to parse client settings: {result}");
-                        return;
-                    }
+                        var text = reader.ReadToEnd();
+                        MyIniParseResult result;
+                        if (!clientIni.TryParse(text, out result))
+                        {
+                            MyLog.Default.WriteLineAndConsole($"Failed to parse client settings: {result}");
+                            return;
+                        }
 
-                    ClientExampleSetting = clientIni.Get("ClientSettings", "ExampleSetting").ToInt32(ClientExampleSetting);
+                        ClientExampleSetting = clientIni.Get("ClientSettings", "ExampleSetting").ToInt32(ClientExampleSetting);
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in LoadClientConfig: {e.Message}");
             }
         }
 
         private static void LoadServerConfig()
         {
-            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
+            try
             {
-                using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
+                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
                 {
-                    var text = reader.ReadToEnd();
-                    MyIniParseResult result;
-                    if (!serverIni.TryParse(text, out result))
+                    using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
                     {
-                        MyLog.Default.WriteLineAndConsole($"Failed to parse server settings: {result}");
-                        return;
-                    }
+                        var text = reader.ReadToEnd();
+                        MyIniParseResult result;
+                        if (!serverIni.TryParse(text, out result))
+                        {
+                            MyLog.Default.WriteLineAndConsole($"Failed to parse server settings: {result}");
+                            return;
+                        }
 
-                    ServerExampleSetting = serverIni.Get("ServerSettings", "ExampleSetting").ToInt32(ServerExampleSetting);
+                        ServerExampleSetting = serverIni.Get("ServerSettings", "ExampleSetting").ToInt32(ServerExampleSetting);
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in LoadServerConfig: {e.Message}");
             }
         }
 
         private static void SaveClientConfig()
         {
-            var ini = new MyIni();
-            ini.Set("ClientSettings", "ExampleSetting", ClientExampleSetting);
-
-            using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
+            try
             {
-                writer.Write(ini.ToString());
+                clientIni.Set("ClientSettings", "ExampleSetting", ClientExampleSetting);
+
+                using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
+                {
+                    writer.Write(clientIni.ToString());
+                }
+            }
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in SaveClientConfig: {e.Message}");
             }
         }
 
-        private static void SaveServerConfig()
+        private static void SaveServerConfig(MyIni ini = null)
         {
-            var ini = new MyIni();
-            ini.Set("ServerSettings", "ExampleSetting", ServerExampleSetting);
-
-            using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
+            try
             {
-                writer.Write(ini.ToString());
+                if (ini == null)
+                {
+                    ini = serverIni;
+                    ini.Set("ServerSettings", "ExampleSetting", ServerExampleSetting);
+                }
+
+                using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
+                {
+                    writer.Write(ini.ToString());
+                }
+            }
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in SaveServerConfig: {e.Message}");
             }
         }
 
         public static void UpdateServerSetting(string section, string key, string value)
         {
-            var ini = new MyIni();
-            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
+            try
             {
-                using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
+                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
                 {
-                    var text = reader.ReadToEnd();
-                    ini.TryParse(text);
+                    using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
+                    {
+                        var text = reader.ReadToEnd();
+                        serverIni.TryParse(text);
+                    }
                 }
-            }
-            ini.Set(section, key, value);
+                serverIni.Set(section, key, value);
 
-            using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(ServerConfigFileName, typeof(SingleFileMod)))
-            {
-                writer.Write(ini.ToString());
+                SaveServerConfig(serverIni);
+                LoadServerConfig(); // Reload config after updating
+
+                // Synchronize settings to clients
+                var settings = new NavigationScreenBlockSettings
+                {
+                    ExampleSetting = ServerExampleSetting
+                };
+                var packet = new PacketBlockSettings();
+                packet.Send(0, settings); // Sending with dummy entityId 0
             }
-            LoadServerConfig(); // Reload config after updating
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error updating server setting: {e.Message}");
+            }
         }
 
         private static void UpdateClientSetting(string section, string key, string value)
         {
-            var ini = new MyIni();
-            if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
+            try
             {
-                using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
+                if (MyAPIGateway.Utilities.FileExistsInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
                 {
-                    var text = reader.ReadToEnd();
-                    ini.TryParse(text);
+                    using (var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
+                    {
+                        var text = reader.ReadToEnd();
+                        clientIni.TryParse(text);
+                    }
                 }
-            }
-            ini.Set(section, key, value);
+                clientIni.Set(section, key, value);
 
-            using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
-            {
-                writer.Write(ini.ToString());
-            }
-            LoadClientConfig(); // Reload config after updating
-        }
-
-        public static void SendServerSettingsToClient(ulong recipientId)
-        {
-            var settings = new Dictionary<string, Dictionary<string, string>>();
-            var serverSections = new List<string>();
-            serverIni.GetSections(serverSections);
-            foreach (var section in serverSections)
-            {
-                var keys = new List<MyIniKey>();
-                serverIni.GetKeys(section, keys);
-                var sectionDict = new Dictionary<string, string>();
-                foreach (var key in keys)
+                using (var writer = MyAPIGateway.Utilities.WriteFileInWorldStorage(ClientConfigFileName, typeof(SingleFileMod)))
                 {
-                    sectionDict[key.Name] = serverIni.Get(key).ToString();
+                    writer.Write(clientIni.ToString());
                 }
-                settings[section] = sectionDict;
+                LoadClientConfig(); // Reload config after updating
             }
-
-            var packet = new PacketServerSettings(settings);
-            packet.Send(recipientId);
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error updating client setting: {e.Message}");
+            }
         }
 
         public static class CommandHandler
@@ -221,14 +271,15 @@ namespace PEPCO
                                 {
                                     UpdateServerSetting("ServerSettings", settingArgs[0], settingArgs[1]);
                                     MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Server setting {settingArgs[0]} updated to {settingArgs[1]}.");
+                                    sendToOthers = false;
                                 }
                                 else
                                 {
                                     var packet = new PacketUpdateServerSetting("ServerSettings", settingArgs[0], settingArgs[1]);
                                     packet.Send();
                                     MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Request to update server setting {settingArgs[0]} to {settingArgs[1]} sent to server.");
+                                    sendToOthers = false;
                                 }
-                                sendToOthers = false;
                             }
                         }
                         else if (args.Length > 2 && args[1].Equals("setclient", StringComparison.OrdinalIgnoreCase))
@@ -290,8 +341,7 @@ namespace PEPCO
                             }
                             else
                             {
-                                var requestPacket = new PacketRequestServerSettings();
-                                requestPacket.Send();
+                                MyAPIGateway.Utilities.ShowMessage("PEPCO", "You are not on the server.");
                             }
                             break;
                         default:
@@ -351,126 +401,123 @@ namespace PEPCO
                 }
             }
         }
-    }
 
-    public static class Networking
-    {
-        private const ushort NetworkId = 1234;
-
-        public static void Init()
+        [ProtoContract(UseProtoMembersOnly = true)]
+        public class PacketBlockSettings : PacketBase
         {
-            MyAPIGateway.Multiplayer.RegisterSecureMessageHandler(NetworkId, MessageHandler);
-        }
+            [ProtoMember(1)]
+            public long EntityId;
 
-        public static void Close()
-        {
-            MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(NetworkId, MessageHandler);
-        }
+            [ProtoMember(2)]
+            public NavigationScreenBlockSettings Settings;
 
-        public static void RelayToClients<T>(T obj)
-        {
-            try
-            {
-                byte[] data = MyAPIGateway.Utilities.SerializeToBinary(obj);
-                MyAPIGateway.Multiplayer.SendMessageToOthers(NetworkId, data);
-            }
-            catch (Exception e)
-            {
-                MyLog.Default.WriteLineAndConsole($"Error in RelayToClients: {e.Message}");
-            }
-        }
+            public PacketBlockSettings() { } // Empty constructor required for deserialization
 
-        public static void SendToServer<T>(T obj)
-        {
-            try
+            public void Send(long entityId, NavigationScreenBlockSettings settings)
             {
-                byte[] data = MyAPIGateway.Utilities.SerializeToBinary(obj);
-                MyAPIGateway.Multiplayer.SendMessageToServer(NetworkId, data);
-            }
-            catch (Exception e)
-            {
-                MyLog.Default.WriteLineAndConsole($"Error in SendToServer: {e.Message}");
-            }
-        }
+                EntityId = entityId;
+                Settings = settings;
 
-        public static void SendToClient<T>(T obj, ulong recipientId)
-        {
-            try
-            {
-                byte[] data = MyAPIGateway.Utilities.SerializeToBinary(obj);
-                MyAPIGateway.Multiplayer.SendMessageTo(NetworkId, data, recipientId);
+                if (MyAPIGateway.Multiplayer.IsServer)
+                    Networking.RelayToClients(this);
+                else
+                    Networking.SendToServer(this);
             }
-            catch (Exception e)
-            {
-                MyLog.Default.WriteLineAndConsole($"Error in SendToClient: {e.Message}");
-            }
-        }
 
-        private static void MessageHandler(ushort handlerId, byte[] data, ulong senderId, bool fromServer)
-        {
-            try
+            public override void Received(ref bool relay)
             {
-                var packet = MyAPIGateway.Utilities.SerializeFromBinary<PacketBase>(data);
-                bool relay = false;
-                packet.Received(ref relay);
-                if (relay && MyAPIGateway.Multiplayer.IsServer)
+                try
                 {
-                    RelayToClients(packet);
+                    ClientExampleSetting = Settings.ExampleSetting;
+                    relay = true;
+                }
+                catch (Exception e)
+                {
+                    MyLog.Default.WriteLineAndConsole($"Error in PacketBlockSettings.Received: {e.Message}");
                 }
             }
-            catch (Exception e)
+        }
+
+        [ProtoContract(UseProtoMembersOnly = true)]
+        public class NavigationScreenBlockSettings
+        {
+            [ProtoMember(1)]
+            public int ExampleSetting { get; set; }
+        }
+
+        public static class Networking
+        {
+            private const ushort NetworkId = 8654;
+
+            public static void Init()
             {
-                MyLog.Default.WriteLineAndConsole($"Error in MessageHandler: {e.Message}");
+                MyAPIGateway.Multiplayer.RegisterSecureMessageHandler(NetworkId, MessageHandler);
             }
-        }
-    }
 
-    [ProtoContract(UseProtoMembersOnly = true)]
-    public abstract class PacketBase
-    {
-        public PacketBase() { } // Parameterless constructor for ProtoBuf
-
-        public abstract void Received(ref bool relay);
-    }
-
-    [ProtoContract(UseProtoMembersOnly = true)]
-    public class PacketServerSettings : PacketBase
-    {
-        [ProtoMember(1)]
-        public Dictionary<string, Dictionary<string, string>> Settings { get; set; }
-
-        public PacketServerSettings() { } // Empty constructor required for deserialization
-
-        public PacketServerSettings(Dictionary<string, Dictionary<string, string>> settings)
-        {
-            Settings = settings;
-        }
-
-        public void Send(ulong recipientId)
-        {
-            if (MyAPIGateway.Multiplayer.IsServer)
-                Networking.SendToClient(this, recipientId);
-            else
-                MyLog.Default.WriteLineAndConsole("Attempted to send server settings from a non-server instance.");
-        }
-
-        public override void Received(ref bool relay)
-        {
-            try
+            public static void Close()
             {
-                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Server Settings:");
-                foreach (var section in Settings)
+                MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(NetworkId, MessageHandler);
+            }
+
+            public static void RelayToClients<T>(T obj)
+            {
+                try
                 {
-                    foreach (var key in section.Value)
+                    byte[] data = MyAPIGateway.Utilities.SerializeToBinary(obj);
+                    MyAPIGateway.Multiplayer.SendMessageToOthers(NetworkId, data);
+                }
+                catch (Exception e)
+                {
+                    MyLog.Default.WriteLineAndConsole($"Error in RelayToClients: {e.Message}");
+                }
+            }
+
+            public static void SendToServer<T>(T obj)
+            {
+                try
+                {
+                    byte[] data = MyAPIGateway.Utilities.SerializeToBinary(obj);
+                    MyAPIGateway.Multiplayer.SendMessageToServer(NetworkId, data);
+                }
+                catch (Exception e)
+                {
+                    MyLog.Default.WriteLineAndConsole($"Error in SendToServer: {e.Message}");
+                }
+            }
+
+            private static void MessageHandler(ushort handlerId, byte[] data, ulong senderId, bool fromServer)
+            {
+                try
+                {
+                    var packet = MyAPIGateway.Utilities.SerializeFromBinary<PacketBase>(data);
+                    bool relay = false;
+                    packet.Received(ref relay);
+                    if (relay && MyAPIGateway.Multiplayer.IsServer)
                     {
-                        MyAPIGateway.Utilities.ShowMessage("PEPCO", $"{section.Key}.{key.Key}: {key.Value}");
+                        RelayToClients(packet);
                     }
                 }
+                catch (Exception e)
+                {
+                    MyLog.Default.WriteLineAndConsole($"Error in MessageHandler: {e.Message}");
+                }
             }
-            catch (Exception e)
-            {
-                MyLog.Default.WriteLineAndConsole($"Error in PacketServerSettings.Received: {e.Message}");
-            }
+        }
+    }
+
+    [ProtoContract]
+    [ProtoInclude(100, typeof(PacketUpdateServerSetting))]
+    [ProtoInclude(101, typeof(PacketBlockSettings))]
+    [ProtoInclude(102, typeof(PacketRequestServerSettings))]
+    [ProtoInclude(103, typeof(PacketResponseServerSettings))]
+    public class PacketBase
+    {
+        [ProtoMember(1)]
+        public string PacketType { get; set; }
+
+        public virtual void Received(ref bool relay)
+        {
+            // Default implementation (can be overridden in derived classes)
         }
     }
 
@@ -478,13 +525,13 @@ namespace PEPCO
     public class PacketUpdateServerSetting : PacketBase
     {
         [ProtoMember(1)]
-        public string Section;
+        public string Section { get; set; }
 
         [ProtoMember(2)]
-        public string Key;
+        public string Key { get; set; }
 
         [ProtoMember(3)]
-        public string Value;
+        public string Value { get; set; }
 
         public PacketUpdateServerSetting() { } // Empty constructor required for deserialization
 
@@ -505,10 +552,17 @@ namespace PEPCO
 
         public override void Received(ref bool relay)
         {
-            if (MyAPIGateway.Session.IsServer)
+            try
             {
-                SingleFileMod.UpdateServerSetting(Section, Key, Value);
-                relay = true;
+                if (MyAPIGateway.Multiplayer.IsServer)
+                {
+                    SingleFileMod.UpdateServerSetting(Section, Key, Value);
+                    relay = true; // Relay to clients if needed
+                }
+            }
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in PacketUpdateServerSetting.Received: {e.Message}");
             }
         }
     }
@@ -521,15 +575,51 @@ namespace PEPCO
         public void Send()
         {
             if (!MyAPIGateway.Multiplayer.IsServer)
+            {
                 Networking.SendToServer(this);
+            }
         }
 
         public override void Received(ref bool relay)
         {
-            if (MyAPIGateway.Session.IsServer)
+            try
             {
-                SingleFileMod.SendServerSettingsToClient(MyAPIGateway.Multiplayer.MyId);
-                relay = false;
+                if (MyAPIGateway.Multiplayer.IsServer)
+                {
+                    var responsePacket = new PacketResponseServerSettings(SingleFileMod.serverIni.ToString());
+                    Networking.RelayToClients(responsePacket);
+                }
+            }
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in PacketRequestServerSettings.Received: {e.Message}");
+            }
+        }
+    }
+
+    [ProtoContract(UseProtoMembersOnly = true)]
+    public class PacketResponseServerSettings : PacketBase
+    {
+        [ProtoMember(1)]
+        public string ServerSettings { get; set; }
+
+        public PacketResponseServerSettings() { } // Empty constructor required for deserialization
+
+        public PacketResponseServerSettings(string serverSettings)
+        {
+            ServerSettings = serverSettings;
+        }
+
+        public override void Received(ref bool relay)
+        {
+            try
+            {
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", "Server Settings:");
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", ServerSettings);
+            }
+            catch (Exception e)
+            {
+                MyLog.Default.WriteLineAndConsole($"Error in PacketResponseServerSettings.Received: {e.Message}");
             }
         }
     }
