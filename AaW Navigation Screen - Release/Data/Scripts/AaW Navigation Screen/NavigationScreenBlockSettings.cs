@@ -17,9 +17,6 @@ namespace PEPCO
         [ProtoMember(2)]
         public float NavigationScreenChevronScale;
 
-        [ProtoMember(3)]
-        public float NavigationScreenChevronStrength;
-
         [ProtoMember(4)]
         public Color NavigationScreenChevronColor;
 

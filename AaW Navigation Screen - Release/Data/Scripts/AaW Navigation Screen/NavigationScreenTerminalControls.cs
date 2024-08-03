@@ -106,35 +106,6 @@ namespace PEPCO
             }
 
             {
-                var c = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlSlider, IMyTextPanel>(IdPrefix + "ChevronStrength");
-                c.Title = MyStringId.GetOrCompute("Chevron Strength");
-                c.Tooltip = MyStringId.GetOrCompute("Changes the glow of the chevron on your map!");
-                c.SupportsMultipleBlocks = false;
-                c.Visible = CustomVisibleCondition;
-
-                c.Setter = (b, v) =>
-                {
-                    var logic = b?.GameLogic?.GetAs<NavigationScreenLogic>();
-                    if (logic != null)
-                        logic.NavigationScreenChevronStrength = MathHelper.Clamp(v, 0.1f, 10f); // just a heads up that the given value here is not clamped by the game, a mod or PB can give lower or higher than the limits!
-                };
-                c.Getter = (b) => b?.GameLogic?.GetAs<NavigationScreenLogic>()?.NavigationScreenChevronStrength ?? 10f;
-
-                c.SetLimits(0.1f, 10f);
-                c.Writer = (b, sb) =>
-                {
-                    var logic = b?.GameLogic?.GetAs<NavigationScreenLogic>();
-                    if (logic != null)
-                    {
-                        float val = logic.NavigationScreenChevronStrength;
-                        sb.Append(Math.Round(val, 2));
-                    }
-                };
-
-                MyAPIGateway.TerminalControls.AddControl<IMyTextPanel>(c);
-            }
-
-            {
                 var c = MyAPIGateway.TerminalControls.CreateControl<IMyTerminalControlSeparator, IMyTextPanel>(""); // separators don't store the id
                 c.SupportsMultipleBlocks = false;
                 c.Visible = CustomVisibleCondition;
@@ -180,7 +151,7 @@ namespace PEPCO
                 {
                     var logic = b?.GameLogic?.GetAs<NavigationScreenLogic>();
                     if (logic != null)
-                        logic.NavigationScreenZoom = MathHelper.Clamp((float)Math.Round(v, 1), 1f, 10f); // just a heads up that the given value here is not clamped by the game, a mod or PB can give lower or higher than the limits!
+                        logic.NavigationScreenZoom = MathHelper.Clamp((float)Math.Round(v * 2, MidpointRounding.AwayFromZero) / 2, 1f, 10f);
                 };
                 c.Getter = (b) => b?.GameLogic?.GetAs<NavigationScreenLogic>()?.NavigationScreenZoom ?? 1f;
 

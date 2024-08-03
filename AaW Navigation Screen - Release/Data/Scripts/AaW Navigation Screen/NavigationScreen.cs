@@ -62,6 +62,8 @@ namespace PEPCO
             { MyStringHash.GetOrCompute("Planet Thora 4"), new MapLookup { mapTextureName = "AaWThora4_Planet", planetOffset = 1 } }
         };
 
+        private int tick;
+
 
         //Chevron dimension limits
         public const float minChevronScale = 0.1f;
@@ -72,7 +74,7 @@ namespace PEPCO
         public const float maxChevronStrengt = 10f;
 
         //Zoom  limits
-        public const float minZoom = 1f;
+        public const float minZoom = 1.0f;
         public const float maxZoom = 10f;
 
 
@@ -149,17 +151,6 @@ namespace PEPCO
             }
         }
 
-        public float NavigationScreenChevronStrength
-        {
-            get { return Settings.NavigationScreenChevronStrength; }
-            set
-            {
-                Settings.NavigationScreenChevronStrength = MathHelper.Clamp(value, minChevronStrength, maxChevronStrengt);
-
-                SettingsChanged();
-            }
-        }
-
         public float NavigationScreenZoom
         {
             get { return Settings.NavigationScreenZoom; }
@@ -214,10 +205,7 @@ namespace PEPCO
                 builder.Append($"Planet: {currentPlanet?.Generator?.Id.SubtypeName.ToString()}\n" +
                     $"Heading: {MathHelper.ToDegrees(heading)}°\n" +
                     $"Longitude: {longitudeOutput}\n" +
-                    $"Latitude: {latitudeOutput}\n" +
-                    $"Zoom: {NavigationScreenZoom}\n" +
-                    $"Misc: \n" +
-                    $"Planet offset: {planetOffset}");
+                    $"Latitude: {latitudeOutput}");
             }
 
 
@@ -250,7 +238,6 @@ namespace PEPCO
                 // set default settings
                 Settings.NavigationScreenChevronScale = 1.0f;
                 Settings.NavigationScreenChevronColor = new Color(255, 0, 255);
-                Settings.NavigationScreenChevronStrength = 10.0f;
                 Settings.NavigationScreenOffset = 2;
                 Settings.NavigationScreenZoom = 1f;
 
@@ -319,7 +306,6 @@ namespace PEPCO
                     Settings.NavigationScreenOffset = loadedSettings.NavigationScreenOffset;
                     Settings.NavigationScreenChevronScale = loadedSettings.NavigationScreenChevronScale;
                     Settings.NavigationScreenChevronColor = loadedSettings.NavigationScreenChevronColor;
-                    Settings.NavigationScreenChevronStrength = loadedSettings.NavigationScreenChevronStrength;
                     Settings.NavigationScreenZoom = loadedSettings.NavigationScreenZoom;
                     return;
                 }
@@ -352,6 +338,14 @@ namespace PEPCO
         {
             try
             {
+                //Not sure I really need this but people seem to like to break things so here we are
+                if (tick++ == 10)
+                {
+                    tick = 0;
+                    ApplyDefaultBlockScript();
+                }
+
+
                 if (debug) Log.Info("UpdateBeforeSimulation10");
                 SyncSettings();
 
