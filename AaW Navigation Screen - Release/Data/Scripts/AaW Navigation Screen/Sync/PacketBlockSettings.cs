@@ -41,7 +41,6 @@ namespace PEPCO.Sync
 
             logic.Settings.NavigationScreenOffset = this.Settings.NavigationScreenOffset;
             logic.Settings.NavigationScreenChevronScale = this.Settings.NavigationScreenChevronScale;
-            logic.Settings.NavigationScreenChevronStrength = this.Settings.NavigationScreenChevronStrength;
             logic.Settings.NavigationScreenChevronColor = this.Settings.NavigationScreenChevronColor;
             logic.Settings.NavigationScreenZoom = this.Settings.NavigationScreenZoom;
 

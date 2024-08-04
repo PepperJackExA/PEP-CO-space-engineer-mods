@@ -78,11 +78,11 @@ namespace PEPCO
 
 
                         //Proceeds only if the player is looking at the screen
-                        if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.PageDown) || MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Down))
+                        if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.PageUp) || MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Down))
                         {
                             logic.NavigationScreenZoom++;
                         }
-                        else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.PageUp) || MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Up))
+                        else if (MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.PageDown) || MyAPIGateway.Input.IsKeyPress(VRage.Input.MyKeys.Up))
                         {
                             logic.NavigationScreenZoom--;
                         }
@@ -98,21 +98,19 @@ namespace PEPCO
 
                         if (logic.mapName == "Error_Planet") // if the map name is "Error_Planet" then the planet is not mapped
                         {
-                            DrawUnmappedPlanet();
+                            DrawOther("Error_Planet");
                             return;
                         }
 
                         Draw();
                     }
-                    else
-                    {
-                        DrawNoPlanet();
-                    }
+                    else 
+                        DrawOther("Error_Gravity");
                 }
-                else throw new Exception("Oh noes an error :}");
+                else DrawOther("Error_Device");
 
 
-                
+
 
 
             }
@@ -238,7 +236,7 @@ namespace PEPCO
             zoomed = false;
         }
 
-        void DrawNoPlanet()
+        void DrawOther(string dataInput)
         {
             // Calculate the viewport offset by centering the surface size onto the texture size
             _viewport = new RectangleF(
@@ -252,33 +250,7 @@ namespace PEPCO
             var sprite = new MySprite()
             {
                 Type = SpriteType.TEXTURE,
-                Data = "Error_Gravity",
-                Position = _viewport.Center,
-                Size = _viewport.Size,
-                Color = Color.White.Alpha(1f),
-                Alignment = TextAlignment.CENTER
-            };
-
-            frame.Add(sprite);
-
-            frame.Dispose();
-        }
-
-        void DrawUnmappedPlanet()
-        {
-            // Calculate the viewport offset by centering the surface size onto the texture size
-            _viewport = new RectangleF(
-                (Surface.TextureSize - Surface.SurfaceSize) / 2f,
-                Surface.SurfaceSize
-            );
-
-            var frame = Surface.DrawFrame();
-
-            // Create the center map sprite
-            var sprite = new MySprite()
-            {
-                Type = SpriteType.TEXTURE,
-                Data = "Error_Planet",
+                Data = dataInput,
                 Position = _viewport.Center,
                 Size = _viewport.Size,
                 Color = Color.White.Alpha(1f),

@@ -1,0 +1,491 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<VoxelMaterials>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>S_Gravel</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+				<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>BalCorp_Blackhole</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Sulfur</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Coal</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>OilSand</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Copper</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Lithium</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Bauxite</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Titanium</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Tantalum</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Magnesium_01</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>046</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Snow_MEwoodsgrass</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>034</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>S_034</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Forest01</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Forest02</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>048</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>SnowSoil</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DeepSnow</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>IceEuropa2</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Grass_02</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienGreenGrass</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienGreenGrass bare</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienIce_03</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienSand</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienOrangeGrass</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienOrangeGrass bare</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienIce</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienSnow</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienYellowGrass</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienYellowGrass bare</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienSoil</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DarkRock</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DarkSoil</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienDead</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>MarsAlien</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Blacksand</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>purple Grass</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>LV</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Bylen</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>CrackedSoil</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DustyRocks</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DustyRocks2</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DustyRocks3</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>PertamSand</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Gravel</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Gravel02</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienSandSea</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DarkRockSea</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DarkSoilSea</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DarkRock1Sea</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Rocks_grassSea</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>TritonIceSea</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Stone_01</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Stone_06</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>MoonAlien</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Saltflat</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Crystalsoil</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Crystalsand</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Redsand</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Redsoil</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>RedRocks</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>CraitIce</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>AlienSnowSpider</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Cronyx</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Dorium</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC-BeachSand</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC blackSand_02</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>Ice_02DOC</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC-TundraGrass</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC-TundraGrass-BARE</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC-DarinusRock</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC-DarinusGrass2</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC-DarinusGrass2 bare</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC-RavLava</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC-RavRock</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC-RavCrackedRock</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>DOC-RavSoil</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>MEwoods</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+		<VoxelMaterial xsi:type="MyObjectBuilder_Dx11VoxelMaterialDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_Dx11VoxelMaterialDefinition</TypeId>
+				<SubtypeId>MERocks</SubtypeId>
+			</Id>
+		</VoxelMaterial>
+	</VoxelMaterials>
+</Definitions>
