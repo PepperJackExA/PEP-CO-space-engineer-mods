@@ -1,16 +1,15 @@
 ﻿using Sandbox.ModAPI;
 using System;
+using PEPCO.iSurvival.CustomEntitySpawner;
 
-namespace PEPCO.iSurvival.CustomEntitySpawner
+namespace PEPCO.LogError
 {
     public class PEPCO_LogError
     {
-        public static CustomEntitySpawnerSettings settings = new CustomEntitySpawnerSettings();
+        public CustomEntitySpawnerSettings settings = new CustomEntitySpawnerSettings();
 
         public void LogError(string message)
         {
-            if (!settings.EnableLogging)
-                return;
 
             string logFilePath = "CustomEntitySpawner.log";
             string existingContent = ReadExistingLogContent(logFilePath);

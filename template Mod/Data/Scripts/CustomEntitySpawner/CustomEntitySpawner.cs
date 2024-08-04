@@ -15,276 +15,85 @@ using System.Linq;
 using VRage.Game.Entity;
 using VRage.ModAPI;
 using VRage.ObjectBuilders;
+using PEPCO.LogError;
 
 namespace PEPCO.iSurvival.CustomEntitySpawner
 {
     [MySessionComponentDescriptor(MyUpdateOrder.BeforeSimulation)]
     public class CustomEntitySpawner : MySessionComponentBase
     {
+        public static Networking NetworkingInstance { get; private set; }
+        public CustomEntitySpawnerSettings CESsettings = new CustomEntitySpawnerSettings();
+        public CustomEntitySpawnerChat chat = new CustomEntitySpawnerChat();
+        public PEPCO_LogError log = new PEPCO_LogError();
+
+        public HashSet<string> validBotIds = new HashSet<string>();
+
         private int updateTickCounter = 0;
         private long totalUpdateTicks = 0;
         private bool isLoading = true;
         private int loadingTickCount = 100;
-        public bool scriptPaused = false;
         private static readonly Random randomGenerator = new Random();
         private int cleanupTickCounter = 0;
+
 
         private const string ModDataFile = "CES.ini";
         private const string WorldStorageFolder = "CustomEntitySpawner";
         private const string WorldStorageFile = "CES.ini";
 
-        private static readonly Dictionary<string, Type> itemTypeMappings = new Dictionary<string, Type>
-        {
-            { "MyObjectBuilder_ConsumableItem", typeof(MyObjectBuilder_ConsumableItem) },
-            { "MyObjectBuilder_Ore", typeof(MyObjectBuilder_Ore) },
-            { "MyObjectBuilder_Ingot", typeof(MyObjectBuilder_Ingot) },
-            { "MyObjectBuilder_Component", typeof(MyObjectBuilder_Component) }
-        };
 
-        public static CustomEntitySpawnerSettings settings = new CustomEntitySpawnerSettings();
-        public static CustomEntitySpawnerChat chat = new CustomEntitySpawnerChat();
-        public static PEPCO_LogError log = new PEPCO_LogError();
-        public static HashSet<string> validBotIds = new HashSet<string>();
+        private static List<IMyPlayer> players = new List<IMyPlayer>();
+        private static List<long> justSpawned = new List<long>();
 
-        private const string DefaultGlobalIniContent = @"
-; ==============================================
-; HOW TO USE GlobalConfig.ini
-; ==============================================C
-;BaseUpdateInterval 60 = 1 second
-;EnableLogging will enable the storage log file and some ingame messages
-;CleanupInterval 60 = 1 second
-;GlobalMaxEntities Required Items will be lost if this is not set lower then server Max entities setting.
-[Config]
-BaseUpdateInterval=60    
-EnableLogging=false
-CleanupInterval=0
-GlobalMaxEntities=30
-";
-
-        private const string DefaultEntitySpawnerIniContent = @"
-; ==============================================
-; HOW TO USE CustomEntitySpawner.ini
-; ==============================================
-; This file configures the spawning behavior of entities around specific block types.
-; Each section must be unique.
-;[SomethingUniqueHere]
-;
-; Block settings
-; BlockId specifies the unique identifier for the block.
-; Example: SmallBlockSmallContainer for a small cargo container.
-; List of options: Any valid block ID.
-;BlockId=SmallBlockSmallContainer
-;
-; BlockType specifies the type of block for which this configuration applies.
-; Example: MyObjectBuilder_CargoContainer for cargo containers.
-; List of options: MyObjectBuilder_CargoContainer, MyObjectBuilder_Refinery, MyObjectBuilder_Assembler, etc.
-;BlockType=MyObjectBuilder_CargoContainer
-;
-; Enabled specifies whether this configuration is active.
-; Values: true or false
-; Example: true
-;Enabled=true
-;
-; PlayerDistanceCheck is the maximum distance from a player for spawning entities.
-; Example: 100 (100 meters)
-; List of options: Any positive integer, -1 to disable the check.
-;PlayerDistanceCheck=100
-;
-; Entity spawning settings
-; EnableEntitySpawning specifies whether entities should be spawned.
-; Values: true or false
-;EnableEntitySpawning=true
-;
-; EntityID specifies the ID of the entities to spawn.
-; Example: Wolf
-; List of options: Any valid entity ID such as Wolf, Spider, etc.
-;EntityID=Wolf
-;
-; MinEntityAmount is the minimum number of entities to spawn when conditions are met.
-; Example: 1
-; List of options: Any positive integer.
-;MinEntityAmount=1
-;
-; MaxEntityAmount is the maximum number of entities to spawn when conditions are met.
-; Example: 1
-; List of options: Any positive integer.
-;MaxEntityAmount=1
-;
-; MaxEntitiesInArea is the maximum number of entities allowed in the area for spawning.
-; Example: 30
-; List of options: Any positive integer.
-;MaxEntitiesInArea=30
-;
-; MaxEntitiesRadius is the radius (in meters) within which the MaxEntitiesInArea limit is checked.
-; This radius is spherical, meaning it is measured in 3D space.
-; Example: 100 (100 meters)
-; List of options: Any positive float value.
-;MaxEntitiesRadius=100
-;
-; Item spawning settings
-; EnableItemSpawning specifies whether items should be spawned.
-; Values: true or false
-;EnableItemSpawning=true
-;
-; ItemTypes specifies the types of items to spawn.
-; Example: MyObjectBuilder_Component
-; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
-;ItemTypes=MyObjectBuilder_Component
-;
-; ItemIds specifies the IDs of the items to spawn.
-; Example: SteelPlate
-; List of options: Any valid item ID such as SteelPlate, Iron, etc.
-;ItemIds=SteelPlate
-;
-; MinItemAmount is the minimum number of items to spawn when conditions are met.
-; Example: 1
-; List of options: Any positive integer.
-;MinItemAmount=1
-;
-; MaxItemAmount is the maximum number of items to spawn when conditions are met.
-; Example: 1
-; List of options: Any positive integer.
-;MaxItemAmount=1
-;
-; UseWeightedDrops determines if the number of items spawned should use weighted probabilities.
-; Values: true or false
-; Example: false
-;UseWeightedDrops=false
-;
-; StackItems specifies whether items should be stacked when spawned.
-; Values: true or false
-;StackItems=false
-;
-; SpawnInsideInventory specifies whether items should be spawned inside the inventory of the block.
-; Values: true or false
-;SpawnInsideInventory=false
-;
-; SpawnItemsWithEntities specifies whether items should be spawned only when an entity is spawned.
-; Values: true or false
-;SpawnItemsWithEntities=true
-;
-; Environmental conditions
-; DamageAmount is the amount of damage to apply to the block each time entities are spawned.
-; Example: 0
-; List of options: Any non-negative float value.
-;DamageAmount=0
-;
-; MinHealthPercentage is the minimum health percentage the block must have to allow spawning.
-; Example: 0.2 (20%)
-; List of options: Any float value between 0 and 1.
-;MinHealthPercentage=0.2
-;
-; MaxHealthPercentage is the maximum health percentage the block can have to allow spawning.
-; Example: 1 (100%)
-; List of options: Any float value between 0 and 1.
-;MaxHealthPercentage=1
-;
-; MinHeight is the minimum height offset for spawning entities.
-; Example: 0.5
-; List of options: Any non-negative float value.
-;MinHeight=0.5
-;
-; MaxHeight is the maximum height offset for spawning entities.
-; Example: 2.0
-; List of options: Any non-negative float value.
-;MaxHeight=2.0
-;
-; MinRadius is the minimum radius for spawning entities around the block.
-; Example: 0.5
-; List of options: Any non-negative float value.
-;MinRadius=0.5
-;
-; MaxRadius is the maximum radius for spawning entities around the block.
-; Example: 2.0
-; List of options: Any non-negative float value.
-;MaxRadius=2.0
-;
-; SpawnTriggerInterval is the interval in update ticks for triggering entity spawn.
-; Example: 3 (every 3 updates)
-; List of options: Any positive integer.
-;SpawnTriggerInterval=3
-;
-; EnableAirtightAndOxygen determines if airtight and oxygen levels are considered for spawning.
-; Values: true or false
-; Example: false
-;EnableAirtightAndOxygen=false
-;
-; Required items for spawning (to be removed)
-; RequiredItemTypes specifies the types of items required in the inventory for spawning (to be removed).
-; Example: MyObjectBuilder_Component
-; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
-;RequiredItemTypes=MyObjectBuilder_Component,MyObjectBuilder_Component
-;
-; RequiredItemIds specifies the IDs of the required items (to be removed).
-; Example: SteelPlate
-; List of options: Any valid item ID such as SteelPlate, Iron, etc.
-;RequiredItemIds=SteelPlate,InteriorPlate
-;
-; RequiredItemAmounts specifies the amounts of the required items (to be removed).
-; Example: 5
-; List of options: Any positive integer.
-;RequiredItemAmounts=1,1
-;
-; Permanent required items for spawning (not removed)
-; PermanentRequiredItemTypes specifies the types of items required in the inventory for spawning (not removed).
-; Example: MyObjectBuilder_Ore
-; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
-;PermanentRequiredItemTypes=MyObjectBuilder_Ore,MyObjectBuilder_Ore
-;
-; PermanentRequiredItemIds specifies the IDs of the permanent required items (not removed).
-; Example: Iron
-; List of options: Any valid item ID such as Iron, SteelPlate, etc.
-;PermanentRequiredItemIds=Iron,Gold
-;
-; PermanentRequiredItemAmounts specifies the amounts of the permanent required items (not removed).
-; Example: 10
-; List of options: Any positive integer.
-;PermanentRequiredItemAmounts=1,1
-;
-; Required entities in the vicinity for spawning
-; RequiredEntity specifies the entity type required in the vicinity for spawning.
-; Example: Wolf
-; List of options: Any valid entity ID such as Wolf, Spider, etc.
-;RequiredEntity=Wolf
-;
-; RequiredEntityRadius is the radius within which the required entity must be present.
-; Example: 10 (10 meters)
-; List of options: Any positive float value.
-;RequiredEntityRadius=10
-;
-; RequiredEntityNumber is the number of required entities needed for spawning.
-; Example: 0 (no specific number required)
-; List of options: Any positive integer.
-;RequiredEntityNumber=0
-;
-; RequireEntityNumberForTotalEntities determines if the required entity number is for the total entities.
-; Values: true or false
-; Example: false
-;RequireEntityNumberForTotalEntities=false
-;
-; MaxEntitiesInArea is the maximum number of entities allowed in the area for spawning.
-; Example: 30
-; List of options: Any positive integer.
-;MaxEntitiesInArea=30
-";
+        private static int skippedTicks = 0;
+        private bool isServer;
 
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
         {
-            if (!MyAPIGateway.Session.IsServer) return;
+            isServer = MyAPIGateway.Multiplayer.IsServer;
+            if (!isServer) return;
+            MyVisualScriptLogicProvider.PlayerSpawned += (playerId) =>
+            {
+                justSpawned.Add(playerId);
+            };
+
+            NetworkingInstance = new Networking(58430); // last 5 of Workshop 
+            NetworkingInstance.Register();
 
             MyAPIGateway.Utilities.ShowMessage("start", "Init");
             EnsureDefaultIniFilesExist();
             CopyAllCESFilesToWorldStorage();
             LoadAllFilesFromWorldStorage();
-            settings.Load();
+            CESsettings.Load();
             InitializeBotSpawnerConfig();
+            LoadValidBotIds();
             MyAPIGateway.Utilities.MessageEntered += chat.OnMessageEntered;
         }
+       
 
+        public void LoadValidBotIds()
+        {
+            MyAPIGateway.Utilities.ShowMessage("BotSpawner", "LoadValidBotIds");
+            var botDefinitions = MyDefinitionManager.Static.GetBotDefinitions();
+            foreach (var botDefinition in botDefinitions)
+            {
+                MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"{botDefinition.Id.SubtypeName}");
+                validBotIds.Add(botDefinition.Id.SubtypeName);
+            }
+        }
+
+        public void ListValidBotIds()
+        {
+            MyAPIGateway.Utilities.ShowMessage("BotSpawner", "ListValidBotIds");
+            foreach (var botId in validBotIds)
+            {
+                MyAPIGateway.Utilities.ShowMessage("BotSpawner", botId);
+            }
+        }
         public void EnsureDefaultIniFilesExist()
         {
-            CreateIniFileIfNotExists(CustomEntitySpawnerSettings.GlobalFileName, DefaultGlobalIniContent);
-            CreateIniFileIfNotExists(CustomEntitySpawnerSettings.EntitySpawnerFileName, DefaultEntitySpawnerIniContent);
+            CreateIniFileIfNotExists(CESsettings.GlobalFileName, CESsettings.DefaultGlobalIniContent);
+            CreateIniFileIfNotExists(CESsettings.EntitySpawnerFileName, CESsettings.DefaultEntitySpawnerIniContent);
         }
 
         private void CreateIniFileIfNotExists(string fileName, string content)
@@ -300,7 +109,7 @@ GlobalMaxEntities=30
 
         protected override void UnloadData()
         {
-            if (MyAPIGateway.Session.IsServer)
+            if (MyAPIGateway.Multiplayer.IsServer)
             {
                 MyAPIGateway.Utilities.MessageEntered -= chat.OnMessageEntered;
                 validBotIds.Clear();
@@ -310,13 +119,14 @@ GlobalMaxEntities=30
 
         public override void UpdateBeforeSimulation()
         {
-            if (!MyAPIGateway.Session.IsServer) return;
+            
+            if (!MyAPIGateway.Multiplayer.IsServer) return;
 
             if (isLoading && loadingTickCount-- > 0) return;
             isLoading = false;
             totalUpdateTicks++;
 
-            if (++updateTickCounter >= settings.BaseUpdateInterval)
+            if (++updateTickCounter >= CESsettings.BaseUpdateInterval)
             {
                 updateTickCounter = 0;
                 try
@@ -330,7 +140,7 @@ GlobalMaxEntities=30
                 }
             }
 
-            if (settings.CleanupInterval != 0 && ++cleanupTickCounter >= settings.CleanupInterval)
+            if (CESsettings.CleanupInterval != 0 && ++cleanupTickCounter >= CESsettings.CleanupInterval)
             {
                 cleanupTickCounter = 0;
                 try
@@ -346,15 +156,16 @@ GlobalMaxEntities=30
 
         public void PauseScript()
         {
-            scriptPaused = !scriptPaused;
-            MyAPIGateway.Utilities.ShowMessage("CES", $"Script is now {(scriptPaused ? "paused" : "resumed")}.");
+            CESsettings.scriptPaused = !CESsettings.scriptPaused;
+            MyAPIGateway.Utilities.ShowMessage("CES", $"Script is now {(CESsettings.scriptPaused ? "paused" : "resumed")}.");
         }
 
         private void SpawnEntitiesNearBlocks(ref int entitiesSpawned)
         {
-            if (scriptPaused) return;
-
-            long baseUpdateCycles = totalUpdateTicks / settings.BaseUpdateInterval;
+            var paused = CESsettings.scriptPaused;
+            MyAPIGateway.Utilities.ShowMessage("CES", $"NearBlocks?{paused}");
+            if (paused) return;
+            long baseUpdateCycles = totalUpdateTicks / CESsettings.BaseUpdateInterval;
             List<IMyPlayer> players = new List<IMyPlayer>();
             MyAPIGateway.Players.GetPlayers(players);
 
@@ -371,7 +182,7 @@ GlobalMaxEntities=30
 
                     foreach (var block in blocks)
                     {
-                        foreach (var blockSettings in settings.BlockSpawnSettings)
+                        foreach (var blockSettings in CESsettings.BlockSpawnSettings)
                         {
                             if (block.FatBlock.BlockDefinition.TypeIdString == blockSettings.BlockType &&
                                 block.FatBlock.BlockDefinition.SubtypeId == blockSettings.BlockId &&
@@ -436,7 +247,7 @@ GlobalMaxEntities=30
             if (blockSettings.EnableEntitySpawning)
             {
                 int currentGlobalEntityCount = GetTotalEntityCount();
-                if (currentGlobalEntityCount >= settings.GlobalMaxEntities)
+                if (currentGlobalEntityCount >= CESsettings.GlobalMaxEntities)
                 {
                     log.LogError($"Entity global limit reached: {currentGlobalEntityCount} entities");
                     return;
@@ -595,7 +406,7 @@ GlobalMaxEntities=30
 
             for (int i = 0; i < blockSettings.RequiredItemTypes.Count; i++)
             {
-                var requiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
+                var requiredItemType = new MyDefinitionId(CESsettings.itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
                 var itemAmount = (VRage.MyFixedPoint)blockSettings.RequiredItemAmounts[i];
 
                 if (itemAmount > 0 && !inventory.ContainItems(itemAmount, requiredItemType))
@@ -607,7 +418,7 @@ GlobalMaxEntities=30
 
             for (int i = 0; i < blockSettings.PermanentRequiredItemTypes.Count; i++)
             {
-                var permanentRequiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.PermanentRequiredItemTypes[i]], blockSettings.PermanentRequiredItemIds[i]);
+                var permanentRequiredItemType = new MyDefinitionId(CESsettings.itemTypeMappings[blockSettings.PermanentRequiredItemTypes[i]], blockSettings.PermanentRequiredItemIds[i]);
                 var permanentItemAmount = (VRage.MyFixedPoint)blockSettings.PermanentRequiredItemAmounts[i];
 
                 if (permanentItemAmount > 0 && !inventory.ContainItems(permanentItemAmount, permanentRequiredItemType))
@@ -631,7 +442,7 @@ GlobalMaxEntities=30
 
             for (int i = 0; i < blockSettings.RequiredItemTypes.Count; i++)
             {
-                var requiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
+                var requiredItemType = new MyDefinitionId(CESsettings.itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
                 var totalAmountToRemove = (VRage.MyFixedPoint)(blockSettings.RequiredItemAmounts[i]);
                 if (totalAmountToRemove > 0)
                 {
@@ -701,7 +512,7 @@ GlobalMaxEntities=30
             if (inventory != null)
             {
                 Type itemTypeId;
-                if (itemTypeMappings.TryGetValue(itemType, out itemTypeId))
+                if (CESsettings.itemTypeMappings.TryGetValue(itemType, out itemTypeId))
                 {
                     var itemDefinition = new MyDefinitionId(itemTypeId, itemId);
                     var itemObjectBuilder = (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(itemDefinition);
@@ -739,7 +550,7 @@ GlobalMaxEntities=30
 
         private void SpawnItemNearBlock(IMySlimBlock block, string itemType, string itemId, int amount, bool stackItems, BotSpawnerConfig settings)
         {
-            var itemDefinition = new MyDefinitionId(itemTypeMappings[itemType], itemId);
+            var itemDefinition = new MyDefinitionId(CESsettings.itemTypeMappings[itemType], itemId);
             var itemObjectBuilder = (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(itemDefinition);
 
             List<Vector3D> dropPositions = new List<Vector3D>();
@@ -809,7 +620,7 @@ GlobalMaxEntities=30
 
         private void SpawnItemNearPosition(Vector3D position, string itemType, string itemId, int amount, bool stackItems, BotSpawnerConfig settings)
         {
-            var itemDefinition = new MyDefinitionId(itemTypeMappings[itemType], itemId);
+            var itemDefinition = new MyDefinitionId(CESsettings.itemTypeMappings[itemType], itemId);
             var itemObjectBuilder = (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(itemDefinition);
 
             List<Vector3D> dropPositions = new List<Vector3D>();
@@ -837,7 +648,7 @@ GlobalMaxEntities=30
                 );
             }
         }
-
+        
         private Vector3D CalculateDropPosition(Vector3D basePosition, BotSpawnerConfig settings)
         {
             double height = settings.MinHeight + (randomGenerator.NextDouble() * (settings.MaxHeight - settings.MinHeight));
@@ -920,10 +731,10 @@ GlobalMaxEntities=30
 
         public void InitializeBotSpawnerConfig()
         {
-            settings.BlockSpawnSettings.Clear();
-            settings.Load();
+            CESsettings.BlockSpawnSettings.Clear();
+            CESsettings.Load();
 
-            foreach (var botSpawnerConfig in settings.BlockSpawnSettings)
+            foreach (var botSpawnerConfig in CESsettings.BlockSpawnSettings)
             {
                 log.LogError($"Initialized settings for {botSpawnerConfig.BlockId}: " +
                              $"BlockType={botSpawnerConfig.BlockType}, " +
@@ -1001,7 +812,7 @@ GlobalMaxEntities=30
                 List<string> knownConfigFiles = new List<string> { "GlobalConfig.ini", "CustomEntitySpawner.ini" };
                 List<string> additionalFilePatterns = new List<string> { "_CES.ini" };
 
-                settings.BlockSpawnSettings.Clear();
+                CESsettings.BlockSpawnSettings.Clear();
 
                 LoadKnownConfigFiles(knownConfigFiles, loadedFiles);
                 LoadAdditionalModConfigFiles(additionalFilePatterns, loadedFiles);
@@ -1064,12 +875,15 @@ GlobalMaxEntities=30
                 throw new Exception($"Config error: {result.ToString()}");
             }
 
-            settings.BaseUpdateInterval = iniParser.Get("Config", "BaseUpdateInterval").ToInt32(60);
-            settings.EnableLogging = iniParser.Get("Config", "EnableLogging").ToBoolean(false);
-            settings.CleanupInterval = iniParser.Get("Config", "CleanupInterval").ToInt32(180);
-            settings.GlobalMaxEntities = iniParser.Get("Config", "GlobalMaxEntities").ToInt32(100);
+            CESsettings.BaseUpdateInterval = iniParser.Get("Config", "BaseUpdateInterval").ToInt32(60);
+            CESsettings.EnableLogging = iniParser.Get("Config", "EnableLogging").ToBoolean(false);
+            CESsettings.CleanupInterval = iniParser.Get("Config", "CleanupInterval").ToInt32(180);
+            CESsettings.GlobalMaxEntities = iniParser.Get("Config", "GlobalMaxEntities").ToInt32(100);
         }
-
+        public void ApplyReceivedSettings(BotSpawnerConfig config)
+        {
+            CESsettings.UpdateBlockSettings(0, config); // Example entityId, replace with actual if necessary
+        }
         private void LoadCustomEntitySpawnerConfig(string fileContent)
         {
             MyIni iniParser = new MyIni();
@@ -1130,7 +944,7 @@ GlobalMaxEntities=30
                 botSpawnerConfig.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemTypes)).ToString().Split(','));
                 botSpawnerConfig.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemIds)).ToString().Split(','));
                 botSpawnerConfig.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(BotSpawnerConfig.PermanentRequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
-                settings.BlockSpawnSettings.Add(botSpawnerConfig);
+                CESsettings.BlockSpawnSettings.Add(botSpawnerConfig);
             }
         }
     }

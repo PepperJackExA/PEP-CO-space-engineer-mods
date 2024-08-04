@@ -13,14 +13,21 @@ using VRage.Game.Components;
 using VRage.Utils;
 using VRage.ModAPI;
 
+using System.IO;
+using System.Linq;
+using VRage.ObjectBuilders;
+using PEPCO.LogError;
+using PEPCO.Sync;
+
 namespace PEPCO.iSurvival.CustomEntitySpawner
 {
+    
     public class CustomEntitySpawnerChat
     {
-        public static CustomEntitySpawnerSettings settings = new CustomEntitySpawnerSettings();
+        public static CustomEntitySpawnerSettings CESsettings = new CustomEntitySpawnerSettings();
         public static CustomEntitySpawner CESspawner = new CustomEntitySpawner();
         public static PEPCO_LogError log = new PEPCO_LogError();
-        public static HashSet<string> validBotIds = new HashSet<string>();
+
 
         private const string CommandPrefix = "/pepco";
 
@@ -28,21 +35,21 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 
         public void OnMessageEntered(string messageText, ref bool sendToOthers)
         {
-            if (!MyAPIGateway.Session.IsServer) return;
-
+            MyAPIGateway.Utilities.RegisterMessageHandler( ("CES", $"session?:{MyAPIGateway.Session.IsServer} multiplayer?: {MyAPIGateway.Multiplayer.IsServer}");
+            //if (!MyAPIGateway.Multiplayer.IsServer) return;
             var player = MyAPIGateway.Session.Player;
-
             if (player == null || !MyAPIGateway.Session.IsUserAdmin(player.SteamUserId))
-            {
-                MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Only admins can use this command.");
-                return;
-            }
+                {
+                    MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Only admins can use this command.");
+                    return;
+                }
 
-            var command = messageText.Split(' ');
-            if (command[0].Equals(CommandPrefix, StringComparison.OrdinalIgnoreCase))
-            {
-                HandlePepcoCommand(command, ref sendToOthers);
-            }
+                var command = messageText.Split(' ');
+                if (command[0].Equals(CommandPrefix, StringComparison.OrdinalIgnoreCase))
+                {
+                    HandlePepcoCommand(command, ref sendToOthers);
+                }
+            
         }
 
         public void HandlePepcoCommand(string[] command, ref bool sendToOthers)
@@ -52,13 +59,18 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
             if (command[1].Equals("pause", StringComparison.OrdinalIgnoreCase))
             {
                 CESspawner.PauseScript();
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", $"PauseScript:{CESsettings.scriptPaused}");
+                CESsettings.Load();
+                MyAPIGateway.Utilities.ShowMessage("PEPCO", $"Load:{CESsettings.scriptPaused}");
+                
                 sendToOthers = false;
                 return;
             }
 
-            if (CESspawner.scriptPaused)
+            if (CESsettings.scriptPaused)
             {
                 MyAPIGateway.Utilities.ShowMessage("PEPCO", "Script is currently paused.");
+
                 return;
             }
 
@@ -68,8 +80,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
                     HandleSpawnCommand(command);
                     break;
                 case "listbots":
-                    LoadValidBotIds();
-                    ListValidBotIds();
+                    CESspawner.ListValidBotIds();
                     break;
                 case "ces":
                     HandleCESCommand(command, ref sendToOthers);
@@ -88,8 +99,9 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
                     HandleShowCommand(command, ref sendToOthers);
                     break;
                 case "logging":
-                    settings.EnableLogging = !settings.EnableLogging;
-                    MyAPIGateway.Utilities.ShowMessage("Custom Entity Spawner", $"Logging is now {(settings.EnableLogging ? "enabled" : "disabled")}.");
+                    CESsettings.EnableLogging = !CESsettings.EnableLogging;
+                    CESsettings.Load();
+                    MyAPIGateway.Utilities.ShowMessage("Custom Entity Spawner", $"Logging is now {(CESsettings.EnableLogging ? "enabled" : "disabled")}.");
                     sendToOthers = false;
                     break;
                 case "help":
@@ -104,10 +116,13 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 
         private void HandleSpawnCommand(string[] command)
         {
+            CESspawner.LoadValidBotIds();
+            var BotIds = CESspawner.validBotIds;
             if (command.Length == 3)
             {
+                MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"command.Length");
                 string botId = command[2];
-                if (validBotIds.Contains(botId))
+                if (BotIds.Contains(botId))
                 {
                     Vector3D playerPosition = MyAPIGateway.Session.Player.GetPosition();
                     Vector3D forwardDirection = MyAPIGateway.Session.Player.Character.WorldMatrix.Forward;
@@ -140,13 +155,19 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
                         ListAllBlocksAndSpawns();
                         sendToOthers = false;
                         break;
+                    case "update":
+                        // Example usage of sending a settings update packet
+                        var newSettings = new BotSpawnerConfig("SmallBlockSmallContainer", "MyObjectBuilder_CargoContainer");
+                        var packet = new PacketBlockSettings(0, newSettings); // Example entityId, replace if necessary
+                        packet.Send();
+                        sendToOthers = false;
+                        break;
                     default:
                         MyAPIGateway.Utilities.ShowMessage("PEPCO", "Unknown CES command. Use /pepco help for a list of commands.");
                         break;
                 }
             }
         }
-
         private void HandleKillCommand(string[] command, ref bool sendToOthers)
         {
             if (command.Length >= 3)
@@ -256,13 +277,13 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 
         private void ListAllBlocksAndSpawns()
         {
-            if (settings.BlockSpawnSettings.Count == 0)
+            if (CESsettings.BlockSpawnSettings.Count == 0)
             {
                 MyAPIGateway.Utilities.ShowMessage("CustomEntitySpawner", "No block spawn settings found.");
                 return;
             }
 
-            foreach (var blockSettings in settings.BlockSpawnSettings)
+            foreach (var blockSettings in CESsettings.BlockSpawnSettings)
             {
                 string message = $"BlockId: {blockSettings.BlockId}, BlockType: {blockSettings.BlockType}, Entities: {string.Join(", ", blockSettings.EntityID)}";
                 MyAPIGateway.Utilities.ShowMessage("CustomEntitySpawner", message);
@@ -404,22 +425,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 
         #region Utility Methods
 
-        public static void LoadValidBotIds()
-        {
-            var botDefinitions = MyDefinitionManager.Static.GetBotDefinitions();
-            foreach (var botDefinition in botDefinitions)
-            {
-                validBotIds.Add(botDefinition.Id.SubtypeName);
-            }
-        }
-
-        private static void ListValidBotIds()
-        {
-            foreach (var botId in validBotIds)
-            {
-                MyAPIGateway.Utilities.ShowMessage("BotSpawner", botId);
-            }
-        }
+        
 
         #endregion
     }
