@@ -1,0 +1,327 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlockVariantGroups>
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="SGGasolinePropellers" />
+            <Blocks>
+                <Block Type="Thrust" Subtype="SG1x1GasThruster" />
+				<Block Type="Thrust" Subtype="SG3x3GasThruster" />
+				<Block Type="Thrust" Subtype="SG5x5GasThruster" />
+            </Blocks>
+        </BlockVariantGroup>
+    </BlockVariantGroups>
+	<CategoryClasses>
+        <Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+          <Id>
+            <TypeId>GuiBlockCategoryDefinition</TypeId>
+            <SubtypeId/>
+          </Id>
+          <DisplayName>Propulsion Systems</DisplayName>
+          <Name>PropulsionSystem</Name>
+          <ItemIds>
+            <string>Thrust/SG1x1GasThruster</string>
+			<string>Thrust/SG3x3GasThruster</string>
+			<string>Thrust/SG5x5GasThruster</string>
+          </ItemIds>
+        </Category>
+    </CategoryClasses>
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SG1x1GasThruster</SubtypeId>
+			</Id>
+			<DisplayName>Small 1x1 Gasoline Atmospheric Thruster</DisplayName>
+			<Description>Gasoline Propulsion System for use in Atmospher</Description>
+			<Icon>Textures\GUI\Icons\Cubes\AtmosphericThrusterSmall.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG1x1GasThruster.mwm</Model>
+			<Components>
+        		<Component Subtype="SteelPlate" Count="5" />
+        		<Component Subtype="Construction" Count="15" />
+        		<Component Subtype="LargeTube" Count="2" />
+        		<Component Subtype="CopperWire" Count="15" />
+        		<Component Subtype="MetalGrid" Count="2" />
+        		<Component Subtype="Motor" Count="20" />				
+				<Component Subtype="Computer" Count="5" />
+        		<Component Subtype="TitaniumPlate" Count="5" />
+        		<Component Subtype="SteelPlate" Count="5" />
+      		</Components>
+      		<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG1x1GasThruster_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG1x1GasThruster_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SG1x1GasThruster</BlockPairName>
+			<MountPoints>
+				<MountPoint Side="Left" StartX="1.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="1.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="1.00" EndX="1.00" EndY="2.00" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="1.00" EndX="1.00" EndY="2.00"/>
+			</MountPoints>
+			<ThrusterType>Hydrogen</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+			<ForceMagnitude>144000</ForceMagnitude>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Gasoline</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>0.0125</MaxPowerConsumption>
+			<MinPowerConsumption>0.000000001</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+			<PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+			<PropellerRoundsPerSecondOnFullSpeed>1.9</PropellerRoundsPerSecondOnFullSpeed>
+			<PropellerRoundsPerSecondOnIdleSpeed>0.3</PropellerRoundsPerSecondOnIdleSpeed>
+			<PropellerAccelerationTime>3</PropellerAccelerationTime>
+			<PropellerDecelerationTime>6</PropellerDecelerationTime>
+			<PropellerMaxVisibleDistance>60</PropellerMaxVisibleDistance>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+			<NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+			<FlameDamageLengthScale>0.35</FlameDamageLengthScale>
+			<FlameDamage>0.1</FlameDamage>
+			<FlameLengthScale>1.5</FlameLengthScale>
+			<FlameIdleColor>
+				<X>0.3</X>
+				<Y>0.3</Y>
+				<Z>0.3</Z>
+				<W>0.75</W>
+			</FlameIdleColor>
+			<FlameFullColor>
+				<X>0.3</X>
+				<Y>0.3</Y>
+				<Z>0.3</Z>
+				<W>0.75</W>
+			</FlameFullColor>
+			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+			<FlameLengthMaterial>SciFiEngineThrustMiddle</FlameLengthMaterial>
+			<FlameFlare>SmallGridSmallThruster</FlameFlare>
+			<FlameVisibilityDistance>200</FlameVisibilityDistance>
+			<FlameGlareQuerySize>0.25</FlameGlareQuerySize>
+			<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<Public>true</Public>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>15</PCU>
+			<IsAirTight>false</IsAirTight>
+			<VoxelPlacement>
+                <StaticMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                </StaticMode>
+                <DynamicMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                </DynamicMode>
+            </VoxelPlacement>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SG3x3GasThruster</SubtypeId>
+			</Id>
+			<DisplayName>Small 3x3 Gasoline Atmospheric Thruster</DisplayName>
+			<Description>Gasoline Propulsion System for use in Atmospher</Description>
+			<Icon>Textures\GUI\Icons\Cubes\AtmosphericThrusterSmall.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="9"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG3x3GasThruster.mwm</Model>
+			<Components>
+      		  	<Component Subtype="SteelPlate" Count="25" />
+      		  	<Component Subtype="Construction" Count="20" />
+      		  	<Component Subtype="LargeTube" Count="10" />
+      		  	<Component Subtype="CopperWire" Count="20" />
+      		  	<Component Subtype="MetalGrid" Count="8" />
+      		  	<Component Subtype="Motor" Count="80" />								
+				<Component Subtype="Computer" Count="10" />
+      		  	<Component Subtype="TitaniumPlate" Count="25" />
+      		  	<Component Subtype="SteelPlate" Count="10" />
+      		</Components>
+      		<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Left" StartX="3.00" StartY="0.00" EndX="6.00" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="3.00" StartY="0.00" EndX="6.00" EndY="3.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="3.00" EndX="3.00" EndY="6.00"/>
+				<MountPoint Side="Top" StartX="1.00" StartY="4.00" EndX="2.00" EndY="5.00" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="3.00" EndX="3.00" EndY="6.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG3x3GasThruster_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG3x3GasThruster_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SG3x3GasThruster</BlockPairName>
+			<ThrusterType>Hydrogen</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+			<ForceMagnitude>864000</ForceMagnitude>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Gasoline</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>0.125</MaxPowerConsumption>
+			<MinPowerConsumption>0.000000001</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+			<PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+			<PropellerRoundsPerSecondOnFullSpeed>1.9</PropellerRoundsPerSecondOnFullSpeed>
+			<PropellerRoundsPerSecondOnIdleSpeed>0.3</PropellerRoundsPerSecondOnIdleSpeed>
+			<PropellerAccelerationTime>3</PropellerAccelerationTime>
+			<PropellerDecelerationTime>6</PropellerDecelerationTime>
+			<PropellerMaxVisibleDistance>60</PropellerMaxVisibleDistance>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+			<NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+			<FlameDamageLengthScale>0.35</FlameDamageLengthScale>
+			<FlameDamage>0.1</FlameDamage>
+			<FlameLengthScale>1.5</FlameLengthScale>
+			<FlameIdleColor>
+				<X>0.3</X>
+				<Y>0.3</Y>
+				<Z>0.3</Z>
+				<W>0.75</W>
+			</FlameIdleColor>
+			<FlameFullColor>
+				<X>0.3</X>
+				<Y>0.3</Y>
+				<Z>0.3</Z>
+				<W>0.75</W>
+			</FlameFullColor>
+			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+			<FlameLengthMaterial>SciFiEngineThrustMiddle</FlameLengthMaterial>
+			<FlameFlare>SmallGridSmallThruster</FlameFlare>
+			<FlameVisibilityDistance>200</FlameVisibilityDistance>
+			<FlameGlareQuerySize>0.25</FlameGlareQuerySize>
+			<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<Public>true</Public>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>15</PCU>
+			<IsAirTight>false</IsAirTight>
+			<VoxelPlacement>
+                <StaticMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                </StaticMode>
+                <DynamicMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                </DynamicMode>
+            </VoxelPlacement>
+			
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>SG5x5GasThruster</SubtypeId>
+			</Id>
+			<DisplayName>Small 5x5 Gasoline Atmospheric Thruster</DisplayName>
+			<Description>Gasoline Propulsion System for use in Atmospher</Description>
+			<Icon>Textures\GUI\Icons\Cubes\AtmosphericThrusterSmall.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="5" z="15"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG5x5GasThruster.mwm</Model>
+			<Components>
+      		  	<Component Subtype="SteelPlate" Count="50" />
+      		  	<Component Subtype="Construction" Count="40" />
+      		  	<Component Subtype="LargeTube" Count="20" />
+      		  	<Component Subtype="CopperWire" Count="40" />
+      		  	<Component Subtype="MetalGrid" Count="16" />
+      		  	<Component Subtype="Motor" Count="160" />				
+				<Component Subtype="AdvancedComputer" Count="10" />
+      		  	<Component Subtype="TitaniumPlate" Count="50" />
+      		  	<Component Subtype="SteelPlate" Count="20" />
+      		</Components>
+      		<CriticalComponent Subtype="TitaniumPlate" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Left" StartX="5.00" StartY="0.00" EndX="10.00" EndY="5.00"/>
+				<MountPoint Side="Right" StartX="5.00" StartY="0.00" EndX="10.00" EndY="5.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="5.00" EndX="5.00" EndY="10.00"/>
+				<MountPoint Side="Top" StartX="2.00" StartY="7.00" EndX="3.00" EndY="8.00" Default="true"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="5.00" EndX="5.00" EndY="10.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG5x5GasThruster_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG5x5GasThruster_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SG5x5GasThruster</BlockPairName>
+			<ThrusterType>Hydrogen</ThrusterType>
+			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
+			<ForceMagnitude>1296000</ForceMagnitude>
+			<FuelConverter>
+				<FuelId>
+					<TypeId>GasProperties</TypeId>
+					<SubtypeId>Gasoline</SubtypeId>
+				</FuelId>
+				<Efficiency>1</Efficiency>
+			</FuelConverter>
+			<MaxPowerConsumption>0.25</MaxPowerConsumption>
+			<MinPowerConsumption>0.000000001</MinPowerConsumption>
+			<SlowdownFactor>1</SlowdownFactor>
+			<PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+			<PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+			<PropellerRoundsPerSecondOnFullSpeed>1.9</PropellerRoundsPerSecondOnFullSpeed>
+			<PropellerRoundsPerSecondOnIdleSpeed>0.3</PropellerRoundsPerSecondOnIdleSpeed>
+			<PropellerAccelerationTime>3</PropellerAccelerationTime>
+			<PropellerDecelerationTime>6</PropellerDecelerationTime>
+			<PropellerMaxVisibleDistance>60</PropellerMaxVisibleDistance>
+			<MinPlanetaryInfluence>0.3</MinPlanetaryInfluence>
+			<MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+			<EffectivenessAtMinInfluence>0</EffectivenessAtMinInfluence>
+			<EffectivenessAtMaxInfluence>1</EffectivenessAtMaxInfluence>
+			<NeedsAtmosphereForInfluence>true</NeedsAtmosphereForInfluence>
+			<FlameDamageLengthScale>0.35</FlameDamageLengthScale>
+			<FlameDamage>0.1</FlameDamage>
+			<FlameLengthScale>1.5</FlameLengthScale>
+			<FlameIdleColor>
+				<X>0.3</X>
+				<Y>0.3</Y>
+				<Z>0.3</Z>
+				<W>0.75</W>
+			</FlameIdleColor>
+			<FlameFullColor>
+				<X>0.3</X>
+				<Y>0.3</Y>
+				<Z>0.3</Z>
+				<W>0.75</W>
+			</FlameFullColor>
+			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+			<FlameLengthMaterial>SciFiEngineThrustMiddle</FlameLengthMaterial>
+			<FlameFlare>SmallGridSmallThruster</FlameFlare>
+			<FlameVisibilityDistance>200</FlameVisibilityDistance>
+			<FlameGlareQuerySize>0.25</FlameGlareQuerySize>
+			<PrimarySound>SmShipSmJetAtmo</PrimarySound>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleWeapExpl</DamagedSound>
+			<Public>true</Public>
+			<DestroyEffect>BlockDestroyedExplosion_Tiny</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>15</PCU>
+			<IsAirTight>false</IsAirTight>
+			<VoxelPlacement>
+                <StaticMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                </StaticMode>
+                <DynamicMode>
+                    <PlacementMode>OutsideVoxel</PlacementMode>
+                </DynamicMode>
+            </VoxelPlacement>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
