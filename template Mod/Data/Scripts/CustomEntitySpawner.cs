@@ -15,14 +15,13 @@ using System.Linq;
 using VRage.Game.Entity;
 using VRage.ModAPI;
 using VRage.ObjectBuilders;
+using Sandbox.Game.Entities.Character;
 
 namespace PEPCO.iSurvival.CustomEntitySpawner
 {
     [MySessionComponentDescriptor(MyUpdateOrder.BeforeSimulation)]
     public class CustomEntitySpawner : MySessionComponentBase
     {
-        private const string MOD_NAME = "Custom Entity Spawner";
-
         public HashSet<string> validBotIds = new HashSet<string>();
 
         private int updateTickCounter = 0;
@@ -42,7 +41,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
         // Global Settings
 
         public int BaseUpdateInterval { get; set; } = 60;
-        public bool EnableLogging { get; set; } = true;
+        public bool EnableLogging { get; set; } = false;
         public int CleanupInterval { get; set; } = 18000;
         public int GlobalMaxEntities { get; set; } = 32;
         
@@ -58,7 +57,7 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
 ;GlobalMaxEntities Required Items will be lost if this is not set lower than server Max entities setting.
 [Config]
 BaseUpdateInterval=60    
-EnableLogging=true
+EnableLogging=false
 CleanupInterval=0
 GlobalMaxEntities=30
 ";
@@ -352,7 +351,7 @@ GlobalMaxEntities=30
             LogError("Starting LoadOnHost");
             var iniParser = new MyIni();
             EnsureDefaultIniFilesExist();            
-            //CopyAllCESFilesToWorldStorage();
+            CopyAllCESFilesToWorldStorage();
             LoadAllFilesFromWorldStorage();
             Load();
             
@@ -467,8 +466,9 @@ GlobalMaxEntities=30
 
         private void SpawnEntitiesNearBlocks(ref int entitiesSpawned)
         {
-            LogError("Starting SpawnEntitiesNearBlocks");
             if (scriptPaused) return;
+            //LogError("Starting SpawnEntitiesNearBlocks");
+
 
             long baseUpdateCycles = totalUpdateTicks / BaseUpdateInterval;
             List<IMyPlayer> players = new List<IMyPlayer>();
@@ -502,19 +502,26 @@ GlobalMaxEntities=30
 
         private bool IsValidBlockForSpawning(IMySlimBlock block, CustomEntitySpawner blockSettings, long baseUpdateCycles, List<IMyPlayer> players)
         {
-            LogError("Starting IsValidBlockForSpawning");
+            //LogError("Starting IsValidBlockForSpawning");
             if (!blockSettings.Enabled) return false;
             if (baseUpdateCycles % blockSettings.SpawnTriggerInterval != 0) return false;
             if (!IsEnvironmentSuitable(block, blockSettings)) return false;
             if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck)) return false;
             if (!AreRequiredEntitiesInVicinity(block, blockSettings)) return false;
-            
+
+            // Check if the block is loaded on the server
+            var grid = block.CubeGrid as IMyCubeGrid;
+            if (grid == null || !MyAPIGateway.Entities.EntityExists(grid.EntityId))
+                return false;
+
             float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
             if (blockHealthPercentage < blockSettings.MinHealthPercentage || blockHealthPercentage > blockSettings.MaxHealthPercentage)
                 return false;
 
             return CheckInventoryForRequiredItems(block, blockSettings);
         }
+
+
 
         private bool IsEnvironmentSuitable(IMySlimBlock block, CustomEntitySpawner blockSettings)
         {
@@ -667,21 +674,13 @@ GlobalMaxEntities=30
                 var character = entity as IMyCharacter;
                 if (character != null)
                 {
-                    if (requiredEntitySubtypeId.Equals("All"))
+                    string entityCurrentSubtypeId = (character as MyEntity)?.DefinitionId?.SubtypeId.ToString();
+                    LogError($"Entity: {entity.DisplayName}, SubtypeId: {entityCurrentSubtypeId}, Position: {entity.GetPosition()}, Distance: {Vector3D.Distance(entity.GetPosition(), position)}");
+
+                    if (requiredEntitySubtypeId.Equals("All", StringComparison.OrdinalIgnoreCase) ||
+                        (entityCurrentSubtypeId != null && entityCurrentSubtypeId.Equals(requiredEntitySubtypeId, StringComparison.OrdinalIgnoreCase)))
                     {
-                        if (!excludeDeadEntities || !character.IsDead)
-                        {
-                            if (Vector3D.Distance(entity.GetPosition(), position) <= radius)
-                            {
-                                entityCount++;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        string entityCurrentSubtypeId = (character as MyEntity)?.DefinitionId?.SubtypeId.ToString();
-                        if (entityCurrentSubtypeId != null && entityCurrentSubtypeId.Equals(requiredEntitySubtypeId, StringComparison.OrdinalIgnoreCase) &&
-                            Vector3D.Distance(entity.GetPosition(), position) <= radius)
+                        if (Vector3D.Distance(entity.GetPosition(), position) <= radius)
                         {
                             if (!excludeDeadEntities || !character.IsDead)
                             {
@@ -691,8 +690,11 @@ GlobalMaxEntities=30
                     }
                 }
             }
+
+            LogError($"Entities found: {entityCount}");
             return entityCount;
         }
+
 
 
 
@@ -712,21 +714,41 @@ GlobalMaxEntities=30
         private bool IsPlayerInRange(IMySlimBlock block, List<IMyPlayer> players, int playerDistanceCheck)
         {
             LogError("Starting IsPlayerInRange");
+
             if (playerDistanceCheck == -1) return true;
             if (playerDistanceCheck == 0) return players.Count > 0;
+            if (block.FatBlock == null)
+            {
+                LogError("Block does not have a FatBlock");
+                return false;
+            }
 
             Vector3D blockPosition = block.FatBlock.GetPosition();
+            LogError($"Block Position: {blockPosition}");
+
             foreach (var player in players)
             {
+                // Check if the player is controlled by a human player
                 var controlledEntity = player.Controller?.ControlledEntity?.Entity;
-                if (controlledEntity != null && controlledEntity is IMyCharacter && player == MyAPIGateway.Session.LocalHumanPlayer)
+                if (controlledEntity != null && controlledEntity is IMyCharacter)
                 {
-                    double distance = Vector3D.Distance(controlledEntity.GetPosition(), blockPosition);
-                    if (distance <= playerDistanceCheck) return true;
+                    // Ensure that the character's controller is the same as the player
+                    var character = controlledEntity as IMyCharacter;
+                    if (!player.IsBot && !character.IsDead)
+                    {
+                        double distance = Vector3D.Distance(character.GetPosition(), blockPosition);
+                        LogError($"Player Position:{player.DisplayName} {character.GetPosition()}, Distance: {distance}");
+                        if (distance <= playerDistanceCheck) return true;
+                    }
                 }
             }
             return false;
         }
+
+
+
+
+
 
         private bool CheckInventoryForRequiredItems(IMySlimBlock block, CustomEntitySpawner blockSettings)
         {
@@ -789,6 +811,59 @@ GlobalMaxEntities=30
                 }
             }
         }
+        private void CenterSpawnAroundEntities(IMySlimBlock block, CustomEntitySpawner settings, int spawnAmount)
+        {
+            LogError("Starting CenterSpawnAroundEntities");
+            if (block.FatBlock == null)
+            {
+                LogError("Block does not have a FatBlock");
+                return;
+            }
+
+            var entities = new HashSet<IMyEntity>();
+            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
+
+            Vector3D blockPosition = block.FatBlock.GetPosition();
+            LogError($"Block Position: {blockPosition}");
+
+            foreach (var entity in entities)
+            {
+                var character = entity as IMyCharacter;
+                if (character != null && !character.IsDead && character.Definition.Id.SubtypeId.String.Equals(settings.RequiredEntity, StringComparison.OrdinalIgnoreCase))
+                {
+                    Vector3D entityPosition = character.PositionComp.GetPosition();
+                
+               //     var myEntity = entity as MyEntity;
+               // if (myEntity != null && myEntity.DefinitionId.HasValue &&
+               //     myEntity.DefinitionId.Value.SubtypeId.String.Equals(settings.RequiredEntity, StringComparison.OrdinalIgnoreCase))
+                
+                    //Vector3D entityPosition = myEntity.PositionComp.GetPosition();
+                    LogError($"Entity Position: {entityPosition}, Distance: {Vector3D.Distance(entityPosition, blockPosition)}");
+
+                    if (Vector3D.Distance(entityPosition, blockPosition) <= settings.RequiredEntityRadius)
+                    {
+                        for (int i = 0; i < spawnAmount; i++)
+                        {
+                            Vector3D spawnPosition = entityPosition + GetRandomOffset();
+                            LogError($"Spawning bot {settings.EntityID.FirstOrDefault()} at {spawnPosition}");
+                            MyVisualScriptLogicProvider.SpawnBot(settings.EntityID.FirstOrDefault(), spawnPosition);
+                        }
+                    }
+                }
+            }
+        }
+
+        private Vector3D GetRandomOffset()
+        {
+            Random random = new Random();
+            double offsetX = random.NextDouble() * 2 - 1; // Random value between -1 and 1
+            double offsetY = random.NextDouble() * 2 - 1; // Random value between -1 and 1
+            double offsetZ = random.NextDouble() * 2 - 1; // Random value between -1 and 1
+            return new Vector3D(offsetX, offsetY, offsetZ);
+        }
+
+
+
 
         private void SpawnEntities(IMySlimBlock block, CustomEntitySpawner Entitysettings, int spawnAmount)
         {
@@ -1142,27 +1217,7 @@ GlobalMaxEntities=30
             );
         }
 
-        private void CenterSpawnAroundEntities(IMySlimBlock block, CustomEntitySpawner settings, int spawnAmount)
-        {
-            LogError("Starting CenterSpawnAroundEntities");
-            var entities = new HashSet<IMyEntity>();
-            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
-
-            foreach (var entity in entities)
-            {
-                var myEntity = entity as MyEntity;
-                if (myEntity != null && myEntity.DefinitionId.HasValue && myEntity.DefinitionId.Value.SubtypeId == MyStringHash.GetOrCompute(settings.RequiredEntity))
-                {
-                    if (Vector3D.Distance(entity.GetPosition(), block.FatBlock.GetPosition()) <= settings.RequiredEntityRadius)
-                    {
-                        for (int i = 0; i < spawnAmount; i++)
-                        {
-                            MyVisualScriptLogicProvider.SpawnBot(settings.EntityID.FirstOrDefault(), entity.PositionComp.GetPosition());
-                        }
-                    }
-                }
-            }
-        }
+        
 
         private List<int> GenerateProbabilities(int minAmount, int maxAmount)
         {
@@ -1370,18 +1425,39 @@ GlobalMaxEntities=30
 
         public void OnMessageEntered(string messageText, ref bool sendToOthers)
         {
-            LogError("Starting: OnMessageEntered");
-            var player = MyAPIGateway.Session.Player;
-            if (player == null || !MyAPIGateway.Session.IsUserAdmin(player.SteamUserId))
+            if (MyAPIGateway.Utilities.IsDedicated)
             {
-                MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Only admins can use this command.");
-                return;
-            }
+                // Only run on dedicated server
+                LogError("Starting: OnMessageEntered");
+                var player = MyAPIGateway.Session.Player;
+                if (player == null || !MyAPIGateway.Session.IsUserAdmin(player.SteamUserId))
+                {
+                    MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Only admins can use this command.");
+                    return;
+                }
 
-            var command = messageText.Split(' ');
-            if (command[0].Equals(CommandPrefix, StringComparison.OrdinalIgnoreCase))
+                var command = messageText.Split(' ');
+                if (command[0].Equals(CommandPrefix, StringComparison.OrdinalIgnoreCase))
+                {
+                    HandlePepcoCommand(command, ref sendToOthers);
+                }
+            }
+            else if (MyAPIGateway.Session.IsServer)
             {
-                HandlePepcoCommand(command, ref sendToOthers);
+
+                LogError("Starting: OnMessageEntered");
+                var player = MyAPIGateway.Session.Player;
+                if (player == null || !MyAPIGateway.Session.IsUserAdmin(player.SteamUserId))
+                {
+                    MyAPIGateway.Utilities.ShowMessage("BotSpawner", "Only admins can use this command.");
+                    return;
+                }
+
+                var command = messageText.Split(' ');
+                if (command[0].Equals(CommandPrefix, StringComparison.OrdinalIgnoreCase))
+                {
+                    HandlePepcoCommand(command, ref sendToOthers);
+                }
             }
         }
 
@@ -1766,6 +1842,7 @@ GlobalMaxEntities=30
 
         public void LogError(string message)
         {
+            if (EnableLogging == false) return;
             string LogfilePath = "CustomEntitySpawner.log";
             string existingContent = ReadExistingLogContent(LogfilePath);
 
@@ -1810,6 +1887,7 @@ GlobalMaxEntities=30
         private void LoadCustomEntitySpawnerConfig(string fileContent)
         {
             LogError("Starting: LoadCustomEntitySpawnerConfig");
+            
             MyIni iniParser = new MyIni();
             MyIniParseResult result;
             if (!iniParser.TryParse(fileContent, out result))
