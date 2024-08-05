@@ -46,6 +46,48 @@
 		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
 			<Id>
 				<TypeId>TextPanel</TypeId>
+				<SubtypeId>MercatorMap_Large</SubtypeId>
+			</Id>
+			<DisplayName>{LOC:DisplayName_NavigationScreen_Large}</DisplayName>
+			<Description>{LOC:Description_NavigationScreen_Large}</Description>
+            <Icon>Textures\GUI\Icons\Cubes\LCDPanelWide.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="4" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\MercatorMap_Large.mwm</Model>
+			<Components>
+				<Component Subtype="InteriorPlate" Count="4"/>
+				<Component Subtype="Construction" Count="24"/>
+				<Component Subtype="Computer" Count="24"/>
+				<Component Subtype="RadioCommunication" Count="8"/>
+				<Component Subtype="Display" Count="40"/>
+				<Component Subtype="BulletproofGlass" Count="24"/>
+			</Components>
+			<CriticalComponent Subtype="Display" Index="0"/>
+			<MountPoints>
+                <MountPoint Side="Front" StartX="0" StartY="0" EndX="4" EndY="2" Default="true"/>
+                <MountPoint Side="Left" StartX="0" StartY="0.1" EndX="0.1" EndY="1.9" />
+                <MountPoint Side="Right" StartX="0.9" StartY="0.1" EndX="1" EndY="1.9" />
+                <MountPoint Side="Top" StartX="0" StartY="0.9" EndX="4" EndY="2" />
+                <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="4" EndY="0.1" />
+            </MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\MercatorMap_BS1_Large.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\MercatorMap_BS_Large.mwm"/>
+			</BuildProgressModels>
+			<ScreenWidth>2</ScreenWidth>
+			<ScreenHeight>1</ScreenHeight>
+			<TextureResolution>2048</TextureResolution>
+			<ScreenAreas>
+				<ScreenArea Name="ScreenArea" DisplayName="ScreenArea" TextureResolution="2048" ScreenWidth="2" ScreenHeight="1"/>
+			</ScreenAreas>
+			<PanelMaterialName>ScreenArea</PanelMaterialName>
+			<BlockPairName>NavigationScreen</BlockPairName>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+			<Id>
+				<TypeId>TextPanel</TypeId>
 				<SubtypeId>SG_MercatorMap_Large</SubtypeId>
 			</Id>
 			<DisplayName>{LOC:DisplayName_SmallNavigationScreenLarge}</DisplayName>
@@ -136,6 +178,7 @@
 			<Description>{LOC:Description_NavigationScreen}</Description>
 			<Blocks>
 				<Block Type="TextPanel" Subtype="MercatorMap"/>
+				<Block Type="TextPanel" Subtype="MercatorMapMercatorMap_Large"/>
 				<Block Type="TextPanel" Subtype="SG_MercatorMap_Large"/>
 				<Block Type="TextPanel" Subtype="SG_MercatorMap"/>
 			</Blocks>
@@ -151,6 +194,7 @@
 			<Name>PEPCONavigationScreen</Name>
 			<ItemIds>
 				<string>TextPanel/MercatorMap</string>
+				<string>TextPanel/MercatorMap_Large</string>
 				<string>TextPanel/SG_MercatorMap_Large</string>
 				<string>TextPanel/SG_MercatorMap</string>
 			</ItemIds>

@@ -33,7 +33,7 @@ using CollisionLayers = Sandbox.Engine.Physics.MyPhysics.CollisionLayers;
 
 namespace PEPCO
 {
-    [MyEntityComponentDescriptor(typeof(MyObjectBuilder_TextPanel), false, "MercatorMap", "SG_MercatorMap", "SG_MercatorMap_Large")]
+    [MyEntityComponentDescriptor(typeof(MyObjectBuilder_TextPanel), false, "MercatorMap", "MercatorMap_Large", "SG_MercatorMap", "SG_MercatorMap_Large")]
     public class NavigationScreenLogic : MyGameLogicComponent
     {
 
