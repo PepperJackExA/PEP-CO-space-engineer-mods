@@ -77,8 +77,8 @@ GlobalMaxEntities=30
         public bool SpawnItemsWithEntities { get; set; } = false;
         public int MinEntityAmount { get; set; } = 1;
         public int MaxEntityAmount { get; set; } = 1;
-        public int MinItemAmount { get; set; } = 1;
-        public int MaxItemAmount { get; set; } = 1;
+        public List<double> MinItemAmount { get; set; } = new List<double>();
+        public List<double> MaxItemAmount { get; set; } = new List<double>();
         public bool UseWeightedDrops { get; set; } = false;
         public float DamageAmount { get; set; } = 0;
         public bool Repair { get; set; } = false;
@@ -93,7 +93,7 @@ GlobalMaxEntities=30
         public bool Enabled { get; set; } = true;
         public List<string> RequiredItemTypes { get; set; } = new List<string>();
         public List<string> RequiredItemIds { get; set; } = new List<string>();
-        public List<int> RequiredItemAmounts { get; set; } = new List<int>();
+        public List<double> RequiredItemAmounts { get; set; } = new List<double>();
         public List<string> PermanentRequiredItemTypes { get; set; } = new List<string>();
         public List<string> PermanentRequiredItemIds { get; set; } = new List<string>();
         public List<int> PermanentRequiredItemAmounts { get; set; } = new List<int>();
@@ -556,30 +556,37 @@ GlobalMaxEntities=30
         {
             LogError("Starting ProcessBlockSpawning");
             bool entitiesSpawnedThisCycle = false;
-            
-            if (blockSettings.EnableEntitySpawning)
-            {
-                int currentGlobalEntityCount = GetTotalEntityCount();
-                if (currentGlobalEntityCount >= GlobalMaxEntities)
-                {
-                    LogError($"Entity global limit reached: {currentGlobalEntityCount} entities");
-                    return;
-                }
 
-                int currentEntityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, "All", true);
-                if (currentEntityCount >= blockSettings.MaxEntitiesInArea)
-                {
-                    LogError($"Entity spawn limit reached: {currentEntityCount} entities within radius {blockSettings.MaxEntitiesRadius}");
-                    return;
-                }
-                RemoveItemsFromInventory(block, blockSettings);
-                SpawnEntitiesAndApplyDamage(block, blockSettings, ref entitiesSpawned, ref entitiesSpawnedThisCycle);
-            }
-
-            if (blockSettings.EnableItemSpawning)
+            if (blockSettings.EnableEntitySpawning || blockSettings.EnableItemSpawning)
             {
-                RemoveItemsFromInventory(block, blockSettings);
-                SpawnItemsAndApplyDamage(block, blockSettings);
+                // Check if required items are present before removing them
+                if (CheckInventoryForRequiredItems(block, blockSettings))
+                {
+                    RemoveItemsFromInventory(block, blockSettings);
+
+                    if (blockSettings.EnableEntitySpawning)
+                    {
+                        int currentGlobalEntityCount = GetTotalEntityCount();
+                        if (currentGlobalEntityCount >= GlobalMaxEntities)
+                        {
+                            LogError($"Entity global limit reached: {currentGlobalEntityCount} entities");
+                            return;
+                        }
+
+                        int currentEntityCount = GetEntityCountInRadius(block.FatBlock.GetPosition(), blockSettings.MaxEntitiesRadius, "All", true);
+                        if (currentEntityCount >= blockSettings.MaxEntitiesInArea)
+                        {
+                            LogError($"Entity spawn limit reached: {currentEntityCount} entities within radius {blockSettings.MaxEntitiesRadius}");
+                            return;
+                        }
+                        SpawnEntitiesAndApplyDamage(block, blockSettings, ref entitiesSpawned, ref entitiesSpawnedThisCycle);
+                    }
+
+                    if (blockSettings.EnableItemSpawning)
+                    {
+                        SpawnItemsAndApplyDamage(block, blockSettings);
+                    }
+                }
             }
         }
 
@@ -610,46 +617,53 @@ GlobalMaxEntities=30
         private void SpawnItemsAndApplyDamage(IMySlimBlock block, CustomEntitySpawner blockSettings)
         {
             LogError("Starting SpawnItemsAndApplyDamage");
-            for (int i = 0; i < 1; i++) // Default spawn iterations
+            for (int i = 0; i < blockSettings.ItemTypes.Count; i++)
             {
-                int itemSpawnAmount = blockSettings.UseWeightedDrops ?
-                    GetWeightedRandomNumber(blockSettings.MinItemAmount, GenerateProbabilities(blockSettings.MinItemAmount, blockSettings.MaxItemAmount)) :
-                    randomGenerator.Next(blockSettings.MinItemAmount, blockSettings.MaxItemAmount + 1);
+                double itemSpawnAmount = blockSettings.UseWeightedDrops ?
+                    GetWeightedRandomNumber(blockSettings.MinItemAmount[i], GenerateProbabilities(blockSettings.MinItemAmount[i], blockSettings.MaxItemAmount[i])) :
+                    blockSettings.MinItemAmount[i] + randomGenerator.NextDouble() * (blockSettings.MaxItemAmount[i] - blockSettings.MinItemAmount[i]);
 
-                if (itemSpawnAmount > 0)
+                int roundedItemSpawnAmount = (int)Math.Round(itemSpawnAmount);
+
+                if (roundedItemSpawnAmount > 0)
                 {
                     if (blockSettings.RequireEntityCenterOn)
                     {
-                        CenterSpawnItemsAroundEntities(block, blockSettings, itemSpawnAmount);
+                        CenterSpawnItemsAroundEntities(block, blockSettings, roundedItemSpawnAmount);
                     }
                     else
                     {
                         SpawnItems(block, blockSettings);
                     }
 
-                    ApplyDamageToBlock(block, blockSettings, itemSpawnAmount);
+                    ApplyDamageToBlock(block, blockSettings, roundedItemSpawnAmount);
                 }
             }
         }
 
-        private void ApplyDamageToBlock(IMySlimBlock block, CustomEntitySpawner blockSettings, int amount)
+
+
+
+        private void ApplyDamageToBlock(IMySlimBlock block, CustomEntitySpawner blockSettings, double amount)
         {
             LogError("Starting ApplyDamageToBlock");
             float maxHealth = block.MaxIntegrity;
-            float damageAmount = maxHealth * (blockSettings.DamageAmount / 100.0f) * amount;
+            float damageAmount = maxHealth * (blockSettings.DamageAmount / 100.0f) * (float)amount;
             if (!blockSettings.Repair)
             {
                 block.DoDamage(damageAmount, MyDamageType.Destruction, true);
             }
             else
             {
-                for (int i = 0; i <= blockSettings.DamageAmount * amount; i++)
+                int damageSteps = (int)Math.Ceiling(blockSettings.DamageAmount * amount);
+                for (int i = 0; i < damageSteps; i++)
                 {
                     block.SpawnFirstItemInConstructionStockpile();
                 }
-                block.IncreaseMountLevel(blockSettings.DamageAmount * amount, block.OwnerId, null, MyAPIGateway.Session.WelderSpeedMultiplier, true);
+                block.IncreaseMountLevel(blockSettings.DamageAmount * (float)amount, block.OwnerId, null, MyAPIGateway.Session.WelderSpeedMultiplier, true);
             }
         }
+
 
         private bool AreRequiredEntitiesInVicinity(IMySlimBlock block, CustomEntitySpawner blockSettings)
         {
@@ -886,35 +900,45 @@ GlobalMaxEntities=30
             }
         }
 
-        private void SpawnItems(IMySlimBlock block, CustomEntitySpawner Itemsettings, Vector3D? position = null)
+        private void SpawnItems(IMySlimBlock block, CustomEntitySpawner itemSettings, Vector3D? position = null)
         {
             LogError("Starting SpawnItems");
-            foreach (var itemType in Itemsettings.ItemTypes)
-            {
-                var itemId = Itemsettings.ItemIds[Itemsettings.ItemTypes.IndexOf(itemType)];
-                int amount = Itemsettings.UseWeightedDrops
-                    ? GetWeightedRandomNumber(Itemsettings.MinItemAmount, GenerateProbabilities(Itemsettings.MinItemAmount, Itemsettings.MaxItemAmount))
-                    : randomGenerator.Next(Itemsettings.MinItemAmount, Itemsettings.MaxItemAmount + 1);
 
-                if (Itemsettings.SpawnInsideInventory)
+            for (int i = 0; i < itemSettings.ItemTypes.Count; i++)
+            {
+                var itemType = itemSettings.ItemTypes[i];
+                var itemId = itemSettings.ItemIds[i];
+                double minAmount = itemSettings.MinItemAmount[i];
+                double maxAmount = itemSettings.MaxItemAmount[i];
+
+                double amount = itemSettings.UseWeightedDrops
+                    ? GetWeightedRandomNumber(minAmount, GenerateProbabilities(minAmount, maxAmount))
+                    : GetRandomDouble(minAmount, maxAmount);
+
+                if (itemSettings.SpawnInsideInventory)
                 {
-                    PlaceItemInCargo(block, itemType, itemId, amount, Itemsettings.StackItems);
+                    PlaceItemInCargo(block, itemType, itemId, amount, itemSettings.StackItems);
                 }
                 else
                 {
                     if (position.HasValue)
                     {
-                        SpawnItemNearPosition(position.Value, itemType, itemId, amount, Itemsettings.StackItems, Itemsettings);
+                        SpawnItemNearPosition(position.Value, itemType, itemId, amount, itemSettings.StackItems, itemSettings);
                     }
                     else
                     {
-                        SpawnItemNearBlock(block, itemType, itemId, amount, Itemsettings.StackItems, Itemsettings);
+                        SpawnItemNearBlock(block, itemType, itemId, amount, itemSettings.StackItems, itemSettings);
                     }
                 }
             }
         }
+        private double GetRandomDouble(double minAmount, double maxAmount)
+        {
+            return minAmount + (randomGenerator.NextDouble() * (maxAmount - minAmount));
+        }
 
-        private void PlaceItemInCargo(IMySlimBlock block, string itemType, string itemId, int amount, bool stackItems)
+
+        private void PlaceItemInCargo(IMySlimBlock block, string itemType, string itemId, double amount, bool stackItems)
         {
             LogError("Starting PlaceItemInCargo");
             var inventory = block.FatBlock.GetInventory() as IMyInventory;
@@ -928,15 +952,22 @@ GlobalMaxEntities=30
 
                     if (itemObjectBuilder != null)
                     {
+                        VRage.MyFixedPoint fixedAmount = (VRage.MyFixedPoint)amount;
                         if (stackItems)
                         {
-                            inventory.AddItems(amount, itemObjectBuilder);
+                            inventory.AddItems(fixedAmount, itemObjectBuilder);
                         }
                         else
                         {
-                            for (int i = 0; i < amount; i++)
+                            for (int i = 0; i < (int)amount; i++)
                             {
                                 inventory.AddItems(1, itemObjectBuilder);
+                            }
+                            // Handle any fractional part left
+                            double fractionalPart = amount - (int)amount;
+                            if (fractionalPart > 0)
+                            {
+                                inventory.AddItems((VRage.MyFixedPoint)fractionalPart, itemObjectBuilder);
                             }
                         }
                     }
@@ -956,35 +987,59 @@ GlobalMaxEntities=30
             }
         }
 
-        private void SpawnItemNearBlock(IMySlimBlock block, string itemType, string itemId, int amount, bool stackItems, CustomEntitySpawner settings)
+
+        private void SpawnItemNearBlock(IMySlimBlock block, string itemType, string itemId, double amount, bool stackItems, CustomEntitySpawner settings)
         {
             LogError("Starting SpawnItemNearBlock");
+
+            // Check if item type mapping exists
+            if (!settings.itemTypeMappings.ContainsKey(itemType))
+            {
+                LogError($"Item type mapping not found for: {itemType}");
+                return;
+            }
+
+            // Create item definition and object builder
             var itemDefinition = new MyDefinitionId(settings.itemTypeMappings[itemType], itemId);
             var itemObjectBuilder = (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(itemDefinition);
+
+            if (itemObjectBuilder == null)
+            {
+                LogError($"Failed to create object builder for item: {itemType}, ID: {itemId}");
+                return;
+            }
+
+            // Round amount to the nearest integer
+            int roundedAmount = (int)Math.Round(amount);
 
             List<Vector3D> dropPositions = new List<Vector3D>();
             List<Quaternion> dropRotations = new List<Quaternion>();
 
+            // Calculate drop positions and rotations
             if (stackItems)
             {
                 dropPositions.Add(CalculateDropPosition(block, settings));
                 dropRotations.Add(GenerateRandomRotation());
+                LogError($"Calculated single drop position: {dropPositions[0]} and rotation for stacked items.");
             }
             else
             {
-                for (int j = 0; j < amount; j++)
+                for (int j = 0; j < roundedAmount; j++)
                 {
                     dropPositions.Add(CalculateDropPosition(block, settings));
                     dropRotations.Add(GenerateRandomRotation());
                 }
+                LogError($"Calculated {dropPositions.Count} drop positions and rotations for non-stacked items.");
             }
 
+            // Spawn items at calculated positions
             for (int i = 0; i < dropPositions.Count; i++)
             {
                 MyFloatingObjects.Spawn(
                     new MyPhysicalInventoryItem((VRage.MyFixedPoint)(stackItems ? amount : 1), itemObjectBuilder),
                     dropPositions[i], dropRotations[i].Up, block.FatBlock.WorldMatrix.Up
                 );
+                LogError($"Spawned item at position: {dropPositions[i]}, with rotation.");
             }
         }
 
@@ -1002,8 +1057,12 @@ GlobalMaxEntities=30
                 Math.Sin(angle) * radius
             );
 
-            return basePosition + offset;
+            Vector3D dropPosition = basePosition + offset;
+            LogError($"Calculated drop position: {dropPosition}");
+            return dropPosition;
         }
+
+
         public string GlobalFileName = "GlobalConfig.ini";
         public string EntitySpawnerFileName = "CustomEntitySpawner.ini";
         private string IniSection = "Config";
@@ -1098,10 +1157,6 @@ GlobalMaxEntities=30
                     EnableEntitySpawning = iniParser.Get(section, nameof(CustomEntitySpawner.EnableEntitySpawning)).ToBoolean(false),
                     EnableItemSpawning = iniParser.Get(section, nameof(CustomEntitySpawner.EnableItemSpawning)).ToBoolean(false),
                     SpawnItemsWithEntities = iniParser.Get(section, nameof(CustomEntitySpawner.SpawnItemsWithEntities)).ToBoolean(false),
-                    MinEntityAmount = iniParser.Get(section, nameof(CustomEntitySpawner.MinEntityAmount)).ToInt32(1),
-                    MaxEntityAmount = iniParser.Get(section, nameof(CustomEntitySpawner.MaxEntityAmount)).ToInt32(1),
-                    MinItemAmount = iniParser.Get(section, nameof(CustomEntitySpawner.MinItemAmount)).ToInt32(1),
-                    MaxItemAmount = iniParser.Get(section, nameof(CustomEntitySpawner.MaxItemAmount)).ToInt32(1),
                     UseWeightedDrops = iniParser.Get(section, nameof(CustomEntitySpawner.UseWeightedDrops)).ToBoolean(false),
                     MaxEntitiesInArea = iniParser.Get(section, nameof(CustomEntitySpawner.MaxEntitiesInArea)).ToInt32(30),
                     MaxEntitiesRadius = iniParser.Get(section, nameof(CustomEntitySpawner.MaxEntitiesRadius)).ToDouble(100),
@@ -1127,15 +1182,18 @@ GlobalMaxEntities=30
                 blockSettings.EntityID.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.EntityID)).ToString().Split(','));
                 blockSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.ItemTypes)).ToString().Split(','));
                 blockSettings.ItemIds.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.ItemIds)).ToString().Split(','));
+                blockSettings.MinItemAmount.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.MinItemAmount)).ToString().Split(',').Select(double.Parse));
+                blockSettings.MaxItemAmount.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.MaxItemAmount)).ToString().Split(',').Select(double.Parse));
                 blockSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.RequiredItemTypes)).ToString().Split(','));
                 blockSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.RequiredItemIds)).ToString().Split(','));
-                blockSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
+                blockSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.RequiredItemAmounts)).ToString().Split(',').Select(double.Parse));
                 blockSettings.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.PermanentRequiredItemTypes)).ToString().Split(','));
                 blockSettings.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.PermanentRequiredItemIds)).ToString().Split(','));
                 blockSettings.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.PermanentRequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
                 BlockSpawnSettings.Add(blockSettings);
             }
         }
+
         private void CenterSpawnItemsAroundEntities(IMySlimBlock block, CustomEntitySpawner settings, int itemSpawnAmount)
         {
             LogError("Starting CenterSpawnItemsAroundEntities");
@@ -1159,7 +1217,7 @@ GlobalMaxEntities=30
             }
         }
 
-        private void SpawnItemNearPosition(Vector3D position, string itemType, string itemId, int amount, bool stackItems, CustomEntitySpawner settings)
+        private void SpawnItemNearPosition(Vector3D position, string itemType, string itemId, double amount, bool stackItems, CustomEntitySpawner settings)
         {
             LogError("Starting SpawnItemNearPosition");
             var itemDefinition = new MyDefinitionId(settings.itemTypeMappings[itemType], itemId);
@@ -1210,41 +1268,44 @@ GlobalMaxEntities=30
         private Quaternion GenerateRandomRotation()
         {
             LogError("Starting GenerateRandomRotation");
-            return Quaternion.CreateFromYawPitchRoll(
+            Quaternion rotation = Quaternion.CreateFromYawPitchRoll(
                 (float)(randomGenerator.NextDouble() * Math.PI * 2),
                 (float)(randomGenerator.NextDouble() * Math.PI * 2),
                 (float)(randomGenerator.NextDouble() * Math.PI * 2)
             );
+            LogError($"Generated random rotation: {rotation}");
+            return rotation;
         }
 
-        
 
-        private List<int> GenerateProbabilities(int minAmount, int maxAmount)
+
+        private List<double> GenerateProbabilities(double minAmount, double maxAmount)
         {
             LogError("Starting GenerateProbabilities");
-            int range = maxAmount - minAmount + 1;
-            int middle = (range + 1) / 2;
-            var probabilities = new List<int>();
+            double range = maxAmount - minAmount;
+            double middle = (range + 1) / 2;
+            var probabilities = new List<double>();
 
             for (int i = 1; i <= range; i++)
             {
-                int weight = i <= middle ? i : range - i + 1;
+                double weight = i <= middle ? i : range - i + 1;
                 probabilities.Add(weight);
             }
             return probabilities;
         }
 
-        private int GetWeightedRandomNumber(int minAmount, List<int> probabilities)
+
+        private double GetWeightedRandomNumber(double minAmount, List<double> probabilities)
         {
             LogError("Starting GetWeightedRandomNumber");
-            int totalWeight = probabilities.Sum();
+            double totalWeight = probabilities.Sum();
             if (totalWeight == 0)
             {
                 return minAmount;
             }
 
-            int randomValue = randomGenerator.Next(1, totalWeight + 1);
-            int cumulativeWeight = 0;
+            double randomValue = randomGenerator.NextDouble() * totalWeight;
+            double cumulativeWeight = 0;
 
             for (int i = 0; i < probabilities.Count; i++)
             {
@@ -1254,6 +1315,9 @@ GlobalMaxEntities=30
             }
             return minAmount;
         }
+
+
+
 
         public void InitializeBotSpawnerConfig()
         {
@@ -1913,8 +1977,6 @@ GlobalMaxEntities=30
                     SpawnItemsWithEntities = iniParser.Get(section, nameof(SpawnItemsWithEntities)).ToBoolean(false),
                     MinEntityAmount = iniParser.Get(section, nameof(MinEntityAmount)).ToInt32(),
                     MaxEntityAmount = iniParser.Get(section, nameof(MaxEntityAmount)).ToInt32(),
-                    MinItemAmount = iniParser.Get(section, nameof(MinItemAmount)).ToInt32(),
-                    MaxItemAmount = iniParser.Get(section, nameof(MaxItemAmount)).ToInt32(),
                     UseWeightedDrops = iniParser.Get(section, nameof(UseWeightedDrops)).ToBoolean(),
                     MaxEntitiesInArea = iniParser.Get(section, nameof(MaxEntitiesInArea)).ToInt32(),
                     MaxEntitiesRadius = iniParser.Get(section, nameof(MaxEntitiesRadius)).ToDouble(100),
@@ -1940,9 +2002,11 @@ GlobalMaxEntities=30
                 blockSettings.EntityID.AddRange(iniParser.Get(section, nameof(blockSettings.EntityID)).ToString().Split(','));
                 blockSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.ItemTypes)).ToString().Split(','));
                 blockSettings.ItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.ItemIds)).ToString().Split(','));
+                blockSettings.MinItemAmount.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.MinItemAmount)).ToString().Split(',').Select(double.Parse));
+                blockSettings.MaxItemAmount.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.MaxItemAmount)).ToString().Split(',').Select(double.Parse));
                 blockSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemTypes)).ToString().Split(','));
                 blockSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemIds)).ToString().Split(','));
-                blockSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
+                blockSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemAmounts)).ToString().Split(',').Select(double.Parse));
                 blockSettings.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemTypes)).ToString().Split(','));
                 blockSettings.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemIds)).ToString().Split(','));
                 blockSettings.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
