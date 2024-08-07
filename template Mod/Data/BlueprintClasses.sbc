@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlueprintClasses>
+
+		<!-- Survival Kit -->
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>BucketRefinery</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_BlueprintClass_SurvivalKitIngots</DisplayName>
+            <Description>Description_BlueprintClass_SurvivalKitIngots</Description>
+            <Icon>Textures\GUI\Icons\buttons\Ingots.dds</Icon>
+            <HighlightIcon>Textures\GUI\Icons\buttons\Ingots.dds</HighlightIcon>
+            <FocusIcon>Textures\GUI\Icons\buttons\IngotsFocus.dds</FocusIcon>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+        </Class>
+		
+    </BlueprintClasses>	
+
+    <BlueprintClassEntries>
+		<!-- Bucket Refinery -->
+        <Entry Class="BucketRefinery" BlueprintSubtypeId="WashStoneOreToIngot" />
+		
+    </BlueprintClassEntries>
+</Definitions>

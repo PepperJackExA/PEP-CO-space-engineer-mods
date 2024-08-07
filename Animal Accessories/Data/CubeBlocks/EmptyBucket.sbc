@@ -4,21 +4,24 @@
 		<Definition>
 			<Id>
 				<TypeId>CubeBlock</TypeId>
-				<SubtypeId>Bucket</SubtypeId>
+				<SubtypeId>EmptyBucket</SubtypeId>
 			</Id>
-			<DisplayName>{LOC:DisplayName_Bucket}</DisplayName>
-			<Description>{LOC:Description_Bucket}</Description>
+			<DisplayName>{LOC:DisplayName_EmptyBucket}</DisplayName>
+			<Description>{LOC:Description_EmptyBucket}</Description>
 			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
-			<CubeSize>Small</CubeSize>
+			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\small\Bucket.mwm</Model>
+			<Model>Models\Cubes\large\EmptyBucket.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="10"/>
 			</Components>
 			<CriticalComponent Subtype="SteelPlate" Index="0"/>
-			<BlockPairName>Bucket</BlockPairName>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.30" StartY="0.30" EndX="0.70" EndY="0.70"/>
+			</MountPoints>
+			<BlockPairName>EmptyBucket</BlockPairName>
 		</Definition>
 	</CubeBlocks>
 </Definitions>
