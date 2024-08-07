@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Blueprints>
+		<!-- Resource Processing -->
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>WashStoneOreToIngot</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_BlueprintClass_Ingots</DisplayName>
+            <Icon>Textures\GUI\Icons\ingot\ingot_class.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1000" TypeId="Ore" SubtypeId="Stone" />
+				<Item Amount="2000" TypeId="Ore" SubtypeId="Ice" />
+            </Prerequisites>
+            <Results>
+                <Item Amount="100" TypeId="Ingot" SubtypeId="Stone" />
+                <Item Amount="60" TypeId="Ore" SubtypeId="Iron" />
+                <Item Amount="2.4" TypeId="Ore" SubtypeId="Nickel" />
+                <Item Amount="4.0" TypeId="Ore" SubtypeId="Silicon" />
+				<Item Amount="1.0" TypeId="Ore" SubtypeId="Gold" />
+				<Item Amount="1.5" TypeId="Ore" SubtypeId="Silver" />
+				<Item Amount="2.0" TypeId="Ore" SubtypeId="Cobalt" />
+			</Results>
+            <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+        </Blueprint>    
+    </Blueprints>
+</Definitions>
