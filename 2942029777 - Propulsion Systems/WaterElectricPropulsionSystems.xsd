@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xsd:element name="Definitions">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="BlockVariantGroups">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element maxOccurs="unbounded" name="BlockVariantGroup">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Id">
+											<xsd:complexType>
+												<xsd:attribute name="Type" type="xsd:string" use="required" />
+												<xsd:attribute name="Subtype" type="xsd:string" use="required" />
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="Blocks">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element maxOccurs="unbounded" name="Block">
+														<xsd:complexType>
+															<xsd:attribute name="Type" type="xsd:string" use="required" />
+															<xsd:attribute name="Subtype" type="xsd:string" use="required" />
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="CategoryClasses">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="Category">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Id">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="TypeId" type="xsd:string" />
+													<xsd:element name="SubtypeId" />
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="DisplayName" type="xsd:string" />
+										<xsd:element name="Name" type="xsd:string" />
+										<xsd:element name="ItemIds">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element maxOccurs="unbounded" name="string" type="xsd:string" />
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="CubeBlocks">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element maxOccurs="unbounded" name="Definition">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="Id">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="TypeId" type="xsd:string" />
+													<xsd:element name="SubtypeId" type="xsd:string" />
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="DisplayName" type="xsd:string" />
+										<xsd:element name="Description" type="xsd:string" />
+										<xsd:element name="Icon" type="xsd:string" />
+										<xsd:element name="CubeSize" type="xsd:string" />
+										<xsd:element name="BlockTopology" type="xsd:string" />
+										<xsd:element name="Size">
+											<xsd:complexType>
+												<xsd:attribute name="x" type="xsd:unsignedByte" use="required" />
+												<xsd:attribute name="y" type="xsd:unsignedByte" use="required" />
+												<xsd:attribute name="z" type="xsd:unsignedByte" use="required" />
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="ModelOffset">
+											<xsd:complexType>
+												<xsd:attribute name="x" type="xsd:unsignedByte" use="required" />
+												<xsd:attribute name="y" type="xsd:unsignedByte" use="required" />
+												<xsd:attribute name="z" type="xsd:unsignedByte" use="required" />
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="Model" type="xsd:string" />
+										<xsd:element name="Components">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element maxOccurs="unbounded" name="Component">
+														<xsd:complexType>
+															<xsd:attribute name="Subtype" type="xsd:string" use="required" />
+															<xsd:attribute name="Count" type="xsd:unsignedByte" use="required" />
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="CriticalComponent">
+											<xsd:complexType>
+												<xsd:attribute name="Subtype" type="xsd:string" use="required" />
+												<xsd:attribute name="Index" type="xsd:unsignedByte" use="required" />
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="MountPoints">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="MountPoint">
+														<xsd:complexType>
+															<xsd:attribute name="Side" type="xsd:string" use="required" />
+															<xsd:attribute name="StartX" type="xsd:decimal" use="required" />
+															<xsd:attribute name="StartY" type="xsd:decimal" use="required" />
+															<xsd:attribute name="EndX" type="xsd:decimal" use="required" />
+															<xsd:attribute name="EndY" type="xsd:decimal" use="required" />
+															<xsd:attribute name="Default" type="xsd:boolean" use="optional" />
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="BuildProgressModels">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element maxOccurs="unbounded" name="Model">
+														<xsd:complexType>
+															<xsd:attribute name="BuildPercentUpperBound" type="xsd:decimal" use="required" />
+															<xsd:attribute name="File" type="xsd:string" use="required" />
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element minOccurs="0" name="BlockPairName" type="xsd:string" />
+										<xsd:element name="ThrusterType" type="xsd:string" />
+										<xsd:element name="ResourceSinkGroup" type="xsd:string" />
+										<xsd:element name="ForceMagnitude" type="xsd:unsignedInt" />
+										<xsd:element name="MaxPowerConsumption" type="xsd:decimal" />
+										<xsd:element name="MinPowerConsumption" type="xsd:unsignedByte" />
+										<xsd:element name="SlowdownFactor" type="xsd:unsignedByte" />
+										<xsd:element name="MinPlanetaryInfluence" type="xsd:decimal" />
+										<xsd:element name="MaxPlanetaryInfluence" type="xsd:unsignedByte" />
+										<xsd:element name="EffectivenessAtMinInfluence" type="xsd:unsignedByte" />
+										<xsd:element name="EffectivenessAtMaxInfluence" type="xsd:unsignedByte" />
+										<xsd:element name="NeedsAtmosphereForInfluence" type="xsd:boolean" />
+										<xsd:element name="FlameDamageLengthScale" type="xsd:unsignedByte" />
+										<xsd:element name="FlameLengthScale" type="xsd:unsignedByte" />
+										<xsd:element name="FlameIdleColor">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="X" type="xsd:unsignedByte" />
+													<xsd:element name="Y" type="xsd:unsignedByte" />
+													<xsd:element name="Z" type="xsd:unsignedByte" />
+													<xsd:element name="W" type="xsd:unsignedByte" />
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="FlameFullColor">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="X" type="xsd:unsignedByte" />
+													<xsd:element name="Y" type="xsd:unsignedByte" />
+													<xsd:element name="Z" type="xsd:unsignedByte" />
+													<xsd:element name="W" type="xsd:unsignedByte" />
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="FlamePointMaterial" type="xsd:string" />
+										<xsd:element name="FlameLengthMaterial" type="xsd:string" />
+										<xsd:element name="FlameFlare" type="xsd:string" />
+										<xsd:element name="FlameVisibilityDistance" type="xsd:unsignedByte" />
+										<xsd:element name="FlameGlareQuerySize" type="xsd:unsignedByte" />
+										<xsd:element name="PropellerUsesPropellerSystem" type="xsd:boolean" />
+										<xsd:element name="PropellerSubpartEntityName" type="xsd:string" />
+										<xsd:element name="PropellerRoundsPerSecondOnFullSpeed" type="xsd:unsignedByte" />
+										<xsd:element name="PropellerRoundsPerSecondOnIdleSpeed" type="xsd:unsignedByte" />
+										<xsd:element name="PropellerAccelerationTime" type="xsd:unsignedByte" />
+										<xsd:element name="PropellerDecelerationTime" type="xsd:unsignedByte" />
+										<xsd:element name="PropellerMaxVisibleDistance" type="xsd:unsignedShort" />
+										<xsd:element name="DamageEffectName" type="xsd:string" />
+										<xsd:element name="DamagedSound" type="xsd:string" />
+										<xsd:element name="Public" type="xsd:boolean" />
+										<xsd:element name="DestroyEffect" type="xsd:string" />
+										<xsd:element name="DestroySound" type="xsd:string" />
+										<xsd:element name="PCU" type="xsd:unsignedByte" />
+										<xsd:element name="TieredUpdateTimes">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element maxOccurs="unbounded" name="unsignedInt" type="xsd:unsignedShort" />
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="TargetingGroups">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="string" type="xsd:string" />
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="VoxelPlacement">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="StaticMode">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="PlacementMode" type="xsd:string" />
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="DynamicMode">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="PlacementMode" type="xsd:string" />
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xs:schema>
