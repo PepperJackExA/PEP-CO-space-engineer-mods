@@ -16,6 +16,7 @@ using VRage.Game.Entity;
 using VRage.ModAPI;
 using VRage.ObjectBuilders;
 using Sandbox.Game.Entities.Character;
+using Sandbox.Game.EntityComponents;
 
 namespace PEPCO.iSurvival.CustomEntitySpawner
 {
@@ -505,6 +506,7 @@ GlobalMaxEntities=30
             //LogError("Starting IsValidBlockForSpawning");
             if (!blockSettings.Enabled) return false;
             if (baseUpdateCycles % blockSettings.SpawnTriggerInterval != 0) return false;
+            if (!IsBlockEnabled(block, blockSettings)) return false;
             if (!IsEnvironmentSuitable(block, blockSettings)) return false;
             if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck)) return false;
             if (!AreRequiredEntitiesInVicinity(block, blockSettings)) return false;
@@ -519,6 +521,53 @@ GlobalMaxEntities=30
                 return false;
 
             return CheckInventoryForRequiredItems(block, blockSettings);
+        }
+
+        private bool IsBlockEnabled(IMySlimBlock block, CustomEntitySpawner blockSettings)
+        {
+            // Check if the block has a FatBlock (meaning it has a physical representation in the world)
+            if (block.FatBlock == null)
+            {
+                LogError($"Block {block.BlockDefinition.Id.SubtypeName} does not have a FatBlock.");
+                return false;
+            }
+
+            // Check if the block is functional
+            if (!block.FatBlock.IsFunctional)
+            {
+                LogError($"Block {block.BlockDefinition.Id.SubtypeName} is not functional.");
+                return false;
+            }
+
+            // Check if the block is enabled (for functional blocks)
+            var functionalBlock = block.FatBlock as IMyFunctionalBlock;
+            if (functionalBlock != null && !functionalBlock.Enabled)
+            {
+                LogError($"Block {block.BlockDefinition.Id.SubtypeName} is not enabled.");
+                return false;
+            }
+
+            // Check if the block is powered (for blocks that require power)
+            var cubeBlock = block.FatBlock as IMyCubeBlock;
+            if (cubeBlock != null)
+            {
+                var resourceSink = cubeBlock.Components.Get<MyResourceSinkComponent>();
+                if (resourceSink != null)
+                {
+                    var requiredPower = resourceSink.RequiredInputByType(MyResourceDistributorComponent.ElectricityId);
+                    var currentPower = resourceSink.CurrentInputByType(MyResourceDistributorComponent.ElectricityId);
+
+                    // Check if the block requires power and whether it is receiving enough power to function
+                    if (requiredPower > 0 && currentPower < requiredPower)
+                    {
+                        LogError($"Block {block.BlockDefinition.Id.SubtypeName} is not receiving enough power (Required: {requiredPower}, Current: {currentPower}).");
+                        return false;
+                    }
+                }
+            }
+
+            // If the block passes all checks, return true
+            return true;
         }
 
 
