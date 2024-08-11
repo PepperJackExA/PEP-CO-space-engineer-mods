@@ -360,7 +360,6 @@ MaxWaterDepth=20.0
                                 block.FatBlock.BlockDefinition.SubtypeId == blockSettings.BlockId &&
                                 IsValidBlockForSpawning(block, blockSettings, baseUpdateCycles, players))
                             {
-                                LogError($"Water level check: {isWaterSuitable}");
                                 ProcessBlockSpawning(block, blockSettings, ref entitiesSpawned);
                             }
                         }
