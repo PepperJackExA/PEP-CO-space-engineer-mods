@@ -360,8 +360,6 @@ MaxWaterDepth=20.0
                                 block.FatBlock.BlockDefinition.SubtypeId == blockSettings.BlockId &&
                                 IsValidBlockForSpawning(block, blockSettings, baseUpdateCycles, players))
                             {
-                                bool isWaterSuitable = IsWaterLevelSuitable(block, blockSettings);
-                                if (!isWaterSuitable) LogError("Water level is not suitable.");
                                 LogError($"Water level check: {isWaterSuitable}");
                                 ProcessBlockSpawning(block, blockSettings, ref entitiesSpawned);
                             }
@@ -471,101 +469,14 @@ MaxWaterDepth=20.0
                     LogError($"Block {block.BlockDefinition.Id.SubtypeName} is not receiving enough power (Required: {requiredPower}, Current: {currentPower}).");
                     return false;
                 }
-            }
-
-            //var grid = cubeBlock.CubeGrid;
-            //float spawnPowerCost = 0.1f; // Define the power cost for spawning here
-            //float totalStoredPower = 0f;
-
-            // Calculate the total stored power in the grid
-            //var blocks = new List<IMySlimBlock>();
-           // grid.GetBlocks(blocks);
-
-            //foreach (var gridBlock in blocks)
-            //{
-            //    var gridFatBlock = gridBlock.FatBlock;
-            //    if (gridFatBlock != null)
-            //    {
-            //        var resourceSink = gridFatBlock.Components.Get<MyResourceSinkComponent>();
-            //        if (resourceSink != null)
-            //        {
-            //            float storedPower = resourceSink.ResourceAvailableByType(MyResourceDistributorComponent.ElectricityId);
-            //            totalStoredPower += storedPower;
-            //        }
-            //    }
-           // }
-
-           // MyAPIGateway.Utilities.ShowMessage("CES:", $"Required: {spawnPowerCost}, Total Stored: {totalStoredPower}, Math: {totalStoredPower - spawnPowerCost}");
-
-            // Check if there is enough power available on the grid
-           // if ((totalStoredPower - spawnPowerCost) < 0)
-            //{
-           //     LogError($"Grid does not have enough stored power (Required: {spawnPowerCost}, Stored: {totalStoredPower}).");
-           //     return false;
-           // }
-
-            // Deduct the power from the grid
-           // DeductPowerFromGrid(grid, spawnPowerCost);
-
-            // Finally, check if this specific block has enough power to function
-           // var blockResourceSink = cubeBlock.Components.Get<MyResourceSinkComponent>();
-           // if (blockResourceSink != null)
-          //  {
-          //     float requiredPower = blockResourceSink.RequiredInputByType(MyResourceDistributorComponent.ElectricityId);
-           //     float currentPower = blockResourceSink.CurrentInputByType(MyResourceDistributorComponent.ElectricityId);
-//
-          //      if (currentPower < requiredPower)
-          //      {
-          //          LogError($"Block {block.BlockDefinition.Id.SubtypeName} is not receiving enough power (Required: {requiredPower}, Current: {currentPower}).");
-          //          return false;
-          //      }
-          //  }
-
-            // If the block passes all checks, return true
+            }            
             return true;
-        }
-
-        private void DeductPowerFromGrid(IMyCubeGrid grid, float spawnPowerCost)
-        {
-            float remainingPowerCost = spawnPowerCost;
-
-            // Iterate through blocks and deduct power
-            var blocks = new List<IMySlimBlock>();
-            grid.GetBlocks(blocks);
-
-            foreach (var gridBlock in blocks)
-            {
-                if (remainingPowerCost <= 0)
-                    break;
-
-                var gridFatBlock = gridBlock.FatBlock;
-                if (gridFatBlock != null)
-                {
-                    var resourceSink = gridFatBlock.Components.Get<MyResourceSinkComponent>();
-                    if (resourceSink != null)
-                    {
-                        float storedPower = resourceSink.ResourceAvailableByType(MyResourceDistributorComponent.ElectricityId);
-
-                        if (storedPower > 0)
-                        {
-                            float powerToDeduct = Math.Min(storedPower, remainingPowerCost);
-                            resourceSink.SetRequiredInputByType(MyResourceDistributorComponent.ElectricityId, storedPower - powerToDeduct);
-                            remainingPowerCost -= powerToDeduct;
-
-                            MyAPIGateway.Utilities.ShowMessage("CES:", $"Deducted: {powerToDeduct} from block {gridBlock.BlockDefinition.Id.SubtypeName}");
-                        }
-                    }
-                }
-            }
-
-            if (remainingPowerCost > 0)
-            {
-                LogError($"Not all required power could be deducted. Remaining: {remainingPowerCost}");
-            }
-        }
+        }        
 
         private bool IsWaterLevelSuitable(IMySlimBlock block, CustomEntitySpawner blockSettings)
         {
+
+            if (blockSettings.EnableWaterAPI == false) return true;
             // Ensure the WaterModAPI is registered
             if (!Jakaria.API.WaterModAPI.Registered)
             {
