@@ -2086,7 +2086,6 @@ MaxWaterDepth=20.0
                     MinWaterDepth = iniParser.Get(section, nameof(MinWaterDepth)).ToDouble(0),
                     MaxWaterDepth = iniParser.Get(section, nameof(MaxWaterDepth)).ToDouble(10)
                 };
-                MyAPIGateway.Utilities.ShowMessage("CES:", $"MinWaterDepth: {blockSettings.MinWaterDepth}, MaxWaterDepth: {blockSettings.MaxWaterDepth}");
 
                 blockSettings.EntityID.AddRange(iniParser.Get(section, nameof(blockSettings.EntityID)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
                 blockSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.ItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
