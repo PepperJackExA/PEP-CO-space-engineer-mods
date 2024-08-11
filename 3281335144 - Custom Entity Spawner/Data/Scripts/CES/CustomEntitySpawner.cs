@@ -123,210 +123,64 @@ GlobalMaxEntities=30
         public List<CustomEntitySpawner> BlockSpawnSettings { get; set; } = new List<CustomEntitySpawner>();
 
         public string DefaultEntitySpawnerIniContent = @"
-; ==============================================
-; HOW TO USE CustomEntitySpawner.ini
-; ==============================================
-; This file configures the spawning behavior of entities around specific block types.
-; Each section must be unique.
-;[SomethingUniqueHere]
-;
-; Block settings
-; BlockId specifies the unique identifier for the block.
-; Example: SmallBlockSmallContainer for a small cargo container.
-; List of options: Any valid block ID.
-;BlockId=SmallBlockSmallContainer
-;
-; BlockType specifies the type of block for which this configuration applies.
-; Example: MyObjectBuilder_CargoContainer for cargo containers.
-; List of options: MyObjectBuilder_CargoContainer, MyObjectBuilder_Refinery, MyObjectBuilder_Assembler, etc.
-;BlockType=MyObjectBuilder_CargoContainer
-;
-; Enabled specifies whether this configuration is active.
-; Values: true or false
-; Example: true
-;Enabled=true
-;
+[SmallBlockSmallContainerSpawn]
+BlockId=SmallBlockSmallContainer
+BlockType=MyObjectBuilder_CargoContainer
+Enabled=false
+
 ; PlayerDistanceCheck is the maximum distance from a player for spawning entities.
-; Example: 100 (100 meters)
-; List of options: Any positive integer, -1 to disable the check.
-;PlayerDistanceCheck=100
-;
+PlayerDistanceCheck=10
+
 ; Entity spawning settings
-; EnableEntitySpawning specifies whether entities should be spawned.
-; Values: true or false
-;EnableEntitySpawning=true
-;
-; EntityID specifies the ID of the entities to spawn.
-; Example: Wolf
-; List of options: Any valid entity ID such as Wolf, Spider, etc.
-;EntityID=Wolf
-;
-; MinEntityAmount is the minimum number of entities to spawn when conditions are met.
-; Example: 1
-; List of options: Any positive integer.
-;MinEntityAmount=1
-;
-; MaxEntityAmount is the maximum number of entities to spawn when conditions are met.
-; Example: 1
-; List of options: Any positive integer.
-;MaxEntityAmount=1
-;
+EnableEntitySpawning=true
+EntityID=Wolf
+MinEntityAmount=1
+MaxEntityAmount=4
+
 ; MaxEntitiesInArea is the maximum number of entities allowed in the area for spawning.
-; Example: 30
-; List of options: Any positive integer.
-;MaxEntitiesInArea=30
-;
-; MaxEntitiesRadius is the radius (in meters) within which the MaxEntitiesInArea limit is checked.
-; This radius is spherical, meaning it is measured in 3D space.
-; Example: 100 (100 meters)
-; List of options: Any positive float value.
-;MaxEntitiesRadius=100
-;
+MaxEntitiesInArea=10
+MaxEntitiesRadius=50
+
 ; Item spawning settings
-; EnableItemSpawning specifies whether items should be spawned.
-; Values: true or false
-;EnableItemSpawning=true
-;
-; ItemTypes specifies the types of items to spawn.
-; Example: MyObjectBuilder_Component
-; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
-;ItemTypes=MyObjectBuilder_Component
-;
-; ItemIds specifies the IDs of the items to spawn.
-; Example: SteelPlate
-; List of options: Any valid item ID such as SteelPlate, Iron, etc.
-;ItemIds=SteelPlate
-;
-; MinItemAmount is the minimum number of items to spawn when conditions are met.
-; Example: 1
-; List of options: Any positive integer.
-;MinItemAmount=1
-;
-; MaxItemAmount is the maximum number of items to spawn when conditions are met.
-; Example: 1
-; List of options: Any positive integer.
-;MaxItemAmount=1
-;
-; UseWeightedDrops determines if the number of items spawned should use weighted probabilities.
-; Values: true or false
-; Example: false
-;UseWeightedDrops=false
-;
-; StackItems specifies whether items should be stacked when spawned.
-; Values: true or false
-;StackItems=false
-;
-; SpawnInsideInventory specifies whether items should be spawned inside the inventory of the block.
-; Values: true or false
-;SpawnInsideInventory=false
-;
+EnableItemSpawning=true
+ItemTypes=MyObjectBuilder_Component
+ItemIds=SteelPlate
+MinItemAmount=0
+MaxItemAmount=10
+StackItems=true
+SpawnInsideInventory=true
+
 ; SpawnItemsWithEntities specifies whether items should be spawned only when an entity is spawned.
-; Values: true or false
-;SpawnItemsWithEntities=true
-;
+SpawnItemsWithEntities=false
+
 ; Environmental conditions
-; DamageAmount is the amount of damage to apply to the block each time entities are spawned.
-; Example: 0
-; List of options: Any non-negative float value.
-;DamageAmount=0
-;
-; MinHealthPercentage is the minimum health percentage the block must have to allow spawning.
-; Example: 0.2 (20%)
-; List of options: Any float value between 0 and 1.
-;MinHealthPercentage=0.2
-;
-; MaxHealthPercentage is the maximum health percentage the block can have to allow spawning.
-; Example: 1 (100%)
-; List of options: Any float value between 0 and 1.
-;MaxHealthPercentage=1
-;
-; MinHeight is the minimum height offset for spawning entities.
-; Example: 0.5
-; List of options: Any non-negative float value.
-;MinHeight=0.5
-;
-; MaxHeight is the maximum height offset for spawning entities.
-; Example: 2.0
-; List of options: Any non-negative float value.
-;MaxHeight=2.0
-;
-; MinRadius is the minimum radius for spawning entities around the block.
-; Example: 0.5
-; List of options: Any non-negative float value.
-;MinRadius=0.5
-;
-; MaxRadius is the maximum radius for spawning entities around the block.
-; Example: 2.0
-; List of options: Any non-negative float value.
-;MaxRadius=2.0
-;
-; SpawnTriggerInterval is the interval in update ticks for triggering entity spawn.
-; Example: 3 (every 3 updates)
-; List of options: Any positive integer.
-;SpawnTriggerInterval=3
-;
-; EnableAirtightAndOxygen determines if airtight and oxygen levels are considered for spawning.
-; Values: true or false
-; Example: false
-;EnableAirtightAndOxygen=false
-;
-; Required items for spawning (to be removed)
-; RequiredItemTypes specifies the types of items required in the inventory for spawning (to be removed).
-; Example: MyObjectBuilder_Component
-; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
-;RequiredItemTypes=MyObjectBuilder_Component,MyObjectBuilder_Component
-;
-; RequiredItemIds specifies the IDs of the required items (to be removed).
-; Example: SteelPlate
-; List of options: Any valid item ID such as SteelPlate, Iron, etc.
-;RequiredItemIds=SteelPlate,InteriorPlate
-;
-; RequiredItemAmounts specifies the amounts of the required items (to be removed).
-; Example: 5
-; List of options: Any positive integer.
-;RequiredItemAmounts=1,1
-;
+DamageAmount=0
+MinHealthPercentage=0
+MaxHealthPercentage=1
+MinHeight=1.0
+MaxHeight=2.5
+MinRadius=0.5
+MaxRadius=1.5
+SpawnTriggerInterval=3
+EnableAirtightAndOxygen=false
+
 ; Permanent required items for spawning (not removed)
-; PermanentRequiredItemTypes specifies the types of items required in the inventory for spawning (not removed).
-; Example: MyObjectBuilder_Ore
-; List of options: MyObjectBuilder_Component, MyObjectBuilder_Ore, MyObjectBuilder_Ingot, MyObjectBuilder_ConsumableItem, etc.
-;PermanentRequiredItemTypes=MyObjectBuilder_Ore,MyObjectBuilder_Ore
-;
-; PermanentRequiredItemIds specifies the IDs of the permanent required items (not removed).
-; Example: Iron
-; List of options: Any valid item ID such as Iron, SteelPlate, etc.
-;PermanentRequiredItemIds=Iron,Gold
-;
-; PermanentRequiredItemAmounts specifies the amounts of the permanent required items (not removed).
-; Example: 10
-; List of options: Any positive integer.
-;PermanentRequiredItemAmounts=1,1
-;
+PermanentRequiredItemTypes=MyObjectBuilder_Ore,MyObjectBuilder_Ore
+PermanentRequiredItemIds=Iron,Gold
+PermanentRequiredItemAmounts=0,0
+
 ; Required entities in the vicinity for spawning
-; RequiredEntity specifies the entity type required in the vicinity for spawning.
-; Example: Wolf
-; List of options: Any valid entity ID such as Wolf, Spider, etc.
-;RequiredEntity=Wolf
-;
-; RequiredEntityRadius is the radius within which the required entity must be present.
-; Example: 10 (10 meters)
-; List of options: Any positive float value.
-;RequiredEntityRadius=10
-;
-; RequiredEntityNumber is the number of required entities needed for spawning.
-; Example: 0 (no specific number required)
-; List of options: Any positive integer.
-;RequiredEntityNumber=0
-;
-; RequireEntityNumberForTotalEntities determines if the required entity number is for the total entities.
-; Values: true or false
-; Example: false
-;RequireEntityNumberForTotalEntities=false
-;
-; MaxEntitiesInArea is the maximum number of entities allowed in the area for spawning.
-; Example: 30
-; List of options: Any positive integer.
-;MaxEntitiesInArea=30
+RequiredEntity=Spider
+RequiredEntityRadius=20
+RequiredEntityNumber=0
+RequireEntityNumberForTotalEntities=false
+RequireEntityCenterOn=false
+
+; Water settings
+EnableWaterAPI=true
+MinWaterDepth=5.0
+MaxWaterDepth=20.0
+
 ";
 
 
