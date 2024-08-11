@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+			<Id>
+				<TypeId>Reactor</TypeId>
+				<SubtypeId>Bucket</SubtypeId>
+			</Id>
+			<DisplayName>Bucket</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\small\Bucket.png</Icon>
+			<Description>Bucket</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\small\BucketWater.mwm</Model>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true" />
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\EmptyBucket.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>Bucket</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>3</BuildTimeSeconds>
+
+			<ResourceSourceGroup>Reactors</ResourceSourceGroup>
+			<MaxPowerOutput>0</MaxPowerOutput>
+
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+
+			<FuelInfos>
+				<FuelInfo>
+					<Id>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>Ice</SubtypeId>
+					</Id>
+				</FuelInfo>
+				<FuelInfo>
+					<Id>
+						<TypeId>Ore</TypeId>
+						<SubtypeId>Stone</SubtypeId>
+					</Id>
+				</FuelInfo>
+			</FuelInfos>
+			<PCU>25</PCU>
+			<IsAirTight>false</IsAirTight>
+		</Definition>
+
+
+
+
+		<!--
+		<Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+			<Id>
+				<TypeId>Refinery</TypeId>
+				<SubtypeId>Bucket</SubtypeId>
+			</Id>
+			<DisplayName>Bucket</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\small\Bucket.png</Icon>
+			<Description>Bucket</Description>
+			<CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\small\BucketWater.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" Default="true" />
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1" File="Models\Cubes\small\EmptyBucket.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>Bucket</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>3</BuildTimeSeconds>
+			<ResourceSinkGroup>Factory</ResourceSinkGroup>
+			<InventoryMaxVolume>4</InventoryMaxVolume>
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+
+			<InventoryFillFactorMin>0.3</InventoryFillFactorMin>
+			<InventoryFillFactorMax>0.6</InventoryFillFactorMax>
+
+			<StandbyPowerConsumption>0</StandbyPowerConsumption>
+			<OperationalPowerConsumption>0</OperationalPowerConsumption>
+			<BlueprintClasses>
+				<Class>BucketRefinery</Class>
+			</BlueprintClasses>
+			<RefineSpeed>0.01</RefineSpeed>
+			<MaterialEfficiency>0.5</MaterialEfficiency>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<PrimarySound>BlockRafinery</PrimarySound>
+			<ActionSound>BlockRafineryProcess</ActionSound>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
+			<PCU>1</PCU>
+			<TieredUpdateTimes>
+				<unsignedInt>60</unsignedInt>
+				<unsignedInt>120</unsignedInt>
+				<unsignedInt>240</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>
+
+
+		<Definition>
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>Bucket</SubtypeId>
+			</Id>
+			<DisplayName>Bucket</DisplayName>
+			<Description>
+				<![CDATA[Water Bucket
+                ]]>
+			</Description>
+			<Icon>Textures\GUI\Icons\Cubes\small\Bucket.png</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\small\BucketWater.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\EmptyBucket.mwm" />
+			</BuildProgressModels>
+			<PowerInput>0.00025</PowerInput>
+			<BlockPairName>Bucket</BlockPairName>
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+		</Definition>
+		-->
+	</CubeBlocks>
+<!--
+	<EntityComponents>
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>Bucket</SubtypeId>
+			</Id>
+			<Size x="0.1" y="0.1" z="0.1" />
+			<InputConstraint Whitelist="true" Description="Bucket" Icons="Textures\GUI\Icons\Items\Bucket.png">
+				<Entry>
+					<TypeId>Ore</TypeId>
+					<SubtypeId>Ice</SubtypeId>
+				</Entry>
+				<Entry>
+					<TypeId>Ore</TypeId>
+					<SubtypeId>Stone</SubtypeId>
+				</Entry>
+			</InputConstraint>
+		</EntityComponent>
+	</EntityComponents>
+	<EntityContainers>
+		<Container>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>Bucket</SubtypeId>
+			</Id>
+			<DefaultComponents>
+				<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="Bucket" ForceCreate="true" />
+			</DefaultComponents>
+		</Container>
+	</EntityContainers>
+	-->
+</Definitions>
