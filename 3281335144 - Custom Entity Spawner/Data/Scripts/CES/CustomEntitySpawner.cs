@@ -16,10 +16,18 @@ using VRage.Game.Entity;
 using VRage.ModAPI;
 using VRage.ObjectBuilders;
 using Sandbox.Game.Entities.Character;
+using Jakaria.API;
 using Sandbox.Game.EntityComponents;
 
 namespace PEPCO.iSurvival.CustomEntitySpawner
 {
+
+    public enum WaterSpawnOption
+    {
+        Above,
+        Below,
+        Both
+    }
     [MySessionComponentDescriptor(MyUpdateOrder.BeforeSimulation)]
     public class CustomEntitySpawner : MySessionComponentBase
     {
@@ -30,6 +38,8 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
         private bool isLoading = true;
         private int loadingTickCount = 100;
         private static readonly Random randomGenerator = new Random();
+
+
 
         public Dictionary<string, Type> itemTypeMappings = new Dictionary<string, Type>
         {
@@ -45,8 +55,8 @@ namespace PEPCO.iSurvival.CustomEntitySpawner
         public bool EnableLogging { get; set; } = false;
         public int CleanupInterval { get; set; } = 18000;
         public int GlobalMaxEntities { get; set; } = 32;
-        
-        
+
+
 
         public string DefaultGlobalIniContent = @"
 ; ==============================================
@@ -73,8 +83,8 @@ GlobalMaxEntities=30
         public List<string> ItemIds { get; set; } = new List<string>();
         public bool StackItems { get; set; } = false;
         public bool SpawnInsideInventory { get; set; } = false;
-        public bool EnableEntitySpawning { get; set; } = true;
-        public bool EnableItemSpawning { get; set; } = true;
+        public bool EnableEntitySpawning { get; set; } = false;
+        public bool EnableItemSpawning { get; set; } = false;
         public bool SpawnItemsWithEntities { get; set; } = false;
         public int MinEntityAmount { get; set; } = 1;
         public int MaxEntityAmount { get; set; } = 1;
@@ -106,7 +116,10 @@ GlobalMaxEntities=30
         public int MaxEntitiesInArea { get; set; } = 10;
         public double MaxEntitiesRadius { get; set; } = 100;
         public bool RequireEntityCenterOn { get; set; } = false;
-
+        //Water mod support
+        private bool EnableWaterAPI { get; set; } = false;
+        public double MinWaterDepth { get; set; } = 0.0;
+        public double MaxWaterDepth { get; set; } = 100.0;
         public List<CustomEntitySpawner> BlockSpawnSettings { get; set; } = new List<CustomEntitySpawner>();
 
         public string DefaultEntitySpawnerIniContent = @"
@@ -316,9 +329,9 @@ GlobalMaxEntities=30
 ;MaxEntitiesInArea=30
 ";
 
-        
 
-        
+
+
 
         // End block Settings
 
@@ -341,7 +354,7 @@ GlobalMaxEntities=30
             else
             {
                 // Load on client in multiplayer
-                
+
             }
 
 
@@ -351,11 +364,11 @@ GlobalMaxEntities=30
         {
             LogError("Starting LoadOnHost");
             var iniParser = new MyIni();
-            EnsureDefaultIniFilesExist();            
+            EnsureDefaultIniFilesExist();
             CopyAllCESFilesToWorldStorage();
             LoadAllFilesFromWorldStorage();
             Load();
-            
+
 
         }
 
@@ -426,7 +439,7 @@ GlobalMaxEntities=30
         }
 
         public override void UpdateBeforeSimulation()
-        {            
+        {
 
             if (isLoading && loadingTickCount-- > 0) return;
             isLoading = false;
@@ -455,7 +468,7 @@ GlobalMaxEntities=30
                     LogError($"Update error: {ex.Message}");
                 }
             }
-          
+
         }
 
         public void PauseScript()
@@ -493,6 +506,9 @@ GlobalMaxEntities=30
                                 block.FatBlock.BlockDefinition.SubtypeId == blockSettings.BlockId &&
                                 IsValidBlockForSpawning(block, blockSettings, baseUpdateCycles, players))
                             {
+                                bool isWaterSuitable = IsWaterLevelSuitable(block, blockSettings);
+                                if (!isWaterSuitable) LogError("Water level is not suitable.");
+                                LogError($"Water level check: {isWaterSuitable}");
                                 ProcessBlockSpawning(block, blockSettings, ref entitiesSpawned);
                             }
                         }
@@ -503,27 +519,53 @@ GlobalMaxEntities=30
 
         private bool IsValidBlockForSpawning(IMySlimBlock block, CustomEntitySpawner blockSettings, long baseUpdateCycles, List<IMyPlayer> players)
         {
-            //LogError("Starting IsValidBlockForSpawning");
-            if (!blockSettings.Enabled) return false;
-            if (baseUpdateCycles % blockSettings.SpawnTriggerInterval != 0) return false;
-            if (!IsBlockEnabled(block, blockSettings)) return false;
-            if (!IsEnvironmentSuitable(block, blockSettings)) return false;
-            if (!IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck)) return false;
-            if (!AreRequiredEntitiesInVicinity(block, blockSettings)) return false;
+            bool isEnabled = blockSettings.Enabled;
+            bool isBlockEnabled = IsBlockFunctional(block, blockSettings);
+            bool isBlockPowered = IsBlockPowered(block, blockSettings);
+            bool isSpawnTrigger = baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0;
+            bool isWaterSuitable = IsWaterLevelSuitable(block, blockSettings);
+            bool isEnvironmentSuitable = IsEnvironmentSuitable(block, blockSettings);
+            bool isPlayerInRange = IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck);
+            bool areRequiredEntitiesPresent = AreRequiredEntitiesInVicinity(block, blockSettings);
 
             // Check if the block is loaded on the server
             var grid = block.CubeGrid as IMyCubeGrid;
-            if (grid == null || !MyAPIGateway.Entities.EntityExists(grid.EntityId))
-                return false;
+            bool isGridValid = grid != null && MyAPIGateway.Entities.EntityExists(grid.EntityId);
 
             float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
-            if (blockHealthPercentage < blockSettings.MinHealthPercentage || blockHealthPercentage > blockSettings.MaxHealthPercentage)
-                return false;
+            bool isHealthInRange = blockHealthPercentage >= blockSettings.MinHealthPercentage &&
+                                   blockHealthPercentage <= blockSettings.MaxHealthPercentage;
 
-            return CheckInventoryForRequiredItems(block, blockSettings);
+            bool hasRequiredItems = CheckInventoryForRequiredItems(block, blockSettings);
+
+            // Log errors for any condition that fails
+            if (!isEnabled) LogError("Block is disabled for spawning.");
+            if (!isBlockEnabled) LogError("Block is Turned Off in game.");
+            if (!isBlockPowered) LogError("Block is not powered");
+            if (!isSpawnTrigger) LogError("Spawn trigger interval not met.");
+            if (!isWaterSuitable) LogError("Water level is not suitable.");
+            if (!isEnvironmentSuitable) LogError("Environment is not suitable.");
+            if (!isPlayerInRange) LogError("No player in range.");
+            if (!areRequiredEntitiesPresent) LogError("Required entities are not in vicinity.");
+            if (!isGridValid) LogError("Block is not loaded on the server.");
+            if (!isHealthInRange) LogError("Block health is not within the required range.");
+            if (!hasRequiredItems) LogError("Required items are not in the block's inventory.");
+
+            // Only return true if all conditions are met
+            return isEnabled &&
+                   isBlockEnabled &&
+                   isBlockPowered &&
+                   isSpawnTrigger &&
+                   isWaterSuitable &&
+                   isEnvironmentSuitable &&
+                   isPlayerInRange &&
+                   areRequiredEntitiesPresent &&
+                   isGridValid &&
+                   isHealthInRange &&
+                   hasRequiredItems;
         }
 
-        private bool IsBlockEnabled(IMySlimBlock block, CustomEntitySpawner blockSettings)
+        private bool IsBlockFunctional(IMySlimBlock block, CustomEntitySpawner blockSettings)
         {
             // Check if the block has a FatBlock (meaning it has a physical representation in the world)
             if (block.FatBlock == null)
@@ -547,29 +589,161 @@ GlobalMaxEntities=30
                 return false;
             }
 
-            // Check if the block is powered (for blocks that require power)
-            var cubeBlock = block.FatBlock as IMyCubeBlock;
-            if (cubeBlock != null)
-            {
-                var resourceSink = cubeBlock.Components.Get<MyResourceSinkComponent>();
-                if (resourceSink != null)
-                {
-                    var requiredPower = resourceSink.RequiredInputByType(MyResourceDistributorComponent.ElectricityId);
-                    var currentPower = resourceSink.CurrentInputByType(MyResourceDistributorComponent.ElectricityId);
+            // If the block passes all checks, return true
+            return true;
+        }
 
-                    // Check if the block requires power and whether it is receiving enough power to function
-                    if (requiredPower > 0 && currentPower < requiredPower)
-                    {
-                        LogError($"Block {block.BlockDefinition.Id.SubtypeName} is not receiving enough power (Required: {requiredPower}, Current: {currentPower}).");
-                        return false;
-                    }
+        private bool IsBlockPowered(IMySlimBlock block, CustomEntitySpawner blockSettings)
+        {
+            // Check if the block is a cube block and part of a valid grid
+            var cubeBlock = block.FatBlock as IMyCubeBlock;
+            if (cubeBlock == null || cubeBlock.CubeGrid == null)
+            {
+                LogError($"Block {block.BlockDefinition.Id.SubtypeName} is not a valid cube block or is not part of a valid grid.");
+                return false;
+            }
+            // Check if the block is a cube block and has a power requirement
+            var blockresourceSink = cubeBlock.Components.Get<MyResourceSinkComponent>();
+            if (blockresourceSink != null)
+            {
+
+                float requiredPower = blockresourceSink.RequiredInputByType(MyResourceDistributorComponent.ElectricityId);
+                float currentPower = blockresourceSink.CurrentInputByType(MyResourceDistributorComponent.ElectricityId);
+
+
+                // Check if the block requires power and whether it is receiving enough power to function
+                if ((currentPower - requiredPower) < 0)
+                {
+                    LogError($"Block {block.BlockDefinition.Id.SubtypeName} is not receiving enough power (Required: {requiredPower}, Current: {currentPower}).");
+                    return false;
                 }
             }
+
+            //var grid = cubeBlock.CubeGrid;
+            //float spawnPowerCost = 0.1f; // Define the power cost for spawning here
+            //float totalStoredPower = 0f;
+
+            // Calculate the total stored power in the grid
+            //var blocks = new List<IMySlimBlock>();
+           // grid.GetBlocks(blocks);
+
+            //foreach (var gridBlock in blocks)
+            //{
+            //    var gridFatBlock = gridBlock.FatBlock;
+            //    if (gridFatBlock != null)
+            //    {
+            //        var resourceSink = gridFatBlock.Components.Get<MyResourceSinkComponent>();
+            //        if (resourceSink != null)
+            //        {
+            //            float storedPower = resourceSink.ResourceAvailableByType(MyResourceDistributorComponent.ElectricityId);
+            //            totalStoredPower += storedPower;
+            //        }
+            //    }
+           // }
+
+           // MyAPIGateway.Utilities.ShowMessage("CES:", $"Required: {spawnPowerCost}, Total Stored: {totalStoredPower}, Math: {totalStoredPower - spawnPowerCost}");
+
+            // Check if there is enough power available on the grid
+           // if ((totalStoredPower - spawnPowerCost) < 0)
+            //{
+           //     LogError($"Grid does not have enough stored power (Required: {spawnPowerCost}, Stored: {totalStoredPower}).");
+           //     return false;
+           // }
+
+            // Deduct the power from the grid
+           // DeductPowerFromGrid(grid, spawnPowerCost);
+
+            // Finally, check if this specific block has enough power to function
+           // var blockResourceSink = cubeBlock.Components.Get<MyResourceSinkComponent>();
+           // if (blockResourceSink != null)
+          //  {
+          //     float requiredPower = blockResourceSink.RequiredInputByType(MyResourceDistributorComponent.ElectricityId);
+           //     float currentPower = blockResourceSink.CurrentInputByType(MyResourceDistributorComponent.ElectricityId);
+//
+          //      if (currentPower < requiredPower)
+          //      {
+          //          LogError($"Block {block.BlockDefinition.Id.SubtypeName} is not receiving enough power (Required: {requiredPower}, Current: {currentPower}).");
+          //          return false;
+          //      }
+          //  }
 
             // If the block passes all checks, return true
             return true;
         }
 
+        private void DeductPowerFromGrid(IMyCubeGrid grid, float spawnPowerCost)
+        {
+            float remainingPowerCost = spawnPowerCost;
+
+            // Iterate through blocks and deduct power
+            var blocks = new List<IMySlimBlock>();
+            grid.GetBlocks(blocks);
+
+            foreach (var gridBlock in blocks)
+            {
+                if (remainingPowerCost <= 0)
+                    break;
+
+                var gridFatBlock = gridBlock.FatBlock;
+                if (gridFatBlock != null)
+                {
+                    var resourceSink = gridFatBlock.Components.Get<MyResourceSinkComponent>();
+                    if (resourceSink != null)
+                    {
+                        float storedPower = resourceSink.ResourceAvailableByType(MyResourceDistributorComponent.ElectricityId);
+
+                        if (storedPower > 0)
+                        {
+                            float powerToDeduct = Math.Min(storedPower, remainingPowerCost);
+                            resourceSink.SetRequiredInputByType(MyResourceDistributorComponent.ElectricityId, storedPower - powerToDeduct);
+                            remainingPowerCost -= powerToDeduct;
+
+                            MyAPIGateway.Utilities.ShowMessage("CES:", $"Deducted: {powerToDeduct} from block {gridBlock.BlockDefinition.Id.SubtypeName}");
+                        }
+                    }
+                }
+            }
+
+            if (remainingPowerCost > 0)
+            {
+                LogError($"Not all required power could be deducted. Remaining: {remainingPowerCost}");
+            }
+        }
+
+        private bool IsWaterLevelSuitable(IMySlimBlock block, CustomEntitySpawner blockSettings)
+        {
+            // Ensure the WaterModAPI is registered
+            if (!Jakaria.API.WaterModAPI.Registered)
+            {
+                LogError("WaterModAPI is not registered, allowing spawning.");
+                return true; // If the API isn't available, allow spawning
+            }
+
+            Vector3D blockPosition = block.FatBlock.GetPosition();
+            MyPlanet closestPlanet = Jakaria.API.WaterModAPI.GetClosestWater(blockPosition);
+            var depth = (Jakaria.API.WaterModAPI.GetDepth(blockPosition) * -1);
+
+            if (closestPlanet == null)
+            {
+                LogError("No water found near the block, allowing spawning.");
+                return true; // If there's no water nearby, allow spawning
+            }
+
+            if (depth < blockSettings.MinWaterDepth)
+            {
+                LogError($"Block is too shallow (depth: {depth}m, minimum required: {blockSettings.MinWaterDepth}m), disallowing spawning.");
+                return false;
+            }
+
+            if (depth > blockSettings.MaxWaterDepth)
+            {
+                LogError($"Block is too deep underwater (depth: {depth}m, maximum allowed: {blockSettings.MaxWaterDepth}m), disallowing spawning.");
+                return false;
+            }
+
+            LogError($"End of IsWaterLevelSuitable: Depth: {depth}");
+            return true;
+        }
 
 
         private bool IsEnvironmentSuitable(IMySlimBlock block, CustomEntitySpawner blockSettings)
@@ -895,11 +1069,11 @@ GlobalMaxEntities=30
                 if (character != null && !character.IsDead && character.Definition.Id.SubtypeId.String.Equals(settings.RequiredEntity, StringComparison.OrdinalIgnoreCase))
                 {
                     Vector3D entityPosition = character.PositionComp.GetPosition();
-                
-               //     var myEntity = entity as MyEntity;
-               // if (myEntity != null && myEntity.DefinitionId.HasValue &&
-               //     myEntity.DefinitionId.Value.SubtypeId.String.Equals(settings.RequiredEntity, StringComparison.OrdinalIgnoreCase))
-                
+
+                    //     var myEntity = entity as MyEntity;
+                    // if (myEntity != null && myEntity.DefinitionId.HasValue &&
+                    //     myEntity.DefinitionId.Value.SubtypeId.String.Equals(settings.RequiredEntity, StringComparison.OrdinalIgnoreCase))
+
                     //Vector3D entityPosition = myEntity.PositionComp.GetPosition();
                     LogError($"Entity Position: {entityPosition}, Distance: {Vector3D.Distance(entityPosition, blockPosition)}");
 
@@ -1199,47 +1373,53 @@ GlobalMaxEntities=30
 
                 var blockSettings = new CustomEntitySpawner
                 {
-                    BlockId = iniParser.Get(section, nameof(CustomEntitySpawner.BlockId)).ToString(section),
-                    BlockType = iniParser.Get(section, nameof(CustomEntitySpawner.BlockType)).ToString(),
-                    Enabled = iniParser.Get(section, nameof(CustomEntitySpawner.Enabled)).ToBoolean(),
-                    PlayerDistanceCheck = iniParser.Get(section, nameof(CustomEntitySpawner.PlayerDistanceCheck)).ToInt32(1000),
-                    EnableEntitySpawning = iniParser.Get(section, nameof(CustomEntitySpawner.EnableEntitySpawning)).ToBoolean(false),
-                    EnableItemSpawning = iniParser.Get(section, nameof(CustomEntitySpawner.EnableItemSpawning)).ToBoolean(false),
-                    SpawnItemsWithEntities = iniParser.Get(section, nameof(CustomEntitySpawner.SpawnItemsWithEntities)).ToBoolean(false),
-                    UseWeightedDrops = iniParser.Get(section, nameof(CustomEntitySpawner.UseWeightedDrops)).ToBoolean(false),
-                    MaxEntitiesInArea = iniParser.Get(section, nameof(CustomEntitySpawner.MaxEntitiesInArea)).ToInt32(30),
-                    MaxEntitiesRadius = iniParser.Get(section, nameof(CustomEntitySpawner.MaxEntitiesRadius)).ToDouble(100),
-                    StackItems = iniParser.Get(section, nameof(CustomEntitySpawner.StackItems)).ToBoolean(false),
-                    SpawnInsideInventory = iniParser.Get(section, nameof(CustomEntitySpawner.SpawnInsideInventory)).ToBoolean(false),
-                    DamageAmount = (float)iniParser.Get(section, nameof(CustomEntitySpawner.DamageAmount)).ToDouble(0),
-                    Repair = iniParser.Get(section, nameof(CustomEntitySpawner.Repair)).ToBoolean(false),
-                    MinHealthPercentage = (float)iniParser.Get(section, nameof(CustomEntitySpawner.MinHealthPercentage)).ToDouble(0),
-                    MaxHealthPercentage = (float)iniParser.Get(section, nameof(CustomEntitySpawner.MaxHealthPercentage)).ToDouble(1),
-                    MinHeight = iniParser.Get(section, nameof(CustomEntitySpawner.MinHeight)).ToDouble(0),
-                    MaxHeight = iniParser.Get(section, nameof(CustomEntitySpawner.MaxHeight)).ToDouble(2),
-                    MinRadius = iniParser.Get(section, nameof(CustomEntitySpawner.MinRadius)).ToDouble(0),
-                    MaxRadius = iniParser.Get(section, nameof(CustomEntitySpawner.MaxRadius)).ToDouble(2),
-                    SpawnTriggerInterval = iniParser.Get(section, nameof(CustomEntitySpawner.SpawnTriggerInterval)).ToInt32(5),
-                    EnableAirtightAndOxygen = iniParser.Get(section, nameof(CustomEntitySpawner.EnableAirtightAndOxygen)).ToBoolean(false),
-                    RequiredEntity = iniParser.Get(section, nameof(CustomEntitySpawner.RequiredEntity)).ToString("NA"),
-                    RequiredEntityRadius = iniParser.Get(section, nameof(CustomEntitySpawner.RequiredEntityRadius)).ToDouble(100),
-                    RequiredEntityNumber = iniParser.Get(section, nameof(CustomEntitySpawner.RequiredEntityNumber)).ToInt32(0),
-                    RequireEntityNumberForTotalEntities = iniParser.Get(section, nameof(CustomEntitySpawner.RequireEntityNumberForTotalEntities)).ToBoolean(false),
-                    RequireEntityCenterOn = iniParser.Get(section, nameof(CustomEntitySpawner.RequireEntityCenterOn)).ToBoolean(false)
+                    BlockId = iniParser.Get(section, nameof(BlockId)).ToString(),
+                    BlockType = iniParser.Get(section, nameof(BlockType)).ToString(),
+                    Enabled = iniParser.Get(section, nameof(Enabled)).ToBoolean(true),
+                    PlayerDistanceCheck = iniParser.Get(section, nameof(PlayerDistanceCheck)).ToInt32(1000),
+                    EnableEntitySpawning = iniParser.Get(section, nameof(EnableEntitySpawning)).ToBoolean(true),
+                    EnableItemSpawning = iniParser.Get(section, nameof(EnableItemSpawning)).ToBoolean(true),
+                    SpawnItemsWithEntities = iniParser.Get(section, nameof(SpawnItemsWithEntities)).ToBoolean(false),
+                    MinEntityAmount = iniParser.Get(section, nameof(MinEntityAmount)).ToInt32(0),
+                    MaxEntityAmount = iniParser.Get(section, nameof(MaxEntityAmount)).ToInt32(0),
+                    UseWeightedDrops = iniParser.Get(section, nameof(UseWeightedDrops)).ToBoolean(false),
+                    MaxEntitiesInArea = iniParser.Get(section, nameof(MaxEntitiesInArea)).ToInt32(30),
+                    MaxEntitiesRadius = iniParser.Get(section, nameof(MaxEntitiesRadius)).ToDouble(100),
+                    StackItems = iniParser.Get(section, nameof(StackItems)).ToBoolean(true),
+                    SpawnInsideInventory = iniParser.Get(section, nameof(SpawnInsideInventory)).ToBoolean(true),
+                    DamageAmount = (float)iniParser.Get(section, nameof(DamageAmount)).ToDouble(0),
+                    Repair = iniParser.Get(section, nameof(Repair)).ToBoolean(false),
+                    MinHealthPercentage = (float)iniParser.Get(section, nameof(MinHealthPercentage)).ToDouble(0),
+                    MaxHealthPercentage = (float)iniParser.Get(section, nameof(MaxHealthPercentage)).ToDouble(1),
+                    MinHeight = iniParser.Get(section, nameof(MinHeight)).ToDouble(0),
+                    MaxHeight = iniParser.Get(section, nameof(MaxHeight)).ToDouble(0),
+                    MinRadius = iniParser.Get(section, nameof(MinRadius)).ToDouble(1),
+                    MaxRadius = iniParser.Get(section, nameof(MaxRadius)).ToDouble(1),
+                    SpawnTriggerInterval = iniParser.Get(section, nameof(SpawnTriggerInterval)).ToInt32(5),
+                    EnableAirtightAndOxygen = iniParser.Get(section, nameof(EnableAirtightAndOxygen)).ToBoolean(false),
+                    RequiredEntity = iniParser.Get(section, nameof(RequiredEntity)).ToString("Wolf"),
+                    RequiredEntityRadius = iniParser.Get(section, nameof(RequiredEntityRadius)).ToDouble(100),
+                    RequiredEntityNumber = iniParser.Get(section, nameof(RequiredEntityNumber)).ToInt32(0),
+                    RequireEntityNumberForTotalEntities = iniParser.Get(section, nameof(RequireEntityNumberForTotalEntities)).ToBoolean(false),
+                    RequireEntityCenterOn = iniParser.Get(section, nameof(RequireEntityCenterOn)).ToBoolean(false),
+                    EnableWaterAPI = iniParser.Get(section, nameof(EnableWaterAPI)).ToBoolean(false),
+                    MinWaterDepth = iniParser.Get(section, nameof(MinWaterDepth)).ToDouble(0),
+                    MaxWaterDepth = iniParser.Get(section, nameof(MaxWaterDepth)).ToDouble(10)
                 };
 
-                blockSettings.EntityID.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.EntityID)).ToString().Split(','));
-                blockSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.ItemTypes)).ToString().Split(','));
-                blockSettings.ItemIds.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.ItemIds)).ToString().Split(','));
-                blockSettings.MinItemAmount.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.MinItemAmount)).ToString().Split(',').Select(double.Parse));
-                blockSettings.MaxItemAmount.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.MaxItemAmount)).ToString().Split(',').Select(double.Parse));
-                blockSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.RequiredItemTypes)).ToString().Split(','));
-                blockSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.RequiredItemIds)).ToString().Split(','));
-                blockSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.RequiredItemAmounts)).ToString().Split(',').Select(double.Parse));
-                blockSettings.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.PermanentRequiredItemTypes)).ToString().Split(','));
-                blockSettings.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.PermanentRequiredItemIds)).ToString().Split(','));
-                blockSettings.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.PermanentRequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
+                blockSettings.EntityID.AddRange(iniParser.Get(section, nameof(blockSettings.EntityID)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.ItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.ItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.ItemIds)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.MinItemAmount.AddRange(iniParser.Get(section, nameof(blockSettings.MinItemAmount)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse));
+                blockSettings.MaxItemAmount.AddRange(iniParser.Get(section, nameof(blockSettings.MaxItemAmount)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse));
+                blockSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemIds)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemAmounts)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse));
+                blockSettings.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemIds)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemAmounts)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
                 BlockSpawnSettings.Add(blockSettings);
+
             }
         }
 
@@ -1404,6 +1584,7 @@ GlobalMaxEntities=30
                          $"RequiredEntityNumber={blockSettings.RequiredEntityNumber}, " +
                          $"RequireEntityNumberForTotalEntities={blockSettings.RequireEntityNumberForTotalEntities}, " +
                          $"RequireEntityCenterOn={blockSettings.RequireEntityCenterOn}");
+
             }
 
             LogError("Drop settings initialized.");
@@ -1421,6 +1602,7 @@ GlobalMaxEntities=30
                     {
                         string worldStorageFilePath = $"{modItem.PublishedFileId}_CES.ini";
 
+                        // Check if the file already exists in World Storage to avoid duplication
                         if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(worldStorageFilePath, typeof(CustomEntitySpawner)))
                         {
                             string fileContent;
@@ -1442,6 +1624,7 @@ GlobalMaxEntities=30
                 LogError($"Error copying files to World Storage: {ex.Message}");
             }
         }
+
 
         public void LoadAllFilesFromWorldStorage()
         {
@@ -1649,7 +1832,7 @@ GlobalMaxEntities=30
                     Vector3D forwardDirection = MyAPIGateway.Session.Player.Character.WorldMatrix.Forward;
                     Vector3D offset = forwardDirection * 5 * 2.5;
                     Vector3D spawnPosition = playerPosition + offset;
-                    
+
                     MyVisualScriptLogicProvider.SpawnBot(botId, spawnPosition);
                     MyAPIGateway.Utilities.ShowMessage("BotSpawner", $"Spawned bot: {botId} at {spawnPosition}");
 
@@ -2000,7 +2183,7 @@ GlobalMaxEntities=30
         private void LoadCustomEntitySpawnerConfig(string fileContent)
         {
             LogError("Starting: LoadCustomEntitySpawnerConfig");
-            
+
             MyIni iniParser = new MyIni();
             MyIniParseResult result;
             if (!iniParser.TryParse(fileContent, out result))
@@ -2019,53 +2202,58 @@ GlobalMaxEntities=30
                 {
                     BlockId = iniParser.Get(section, nameof(BlockId)).ToString(),
                     BlockType = iniParser.Get(section, nameof(BlockType)).ToString(),
-                    Enabled = iniParser.Get(section, nameof(Enabled)).ToBoolean(),
-                    PlayerDistanceCheck = iniParser.Get(section, nameof(PlayerDistanceCheck)).ToInt32(),
+                    Enabled = iniParser.Get(section, nameof(Enabled)).ToBoolean(true),
+                    PlayerDistanceCheck = iniParser.Get(section, nameof(PlayerDistanceCheck)).ToInt32(1000),
                     EnableEntitySpawning = iniParser.Get(section, nameof(EnableEntitySpawning)).ToBoolean(true),
                     EnableItemSpawning = iniParser.Get(section, nameof(EnableItemSpawning)).ToBoolean(true),
                     SpawnItemsWithEntities = iniParser.Get(section, nameof(SpawnItemsWithEntities)).ToBoolean(false),
-                    MinEntityAmount = iniParser.Get(section, nameof(MinEntityAmount)).ToInt32(),
-                    MaxEntityAmount = iniParser.Get(section, nameof(MaxEntityAmount)).ToInt32(),
-                    UseWeightedDrops = iniParser.Get(section, nameof(UseWeightedDrops)).ToBoolean(),
-                    MaxEntitiesInArea = iniParser.Get(section, nameof(MaxEntitiesInArea)).ToInt32(),
+                    MinEntityAmount = iniParser.Get(section, nameof(MinEntityAmount)).ToInt32(0),
+                    MaxEntityAmount = iniParser.Get(section, nameof(MaxEntityAmount)).ToInt32(0),
+                    UseWeightedDrops = iniParser.Get(section, nameof(UseWeightedDrops)).ToBoolean(false),
+                    MaxEntitiesInArea = iniParser.Get(section, nameof(MaxEntitiesInArea)).ToInt32(30),
                     MaxEntitiesRadius = iniParser.Get(section, nameof(MaxEntitiesRadius)).ToDouble(100),
-                    StackItems = iniParser.Get(section, nameof(StackItems)).ToBoolean(),
-                    SpawnInsideInventory = iniParser.Get(section, nameof(SpawnInsideInventory)).ToBoolean(),
-                    DamageAmount = (float)iniParser.Get(section, nameof(DamageAmount)).ToDouble(),
-                    Repair = iniParser.Get(section, nameof(Repair)).ToBoolean(),
-                    MinHealthPercentage = (float)iniParser.Get(section, nameof(MinHealthPercentage)).ToDouble(),
-                    MaxHealthPercentage = (float)iniParser.Get(section, nameof(MaxHealthPercentage)).ToDouble(),
-                    MinHeight = iniParser.Get(section, nameof(MinHeight)).ToDouble(),
-                    MaxHeight = iniParser.Get(section, nameof(MaxHeight)).ToDouble(),
-                    MinRadius = iniParser.Get(section, nameof(MinRadius)).ToDouble(),
-                    MaxRadius = iniParser.Get(section, nameof(MaxRadius)).ToDouble(),
-                    SpawnTriggerInterval = iniParser.Get(section, nameof(SpawnTriggerInterval)).ToInt32(),
-                    EnableAirtightAndOxygen = iniParser.Get(section, nameof(EnableAirtightAndOxygen)).ToBoolean(),
-                    RequiredEntity = iniParser.Get(section, nameof(RequiredEntity)).ToString(),
-                    RequiredEntityRadius = iniParser.Get(section, nameof(RequiredEntityRadius)).ToDouble(),
-                    RequiredEntityNumber = iniParser.Get(section, nameof(RequiredEntityNumber)).ToInt32(),
-                    RequireEntityNumberForTotalEntities = iniParser.Get(section, nameof(RequireEntityNumberForTotalEntities)).ToBoolean(),
-                    RequireEntityCenterOn = iniParser.Get(section, nameof(RequireEntityCenterOn)).ToBoolean()
+                    StackItems = iniParser.Get(section, nameof(StackItems)).ToBoolean(true),
+                    SpawnInsideInventory = iniParser.Get(section, nameof(SpawnInsideInventory)).ToBoolean(true),
+                    DamageAmount = (float)iniParser.Get(section, nameof(DamageAmount)).ToDouble(0),
+                    Repair = iniParser.Get(section, nameof(Repair)).ToBoolean(false),
+                    MinHealthPercentage = (float)iniParser.Get(section, nameof(MinHealthPercentage)).ToDouble(0),
+                    MaxHealthPercentage = (float)iniParser.Get(section, nameof(MaxHealthPercentage)).ToDouble(1),
+                    MinHeight = iniParser.Get(section, nameof(MinHeight)).ToDouble(0),
+                    MaxHeight = iniParser.Get(section, nameof(MaxHeight)).ToDouble(0),
+                    MinRadius = iniParser.Get(section, nameof(MinRadius)).ToDouble(1),
+                    MaxRadius = iniParser.Get(section, nameof(MaxRadius)).ToDouble(1),
+                    SpawnTriggerInterval = iniParser.Get(section, nameof(SpawnTriggerInterval)).ToInt32(5),
+                    EnableAirtightAndOxygen = iniParser.Get(section, nameof(EnableAirtightAndOxygen)).ToBoolean(false),
+                    RequiredEntity = iniParser.Get(section, nameof(RequiredEntity)).ToString("Wolf"),
+                    RequiredEntityRadius = iniParser.Get(section, nameof(RequiredEntityRadius)).ToDouble(100),
+                    RequiredEntityNumber = iniParser.Get(section, nameof(RequiredEntityNumber)).ToInt32(0),
+                    RequireEntityNumberForTotalEntities = iniParser.Get(section, nameof(RequireEntityNumberForTotalEntities)).ToBoolean(false),
+                    RequireEntityCenterOn = iniParser.Get(section, nameof(RequireEntityCenterOn)).ToBoolean(false),
+                    EnableWaterAPI = iniParser.Get(section, nameof(EnableWaterAPI)).ToBoolean(false),
+                    MinWaterDepth = iniParser.Get(section, nameof(MinWaterDepth)).ToDouble(0),
+                    MaxWaterDepth = iniParser.Get(section, nameof(MaxWaterDepth)).ToDouble(10)
                 };
+                MyAPIGateway.Utilities.ShowMessage("CES:", $"MinWaterDepth: {blockSettings.MinWaterDepth}, MaxWaterDepth: {blockSettings.MaxWaterDepth}");
 
-                blockSettings.EntityID.AddRange(iniParser.Get(section, nameof(blockSettings.EntityID)).ToString().Split(','));
-                blockSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.ItemTypes)).ToString().Split(','));
-                blockSettings.ItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.ItemIds)).ToString().Split(','));
-                blockSettings.MinItemAmount.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.MinItemAmount)).ToString().Split(',').Select(double.Parse));
-                blockSettings.MaxItemAmount.AddRange(iniParser.Get(section, nameof(CustomEntitySpawner.MaxItemAmount)).ToString().Split(',').Select(double.Parse));
-                blockSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemTypes)).ToString().Split(','));
-                blockSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemIds)).ToString().Split(','));
-                blockSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemAmounts)).ToString().Split(',').Select(double.Parse));
-                blockSettings.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemTypes)).ToString().Split(','));
-                blockSettings.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemIds)).ToString().Split(','));
-                blockSettings.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemAmounts)).ToString().Split(',').Select(int.Parse));
+                blockSettings.EntityID.AddRange(iniParser.Get(section, nameof(blockSettings.EntityID)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.ItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.ItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.ItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.ItemIds)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.MinItemAmount.AddRange(iniParser.Get(section, nameof(blockSettings.MinItemAmount)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse));
+                blockSettings.MaxItemAmount.AddRange(iniParser.Get(section, nameof(blockSettings.MaxItemAmount)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse));
+                blockSettings.RequiredItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.RequiredItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemIds)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.RequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.RequiredItemAmounts)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(double.Parse));
+                blockSettings.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemIds)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemAmounts)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
                 BlockSpawnSettings.Add(blockSettings);
+
             }
         }
-        
+
     }
 }
 
 
- 
+
 
