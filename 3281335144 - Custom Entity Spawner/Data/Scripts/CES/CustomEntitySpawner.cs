@@ -418,7 +418,7 @@ GlobalMaxEntities=30
 
         private void CreateIniFileIfNotExists(string FileName, string content)
         {
-            LogError("Starting CreateIniFileIfNotExists");
+            LogError("Starting CreateIniFileIfNotExists");     
             if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(FileName, typeof(CustomEntitySpawner)))
             {
                 using (var file = MyAPIGateway.Utilities.WriteFileInWorldStorage(FileName, typeof(CustomEntitySpawner)))
@@ -1602,7 +1602,6 @@ GlobalMaxEntities=30
                     {
                         string worldStorageFilePath = $"{modItem.PublishedFileId}_CES.ini";
 
-                        // Check if the file already exists in World Storage to avoid duplication
                         if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(worldStorageFilePath, typeof(CustomEntitySpawner)))
                         {
                             string fileContent;
