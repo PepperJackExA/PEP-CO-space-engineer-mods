@@ -2,120 +2,42 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<!-- Blueprint Class Entries -->
 	<BlueprintClassEntries>
-		<Entry Class="FarmingTier1" BlueprintSubtypeId="Wheat" />
-		<Entry Class="FarmingTier2" BlueprintSubtypeId="Corn" />
-		<Entry Class="FarmingAdvanced" BlueprintSubtypeId="HydroponicTomatoes" />
-		<Entry Class="Aquaculture" BlueprintSubtypeId="Fish" />
-		<Entry Class="Hydroponics" BlueprintSubtypeId="Lettuce" />
-		<Entry Class="Greenhouse" BlueprintSubtypeId="Herbs" />
-		<Entry Class="Composting" BlueprintSubtypeId="OrganicWaste" />
 		<Entry Class="AnimalHusbandry" BlueprintSubtypeId="Chicken" />
-		<Entry Class="BeeKeeping" BlueprintSubtypeId="Honey" />
-		<Entry Class="Forestry" BlueprintSubtypeId="PineTree" />
-		<Entry Class="CookingTier1" BlueprintSubtypeId="Bread" />
-		<Entry Class="CookingTier2" BlueprintSubtypeId="GrilledChicken" />
-		<Entry Class="CookingAdvanced" BlueprintSubtypeId="GourmetMeal" />
-		<Entry Class="Baking" BlueprintSubtypeId="Cake" />
-		<Entry Class="BeverageProduction" BlueprintSubtypeId="Wine" />
-		<Entry Class="Preserving" BlueprintSubtypeId="Pickles" />
-		<Entry Class="Fermenting" BlueprintSubtypeId="Sauerkraut" />
-		<Entry Class="DairyProcessing" BlueprintSubtypeId="Cheese" />
-		<Entry Class="Butchery" BlueprintSubtypeId="Steak" />
-		<Entry Class="Confectionery" BlueprintSubtypeId="Chocolate" />
+		<Entry Class="AnimalHusbandry" BlueprintSubtypeId="ChickenFeed" />
 	</BlueprintClassEntries>
-	<!-- Blueprints -->
+
 	<Blueprints>
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Compost</SubtypeId>
+				<SubtypeId>Chicken</SubtypeId>
 			</Id>
-			<DisplayName>Organics</DisplayName>
-			<Icon>Textures\GUI\Icons\ore_biomass.dds</Icon>
+			<DisplayName>Chicken</DisplayName>
+			<Description>A domesticated chicken for egg and meat production</Description>
+			<Icon>Textures/GUI/Icons/Chicken.png</Icon>
 			<Prerequisites>
-				<Item Amount="5" TypeId="Ore" SubtypeId="Ice" />
-				<Item Amount="50" TypeId="Ingot" SubtypeId="Stone" />
-				<Item Amount="10" TypeId="ConsumableItem" SubtypeId="Apple" />
+				<Item Amount="1" TypeId="Component" SubtypeId="ChickenFeed" />
 			</Prerequisites>
-			<Result Amount="100" TypeId="Ore" SubtypeId="Organic" />
-			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Chicken" />
+			</Result>
+			<BaseProductionTimeInSeconds>1200</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>FarmCompost</SubtypeId>
+				<SubtypeId>ChickenFeed</SubtypeId>
 			</Id>
-			<DisplayName>Farm Compost</DisplayName>
-			<Icon>Textures\GUI\Icons\FarmingCompost.png</Icon>
+			<DisplayName>Chicken Feed</DisplayName>
+			<Description>Feed for chickens to keep them healthy and productive</Description>
+			<Icon>Textures/GUI/Icons/ChickenFeed.png</Icon>
 			<Prerequisites>
-				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
 				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
 			</Prerequisites>
-			<Result Amount="5" TypeId="Component" SubtypeId="FarmCompost" />
-			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Apple</SubtypeId>
-			</Id>
-			<DisplayName>Apple</DisplayName>
-			<Description>A space-grown version of the red fruit</Description>
-			<Icon>Textures\GUI\Icons\Apple.png</Icon>
-			<Prerequisites>
-				<Item Amount="10" TypeId="Ingot" SubtypeId="Stone" />
-				<Item Amount="1" TypeId="Component" SubtypeId="AppleSapling" />
-				<Item Amount="10" TypeId="Ore" SubtypeId="Organic" />
-				<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
-			</Prerequisites>
-			<Results>
-				<Item Amount="10" TypeId="ConsumableItem" SubtypeId="Apple" />
-				<Item Amount="8" TypeId="Ore" SubtypeId="Organic" />
-			</Results>
-			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>AppleSapling</SubtypeId>
-			</Id>
-			<DisplayName>Apple Sapling</DisplayName>
-			<Description>A bonsai sized apple tree</Description>
-			<Icon>Textures\GUI\Icons\AppleTreeSapling.png</Icon>
-			<Prerequisites>
-				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Apple" />
-			</Prerequisites>
-			<Results>
-				<Item Amount="1" TypeId="Component" SubtypeId="AppleSapling" />
-			</Results>
-			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>AppleJuice</SubtypeId>
-			</Id>
-			<DisplayName>Apple Juice</DisplayName>
-			<Description>A refreshing drink</Description>
-			<Icon>Textures\GUI\Icons\AppleJuice.png</Icon>
-			<Prerequisites>
-				<Item Amount="6" TypeId="ConsumableItem" SubtypeId="Apple" />
-			</Prerequisites>
-			<Result Amount="1" TypeId="ConsumableItem" SubtypeId="AppleJuice" />
-			<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>ApplePie</SubtypeId>
-			</Id>
-			<DisplayName>Apple Pie</DisplayName>
-			<Description>A delicious snack, high in carbs</Description>
-			<Icon>Textures\GUI\Icons\ApplePie.png</Icon>
-			<Prerequisites>
-				<Item Amount="15" TypeId="ConsumableItem" SubtypeId="Apple" />
-			</Prerequisites>
-			<Result Amount="1" TypeId="ConsumableItem" SubtypeId="ApplePie" />
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="ChickenFeed" />
+			</Result>
 			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
 		</Blueprint>
 	</Blueprints>
