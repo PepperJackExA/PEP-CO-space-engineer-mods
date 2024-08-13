@@ -1,43 +1,85 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<!-- Blueprint Class Entries -->
-	<BlueprintClassEntries>
-		<Entry Class="AnimalHusbandry" BlueprintSubtypeId="Chicken" />
-		<Entry Class="AnimalHusbandry" BlueprintSubtypeId="ChickenFeed" />
-	</BlueprintClassEntries>
-
-	<Blueprints>
+	<Blueprints>		
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Chicken</SubtypeId>
+				<SubtypeId>CattleFeed</SubtypeId>
 			</Id>
-			<DisplayName>Chicken</DisplayName>
-			<Description>A domesticated chicken for egg and meat production</Description>
-			<Icon>Textures/GUI/Icons/Chicken.png</Icon>
+			<DisplayName>Cattle Feed</DisplayName>
+			<Icon>Textures\GUI\Icons\ore_biomass.dds</Icon>
 			<Prerequisites>
-				<Item Amount="1" TypeId="Component" SubtypeId="ChickenFeed" />
+				<Item Amount="8" TypeId="ConsumableItem" SubtypeId="Corn" />
+				<Item Amount="4" TypeId="ConsumableItem" SubtypeId="Barley" />
+				<Item Amount="4" TypeId="ConsumableItem" SubtypeId="Wheat" />
+				<Item Amount="4" TypeId="ConsumableItem" SubtypeId="Alfalfa" />
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="Vitamins" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Minerals" />
 			</Prerequisites>
-			<Result>
-				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Chicken" />
-			</Result>
-			<BaseProductionTimeInSeconds>1200</BaseProductionTimeInSeconds>
+			<Result Amount="1" TypeId="ConsumableItem" SubtypeId="CattleFeed" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		<!-- Farming Tier 1 -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>BarleyPlant</SubtypeId>
+			</Id>
+			<DisplayName>Barley Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Barley.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Barley" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Barley" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>WheatPlant</SubtypeId>
+			</Id>
+			<DisplayName>Wheat Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Wheat.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Wheat" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Wheat" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>ChickenFeed</SubtypeId>
+				<SubtypeId>AlfalfaPlant</SubtypeId>
 			</Id>
-			<DisplayName>Chicken Feed</DisplayName>
-			<Description>Feed for chickens to keep them healthy and productive</Description>
-			<Icon>Textures/GUI/Icons/ChickenFeed.png</Icon>
+			<DisplayName>Alfalfa Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Alfalfa.png</Icon>
 			<Prerequisites>
-				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
-				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Alfalfa" />
 			</Prerequisites>
-			<Result>
-				<Item Amount="1" TypeId="Component" SubtypeId="ChickenFeed" />
-			</Result>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Alfalfa" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>CornPlant</SubtypeId>
+			</Id>
+			<DisplayName>Corn Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Alfalfa.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Corn" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Corn" />
 			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
 		</Blueprint>
 	</Blueprints>
