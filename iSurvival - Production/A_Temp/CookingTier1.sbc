@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="CookingTier1" BlueprintSubtypeId="Bread" />
+		<Entry Class="CookingTier1" BlueprintSubtypeId="BreadDough" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Bread</SubtypeId>
+			</Id>
+			<DisplayName>Bread</DisplayName>
+			<Description>A staple food prepared from dough, baked to a golden brown</Description>
+			<Icon>Textures/GUI/Icons/Bread.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="BreadDough" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Bread" />
+			</Result>
+			<BaseProductionTimeInSeconds>900</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>BreadDough</SubtypeId>
+			</Id>
+			<DisplayName>Bread Dough</DisplayName>
+			<Description>A mixture of flour and water, kneaded and ready to be baked into bread</Description>
+			<Icon>Textures/GUI/Icons/BreadDough.png</Icon>
+			<Prerequisites>
+				<Item Amount="3" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="1" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="BreadDough" />
+			</Result>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

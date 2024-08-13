@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="Preserving" BlueprintSubtypeId="Pickles" />
+		<Entry Class="Preserving" BlueprintSubtypeId="PicklingSpice" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Pickles</SubtypeId>
+			</Id>
+			<DisplayName>Pickles</DisplayName>
+			<Description>Preserved cucumbers with a tangy flavor, made using pickling spices</Description>
+			<Icon>Textures/GUI/Icons/Pickles.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="PicklingSpice" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Pickles" />
+			</Result>
+			<BaseProductionTimeInSeconds>1800</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>PicklingSpice</SubtypeId>
+			</Id>
+			<DisplayName>Pickling Spice</DisplayName>
+			<Description>A blend of spices used in the pickling process to preserve vegetables</Description>
+			<Icon>Textures/GUI/Icons/PicklingSpice.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="PicklingSpice" />
+			</Result>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

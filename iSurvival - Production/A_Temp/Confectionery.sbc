@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="Confectionery" BlueprintSubtypeId="Chocolate" />
+		<Entry Class="Confectionery" BlueprintSubtypeId="CocoaButter" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Chocolate</SubtypeId>
+			</Id>
+			<DisplayName>Chocolate</DisplayName>
+			<Description>A sweet treat made from cocoa</Description>
+			<Icon>Textures/GUI/Icons/Chocolate.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="CocoaButter" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Chocolate" />
+			</Result>
+			<BaseProductionTimeInSeconds>1500</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>CocoaButter</SubtypeId>
+			</Id>
+			<DisplayName>Cocoa Butter</DisplayName>
+			<Description>A fat extracted from cocoa beans, used in chocolate making</Description>
+			<Icon>Textures/GUI/Icons/CocoaButter.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="CocoaButter" />
+			</Result>
+			<BaseProductionTimeInSeconds>700</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<PhysicalItems>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>FarmCompost</SubtypeId>
+			</Id>
+			<DisplayName>Farm Compost</DisplayName>
+			<Description>Organic compost derived from cattle, useful for enhancing soil fertility but unpleasant to consume.</Description>
+			<Icon>Textures/GUI/Icons/FarmingCompost.png</Icon>
+			<Size>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</Size>
+			<Mass>8</Mass>
+			<Volume>2</Volume>
+			<Model>Models\Item\FarmingCompost.mwm</Model>
+			<PhysicalMaterial>Organics</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.005" Time="5"/>
+				<!-- Decrease hunger by 2.5% over 5 seconds -->
+				<Stat Name="Health" Value="-0.01" Time="5"/>
+				<!-- Reduces health by 5% over 5 seconds due to potential contamination -->
+				<Stat Name="Sanity" Value="-0.0025" Time="5"/>
+				<!-- Reduces sanity by 1.25% over 5 seconds due to its disgusting nature -->
+				<Stat Name="Water" Value="0.005" Time="5"/>
+				<!-- Increase hydration by 2.5% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>5</MinimalPricePerUnit>
+			<MinimumOfferAmount>1000</MinimumOfferAmount>
+			<MaximumOfferAmount>5000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
+			<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+		</PhysicalItem>
+
+		<!-- Animal Husbandry-->
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>CattleFeed</SubtypeId>
+			</Id>
+			<DisplayName>Cattle Feed</DisplayName>
+			<Description>Feed for cattle to maintain their health and productivity.</Description>
+			<Icon>Textures/GUI/Icons/CattleFeed.png</Icon>
+			<Size>
+				<X>0.5</X>
+				<Y>0.5</Y>
+				<Z>0.5</Z>
+			</Size>
+			<Mass>10</Mass>
+			<Volume>5</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.05" Time="10"/>
+				<!-- Reduces hunger by 50% over 10 seconds -->
+				<Stat Name="Health" Value="0.03" Time="10"/>
+				<!-- Improves health by 30% over 10 seconds -->
+				<Stat Name="Stamina" Value="0.03" Time="10"/>
+				<!-- Restores stamina by 30% over 10 seconds -->
+				<Stat Name="Sanity" Value="-0.01" Time="10"/>
+				<!-- Improves sanity by 10% over 10 seconds -->
+				<Stat Name="Water" Value="-0.02" Time="10"/>
+				<!-- Decreases hydration by 20% over 10 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>400</MinimalPricePerUnit>
+			<MinimumOfferAmount>500</MinimumOfferAmount>
+			<MaximumOfferAmount>20000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Barley</SubtypeId>
+			</Id>
+			<DisplayName>Barley</DisplayName>
+			<Description>A cereal grain used as a good energy source for cattle.</Description>
+			<Icon>Textures/GUI/Icons/Barley.png</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>0.5</Mass>
+			<Volume>0.4</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.005" Time="8"/>
+				<!-- Reduces hunger by 4% over 8 seconds -->
+				<Stat Name="Stamina" Value="0.02" Time="5"/>
+				<!-- Restores stamina by 10% over 5 seconds -->
+				<Stat Name="Water" Value="-0.002" Time="5"/>
+				<!-- Decreases hydration by 1% over 5 seconds -->
+			</Stats>
+
+
+			<MinimalPricePerUnit>50</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>5000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Alfalfa</SubtypeId>
+			</Id>
+			<DisplayName>Alfalfa</DisplayName>
+			<Description>A high-protein forage crop, often used in cattle feed to provide fiber and protein.</Description>
+			<Icon>Textures/GUI/Icons/Alfalfa.png</Icon>
+			<Size>
+				<X>0.4</X>
+				<Y>0.4</Y>
+				<Z>0.4</Z>
+			</Size>
+			<Mass>1.0</Mass>
+			<Volume>0.8</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.005" Time="10"/>
+				<!-- Reduces hunger by 5% over 10 seconds -->
+				<Stat Name="Health" Value="0.02" Time="7"/>
+				<!-- Improves health by 14% over 7 seconds -->
+				<Stat Name="Stamina" Value="0.03" Time="8"/>
+				<!-- Restores stamina by 24% over 8 seconds -->
+				<Stat Name="Water" Value="-0.001" Time="5"/>
+				<!-- Decreases hydration by 1% over 5 seconds -->
+			</Stats>
+
+			<MinimalPricePerUnit>100</MinimalPricePerUnit>
+			<MinimumOfferAmount>200</MinimumOfferAmount>
+			<MaximumOfferAmount>10000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Minerals</SubtypeId>
+			</Id>
+			<DisplayName>Minerals</DisplayName>
+			<Description>A mix of essential minerals like calcium, phosphorus, and salt.</Description>
+			<Icon>Textures/GUI/Icons/Minerals.png</Icon>
+			<Size>
+				<X>0.1</X>
+				<Y>0.1</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>0.3</Mass>
+			<Volume>0.2</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Inorganic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Health" Value="0.01" Time="5"/>
+				<!-- Improves health by 5% over 5 seconds -->
+				<Stat Name="Sanity" Value="0.01" Time="5"/>
+				<!-- Improves sanity by 5% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>150</MinimalPricePerUnit>
+			<MinimumOfferAmount>200</MinimumOfferAmount>
+			<MaximumOfferAmount>5000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Vitamins</SubtypeId>
+			</Id>
+			<DisplayName>Vitamins</DisplayName>
+			<Description>Essential vitamins required for cattle's immune function, bone health, and overall well-being.</Description>
+			<Icon>Textures/GUI/Icons/Vitamins.png</Icon>
+			<Size>
+				<X>0.1</X>
+				<Y>0.1</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>0.1</Mass>
+			<Volume>0.05</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Health" Value="0.004" Time="10"/>
+				<!-- Improves health by 4% over 10 seconds -->
+				<Stat Name="Sanity" Value="0.003" Time="10"/>
+				<!-- Improves sanity by 3% over 10 seconds -->
+				<Stat Name="Stamina" Value="0.02" Time="5"/>
+				<!-- Restores stamina by 10% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>200</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>5000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Corn</SubtypeId>
+			</Id>
+			<DisplayName>Corn</DisplayName>
+			<Description>A primary energy source for cattle, rich in carbohydrates.</Description>
+			<Icon>Textures/GUI/Icons/Corn.png</Icon>
+			<Size>
+				<X>0.3</X>
+				<Y>0.3</Y>
+				<Z>0.3</Z>
+			</Size>
+			<Mass>0.25</Mass>
+			<Volume>0.4</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.006" Time="10"/>
+				<!-- Reduces hunger by 6% over 10 seconds -->
+				<Stat Name="Health" Value="0.02" Time="5"/>
+				<!-- Improves health by 10% over 5 seconds -->
+				<Stat Name="Stamina" Value="0.02" Time="10"/>
+				<!-- Restores stamina by 20% over 10 seconds -->
+				<Stat Name="Sanity" Value="0.01" Time="5"/>
+				<!-- Improves sanity by 5% over 5 seconds -->
+				<Stat Name="Water" Value="0.004" Time="5"/>
+				<!-- Restores stamina by 2% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>50</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>10000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Wheat</SubtypeId>
+			</Id>
+			<DisplayName>Wheat</DisplayName>
+			<Description>A versatile grain used as a primary energy source in cattle feed.</Description>
+			<Icon>Textures/GUI/Icons/Wheat.png</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>0.5</Mass>
+			<Volume>0.3</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.005" Time="8"/>
+				<!-- Reduces hunger by 4% over 8 seconds -->
+				<Stat Name="Health" Value="0.01" Time="5"/>
+				<!-- Improves health by 5% over 5 seconds -->
+				<Stat Name="Stamina" Value="0.02" Time="5"/>
+				<!-- Restores stamina by 10% over 5 seconds -->
+				<Stat Name="Water" Value="-0.002" Time="5"/>
+				<!-- Decreases hydration by 1% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>50</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>5000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+		<!-- End Animal Husbandry -->
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>AppleJuice</SubtypeId>
+			</Id>
+			<DisplayName>Apple Juice</DisplayName>
+			<Description>A refreshing drink</Description>
+			<Icon>Textures/GUI/Icons/AppleJuice.png</Icon>
+			<Size>
+				<X>0.1</X>
+				<Y>0.1</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>0.1</Mass>
+			<Volume>0.1</Volume>
+			<Model>Models\AppleJuiceBottle.mwm</Model>
+			<PhysicalMaterial>None</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Fatigue" Value="0.01" Time="5"/>
+				<!-- Reduces fatigue by 5% over 5 seconds -->
+				<Stat Name="Stamina" Value="0.02" Time="5"/>
+				<!-- Restores stamina by 10% over 5 seconds -->
+				<Stat Name="Hunger" Value="0.005" Time="2"/>
+				<!-- Reduces hunger by 1% over 2 seconds -->
+				<Stat Name="Water" Value="0.02" Time="5"/>
+				<!-- Increases hydration by 10% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>100</MinimalPricePerUnit>
+			<MinimumOfferAmount>1000</MinimumOfferAmount>
+			<MaximumOfferAmount>10000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>ApplePie</SubtypeId>
+			</Id>
+			<DisplayName>Apple Pie</DisplayName>
+			<Description>A delicious snack, high in carbs</Description>
+			<Icon>Textures/GUI/Icons/ApplePie.png</Icon>
+			<Size>
+				<X>0.5</X>
+				<Y>0.5</Y>
+				<Z>0.5</Z>
+			</Size>
+			<Mass>0.25</Mass>
+			<Volume>0.25</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>None</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Sanity" Value="0.01" Time="10"/>
+				<!-- Improves sanity by 10% over 10 seconds -->
+				<Stat Name="Health" Value="0.015" Time="4"/>
+				<!-- Improves health by 6% over 4 seconds -->
+				<Stat Name="Fatigue" Value="0.01" Time="4"/>
+				<!-- Improve fatigue by 4% over 4 seconds -->
+				<Stat Name="Hunger" Value="0.05" Time="10"/>
+				<!-- Reduces hunger by 50% over 10 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>250</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Apple</SubtypeId>
+			</Id>
+			<DisplayName>Apple</DisplayName>
+			<Description>A space-grown version of the red fruit.</Description>
+			<Icon>Textures\GUI\Icons\Apple.png</Icon>
+			<Size>
+				<X>0.1</X>
+				<Y>	0.1</Y>
+					<Z>0.1</Z>
+				</Size>
+			<Mass>0.25</Mass>
+			<Volume>0.4</Volume>
+			<Model>Models\PickedApple.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.01" Time="5"/>
+				<!-- Reduces hunger by 5% over 5 seconds -->
+				<Stat Name="Water" Value="0.01" Time="5"/>
+				<!-- Increases hydration by 5% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>50</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Worm</SubtypeId>
+			</Id>
+			<DisplayName>Worm</DisplayName>
+			<Description>Worms are good for fishing... you can eat them if needed.</Description>
+			<Icon>Textures\GUI\Icons\Items\Worm.png</Icon>
+			<Size>
+				<X>0.05</X>
+				<Y>0.05</Y>
+				<Z>0.05</Z>
+			</Size>
+			<Mass>0.1</Mass>
+			<Volume>0.1</Volume>
+			<Model>Models\Item\Worm.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.004" Time="5"/>
+				<!-- Reduces hunger by 2% over 5 seconds -->
+				<Stat Name="Water" Value="0.002" Time="5"/>
+				<!-- Increase hydration by 1% over 5 seconds -->
+				<Stat Name="Sanity" Value="-0.001" Time="5"/>
+				<!-- Reduces sanity by 0.5% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>100</MinimalPricePerUnit>
+			<MinimumOfferAmount>1000</MinimumOfferAmount>
+			<MaximumOfferAmount>10000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
+	</PhysicalItems>
+</Definitions>

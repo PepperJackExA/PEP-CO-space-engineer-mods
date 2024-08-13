@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="CookingAdvanced" BlueprintSubtypeId="GourmetMeal" />
+		<Entry Class="CookingAdvanced" BlueprintSubtypeId="SpiceMix" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>GourmetMeal</SubtypeId>
+			</Id>
+			<DisplayName>Gourmet Meal</DisplayName>
+			<Description>A high-quality meal prepared with fine ingredients and advanced cooking techniques</Description>
+			<Icon>Textures/GUI/Icons/GourmetMeal.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="SpiceMix" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="GourmetMeal" />
+			</Result>
+			<BaseProductionTimeInSeconds>1800</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SpiceMix</SubtypeId>
+			</Id>
+			<DisplayName>Spice Mix</DisplayName>
+			<Description>A blend of spices used to enhance the flavor of gourmet dishes</Description>
+			<Icon>Textures/GUI/Icons/SpiceMix.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="SpiceMix" />
+			</Result>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

@@ -4,6 +4,35 @@
 		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
 			<Id>
 				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Apple</SubtypeId>
+			</Id>
+			<DisplayName>Apple</DisplayName>
+			<Description>A space-grown version of the red fruit</Description>
+			<Icon>Textures\GUI\Icons\Items\Apple.png</Icon>
+			<Size>
+				<X>0.03</X>
+				<Y>0.03</Y>
+				<Z>0.03</Z>
+			</Size>
+			<Mass>0.05</Mass>
+			<Volume>0.05</Volume>
+			<Model>Models\PickedApple.mwm</Model>
+			<PhysicalMaterial>None</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Health" Value="0.05" Time="2"/>
+				<Stat Name="Fatigue" Value="0.05" Time="2"/>
+				<Stat Name="Stamina" Value="0.05" Time="2"/>
+				<Stat Name="Hunger" Value="0.05" Time="2"/>
+				<Stat Name="Water" Value="0.05" Time="2"/>
+			</Stats>
+			<MinimalPricePerUnit>50</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
 				<SubtypeId>Worm</SubtypeId>
 			</Id>
 			<DisplayName>Worm</DisplayName>

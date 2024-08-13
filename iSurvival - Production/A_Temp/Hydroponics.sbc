@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="Hydroponics" BlueprintSubtypeId="Lettuce" />
+		<Entry Class="Hydroponics" BlueprintSubtypeId="LettuceSeedling" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Lettuce</SubtypeId>
+			</Id>
+			<DisplayName>Lettuce</DisplayName>
+			<Description>A leafy green vegetable grown in a hydroponic system</Description>
+			<Icon>Textures/GUI/Icons/Lettuce.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="LettuceSeedling" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Lettuce" />
+			</Result>
+			<BaseProductionTimeInSeconds>1200</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>LettuceSeedling</SubtypeId>
+			</Id>
+			<DisplayName>Lettuce Seedling</DisplayName>
+			<Description>A young lettuce plant ready to be grown in hydroponics</Description>
+			<Icon>Textures/GUI/Icons/LettuceSeedling.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="LettuceSeedling" />
+			</Result>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

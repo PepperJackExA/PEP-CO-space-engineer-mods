@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="FarmingAdvanced" BlueprintSubtypeId="HydroponicTomatoes" />
+		<Entry Class="FarmingAdvanced" BlueprintSubtypeId="TomatoSeedling" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>HydroponicTomatoes</SubtypeId>
+			</Id>
+			<DisplayName>Hydroponic Tomatoes</DisplayName>
+			<Description>Tomatoes grown in a controlled hydroponic environment</Description>
+			<Icon>Textures/GUI/Icons/HydroponicTomatoes.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="TomatoSeedling" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="HydroponicTomatoes" />
+			</Result>
+			<BaseProductionTimeInSeconds>1800</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>TomatoSeedling</SubtypeId>
+			</Id>
+			<DisplayName>Tomato Seedling</DisplayName>
+			<Description>A young tomato plant ready to be grown in hydroponic systems</Description>
+			<Icon>Textures/GUI/Icons/TomatoSeedling.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="TomatoSeedling" />
+			</Result>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

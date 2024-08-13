@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="Fermenting" BlueprintSubtypeId="Sauerkraut" />
+		<Entry Class="Fermenting" BlueprintSubtypeId="Cabbage" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Sauerkraut</SubtypeId>
+			</Id>
+			<DisplayName>Sauerkraut</DisplayName>
+			<Description>Fermented cabbage, a traditional food rich in probiotics</Description>
+			<Icon>Textures/GUI/Icons/Sauerkraut.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="Cabbage" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Sauerkraut" />
+			</Result>
+			<BaseProductionTimeInSeconds>1800</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Cabbage</SubtypeId>
+			</Id>
+			<DisplayName>Cabbage</DisplayName>
+			<Description>A leafy green vegetable used in many culinary dishes and for fermenting</Description>
+			<Icon>Textures/GUI/Icons/Cabbage.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="Cabbage" />
+			</Result>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

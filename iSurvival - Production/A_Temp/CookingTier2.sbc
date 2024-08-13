@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="CookingTier2" BlueprintSubtypeId="GrilledChicken" />
+		<Entry Class="CookingTier2" BlueprintSubtypeId="Seasoning" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>GrilledChicken</SubtypeId>
+			</Id>
+			<DisplayName>Grilled Chicken</DisplayName>
+			<Description>Juicy chicken grilled to perfection with a blend of spices</Description>
+			<Icon>Textures/GUI/Icons/GrilledChicken.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="Seasoning" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="GrilledChicken" />
+			</Result>
+			<BaseProductionTimeInSeconds>1200</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Seasoning</SubtypeId>
+			</Id>
+			<DisplayName>Seasoning</DisplayName>
+			<Description>A blend of spices used to enhance the flavor of grilled chicken</Description>
+			<Icon>Textures/GUI/Icons/Seasoning.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="Seasoning" />
+			</Result>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

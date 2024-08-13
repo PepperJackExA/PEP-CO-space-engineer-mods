@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="Baking" BlueprintSubtypeId="Cake" />
+		<Entry Class="Baking" BlueprintSubtypeId="CakeMix" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Cake</SubtypeId>
+			</Id>
+			<DisplayName>Cake</DisplayName>
+			<Description>A delicious baked cake for special occasions</Description>
+			<Icon>Textures/GUI/Icons/Cake.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="CakeMix" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Cake" />
+			</Result>
+			<BaseProductionTimeInSeconds>1800</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>CakeMix</SubtypeId>
+			</Id>
+			<DisplayName>Cake Mix</DisplayName>
+			<Description>A mixture of ingredients to bake a cake</Description>
+			<Icon>Textures/GUI/Icons/CakeMix.png</Icon>
+			<Prerequisites>
+				<Item Amount="3" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="CakeMix" />
+			</Result>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

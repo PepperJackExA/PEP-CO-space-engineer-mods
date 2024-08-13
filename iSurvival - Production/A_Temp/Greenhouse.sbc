@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="Greenhouse" BlueprintSubtypeId="Herbs" />
+		<Entry Class="Greenhouse" BlueprintSubtypeId="HerbCutting" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Herbs</SubtypeId>
+			</Id>
+			<DisplayName>Herbs</DisplayName>
+			<Description>Fresh herbs grown in a greenhouse, used in cooking and medicine</Description>
+			<Icon>Textures/GUI/Icons/Herbs.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="HerbCutting" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Herbs" />
+			</Result>
+			<BaseProductionTimeInSeconds>900</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>HerbCutting</SubtypeId>
+			</Id>
+			<DisplayName>Herb Cutting</DisplayName>
+			<Description>A cutting from an herb plant, ready to be propagated</Description>
+			<Icon>Textures/GUI/Icons/HerbCutting.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="HerbCutting" />
+			</Result>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

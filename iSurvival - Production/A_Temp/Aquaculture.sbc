@@ -1,0 +1,41 @@
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlueprintClassEntries>
+		<Entry Class="Aquaculture" BlueprintSubtypeId="Fish" />
+		<Entry Class="Aquaculture" BlueprintSubtypeId="FishFeed" />
+	</BlueprintClassEntries>
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Fish</SubtypeId>
+			</Id>
+			<DisplayName>Fish</DisplayName>
+			<Description>A fish raised for consumption in aquaculture</Description>
+			<Icon>Textures/GUI/Icons/Fish.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="FishFeed" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Fish" />
+			</Result>
+			<BaseProductionTimeInSeconds>1500</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>FishFeed</SubtypeId>
+			</Id>
+			<DisplayName>Fish Feed</DisplayName>
+			<Description>Feed for fish to keep them healthy and promote growth</Description>
+			<Icon>Textures/GUI/Icons/FishFeed.png</Icon>
+			<Prerequisites>
+				<Item Amount="3" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="1" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="FishFeed" />
+			</Result>
+			<BaseProductionTimeInSeconds>400</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

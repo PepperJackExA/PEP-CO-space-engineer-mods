@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Blueprint Class Entries -->
+	<BlueprintClassEntries>
+		<Entry Class="BeeKeeping" BlueprintSubtypeId="Honey" />
+		<Entry Class="BeeKeeping" BlueprintSubtypeId="BeeWax" />
+	</BlueprintClassEntries>
+
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Honey</SubtypeId>
+			</Id>
+			<DisplayName>Honey</DisplayName>
+			<Description>A sweet, viscous food substance made by bees</Description>
+			<Icon>Textures/GUI/Icons/Honey.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="Component" SubtypeId="BeeWax" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Honey" />
+			</Result>
+			<BaseProductionTimeInSeconds>1200</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>BeeWax</SubtypeId>
+			</Id>
+			<DisplayName>Bee Wax</DisplayName>
+			<Description>A natural wax produced by bees, used in honeycomb construction</Description>
+			<Icon>Textures/GUI/Icons/BeeWax.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Result>
+				<Item Amount="1" TypeId="Component" SubtypeId="BeeWax" />
+			</Result>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>
