@@ -16,6 +16,13 @@ using Digi;
 using Sandbox.Game.EntityComponents;
 using static VRageMath.Base6Directions;
 using static VRageMath.Base27Directions;
+using VRage.Game.Entity;
+using Sandbox.ModAPI.Interfaces.Terminal;
+using VRage;
+using Sandbox.ModAPI.Interfaces;
+using System.Text;
+using Jakaria.API;
+using Sandbox.Game.Entities.Cube;
 
 namespace PEPCO_Propulsion
 {
@@ -30,14 +37,33 @@ namespace PEPCO_Propulsion
         public const float AngleMin = -90;
         public const float AngleMax = +90;
 
-        public readonly Guid SETTINGS_GUID = new Guid("A1D0F5C7-3D10-1C1D-DC5C-9E20389C5791");
+        public readonly Guid SETTINGS_GUID = new Guid("0DFAA570-310D-D1C1-DDCC-C57913E20389");
 
         public readonly VectorThrustEnginesBlockSettings Settings = new VectorThrustEnginesBlockSettings();
         int syncCountdown;
         public const int SETTINGS_CHANGED_COUNTDOWN = (60 * 1) / 10;
 
-        MyCubeBlock linkedMounting; // the drive shaft that this block is mounted on
+        IMyUpgradeModule linkedMounting; // the drive shaft that this block is mounted on
+        Func<float, float> efficiencyCalculation; // the function that calculates the efficiency of the mounting
+        int maxRPM; // the maximum RPM of the mounting required for the shaft to spin
+        Vector3D screwPosition; // the position of the screw relative to the block
+        bool isUnderwater; // is the screw underwater
+
+
+        MyTuple<float,float> infoOutput; // output efficiency and force to the custom info
+
         byte linkSkip = 127; // link ASAP
+
+        private const string SUBPART_NAME = "DriveShaft"; // dummy name without the "subpart_" prefix
+        //private const float DEGREES_PER_TICK = 9.0f; // rotation per tick in degrees (60 ticks per second)
+        private const float ACCELERATE_PERCENT_PER_TICK = 0.05f; // aceleration percent of "DEGREES_PER_TICK" per tick.
+        private const float DEACCELERATE_PERCENT_PER_TICK = 0.01f; // deaccleration percent of "DEGREES_PER_TICK" per tick.
+        private readonly Vector3 ROTATION_AXIS = Vector3.Forward; // rotation axis for the subpart, you can do new Vector3(0.0f, 0.0f, 0.0f) for custom values
+        private const float MAX_DISTANCE_SQ = 1000 * 1000; // player camera must be under this distance (squared) to see the subpart spinning
+
+        private bool subpartFirstFind = true;
+        private Matrix subpartLocalMatrix; // keeping the matrix here because subparts are being re-created on paint, resetting their orientations
+        private float targetSpeedMultiplier; // used for smooth transition
 
         VectorThrustEnginesMod Mod => VectorThrustEnginesMod.Instance;
 
@@ -58,10 +84,36 @@ namespace PEPCO_Propulsion
             NeedsUpdate = MyEntityUpdateEnum.BEFORE_NEXT_FRAME;
 
             block = (IMyThrust)Entity;
+
+            block.AppendingCustomInfo += CustomInfo;
+
+        }
+
+        private void CustomInfo(IMyTerminalBlock block, StringBuilder builder)
+        {
+            if (VectorThrustEnginesMod.Instance == null || !VectorThrustEnginesMod.Instance.IsPlayer)
+                return;
+
+            if (block?.CubeGrid?.Physics == null)
+                return;
+
+            if (linkedMounting != null)
+            {
+                builder.Append($"Attached mounting: {linkedMounting?.DefinitionDisplayNameText}\n" +
+                    $"Mounting: {(linkedMounting.IsWorking ? "Working" : "Not working")}\n" +
+                    $"Screw underwater: {isUnderwater}\n" +
+                    $"RPM: {(thrust.CurrentStrength * maxRPM):N0}\n" +
+                    $"Output efficiency: {infoOutput.Item1 * 100:N0}%\n" +
+                    $"Output force: {infoOutput.Item2:N0}Nm");
+                return;
+            }
+            builder.Append($"Attach a mounting for this engine to work.");
+
         }
 
         public override void UpdateBeforeSimulation10()
         {
+
             try
             {
                 SyncSettings();
@@ -90,18 +142,27 @@ namespace PEPCO_Propulsion
 
         public override void UpdateOnceBeforeFrame()
         {
-            VectorThrustEnginesControls.DoOnce(ModContext);
+            //Look into overwriting the thrustoverride terminal control
 
-            NeedsUpdate = MyEntityUpdateEnum.EACH_FRAME;
+            if (WaterModAPI.Registered)
+            {
+                thrust = (MyThrust)Entity;
 
-            Settings.VectorThrust_Toggle = false;
-            Settings.VectorThrustReverse_Toggle = false;
-            Settings.VectorThrust_Angle = 0;
+                VectorThrustEnginesControls.DoOnce(ModContext);
 
-            LoadSettings();
+                Settings.VectorThrust_Toggle = false;
+                Settings.VectorThrustReverse_Toggle = false;
+                Settings.VectorThrust_Angle = 0;
 
-            SaveSettings(); // required for IsSerialized()
+                LoadSettings();
+                SaveSettings(); // required for IsSerialized()
 
+                NeedsUpdate = MyEntityUpdateEnum.EACH_FRAME;
+            }
+            else
+            {
+                Log.Info("WaterModAPI not registered");
+            }
         }
 
         public override void UpdateBeforeSimulation()
@@ -117,16 +178,61 @@ namespace PEPCO_Propulsion
 
             try
             {
-
-                if (linkedMounting == null)
+                if (linkedMounting == null) //Check for mounting
                 {
-                    if (++linkSkip >= 60)
+                    if (++linkSkip >= 60) //Check every 60 frames
                     {
                         linkSkip = 0;
-                        Vector3I pos = grid.WorldToGridInteger(block.WorldMatrix.Translation + block.WorldMatrix.Backward * grid.GridSize);
-                        IMyCubeBlock cube = grid.GetCubeBlock(pos) as IMyCubeBlock;
-                        Log.Info($"pos: {pos}\n" +
-                            $"enginepos: {block.PositionComp.LocalMatrixRef.Translation}");
+                        Vector3I pos = grid.WorldToGridInteger(thrust.WorldMatrix.Translation + thrust.WorldMatrix.Forward * grid.GridSize *2); //Delta of blocks found empirically
+
+                        //
+
+                        //Get all blocks on the grid
+                        //var allBlocks = grid.GetFatBlocks();
+
+                        ////Iterate all blocks and return the first block that is a mounting
+                        //foreach (var testBlock in allBlocks)
+                        //{
+                        //    if (testBlock?.BlockDefinition?.Id.SubtypeName != "HighRPMMounting")
+                        //        continue;
+                        //    Vector3I tempVec = grid.WorldToGridInteger(testBlock.WorldMatrix.Translation);
+                        //    Vector3I tempDelta = pos - tempVec;
+                        //    Log.Info($"{testBlock?.BlockDefinition?.Id.SubtypeName}: {tempVec} delta: {tempDelta} ");
+                        //}
+                        
+
+                        IMySlimBlock slimBlock = grid.GetCubeBlock(pos) as IMySlimBlock; 
+                        Log.Info($"{slimBlock?.BlockDefinition?.Id.SubtypeId}");
+                        IMyUpgradeModule upgradeModule = slimBlock?.FatBlock as IMyUpgradeModule;
+                        if (upgradeModule == null)
+                        {
+                            Log.Info("No mounting found");
+                            block.Enabled = false;
+                            return;
+                        }
+                        else
+                        {
+                            double alignDot = Math.Round(Vector3.Dot(upgradeModule.WorldMatrix.Backward, thrust.WorldMatrix.Backward), 1);
+
+                            VectorThrustEnginesMod.ShipPropellerDefinitions mountingDef;
+                            
+
+                            if (alignDot == 1 && VectorThrustEnginesMod.Instance.mountingsList.TryGetValue(upgradeModule.BlockDefinition.SubtypeId, out mountingDef)) //Check if mounting is aligned and has a definition
+                            {
+                                linkedMounting = upgradeModule;
+                                efficiencyCalculation = mountingDef.efficiencyFunction; //Apply efficiency calculation
+                                maxRPM = mountingDef.maxRPM; //Apply max RPM
+                                screwPosition = mountingDef.screwPostion; //Apply screw position
+                            }
+                            else
+                            {
+                                //Log.Info($"Mounting found but not aligned {alignDot}");
+                                block.Enabled = false;
+                                return;
+                            }
+                        }
+
+
                     }
 
                     return;
@@ -135,20 +241,106 @@ namespace PEPCO_Propulsion
                 if (linkedMounting.Closed || linkedMounting.MarkedForClose)
                 {
                     linkedMounting = null;
+                    block.Enabled = false;
                     return;
                 }
 
-                if (VectorThrustReverse_Toggle && thrust.CurrentStrength > 0)
+                if (!linkedMounting.IsWorking)
                 {
+                    block.Enabled = false;
+                }
+
+
+                //thrust.BlockDefinition.ForceMagnitude = efficiencyCalculation(thrust.BlockDefinition.ForceMagnitude); //Apply efficiency calculation
+
+                Vector3D worldScrewLocation = linkedMounting.GetPosition() + screwPosition;
+
+                isUnderwater = WaterModAPI.IsUnderwater(worldScrewLocation);
+
+                if (block.Enabled && thrust.CurrentStrength > 0 && isUnderwater)
+                {
+                    float efficiencyConstant = efficiencyCalculation(thrust.CurrentStrength);
+
+                    Vector3D counterForce = thrust.WorldMatrix.Forward * thrust.BlockDefinition.ForceMagnitude * thrust.CurrentStrength; // Double the normal thrust force to 1) stall the forward thrust and 2) apply reverse thrust
+
+                    Vector3D propulsionForce = counterForce * efficiencyConstant * (!VectorThrustReverse_Toggle ? -1.0 : 1.0); //!VectorThrustReverse_Toggle to account for block thrust direction
 
                     // THis is where the forces will be applied
                     Vector3D forceAt = grid.Physics.CenterOfMassWorld;
 
                     // Assemble the force vectors
-                    Vector3D counterForce = thrust.WorldMatrix.Forward * thrust.BlockDefinition.ForceMagnitude * thrust.CurrentStrength * 2; // Double the normal thrust force to 1) stall the forward thrust and 2) apply reverse thrust
-                    grid.Physics.AddForce(MyPhysicsForceType.APPLY_WORLD_FORCE, counterForce, forceAt, null);
+                    Vector3D totalForce = counterForce + propulsionForce; // counterForce is the stall force, propulsionForce is the efficiencyConstant adjusted thrust
+                    grid.Physics.AddForce(MyPhysicsForceType.APPLY_WORLD_FORCE, totalForce, forceAt, null);
 
-                    
+                    infoOutput = new MyTuple<float, float>((float)efficiencyConstant, (float)propulsionForce.Length());
+                }
+                else
+                {
+                    infoOutput = new MyTuple<float, float>(0, 0);
+                }
+
+                SpinShaft(thrust.CurrentStrength * (!VectorThrustReverse_Toggle ? -1.0f : 1.0f));
+                if (thrust.CurrentStrength > 0.8)
+                {
+                    WaterModAPI.CreateBubble(worldScrewLocation, thrust.CurrentStrength/8);
+                }
+
+
+
+            }
+            catch (Exception e)
+            {
+                Log.Error(e);
+            }
+        }
+
+        public void SpinShaft(float targetRPM)
+        {
+            try
+            {
+                //Log.Info($"Spinning shaft with {targetRPM}", $"Spinning shaft with {targetRPM}",3000);
+                bool shouldSpin = true; // if block is functional and enabled and powered.
+
+                float desiredSpeedMultiplier = targetRPM;
+
+                if (shouldSpin)
+                {
+                    if (targetSpeedMultiplier < desiredSpeedMultiplier)
+                    {
+                        targetSpeedMultiplier = Math.Min(targetSpeedMultiplier + ACCELERATE_PERCENT_PER_TICK, desiredSpeedMultiplier);
+                    }
+                    else if (targetSpeedMultiplier > desiredSpeedMultiplier)
+                    {
+                        targetSpeedMultiplier = Math.Max(targetSpeedMultiplier - DEACCELERATE_PERCENT_PER_TICK, desiredSpeedMultiplier);
+                    }
+                }
+                else
+                {
+                    targetSpeedMultiplier = Math.Max(targetSpeedMultiplier - DEACCELERATE_PERCENT_PER_TICK, 0);
+                }
+
+                var camPos = MyAPIGateway.Session.Camera.WorldMatrix.Translation; // local machine camera position
+
+                if (Vector3D.DistanceSquared(camPos, block.GetPosition()) > MAX_DISTANCE_SQ)
+                    return;
+
+                MyEntitySubpart subpart;
+                if (linkedMounting.TryGetSubpart(SUBPART_NAME, out subpart)) // subpart does not exist when block is in build stage
+                {
+                    if (subpartFirstFind) // first time the subpart was found
+                    {
+                        subpartFirstFind = false;
+                        subpartLocalMatrix = subpart.PositionComp.LocalMatrixRef;
+                    }
+
+                    if (Math.Abs(targetSpeedMultiplier) > 0)
+                    {
+                        // subpartLocalMatrix *= Matrix.CreateFromAxisAngle(ROTATION_AXIS, MathHelper.ToRadians(targetSpeedMultiplier * DEGREES_PER_TICK));
+                        subpartLocalMatrix *= Matrix.CreateFromAxisAngle(ROTATION_AXIS, MathHelper.ToRadians(targetSpeedMultiplier * maxRPM / 10));
+                        subpartLocalMatrix = Matrix.Normalize(subpartLocalMatrix); // normalize to avoid any rotation inaccuracies over time resulting in weird scaling
+                    }
+
+                    subpart.PositionComp.SetLocalMatrix(ref subpartLocalMatrix);
                 }
             }
             catch (Exception e)
