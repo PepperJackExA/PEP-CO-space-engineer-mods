@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<Blueprints>		
+	<Blueprints>
+		<!-- Animal Husbandry -->
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
@@ -18,6 +19,25 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="ConsumableItem" SubtypeId="CattleFeed" />
 			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>ButcherCowCarcass</SubtypeId>
+			</Id>
+			<DisplayName>Butcher Cow Carcass</DisplayName>
+			<Icon>Textures/GUI/Icons/Barley.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="CowCarcass" />
+				<Item Amount="1" TypeId="Component" SubtypeId="ButcherKnife" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="200" TypeId="ConsumableItem" SubtypeId="RawBeef" />
+				<Item Amount="50" TypeId="Component" SubtypeId="Bone" />
+				<Item Amount="20" TypeId="Component" SubtypeId="Leather" />
+				<Item Amount="20" TypeId="ConsumableItem" SubtypeId="AnimalFat" />
+			</Results>
+			<BaseProductionTimeInSeconds>180</BaseProductionTimeInSeconds>
 		</Blueprint>
 		
 		<!-- Farming Tier 1 -->

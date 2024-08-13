@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<PhysicalItems>
+		
+		
 		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
 			<Id>
 				<TypeId>ConsumableItem</TypeId>
@@ -37,6 +39,157 @@
 		</PhysicalItem>
 
 		<!-- Animal Husbandry-->
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>CowCarcass</SubtypeId>
+			</Id>
+			<DisplayName>Cow Carcass</DisplayName>
+			<Description>A large, butchered cow carcass, used primarily as a source of meat or raw materials in butchery and food processing.</Description>
+			<Icon>Textures/GUI/Icons/CowCarcass.png</Icon>
+			<Size>
+				<X>2.5</X>
+				<Y>1.5</Y>
+				<Z>1</Z>
+			</Size>
+			<Mass>400</Mass>
+			<Volume>800</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Organics</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.025" Time="5" />
+				<!-- Decreases hunger by 12.5% over 5 seconds -->
+				<Stat Name="Health" Value="-0.05" Time="5" />
+				<!-- Reduces health by 25% over 5 seconds due to potential contamination -->
+				<Stat Name="Sanity" Value="-0.015" Time="5" />
+				<!-- Reduces sanity by 7.5% over 5 seconds due to its disgusting nature -->
+				<Stat Name="Water" Value="0.01" Time="5" />
+				<!-- Increases hydration by 5% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>5</MinimalPricePerUnit>
+			<MinimumOfferAmount>1000</MinimumOfferAmount>
+			<MaximumOfferAmount>5000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
+			<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+		</PhysicalItem>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>RawBeef</SubtypeId>
+			</Id>
+			<DisplayName>Raw Beef</DisplayName>
+			<Description>Freshly butchered beef, requires cooking before consumption to avoid health risks.</Description>
+			<Icon>Textures/GUI/Icons/RawBeef.png</Icon>
+			<Size>
+				<X>0.3</X>
+				<Y>0.2</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>2.5</Mass>
+			<Volume>3</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Organics</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Hunger" Value="0.025" Time="5" />
+				<!-- Decreases hunger by 12.5% over 5 seconds -->
+				<Stat Name="Health" Value="-0.0125" Time="10" />
+				<!-- Reduces health by 2.5% over 5 seconds due to potential contamination -->
+				<Stat Name="Sanity" Value="-0.015" Time="5" />
+				<!-- Reduces sanity by 7.5% over 5 seconds due to its disgusting nature -->
+				<Stat Name="Water" Value="0.01" Time="5" />
+				<!-- Increases hydration by 5% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>10</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+			<MinimumAcquisitionAmount>20</MinimumAcquisitionAmount>
+			<MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+		</PhysicalItem>
+
+		<PhysicalItem xsi:type="MyObjectBuilder_ComponentDefinition">
+			<Id>
+				<TypeId>Component</TypeId>
+				<SubtypeId>Bone</SubtypeId>
+			</Id>
+			<DisplayName>Bone</DisplayName>
+			<Description>A sturdy bone, useful in crafting tools, weapons, or as a raw material.</Description>
+			<Icon>Textures/GUI/Icons/Bone.png</Icon>
+			<Size>
+				<X>0.5</X>
+				<Y>0.1</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>1.5</Mass>
+			<Volume>0.2</Volume>
+			<Model>Models\Components\Bone.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<MinimalPricePerUnit>10</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+			<MinimumAcquisitionAmount>20</MinimumAcquisitionAmount>
+			<MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+		</PhysicalItem>
+		<PhysicalItem xsi:type="MyObjectBuilder_ComponentDefinition">
+			<Id>
+				<TypeId>Component</TypeId>
+				<SubtypeId>Leather</SubtypeId>
+			</Id>
+			<DisplayName>Leather</DisplayName>
+			<Description>Processed animal hide, versatile and strong, used in crafting and construction.</Description>
+			<Icon>Textures/GUI/Icons/Leather.png</Icon>
+			<Size>
+				<X>0.6</X>
+				<Y>0.2</Y>
+				<Z>0.05</Z>
+			</Size>
+			<Mass>0.8</Mass>
+			<Volume>0.5</Volume>
+			<Model>Models\Components\Leather.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<MinimalPricePerUnit>15</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+			<MinimumAcquisitionAmount>20</MinimumAcquisitionAmount>
+			<MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+		</PhysicalItem>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>AnimalFat</SubtypeId>
+			</Id>
+			<DisplayName>Animal Fat</DisplayName>
+			<Description>Rendered fat from animals, useful for cooking, crafting, or as fuel.</Description>
+			<Icon>Textures/GUI/Icons/AnimalFat.png</Icon>
+			<Size>
+				<X>0.3</X>
+				<Y>0.2</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>0.5</Mass>
+			<Volume>0.3</Volume>
+			<Model>Models\Components\AnimalFat.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Sanity" Value="-0.015" Time="5" />
+				<!-- Reduces sanity by 7.5% over 5 seconds due to its disgusting nature -->
+				<Stat Name="Hunger" Value="0.02" Time="5" />
+				<!-- Decreases hunger by 10% over 5 seconds -->
+				<Stat Name="Health" Value="0.01" Time="5" />
+				<!-- Increases health by 5% over 5 seconds -->
+			</Stats>
+			<MinimalPricePerUnit>8</MinimalPricePerUnit>
+			<MinimumOfferAmount>200</MinimumOfferAmount>
+			<MaximumOfferAmount>1500</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+			<MinimumAcquisitionAmount>50</MinimumAcquisitionAmount>
+			<MaximumAcquisitionAmount>300</MaximumAcquisitionAmount>
+		</PhysicalItem>
+
+
 		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
 			<Id>
 				<TypeId>ConsumableItem</TypeId>
