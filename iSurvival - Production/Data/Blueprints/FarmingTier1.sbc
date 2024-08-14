@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Blueprints>
+		
+		<!-- Herbs Plant -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>HerbsPlant</SubtypeId>
+			</Id>
+			<DisplayName>Herbs</DisplayName>
+			<Icon>Textures/GUI/Icons/Herbs.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Herbs" />
+			<BaseProductionTimeInSeconds>200</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<!-- Barley Plant -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>BarleyPlant</SubtypeId>
+			</Id>
+			<DisplayName>Barley Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Barley.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Barley" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Barley" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<!-- Wheat Plant -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>WheatPlant</SubtypeId>
+			</Id>
+			<DisplayName>Wheat Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Wheat.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Wheat" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Wheat" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<!-- Alfalf aPlant -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>AlfalfaPlant</SubtypeId>
+			</Id>
+			<DisplayName>Alfalfa Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Alfalfa.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Alfalfa" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Alfalfa" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<!-- Corn Plant -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>CornPlant</SubtypeId>
+			</Id>
+			<DisplayName>Corn Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Corn.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Corn" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Corn" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+		
+		<!-- Bean Plant-->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>BeanPlant</SubtypeId>
+			</Id>
+			<DisplayName>Bean Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Bean.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Bean" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Bean" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<!-- Potato Plant-->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>PotatoPlant</SubtypeId>
+			</Id>
+			<DisplayName>Potato Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Potato.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Potato" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Potato" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<!-- Sugar Cane Plant-->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SugarCanePlant</SubtypeId>
+			</Id>
+			<DisplayName>Sugar Cane Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/SugarCane.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="SugarCane" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="SugarCane" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<!-- Spices Plant-->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SpicesPlant</SubtypeId>
+			</Id>
+			<DisplayName>Spices Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Spices.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Spices" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Spices" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

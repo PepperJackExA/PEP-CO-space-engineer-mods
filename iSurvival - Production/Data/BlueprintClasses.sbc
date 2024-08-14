@@ -10,9 +10,9 @@
 			</Id>
 			<DisplayName>Farming Tier 1</DisplayName>
 			<Description>Farming Tier 1</Description>
-			<Icon>Textures\GUI\Icons\buttons\component.dds</Icon>
-			<HighlightIcon>Textures\GUI\Icons\buttons\component.dds</HighlightIcon>
-			<FocusIcon>Textures\GUI\Icons\buttons\component_focus.dds</FocusIcon>
+			<Icon>Textures\GUI\Icons\BlueprintClasses\FarmingTier1.png</Icon>
+			<HighlightIcon>Textures\GUI\Icons\BlueprintClasses\FarmingTier1.png</HighlightIcon>
+			<FocusIcon>Textures\GUI\Icons\BlueprintClasses\FarmingTier1_focus.png</FocusIcon>
 			<InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
 			<OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
 		</Class>
@@ -23,9 +23,9 @@
 			</Id>
 			<DisplayName>Farming Tier 2</DisplayName>
 			<Description>Farming Tier 2</Description>
-			<Icon>Textures\GUI\Icons\buttons\component.dds</Icon>
-			<HighlightIcon>Textures\GUI\Icons\buttons\component.dds</HighlightIcon>
-			<FocusIcon>Textures\GUI\Icons\buttons\component_focus.dds</FocusIcon>
+			<Icon>Textures\GUI\Icons\BlueprintClasses\FarmingTier2.png</Icon>
+			<HighlightIcon>Textures\GUI\Icons\BlueprintClasses\FarmingTier2.png</HighlightIcon>
+			<FocusIcon>Textures\GUI\Icons\BlueprintClasses\FarmingTier2_focus.png</FocusIcon>
 			<InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
 			<OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
 		</Class>
@@ -36,9 +36,9 @@
 			</Id>
 			<DisplayName>Farming Advanced</DisplayName>
 			<Description>Farming Advanced</Description>
-			<Icon>Textures\GUI\Icons\buttons\component.dds</Icon>
-			<HighlightIcon>Textures\GUI\Icons\buttons\component.dds</HighlightIcon>
-			<FocusIcon>Textures\GUI\Icons\buttons\component_focus.dds</FocusIcon>
+			<Icon>Textures\GUI\Icons\BlueprintClasses\FarmingAdvanced.png</Icon>
+			<HighlightIcon>Textures\GUI\Icons\BlueprintClasses\FarmingAdvanced.png</HighlightIcon>
+			<FocusIcon>Textures\GUI\Icons\BlueprintClasses\FarmingAdvanced_focus.png</FocusIcon>
 			<InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
 			<OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
 		</Class>
@@ -101,9 +101,22 @@
 			</Id>
 			<DisplayName>Animal Husbandry</DisplayName>
 			<Description>Animal Husbandry</Description>
-			<Icon>Textures\GUI\Icons\buttons\component.dds</Icon>
-			<HighlightIcon>Textures\GUI\Icons\buttons\component.dds</HighlightIcon>
-			<FocusIcon>Textures\GUI\Icons\buttons\component_focus.dds</FocusIcon>
+			<Icon>Textures\GUI\Icons\BlueprintClasses\AnimalHusbandry.png</Icon>
+			<HighlightIcon>Textures\GUI\Icons\BlueprintClasses\AnimalHusbandry.png</HighlightIcon>
+			<FocusIcon>Textures\GUI\Icons\BlueprintClasses\AnimalHusbandry_focus.png</FocusIcon>
+			<InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
+			<OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+		</Class>
+		<Class>
+			<Id>
+				<TypeId>BlueprintClassDefinition</TypeId>
+				<SubtypeId>Herbalism</SubtypeId>
+			</Id>
+			<DisplayName>Herbalism</DisplayName>
+			<Description>Herbalism</Description>
+			<Icon>Textures\GUI\Icons\BlueprintClasses\Herbalism.png</Icon>
+			<HighlightIcon>Textures\GUI\Icons\BlueprintClasses\Herbalism.png</HighlightIcon>
+			<FocusIcon>Textures\GUI\Icons\BlueprintClasses\Herbalism_focus.png</FocusIcon>
 			<InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
 			<OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
 		</Class>
@@ -244,9 +257,9 @@
 			</Id>
 			<DisplayName>Butchery</DisplayName>
 			<Description>Butchery</Description>
-			<Icon>Textures\GUI\Icons\buttons\component.dds</Icon>
-			<HighlightIcon>Textures\GUI\Icons\buttons\component.dds</HighlightIcon>
-			<FocusIcon>Textures\GUI\Icons\buttons\component_focus.dds</FocusIcon>
+			<Icon>Textures\GUI\Icons\BlueprintClasses\Butchery.png</Icon>
+			<HighlightIcon>Textures\GUI\Icons\BlueprintClasses\Butchery.png</HighlightIcon>
+			<FocusIcon>Textures\GUI\Icons\BlueprintClasses\Butchery_focus.png</FocusIcon>
 			<InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
 			<OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
 		</Class>

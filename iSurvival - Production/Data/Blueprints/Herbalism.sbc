@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>ExtractMinerals</SubtypeId>
+			</Id>
+			<DisplayName>Minerals</DisplayName>
+			<Icon>Textures/GUI/Icons/Minerals.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="Ore" SubtypeId="Stone" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Iron" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Minerals" />
+			<BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>MixVitamins</SubtypeId>
+			</Id>
+			<DisplayName>Vitamins</DisplayName>
+			<Icon>Textures/GUI/Icons/Vitamins.png</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Herbs" />
+				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+			</Prerequisites>
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Vitamins" />
+			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>
