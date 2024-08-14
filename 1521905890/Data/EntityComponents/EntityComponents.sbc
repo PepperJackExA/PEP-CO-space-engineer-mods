@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<EntityComponents>
+	
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>RivalAiBehaviorDataKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>96DFB932-7756-4A79-9A61-49A89C6D624A</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+		
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>RivalAiStoredDataKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>87EBD383-DF97-454F-9022-92423426E5C9</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+		
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>NpcDataKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>29FFD684-13D7-4045-BF76-CD48BF80E36A</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>LegacyNpcDataKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>AD4DBD09-359D-48F5-9F48-54D352B59171</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>NpcThrusterDataKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>BF529D66-9AA1-4419-B5D3-A65BA21306CE</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>NpcGyroDataKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>864E2D34-5AD7-49AC-A3AA-E20D879471A8</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+		
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>BehaviorStorageKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>8470FBC9-1B64-4603-AB75-ABB2CD28AA02</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>TriggerStorageKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>FF814A67-AEC3-4DF0-ADC4-A9B239FA954F</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>MesTurretControllerKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>438AA687-C800-4784-948F-B731C46D4F18</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>MesTemporaryPlanetKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>8823361C-E6A4-4BD6-8F1D-3C935D9D4AA7</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>MesContainerTypeKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>9E614A24-8027-4C66-8A7B-63A36AFE36EC</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>MesShipyardKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>88334D52-3F3B-47CB-83C7-426FBC0553FA</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>MesSuitModsKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>A4F21767-C33B-4523-B40B-148498BDAFED</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>MesButtonPointsKey</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>076C26A3-CCE9-4979-8356-E5A14D02A038</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_ModStorageComponentDefinition">
+			<Id>
+				<TypeId>ModStorageComponent</TypeId>
+				<SubtypeId>MesSafeZoneLinkedEntity</SubtypeId>
+			</Id>
+			<RegisteredStorageGuids>
+				<guid>6968A9BE-87A3-439F-9B33-27A5A9F220CF</guid>
+			</RegisteredStorageGuids>
+		</EntityComponent>
+
+		
+
+		<EntityComponent xsi:type="MyObjectBuilder_AutopilotComponentDefinition">
+			<Id>
+				<TypeId>AutopilotComponent</TypeId>
+				<SubtypeId>RivalAIRemoteControlSmall</SubtypeId>
+			</Id>
+			<MinHeightAlignmentEnabled>false</MinHeightAlignmentEnabled>
+			<CoastingTestEnabled>false</CoastingTestEnabled>
+			<CourseCorrectionMaxDistanceSmallGrid>5</CourseCorrectionMaxDistanceSmallGrid>
+			<CourseCorrectionMaxDistanceLargeGrid>10</CourseCorrectionMaxDistanceLargeGrid>
+			<CourseCorrectionMaxThrustPercentage>50</CourseCorrectionMaxThrustPercentage>
+			<CourseCorrectionMaxRemainingRotationBeforeThrust>0.5</CourseCorrectionMaxRemainingRotationBeforeThrust>
+			<CourseCorrectionMaxRemainingRotationBeforeThrustInPrecisionMode>0.2</CourseCorrectionMaxRemainingRotationBeforeThrustInPrecisionMode>
+			<CourseCorrectionMaxDistanceInPrecisionModeGridSizeMultiple>0.3</CourseCorrectionMaxDistanceInPrecisionModeGridSizeMultiple>
+			<PrecisionModeRotationVelocitySlowFactor>4</PrecisionModeRotationVelocitySlowFactor>
+			<RotationVelocitySlowFactorAutomaticBehavior>3</RotationVelocitySlowFactorAutomaticBehavior>
+			<RotationVelocitySlowFactorAutomaticBehaviorTreshold>0.1</RotationVelocitySlowFactorAutomaticBehaviorTreshold>
+
+		</EntityComponent>
+
+		<EntityComponent xsi:type="MyObjectBuilder_AutopilotComponentDefinition">
+			<Id>
+				<TypeId>AutopilotComponent</TypeId>
+				<SubtypeId>RivalAIRemoteControlLarge</SubtypeId>
+			</Id>
+			<MinHeightAlignmentEnabled>false</MinHeightAlignmentEnabled>
+			<CoastingTestEnabled>false</CoastingTestEnabled>
+			<CourseCorrectionMaxDistanceSmallGrid>5</CourseCorrectionMaxDistanceSmallGrid>
+			<CourseCorrectionMaxDistanceLargeGrid>10</CourseCorrectionMaxDistanceLargeGrid>
+			<CourseCorrectionMaxThrustPercentage>50</CourseCorrectionMaxThrustPercentage>
+			<CourseCorrectionMaxRemainingRotationBeforeThrust>0.5</CourseCorrectionMaxRemainingRotationBeforeThrust>
+			<CourseCorrectionMaxRemainingRotationBeforeThrustInPrecisionMode>0.2</CourseCorrectionMaxRemainingRotationBeforeThrustInPrecisionMode>
+			<CourseCorrectionMaxDistanceInPrecisionModeGridSizeMultiple>0.3</CourseCorrectionMaxDistanceInPrecisionModeGridSizeMultiple>
+			<PrecisionModeRotationVelocitySlowFactor>4</PrecisionModeRotationVelocitySlowFactor>
+			<RotationVelocitySlowFactorAutomaticBehavior>3</RotationVelocitySlowFactorAutomaticBehavior>
+			<RotationVelocitySlowFactorAutomaticBehaviorTreshold>0.1</RotationVelocitySlowFactorAutomaticBehaviorTreshold>
+
+		</EntityComponent>
+		
+	</EntityComponents>
+</Definitions>
+

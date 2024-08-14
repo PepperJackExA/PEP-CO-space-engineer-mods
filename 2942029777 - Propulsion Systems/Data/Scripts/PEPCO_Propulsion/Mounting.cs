@@ -27,9 +27,8 @@ namespace PEPCO_Propulsion
         
 
         public override void Init(MyObjectBuilder_EntityBase objectBuilder)
-        {
-            var block = (IMyCubeBlock)Entity;
-            Log.Info($"Me: {block.PositionComp.LocalMatrixRef.Translation}");
+        {   
+            Log.Info($"Me: {Entity.PositionComp.LocalMatrixRef.Translation}");
         }
 
         
