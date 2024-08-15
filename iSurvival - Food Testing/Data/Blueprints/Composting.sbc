@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>BasicFarmingCompost</SubtypeId>
+			</Id>
+			<DisplayName>Farming Compost</DisplayName>
+			<Description>Material prepared for use in composting</Description>
+			<Icon>Textures\GUI\Icons\FarmingCompost.png</Icon>
+			<Prerequisites>
+				<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="100" TypeId="Ingot" SubtypeId="Stone" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+			</Results>
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

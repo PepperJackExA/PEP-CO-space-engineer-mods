@@ -1,23 +1,26 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	
-		<BlueprintClassEntries>
-			<!-- Farming Tier 1 -->
+
+	<BlueprintClassEntries>
+		<!-- Farming Tier 1 -->
 		<Entry Class="FarmingTier1" BlueprintSubtypeId="HerbsPlant" />
 		<Entry Class="FarmingTier1" BlueprintSubtypeId="BarleyPlant" />
 		<Entry Class="FarmingTier1" BlueprintSubtypeId="WheatPlant" />
 		<Entry Class="FarmingTier1" BlueprintSubtypeId="AlfalfaPlant" />
 		<Entry Class="FarmingTier1" BlueprintSubtypeId="CornPlant" />
-			
-			<!-- Herbalism -->
+
+		<!-- Herbalism -->
 		<Entry Class="Herbalism" BlueprintSubtypeId="ExtractMinerals" />
 		<Entry Class="Herbalism" BlueprintSubtypeId="MixVitamins" />
-			
-			<!-- Butchery -->
+
+		<!-- Butchery -->
 		<Entry Class="Butchery" BlueprintSubtypeId="ButcherCowCarcass" />
-			
-			<!-- Animal Husbandry -->
+
+		<!-- Animal Husbandry -->
 		<Entry Class="AnimalHusbandry" BlueprintSubtypeId="CattleFeed" />
-		
+
+		<!-- Composting -->
+		<Entry Class="Composting" BlueprintSubtypeId="BasicFarmingCompost" />
+
 	</BlueprintClassEntries>
 </Definitions>
