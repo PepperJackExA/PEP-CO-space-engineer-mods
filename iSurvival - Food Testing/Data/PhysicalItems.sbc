@@ -2,6 +2,37 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<PhysicalItems>
 
+		<!-- CattleFeed -->
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>CattleFeed</SubtypeId>
+			</Id>
+			<DisplayName>Cattle Feed</DisplayName>
+			<Description>Nutritious feed for cattle, promoting health, stamina, and hydration.</Description>
+			<Icon>Textures/GUI/Icons/CattleFeed.png</Icon>
+			<Size>
+				<X>0.1</X>
+				<Y>0.1</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>0.5</Mass>
+			<Volume>0.1</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Organics</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0.01" Time="5"/>
+				<Stat Name="Hunger" Value="0.05" Time="5"/>
+				<Stat Name="Sanity" Value="-0.01" Time="5"/>
+				<Stat Name="Water" Value="-0.01" Time="5"/>
+				<Stat Name="Stamina" Value="0" Time="5"/>
+			</Stats>
+			<MinimalPricePerUnit>50</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
 		<!-- Farm Compost-->
 		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
 			<Id>
@@ -21,14 +52,12 @@
 			<Model>Models\Item\FarmingCompost.mwm</Model>
 			<PhysicalMaterial>Organics</PhysicalMaterial>
 			<Stats>
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="-0.005" Time="5"/>
 				<Stat Name="Hunger" Value="0.005" Time="5"/>
-				<!-- Decrease hunger by 2.5% over 5 seconds -->
-				<Stat Name="Health" Value="-0.01" Time="5"/>
-				<!-- Reduces health by 5% over 5 seconds due to potential contamination -->
-				<Stat Name="Sanity" Value="-0.0025" Time="5"/>
-				<!-- Reduces sanity by 1.25% over 5 seconds due to its disgusting nature -->
+				<Stat Name="Sanity" Value="-0.01" Time="5"/>
 				<Stat Name="Water" Value="0.005" Time="5"/>
-				<!-- Increase hydration by 2.5% over 5 seconds -->
+				<Stat Name="Stamina" Value="0" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>5</MinimalPricePerUnit>
 			<MinimumOfferAmount>1000</MinimumOfferAmount>
@@ -56,8 +85,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
+				<Stat Name="Fatigue" Value="0" Time="1"/>
+				<Stat Name="Health" Value="0" Time="1"/>
 				<Stat Name="Hunger" Value="0.01" Time="1"/>
-				<!-- Reduces hunger by 1% over 1 seconds -->
+				<Stat Name="Sanity" Value="-0.0025" Time="1"/>
+				<Stat Name="Water" Value="0" Time="1"/>
+				<Stat Name="Stamina" Value="0.01" Time="1"/>
 			</Stats>
 			<MinimalPricePerUnit>50</MinimalPricePerUnit>
 			<MinimumOfferAmount>10</MinimumOfferAmount>
@@ -83,16 +116,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="0.006" Time="10"/>
-				<!-- Reduces hunger by 6% over 10 seconds -->
-				<Stat Name="Health" Value="0.02" Time="5"/>
-				<!-- Improves health by 10% over 5 seconds -->
-				<Stat Name="Stamina" Value="0.02" Time="10"/>
-				<!-- Restores stamina by 20% over 10 seconds -->
-				<Stat Name="Sanity" Value="0.01" Time="5"/>
-				<!-- Improves sanity by 5% over 5 seconds -->
-				<Stat Name="Water" Value="0.004" Time="5"/>
-				<!-- Restores stamina by 2% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.005" Time="5"/>
+				<Stat Name="Sanity" Value="-0.002" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.01" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>50</MinimalPricePerUnit>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
@@ -118,14 +147,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="0.005" Time="8"/>
-				<!-- Reduces hunger by 4% over 8 seconds -->
-				<Stat Name="Health" Value="0.01" Time="5"/>
-				<!-- Improves health by 5% over 5 seconds -->
-				<Stat Name="Stamina" Value="0.02" Time="5"/>
-				<!-- Restores stamina by 10% over 5 seconds -->
-				<Stat Name="Water" Value="-0.002" Time="5"/>
-				<!-- Decreases hydration by 1% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.002" Time="5"/>
+				<Stat Name="Sanity" Value="-0.001" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.01" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>50</MinimalPricePerUnit>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
@@ -151,15 +178,13 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="0.005" Time="8"/>
-				<!-- Reduces hunger by 4% over 8 seconds -->
-				<Stat Name="Stamina" Value="0.02" Time="5"/>
-				<!-- Restores stamina by 10% over 5 seconds -->
-				<Stat Name="Water" Value="-0.002" Time="5"/>
-				<!-- Decreases hydration by 1% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.002" Time="5"/>
+				<Stat Name="Sanity" Value="-0.001" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.01" Time="5"/>
 			</Stats>
-
-
 			<MinimalPricePerUnit>50</MinimalPricePerUnit>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
 			<MaximumOfferAmount>5000</MaximumOfferAmount>
@@ -184,16 +209,13 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="0.005" Time="10"/>
-				<!-- Reduces hunger by 5% over 10 seconds -->
-				<Stat Name="Health" Value="0.02" Time="7"/>
-				<!-- Improves health by 14% over 7 seconds -->
-				<Stat Name="Stamina" Value="0.03" Time="8"/>
-				<!-- Restores stamina by 24% over 8 seconds -->
-				<Stat Name="Water" Value="-0.001" Time="5"/>
-				<!-- Decreases hydration by 1% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.002" Time="5"/>
+				<Stat Name="Sanity" Value="-0.001" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.01" Time="5"/>
 			</Stats>
-
 			<MinimalPricePerUnit>100</MinimalPricePerUnit>
 			<MinimumOfferAmount>200</MinimumOfferAmount>
 			<MaximumOfferAmount>10000</MaximumOfferAmount>
@@ -218,10 +240,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Inorganic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Health" Value="0.01" Time="5"/>
-				<!-- Improves health by 5% over 5 seconds -->
-				<Stat Name="Sanity" Value="0.01" Time="5"/>
-				<!-- Improves sanity by 5% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0.01" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.002" Time="5"/>
+				<Stat Name="Sanity" Value="-0.002" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.01" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>150</MinimalPricePerUnit>
 			<MinimumOfferAmount>200</MinimumOfferAmount>
@@ -247,12 +271,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Health" Value="0.004" Time="10"/>
-				<!-- Improves health by 4% over 10 seconds -->
-				<Stat Name="Sanity" Value="0.003" Time="10"/>
-				<!-- Improves sanity by 3% over 10 seconds -->
-				<Stat Name="Stamina" Value="0.02" Time="5"/>
-				<!-- Restores stamina by 10% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.002" Time="5"/>
+				<Stat Name="Sanity" Value="0.002" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.04" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>200</MinimalPricePerUnit>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
@@ -278,14 +302,12 @@
 			<Model>Models\AppleJuiceBottle.mwm</Model>
 			<PhysicalMaterial>None</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Fatigue" Value="0.01" Time="5"/>
-				<!-- Reduces fatigue by 5% over 5 seconds -->
-				<Stat Name="Stamina" Value="0.02" Time="5"/>
-				<!-- Restores stamina by 10% over 5 seconds -->
-				<Stat Name="Hunger" Value="0.005" Time="2"/>
-				<!-- Reduces hunger by 1% over 2 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0.01" Time="5"/>
+				<Stat Name="Hunger" Value="0.02" Time="5"/>
+				<Stat Name="Sanity" Value="0.01" Time="5"/>
 				<Stat Name="Water" Value="0.02" Time="5"/>
-				<!-- Increases hydration by 10% over 5 seconds -->
+				<Stat Name="Stamina" Value="0.01" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>100</MinimalPricePerUnit>
 			<MinimumOfferAmount>1000</MinimumOfferAmount>
@@ -311,14 +333,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>None</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Sanity" Value="0.01" Time="10"/>
-				<!-- Improves sanity by 10% over 10 seconds -->
-				<Stat Name="Health" Value="0.015" Time="4"/>
-				<!-- Improves health by 6% over 4 seconds -->
-				<Stat Name="Fatigue" Value="0.01" Time="4"/>
-				<!-- Improve fatigue by 4% over 4 seconds -->
-				<Stat Name="Hunger" Value="0.05" Time="10"/>
-				<!-- Reduces hunger by 50% over 10 seconds -->
+				<Stat Name="Fatigue" Value="-0.01" Time="5"/>
+				<Stat Name="Health" Value="0.02" Time="5"/>
+				<Stat Name="Hunger" Value="0.06" Time="5"/>
+				<Stat Name="Sanity" Value="0.01" Time="5"/>
+				<Stat Name="Water" Value="-0.01" Time="5"/>
+				<Stat Name="Stamina" Value="-0.02" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>250</MinimalPricePerUnit>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
@@ -344,10 +364,12 @@
 			<Model>Models\PickedApple.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0.01" Time="5"/>
 				<Stat Name="Hunger" Value="0.01" Time="5"/>
-				<!-- Reduces hunger by 5% over 5 seconds -->
+				<Stat Name="Sanity" Value="0.004" Time="5"/>
 				<Stat Name="Water" Value="0.01" Time="5"/>
-				<!-- Increases hydration by 5% over 5 seconds -->
+				<Stat Name="Stamina" Value="0" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>50</MinimalPricePerUnit>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
@@ -373,12 +395,12 @@
 			<Model>Models\Item\Worm.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="0.004" Time="5"/>
-				<!-- Reduces hunger by 2% over 5 seconds -->
-				<Stat Name="Water" Value="0.002" Time="5"/>
-				<!-- Increase hydration by 1% over 5 seconds -->
-				<Stat Name="Sanity" Value="-0.001" Time="5"/>
-				<!-- Reduces sanity by 0.5% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="-0.0025" Time="5"/>
+				<Stat Name="Hunger" Value="0.01" Time="5"/>
+				<Stat Name="Sanity" Value="-0.01" Time="5"/>
+				<Stat Name="Water" Value="0.01" Time="5"/>
+				<Stat Name="Stamina" Value="0" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>100</MinimalPricePerUnit>
 			<MinimumOfferAmount>1000</MinimumOfferAmount>
@@ -404,16 +426,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="-0.5" Time="10"/>
-				<!-- Reduces hunger by 50% over 10 seconds -->
-				<Stat Name="Health" Value="0.1" Time="10"/>
-				<!-- Improves health by 10% over 10 seconds -->
-				<Stat Name="Stamina" Value="0.1" Time="10"/>
-				<!-- Restores stamina by 10% over 10 seconds -->
-				<Stat Name="Sanity" Value="-0.2" Time="10"/>
-				<!-- Decreases sanity by 20% over 10 seconds -->
-				<Stat Name="Water" Value="-0.05" Time="10"/>
-				<!-- Decreases hydration by 5% over 10 seconds -->
+				<Stat Name="Fatigue" Value="-0.02" Time="5"/>
+				<Stat Name="Health" Value="-0.01" Time="5"/>
+				<Stat Name="Hunger" Value="0.1" Time="5"/>
+				<Stat Name="Sanity" Value="-0.02" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.02" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>1000</MinimalPricePerUnit>
 			<MinimumOfferAmount>1</MinimumOfferAmount>
@@ -439,12 +457,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Sanity" Value="-0.005" Time="5"/>
-				<!-- Decrease Sanity by 2.5% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
 				<Stat Name="Hunger" Value="0.01" Time="5"/>
-				<!-- Reduces hunger by 5% over 5 seconds -->
-				<Stat Name="Water" Value="0.01" Time="5"/>
-				<!-- Increases hydration by 5% over 5 seconds -->
+				<Stat Name="Sanity" Value="-0.005" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>50</MinimalPricePerUnit>
 			<MinimumOfferAmount>10</MinimumOfferAmount>
@@ -477,7 +495,7 @@
 			<MaximumOfferAmount>1000</MaximumOfferAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</PhysicalItem>
-		<!-- AnimalFat -->
+		<!-- RawMeat -->
 		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
 			<Id>
 				<TypeId>ConsumableItem</TypeId>
@@ -496,12 +514,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="-0.02" Time="5"/>
+				<Stat Name="Hunger" Value="0.04" Time="5"/>
 				<Stat Name="Sanity" Value="-0.005" Time="5"/>
-				<!-- Decrease Sanity by 2.5% over 5 seconds -->
-				<Stat Name="Hunger" Value="0.01" Time="5"/>
-				<!-- Reduces hunger by 5% over 5 seconds -->
-				<Stat Name="Water" Value="0.01" Time="5"/>
-				<!-- Increases hydration by 5% over 5 seconds -->
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>5</MinimalPricePerUnit>
 			<MinimumOfferAmount>10</MinimumOfferAmount>
@@ -554,14 +572,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="0.005" Time="8"/>
-				<!-- Reduces hunger by 4% over 8 seconds -->
-				<Stat Name="Health" Value="0.01" Time="5"/>
-				<!-- Improves health by 5% over 5 seconds -->
-				<Stat Name="Stamina" Value="0.02" Time="5"/>
-				<!-- Restores stamina by 10% over 5 seconds -->
-				<Stat Name="Water" Value="-0.002" Time="5"/>
-				<!-- Decreases hydration by 1% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.005" Time="5"/>
+				<Stat Name="Sanity" Value="-0.002" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.01" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>15</MinimalPricePerUnit>
 			<MinimumOfferAmount>10</MinimumOfferAmount>
@@ -587,16 +603,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="0.006" Time="10"/>
-				<!-- Reduces hunger by 6% over 10 seconds -->
-				<Stat Name="Health" Value="0.02" Time="5"/>
-				<!-- Improves health by 10% over 5 seconds -->
-				<Stat Name="Stamina" Value="0.02" Time="10"/>
-				<!-- Restores stamina by 20% over 10 seconds -->
-				<Stat Name="Sanity" Value="0.01" Time="5"/>
-				<!-- Improves sanity by 5% over 5 seconds -->
-				<Stat Name="Water" Value="0.004" Time="5"/>
-				<!-- Restores stamina by 2% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.005" Time="5"/>
+				<Stat Name="Sanity" Value="-0.002" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.01" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>10</MinimalPricePerUnit>
 			<MinimumOfferAmount>5</MinimumOfferAmount>
@@ -622,14 +634,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="0.005" Time="8"/>
-				<!-- Reduces hunger by 4% over 8 seconds -->
-				<Stat Name="Health" Value="0.01" Time="5"/>
-				<!-- Improves health by 5% over 5 seconds -->
-				<Stat Name="Stamina" Value="0.02" Time="5"/>
-				<!-- Restores stamina by 10% over 5 seconds -->
-				<Stat Name="Water" Value="-0.002" Time="5"/>
-				<!-- Decreases hydration by 1% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.002" Time="5"/>
+				<Stat Name="Sanity" Value="-0.001" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.01" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>5</MinimalPricePerUnit>
 			<MinimumOfferAmount>10</MinimumOfferAmount>
@@ -681,9 +691,12 @@
 			<Model>Models\Fish_pepco.mwm</Model>
 			<PhysicalMaterial>Fish</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="0.25" Time="1"/>
-				<Stat Name="Water" Value="0.1" Time="1"/>
-				<Stat Name="Sanity" Value="-0.01" Time ="1"/>
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="-0.02" Time="5"/>
+				<Stat Name="Hunger" Value="0.03" Time="5"/>
+				<Stat Name="Sanity" Value="-0.005" Time="5"/>
+				<Stat Name="Water" Value="0.01" Time="5"/>
+				<Stat Name="Stamina" Value="0" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>15</MinimalPricePerUnit>
 			<MinimumOfferAmount>1</MinimumOfferAmount>
@@ -709,10 +722,12 @@
 			<Model>Models\BucketMilk.mwm</Model>
 			<PhysicalMaterial>Milk</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Hunger" Value="0.02" Time="5"/>
-				<!-- Reduces hunger by 10% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0.02" Time="5"/>
+				<Stat Name="Hunger" Value="0.01" Time="5"/>
+				<Stat Name="Sanity" Value="0.004" Time="5"/>
 				<Stat Name="Water" Value="0.02" Time="5"/>
-				<!-- Increases hydration by 10% over 5 seconds -->
+				<Stat Name="Stamina" Value="0" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>20</MinimalPricePerUnit>
 			<MinimumOfferAmount>1</MinimumOfferAmount>
@@ -738,10 +753,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Sanity" Value="-0.02" Time="5"/>
-				<!-- Decrease Sanity by 10% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0.02" Time="5"/>
 				<Stat Name="Hunger" Value="0.01" Time="5"/>
-				<!-- Reduces hunger by 5% over 5 seconds -->
+				<Stat Name="Sanity" Value="0.01" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.01" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>50</MinimalPricePerUnit>
 			<MinimumOfferAmount>1</MinimumOfferAmount>
@@ -767,10 +784,12 @@
 			<Model>Models\Components\construction_components_component.mwm</Model>
 			<PhysicalMaterial>Organic</PhysicalMaterial>
 			<Stats>
-				<Stat Name="Health" Value="0.01" Time="5"/>
-				<!-- Improves health by 5% over 5 seconds -->
-				<Stat Name="Sanity" Value="0.01" Time="5"/>
-				<!-- Improves sanity by 5% over 5 seconds -->
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.002" Time="5"/>
+				<Stat Name="Sanity" Value="-0.002" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.04" Time="5"/>
 			</Stats>
 			<MinimalPricePerUnit>20</MinimalPricePerUnit>
 			<MinimumOfferAmount>1</MinimumOfferAmount>
