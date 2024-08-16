@@ -20,7 +20,15 @@
 		<Entry Class="AnimalHusbandry" BlueprintSubtypeId="CattleFeed" />
 
 		<!-- Composting -->
-		<Entry Class="Composting" BlueprintSubtypeId="BasicFarmingCompost" />
+		<Entry Class="Composting" BlueprintSubtypeId="Graveltoworm" />
+		<Entry Class="Composting" BlueprintSubtypeId="WormtoHerbs" />
+		<Entry Class="Composting" BlueprintSubtypeId="HerbsWormtoCompost" />
+		
+		<!-- Beverage Production -->
+		<Entry Class="BeverageProduction" BlueprintSubtypeId="MakeAppleJuice" />
 
+		<!-- Baking -->
+		<Entry Class="Baking" BlueprintSubtypeId="BakeApplePie" />
+		
 	</BlueprintClassEntries>
 </Definitions>

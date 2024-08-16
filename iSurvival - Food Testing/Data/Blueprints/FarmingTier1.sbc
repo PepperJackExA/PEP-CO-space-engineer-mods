@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<Blueprints>
-		
+
 		<!-- Herbs Plant -->
 		<Blueprint>
 			<Id>
@@ -11,10 +11,13 @@
 			<DisplayName>Herbs</DisplayName>
 			<Icon>Textures/GUI/Icons/Herbs.png</Icon>
 			<Prerequisites>
-				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
 				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
 			</Prerequisites>
-			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Herbs" />
+			<Results>
+				<Item Amount="20" TypeId="ConsumableItem" SubtypeId="Herbs" />
+				<Item Amount="10" TypeId="Ore" SubtypeId="Organic" />
+			</Results>
 			<BaseProductionTimeInSeconds>200</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<!-- Barley Plant -->
@@ -81,7 +84,7 @@
 			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Corn" />
 			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
 		</Blueprint>
-		
+
 		<!-- Bean Plant-->
 		<Blueprint>
 			<Id>

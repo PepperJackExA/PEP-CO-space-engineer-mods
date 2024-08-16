@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<Blueprints>
+		<!-- Extract Minerals -->
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
@@ -16,6 +17,7 @@
 			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Minerals" />
 			<BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
 		</Blueprint>
+		<!-- Mix Vitamins -->
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>

@@ -552,7 +552,7 @@
 			<MaximumOfferAmount>1000</MaximumOfferAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</PhysicalItem>
-		
+
 		<!-- Beans -->
 		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
 			<Id>
@@ -819,6 +819,31 @@
 			<MaximumOfferAmount>500</MaximumOfferAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</PhysicalItem>
-		
+		<!-- Flour -->
+		<PhysicalItem xsi:type="MyObjectBuilder_ComponentDefinition">
+			<Id>
+				<TypeId>Component</TypeId>
+				<SubtypeId>Flour</SubtypeId>
+			</Id>
+			<DisplayName>Flour</DisplayName>
+			<Description>
+				A finely ground powder made from grains, used in baking and cooking.
+			</Description>
+			<Icon>Textures/GUI/Icons/Flour.png</Icon>
+			<Size>
+				<X>0.1</X>
+				<Y>0.1</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>0.05</Mass>
+			<Volume>0.1</Volume>
+			<Model>Models\Components\construction_components_component.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<MinimalPricePerUnit>50</MinimalPricePerUnit>
+			<MinimumOfferAmount>1</MinimumOfferAmount>
+			<MaximumOfferAmount>500</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+
 	</PhysicalItems>
 </Definitions>
