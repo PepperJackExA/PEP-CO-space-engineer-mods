@@ -4,14 +4,31 @@
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Graveltowarm</SubtypeId>
+			</Id>
+			<DisplayName>Farming Compost</DisplayName>
+			<Description>Material prepared for use in composting</Description>
+			<Icon>Textures\GUI\Icons\FarmingCompost.png</Icon>
+			<Prerequisites>
+				<Item Amount="100" TypeId="Ingot" SubtypeId="Stone" />
+				<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Worm" />
+			</Results>
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>BasicFarmingCompost</SubtypeId>
 			</Id>
 			<DisplayName>Farming Compost</DisplayName>
 			<Description>Material prepared for use in composting</Description>
 			<Icon>Textures\GUI\Icons\FarmingCompost.png</Icon>
 			<Prerequisites>
-				<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
 				<Item Amount="100" TypeId="Ingot" SubtypeId="Stone" />
+				<Item Amount="10" TypeId="ConsumableItem" SubtypeId="Herbs" />
 			</Prerequisites>
 			<Results>
 				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
