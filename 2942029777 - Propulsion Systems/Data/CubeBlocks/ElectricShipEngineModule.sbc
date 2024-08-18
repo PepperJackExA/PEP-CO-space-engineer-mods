@@ -62,6 +62,13 @@
             <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
             <DestroySound>WepSmallWarheadExpl</DestroySound>
             <PCU>20</PCU>
+			<PropellerUsesPropellerSystem>true</PropellerUsesPropellerSystem>
+            <PropellerSubpartEntityName>Propeller</PropellerSubpartEntityName>
+            <PropellerRoundsPerSecondOnFullSpeed>5</PropellerRoundsPerSecondOnFullSpeed>
+            <PropellerRoundsPerSecondOnIdleSpeed>0</PropellerRoundsPerSecondOnIdleSpeed>
+            <PropellerAccelerationTime>0.5</PropellerAccelerationTime>
+            <PropellerDecelerationTime>0.1</PropellerDecelerationTime>
+            <PropellerMaxVisibleDistance>500</PropellerMaxVisibleDistance>
             <TieredUpdateTimes>
                 <unsignedInt>100</unsignedInt>
                 <unsignedInt>3600</unsignedInt>
