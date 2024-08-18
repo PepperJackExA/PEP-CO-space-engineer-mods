@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Blueprints>
+		<!-- Make Apple Juice -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>MakeAppleJuice</SubtypeId>
+			</Id>
+			<DisplayName>Apple Juice</DisplayName>
+			<Description>A fermented alcoholic beverage made from grapes</Description>
+			<Icon>Textures\GUI\Icons\AppleJuice.png</Icon>
+			<Prerequisites>
+				<Item Amount="6" TypeId="ConsumableItem" SubtypeId="Apple" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="AppleJuice" />
+				<Item Amount="6" TypeId="ore" SubtypeId="Organic" />
+			</Results>
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

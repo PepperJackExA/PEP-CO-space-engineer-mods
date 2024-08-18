@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CategoryClasses>
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+			<Id>
+				<TypeId>GuiBlockCategoryDefinition</TypeId>
+				<SubtypeId/>
+			</Id>
+			<DisplayName>iSurvival</DisplayName>
+			<Name>Consumables</Name>
+			<SearchBlocks>false</SearchBlocks>
+			<IsToolCategory>true</IsToolCategory>
+			<ItemIds>
+				<string>Alfalfa</string>
+				<string>AnimalFat</string>
+				<string>Apple</string>
+				<string>AppleJuice</string>
+				<string>ApplePie</string>
+				<string>Barley</string>
+				<string>Beans</string>
+				<string>CattleFeed</string>
+				<string>Corn</string>
+				<string>CowCarcass</string>
+				<string>FarmCompost</string>
+				<string>Herbs</string>
+				<string>Honey</string>
+				<string>Minerals</string>
+				<string>Nuts</string>
+				<string>Potato</string>
+				<string>RawFish</string>
+				<string>RawMeat</string>
+				<string>RawMilk</string>
+				<string>SugarCane</string>
+				<string>Vitamins</string>
+				<string>Wheat</string>
+				<string>Worm</string>
+			</ItemIds>
+		</Category>
+	</CategoryClasses>
+</Definitions>

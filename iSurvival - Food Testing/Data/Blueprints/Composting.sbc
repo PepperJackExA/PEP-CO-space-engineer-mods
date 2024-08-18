@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Blueprints>
+		<!-- Gravel to Worm -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Graveltoworm</SubtypeId>
+			</Id>
+			<DisplayName>Worm</DisplayName>
+			<Icon>Textures\GUI\Icons\Worm.png</Icon>
+			<Description>Fing Worms in gravel</Description>
+			<Prerequisites>
+				<Item Amount="100" TypeId="Ingot" SubtypeId="Stone" />
+				<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Worm" />
+				<Item Amount="10" TypeId="Ore" SubtypeId="Organic" />
+			</Results>
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<!-- Worm to Herbs -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>WormtoHerbs</SubtypeId>
+			</Id>
+			<DisplayName>Herbs</DisplayName>
+			<Description>WormtoHerb</Description>
+			<Icon>Textures\GUI\Icons\Herbs.png</Icon>
+			<Prerequisites>
+				<Item Amount="100" TypeId="Ingot" SubtypeId="Stone" />
+				<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Worm" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Herbs" />
+				<Item Amount="10" TypeId="Ore" SubtypeId="Organic" />
+			</Results>
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+		<!-- Herbs and Worm t Compost -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>HerbsWormtoCompost</SubtypeId>
+			</Id>
+			<DisplayName>Farming Compost</DisplayName>
+			<Description>Herbs to Compost</Description>
+			<Icon>Textures\GUI\Icons\FarmingCompost.png</Icon>
+			<Prerequisites>
+				<Item Amount="100" TypeId="Ore" SubtypeId="Organic" />
+				<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="4" TypeId="ConsumableItem" SubtypeId="Herbs" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Worm" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+			</Results>
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

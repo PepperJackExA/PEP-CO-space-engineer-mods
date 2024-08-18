@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Blueprints>
+		<!-- Bake Apple Pie -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>BakeApplePie</SubtypeId>
+			</Id>
+			<DisplayName>Bake Apple Pie</DisplayName>
+			<Description>Bake Apple Pie</Description>
+			<Icon>Textures\GUI\Icons\ApplePie.png</Icon>
+			<Prerequisites>
+				<Item Amount="6" TypeId="ConsumableItem" SubtypeId="Apple" />
+				<Item Amount="1" TypeId="Component" SubtypeId="Flour" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="ApplePie" />
+			</Results>
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

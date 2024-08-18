@@ -143,11 +143,11 @@ namespace PEPCO.iSurvival.Core
             public float sanityincreasemultiplier = 1;
 
             //base movemenet numbers
-            public float FallingStaminaDecrease = 0.25f;
+            public float FallingStaminaDecrease = 0f;
             public float CrouchingFatigueIncrease = 0.5f;
             public float CrouchingStaminaIncrease = 2.5f;
             public float CrouchWalkStaminaIncrease = 1f;
-            public float FlyingStaminaDecrease = 0.25f;
+            public float FlyingStaminaDecrease = 0f;
             public float JumpingStaminaDecrease = 2f;
             public float LadderStaminaDecrease = 0.1f;
             public float RunningStaminaDecrease = 1f;
@@ -434,7 +434,7 @@ namespace PEPCO.iSurvival.Core
             float baseDrain = 1 + ((100 - currentAveragestats) / 100);
             float hydrationFactor = water.Value < 30 ? 1.5f : 1.0f; // Increase drain if water is low
             float hungerFactor = hunger.Value < 30 ? 1.3f : 1.0f;    // Increase drain if hunger is low
-            float fatigueFactor = fatigue.Value > 70 ? 1.4f : 1.0f;  // Increase drain if fatigue is high
+            float fatigueFactor = fatigue.Value < 30 ? 1.4f : 1.0f;  // Increase drain if fatigue is high
 
             return baseDrain * hydrationFactor * hungerFactor * fatigueFactor * playerinventoryfillfactor / (1 + OxygenLevelEnvironmentalFactor(player)) * GetEnvironmentalFactor(player);
         }
@@ -534,8 +534,6 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.WalkStrafingRight:
                 case MyCharacterMovementEnum.WalkingRightBack:
                 case MyCharacterMovementEnum.WalkingRightFront:
-                    ProcessWalkingEffect(player, stamina, fatigue, hunger, water, sanity, health);
-                    break;
                 case MyCharacterMovementEnum.Running:
                 case MyCharacterMovementEnum.Backrunning:
                 case MyCharacterMovementEnum.RunningLeftBack:
@@ -544,7 +542,20 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.RunningRightFront:
                 case MyCharacterMovementEnum.RunStrafingLeft:
                 case MyCharacterMovementEnum.RunStrafingRight:
-                    ProcessRunningEffect(player, stamina, fatigue, hunger, water, sanity, health);
+                    ProcessWalkingEffect(player, stamina, fatigue, hunger, water, sanity, health);
+                    switch (movementState)
+                    {
+                        case MyCharacterMovementEnum.Running:
+                        case MyCharacterMovementEnum.Backrunning:
+                        case MyCharacterMovementEnum.RunningLeftBack:
+                        case MyCharacterMovementEnum.RunningLeftFront:
+                        case MyCharacterMovementEnum.RunningRightBack:
+                        case MyCharacterMovementEnum.RunningRightFront:
+                        case MyCharacterMovementEnum.RunStrafingLeft:
+                        case MyCharacterMovementEnum.RunStrafingRight:
+                            ProcessRunningEffect(player, stamina, fatigue, hunger, water, sanity, health);
+                            break;
+                    }
                     break;
                 case MyCharacterMovementEnum.LadderUp:
                 case MyCharacterMovementEnum.LadderDown:
@@ -593,6 +604,19 @@ namespace PEPCO.iSurvival.Core
             {
                 //MyAPIGateway.Utilities.ShowMessage("Standing:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.StandingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier}");
                 stamina.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.StandingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                if (fatigue.Value < currentAveragestats)
+                {
+                    if (stamina.Value == 100)
+                    {
+                        //MyAPIGateway.Utilities.ShowMessage("Crouching:", $"Fatigue Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.CrouchingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier}");
+                        fatigue.Increase((ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.CrouchingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier) / 4, null);
+                    }
+                    else
+                    {
+                        //MyAPIGateway.Utilities.ShowMessage("Crouching:", $"Fatigue Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.CrouchingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier}");
+                        fatigue.Increase((ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.CrouchingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier) / 10, null);
+                    }
+                }                
             }
         }
 
@@ -634,7 +658,6 @@ namespace PEPCO.iSurvival.Core
         {
             //MyAPIGateway.Utilities.ShowMessage("Running:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.RunningStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
             stamina.Decrease(ProcessDrain(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.RunningStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier, null);
-
         }
 
         private void ProcessLadderEffect(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
