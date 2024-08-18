@@ -147,7 +147,7 @@ namespace PEPCO.iSurvival.Core
             public float CrouchingFatigueIncrease = 0.5f;
             public float CrouchingStaminaIncrease = 2.5f;
             public float CrouchWalkStaminaIncrease = 1f;
-            public float FlyingStaminaDecrease = 0f;
+            public float FlyingStaminaDecrease = 1f;
             public float JumpingStaminaDecrease = 2f;
             public float LadderStaminaDecrease = 0.1f;
             public float RunningStaminaDecrease = 1f;
