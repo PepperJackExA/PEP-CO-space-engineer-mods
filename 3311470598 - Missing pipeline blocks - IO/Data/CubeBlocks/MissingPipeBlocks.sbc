@@ -1,0 +1,143 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>PipeDoubleFlange</SubtypeId>
+			</Id>
+			<DisplayName>{LOC:DisplayName_PipeDoubleFlange}</DisplayName>
+			<Description>{LOC:Description_PipeDoubleFlange}</Description>
+			<Icon>Textures\GUI\Icons\Cubes\PipeDoubleFlange.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\PipeDoubleFlange.mwm</Model>
+			 <Components>
+                <Component Subtype="SteelPlate" Count="10" />
+                <Component Subtype="Construction" Count="20" />
+                <Component Subtype="SmallTube" Count="12" />
+                <Component Subtype="Motor" Count="6" />
+                <Component Subtype="SteelPlate" Count="4" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.17" File="Models\Cubes\large\PipeDoubleFlange_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\large\PipeDoubleFlange_BS2.mwm"/>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\large\PipeDoubleFlange_BS3.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\large\PipeDoubleFlange_BS4.mwm"/>
+				<Model BuildPercentUpperBound="0.83" File="Models\Cubes\large\PipeDoubleFlange_BS5.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\PipeDoubleFlange_BS6.mwm"/>
+			</BuildProgressModels>
+			<BuildTimeSeconds>8</BuildTimeSeconds>
+            <MountPoints>
+                <MountPoint Side="Bottom" StartX="0.2" StartY="0.2" EndX="0.8" EndY="0.3" Default="true"/>
+                <MountPoint Side="Bottom" StartX="0.2" StartY="0.7" EndX="0.8" EndY="0.8" />
+                <MountPoint Side="Bottom" StartX="0.2" StartY="0.3" EndX="0.3" EndY="0.7" />
+                <MountPoint Side="Bottom" StartX="0.7" StartY="0.3" EndX="0.8" EndY="0.7" />
+                <MountPoint Side="Top" StartX="0.2" StartY="0.2" EndX="0.8" EndY="0.3" />
+                <MountPoint Side="Top" StartX="0.2" StartY="0.7" EndX="0.8" EndY="0.8" />
+                <MountPoint Side="Top" StartX="0.2" StartY="0.3" EndX="0.3" EndY="0.7" />
+                <MountPoint Side="Top" StartX="0.7" StartY="0.3" EndX="0.8" EndY="0.7" />
+            </MountPoints>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <EmissiveColorPreset>Default</EmissiveColorPreset>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+            <DestroySound>PoofExplosionCat3</DestroySound>
+            <PCU>10</PCU>
+            <DLC>HeavyIndustry</DLC>
+            <IsAirTight>false</IsAirTight>
+			
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>ConveyorConnector</TypeId>
+				<SubtypeId>PipeEndFlange</SubtypeId>
+			</Id>
+			<DisplayName>{LOC:DisplayName_PipeEndFlange}</DisplayName>
+			<Description>{LOC:Description_PipeEndFlange}</Description>
+			<Icon>Textures\GUI\Icons\Cubes\PipeEndFlange.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\PipeEndFlange.mwm</Model>
+			  <Components>
+                <Component Subtype="SteelPlate" Count="10" />
+                <Component Subtype="Construction" Count="20" />
+                <Component Subtype="SmallTube" Count="12" />
+                <Component Subtype="Motor" Count="6" />
+                <Component Subtype="SteelPlate" Count="4" />
+            </Components>
+            <CriticalComponent Subtype="Motor" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\large\PipeEndFlange_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\large\PipeEndFlange_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\PipeEndFlange_BS3.mwm"/>
+			</BuildProgressModels>
+			<BuildTimeSeconds>8</BuildTimeSeconds>
+            <MountPoints>
+                <MountPoint Side="Bottom" StartX="0.2" StartY="0.2" EndX="0.8" EndY="0.3" Default="true"/>
+                <MountPoint Side="Bottom" StartX="0.2" StartY="0.7" EndX="0.8" EndY="0.8" />
+                <MountPoint Side="Bottom" StartX="0.2" StartY="0.3" EndX="0.3" EndY="0.7" />
+                <MountPoint Side="Bottom" StartX="0.7" StartY="0.3" EndX="0.8" EndY="0.7" />
+                <MountPoint Side="Top" StartX="0.2" StartY="0.2" EndX="0.8" EndY="0.3" />
+                <MountPoint Side="Top" StartX="0.2" StartY="0.7" EndX="0.8" EndY="0.8" />
+                <MountPoint Side="Top" StartX="0.2" StartY="0.3" EndX="0.3" EndY="0.7" />
+                <MountPoint Side="Top" StartX="0.7" StartY="0.3" EndX="0.8" EndY="0.7" />
+            </MountPoints>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <EmissiveColorPreset>Default</EmissiveColorPreset>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyed_Large</DestroyEffect>
+            <DestroySound>PoofExplosionCat3</DestroySound>
+            <PCU>10</PCU>
+            <DLC>HeavyIndustry</DLC>
+            <IsAirTight>false</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+	
+	    <BlockVariantGroups>
+	<BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ConveyorPipeGroup" />
+            <Icon>Textures\GUI\Icons\Cubes\PipeNode.dds</Icon>
+            <DisplayName>DisplayName_Block_ConveyorPipes</DisplayName>
+            <Description>Description_ConveyorTube</Description>
+            <Blocks>
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeJunction" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeIntersection" />
+                <Block Type="MyObjectBuilder_Conveyor" Subtype="LargeBlockConveyorPipeT" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeSeamless" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeFlange" />
+				<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="PipeDoubleFlange" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeEnd" />
+				<Block Type="MyObjectBuilder_ConveyorConnector" Subtype="PipeEndFlange" />
+                <Block Type="MyObjectBuilder_ConveyorConnector" Subtype="LargeBlockConveyorPipeCorner" />
+                <Block Type="MyObjectBuilder_ConveyorSorter" Subtype="LargeBlockConveyorSorterIndustrial" />
+                <Block Type="MyObjectBuilder_CubeBlock" Subtype="LargeBlockConveyorPipeCap" />
+            </Blocks>
+        </BlockVariantGroup>
+	    </BlockVariantGroups>
+		
+		<CategoryClasses>
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+      <Id>
+        <TypeId>GuiBlockCategoryDefinition</TypeId>
+        <SubtypeId/>
+      </Id>
+      <DisplayName>DisplayName_Category_ConveyorBlocks</DisplayName>
+      <Name>Conveyors</Name>
+      <ItemIds>
+        <string>ConveyorConnector/PipeDoubleFlange</string>
+        <string>ConveyorConnector/PipeEndFlange</string>
+      </ItemIds>
+    </Category>
+	
+  </CategoryClasses>
+</Definitions>
