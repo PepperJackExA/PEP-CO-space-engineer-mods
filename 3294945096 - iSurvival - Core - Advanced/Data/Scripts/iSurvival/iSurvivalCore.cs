@@ -534,8 +534,6 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.WalkStrafingRight:
                 case MyCharacterMovementEnum.WalkingRightBack:
                 case MyCharacterMovementEnum.WalkingRightFront:
-                    ProcessWalkingEffect(player, stamina, fatigue, hunger, water, sanity, health);
-                    break;
                 case MyCharacterMovementEnum.Running:
                 case MyCharacterMovementEnum.Backrunning:
                 case MyCharacterMovementEnum.RunningLeftBack:
@@ -544,7 +542,20 @@ namespace PEPCO.iSurvival.Core
                 case MyCharacterMovementEnum.RunningRightFront:
                 case MyCharacterMovementEnum.RunStrafingLeft:
                 case MyCharacterMovementEnum.RunStrafingRight:
-                    ProcessRunningEffect(player, stamina, fatigue, hunger, water, sanity, health);
+                    ProcessWalkingEffect(player, stamina, fatigue, hunger, water, sanity, health);
+                    switch (movementState)
+                    {
+                        case MyCharacterMovementEnum.Running:
+                        case MyCharacterMovementEnum.Backrunning:
+                        case MyCharacterMovementEnum.RunningLeftBack:
+                        case MyCharacterMovementEnum.RunningLeftFront:
+                        case MyCharacterMovementEnum.RunningRightBack:
+                        case MyCharacterMovementEnum.RunningRightFront:
+                        case MyCharacterMovementEnum.RunStrafingLeft:
+                        case MyCharacterMovementEnum.RunStrafingRight:
+                            ProcessRunningEffect(player, stamina, fatigue, hunger, water, sanity, health);
+                            break;
+                    }
                     break;
                 case MyCharacterMovementEnum.LadderUp:
                 case MyCharacterMovementEnum.LadderDown:
@@ -647,7 +658,6 @@ namespace PEPCO.iSurvival.Core
         {
             //MyAPIGateway.Utilities.ShowMessage("Running:", $"stamina Decrease:{ProcessDrain(player) * iSurvivalSessionSettings.RunningStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier}");
             stamina.Decrease(ProcessDrain(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.RunningStaminaDecrease * iSurvivalSessionSettings.staminadrainmultiplier, null);
-
         }
 
         private void ProcessLadderEffect(IMyPlayer player, MyEntityStat stamina, MyEntityStat fatigue, MyEntityStat hunger, MyEntityStat water, MyEntityStat sanity, MyEntityStat health)
