@@ -552,7 +552,6 @@
 			<MaximumOfferAmount>1000</MaximumOfferAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</PhysicalItem>
-
 		<!-- Beans -->
 		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
 			<Id>
@@ -845,5 +844,37 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</PhysicalItem>
 
+
+		<!-- WaterBottle -->
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>WaterBottle</SubtypeId>
+			</Id>
+			<DisplayName>Water Bottle</DisplayName>
+			<Description>Water Bottle</Description>
+			<Icon>Textures/GUI/Icons/WaterBottle.png</Icon>
+			<Size>
+				<X>0.1</X>
+				<Y>0.1</Y>
+				<Z>0.1</Z>
+			</Size>
+			<Mass>0.2</Mass>
+			<Volume>0.1</Volume>
+			<Model>Models\Canteen.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Fatigue" Value="0" Time="5"/>
+				<Stat Name="Health" Value="0" Time="5"/>
+				<Stat Name="Hunger" Value="0.002" Time="5"/>
+				<Stat Name="Sanity" Value="-0.002" Time="5"/>
+				<Stat Name="Water" Value="0" Time="5"/>
+				<Stat Name="Stamina" Value="0.04" Time="5"/>
+			</Stats>
+			<MinimalPricePerUnit>20</MinimalPricePerUnit>
+			<MinimumOfferAmount>1</MinimumOfferAmount>
+			<MaximumOfferAmount>200</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
 	</PhysicalItems>
 </Definitions>

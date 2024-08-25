@@ -1,6 +1,24 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<Blueprints>
-		
+		<!-- Apple Tree Plant? -->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>AppleTreePlant</SubtypeId>
+			</Id>
+			<DisplayName>Apple Tree Plant</DisplayName>
+			<Icon>Textures/GUI/Icons/Apple.png</Icon>
+			<Prerequisites>
+				<Item Amount="4" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
+				<Item Amount="10" TypeId="Ore" SubtypeId="Ice" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Apple" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="20" TypeId="ConsumableItem" SubtypeId="Apple" />
+				<Item Amount="10" TypeId="Ore" SubtypeId="Organic" />
+			</Results>
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
 	</Blueprints>
 </Definitions>

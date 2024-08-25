@@ -92,13 +92,13 @@
 				<SubtypeId>BeanPlant</SubtypeId>
 			</Id>
 			<DisplayName>Bean Plant</DisplayName>
-			<Icon>Textures/GUI/Icons/Bean.png</Icon>
+			<Icon>Textures/GUI/Icons/Beans.png</Icon>
 			<Prerequisites>
 				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
 				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
-				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Bean" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Beans" />
 			</Prerequisites>
-			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Bean" />
+			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Beans" />
 			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
 		</Blueprint>
 		<!-- Potato Plant-->
@@ -144,9 +144,9 @@
 			<Prerequisites>
 				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="FarmCompost" />
 				<Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
-				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Spices" />
+				<Item Amount="1" TypeId="Component" SubtypeId="Spices" />
 			</Prerequisites>
-			<Result Amount="4" TypeId="ConsumableItem" SubtypeId="Spices" />
+			<Result Amount="4" TypeId="Component" SubtypeId="Spices" />
 			<BaseProductionTimeInSeconds>300</BaseProductionTimeInSeconds>
 		</Blueprint>
 	</Blueprints>

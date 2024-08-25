@@ -1,16 +1,10 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<!-- Blueprint Class Entries -->
-	<BlueprintClassEntries>
-		<Entry Class="DairyProcessing" BlueprintSubtypeId="Cheese" />
-		<Entry Class="DairyProcessing" BlueprintSubtypeId="Rennet" />
-	</BlueprintClassEntries>
-
 	<Blueprints>
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Cheese</SubtypeId>
+				<SubtypeId>RawMilk</SubtypeId>
 			</Id>
 			<DisplayName>Cheese</DisplayName>
 			<Description>Aged dairy product made by curdling milk with rennet</Description>
@@ -22,23 +16,6 @@
 				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Cheese" />
 			</Result>
 			<BaseProductionTimeInSeconds>1800</BaseProductionTimeInSeconds>
-		</Blueprint>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Rennet</SubtypeId>
-			</Id>
-			<DisplayName>Rennet</DisplayName>
-			<Description>An enzyme used in the cheese-making process to curdle milk</Description>
-			<Icon>Textures/GUI/Icons/Rennet.png</Icon>
-			<Prerequisites>
-				<Item Amount="5" TypeId="Ore" SubtypeId="Organic" />
-				<Item Amount="2" TypeId="Ingot" SubtypeId="Stone" />
-			</Prerequisites>
-			<Result>
-				<Item Amount="1" TypeId="Component" SubtypeId="Rennet" />
-			</Result>
-			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
 		</Blueprint>
 	</Blueprints>
 </Definitions>
