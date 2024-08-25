@@ -1,0 +1,40 @@
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>WoodBlock1x1x1</SubtypeId>
+			</Id>
+			<DisplayName>{LOC:DisplayName_WoodBlock1x1x1}</DisplayName>
+			<Description>{LOC:Description_WoodBlock1x1x1}</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\WoodBlock1x1x1.mwm</Model>
+			<CubeDefinition>
+				<CubeTopology>Box</CubeTopology>
+				<ShowEdges>false</ShowEdges>
+				<Sides>
+					<Side Model="Models\Cubes\Large\Armor\AQD_Concrete_SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+					<Side Model="Models\Cubes\Large\Armor\AQD_Concrete_SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+					<Side Model="Models\Cubes\Large\Armor\AQD_Concrete_SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+					<Side Model="Models\Cubes\Large\Armor\AQD_Concrete_SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+					<Side Model="Models\Cubes\Large\Armor\AQD_Concrete_SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+					<Side Model="Models\Cubes\Large\Armor\AQD_Concrete_SquarePlate.mwm" PatternWidth="4" PatternHeight="2" />
+				</Sides>
+			</CubeDefinition>
+
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\small\WoodBlock1x1x1.mwm" RandomOrientation="true" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\WoodBlock1x1x1.mwm" RandomOrientation="true" />
+			</BuildProgressModels>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<BlockPairName>WoodBlock1x1x1</BlockPairName>
+		</Definition>
+	</CubeBlocks>
+</Definitions>
