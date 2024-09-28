@@ -216,8 +216,6 @@ namespace PEPCO.iSurvival.Effects
                 return baseMetabolicRate;
             }
 
-
-
             public static void ApplyMetabolismEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
                 if (player?.Character == null)
@@ -231,35 +229,67 @@ namespace PEPCO.iSurvival.Effects
                 float metabolicRate = CalculateMetabolicRate(player);
 
                 // Apply metabolism effects
-                ApplyMetabolicChanges(statComp, metabolicRate, calories, fat, carbohydrates, protein, vitamins, hunger, fatigue, stamina);
+                ApplyMetabolicChanges(statComp, metabolicRate,calories,fat,cholesterol,sodium,carbohydrates,protein,vitamins,hunger,water,fatigue,stamina);
 
                 // Update Hunger after applying changes
                 UpdateHunger(hunger, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins);
                 HungerTracker.UpdateHungerAndCalculateTimeRemaining(player, hunger);
             }
 
-            private static void ApplyMetabolicChanges(MyEntityStatComponent statComp, float metabolicRate, MyEntityStat calories, MyEntityStat fat, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat fatigue, MyEntityStat stamina)
+            private static void ApplyMetabolicChanges(MyEntityStatComponent statComp, float metabolicRate, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
-                // Apply changes to each stat based on metabolic rate
+                // Recommended daily values
+                const float dailyCalories = 2000f; // kcal
+                const float dailyFat = 70f; // grams
+                const float dailyCholesterol = 300f; // mg
+                const float dailySodium = 2300f; // mg
+                const float dailyCarbohydrates = 275f; // grams
+                const float dailyProtein = 50f; // grams
+                const float dailyVitamins = 100f; // arbitrary units
+                const float dailyWater = 3.7f; // liters
+
+                // Convert daily values to per-minute burn rates (assuming a 24-hour day)
+                float caloriesBurnRate = dailyCalories / 1440f; // kcal/min
+                float fatBurnRate = dailyFat / 1440f; // grams/min
+                float cholesterolBurnRate = dailyCholesterol / 1440f; // mg/min
+                float sodiumBurnRate = dailySodium / 1440f; // mg/min
+                float carbBurnRate = dailyCarbohydrates / 1440f; // grams/min
+                float proteinBurnRate = dailyProtein / 1440f; // grams/min
+                float vitaminBurnRate = dailyVitamins / 1440f; // units/min
+                float waterBurnRate = dailyWater / 1440f; // liters/min
+
+                // Apply changes to each stat based on the metabolic rate and burn rates
                 if (calories != null)
                 {
-                    Core.iSurvivalSession.ApplyStatChange(calories, metabolicRate, -1); // Decrease calories
+                    Core.iSurvivalSession.ApplyStatChange(calories, metabolicRate, -caloriesBurnRate); // Decrease calories
                 }
                 if (fat != null)
                 {
-                    Core.iSurvivalSession.ApplyStatChange(fat, metabolicRate, -0.1); // Decrease fat
+                    Core.iSurvivalSession.ApplyStatChange(fat, metabolicRate, -fatBurnRate); // Decrease fat
+                }
+                if (cholesterol != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(cholesterol, metabolicRate, -cholesterolBurnRate); // Decrease cholesterol
+                }
+                if (sodium != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(sodium, metabolicRate, -sodiumBurnRate); // Decrease sodium
                 }
                 if (carbohydrates != null)
                 {
-                    Core.iSurvivalSession.ApplyStatChange(carbohydrates, metabolicRate, -0.5); // Decrease carbohydrates
+                    Core.iSurvivalSession.ApplyStatChange(carbohydrates, metabolicRate, -carbBurnRate); // Decrease carbohydrates
                 }
                 if (protein != null)
                 {
-                    Core.iSurvivalSession.ApplyStatChange(protein, metabolicRate, -0.1); // Decrease protein
+                    Core.iSurvivalSession.ApplyStatChange(protein, metabolicRate, -proteinBurnRate); // Decrease protein
                 }
                 if (vitamins != null)
                 {
-                    Core.iSurvivalSession.ApplyStatChange(vitamins, metabolicRate, -0.05); // Decrease vitamins
+                    Core.iSurvivalSession.ApplyStatChange(vitamins, metabolicRate, -vitaminBurnRate); // Decrease vitamins
+                }
+                if (water != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(water, metabolicRate, -waterBurnRate); // Decrease water
                 }
                 if (fatigue != null)
                 {
@@ -270,6 +300,7 @@ namespace PEPCO.iSurvival.Effects
                     Core.iSurvivalSession.ApplyStatChange(stamina, metabolicRate, 1); // Increase stamina
                 }
             }
+
 
             public static void UpdateHunger(MyEntityStat hunger, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins)
             {
@@ -294,7 +325,9 @@ namespace PEPCO.iSurvival.Effects
                 // Set hunger value directly based on the average percentage
                 Core.iSurvivalSession.ApplyStatChange(hunger, 1, averagePercentage - hunger.Value);
             }
-            public static class HungerTracker
+        
+
+        public static class HungerTracker
             {
                 // Dictionary to store the previous hunger values for each player
                 private static Dictionary<long, double> previousHungerValues = new Dictionary<long, double>();
