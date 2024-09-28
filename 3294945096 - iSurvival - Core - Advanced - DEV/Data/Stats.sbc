@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Stats.sbc -->
+	<EntityComponents>
+		<!-- Default Astronaut -->
+		<EntityComponent xsi:type="MyObjectBuilder_EntityStatComponentDefinition">
+			<Id>
+				<TypeId>CharacterStatComponent</TypeId>
+				<SubtypeId>Default_Astronaut</SubtypeId>
+			</Id>
+			<Stats>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Sanity</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Calories</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Fat</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Cholesterol</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Sodium</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Carbohydrates</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Protein</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Vitamins</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Hunger</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Water</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Fatigue</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Stamina</SubtypeId>
+				</Stat>
+			</Stats>
+			<Scripts>
+				<Script>SpaceStatEffect</Script>
+			</Scripts>
+		</EntityComponent>
+	</EntityComponents>
+
+	<StatDefinitions>
+		<!-- Sanity -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Sanity</SubtypeId>
+			</Id>
+			<Name>Sanity</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Calories -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Calories</SubtypeId>
+			</Id>
+			<Name>Calories</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>2000</DefaultValue>
+			<MaxValue>3000</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Fat -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Fat</SubtypeId>
+			</Id>
+			<Name>Fat</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>70</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Cholesterol -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Cholesterol</SubtypeId>
+			</Id>
+			<Name>Cholesterol</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>300</DefaultValue>
+			<MaxValue>500</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Sodium -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Sodium</SubtypeId>
+			</Id>
+			<Name>Sodium</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>1500</DefaultValue>
+			<MaxValue>2300</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Carbohydrates -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Carbohydrates</SubtypeId>
+			</Id>
+			<Name>Carbohydrates</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>275</DefaultValue>
+			<MaxValue>400</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Protein -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Protein</SubtypeId>
+			</Id>
+			<Name>Protein</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>50</DefaultValue>
+			<MaxValue>80</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Vitamins -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Vitamins</SubtypeId>
+			</Id>
+			<Name>Vitamins</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Hunger -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Hunger</SubtypeId>
+			</Id>
+			<Name>Hunger</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Water -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Water</SubtypeId>
+			</Id>
+			<Name>Water</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Fatigue -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Fatigue</SubtypeId>
+			</Id>
+			<Name>Fatigue</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Stamina -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Stamina</SubtypeId>
+			</Id>
+			<Name>Stamina</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+	</StatDefinitions>
+</Definitions>
