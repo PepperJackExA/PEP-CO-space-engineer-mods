@@ -124,11 +124,13 @@ namespace PEPCO.iSurvival.Effects
             public static void ProcessStandingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
                 MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Standing");
-                
+                Core.iSurvivalSession.ApplyStatChange(stamina, 1, 1);
+
             }
             public static void ProcessSprintingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
                 MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Sprinting");
+                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -3);
             }
             public static void ProcessCrouchingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
@@ -191,10 +193,29 @@ namespace PEPCO.iSurvival.Effects
                     baseMetabolicRate *= (2.0f - oxygenFactor); // Making the impact more severe
                 }
 
-                // Further modifications based on other factors (e.g., activity level, health status, etc.)
+                // Adjust metabolic rate based on stamina level
+                var statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
+                MyEntityStat staminaStat;
+
+                if (statComp != null && statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out staminaStat) && staminaStat != null)
+                {
+                    // Normalize stamina value to a range of 0 to 1 (where 1 is full stamina and 0 is no stamina)
+                    float staminaLevel = staminaStat.Value / staminaStat.MaxValue;
+
+                    // Apply inverse effect: lower stamina leads to higher metabolic rate
+                    if (staminaLevel < 1.0f)
+                    {
+                        baseMetabolicRate *= (2.0f - staminaLevel); // Increase burn rate as stamina decreases
+                    }
+                }
+                else
+                {
+                    iSurvivalLog.Error("CalculateMetabolicRate: Stamina stat is missing or null.");
+                }
 
                 return baseMetabolicRate;
             }
+
 
 
             public static void ApplyMetabolismEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
