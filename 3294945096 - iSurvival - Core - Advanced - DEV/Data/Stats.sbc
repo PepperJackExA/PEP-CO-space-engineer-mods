@@ -67,7 +67,6 @@
 			</Scripts>
 		</EntityComponent>
 	</EntityComponents>
-
 	<StatDefinitions>
 		<!-- Sanity -->
 		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
@@ -77,8 +76,8 @@
 			</Id>
 			<Name>Sanity</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
-			<MaxValue>100</MaxValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>1000</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -90,7 +89,7 @@
 			</Id>
 			<Name>Calories</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>500</DefaultValue>
+			<DefaultValue>2000</DefaultValue>
 			<MaxValue>3000</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -103,8 +102,8 @@
 			</Id>
 			<Name>Fat</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
-			<MaxValue>100</MaxValue>
+			<DefaultValue>70</DefaultValue>
+			<MaxValue>1000</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -116,7 +115,7 @@
 			</Id>
 			<Name>Cholesterol</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
+			<DefaultValue>300</DefaultValue>
 			<MaxValue>500</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -129,8 +128,8 @@
 			</Id>
 			<Name>Sodium</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
-			<MaxValue>2300</MaxValue>
+			<DefaultValue>2300</DefaultValue>
+			<MaxValue>4000</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -142,8 +141,8 @@
 			</Id>
 			<Name>Carbohydrates</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
-			<MaxValue>400</MaxValue>
+			<DefaultValue>275</DefaultValue>
+			<MaxValue>500</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -155,8 +154,8 @@
 			</Id>
 			<Name>Protein</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
-			<MaxValue>80</MaxValue>
+			<DefaultValue>50</DefaultValue>
+			<MaxValue>150</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -168,8 +167,8 @@
 			</Id>
 			<Name>Vitamins</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
-			<MaxValue>100</MaxValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>200</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -181,7 +180,7 @@
 			</Id>
 			<Name>Hunger</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
+			<DefaultValue>100</DefaultValue>
 			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -194,8 +193,8 @@
 			</Id>
 			<Name>Water</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
-			<MaxValue>100</MaxValue>
+			<DefaultValue>3.7</DefaultValue>
+			<MaxValue>10</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -207,8 +206,8 @@
 			</Id>
 			<Name>Fatigue</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
-			<MaxValue>100</MaxValue>
+			<DefaultValue>0</DefaultValue>
+			<MaxValue>1000</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -220,10 +219,12 @@
 			</Id>
 			<Name>Stamina</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
+			<DefaultValue>100</DefaultValue>
 			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
+
+		<!-- Health -->
 		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
 			<Id>
 				<TypeId>MyObjectBuilder_EntityStat</TypeId>
@@ -231,7 +232,7 @@
 			</Id>
 			<Name>Health</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>20</DefaultValue>
+			<DefaultValue>100</DefaultValue>
 			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
