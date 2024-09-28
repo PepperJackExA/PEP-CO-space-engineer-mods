@@ -78,7 +78,7 @@ namespace PEPCO.iSurvival.settings
                 }
                 else
                 {
-                    iSurvivalLog.Error("Settings can only be loaded on the server.");
+                    iSurvivalLog.Info("Settings can only be loaded on the server.");
                 }
             }
 
@@ -105,7 +105,7 @@ namespace PEPCO.iSurvival.settings
                     }
                     else
                     {
-                        iSurvivalLog.Error("Configuration file not found, creating default configuration.");
+                        iSurvivalLog.Info("Configuration file not found, creating default configuration.");
                         SaveConfig(iniParser); // Save default configuration if file doesn't exist
                         SaveToStorage(iniParser.ToString());
                     }

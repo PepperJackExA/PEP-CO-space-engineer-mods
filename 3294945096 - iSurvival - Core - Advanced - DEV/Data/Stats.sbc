@@ -57,6 +57,10 @@
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>Stamina</SubtypeId>
 				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>SpaceCharacterHealth</SubtypeId>
+				</Stat>
 			</Stats>
 			<Scripts>
 				<Script>SpaceStatEffect</Script>
@@ -73,7 +77,7 @@
 			</Id>
 			<Name>Sanity</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>100</DefaultValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -86,7 +90,7 @@
 			</Id>
 			<Name>Calories</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>2000</DefaultValue>
+			<DefaultValue>500</DefaultValue>
 			<MaxValue>3000</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -99,7 +103,7 @@
 			</Id>
 			<Name>Fat</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>70</DefaultValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -112,7 +116,7 @@
 			</Id>
 			<Name>Cholesterol</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>300</DefaultValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>500</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -125,7 +129,7 @@
 			</Id>
 			<Name>Sodium</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>1500</DefaultValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>2300</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -138,7 +142,7 @@
 			</Id>
 			<Name>Carbohydrates</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>275</DefaultValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>400</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -151,7 +155,7 @@
 			</Id>
 			<Name>Protein</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>50</DefaultValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>80</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -164,7 +168,7 @@
 			</Id>
 			<Name>Vitamins</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>100</DefaultValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -177,7 +181,7 @@
 			</Id>
 			<Name>Hunger</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>100</DefaultValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -190,7 +194,7 @@
 			</Id>
 			<Name>Water</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>100</DefaultValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -203,7 +207,7 @@
 			</Id>
 			<Name>Fatigue</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>100</DefaultValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -216,7 +220,18 @@
 			</Id>
 			<Name>Stamina</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>100</DefaultValue>
+			<DefaultValue>20</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>SpaceCharacterHealth</SubtypeId>
+			</Id>
+			<Name>Health</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>20</DefaultValue>
 			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>

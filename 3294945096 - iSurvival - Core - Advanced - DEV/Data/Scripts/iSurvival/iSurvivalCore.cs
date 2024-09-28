@@ -15,9 +15,20 @@ using PEPCO.iSurvival.settings;
 using VRage.Game.ModAPI;
 using Sandbox.Game.Components;
 
+using Sandbox.Game.Entities.Character.Components;
+using System.IO;
+using System.IO.Ports;
+using System.Linq;
+using VRage;
+using VRage.Game;
+using VRage.Game.ModAPI.Ingame.Utilities;
+using VRage.ModAPI;
+using VRage.ObjectBuilders;
+using VRage.Utils;
+
 namespace PEPCO.iSurvival.Core
 {
-    [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
+    [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
     public class iSurvivalSession : MySessionComponentBase
     {
         public static ushort modId = 19008;
@@ -50,30 +61,10 @@ namespace PEPCO.iSurvival.Core
 
         protected override void UnloadData()
         {
-            try
-            {
-                var players = new List<IMyPlayer>();
-                MyAPIGateway.Multiplayer.Players.GetPlayers(players);
-
-                // Reset stats for all players currently in the game
-                foreach (var player in players)
-                {
-                    if (player.Character != null && !player.Character.IsDead)
-                    {
-                        Effects.Processes.ResetPlayerStats(player); // Reset player stats
-                        RemovePlayerStatComponents(player); // Remove custom components if any
-                    }
-                }
-
-                // Unregister message handlers and other events here if needed
-                MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(modId, OnMessageReceived);
-            }
-            catch (Exception ex)
-            {
-                iSurvivalLog.Error("Error during UnloadData", ex.ToString());
-            }
-            base.UnloadData();
-        }
+            if (!MyAPIGateway.Multiplayer.IsServer)
+                MyAPIGateway.Multiplayer.RegisterSecureMessageHandler(modId, OnMessageReceived);
+            MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(modId, OnMessageReceived);
+        }        
 
         public override void UpdateAfterSimulation()
         {
@@ -119,6 +110,10 @@ namespace PEPCO.iSurvival.Core
                 if (player == null || player.Character == null)
                     continue;
 
+                // Skip players in the exception list
+                if (iSurvivalSessionSettings.playerExceptions.Contains(player.SteamUserId))
+                    continue;
+
                 // Ensure the character components are valid
                 var statComp = player.Character.Components?.Get<MyEntityStatComponent>();
                 if (statComp == null)
@@ -127,60 +122,26 @@ namespace PEPCO.iSurvival.Core
                 // Check player death state
                 if (player.Character.IsDead)
                 {
-                    if (!revivalTimers.ContainsKey(player.IdentityId))
-                    {
-                        OnPlayerDeath(player); // Reset stats on death
-                        revivalTimers[player.IdentityId] = 0; // Start a timer for the revival check
-                    }
+
+                    OnPlayerDeath(player, statComp); // Reset stats on death
+
                 }
                 else
                 {
-                    // Player is alive, process stats
-                    if (revivalTimers.ContainsKey(player.IdentityId))
-                    {
-                        // Increment timer, remove from dictionary if exceeded safe period
-                        revivalTimers[player.IdentityId]++;
-                        if (revivalTimers[player.IdentityId] > 300)
-                            revivalTimers.Remove(player.IdentityId);
-                    }
-                    else
-                    {
-                        Effects.Processes.ProcessPlayer(player); // Process player stats if alive and not recently revived
-                    }
+                    Effects.Processes.ProcessPlayer(player, statComp); // Process player stats if alive and not recently revived                                   
                 }
             }
         }
 
-        private void OnPlayerDeath(IMyPlayer player)
+        private void OnPlayerDeath(IMyPlayer player, MyEntityStatComponent statComp)
         {
             // Check if player is already marked as dead to prevent multiple resets
             if (revivalTimers.ContainsKey(player.IdentityId))
                 return;
 
-            // Reset stats when the player dies
-            Effects.Processes.ResetPlayerStats(player);
 
-            // Optionally remove components if necessary
-            RemovePlayerStatComponents(player);
         }
 
-        public static void RemovePlayerStatComponents(IMyPlayer player)
-        {
-            var character = player.Character;
-            if (character == null) return;
-
-            var statComp = character.Components.Get<MyEntityStatComponent>();
-            if (statComp != null)
-            {
-                // Check if stat component is active before removing it
-                if (character.Integrity > 0)
-                {
-                    character.Components.Remove<MyEntityStatComponent>(); // Remove the stat component
-                }
-            }
-
-            // Additional custom components can be removed here if needed
-        }
 
         private void OnMessageReceived(ushort modId, byte[] data, ulong sender, bool reliable)
         {

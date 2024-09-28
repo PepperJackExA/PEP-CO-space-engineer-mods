@@ -194,10 +194,34 @@ namespace PEPCO.iSurvival.Chat
             {
                 foreach (var entityStat in statComponent.Stats)
                 {
-                    entityStat.Value = entityStat.MaxValue * (percentage / 100f);
+                    try
+                    {
+                        // Check for null entityStat
+                        if (entityStat == null)
+                        {
+                            iSurvivalLog.Error("EntityStat is null in statComponent.Stats.");
+                            continue;
+                        }
+
+                        // Check that MaxValue is not zero to avoid invalid multiplication
+                        if (entityStat.MaxValue <= 0)
+                        {
+                            iSurvivalLog.Error($"Invalid MaxValue for stat {entityStat.ToString()}: {entityStat.MaxValue}");
+                            continue;
+                        }
+
+                        // Set the stat value safely based on the percentage
+                        entityStat.Value = entityStat.MaxValue * (percentage / 100f);
+                        iSurvivalLog.Info($"Set {entityStat.ToString()} to {percentage}% of MaxValue.");
+                    }
+                    catch (Exception ex)
+                    {
+                        iSurvivalLog.Error($"Error setting stat {entityStat?.ToString()} to {percentage}%: {ex.Message}");
+                    }
                 }
                 MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"All stats set to {percentage}%.");
             }
+
             else
             {
                 MyEntityStat targetStat; // Declare the variable separately for C# 6.0
