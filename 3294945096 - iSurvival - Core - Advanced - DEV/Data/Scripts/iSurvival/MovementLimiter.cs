@@ -9,6 +9,7 @@ using VRage.Game.Components;
 using VRage.Game.Entity;
 using VRage.Game.ModAPI;
 using VRage.ModAPI;
+using VRage.Utils;
 using VRageMath;
 
 namespace PEPCO.iSurvival.MovementLimiter
@@ -16,7 +17,7 @@ namespace PEPCO.iSurvival.MovementLimiter
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
     public class PlayerMovementLimiter : MySessionComponentBase
     {
-        private const float MaxWalkSpeed = 1f; // Desired walking speed limit in m/s
+        private const float MaxWalkSpeed = 4f; // Desired walking speed limit in m/s
         private const float MaxFlySpeed = 10f; // Desired flying speed limit in m/s
         private const float GridCheckRadius = 100f; // Radius to check for nearby grids
 
@@ -37,16 +38,23 @@ namespace PEPCO.iSurvival.MovementLimiter
                 var physics = character?.Physics;
                 if (physics == null)
                     continue;
+                // Initialize the stats
+                var statComp = player.Character.Components?.Get<MyEntityStatComponent>();
+                MyEntityStat fatigue, stamina;
+
+                // Retrieve each stat from the component
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue);
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina);
+                if (fatigue.Value > 100 && stamina.Value > 20) continue;
 
                 // Get the current velocity of the player.
                 Vector3 currentVelocity = physics.LinearVelocity;
-
                 // Check if the player is flying or walking.
                 bool isFlying = character.CurrentMovementState == MyCharacterMovementEnum.Flying;
 
                 // Determine the speed limit based on movement type.
                 float speedLimit = isFlying ? MaxFlySpeed : MaxWalkSpeed;
-
+                speedLimit = speedLimit * (stamina.Value / 20);
                 // Get the nearby grid velocity and check if it exists.
                 Vector3? nearbyGridVelocity = GetNearbyGridVelocity(character);
 

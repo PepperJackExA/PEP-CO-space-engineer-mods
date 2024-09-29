@@ -3,8 +3,8 @@ using Sandbox.Game.Entities;
 using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using VRage.Game.Components;
+using VRage.Game.ModAPI;
 using VRageMath;
 using PEPCO.iSurvival.Log;
 using PEPCO.iSurvival.stats;
@@ -12,19 +12,10 @@ using PEPCO.iSurvival.Chat;
 using PEPCO.iSurvival.Effects;
 using PEPCO.iSurvival.factors;
 using PEPCO.iSurvival.settings;
-using VRage.Game.ModAPI;
-using Sandbox.Game.Components;
-
 using Sandbox.Game.Entities.Character.Components;
-using System.IO;
-using System.IO.Ports;
-using System.Linq;
-using VRage;
-using VRage.Game;
-using VRage.Game.ModAPI.Ingame.Utilities;
 using VRage.ModAPI;
-using VRage.ObjectBuilders;
-using VRage.Utils;
+using Sandbox.Game.Components;
+using static PEPCO.iSurvival.Effects.Processes.Metabolism;
 
 namespace PEPCO.iSurvival.Core
 {
@@ -35,36 +26,45 @@ namespace PEPCO.iSurvival.Core
         public static int runCount = 0;
         public static Random rand = new Random();
         public static int loadWait = 120;
-        public static float currentAveragestats = 0;
-        public static float playerinventoryfillfactor = 0.0f;
-
-        // Tracks revival status to avoid crashes when accessing player stats
-        private static Dictionary<long, int> revivalTimers = new Dictionary<long, int>();
 
         public static void ApplyStatChange(MyEntityStat stat, double multiplier, double baseChange)
         {
             if (stat == null) return;
+            string statName = stat.StatId.ToString();
 
+            //MyAPIGateway.Utilities.ShowMessage($"test", $"statName: {statName}");
             // Calculate the change amount (drain or heal)
-            double changeAmount = baseChange * multiplier;
+            double changeAmount = (stats.StatManager._statSettings[statName].Base + baseChange) * (multiplier * stats.StatManager._statSettings[statName].Multiplier);
 
             // Apply the change: if negative, decrease; if positive, increase
             if (changeAmount < 0)
             {
+                changeAmount *= stats.StatManager._statSettings[stat.StatId.ToString()].DecreaseMultiplier;
                 stat.Decrease((float)-changeAmount, null); // Negative for drain
             }
             else
             {
+                changeAmount *= stats.StatManager._statSettings[stat.StatId.ToString()].IncreaseMultiplier;
                 stat.Increase((float)changeAmount, null); // Positive for heal
+            }
+        }
+
+
+        public override void LoadData()
+        {
+            base.LoadData();
+
+            if (MyAPIGateway.Multiplayer.IsServer)
+            {
+                MyAPIGateway.Multiplayer.RegisterSecureMessageHandler(modId, OnMessageReceived);
             }
         }
 
         protected override void UnloadData()
         {
-            if (!MyAPIGateway.Multiplayer.IsServer)
-                MyAPIGateway.Multiplayer.RegisterSecureMessageHandler(modId, OnMessageReceived);
+            // Unregister message handler when the mod is unloaded
             MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(modId, OnMessageReceived);
-        }        
+        }
 
         public override void UpdateAfterSimulation()
         {
@@ -73,14 +73,7 @@ namespace PEPCO.iSurvival.Core
                 if (++runCount % 15 > 0) // Run every quarter of a second
                     return;
 
-                if (!MyAPIGateway.Multiplayer.IsServer && loadWait > 0) // Delay loading message handler for clients
-                {
-                    if (--loadWait == 0)
-                        MyAPIGateway.Multiplayer.RegisterSecureMessageHandler(modId, OnMessageReceived);
-                    return;
-                }
-
-                if (runCount % 60 == 0) // Run every second
+                if (MyAPIGateway.Multiplayer.IsServer && runCount % 60 == 0) // Run every second on server
                 {
                     ProcessPlayersSafely();
                 }
@@ -100,14 +93,14 @@ namespace PEPCO.iSurvival.Core
             var players = new List<IMyPlayer>();
             MyAPIGateway.Multiplayer.Players.GetPlayers(players, p =>
                 p.Character != null &&
-                p.Character.ToString().Contains("Astronaut") &&
                 p.Character.IsPlayer &&
+                p.Character.ToString().Contains("Astronaut") &&
                 p.Character.Integrity > 0
             );
 
             foreach (IMyPlayer player in players)
             {
-                if (player == null || player.Character == null)
+                if (player?.Character == null)
                     continue;
 
                 // Skip players in the exception list
@@ -119,33 +112,15 @@ namespace PEPCO.iSurvival.Core
                 if (statComp == null)
                     continue;
 
-                // Check player death state
-                if (player.Character.IsDead)
-                {
-
-                    OnPlayerDeath(player, statComp); // Reset stats on death
-
-                }
-                else
-                {
-                    Effects.Processes.ProcessPlayer(player, statComp); // Process player stats if alive and not recently revived                                   
-                }
+                // Process player stats if alive and not recently revived
+                Effects.Processes.ProcessPlayer(player, statComp);
             }
         }
-
-        private void OnPlayerDeath(IMyPlayer player, MyEntityStatComponent statComp)
-        {
-            // Check if player is already marked as dead to prevent multiple resets
-            if (revivalTimers.ContainsKey(player.IdentityId))
-                return;
-
-
-        }
-
 
         private void OnMessageReceived(ushort modId, byte[] data, ulong sender, bool reliable)
         {
             // Handle messages from clients
+            // Parse and process data from the client here
         }
     }
 }

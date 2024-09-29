@@ -14,9 +14,7 @@ namespace PEPCO.iSurvival.settings
     public class iSurvivalSessionSettings : MySessionComponentBase
     {
         public iSurvivalSettings Settings = new iSurvivalSettings();
-
         public static List<ulong> playerExceptions = new List<ulong>();
-
         public ChatCommands ChatCommands;
 
         public override void LoadData()
@@ -33,6 +31,12 @@ namespace PEPCO.iSurvival.settings
             {
                 iSurvivalLog.Error("Failed to load iSurvivalSessionSettings: " + ex.Message);
             }
+        }
+
+        protected override void UnloadData()
+        {
+            base.UnloadData();
+            // Add cleanup for any event handlers or resources here if necessary
         }
 
         // Updates settings and applies them
@@ -125,6 +129,11 @@ namespace PEPCO.iSurvival.settings
                     {
                         stat.Value.Base = (float)iniParser.Get(IniSection, $"{stat.Key}.base").ToDouble(stat.Value.Base);
                         stat.Value.Multiplier = (float)iniParser.Get(IniSection, $"{stat.Key}.multiplier").ToDouble(stat.Value.Multiplier);
+
+                        // Load new movement type multipliers
+                        stat.Value.IncreaseMultiplier = (float)iniParser.Get(IniSection, $"{stat.Key}.increaseMultiplier").ToDouble(stat.Value.IncreaseMultiplier);
+                        stat.Value.DecreaseMultiplier = (float)iniParser.Get(IniSection, $"{stat.Key}.decreaseMultiplier").ToDouble(stat.Value.DecreaseMultiplier);
+
                         stat.Value.UpdateValue(); // Recalculate the value
                         iSurvivalLog.Info($"Loaded setting: {stat.Key} - Base: {stat.Value.Base}, Multiplier: {stat.Value.Multiplier}");
                     }
@@ -154,7 +163,8 @@ namespace PEPCO.iSurvival.settings
                 {
                     iniParser.Set(IniSection, $"{stat.Key}.base", stat.Value.Base);
                     iniParser.Set(IniSection, $"{stat.Key}.multiplier", stat.Value.Multiplier);
-                    iniParser.Set(IniSection, $"{stat.Key}.value", stat.Value.Value);
+                    iniParser.Set(IniSection, $"{stat.Key}.increaseMultiplier", stat.Value.IncreaseMultiplier);
+                    iniParser.Set(IniSection, $"{stat.Key}.decreaseMultiplier", stat.Value.DecreaseMultiplier);
                 }
 
                 iniParser.Set(IniSection, nameof(playerExceptions), string.Join("\n", playerExceptions.Distinct().ToArray()));

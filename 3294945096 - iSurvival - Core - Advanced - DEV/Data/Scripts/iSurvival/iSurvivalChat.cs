@@ -7,9 +7,38 @@ using Sandbox.Game.Entities;
 using VRage.Utils;
 using PEPCO.iSurvival.settings;
 using PEPCO.iSurvival.stats;
+using System.Collections.Generic;
+using System.Net;
+using static PEPCO.iSurvival.Effects.Processes.Metabolism;
 
 namespace PEPCO.iSurvival.Chat
 {
+    public class CommandSetting
+    {
+        public bool IsEnabled { get; set; } // Is the command enabled
+        public bool AdminOnly { get; set; } // Is the command restricted to admins only
+        public bool ServerOnly { get; set; } // Is the command restricted to server execution only
+
+        public CommandSetting(bool isEnabled, bool adminOnly, bool serverOnly)
+        {
+            IsEnabled = isEnabled;
+            AdminOnly = adminOnly;
+            ServerOnly = serverOnly;
+        }
+        public static Dictionary<string, CommandSetting> Chat = new Dictionary<string, CommandSetting>
+{
+    { "exempt", new CommandSetting(true, true, false) }, // Admin only, not restricted to server
+    { "addexemption", new CommandSetting(true, true, true) }, // Admin only, server only
+    { "removeexemption", new CommandSetting(true, true, true) }, // Admin only, server only
+    { "reloadconfig", new CommandSetting(true, true, true) }, // Admin only, server only
+    { "heal", new CommandSetting(true, true, true) }, // Admin only, server only
+    { "help", new CommandSetting(true, false, false) }, // Everyone can use, not server restricted
+    { "liststats", new CommandSetting(true, false, false) }, // Everyone can use, not server restricted
+    { "showhunger", new CommandSetting(true, true, true) }, // Admin only, server only
+};
+    }
+
+
     public class ChatCommands : IDisposable
     {
         const string MainCommand = "/isurvival";
@@ -35,18 +64,41 @@ namespace PEPCO.iSurvival.Chat
 
                 sendToOthers = false;
                 var thisPlayer = MyAPIGateway.Session.LocalHumanPlayer;
+                var command = messageText.Substring(MainCommand.Length).Trim().Split(' ')[0].ToLower();
 
-                if (!IsAdmin(thisPlayer))
+                // Check if command is in the settings dictionary
+                if (!CommandSetting.Chat.ContainsKey(command))
+                {
+                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Unknown command: {command}");
+                    return;
+                }
+
+                var setting = CommandSetting.Chat[command];
+
+                // Check if the command is enabled
+                if (!setting.IsEnabled)
+                {
+                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{command} command is currently disabled.");
+                    return;
+                }
+
+                // Check if admin-only command and player is not admin
+                if (setting.AdminOnly && !IsAdmin(thisPlayer))
                 {
                     MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "You are not an admin!");
                     return;
                 }
 
-                // Clean and process the command
-                string[] commandParts = messageText.Substring(MainCommand.Length).Trim().Split(' ');
+                // Check if server-only command and not running on the server
+                if (setting.ServerOnly && !MyAPIGateway.Multiplayer.IsServer)
+                {
+                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{command} can only be executed on the server.");
+                    return;
+                }
 
                 // Process the command based on the first keyword
-                switch (commandParts[0].ToLower())
+                string[] commandParts = messageText.Substring(MainCommand.Length).Trim().Split(' ');
+                switch (command)
                 {
                     case "exempt":
                         ShowPlayerExemptions();
@@ -69,8 +121,12 @@ namespace PEPCO.iSurvival.Chat
                     case "liststats":
                         ListPlayerStats(thisPlayer);
                         break;
+                    case "showhunger":
+                        ShowHunger(thisPlayer);
+                        break;
                     default:
-                        UpdateStat(commandParts);
+                        //UpdateStat(commandParts);
+                        MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Unknown command: {command}");
                         break;
                 }
             }
@@ -78,6 +134,12 @@ namespace PEPCO.iSurvival.Chat
             {
                 iSurvivalLog.Error(e);
             }
+        }
+
+        private void ShowHunger(IMyPlayer player)
+        {
+            MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"ShowHunger Test");
+            HungerTracker.UpdateHungerAndCalculateTimeRemaining(player);
         }
 
         // Check if the player is an admin
@@ -258,7 +320,7 @@ namespace PEPCO.iSurvival.Chat
 
             if (commandParts.Length == 1)
             {
-                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName} config: Base: {statSetting.Base} * Multiplier: {statSetting.Multiplier} = Value: {statSetting.Value}");
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName} config: Base: {statSetting.Base} * Multiplier: {statSetting.Multiplier}");
                 return;
             }
 
@@ -292,9 +354,6 @@ namespace PEPCO.iSurvival.Chat
                 case "multiplier":
                     MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName} multiplier: {statSetting.Multiplier}");
                     break;
-                case "value":
-                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName} value: {statSetting.Value}");
-                    break;
                 default:
                     MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Unknown property: {propertyName}. Use 'base', 'multiplier', or 'value'.");
                     break;
@@ -316,8 +375,12 @@ namespace PEPCO.iSurvival.Chat
                     statSetting.UpdateValue(); // Recalculate the value
                     MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName} multiplier set to {value}");
                     break;
-                case "value":
-                    statSetting.Value = value; // Directly set the value
+                case "increaseMultiplier":
+                    statSetting.IncreaseMultiplier = value; // Directly set the value
+                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName} value set to {value}");
+                    break;
+                case "decreaseMultiplier":
+                    statSetting.DecreaseMultiplier = value; // Directly set the value
                     MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName} value set to {value}");
                     break;
                 default:

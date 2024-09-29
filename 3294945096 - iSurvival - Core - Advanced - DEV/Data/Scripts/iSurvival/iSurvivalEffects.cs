@@ -3,6 +3,7 @@ using PEPCO.iSurvival.Log;
 using PEPCO.iSurvival.stats;
 using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
+using Sandbox.Game.Entities.Character;
 using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace PEPCO.iSurvival.Effects
 {
     public static class Processes
     {
-        public static void ProcessPlayer(IMyPlayer player,MyEntityStatComponent statComp)
+        public static void ProcessPlayer(IMyPlayer player, MyEntityStatComponent statComp)
         {
 
             // Initialize the stats
@@ -42,7 +43,7 @@ namespace PEPCO.iSurvival.Effects
                 Metabolism.ApplyMetabolismEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
                 Movement.ProcessMovementEffects(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
             }
-        }       
+        }
 
         public static class Movement
         {
@@ -123,30 +124,34 @@ namespace PEPCO.iSurvival.Effects
             }
             public static void ProcessStandingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
-                MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Standing");
-                Core.iSurvivalSession.ApplyStatChange(stamina, 1, 1);
+                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Standing");
+                //Core.iSurvivalSession.ApplyStatChange(stamina, 1, 1);
 
             }
             public static void ProcessSprintingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
                 MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Sprinting");
-                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -3);
+                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -5);
             }
             public static void ProcessCrouchingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
                 MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Crouching");
+                //Core.iSurvivalSession.ApplyStatChange(stamina, 1, 3);
             }
             public static void ProcessCrouchWalkingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
                 MyAPIGateway.Utilities.ShowMessage("iSurvival", $"CrouchWalking");
+                //Core.iSurvivalSession.ApplyStatChange(stamina, 1, 2);
             }
             public static void ProcessWalkingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
                 MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Walking");
+                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -1);
             }
             public static void ProcessRunningEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
                 MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Running");
+                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -2);
             }
             public static void ProcessLadderEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
@@ -229,11 +234,11 @@ namespace PEPCO.iSurvival.Effects
                 float metabolicRate = CalculateMetabolicRate(player);
 
                 // Apply metabolism effects
-                ApplyMetabolicChanges(statComp, metabolicRate,calories,fat,cholesterol,sodium,carbohydrates,protein,vitamins,hunger,water,fatigue,stamina);
+                ApplyMetabolicChanges(statComp, metabolicRate, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
 
                 // Update Hunger after applying changes
                 UpdateHunger(hunger, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins);
-                HungerTracker.UpdateHungerAndCalculateTimeRemaining(player, hunger);
+
             }
 
             private static void ApplyMetabolicChanges(MyEntityStatComponent statComp, float metabolicRate, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
@@ -291,16 +296,88 @@ namespace PEPCO.iSurvival.Effects
                 {
                     Core.iSurvivalSession.ApplyStatChange(water, metabolicRate, -waterBurnRate); // Decrease water
                 }
-                if (fatigue != null)
+                // Restore stamina using nutrient stats and adjust based on nutrient fullness
+                RestoreStaminaUsingNutrients(calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, stamina, fatigue);
+                // Apply fatigue effects dynamically based on nutrient levels and stamina
+                AdjustFatigueLevels(calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, stamina, fatigue);
+            }
+            private static void RestoreStaminaUsingNutrients(MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat stamina, MyEntityStat fatigue)
+            {
+                // Define nutrient contribution factors (how much each nutrient contributes to stamina restoration)
+                const float calorieFactor = 0.01f;
+                const float fatFactor = 0.02f;
+                const float cholesterolFactor = 0.01f;
+                const float sodiumFactor = 0.005f;
+                const float carbFactor = 0.015f;
+                const float proteinFactor = 0.02f;
+                const float vitaminFactor = 0.005f;
+
+                // Check the current value of each nutrient and calculate the contribution to stamina restoration
+                float staminaRestored = 0f;
+                float fatigueMultiplier = CalculateFatigueEffect(fatigue);
+
+                // Apply nutrient contributions to stamina, considering fatigue multiplier
+                staminaRestored += ConsumeNutrient(calories, 1, calorieFactor * fatigueMultiplier);
+                staminaRestored += ConsumeNutrient(fat, 1, fatFactor * fatigueMultiplier);
+                staminaRestored += ConsumeNutrient(cholesterol, 1, cholesterolFactor * fatigueMultiplier);
+                staminaRestored += ConsumeNutrient(sodium, 1, sodiumFactor * fatigueMultiplier);
+                staminaRestored += ConsumeNutrient(carbohydrates, 1, carbFactor * fatigueMultiplier);
+                staminaRestored += ConsumeNutrient(protein, 1, proteinFactor * fatigueMultiplier);
+                staminaRestored += ConsumeNutrient(vitamins, 1, vitaminFactor * fatigueMultiplier);
+
+                // Apply the total restored stamina
+                if (stamina != null && staminaRestored > 0)
                 {
-                    Core.iSurvivalSession.ApplyStatChange(fatigue, metabolicRate, 0.5); // Increase fatigue
-                }
-                if (stamina != null)
-                {
-                    Core.iSurvivalSession.ApplyStatChange(stamina, metabolicRate, 1); // Increase stamina
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, staminaRestored); // Increase stamina
                 }
             }
+            private static float ConsumeNutrient(MyEntityStat nutrient, float maxConsume, float factor)
+            {
+                if (nutrient != null && nutrient.Value > 0)
+                {
+                    float consumeAmount = Math.Min(nutrient.Value, maxConsume);
+                    Core.iSurvivalSession.ApplyStatChange(nutrient, 1, -consumeAmount); // Deplete some nutrient
+                    return consumeAmount * factor;
+                }
+                return 0;
+            }
+            private static float CalculateFatigueEffect(MyEntityStat fatigue)
+            {
+                if (fatigue == null)
+                    return 1.0f; // No fatigue impact if fatigue stat is missing
 
+                float fatigueLevel = fatigue.Value / fatigue.MaxValue;
+
+                // Higher fatigue reduces stamina gain, lower fatigue enhances it
+                return MathHelper.Clamp(1.0f - fatigueLevel, 0.5f, 1.5f); // Adjust the range as needed
+            }
+            private static void AdjustFatigueLevels(MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat stamina, MyEntityStat fatigue)
+            {
+                if (fatigue == null || stamina == null)
+                    return;
+
+                float staminaLevel = stamina.Value / stamina.MaxValue;
+
+                // Increase fatigue if stamina is low and nutrients are insufficient
+                if (staminaLevel < 0.3f && !AreNutrientsSufficient(calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins))
+                {
+                    Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 0.5f); // Increase fatigue
+                }
+                else if (staminaLevel > 0.7f && AreNutrientsSufficient(calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins))
+                {
+                    Core.iSurvivalSession.ApplyStatChange(fatigue, 1, -0.5f); // Decrease fatigue
+                }
+            }
+            private static bool AreNutrientsSufficient(MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins)
+            {
+                return calories.Value / calories.MaxValue > 0.5f &&
+                       fat.Value / fat.MaxValue > 0.5f &&
+                       cholesterol.Value / cholesterol.MaxValue > 0.5f &&
+                       sodium.Value / sodium.MaxValue > 0.5f &&
+                       carbohydrates.Value / carbohydrates.MaxValue > 0.5f &&
+                       protein.Value / protein.MaxValue > 0.5f &&
+                       vitamins.Value / vitamins.MaxValue > 0.5f;
+            }
 
             public static void UpdateHunger(MyEntityStat hunger, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins)
             {
@@ -325,50 +402,40 @@ namespace PEPCO.iSurvival.Effects
                 // Set hunger value directly based on the average percentage
                 Core.iSurvivalSession.ApplyStatChange(hunger, 1, averagePercentage - hunger.Value);
             }
-        
 
-        public static class HungerTracker
+
+            public static class HungerTracker
             {
-                // Dictionary to store the previous hunger values for each player
-                private static Dictionary<long, double> previousHungerValues = new Dictionary<long, double>();
+                private static readonly Dictionary<long, double> previousHungerValues = new Dictionary<long, double>();
+                private static readonly Dictionary<long, double> previousUpdateTimes = new Dictionary<long, double>();
 
-                // Dictionary to store the previous update times for each player
-                private static Dictionary<long, double> previousUpdateTimes = new Dictionary<long, double>();
-
-                // Method to calculate the current hunger decrease rate based on changing hunger values
                 public static double CalculateActualHungerDecreaseRate(IMyPlayer player, MyEntityStat hunger)
                 {
-                    // Get the current time in minutes
-                    double currentTime = (MyAPIGateway.Session.GameplayFrameCounter / 60);
+                    // Get the current time in minutes using a more accurate method
+                    double currentTime = MyAPIGateway.Session.ElapsedPlayTime.TotalMinutes;
 
-                    // Get player ID
                     long playerId = player.IdentityId;
 
-                    // Check if we have a previous hunger value and time stored for this player
-                    if (previousHungerValues.ContainsKey(playerId) && previousUpdateTimes.ContainsKey(playerId))
+                    double previousHunger;
+                    double previousTime;
+
+                    if (previousHungerValues.TryGetValue(playerId, out previousHunger) &&
+                        previousUpdateTimes.TryGetValue(playerId, out previousTime))
                     {
-                        // Calculate time interval since last update
-                        double timeInterval = currentTime - previousUpdateTimes[playerId];
+                        double timeInterval = currentTime - previousTime;
+                        if (timeInterval <= 0.001) return 0; // Avoid division by zero
 
-                        // Avoid division by zero if time interval is too small
-                        if (timeInterval <= 0.001)
-                            return 0;
+                        double hungerDifference = previousHunger - hunger.Value;
+                        double hungerDecreaseRate = (hungerDifference / timeInterval) * 100; // Hunger decrease per minute
 
-                        // Calculate the difference in hunger value
-                        double hungerDifference = previousHungerValues[playerId] - hunger.Value;
-
-                        // Calculate the hunger decrease rate (hunger difference per minute)
-                        double hungerDecreaseRate = (hungerDifference / timeInterval)*100;
-
-                        // Update previous hunger and time values
                         previousHungerValues[playerId] = hunger.Value;
                         previousUpdateTimes[playerId] = currentTime;
 
-                        return hungerDecreaseRate; // Return the calculated rate
+                        return hungerDecreaseRate;
                     }
+
                     else
                     {
-                        // Initialize previous values for this player if not present
                         previousHungerValues[playerId] = hunger.Value;
                         previousUpdateTimes[playerId] = currentTime;
 
@@ -376,25 +443,32 @@ namespace PEPCO.iSurvival.Effects
                     }
                 }
 
-                // Method to update hunger and calculate time remaining until zero
-                public static void UpdateHungerAndCalculateTimeRemaining(IMyPlayer player, MyEntityStat hunger)
+                public static void UpdateHungerAndCalculateTimeRemaining(IMyPlayer player)
                 {
-                    // Calculate actual hunger decrease rate
-                    double actualHungerDecreaseRate = CalculateActualHungerDecreaseRate(player, hunger);
-
-                    // If the decrease rate is very small or zero, set a default rate to avoid infinite time
-                    if (Math.Abs(actualHungerDecreaseRate) < 0.0001)
+                    var statComponent = player.Character?.Components?.Get<MyEntityStatComponent>();
+                    if (statComponent == null)
                     {
-                        actualHungerDecreaseRate = 0.1; // Set a default minimum rate
+                        iSurvivalLog.Info("Stat component not found.");
+                        return;
                     }
+                    MyEntityStat targetHunger;
+                    if (statComponent.TryGetStat(MyStringHash.GetOrCompute("Hunger"), out targetHunger))
+                    {
+                        double actualHungerDecreaseRate = CalculateActualHungerDecreaseRate(player, targetHunger);
+                        if (Math.Abs(actualHungerDecreaseRate) < 0.0001)
+                        {
+                            actualHungerDecreaseRate = 0.1; // Set a default minimum rate
+                        }
 
-                    // Calculate time remaining until hunger reaches zero
-                    double timeRemaining = hunger.Value / Math.Abs(actualHungerDecreaseRate);
+                        double timeRemaining = targetHunger.Value / Math.Abs(actualHungerDecreaseRate);
 
-                    // Show message with the time remaining to starvation
-                    MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Current Hunger Decrease Rate: {actualHungerDecreaseRate:F2} units/min. Time to Starvation: {timeRemaining:F1} min.");
+                        // Example logging message
+                        MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Current Hunger Decrease Rate: {actualHungerDecreaseRate:F2} units/min. Time to Starvation: {timeRemaining:F1} min.");
+                        iSurvivalLog.Info($"Player {player.DisplayName}: Current Hunger Decrease Rate: {actualHungerDecreaseRate:F2} units/min. Time to Starvation: {timeRemaining:F1} min.");
+                    }
                 }
             }
+
         }
     }
 }

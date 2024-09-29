@@ -15,18 +15,21 @@ namespace PEPCO.iSurvival.stats
     {
         public float Base { get; set; }
         public float Multiplier { get; set; }
-        public float Value { get; set; }
+        public float IncreaseMultiplier { get; set; }
+        public float DecreaseMultiplier { get; set; }
 
-        public StatSetting(float baseValue, float multiplier)
+        public StatSetting(float baseValue, float multiplier, float increaseMultiplier, float decreaseMultiplier)
         {
             Base = baseValue;
             Multiplier = multiplier;
-            Value = Base * Multiplier;
+            IncreaseMultiplier = increaseMultiplier;
+            DecreaseMultiplier = decreaseMultiplier;
+
+
         }
 
         public void UpdateValue()
         {
-            Value = Base * Multiplier;
         }
     }
 
@@ -35,18 +38,18 @@ namespace PEPCO.iSurvival.stats
     {
         public static Dictionary<string, StatSetting> _statSettings = new Dictionary<string, StatSetting>(StringComparer.OrdinalIgnoreCase)
     {
-        { "Sanity", new StatSetting(1, 1) },
-        { "Calories", new StatSetting(1, 1) },
-        { "Fat", new StatSetting(1, 1) },
-        { "Cholesterol", new StatSetting(1, 1) },
-        { "Sodium", new StatSetting(1, 1) },
-        { "Carbohydrates", new StatSetting(1, 1) },
-        { "Protein", new StatSetting(1, 1) },
-        { "Vitamins", new StatSetting(1, 1) },
-        { "Hunger", new StatSetting(1, 1) },
-        { "Water", new StatSetting(1, 1) },
-        { "Fatigue", new StatSetting(1, 1) },
-        { "Stamina", new StatSetting(1, 1) }
+        { "Sanity", new StatSetting(0f, 1f, 1f, 1f) },
+    { "Calories", new StatSetting(0f, 1f, 1f, 1f) },
+    { "Fat", new StatSetting(0f, 1f, 1f, 1f) },
+    { "Cholesterol", new StatSetting(0, 1, 1f, 1f) },
+    { "Sodium", new StatSetting(0f, 1f, 1f, 1f) },
+    { "Carbohydrates", new StatSetting(0f, 1f, 1f, 1f) },
+    { "Protein", new StatSetting(0f, 1f, 1f, 1f) },
+    { "Vitamins", new StatSetting(0f, 1f, 1f, 1f) },
+    { "Hunger", new StatSetting(0f, 1f, 1f, 1f) },
+    { "Water", new StatSetting(0f, 1f, 1f, 1f) },
+    { "Fatigue", new StatSetting(0f, 1f, 1f, 1f) },
+    { "Stamina", new StatSetting(0f, 1f, 1f, 1f) }
     };
     }
 
