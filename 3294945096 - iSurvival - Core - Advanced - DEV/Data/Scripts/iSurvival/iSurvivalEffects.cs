@@ -8,22 +8,25 @@ using Sandbox.ModAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using VRage.Game;
 using VRage.Game.ModAPI;
 using VRage.Utils;
 using VRageMath;
 
+using Sandbox.Game;
+
 namespace PEPCO.iSurvival.Effects
 {
     public static class Processes
     {
+
         public static void ProcessPlayer(IMyPlayer player, MyEntityStatComponent statComp)
         {
-
             // Initialize the stats
             MyEntityStat sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina;
 
-            // Retrieve each stat from the component
+            // Retrieve each stat from the component, using TryGetStat to ensure the stat exists
             statComp.TryGetStat(MyStringHash.GetOrCompute("Sanity"), out sanity);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Calories"), out calories);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Fat"), out fat);
@@ -37,15 +40,130 @@ namespace PEPCO.iSurvival.Effects
             statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina);
 
+            // Check if stamina is low and trigger the blink effect
+            if (stamina != null && stamina.Value < 20)
+            {
+                MyAPIGateway.Utilities.ShowMessage("Blink", $"Start Process for {player.DisplayName}");
+                BlinkEffect.TriggerBlink(player, stamina.Value);
+            }
+
+            // If the hunger stat is valid, apply various effects
             if (hunger != null)
             {
-                // Apply metabolism effect to the player using all the retrieved stats
                 Metabolism.ApplyMetabolismEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
-                Movement.ProcessMovementEffects(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
                 FatigueAndStamina.ProcessFatigue(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
                 Sanity.ProcessSanity(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                Movement.ProcessMovementEffects(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
             }
         }
+
+        public static class BlinkEffect
+        {
+            // Blink list to track which players should blink
+            private static readonly List<long> blinkList = new List<long>();
+
+            // Mod ID for messaging
+            public static ushort ModId = 19008;
+
+            private static Random rand = new Random(); // Random generator for blink intervals
+
+
+            // Register the message handler when the session starts
+            public static void RegisterMessageHandler()
+            {
+                if (!MyAPIGateway.Multiplayer.IsServer)
+                {
+                    MyAPIGateway.Multiplayer.RegisterSecureMessageHandler(ModId, OnMessageReceived);
+                }
+            }
+
+            // Unregister the message handler when the session ends
+            public static void UnregisterMessageHandler()
+            {
+                MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(ModId, OnMessageReceived);
+            }
+
+            // Method to trigger blink on a player
+            public static void TriggerBlink(IMyPlayer player, float stamina)
+            {
+                if (!blinkList.Contains(player.IdentityId))
+                {
+                    blinkList.Add(player.IdentityId);
+                    MyAPIGateway.Utilities.ShowMessage("Blink", $"Player {player.DisplayName} added to Blink List");
+
+                    // Calculate blink frequency and duration based on stamina
+                    float blinkInterval = CalculateBlinkInterval(stamina); // Determine interval based on stamina
+                    float blinkDuration = CalculateBlinkDuration(stamina); // Blink duration can change based on stamina
+
+                    // If this is the local player, trigger the blink immediately
+                    if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
+                    {
+                        ApplyBlinkEffect(true, blinkDuration);
+                    }
+                    else if (MyAPIGateway.Multiplayer.IsServer)
+                    {
+                        // Send a message to the client to blink
+                        MyAPIGateway.Multiplayer.SendMessageTo(ModId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
+                    }
+
+                    // Schedule the next blink after the calculated interval
+                    MyAPIGateway.Parallel.Start(() =>
+                    {
+                        System.Threading.Thread.Sleep((int)(blinkInterval * 1000));
+                        ProcessBlinkForPlayers(); // Reprocess blink after the interval
+                    });
+                }
+            }
+
+            // Method to apply the blink effect (fade to black)
+            public static void ApplyBlinkEffect(bool blink, float duration)
+            {
+                // This method triggers the actual visual effect on the client for the given duration
+                MyVisualScriptLogicProvider.ScreenColorFadingSetColor(Color.Black, 0L);
+                MyVisualScriptLogicProvider.ScreenColorFadingStart(0.25f, blink, 0L);
+
+                // Automatically stop the blink after the duration
+                MyAPIGateway.Parallel.Start(() =>
+                {
+                    System.Threading.Thread.Sleep((int)(duration * 1000));
+                    ApplyBlinkEffect(false, 0); // Stop the blink
+                });
+            }
+
+            // Background process for receiving messages
+            private static void OnMessageReceived(ushort modId, byte[] data, ulong sender, bool reliable)
+            {
+                try
+                {
+                    var msg = Encoding.ASCII.GetString(data);
+                    ApplyBlinkEffect(msg == "blink");
+                }
+                catch (Exception ex)
+                {
+                    MyLog.Default.WriteLineAndConsole($"BlinkEffect Error: {ex}");
+                }
+            }
+
+            // Method to process all players and apply blink if necessary
+            public static void ProcessBlinkForPlayers()
+            {
+                foreach (var playerId in blinkList.ToList()) // Using ToList to avoid modifying the list while iterating
+                {
+                    if (playerId == MyVisualScriptLogicProvider.GetLocalPlayerId())
+                    {
+                        MyAPIGateway.Utilities.ShowMessage("Blink", $"Applying Blink for local player {playerId}");
+                        ApplyBlinkEffect(false); // Apply blink to local player                        
+                    }
+                    else
+                    {
+                        // Send unblink message if not the local player
+                        MyAPIGateway.Multiplayer.SendMessageTo(ModId, Encoding.ASCII.GetBytes("unblink"), MyVisualScriptLogicProvider.GetSteamId(playerId), true);
+                    }
+                }
+                blinkList.Clear(); // Clear the list after processing
+            }
+        }
+
         public static class Sanity
         {
             // Method to process sanity changes based on player stats and environment
@@ -190,7 +308,7 @@ namespace PEPCO.iSurvival.Effects
             }
 
             // Calculate the rate of fatigue change based on nutrient levels
-            private static float CalculateFatigueChangeRate(MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins)
+            public static float CalculateFatigueChangeRate(MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins)
             {
                 float changeRate = 0f;
 

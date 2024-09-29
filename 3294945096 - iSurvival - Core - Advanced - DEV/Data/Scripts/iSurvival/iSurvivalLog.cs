@@ -33,13 +33,14 @@ namespace PEPCO.iSurvival.Log
 
         protected override void UnloadData()
         {
-            instance = null;
-
+            base.UnloadData();
             if (handler != null && handler.AutoClose)
             {
-                Unload();
+                handler.Close(); // Ensure this always gets called
             }
+            handler = null;
         }
+
 
         private void Unload()
         {
@@ -120,18 +121,24 @@ namespace PEPCO.iSurvival.Log
             EnsureHandlerCreated();
             handler.ResetIndent();
         }
-
-        public static void Error(Exception exception, string printText = PRINT_ERROR, int printTimeMs = PRINT_TIME_ERROR)
+        public static void Error(object error, string printText = PRINT_ERROR, int printTimeMs = PRINT_TIME_ERROR)
         {
             EnsureHandlerCreated();
-            handler.Error(exception.ToString(), printText, printTimeMs);
-        }
 
-        public static void Error(string message, string printText = PRINT_ERROR, int printTimeMs = PRINT_TIME_ERROR)
-        {
-            EnsureHandlerCreated();
-            handler.Error(message, printText, printTimeMs);
-        }
+            // Check if the error is an Exception, otherwise treat it as a string
+            string errorMessage;
+
+            if (error is Exception)
+            {
+                errorMessage = ((Exception)error).ToString();
+            }
+            else
+            {
+                errorMessage = error.ToString();
+            }
+
+            handler.Error(errorMessage, printText, printTimeMs);
+        }               
 
         public static void Info(string message, string printText = null, int printTimeMs = PRINT_TIME_INFO)
         {

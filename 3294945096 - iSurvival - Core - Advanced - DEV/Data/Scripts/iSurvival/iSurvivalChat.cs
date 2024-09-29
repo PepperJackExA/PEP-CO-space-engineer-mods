@@ -33,7 +33,7 @@ namespace PEPCO.iSurvival.Chat
     { "heal", new CommandSetting(true, true, true) }, // Admin only, server only
     { "help", new CommandSetting(true, false, false) }, // Everyone can use, not server restricted
     { "liststats", new CommandSetting(true, false, false) }, // Everyone can use, not server restricted
-    { "showhunger", new CommandSetting(true, true, true) }, // Admin only, server only
+    { "showhunger", new CommandSetting(true, false, false) }, // Admin only, server only
 };
     }
 
@@ -51,8 +51,12 @@ namespace PEPCO.iSurvival.Chat
 
         public void Dispose()
         {
-            MyAPIGateway.Utilities.MessageEntered -= MessageEntered;
+            if (MyAPIGateway.Utilities != null)
+            {
+                MyAPIGateway.Utilities.MessageEntered -= MessageEntered;
+            }
         }
+
 
         void MessageEntered(string messageText, ref bool sendToOthers)
         {
@@ -91,7 +95,7 @@ namespace PEPCO.iSurvival.Chat
                 // Check if server-only command and not running on the server
                 if (setting.ServerOnly && !MyAPIGateway.Multiplayer.IsServer)
                 {
-                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{command} can only be executed on the server.");
+                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{command} can only be executed in single player games.");
                     return;
                 }
 
@@ -137,7 +141,23 @@ namespace PEPCO.iSurvival.Chat
 
         private void ShowHunger(IMyPlayer player)
         {
-            MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"ShowHunger Test");
+            var statComp = player.Character.Components?.Get<MyEntityStatComponent>();
+            
+                MyEntityStat sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina;
+
+                // Retrieve each stat from the component
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Calories"), out calories);
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Fat"), out fat);
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Cholesterol"), out cholesterol);
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Sodium"), out sodium);
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Carbohydrates"), out carbohydrates);
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Protein"), out protein);
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Vitamins"), out vitamins);
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"ShowHunger Test");
+
+                float fatigueChangeRate = Effects.Processes.FatigueAndStamina.CalculateFatigueChangeRate(calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins);               
+            
+            MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Hunger Rate: {fatigueChangeRate}");
         }
 
         // Check if the player is an admin

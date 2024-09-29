@@ -16,6 +16,7 @@ using Sandbox.Game.Entities.Character.Components;
 using VRage.ModAPI;
 using Sandbox.Game.Components;
 using static PEPCO.iSurvival.Effects.Processes.Metabolism;
+using static PEPCO.iSurvival.Effects.Processes;
 
 namespace PEPCO.iSurvival.Core
 {
@@ -26,6 +27,8 @@ namespace PEPCO.iSurvival.Core
         public static int runCount = 0;
         public static Random rand = new Random();
         public static int loadWait = 120;
+        
+        private int updateCounter = 0; //For Blink Effect
 
         public static void ApplyStatChange(MyEntityStat stat, double multiplier, double baseChange)
         {
@@ -53,6 +56,7 @@ namespace PEPCO.iSurvival.Core
         public override void LoadData()
         {
             base.LoadData();
+            BlinkEffect.RegisterMessageHandler();
 
             if (MyAPIGateway.Multiplayer.IsServer)
             {
@@ -62,6 +66,8 @@ namespace PEPCO.iSurvival.Core
 
         protected override void UnloadData()
         {
+            base.UnloadData();
+            BlinkEffect.UnregisterMessageHandler();
             // Unregister message handler when the mod is unloaded
             MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(modId, OnMessageReceived);
         }
@@ -76,6 +82,7 @@ namespace PEPCO.iSurvival.Core
                 if (MyAPIGateway.Multiplayer.IsServer && runCount % 60 == 0) // Run every second on server
                 {
                     ProcessPlayersSafely();
+                    // Process the blink list for all players
                 }
 
                 if (runCount > 299)

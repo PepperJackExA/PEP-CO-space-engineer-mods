@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using PEPCO.iSurvival.Chat;
 using PEPCO.iSurvival.Log;
+using Sandbox.Game.GameSystems.Chat;
 
 namespace PEPCO.iSurvival.settings
 {
@@ -15,28 +16,30 @@ namespace PEPCO.iSurvival.settings
     {
         public iSurvivalSettings Settings = new iSurvivalSettings();
         public static List<ulong> playerExceptions = new List<ulong>();
-        public ChatCommands ChatCommands;
+        public ChatCommands chatCommands;
 
         public override void LoadData()
         {
             try
             {
-                Settings.Load(); // Load settings from file
-                ApplySettings(); // Apply settings to the session
-                playerExceptions = Settings.playerExceptions.Distinct().ToList(); // Update player exceptions
-                ChatCommands = new ChatCommands(this); // Initialize chat commands
-                iSurvivalLog.Info("iSurvivalSessionSettings successfully loaded.");
+                Settings.Load(); // Load settings
+                ApplySettings(); // Apply once here, not in every class
+                chatCommands = new ChatCommands(this); // Initialize only once
             }
             catch (Exception ex)
             {
-                iSurvivalLog.Error("Failed to load iSurvivalSessionSettings: " + ex.Message);
+                iSurvivalLog.Error("Failed to load settings: " + ex.Message);
             }
         }
+
 
         protected override void UnloadData()
         {
             base.UnloadData();
-            // Add cleanup for any event handlers or resources here if necessary
+            if (chatCommands != null)
+            {
+                chatCommands.Dispose(); // Dispose chat commands to unregister event handlers
+            }
         }
 
         // Updates settings and applies them
