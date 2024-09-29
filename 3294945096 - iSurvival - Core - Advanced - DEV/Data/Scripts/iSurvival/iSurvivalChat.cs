@@ -9,7 +9,6 @@ using PEPCO.iSurvival.settings;
 using PEPCO.iSurvival.stats;
 using System.Collections.Generic;
 using System.Net;
-using static PEPCO.iSurvival.Effects.Processes.Metabolism;
 
 namespace PEPCO.iSurvival.Chat
 {
@@ -139,7 +138,6 @@ namespace PEPCO.iSurvival.Chat
         private void ShowHunger(IMyPlayer player)
         {
             MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"ShowHunger Test");
-            HungerTracker.UpdateHungerAndCalculateTimeRemaining(player);
         }
 
         // Check if the player is an admin

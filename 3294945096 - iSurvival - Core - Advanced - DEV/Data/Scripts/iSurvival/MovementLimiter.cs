@@ -38,23 +38,33 @@ namespace PEPCO.iSurvival.MovementLimiter
                 var physics = character?.Physics;
                 if (physics == null)
                     continue;
+
                 // Initialize the stats
                 var statComp = player.Character.Components?.Get<MyEntityStatComponent>();
                 MyEntityStat fatigue, stamina;
 
                 // Retrieve each stat from the component
-                statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue);
-                statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina);
-                if (fatigue.Value > 100 && stamina.Value > 20) continue;
+                if (!statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue) ||
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina))
+                    continue;
 
-                // Get the current velocity of the player.
+                // Apply speed reduction if both stats are low
+                if (fatigue.Value > 20 && stamina.Value > 20)
+                    continue;
+
+                // Calculate the current velocity of the player.
                 Vector3 currentVelocity = physics.LinearVelocity;
+
                 // Check if the player is flying or walking.
                 bool isFlying = character.CurrentMovementState == MyCharacterMovementEnum.Flying;
 
                 // Determine the speed limit based on movement type.
                 float speedLimit = isFlying ? MaxFlySpeed : MaxWalkSpeed;
-                speedLimit = speedLimit * (stamina.Value / 20);
+
+                // Modify speed limit based on stamina level, clamped to avoid extreme slow speeds.
+                float staminaMultiplier = MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f); // Speed will be between 50% and 100%
+                speedLimit *= staminaMultiplier;
+
                 // Get the nearby grid velocity and check if it exists.
                 Vector3? nearbyGridVelocity = GetNearbyGridVelocity(character);
 

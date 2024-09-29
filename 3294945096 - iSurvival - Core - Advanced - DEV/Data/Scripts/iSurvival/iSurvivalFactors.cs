@@ -15,7 +15,7 @@ namespace PEPCO.iSurvival.factors
 
             if (currentWeather.ToLower().Contains("clear"))
             {
-                return 1.0f; // No effect
+                return 1f; // No effect
             }
             else if (currentWeather.ToLower().Contains("rain"))
             {
