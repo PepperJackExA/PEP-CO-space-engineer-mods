@@ -17,6 +17,7 @@ using VRage.ModAPI;
 using Sandbox.Game.Components;
 using static PEPCO.iSurvival.Effects.Processes.Metabolism;
 using static PEPCO.iSurvival.Effects.Processes;
+using VRage.Utils;
 
 namespace PEPCO.iSurvival.Core
 {
@@ -56,7 +57,6 @@ namespace PEPCO.iSurvival.Core
         public override void LoadData()
         {
             base.LoadData();
-            BlinkEffect.RegisterMessageHandler();
 
             if (MyAPIGateway.Multiplayer.IsServer)
             {
@@ -67,13 +67,15 @@ namespace PEPCO.iSurvival.Core
         protected override void UnloadData()
         {
             base.UnloadData();
-            BlinkEffect.UnregisterMessageHandler();
             // Unregister message handler when the mod is unloaded
             MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(modId, OnMessageReceived);
         }
 
         public override void UpdateAfterSimulation()
         {
+            // Process blink for players if necessary
+            float deltaTime = 0.016f;  // Assuming 60 FPS, each frame is ~0.016 seconds
+            BlinkEffect.UpdateBlinkTimers(deltaTime);  // Update the blink timers each frame
             try
             {
                 if (++runCount % 15 > 0) // Run every quarter of a second
@@ -119,10 +121,12 @@ namespace PEPCO.iSurvival.Core
                 if (statComp == null)
                     continue;
 
+
                 // Process player stats if alive and not recently revived
                 Effects.Processes.ProcessPlayer(player, statComp);
             }
         }
+
 
         private void OnMessageReceived(ushort modId, byte[] data, ulong sender, bool reliable)
         {
