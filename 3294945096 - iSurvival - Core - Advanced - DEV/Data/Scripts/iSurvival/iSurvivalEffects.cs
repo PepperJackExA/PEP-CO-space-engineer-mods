@@ -16,6 +16,8 @@ using VRageMath;
 
 using Sandbox.Game;
 
+using Sandbox.Game;
+
 namespace PEPCO.iSurvival.Effects
 {
     public static class Processes
@@ -41,10 +43,10 @@ namespace PEPCO.iSurvival.Effects
             statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina);
 
             // Check if stamina is low and trigger the blink effect
-            if (stamina != null && stamina.Value < 20)
+            if (fatigue != null && fatigue.Value < 20)
             {
-                MyAPIGateway.Utilities.ShowMessage("Blink", $"Start Process for {player.DisplayName}");
-                BlinkEffect.TriggerBlink(player, stamina.Value);
+                //MyAPIGateway.Utilities.ShowMessage("Blink", $"Start Process for {player.DisplayName}");
+                BlinkEffect.TriggerBlink(player, fatigue.Value);
             }
 
             // If the hunger stat is valid, apply various effects
@@ -59,75 +61,105 @@ namespace PEPCO.iSurvival.Effects
 
         public static class BlinkEffect
         {
-            // Blink list to track which players should blink
+            // List to track which players are currently blinking
             private static readonly List<long> blinkList = new List<long>();
 
-            // Mod ID for messaging
+            // Dictionary to store each player's blink timer and interval
+            private static Dictionary<long, float> blinkTimers = new Dictionary<long, float>();
+            private static Dictionary<long, float> blinkIntervals = new Dictionary<long, float>();
+
+            // Mod ID for multiplayer messaging
             public static ushort ModId = 19008;
 
-            private static Random rand = new Random(); // Random generator for blink intervals
+            // Random generator for blink intervals
+            private static readonly Random rand = new Random();
 
-
-            // Register the message handler when the session starts
-            public static void RegisterMessageHandler()
+            // Trigger blink on a player, with a given duration
+            public static void TriggerBlink(IMyPlayer player, float staminaValue)
             {
-                if (!MyAPIGateway.Multiplayer.IsServer)
-                {
-                    MyAPIGateway.Multiplayer.RegisterSecureMessageHandler(ModId, OnMessageReceived);
-                }
-            }
-
-            // Unregister the message handler when the session ends
-            public static void UnregisterMessageHandler()
-            {
-                MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(ModId, OnMessageReceived);
-            }
-
-            // Method to trigger blink on a player
-            public static void TriggerBlink(IMyPlayer player, float stamina)
-            {
+                // If the player is not already blinking, start the blink process
                 if (!blinkList.Contains(player.IdentityId))
                 {
+                    float blinkDuration = GetBlinkDuration(staminaValue);  // How long the blink lasts
                     blinkList.Add(player.IdentityId);
-                    MyAPIGateway.Utilities.ShowMessage("Blink", $"Player {player.DisplayName} added to Blink List");
+                    blinkTimers[player.IdentityId] = blinkDuration;
+                    blinkIntervals[player.IdentityId] = GetBlinkInterval(staminaValue);  // Set the time until the next blink
 
-                    // Calculate blink frequency and duration based on stamina
-                    float blinkInterval = CalculateBlinkInterval(stamina); // Determine interval based on stamina
-                    float blinkDuration = CalculateBlinkDuration(stamina); // Blink duration can change based on stamina
-
-                    // If this is the local player, trigger the blink immediately
                     if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
                     {
-                        ApplyBlinkEffect(true, blinkDuration);
+                        ApplyBlinkEffect(true, blinkDuration);  // Start blinking immediately
                     }
-                    else if (MyAPIGateway.Multiplayer.IsServer)
-                    {
-                        // Send a message to the client to blink
-                        MyAPIGateway.Multiplayer.SendMessageTo(ModId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
-                    }
-
-                    // Schedule the next blink after the calculated interval
-                    MyAPIGateway.Parallel.Start(() =>
-                    {
-                        System.Threading.Thread.Sleep((int)(blinkInterval * 1000));
-                        ProcessBlinkForPlayers(); // Reprocess blink after the interval
-                    });
                 }
             }
 
-            // Method to apply the blink effect (fade to black)
-            public static void ApplyBlinkEffect(bool blink, float duration)
+            // Get a random blink duration based on the player's stamina level
+            private static float GetBlinkDuration(float staminaValue)
             {
-                // This method triggers the actual visual effect on the client for the given duration
+                // Blink duration is shorter when stamina is low
+                float maxDuration = 2f;
+                float minDuration = 0.5f;
+                float blinkDuration = MathHelper.Lerp(minDuration, maxDuration, staminaValue / 100);
+                return blinkDuration + (float)rand.NextDouble();  // Add a small random factor
+            }
+
+            // Get a random interval before the next blink, based on stamina level
+            private static float GetBlinkInterval(float staminaValue)
+            {
+                // Maximum and minimum time between blinks
+                float maxInterval = 10.0f;  // When stamina is full, wait up to 10 seconds between blinks
+                float minInterval = 1.0f;   // When stamina is low, wait as little as 1 second between blinks
+
+                // The interval shortens as stamina decreases
+                return MathHelper.Lerp(minInterval, maxInterval, staminaValue / 100);
+            }
+
+            // Apply the blink effect (fade to black or stop blinking)
+            public static void ApplyBlinkEffect(bool blink, float fadeTime)
+            {
+                // This method triggers the actual visual effect on the client
                 MyVisualScriptLogicProvider.ScreenColorFadingSetColor(Color.Black, 0L);
                 MyVisualScriptLogicProvider.ScreenColorFadingStart(0.25f, blink, 0L);
+            }
 
-                // Automatically stop the blink after the duration
-                MyAPIGateway.Parallel.Start(() =>
+            // Update the blink timers each frame
+            public static void UpdateBlinkTimers(float deltaTime)
+            {
+                // Process each player in the blink list
+                foreach (var playerId in blinkList.ToList())  // Use ToList to avoid modifying the collection during iteration
                 {
-                    System.Threading.Thread.Sleep((int)(duration * 1000));
-                    ApplyBlinkEffect(false, 0); // Stop the blink
-                });
+                    if (!blinkTimers.ContainsKey(playerId) || !blinkIntervals.ContainsKey(playerId)) continue;
+
+                    // Decrease the blink timer (how long the blink lasts)
+                    blinkTimers[playerId] -= deltaTime;
+
+                    // Check if the blink duration has ended
+                    if (blinkTimers[playerId] <= 0)
+                    {
+                        StopBlink(playerId);  // Stop the blink effect
+                    }
+                    else
+                    {
+                        // Decrease the interval timer (time between blinks)
+                        blinkIntervals[playerId] -= deltaTime;
+
+                        // If the interval timer reaches zero, start the next blink
+                        if (blinkIntervals[playerId] <= 0)
+                        {
+                            float staminaValue = GetPlayerStamina(playerId);  // Example method to get player's stamina
+                            blinkIntervals[playerId] = GetBlinkInterval(staminaValue);  // Set next blink interval
+                            TriggerBlink(GetPlayerById(playerId), staminaValue);  // Trigger next blink
+                        }
+                    }
+                }
+            }
+
+            // Stop the blink effect for a player
+            private static void StopBlink(long playerId)
+            {
+                ApplyBlinkEffect(false, 0.25f);  // Stop the blink effect
+                blinkList.Remove(playerId);  // Remove the player from the blink list
+                blinkTimers.Remove(playerId);  // Remove the player's blink timer
+                blinkIntervals.Remove(playerId);  // Remove the player's interval timer
             }
 
             // Background process for receiving messages
@@ -136,33 +168,18 @@ namespace PEPCO.iSurvival.Effects
                 try
                 {
                     var msg = Encoding.ASCII.GetString(data);
-                    ApplyBlinkEffect(msg == "blink");
+                    ApplyBlinkEffect(msg == "blink", 0);
                 }
                 catch (Exception ex)
                 {
                     MyLog.Default.WriteLineAndConsole($"BlinkEffect Error: {ex}");
                 }
             }
-
-            // Method to process all players and apply blink if necessary
-            public static void ProcessBlinkForPlayers()
-            {
-                foreach (var playerId in blinkList.ToList()) // Using ToList to avoid modifying the list while iterating
-                {
-                    if (playerId == MyVisualScriptLogicProvider.GetLocalPlayerId())
-                    {
-                        MyAPIGateway.Utilities.ShowMessage("Blink", $"Applying Blink for local player {playerId}");
-                        ApplyBlinkEffect(false); // Apply blink to local player                        
-                    }
-                    else
-                    {
-                        // Send unblink message if not the local player
-                        MyAPIGateway.Multiplayer.SendMessageTo(ModId, Encoding.ASCII.GetBytes("unblink"), MyVisualScriptLogicProvider.GetSteamId(playerId), true);
-                    }
-                }
-                blinkList.Clear(); // Clear the list after processing
-            }
         }
+
+
+
+
 
         public static class Sanity
         {
