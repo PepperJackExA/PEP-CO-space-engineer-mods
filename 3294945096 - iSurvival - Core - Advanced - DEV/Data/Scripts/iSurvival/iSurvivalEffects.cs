@@ -15,18 +15,19 @@ using VRage.Utils;
 using VRageMath;
 
 using Sandbox.Game;
-
-using Sandbox.Game;
+using PEPCO.iSurvival.settings;
+using VRage.ObjectBuilders;
+using VRage;
 
 namespace PEPCO.iSurvival.Effects
 {
     public static class Processes
     {
-
         public static void ProcessPlayer(IMyPlayer player, MyEntityStatComponent statComp)
         {
+
             // Initialize the stats
-            MyEntityStat sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina;
+            MyEntityStat sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina, health;
 
             // Retrieve each stat from the component, using TryGetStat to ensure the stat exists
             statComp.TryGetStat(MyStringHash.GetOrCompute("Sanity"), out sanity);
@@ -41,13 +42,23 @@ namespace PEPCO.iSurvival.Effects
             statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina);
-
-            // Check if stamina is low and trigger the blink effect
-            if (fatigue != null && fatigue.Value < 20)
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Health"), out health);
+            // Starvation Stuff
+            if (hunger.Value < 20)
             {
-                //MyAPIGateway.Utilities.ShowMessage("Blink", $"Start Process for {player.DisplayName}");
-                BlinkEffect.TriggerBlink(player, fatigue.Value);
+                health.Value = health.Value - 1;
+
             }
+
+            // BLINK STUFF
+            if (fatigue.Value > 20 || Core.iSurvivalSession.rand.Next((int)fatigue.Value) > 0) return;
+
+            Core.iSurvivalSession.blinkList.Add(player.IdentityId);
+            if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
+                Effects.Processes.Blink.blink(true);
+            else if (MyAPIGateway.Multiplayer.IsServer)
+                MyAPIGateway.Multiplayer.SendMessageTo(Core.iSurvivalSession.modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
+            // END BLINK STUFF
 
             // If the hunger stat is valid, apply various effects
             if (hunger != null)
@@ -56,131 +67,95 @@ namespace PEPCO.iSurvival.Effects
                 FatigueAndStamina.ProcessFatigue(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
                 Sanity.ProcessSanity(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
                 Movement.ProcessMovementEffects(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                Blocks.ProcessBlockstEffects(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
             }
+
+            
+        
         }
-
-        public static class BlinkEffect
+        public static class Blocks
         {
-            // List to track which players are currently blinking
-            private static readonly List<long> blinkList = new List<long>();
-
-            // Dictionary to store each player's blink timer and interval
-            private static Dictionary<long, float> blinkTimers = new Dictionary<long, float>();
-            private static Dictionary<long, float> blinkIntervals = new Dictionary<long, float>();
-
-            // Mod ID for multiplayer messaging
-            public static ushort ModId = 19008;
-
-            // Random generator for blink intervals
-            private static readonly Random rand = new Random();
-
-            // Trigger blink on a player, with a given duration
-            public static void TriggerBlink(IMyPlayer player, float staminaValue)
+            public static void ProcessBlockstEffects(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
             {
-                // If the player is not already blinking, start the blink process
-                if (!blinkList.Contains(player.IdentityId))
+                var block = player.Controller?.ControlledEntity?.Entity as IMyCubeBlock;
+                float Averagestats = (fatigue.Value + sanity.Value + hunger.Value + water.Value)/4;
+
+                if (block != null)
                 {
-                    float blinkDuration = GetBlinkDuration(staminaValue);  // How long the blink lasts
-                    blinkList.Add(player.IdentityId);
-                    blinkTimers[player.IdentityId] = blinkDuration;
-                    blinkIntervals[player.IdentityId] = GetBlinkInterval(staminaValue);  // Set the time until the next blink
+                    var blockDef = block.BlockDefinition.SubtypeId.ToString();
+                    if (blockDef.Contains("Cryo")) return;
 
-                    if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
+                    if (blockDef.Contains("Bed"))
                     {
-                        ApplyBlinkEffect(true, blinkDuration);  // Start blinking immediately
-                    }
-                }
-            }
-
-            // Get a random blink duration based on the player's stamina level
-            private static float GetBlinkDuration(float staminaValue)
-            {
-                // Blink duration is shorter when stamina is low
-                float maxDuration = 2f;
-                float minDuration = 0.5f;
-                float blinkDuration = MathHelper.Lerp(minDuration, maxDuration, staminaValue / 100);
-                return blinkDuration + (float)rand.NextDouble();  // Add a small random factor
-            }
-
-            // Get a random interval before the next blink, based on stamina level
-            private static float GetBlinkInterval(float staminaValue)
-            {
-                // Maximum and minimum time between blinks
-                float maxInterval = 10.0f;  // When stamina is full, wait up to 10 seconds between blinks
-                float minInterval = 1.0f;   // When stamina is low, wait as little as 1 second between blinks
-
-                // The interval shortens as stamina decreases
-                return MathHelper.Lerp(minInterval, maxInterval, staminaValue / 100);
-            }
-
-            // Apply the blink effect (fade to black or stop blinking)
-            public static void ApplyBlinkEffect(bool blink, float fadeTime)
-            {
-                // This method triggers the actual visual effect on the client
-                MyVisualScriptLogicProvider.ScreenColorFadingSetColor(Color.Black, 0L);
-                MyVisualScriptLogicProvider.ScreenColorFadingStart(0.25f, blink, 0L);
-            }
-
-            // Update the blink timers each frame
-            public static void UpdateBlinkTimers(float deltaTime)
-            {
-                // Process each player in the blink list
-                foreach (var playerId in blinkList.ToList())  // Use ToList to avoid modifying the collection during iteration
-                {
-                    if (!blinkTimers.ContainsKey(playerId) || !blinkIntervals.ContainsKey(playerId)) continue;
-
-                    // Decrease the blink timer (how long the blink lasts)
-                    blinkTimers[playerId] -= deltaTime;
-
-                    // Check if the blink duration has ended
-                    if (blinkTimers[playerId] <= 0)
-                    {
-                        StopBlink(playerId);  // Stop the blink effect
-                    }
-                    else
-                    {
-                        // Decrease the interval timer (time between blinks)
-                        blinkIntervals[playerId] -= deltaTime;
-
-                        // If the interval timer reaches zero, start the next blink
-                        if (blinkIntervals[playerId] <= 0)
+                        Core.iSurvivalSession.ApplyStatChange(stamina, 1, 2);
+                        Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 2);
+                        //stamina.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                        //fatigue.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
+                        if (sanity.Value < Averagestats)
                         {
-                            float staminaValue = GetPlayerStamina(playerId);  // Example method to get player's stamina
-                            blinkIntervals[playerId] = GetBlinkInterval(staminaValue);  // Set next blink interval
-                            TriggerBlink(GetPlayerById(playerId), staminaValue);  // Trigger next blink
+                            Core.iSurvivalSession.ApplyStatChange(sanity, 1, 0.25);
+                            //sanity.Increase(0.5f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
+                        }
+                        return;
+                    }
+                    else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
+                    {
+                        Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 1);
+                        Core.iSurvivalSession.ApplyStatChange(stamina, 1, 2);
+                        //fatigue.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health), null);
+                        //stamina.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
+                        if (hunger.Value > 20)
+                        {
+                            Core.iSurvivalSession.ApplyStatChange(sanity, 1, 0.5);
+                            //hunger.Decrease(ProcessDrain(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.hungerdrainmultiplier, null);
+                            player.Character.GetInventory(0).AddItems((MyFixedPoint)(((100 - Averagestats) / 100)), (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
+                        }
+                    }
+                    else if (blockDef != null)
+                    {
+                        if (fatigue.Value < 25)
+                        {
+                            Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 0.25);
+                            //MyAPIGateway.Utilities.ShowMessage("sitting:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.SittingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier}");
+                            //fatigue.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.SittingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
+                        }
+                        if (stamina.Value < 25)
+                        {
+                            Core.iSurvivalSession.ApplyStatChange(stamina, 1, 1);
+                            //MyAPIGateway.Utilities.ShowMessage("sitting:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.SittingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier}");
+                            //stamina.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.SittingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier, null);
                         }
                     }
                 }
             }
-
-            // Stop the blink effect for a player
-            private static void StopBlink(long playerId)
+        }
+        public static class Blink
+        {
+            public static void getPoke(byte[] poke)
             {
-                ApplyBlinkEffect(false, 0.25f);  // Stop the blink effect
-                blinkList.Remove(playerId);  // Remove the player from the blink list
-                blinkTimers.Remove(playerId);  // Remove the player's blink timer
-                blinkIntervals.Remove(playerId);  // Remove the player's interval timer
-            }
-
-            // Background process for receiving messages
-            private static void OnMessageReceived(ushort modId, byte[] data, ulong sender, bool reliable)
-            {
+                // To call blink action on clients
                 try
                 {
-                    var msg = Encoding.ASCII.GetString(data);
-                    ApplyBlinkEffect(msg == "blink", 0);
+                    var msg = ASCIIEncoding.ASCII.GetString(poke);
+                    blink(msg == "blink");
                 }
                 catch (Exception ex)
                 {
-                    MyLog.Default.WriteLineAndConsole($"BlinkEffect Error: {ex}");
+                    Echo("Fatigue exception", ex.ToString());
                 }
             }
+
+            public static void blink(bool blink)
+            {
+                MyVisualScriptLogicProvider.ScreenColorFadingSetColor(Color.Black, 0L);
+                MyVisualScriptLogicProvider.ScreenColorFadingStart(0.25f, blink, 0L);
+            }
+            public static void Echo(string msg1, string msg2 = "")
+            {
+                //      MyAPIGateway.Utilities.ShowMessage(msg1, msg2);
+                MyLog.Default.WriteLineAndConsole(msg1 + ": " + msg2);
+            }
         }
-
-
-
-
-
         public static class Sanity
         {
             // Method to process sanity changes based on player stats and environment
@@ -307,7 +282,6 @@ namespace PEPCO.iSurvival.Effects
                 return 0f;
             }           
         }
-
         public static class FatigueAndStamina
         {
             public static void ProcessFatigue(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
@@ -543,7 +517,7 @@ namespace PEPCO.iSurvival.Effects
         public static class Metabolism
         {
             public static float CalculateMetabolicRate(IMyPlayer player)
-            {
+            {                
                 float baseMetabolicRate = 0.1f; // Base metabolic rate
 
                 // Get environmental factors
@@ -707,6 +681,7 @@ namespace PEPCO.iSurvival.Effects
 
                 // Set hunger value directly based on the average percentage
                 Core.iSurvivalSession.ApplyStatChange(hunger, 1, averagePercentage - hunger.Value);
+                
             }
                         
 

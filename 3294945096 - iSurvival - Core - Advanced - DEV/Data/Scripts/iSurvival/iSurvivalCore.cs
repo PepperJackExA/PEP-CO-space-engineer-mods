@@ -15,9 +15,8 @@ using PEPCO.iSurvival.settings;
 using Sandbox.Game.Entities.Character.Components;
 using VRage.ModAPI;
 using Sandbox.Game.Components;
-using static PEPCO.iSurvival.Effects.Processes.Metabolism;
-using static PEPCO.iSurvival.Effects.Processes;
 using VRage.Utils;
+using System.Text;
 
 namespace PEPCO.iSurvival.Core
 {
@@ -26,10 +25,14 @@ namespace PEPCO.iSurvival.Core
     {
         public static ushort modId = 19008;
         public static int runCount = 0;
-        public static Random rand = new Random();
         public static int loadWait = 120;
-        
-        private int updateCounter = 0; //For Blink Effect
+
+        //blink stuff
+        public static List<long> blinkList = new List<long>();
+        public static Random rand = new Random();
+
+
+
 
         public static void ApplyStatChange(MyEntityStat stat, double multiplier, double baseChange)
         {
@@ -69,22 +72,36 @@ namespace PEPCO.iSurvival.Core
             base.UnloadData();
             // Unregister message handler when the mod is unloaded
             MyAPIGateway.Multiplayer.UnregisterSecureMessageHandler(modId, OnMessageReceived);
+            MyAPIGateway.Multiplayer.UnregisterMessageHandler(modId, Effects.Processes.Blink.getPoke);
         }
 
         public override void UpdateAfterSimulation()
         {
-            // Process blink for players if necessary
-            float deltaTime = 0.016f;  // Assuming 60 FPS, each frame is ~0.016 seconds
-            BlinkEffect.UpdateBlinkTimers(deltaTime);  // Update the blink timers each frame
             try
             {
                 if (++runCount % 15 > 0) // Run every quarter of a second
                     return;
 
+                // START BLINK STUFF
+                // Blinking during load screen causes crash, don't load messagehandler on clients for 30s
+                if (!MyAPIGateway.Multiplayer.IsServer && loadWait > 0)
+                {
+                    if (--loadWait == 0)
+                        MyAPIGateway.Multiplayer.RegisterMessageHandler(modId, Effects.Processes.Blink.getPoke);
+                    return;
+                }
+                foreach (var playerId in blinkList)
+                    if (playerId == MyVisualScriptLogicProvider.GetLocalPlayerId())
+                        Effects.Processes.Blink.blink(false);
+                    else
+                        MyAPIGateway.Multiplayer.SendMessageTo(modId, Encoding.ASCII.GetBytes("unblink"), MyVisualScriptLogicProvider.GetSteamId(playerId), true);
+                blinkList.Clear();
+                // END BLINK STUFF
+
+
                 if (MyAPIGateway.Multiplayer.IsServer && runCount % 60 == 0) // Run every second on server
                 {
                     ProcessPlayersSafely();
-                    // Process the blink list for all players
                 }
 
                 if (runCount > 299)
