@@ -43,26 +43,28 @@ namespace PEPCO.iSurvival.Effects
             statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Health"), out health);
-            // Starvation Stuff
-            if (hunger.Value < 20)
+
+            if (fatigue != null)
             {
-                health.Value = health.Value - 1;
-
+                // BLINK STUFF
+                if (fatigue.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) > 0)
+                {
+                    Core.iSurvivalSession.blinkList.Add(player.IdentityId);
+                    if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
+                        Effects.Processes.Blink.blink(true);
+                    else if (MyAPIGateway.Multiplayer.IsServer)
+                        MyAPIGateway.Multiplayer.SendMessageTo(Core.iSurvivalSession.modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
+                }
             }
-
-            // BLINK STUFF
-            if (fatigue.Value > 20 || Core.iSurvivalSession.rand.Next((int)fatigue.Value) > 0) return;
-
-            Core.iSurvivalSession.blinkList.Add(player.IdentityId);
-            if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
-                Effects.Processes.Blink.blink(true);
-            else if (MyAPIGateway.Multiplayer.IsServer)
-                MyAPIGateway.Multiplayer.SendMessageTo(Core.iSurvivalSession.modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
-            // END BLINK STUFF
-
             // If the hunger stat is valid, apply various effects
             if (hunger != null)
             {
+                // Starvation Stuff
+                if (hunger.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) >0)
+                {
+                    
+                    health.Value = health.Value - (hunger.Value/20);
+                }
                 Metabolism.ApplyMetabolismEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
                 FatigueAndStamina.ProcessFatigue(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
                 Sanity.ProcessSanity(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
@@ -675,6 +677,7 @@ namespace PEPCO.iSurvival.Effects
                 double carbPercentage = (carbohydrates.Value / carbohydrates.MaxValue) * 100;
                 double proteinPercentage = (protein.Value / protein.MaxValue) * 100;
                 double vitaminPercentage = (vitamins.Value / vitamins.MaxValue) * 100;
+
 
                 // Calculate the average of these values to get the hunger level
                 double averagePercentage = (caloriePercentage + fatPercentage + cholesterolPercentage + sodiumPercentage + carbPercentage + proteinPercentage + vitaminPercentage) / 7.0;
