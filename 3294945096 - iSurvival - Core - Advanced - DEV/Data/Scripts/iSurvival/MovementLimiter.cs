@@ -18,8 +18,8 @@ namespace PEPCO.iSurvival.MovementLimiter
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
     public class PlayerMovementLimiter : MySessionComponentBase
     {
-        private const float MaxWalkSpeed = 4f; // Desired walking speed limit in m/s
-        private const float MaxFlySpeed = 10f; // Desired flying speed limit in m/s
+        private const float MaxWalkSpeed = 1f; // Desired walking speed limit in m/s
+        private const float MaxFlySpeed = 5f; // Desired flying speed limit in m/s
         private const float GridCheckRadius = 100f; // Radius to check for nearby grids
 
         public override void UpdateAfterSimulation()
