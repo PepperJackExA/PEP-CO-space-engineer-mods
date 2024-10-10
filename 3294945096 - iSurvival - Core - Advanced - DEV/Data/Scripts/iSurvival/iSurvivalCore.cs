@@ -83,10 +83,7 @@ namespace PEPCO.iSurvival.Core
                     return;                       
 
 
-                if (MyAPIGateway.Multiplayer.IsServer && runCount % 60 == 0) // Run every second on server
-                {
-                    ProcessPlayersSafely();
-                }
+                
                 // START BLINK STUFF
                 // Blinking during load screen causes crash, don't load messagehandler on clients for 30s
                 if (!MyAPIGateway.Multiplayer.IsServer && loadWait > 0)
@@ -102,7 +99,10 @@ namespace PEPCO.iSurvival.Core
                         MyAPIGateway.Multiplayer.SendMessageTo(modId, Encoding.ASCII.GetBytes("unblink"), MyVisualScriptLogicProvider.GetSteamId(playerId), true);
                 blinkList.Clear();
                 // END BLINK STUFF
-
+                if (MyAPIGateway.Multiplayer.IsServer && runCount % 60 == 0) // Run every second on server
+                {
+                    ProcessPlayersSafely();
+                }
                 if (runCount > 299)
                     runCount = 0;
             }

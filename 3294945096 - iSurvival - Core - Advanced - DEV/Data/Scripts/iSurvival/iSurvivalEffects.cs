@@ -47,7 +47,7 @@ namespace PEPCO.iSurvival.Effects
             if (fatigue != null)
             {
                 // BLINK STUFF
-                if (fatigue.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) > 0)
+                if (fatigue.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) < 5)
                 {
                     Core.iSurvivalSession.blinkList.Add(player.IdentityId);
                     if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
@@ -63,7 +63,8 @@ namespace PEPCO.iSurvival.Effects
                 if (hunger.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) >0)
                 {
                     
-                    health.Value = health.Value - (hunger.Value/20);
+                    health.Value = health.Value - (1-(hunger.Value/20));
+                    //MyAPIGateway.Utilities.ShowMessage("sitting:", $"Health Damage:{hunger.Value}  | {(1-(hunger.Value / 20))}");
                 }
                 Metabolism.ApplyMetabolismEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
                 FatigueAndStamina.ProcessFatigue(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
