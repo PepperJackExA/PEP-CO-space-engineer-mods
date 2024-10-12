@@ -26,23 +26,26 @@ namespace PEPCO.iSurvival.Effects
         public static void ProcessPlayer(IMyPlayer player, MyEntityStatComponent statComp)
         {
 
-            // Initialize the stats
-            MyEntityStat sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina, health;
+            // Use GetAllStats to retrieve and display the player's stats
+            PlayerStatsHelper.GetAllStats(player);
 
-            // Retrieve each stat from the component, using TryGetStat to ensure the stat exists
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Sanity"), out sanity);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Calories"), out calories);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Fat"), out fat);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Cholesterol"), out cholesterol);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Sodium"), out sodium);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Carbohydrates"), out carbohydrates);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Protein"), out protein);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Vitamins"), out vitamins);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Hunger"), out hunger);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina);
+            // Now retrieve individual stats that we specifically need
+            MyEntityStat health;
             statComp.TryGetStat(MyStringHash.GetOrCompute("Health"), out health);
+
+            // Use TryGetStat for each stat and store them in a dictionary
+            var stats = new Dictionary<string, MyEntityStat>();
+            foreach (var statName in StatManager._statSettings.Keys)
+            {
+                MyEntityStat stat;
+                if (statComp.TryGetStat(MyStringHash.GetOrCompute(statName), out stat))
+                {
+                    stats[statName] = stat;
+                }
+            }
+            var fatigue = stats["Fatigue"];
+            var hunger = stats["Hunger"];
+            var stamina = stats["Stamina"];
 
             if (fatigue != null)
             {
@@ -66,11 +69,12 @@ namespace PEPCO.iSurvival.Effects
                     health.Value = health.Value - (1-(hunger.Value/20));
                     //MyAPIGateway.Utilities.ShowMessage("sitting:", $"Health Damage:{hunger.Value}  | {(1-(hunger.Value / 20))}");
                 }
-                Metabolism.ApplyMetabolismEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
-                FatigueAndStamina.ProcessFatigue(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
-                Sanity.ProcessSanity(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
-                Movement.ProcessMovementEffects(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
-                Blocks.ProcessBlockstEffects(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                // Apply other processes
+                Metabolism.ApplyMetabolismEffect(player, stats);
+                FatigueAndStamina.ProcessFatigue(player, stats);
+                Sanity.ProcessSanity(player, stats);
+                Movement.ProcessMovementEffects(player, stats);
+                Blocks.ProcessBlockstEffects(player, stats);
             }
 
             
@@ -78,56 +82,51 @@ namespace PEPCO.iSurvival.Effects
         }
         public static class Blocks
         {
-            public static void ProcessBlockstEffects(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+            public static void ProcessBlockstEffects(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
                 var block = player.Controller?.ControlledEntity?.Entity as IMyCubeBlock;
-                float Averagestats = (fatigue.Value + sanity.Value + hunger.Value + water.Value)/4;
+                if (block == null) return;
 
-                if (block != null)
+                var fatigue = stats["Fatigue"];
+                var sanity = stats["Sanity"];
+                var hunger = stats["Hunger"];
+                var water = stats["Water"];
+                var stamina = stats["Stamina"];
+
+                float averageStats = (fatigue.Value + sanity.Value + hunger.Value + water.Value) / 4;
+
+                var blockDef = block.BlockDefinition.SubtypeId.ToString();
+                if (blockDef.Contains("Cryo")) return;
+
+                if (blockDef.Contains("Bed"))
                 {
-                    var blockDef = block.BlockDefinition.SubtypeId.ToString();
-                    if (blockDef.Contains("Cryo")) return;
-
-                    if (blockDef.Contains("Bed"))
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, 2);
+                    Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 2);
+                    if (sanity.Value < averageStats)
                     {
-                        Core.iSurvivalSession.ApplyStatChange(stamina, 1, 2);
-                        Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 2);
-                        //stamina.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                        //fatigue.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
-                        if (sanity.Value < Averagestats)
-                        {
-                            Core.iSurvivalSession.ApplyStatChange(sanity, 1, 0.25);
-                            //sanity.Increase(0.5f * iSurvivalSessionSettings.sanityincreasemultiplier, null);
-                        }
-                        return;
+                        Core.iSurvivalSession.ApplyStatChange(sanity, 1, 0.25);
                     }
-                    else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
+                    return;
+                }
+                else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
+                {
+                    Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 1);
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, 2);
+                    if (hunger.Value > 20)
                     {
-                        Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 1);
-                        Core.iSurvivalSession.ApplyStatChange(stamina, 1, 2);
-                        //fatigue.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health), null);
-                        //stamina.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                        if (hunger.Value > 20)
-                        {
-                            Core.iSurvivalSession.ApplyStatChange(sanity, 1, 0.5);
-                            //hunger.Decrease(ProcessDrain(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.hungerdrainmultiplier, null);
-                            player.Character.GetInventory(0).AddItems((MyFixedPoint)(((100 - Averagestats) / 100)), (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
-                        }
+                        Core.iSurvivalSession.ApplyStatChange(sanity, 1, 0.5);
+                        player.Character.GetInventory(0).AddItems((MyFixedPoint)(((100 - averageStats) / 100)), (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
                     }
-                    else if (blockDef != null)
+                }
+                else
+                {
+                    if (fatigue.Value < 25)
                     {
-                        if (fatigue.Value < 25)
-                        {
-                            Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 0.25);
-                            //MyAPIGateway.Utilities.ShowMessage("sitting:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.SittingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier}");
-                            //fatigue.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.SittingFatigueIncrease * iSurvivalSessionSettings.fatigueincreasemultiplier, null);
-                        }
-                        if (stamina.Value < 25)
-                        {
-                            Core.iSurvivalSession.ApplyStatChange(stamina, 1, 1);
-                            //MyAPIGateway.Utilities.ShowMessage("sitting:", $"Increase:{ProcessIncrease(player) * iSurvivalSessionSettings.SittingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier}");
-                            //stamina.Increase(ProcessIncrease(player, stamina, fatigue, hunger, water, sanity, health) * iSurvivalSessionSettings.SittingStaminaIncrease * iSurvivalSessionSettings.staminaincreasemultiplier, null);
-                        }
+                        Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 0.25);
+                    }
+                    if (stamina.Value < 25)
+                    {
+                        Core.iSurvivalSession.ApplyStatChange(stamina, 1, 1);
                     }
                 }
             }
@@ -136,7 +135,6 @@ namespace PEPCO.iSurvival.Effects
         {
             public static void getPoke(byte[] poke)
             {
-                // To call blink action on clients
                 try
                 {
                     var msg = ASCIIEncoding.ASCII.GetString(poke);
@@ -153,262 +151,95 @@ namespace PEPCO.iSurvival.Effects
                 MyVisualScriptLogicProvider.ScreenColorFadingSetColor(Color.Black, 0L);
                 MyVisualScriptLogicProvider.ScreenColorFadingStart(0.25f, blink, 0L);
             }
+
             public static void Echo(string msg1, string msg2 = "")
             {
-                //      MyAPIGateway.Utilities.ShowMessage(msg1, msg2);
                 MyLog.Default.WriteLineAndConsole(msg1 + ": " + msg2);
             }
         }
         public static class Sanity
         {
-            // Method to process sanity changes based on player stats and environment
-            public static void ProcessSanity(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+            public static void ProcessSanity(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                if (player?.Character == null || sanity == null)
-                    return;
+                var sanity = stats["Sanity"];
+                if (sanity == null) return;
 
-                // Calculate the sanity change rate based on factors like nutrients, fatigue, and environmental conditions
-                float sanityChangeRate = CalculateSanityChangeRate(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
-
-                // Apply the calculated sanity change per minute (the rate is divided by 60 to apply it per second)
+                float sanityChangeRate = CalculateSanityChangeRate(stats);
                 Core.iSurvivalSession.ApplyStatChange(sanity, 1, sanityChangeRate / 60f);
-
-                
             }
 
-            // Calculate the sanity change rate based on multiple factors
-            private static float CalculateSanityChangeRate(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+            private static float CalculateSanityChangeRate(Dictionary<string, MyEntityStat> stats)
             {
                 float sanityChangeRate = 0f;
-
-                // Calculate sanity change based on nutrient levels
-                sanityChangeRate += GetNutrientSanityEffect(calories);
-                sanityChangeRate += GetNutrientSanityEffect(fat);
-                sanityChangeRate += GetNutrientSanityEffect(cholesterol);
-                sanityChangeRate += GetNutrientSanityEffect(sodium);
-                sanityChangeRate += GetNutrientSanityEffect(carbohydrates);
-                sanityChangeRate += GetNutrientSanityEffect(protein);
-                sanityChangeRate += GetNutrientSanityEffect(vitamins);
-
-                // Apply additional sanity change due to fatigue level
-                sanityChangeRate += GetFatigueImpactOnSanity(fatigue);
-
-                // Consider fatigue levels
-                sanityChangeRate += GetFatigueSanityEffect(fatigue);
-                // Consider environmental factors
-                float environmentFactor = EnvironmentalFactors.GetEnvironmentalFactor(player);
-                float oxygenFactor = EnvironmentalFactors.OxygenLevelEnvironmentalFactor(player);
-
-                // Ensure oxygenFactor is within a reasonable range
+                var fatigue = stats["Fatigue"];
+                var environmentFactor = EnvironmentalFactors.GetEnvironmentalFactor(null);
+                float oxygenFactor = EnvironmentalFactors.OxygenLevelEnvironmentalFactor(null);
                 oxygenFactor = MathHelper.Clamp(oxygenFactor, 0.1f, 2f);
 
-                // Apply environmental factors to base Sanity rate
                 sanityChangeRate += oxygenFactor;
                 sanityChangeRate -= environmentFactor;
+                sanityChangeRate += GetFatigueImpactOnSanity(fatigue);
+
                 return sanityChangeRate;
             }
 
-            // Calculate sanity change based on nutrient levels
-            private static float GetNutrientSanityEffect(MyEntityStat nutrient)
-            {
-                if (nutrient == null)
-                    return 0f;
-
-                float nutrientPercentage = nutrient.Value / nutrient.MaxValue;
-
-                if (nutrientPercentage < 0.1f)
-                {
-                    // If nutrient is below 10%, decrease sanity faster
-                    return -1f;
-                }
-                else if (nutrientPercentage < 0.4f)
-                {
-                    // If nutrient is below 40%, decrease sanity moderately
-                    return -0.75f;
-                }
-                else if (nutrientPercentage >= 0.6f)
-                {
-                    // If nutrient is above 60%, increase sanity
-                    return -0.25f;
-                }
-                else
-                {
-                    // If nutrient is between 40% and 60%, no change to sanity
-                    return -0.5f;
-                }
-            }
-            // Determine the impact of fatigue on sanity
             private static float GetFatigueImpactOnSanity(MyEntityStat fatigue)
             {
-                if (fatigue == null)
-                    return 0f;
-
+                if (fatigue == null) return 0f;
                 float fatigueLevel = fatigue.Value / fatigue.MaxValue;
-
-                if (fatigueLevel > 0.8f)
-                {
-                    // If fatigue is high (well-rested), sanity increases
-                    return 1.5f;
-                }
-                else if (fatigueLevel < 0.2f)
-                {
-                    // If fatigue is low (very tired), sanity decreases significantly
-                    return -2f;
-                }
-                else
-                {
-                    // Moderate fatigue has a small negative effect on sanity
-                    return -0.5f;
-                }
+                return fatigueLevel > 0.8f ? 1.5f : (fatigueLevel < 0.2f ? -2f : -0.5f);
             }
-
-            // Calculate sanity change based on fatigue levels
-            private static float GetFatigueSanityEffect(MyEntityStat fatigue)
-            {
-                if (fatigue == null)
-                    return 0f;
-
-                float fatigueLevel = fatigue.Value / fatigue.MaxValue;
-
-                // If fatigue is high (well-rested), increase sanity slightly
-                if (fatigueLevel > 0.7f)
-                {
-                    return 0.5f;
-                }
-                // If fatigue is low (meaning low rest), decrease sanity
-                else if (fatigueLevel < 0.3f)
-                {
-                    return -1f;
-                }
-
-                // Neutral fatigue levels have no impact
-                return 0f;
-            }           
         }
         public static class FatigueAndStamina
         {
-            public static void ProcessFatigue(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+            public static void ProcessFatigue(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                if (player?.Character == null || fatigue == null || stamina == null)
-                    return;
+                var fatigue = stats["Fatigue"];
+                if (fatigue == null) return;
 
-                float fatigueChangeRate = CalculateFatigueChangeRate(calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins);
-
-                // Adjust fatigue level based on nutrient levels
-                Core.iSurvivalSession.ApplyStatChange(fatigue, 1, fatigueChangeRate / 60f); // Change fatigue per minute (1 point per hour rate)
-
-                // Replenish stamina based on fatigue and nutrient levels
-                ReplenishStamina(calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, fatigue, stamina);
+                float fatigueChangeRate = CalculateFatigueChangeRate(stats);
+                Core.iSurvivalSession.ApplyStatChange(fatigue, 1, fatigueChangeRate / 60f);
             }
 
-            // Calculate the rate of fatigue change based on nutrient levels
-            public static float CalculateFatigueChangeRate(MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins)
+            public static float CalculateFatigueChangeRate(Dictionary<string, MyEntityStat> stats)
             {
                 float changeRate = 0f;
-
-                // Check each nutrient and adjust fatigue change rate accordingly
-                changeRate += GetFatigueChangeRate(calories);
-                changeRate += GetFatigueChangeRate(fat);
-                changeRate += GetFatigueChangeRate(cholesterol);
-                changeRate += GetFatigueChangeRate(sodium);
-                changeRate += GetFatigueChangeRate(carbohydrates);
-                changeRate += GetFatigueChangeRate(protein);
-                changeRate += GetFatigueChangeRate(vitamins);
-
+                foreach (var stat in stats)
+                {
+                    changeRate += GetFatigueChangeRate(stat.Value);
+                }
                 return changeRate;
             }
 
-            // Determine fatigue change rate for each nutrient
             private static float GetFatigueChangeRate(MyEntityStat nutrient)
             {
-                if (nutrient == null)
-                    return 0f;
-
+                if (nutrient == null) return 0f;
                 float nutrientPercentage = nutrient.Value / nutrient.MaxValue;
-
-                if (nutrientPercentage < 0.2f)
-                {
-                    // If nutrient is below 20%, reduce fatigue faster
-                    return -1f;
-                }
-                else if (nutrientPercentage < 0.4f)
-                {
-                    // If nutrient is below 40%, reduce fatigue slowly
-                    return -0.75f;
-                }
-                else if (nutrientPercentage >= 0.6f)
-                {
-                    // If nutrient is above 60%, increase fatigue slowly
-                    return -0.25f;
-                }
-                else
-                {
-                    // If nutrient is between 40% and 60%, no change to fatigue
-                    return -0.50f;
-                }
+                return nutrientPercentage < 0.2f ? -1f : (nutrientPercentage < 0.4f ? -0.75f : -0.5f);
             }
-
-            // Replenish stamina based on current fatigue and nutrient levels
-            private static void ReplenishStamina(MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat fatigue, MyEntityStat stamina)
-            {
-                if (fatigue.Value <= 0 || stamina == null)
-                    return;
-
-                float staminaRestored = 0f;
-
-                // Calculate how much stamina to restore based on nutrient levels and fatigue
-                staminaRestored += GetStaminaRestoredFromNutrient(calories);
-                staminaRestored += GetStaminaRestoredFromNutrient(fat);
-                staminaRestored += GetStaminaRestoredFromNutrient(cholesterol);
-                staminaRestored += GetStaminaRestoredFromNutrient(sodium);
-                staminaRestored += GetStaminaRestoredFromNutrient(carbohydrates);
-                staminaRestored += GetStaminaRestoredFromNutrient(protein);
-                staminaRestored += GetStaminaRestoredFromNutrient(vitamins);
-
-                // Convert fatigue to stamina: 1 fatigue point restores 100 stamina points
-                float staminaRestoredFromFatigue = Math.Min(staminaRestored, fatigue.Value * 100f);
-
-                // Apply stamina restoration
-                if (staminaRestoredFromFatigue > 0)
-                {
-                    if (stamina.Value >= 100) return;
-                    
-                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, staminaRestoredFromFatigue);
-                    Core.iSurvivalSession.ApplyStatChange(fatigue, 1, -staminaRestoredFromFatigue / 100); // Deduct the used fatigue
-                    
-                }
-            }
-
-            // Calculate the stamina restored from a single nutrient based on its percentage
-            private static float GetStaminaRestoredFromNutrient(MyEntityStat nutrient)
-            {
-                if (nutrient == null)
-                    return 0f;
-
-                // Calculate the stamina contribution based on current nutrient level
-                return MathHelper.Clamp(nutrient.Value / nutrient.MaxValue, 0f, 1f);
-            }
-
         }
         public static class Movement
         {
-            public static void ProcessMovementEffects(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+            public static void ProcessMovementEffects(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
                 var movementState = player.Character.CurrentMovementState;
+                var stamina = stats.ContainsKey("Stamina") ? stats["Stamina"] : null;
+                if (stamina == null) return; // If stamina is null, we can't apply any changes related to stamina
+
                 switch (movementState)
                 {
                     case MyCharacterMovementEnum.Standing:
                     case MyCharacterMovementEnum.RotatingLeft:
                     case MyCharacterMovementEnum.RotatingRight:
-                        ProcessStandingEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                        ProcessStandingEffect(player, stats);
                         break;
                     case MyCharacterMovementEnum.Sprinting:
-                        ProcessSprintingEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                        ProcessSprintingEffect(player, stats);
                         break;
                     case MyCharacterMovementEnum.Crouching:
                     case MyCharacterMovementEnum.CrouchRotatingLeft:
                     case MyCharacterMovementEnum.CrouchRotatingRight:
-                        ProcessCrouchingEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                        ProcessCrouchingEffect(player, stats);
                         break;
                     case MyCharacterMovementEnum.CrouchWalking:
                     case MyCharacterMovementEnum.CrouchBackWalking:
@@ -418,7 +249,7 @@ namespace PEPCO.iSurvival.Effects
                     case MyCharacterMovementEnum.CrouchWalkingRightFront:
                     case MyCharacterMovementEnum.CrouchStrafingLeft:
                     case MyCharacterMovementEnum.CrouchStrafingRight:
-                        ProcessCrouchWalkingEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                        ProcessCrouchWalkingEffect(player, stats);
                         break;
                     case MyCharacterMovementEnum.Walking:
                     case MyCharacterMovementEnum.BackWalking:
@@ -434,93 +265,118 @@ namespace PEPCO.iSurvival.Effects
                     case MyCharacterMovementEnum.RunningRightFront:
                     case MyCharacterMovementEnum.RunStrafingLeft:
                     case MyCharacterMovementEnum.RunStrafingRight:
-                        ProcessWalkingEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
-                        switch (movementState)
+                        ProcessWalkingEffect(player, stats);
+                        if (movementState.ToString().Contains("Running"))
                         {
-                            case MyCharacterMovementEnum.Running:
-                            case MyCharacterMovementEnum.Backrunning:
-                            case MyCharacterMovementEnum.RunningLeftBack:
-                            case MyCharacterMovementEnum.RunningLeftFront:
-                            case MyCharacterMovementEnum.RunningRightBack:
-                            case MyCharacterMovementEnum.RunningRightFront:
-                            case MyCharacterMovementEnum.RunStrafingLeft:
-                            case MyCharacterMovementEnum.RunStrafingRight:
-                                ProcessRunningEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
-                                break;
+                            ProcessRunningEffect(player, stats);
                         }
                         break;
                     case MyCharacterMovementEnum.LadderUp:
                     case MyCharacterMovementEnum.LadderDown:
-                        ProcessLadderEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                        ProcessLadderEffect(player, stats);
                         break;
                     case MyCharacterMovementEnum.Flying:
-                        ProcessFlyingEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                        ProcessFlyingEffect(player, stats);
                         break;
                     case MyCharacterMovementEnum.Falling:
-                        ProcessFallingEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                        ProcessFallingEffect(player, stats);
                         break;
                     case MyCharacterMovementEnum.Jump:
-                        ProcessJumpingEffect(player, sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                        ProcessJumpingEffect(player, stats);
                         break;
                     default:
                         // Handle other movement states or do nothing
                         break;
                 }
             }
-            public static void ProcessStandingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
-            {
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Standing");
-                //Core.iSurvivalSession.ApplyStatChange(stamina, 1, 1);
 
-            }
-            public static void ProcessSprintingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+            public static void ProcessStandingEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Sprinting");
-                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -10);
+                var stamina = stats.ContainsKey("Stamina") ? stats["Stamina"] : null;
+                if (stamina != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, 1);
+                }
             }
-            public static void ProcessCrouchingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+
+            public static void ProcessSprintingEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Crouching");
-                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -3);
+                var stamina = stats.ContainsKey("Stamina") ? stats["Stamina"] : null;
+                if (stamina != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, -10);
+                }
             }
-            public static void ProcessCrouchWalkingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+
+            public static void ProcessCrouchingEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"CrouchWalking");
-                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -2);
+                var stamina = stats.ContainsKey("Stamina") ? stats["Stamina"] : null;
+                if (stamina != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, -3);
+                }
             }
-            public static void ProcessWalkingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+
+            public static void ProcessCrouchWalkingEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Walking");
-                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -1);
+                var stamina = stats.ContainsKey("Stamina") ? stats["Stamina"] : null;
+                if (stamina != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, -2);
+                }
             }
-            public static void ProcessRunningEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+
+            public static void ProcessWalkingEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Running");
-                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -5);
+                var stamina = stats.ContainsKey("Stamina") ? stats["Stamina"] : null;
+                if (stamina != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, -1);
+                }
             }
-            public static void ProcessLadderEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+
+            public static void ProcessRunningEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Ladder");
+                var stamina = stats.ContainsKey("Stamina") ? stats["Stamina"] : null;
+                if (stamina != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, -5);
+                }
             }
-            public static void ProcessFlyingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+
+            public static void ProcessLadderEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Flying");
-                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -5);
+                // Add your logic for ladder effects
             }
-            public static void ProcessFallingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+
+            public static void ProcessFlyingEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Falling");
+                var stamina = stats.ContainsKey("Stamina") ? stats["Stamina"] : null;
+                if (stamina != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, -5);
+                }
             }
-            public static void ProcessJumpingEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+
+            public static void ProcessFallingEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                //MyAPIGateway.Utilities.ShowMessage("iSurvival", $"Jumping");
-                Core.iSurvivalSession.ApplyStatChange(stamina, 1, -10);
+                // Add your logic for falling effects
+            }
+
+            public static void ProcessJumpingEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
+            {
+                var stamina = stats.ContainsKey("Stamina") ? stats["Stamina"] : null;
+                if (stamina != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(stamina, 1, -10);
+                }
             }
         }
+
         public static class Metabolism
         {
             public static float CalculateMetabolicRate(IMyPlayer player)
-            {                
+            {
                 float baseMetabolicRate = 0.1f; // Base metabolic rate
 
                 // Get environmental factors
@@ -560,7 +416,7 @@ namespace PEPCO.iSurvival.Effects
                 return baseMetabolicRate;
             }
 
-            public static void ApplyMetabolismEffect(IMyPlayer player, MyEntityStat sanity, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+            public static void ApplyMetabolismEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
                 if (player?.Character == null)
                     return;
@@ -573,13 +429,13 @@ namespace PEPCO.iSurvival.Effects
                 float metabolicRate = CalculateMetabolicRate(player);
 
                 // Apply metabolism effects
-                ApplyMetabolicChanges(statComp, metabolicRate, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina);
+                ApplyMetabolicChanges(stats, metabolicRate);
 
                 // Update Hunger after applying changes
-                UpdateHunger(hunger, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins);
+                UpdateHunger(stats["Hunger"], stats);
             }
 
-            private static void ApplyMetabolicChanges(MyEntityStatComponent statComp, float metabolicRate, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins, MyEntityStat hunger, MyEntityStat water, MyEntityStat fatigue, MyEntityStat stamina)
+            private static void ApplyMetabolicChanges(Dictionary<string, MyEntityStat> stats, float metabolicRate)
             {
                 // Recommended daily values (based on a 24-hour day)
                 const float dailyCalories = 2000f; // kcal
@@ -591,7 +447,9 @@ namespace PEPCO.iSurvival.Effects
                 const float dailyVitamins = 100f; // arbitrary units
                 const float dailyWater = 3.7f; // liters
 
+                var fatigue = stats.ContainsKey("Fatigue") ? stats["Fatigue"] : null;
                 float fatigueMultiplier = CalculateFatigueEffect(fatigue);
+
                 // Adjust for 2-hour day (120 minutes)
                 float dayAdjustmentFactor = 1440f / 120f;
                 float multiplier = fatigueMultiplier * dayAdjustmentFactor;
@@ -606,47 +464,24 @@ namespace PEPCO.iSurvival.Effects
                 float vitaminBurnRate = (dailyVitamins / 1440f) * multiplier; // units/min
                 float waterBurnRate = (dailyWater / 1440f) * multiplier; // liters/min
 
-                
-
                 // Apply changes to each stat based on the metabolic rate and burn rates
-                if (calories != null)
-                {
-                    Core.iSurvivalSession.ApplyStatChange(calories, metabolicRate, -caloriesBurnRate); // Decrease calories
-                }
-                if (fat != null)
-                {
-                    Core.iSurvivalSession.ApplyStatChange(fat, metabolicRate, -fatBurnRate); // Decrease fat
-                }
-                if (cholesterol != null)
-                {
-                    Core.iSurvivalSession.ApplyStatChange(cholesterol, metabolicRate, -cholesterolBurnRate); // Decrease cholesterol
-                }
-                if (sodium != null)
-                {
-                    Core.iSurvivalSession.ApplyStatChange(sodium, metabolicRate, -sodiumBurnRate); // Decrease sodium
-                }
-                if (carbohydrates != null)
-                {
-                    Core.iSurvivalSession.ApplyStatChange(carbohydrates, metabolicRate, -carbBurnRate); // Decrease carbohydrates
-                }
-                if (protein != null)
-                {
-                    Core.iSurvivalSession.ApplyStatChange(protein, metabolicRate, -proteinBurnRate); // Decrease protein
-                }
-                if (vitamins != null)
-                {
-                    Core.iSurvivalSession.ApplyStatChange(vitamins, metabolicRate, -vitaminBurnRate); // Decrease vitamins
-                }
-                if (water != null)
-                {
-                    Core.iSurvivalSession.ApplyStatChange(water, metabolicRate, -waterBurnRate); // Decrease water
-                }
-
-                // Restore stamina using nutrient stats and adjust based on nutrient fullness
-                
-
+                ApplyStatChange(stats, "Calories", metabolicRate, -caloriesBurnRate);
+                ApplyStatChange(stats, "Fat", metabolicRate, -fatBurnRate);
+                ApplyStatChange(stats, "Cholesterol", metabolicRate, -cholesterolBurnRate);
+                ApplyStatChange(stats, "Sodium", metabolicRate, -sodiumBurnRate);
+                ApplyStatChange(stats, "Carbohydrates", metabolicRate, -carbBurnRate);
+                ApplyStatChange(stats, "Protein", metabolicRate, -proteinBurnRate);
+                ApplyStatChange(stats, "Vitamins", metabolicRate, -vitaminBurnRate);
+                ApplyStatChange(stats, "Water", metabolicRate, -waterBurnRate);
             }
 
+            private static void ApplyStatChange(Dictionary<string, MyEntityStat> stats, string statName, float rate, float change)
+            {
+                if (stats.ContainsKey(statName) && stats[statName] != null)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(stats[statName], rate, change);
+                }
+            }
 
             private static float CalculateFatigueEffect(MyEntityStat fatigue)
             {
@@ -660,35 +495,32 @@ namespace PEPCO.iSurvival.Effects
                 // When fatigue is high (well-rested), the effect is closer to 1.5
                 // When fatigue is low (tired), the effect is closer to 0.3
                 return MathHelper.Clamp(fatigueLevel, 0.3f, 1.5f);
-            }         
+            }
 
-            public static void UpdateHunger(MyEntityStat hunger, MyEntityStat calories, MyEntityStat fat, MyEntityStat cholesterol, MyEntityStat sodium, MyEntityStat carbohydrates, MyEntityStat protein, MyEntityStat vitamins)
+            public static void UpdateHunger(MyEntityStat hunger, Dictionary<string, MyEntityStat> stats)
             {
-                if (hunger == null || calories == null || fat == null || cholesterol == null || sodium == null || carbohydrates == null || protein == null || vitamins == null)
+                if (hunger == null || stats == null)
                 {
-                    iSurvivalLog.Error("One or more stats required for hunger update are null.");
+                    iSurvivalLog.Error("Hunger or stats dictionary is null.");
                     return;
                 }
 
                 // Calculate the direct percentage of each nutrient
-                double caloriePercentage = (calories.Value / calories.MaxValue) * 100;
-                double fatPercentage = (fat.Value / fat.MaxValue) * 100;
-                double cholesterolPercentage = (cholesterol.Value / cholesterol.MaxValue) * 100;
-                double sodiumPercentage = (sodium.Value / sodium.MaxValue) * 100;
-                double carbPercentage = (carbohydrates.Value / carbohydrates.MaxValue) * 100;
-                double proteinPercentage = (protein.Value / protein.MaxValue) * 100;
-                double vitaminPercentage = (vitamins.Value / vitamins.MaxValue) * 100;
-
+                double caloriePercentage = (stats["Calories"].Value / stats["Calories"].MaxValue) * 100;
+                double fatPercentage = (stats["Fat"].Value / stats["Fat"].MaxValue) * 100;
+                double cholesterolPercentage = (stats["Cholesterol"].Value / stats["Cholesterol"].MaxValue) * 100;
+                double sodiumPercentage = (stats["Sodium"].Value / stats["Sodium"].MaxValue) * 100;
+                double carbPercentage = (stats["Carbohydrates"].Value / stats["Carbohydrates"].MaxValue) * 100;
+                double proteinPercentage = (stats["Protein"].Value / stats["Protein"].MaxValue) * 100;
+                double vitaminPercentage = (stats["Vitamins"].Value / stats["Vitamins"].MaxValue) * 100;
 
                 // Calculate the average of these values to get the hunger level
                 double averagePercentage = (caloriePercentage + fatPercentage + cholesterolPercentage + sodiumPercentage + carbPercentage + proteinPercentage + vitaminPercentage) / 7.0;
 
                 // Set hunger value directly based on the average percentage
                 Core.iSurvivalSession.ApplyStatChange(hunger, 1, averagePercentage - hunger.Value);
-                
             }
-                        
-
         }
+
     }
 }

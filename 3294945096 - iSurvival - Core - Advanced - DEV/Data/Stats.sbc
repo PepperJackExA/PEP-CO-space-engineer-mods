@@ -9,10 +9,47 @@
 				<SubtypeId>Default_Astronaut</SubtypeId>
 			</Id>
 			<Stats>
+				<!-- iSurvival Core Stats  -->
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>Sanity</SubtypeId>
 				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Fatigue</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Stamina</SubtypeId>
+				</Stat>
+
+				<!-- iSruvival RPG Stats-->
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Strength</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Dexterity</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Constitution</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Intelligence</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Wisdom</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Charisma</SubtypeId>
+				</Stat>				
+				
+				<!-- iSurvival Food Stats  -->
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>Calories</SubtypeId>
@@ -40,23 +77,17 @@
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>Vitamins</SubtypeId>
-				</Stat>
-				<Stat>
-					<TypeId>MyObjectBuilder_EntityStat</TypeId>
-					<SubtypeId>Hunger</SubtypeId>
-				</Stat>
+				</Stat>				
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>Water</SubtypeId>
 				</Stat>
-				<Stat>
-					<TypeId>MyObjectBuilder_EntityStat</TypeId>
-					<SubtypeId>Fatigue</SubtypeId>
-				</Stat>
-				<Stat>
-					<TypeId>MyObjectBuilder_EntityStat</TypeId>
-					<SubtypeId>Stamina</SubtypeId>
-				</Stat>
+				<!-- Hunger is not meant to be directly modified in this mod please use a mix of the food stats to reach desired goal -->
+					<Stat>
+						<TypeId>MyObjectBuilder_EntityStat</TypeId>
+						<SubtypeId>Hunger</SubtypeId>
+					</Stat>
+				<!-- Vanilla stats -->
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>SpaceCharacterHealth</SubtypeId>
@@ -68,6 +99,94 @@
 		</EntityComponent>
 	</EntityComponents>
 	<StatDefinitions>
+		<!-- Strength -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Strength</SubtypeId>
+			</Id>
+			<Name>Strength</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>10</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<!-- Dexterity -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Dexterity</SubtypeId>
+			</Id>
+			<Name>Dexterity</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>10</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<!-- Constitution -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Constitution</SubtypeId>
+			</Id>
+			<Name>Constitution</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>10</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<!-- Wisdom -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Wisdom</SubtypeId>
+			</Id>
+			<Name>Wisdom</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>10</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<!-- Intelligence -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Intelligence</SubtypeId>
+			</Id>
+			<Name>Intelligence</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>10</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+
+		<!-- Charisma -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Charisma</SubtypeId>
+			</Id>
+			<Name>Charisma</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>10</DefaultValue>
+			<MaxValue>100</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<!-- Sanity -->
 		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
 			<Id>

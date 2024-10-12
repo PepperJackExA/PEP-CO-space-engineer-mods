@@ -145,7 +145,7 @@ namespace PEPCO.iSurvival.Chat
             
                 MyEntityStat sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina;
 
-                // Retrieve each stat from the component
+                // Retrieve each Food stat from the component
                 statComp.TryGetStat(MyStringHash.GetOrCompute("Calories"), out calories);
                 statComp.TryGetStat(MyStringHash.GetOrCompute("Fat"), out fat);
                 statComp.TryGetStat(MyStringHash.GetOrCompute("Cholesterol"), out cholesterol);
@@ -155,9 +155,9 @@ namespace PEPCO.iSurvival.Chat
                 statComp.TryGetStat(MyStringHash.GetOrCompute("Vitamins"), out vitamins);
                 MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"ShowHunger Test");
 
-                float fatigueChangeRate = Effects.Processes.FatigueAndStamina.CalculateFatigueChangeRate(calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins);               
+                //float fatigueChangeRate = Effects.Processes.FatigueAndStamina.CalculateFatigueChangeRate(calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins);               
             
-            MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Hunger Rate: {fatigueChangeRate}");
+            //MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Hunger Rate: {fatigueChangeRate}");
         }
 
         // Check if the player is an admin

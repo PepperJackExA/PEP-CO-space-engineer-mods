@@ -7,6 +7,8 @@ using VRage.ModAPI;
 using PEPCO.iSurvival.settings;
 using Sandbox.Game.Components;
 using Sandbox.Game.Entities;
+using PEPCO.iSurvival.Log;
+using VRage.Game.ModAPI;
 
 namespace PEPCO.iSurvival.stats
 {
@@ -24,12 +26,11 @@ namespace PEPCO.iSurvival.stats
             Multiplier = multiplier;
             IncreaseMultiplier = increaseMultiplier;
             DecreaseMultiplier = decreaseMultiplier;
-
-
         }
 
         public void UpdateValue()
         {
+            // Logic to update the stat value, if necessary
         }
     }
 
@@ -37,593 +38,261 @@ namespace PEPCO.iSurvival.stats
     public static class StatManager
     {
         public static Dictionary<string, StatSetting> _statSettings = new Dictionary<string, StatSetting>(StringComparer.OrdinalIgnoreCase)
-    {
-        { "Sanity", new StatSetting(0f, 1f, 1f, 1f) },
-    { "Calories", new StatSetting(0f, 1f, 1f, 1f) },
-    { "Fat", new StatSetting(0f, 1f, 1f, 1f) },
-    { "Cholesterol", new StatSetting(0, 1, 1f, 1f) },
-    { "Sodium", new StatSetting(0f, 1f, 1f, 1f) },
-    { "Carbohydrates", new StatSetting(0f, 1f, 1f, 1f) },
-    { "Protein", new StatSetting(0f, 1f, 1f, 1f) },
-    { "Vitamins", new StatSetting(0f, 1f, 1f, 1f) },
-    { "Hunger", new StatSetting(0f, 1f, 1f, 1f) },
-    { "Water", new StatSetting(0f, 1f, 1f, 1f) },
-    { "Fatigue", new StatSetting(0f, 1f, 1f, 1f) },
-    { "Stamina", new StatSetting(0f, 1f, 1f, 1f) }
-    };
+        {
+            { "Sanity", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Calories", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Fat", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Cholesterol", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Sodium", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Carbohydrates", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Protein", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Vitamins", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Hunger", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Water", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Fatigue", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Stamina", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Strength", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Dexterity", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Constitution", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Intelligence", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Wisdom", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Charisma", new StatSetting(0f, 1f, 1f, 1f) }
+        };
     }
 
-    // HUD Stat for Player Sanity
-    public class MyStatPlayerSanity : IMyHudStat
+    // Helper class to fetch all player stats
+    public static class PlayerStatsHelper
     {
+        public static void GetAllStats(IMyPlayer player)
+        {
+            // Get the stat component from the player character.
+            var statComp = player?.Character?.Components?.Get<MyEntityStatComponent>();
+
+            if (statComp == null)
+            {
+                MyAPIGateway.Utilities.ShowMessage("Error", "No stat component found for player.");
+                return;
+            }
+
+            // Retrieve each stat from the component
+            foreach (var statName in StatManager._statSettings.Keys)
+            {
+                MyEntityStat stat;
+                if (statComp.TryGetStat(MyStringHash.GetOrCompute(statName), out stat))
+                {
+                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName}: {stat?.Value}");
+                }
+            }
+        }
+    }
+
+    // Base class for HUD stats
+    public abstract class BaseHudStat : IMyHudStat
+    {
+        protected float m_currentValue;
+        protected string m_valueStringCache;
+        public MyStringHash Id { get; protected set; }
+
+        public virtual float MaxValue => 1f;
+        public virtual float MinValue => 0.0f;
+
+        public float CurrentValue
+        {
+            get { return m_currentValue; }
+            protected set
+            {
+                if (m_currentValue == value)
+                    return;
+                m_currentValue = value;
+                m_valueStringCache = null;
+            }
+        }
+
+        public string GetValueString()
+        {
+            if (m_valueStringCache == null)
+                m_valueStringCache = ToString();
+            return m_valueStringCache;
+        }
+
+        public abstract string StatSubtype { get; }
+
+        public void Update()
+        {
+            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
+            if (statComp == null)
+                return;
+
+            MyEntityStat stat;
+            if (statComp.TryGetStat(MyStringHash.GetOrCompute(StatSubtype), out stat))
+            {
+                CurrentValue = stat.Value / stat.MaxValue;
+            }
+        }
+
+        public override string ToString() => $"{CurrentValue * 100.0:0}";
+    }
+
+    // Specific HUD stat classes
+    public class MyStatPlayerSanity : BaseHudStat
+    {
+        public override string StatSubtype => "Sanity";
         public MyStatPlayerSanity()
         {
             Id = MyStringHash.GetOrCompute("player_sanity");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Sanity;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Sanity"), out Sanity))
-                CurrentValue = Sanity.Value / Sanity.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
-    // HUD Stat for Player Calories
-    public class MyStatPlayerCalories : IMyHudStat
+    public class MyStatPlayerCalories : BaseHudStat
     {
+        public override string StatSubtype => "Calories";
         public MyStatPlayerCalories()
         {
             Id = MyStringHash.GetOrCompute("player_calories");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Calories;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Calories"), out Calories))
-                CurrentValue = Calories.Value / Calories.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
-    // HUD Stat for Player Fat
-    public class MyStatPlayerFat : IMyHudStat
+    public class MyStatPlayerFat : BaseHudStat
     {
+        public override string StatSubtype => "Fat";
         public MyStatPlayerFat()
         {
             Id = MyStringHash.GetOrCompute("player_fat");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Fat;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Fat"), out Fat))
-                CurrentValue = Fat.Value / Fat.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
-    // HUD Stat for Player Cholesterol
-    public class MyStatPlayerCholesterol : IMyHudStat
+    public class MyStatPlayerCholesterol : BaseHudStat
     {
+        public override string StatSubtype => "Cholesterol";
         public MyStatPlayerCholesterol()
         {
             Id = MyStringHash.GetOrCompute("player_cholesterol");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Cholesterol;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Cholesterol"), out Cholesterol))
-                CurrentValue = Cholesterol.Value / Cholesterol.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
-    // HUD Stat for Player Sodium
-    public class MyStatPlayerSodium : IMyHudStat
+    public class MyStatPlayerSodium : BaseHudStat
     {
+        public override string StatSubtype => "Sodium";
         public MyStatPlayerSodium()
         {
             Id = MyStringHash.GetOrCompute("player_sodium");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Sodium;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Sodium"), out Sodium))
-                CurrentValue = Sodium.Value / Sodium.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
-    // HUD Stat for Player Carbohydrates
-    public class MyStatPlayerCarbohydrates : IMyHudStat
+    public class MyStatPlayerCarbohydrates : BaseHudStat
     {
+        public override string StatSubtype => "Carbohydrates";
         public MyStatPlayerCarbohydrates()
         {
             Id = MyStringHash.GetOrCompute("player_carbohydrates");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Carbohydrates;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Carbohydrates"), out Carbohydrates))
-                CurrentValue = Carbohydrates.Value / Carbohydrates.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
-    // HUD Stat for Player Protein
-    public class MyStatPlayerProtein : IMyHudStat
+    public class MyStatPlayerProtein : BaseHudStat
     {
+        public override string StatSubtype => "Protein";
         public MyStatPlayerProtein()
         {
             Id = MyStringHash.GetOrCompute("player_protein");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Protein;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Protein"), out Protein))
-                CurrentValue = Protein.Value / Protein.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
-    // HUD Stat for Player Vitamins
-    public class MyStatPlayerVitamins : IMyHudStat
+    public class MyStatPlayerVitamins : BaseHudStat
     {
+        public override string StatSubtype => "Vitamins";
         public MyStatPlayerVitamins()
         {
             Id = MyStringHash.GetOrCompute("player_vitamins");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Vitamins;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Vitamins"), out Vitamins))
-                CurrentValue = Vitamins.Value / Vitamins.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
-    // HUD Stat for Player Hunger
-    public class MyStatPlayerHunger : IMyHudStat
+    public class MyStatPlayerHunger : BaseHudStat
     {
+        public override string StatSubtype => "Hunger";
         public MyStatPlayerHunger()
         {
             Id = MyStringHash.GetOrCompute("player_hunger");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Hunger;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Hunger"), out Hunger))
-                CurrentValue = Hunger.Value / Hunger.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
-    // HUD Stat for Player Water
-    public class MyStatPlayerWater : IMyHudStat
+
+    public class MyStatPlayerWater : BaseHudStat
     {
+        public override string StatSubtype => "Water";
         public MyStatPlayerWater()
         {
             Id = MyStringHash.GetOrCompute("player_water");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Water;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out Water))
-                CurrentValue = Water.Value / Water.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
-    // HUD Stat for Player Fatigue
-    public class MyStatPlayerFatigue : IMyHudStat
+
+    public class MyStatPlayerFatigue : BaseHudStat
     {
+        public override string StatSubtype => "Fatigue";
         public MyStatPlayerFatigue()
         {
             Id = MyStringHash.GetOrCompute("player_fatigue");
         }
-
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
-        {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
-        }
-
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
-        {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
-        }
-
-        public void Update()
-        {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Fatigue;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out Fatigue))
-                CurrentValue = Fatigue.Value / Fatigue.MaxValue;
-        }
-
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
     }
 
-    // HUD Stat for Player Stamina
-    public class MyStatPlayerStamina : IMyHudStat
+    public class MyStatPlayerStamina : BaseHudStat
     {
+        public override string StatSubtype => "Stamina";
         public MyStatPlayerStamina()
         {
             Id = MyStringHash.GetOrCompute("player_stamina");
         }
+    }
 
-        private float m_currentValue;
-        private string m_valueStringCache;
-
-        public MyStringHash Id { get; protected set; }
-
-        public float CurrentValue
+    public class MyStatPlayerStrength : BaseHudStat
+    {
+        public override string StatSubtype => "Strength";
+        public MyStatPlayerStrength()
         {
-            get { return m_currentValue; }
-            protected set
-            {
-                if (m_currentValue == value)
-                    return;
-                m_currentValue = value;
-                m_valueStringCache = null;
-            }
+            Id = MyStringHash.GetOrCompute("player_strength");
         }
+    }
 
-        public virtual float MaxValue => 1f;
-        public virtual float MinValue => 0.0f;
-
-        public string GetValueString()
+    public class MyStatPlayerDexterity : BaseHudStat
+    {
+        public override string StatSubtype => "Dexterity";
+        public MyStatPlayerDexterity()
         {
-            if (m_valueStringCache == null)
-                m_valueStringCache = ToString();
-            return m_valueStringCache;
+            Id = MyStringHash.GetOrCompute("player_dexterity");
         }
+    }
 
-        public void Update()
+    public class MyStatPlayerConstitution : BaseHudStat
+    {
+        public override string StatSubtype => "Constitution";
+        public MyStatPlayerConstitution()
         {
-            MyEntityStatComponent statComp = MyAPIGateway.Session.Player?.Character?.Components.Get<MyEntityStatComponent>();
-            if (statComp == null)
-                return;
-            MyEntityStat Stamina;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out Stamina))
-                CurrentValue = Stamina.Value / Stamina.MaxValue;
+            Id = MyStringHash.GetOrCompute("player_constitution");
         }
+    }
 
-        public override string ToString() => $"{CurrentValue * 100.0:0}";
+    public class MyStatPlayerIntelligence : BaseHudStat
+    {
+        public override string StatSubtype => "Intelligence";
+        public MyStatPlayerIntelligence()
+        {
+            Id = MyStringHash.GetOrCompute("player_intelligence");
+        }
+    }
+
+    public class MyStatPlayerWisdom : BaseHudStat
+    {
+        public override string StatSubtype => "Wisdom";
+        public MyStatPlayerWisdom()
+        {
+            Id = MyStringHash.GetOrCompute("player_wisdom");
+        }
+    }
+
+    public class MyStatPlayerCharisma : BaseHudStat
+    {
+        public override string StatSubtype => "Charisma";
+        public MyStatPlayerCharisma()
+        {
+            Id = MyStringHash.GetOrCompute("player_charisma");
+        }
     }
 }

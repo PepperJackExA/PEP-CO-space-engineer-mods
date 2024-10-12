@@ -56,7 +56,6 @@ namespace PEPCO.iSurvival.Core
             }
         }
 
-
         public override void LoadData()
         {
             base.LoadData();
