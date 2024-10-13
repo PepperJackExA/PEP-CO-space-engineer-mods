@@ -72,6 +72,10 @@
 				</Stat>
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Sugar</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>Protein</SubtypeId>
 				</Stat>
 				<Stat>
@@ -222,7 +226,7 @@
 			<Name>Fat</Name>
 			<MinValue>0</MinValue>
 			<DefaultValue>0</DefaultValue>
-			<MaxValue>1000</MaxValue>
+			<MaxValue>78</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -235,7 +239,7 @@
 			<Name>Cholesterol</Name>
 			<MinValue>0</MinValue>
 			<DefaultValue>0</DefaultValue>
-			<MaxValue>500</MaxValue>
+			<MaxValue>300</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -248,7 +252,7 @@
 			<Name>Sodium</Name>
 			<MinValue>0</MinValue>
 			<DefaultValue>0</DefaultValue>
-			<MaxValue>4000</MaxValue>
+			<MaxValue>2300</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -261,7 +265,19 @@
 			<Name>Carbohydrates</Name>
 			<MinValue>0</MinValue>
 			<DefaultValue>0</DefaultValue>
-			<MaxValue>500</MaxValue>
+			<MaxValue>275</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<!-- Sugar -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Sugar</SubtypeId>
+			</Id>
+			<Name>Sugar</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>0</DefaultValue>
+			<MaxValue>400</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -274,7 +290,7 @@
 			<Name>Protein</Name>
 			<MinValue>0</MinValue>
 			<DefaultValue>0</DefaultValue>
-			<MaxValue>150</MaxValue>
+			<MaxValue>50</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -287,7 +303,7 @@
 			<Name>Vitamins</Name>
 			<MinValue>0</MinValue>
 			<DefaultValue>0</DefaultValue>
-			<MaxValue>200</MaxValue>
+			<MaxValue>100</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
