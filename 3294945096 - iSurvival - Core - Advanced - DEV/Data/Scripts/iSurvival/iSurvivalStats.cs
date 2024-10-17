@@ -31,6 +31,7 @@ namespace PEPCO.iSurvival.stats
         public void UpdateValue()
         {
             // Logic to update the stat value, if necessary
+            Base = Base * Multiplier;
         }
     }
 
@@ -81,7 +82,7 @@ namespace PEPCO.iSurvival.stats
                 MyEntityStat stat;
                 if (statComp.TryGetStat(MyStringHash.GetOrCompute(statName), out stat))
                 {
-                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName}: {stat?.Value}");
+                    //MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName}: {stat?.Value}");
                 }
             }
         }
@@ -125,10 +126,18 @@ namespace PEPCO.iSurvival.stats
                 return;
 
             MyEntityStat stat;
-            if (statComp.TryGetStat(MyStringHash.GetOrCompute(StatSubtype), out stat))
+            if (statComp.TryGetStat(MyStringHash.GetOrCompute(StatSubtype), out stat) && stat != null)
             {
-                CurrentValue = stat.Value / stat.MaxValue;
+                if (stat.MaxValue == 0)
+                {
+                    CurrentValue = 0; // Avoid division by zero
+                }
+                else
+                {
+                    CurrentValue = stat.Value / stat.MaxValue;
+                }
             }
+
         }
 
         public override string ToString() => $"{CurrentValue * 100.0:0}";

@@ -233,16 +233,16 @@ namespace PEPCO.iSurvival.Chat
             }
         }
 
-        // Handle the "heal" command
+        // Inside your existing Heal Command
         void HandleHealCommand(string[] parts, IMyPlayer player)
         {
             if (parts.Length != 3)
             {
-                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Usage: /isurvival heal <stat|all> <percentage>");
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Usage: /isurvival heal <stat|all|hunger|rpg> <percentage>");
                 return;
             }
 
-            string stat = parts[1];
+            string stat = parts[1].ToLower();
             float percentage;
             if (!float.TryParse(parts[2], out percentage) || percentage < 0 || percentage > 100)
             {
@@ -250,72 +250,136 @@ namespace PEPCO.iSurvival.Chat
                 return;
             }
 
-            ApplyHealing(player, stat, percentage);
+            switch (stat)
+            {
+                case "all":
+                    ApplyHealingToAll(player, percentage);
+                    break;
+                case "hunger":
+                    HealHungerStats(player, percentage);
+                    break;
+                case "rpg":
+                    HealRPGStats(player, percentage);
+                    break;
+                case "stamina":
+                    HealStat(player, "Stamina", percentage);
+                    break;
+                case "sanity":
+                    HealStat(player, "Sanity", percentage);
+                    break;
+                case "fatigue":
+                    HealStat(player, "Fatigue", percentage);
+                    break;
+                case "water":
+                    HealStat(player, "Water", percentage);
+                    break;
+                default:
+                    ApplyHealing(player, stat, percentage);
+                    break;
+            }
         }
-
-        // Apply healing to the player's stats
-        void ApplyHealing(IMyPlayer player, string stat, float percentage)
+        // Heals a specific stat like Stamina, Sanity, Fatigue
+        void HealStat(IMyPlayer player, string statName, float percentage)
         {
-            var character = player.Character;
-            if (character == null)
+            var statComp = player.Character.Components.Get<MyEntityStatComponent>();
+            MyEntityStat targetStat;
+
+            // Check if the stat exists in the player's stat component
+            if (statComp.TryGetStat(MyStringHash.GetOrCompute(statName), out targetStat) && targetStat != null)
             {
-                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Player character not found.");
-                return;
+                targetStat.Value = targetStat.MaxValue * (percentage / 100f);
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName} set to {percentage}%.");
             }
-
-            var statComponent = character.Components.Get<MyEntityStatComponent>();
-            if (statComponent == null)
-            {
-                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Stat component not found.");
-                return;
-            }
-
-            if (stat == "all")
-            {
-                foreach (var entityStat in statComponent.Stats)
-                {
-                    try
-                    {
-                        // Check for null entityStat
-                        if (entityStat == null)
-                        {
-                            iSurvivalLog.Error("EntityStat is null in statComponent.Stats.");
-                            continue;
-                        }
-
-                        // Check that MaxValue is not zero to avoid invalid multiplication
-                        if (entityStat.MaxValue <= 0)
-                        {
-                            iSurvivalLog.Error($"Invalid MaxValue for stat {entityStat.ToString()}: {entityStat.MaxValue}");
-                            continue;
-                        }
-
-                        // Set the stat value safely based on the percentage
-                        entityStat.Value = entityStat.MaxValue * (percentage / 100f);
-                        iSurvivalLog.Info($"Set {entityStat.ToString()} to {percentage}% of MaxValue.");
-                    }
-                    catch (Exception ex)
-                    {
-                        iSurvivalLog.Error($"Error setting stat {entityStat?.ToString()} to {percentage}%: {ex.Message}");
-                    }
-                }
-                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"All stats set to {percentage}%.");
-            }
-
             else
             {
-                MyEntityStat targetStat; // Declare the variable separately for C# 6.0
-                if (statComponent.TryGetStat(MyStringHash.GetOrCompute(stat), out targetStat))
-                {
-                    targetStat.Value = targetStat.MaxValue * (percentage / 100f);
-                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{stat} set to {percentage}%.");
-                }
-                else
-                {
-                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Stat {stat} not found.");
-                }
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Stat {statName} not found.");
             }
         }
+        // Apply healing to all stats
+        void ApplyHealingToAll(IMyPlayer player, float percentage)
+        {
+            var statComp = player.Character.Components.Get<MyEntityStatComponent>();
+            foreach (var stat in statComp.Stats)
+            {
+                if (stat.MaxValue > 0)
+                {
+                    stat.Value = stat.MaxValue * (percentage / 100f);
+                }
+            }
+            MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"All stats set to {percentage}%.");
+        }
+
+        // Heal Hunger (Food Stats)
+        void HealHungerStats(IMyPlayer player, float percentage)
+        {
+            var statComp = player.Character.Components.Get<MyEntityStatComponent>();
+
+            MyEntityStat calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, sugar;
+
+            // Get all the relevant food stats
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Calories"), out calories);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Fat"), out fat);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Cholesterol"), out cholesterol);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Sodium"), out sodium);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Carbohydrates"), out carbohydrates);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Sugar"), out sugar);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Protein"), out protein);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Vitamins"), out vitamins);
+
+            // Heal each food stat by setting its value based on percentage
+            if (calories != null) calories.Value = calories.MaxValue * (percentage / 100f);
+            if (fat != null) fat.Value = fat.MaxValue * (percentage / 100f);
+            if (cholesterol != null) cholesterol.Value = cholesterol.MaxValue * (percentage / 100f);
+            if (sodium != null) sodium.Value = sodium.MaxValue * (percentage / 100f);
+            if (carbohydrates != null) carbohydrates.Value = carbohydrates.MaxValue * (percentage / 100f);
+            if (sugar != null) sugar.Value = sugar.MaxValue * (percentage / 100f);
+            if (protein != null) protein.Value = protein.MaxValue * (percentage / 100f);
+            if (vitamins != null) vitamins.Value = vitamins.MaxValue * (percentage / 100f);
+
+            MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Hunger-related stats healed to {percentage}%.");
+        }
+        // Heal RPG stats
+        void HealRPGStats(IMyPlayer player, float percentage)
+        {
+            var statComp = player.Character.Components.Get<MyEntityStatComponent>();
+
+            MyEntityStat strength, dexterity, constitution, intelligence, wisdom, charisma;
+
+            // Get all the relevant RPG stats
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Strength"), out strength);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Dexterity"), out dexterity);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Constitution"), out constitution);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Intelligence"), out intelligence);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Wisdom"), out wisdom);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Charisma"), out charisma);
+
+            // Heal each RPG stat by setting its value based on percentage
+            if (strength != null) strength.Value = strength.MaxValue * (percentage / 100f);
+            if (dexterity != null) dexterity.Value = dexterity.MaxValue * (percentage / 100f);
+            if (constitution != null) constitution.Value = constitution.MaxValue * (percentage / 100f);
+            if (intelligence != null) intelligence.Value = intelligence.MaxValue * (percentage / 100f);
+            if (wisdom != null) wisdom.Value = wisdom.MaxValue * (percentage / 100f);
+            if (charisma != null) charisma.Value = charisma.MaxValue * (percentage / 100f);
+
+            MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"RPG stats healed to {percentage}%.");
+        }
+
+        // Apply healing to a single stat (for other specific stats)
+        void ApplyHealing(IMyPlayer player, string statName, float percentage)
+        {
+            var statComp = player.Character.Components.Get<MyEntityStatComponent>();
+            MyEntityStat targetStat;
+            if (statComp.TryGetStat(MyStringHash.GetOrCompute(statName), out targetStat) && targetStat != null)
+            {
+                targetStat.Value = targetStat.MaxValue * (percentage / 100f);
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{statName} set to {percentage}%.");
+            }
+            else
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Stat {statName} not found.");
+            }
+        }
+
 
         // Update the specified stat value
         void UpdateStat(string[] commandParts)

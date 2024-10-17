@@ -18,6 +18,7 @@ using Sandbox.Game;
 using PEPCO.iSurvival.settings;
 using VRage.ObjectBuilders;
 using VRage;
+using Sandbox.Game.World;
 
 namespace PEPCO.iSurvival.Effects
 {
@@ -27,7 +28,7 @@ namespace PEPCO.iSurvival.Effects
         {
 
             // Use GetAllStats to retrieve and display the player's stats
-            PlayerStatsHelper.GetAllStats(player);
+            //PlayerStatsHelper.GetAllStats(player);
 
             // Now retrieve individual stats that we specifically need
             MyEntityStat health;
@@ -63,10 +64,10 @@ namespace PEPCO.iSurvival.Effects
             if (hunger != null)
             {
                 // Starvation Stuff
-                if (hunger.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) >0)
+                if (hunger.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) > 0)
                 {
-                    
-                    health.Value = health.Value - (1-(hunger.Value/20));
+
+                    health.Value = health.Value - (1 - (hunger.Value / 20));
                     //MyAPIGateway.Utilities.ShowMessage("sitting:", $"Health Damage:{hunger.Value}  | {(1-(hunger.Value / 20))}");
                 }
                 // Apply other processes
@@ -77,8 +78,8 @@ namespace PEPCO.iSurvival.Effects
                 Blocks.ProcessBlockstEffects(player, stats);
             }
 
-            
-        
+
+
         }
         public static class Blocks
         {
@@ -90,6 +91,7 @@ namespace PEPCO.iSurvival.Effects
                 var fatigue = stats["Fatigue"];
                 var sanity = stats["Sanity"];
                 var hunger = stats["Hunger"];
+                var calories = stats["Calories"];
                 var water = stats["Water"];
                 var stamina = stats["Stamina"];
 
@@ -112,9 +114,10 @@ namespace PEPCO.iSurvival.Effects
                 {
                     Core.iSurvivalSession.ApplyStatChange(fatigue, 1, 1);
                     Core.iSurvivalSession.ApplyStatChange(stamina, 1, 2);
-                    if (hunger.Value > 20)
+                    if (hunger.Value > 20 && calories.Value > 1)
                     {
                         Core.iSurvivalSession.ApplyStatChange(sanity, 1, 0.5);
+                        Core.iSurvivalSession.ApplyStatChange(calories, 1, -10);
                         player.Character.GetInventory(0).AddItems((MyFixedPoint)(((100 - averageStats) / 100)), (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
                     }
                 }
@@ -164,16 +167,16 @@ namespace PEPCO.iSurvival.Effects
                 var sanity = stats["Sanity"];
                 if (sanity == null) return;
 
-                float sanityChangeRate = CalculateSanityChangeRate(stats);
+                float sanityChangeRate = CalculateSanityChangeRate(player, stats);
                 Core.iSurvivalSession.ApplyStatChange(sanity, 1, sanityChangeRate / 60f);
             }
 
-            private static float CalculateSanityChangeRate(Dictionary<string, MyEntityStat> stats)
+            private static float CalculateSanityChangeRate(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
                 float sanityChangeRate = 0f;
                 var fatigue = stats["Fatigue"];
-                var environmentFactor = EnvironmentalFactors.GetEnvironmentalFactor(null);
-                float oxygenFactor = EnvironmentalFactors.OxygenLevelEnvironmentalFactor(null);
+                var environmentFactor = EnvironmentalFactors.GetEnvironmentalFactor(player);
+                float oxygenFactor = EnvironmentalFactors.OxygenLevelEnvironmentalFactor(player);
                 oxygenFactor = MathHelper.Clamp(oxygenFactor, 0.1f, 2f);
 
                 sanityChangeRate += oxygenFactor;
@@ -195,29 +198,118 @@ namespace PEPCO.iSurvival.Effects
             public static void ProcessFatigue(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
                 var fatigue = stats["Fatigue"];
-                if (fatigue == null) return;
+                var stamina = stats["Stamina"];
+                if (fatigue == null || stamina == null) return;
 
-                float fatigueChangeRate = CalculateFatigueChangeRate(stats);
+                // Calculate fatigue change rate (based on nutrients and RPG stats like Constitution)
+                float fatigueChangeRate = CalculateFatigueChangeRate(player, stats);
+
+                // Apply the fatigue change over time
                 Core.iSurvivalSession.ApplyStatChange(fatigue, 1, fatigueChangeRate / 60f);
+
+                // Adjust stamina using RPG stats like Strength and Dexterity
+                ProcessStamina(player, stats);
             }
 
-            public static float CalculateFatigueChangeRate(Dictionary<string, MyEntityStat> stats)
+            public static float CalculateFatigueChangeRate(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
                 float changeRate = 0f;
-                foreach (var stat in stats)
+
+                // Check if Hunger stat exists and adjust fatigue based on Hunger
+                if (stats.ContainsKey("Hunger"))
                 {
-                    changeRate += GetFatigueChangeRate(stat.Value);
+                    var hungerStat = stats["Hunger"];
+                    changeRate += GetFatigueChangeRate(hungerStat);
                 }
+
+                // Apply Constitution's impact on fatigue
+                var statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
+                MyEntityStat constitution;
+                if (statComp != null && statComp.TryGetStat(MyStringHash.GetOrCompute("Constitution"), out constitution))
+                {
+                    float constitutionEffect = CalculateRPGStatEffect(constitution.Value, 10f, 0.75f); // Max 15% effect
+                    changeRate *= (1.0f + constitutionEffect); // Constitution reduces/increases fatigue change rate
+                    ShowEffectMessage(player, "Constitution", constitution.Value, constitutionEffect);
+                }
+
                 return changeRate;
             }
 
-            private static float GetFatigueChangeRate(MyEntityStat nutrient)
+            private static float GetFatigueChangeRate(MyEntityStat hunger)
             {
-                if (nutrient == null) return 0f;
-                float nutrientPercentage = nutrient.Value / nutrient.MaxValue;
-                return nutrientPercentage < 0.2f ? -1f : (nutrientPercentage < 0.4f ? -0.75f : -0.5f);
+                if (hunger == null) return 0f;
+                float hungerPercentage = hunger.Value / hunger.MaxValue;
+
+                // Fatigue drains faster when Hunger levels are low
+                return hungerPercentage < 0.2f ? -1f : (hungerPercentage < 0.4f ? -0.75f : -0.5f);
             }
+
+            // Adjust stamina change rate based on RPG stats (Strength, Dexterity)
+            public static void ProcessStamina(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
+            {
+                var stamina = stats["Stamina"];
+                if (stamina == null) return;
+
+                // Default stamina change rate
+                float staminaChangeRate = 0f;
+
+                // Apply RPG stat effects (Strength for stamina drain, Dexterity for stamina recovery)
+                var statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
+                MyEntityStat strength, dexterity;
+                if (statComp != null)
+                {
+                    // Strength reduces stamina drain during physical activities
+                    statComp.TryGetStat(MyStringHash.GetOrCompute("Strength"), out strength);
+                    if (strength != null)
+                    {
+                        float strengthEffect = CalculateRPGStatEffect(strength.Value, 10f, 0.75f); // Max 20% effect
+                        staminaChangeRate += strengthEffect * 5f; // Apply to reduce stamina drain
+                        //ShowEffectMessage(player, "Strength", strength.Value, strengthEffect);
+                    }
+
+                    // Dexterity improves stamina recovery when moving efficiently
+                    statComp.TryGetStat(MyStringHash.GetOrCompute("Dexterity"), out dexterity);
+                    if (dexterity != null)
+                    {
+                        float dexterityEffect = CalculateRPGStatEffect(dexterity.Value, 10f, 0.75f); // Max 10% effect
+                        staminaChangeRate += dexterityEffect * 3f; // Apply to increase stamina recovery
+                        ShowEffectMessage(player, "Dexterity", dexterity.Value, staminaChangeRate);
+                    }
+                }
+
+                // Apply the stamina change rate
+                Core.iSurvivalSession.ApplyStatChange(stamina, 1, staminaChangeRate);
+            }
+
+            // Calculate the effect of an RPG stat
+            private static float CalculateRPGStatEffect(float currentStatValue, float baseStat, float maxEffect)
+            {
+                float normalizedStat = MathHelper.Clamp(currentStatValue, 1f, 20f); // Ensure stat is between 1 and 20
+                float statDifference = normalizedStat - baseStat;
+                return MathHelper.Clamp(statDifference / 10f, -maxEffect, maxEffect); // Scale based on difference from baseStat
+            }
+
+            // Function to display HUD messages only when a significant change happens
+            private static void ShowEffectMessage(IMyPlayer player, string statName, float statValue, float effect)
+            {
+                float percentageEffect = Math.Abs(effect); // Get absolute effect value
+
+                // Show the message only if the effect is significant (greater than 1%)
+                if (percentageEffect > 0.01f)
+                {
+                    string impactType = effect >= 0 ? "bonus" : "penalty";
+                    string message = $"{statName} ({statValue:F1}): {impactType} of {percentageEffect:F1}%";
+
+                    // Show the message on HUD
+                    MyAPIGateway.Utilities.ShowMessage("RPG Stat", message);
+
+                    // Optionally log the message as well
+                    iSurvivalLog.Info($"{player.DisplayName}: {message}");
+                }
+            }
+
         }
+
         public static class Movement
         {
             public static void ProcessMovementEffects(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
@@ -372,7 +464,6 @@ namespace PEPCO.iSurvival.Effects
                 }
             }
         }
-
         public static class Metabolism
         {
             public static float CalculateMetabolicRate(IMyPlayer player)
@@ -399,22 +490,75 @@ namespace PEPCO.iSurvival.Effects
                     baseMetabolicRate *= (2.0f - oxygenFactor); // Increase rate when oxygen is low
                 }
 
-                // Adjust metabolic rate based on stamina level
-                var statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
-                MyEntityStat staminaStat;
-
-                if (statComp != null && statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out staminaStat) && staminaStat != null)
-                {
-                    float staminaLevel = staminaStat.Value / staminaStat.MaxValue;
-                    baseMetabolicRate *= (2.0f - staminaLevel); // Increase burn rate as stamina decreases
-                }
-                else
-                {
-                    iSurvivalLog.Error("CalculateMetabolicRate: Stamina stat is missing or null.");
-                }
+                // Adjust metabolic rate based on RPG stats
+                ApplyRPGStatEffects(player, ref baseMetabolicRate);
 
                 return baseMetabolicRate;
             }
+
+            public static void ApplyRPGStatEffects(IMyPlayer player, ref float baseMetabolicRate)
+            {
+                var statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
+                MyEntityStat strength, dexterity, constitution;
+
+                const float BASE_STAT = 10.0f; // D&D baseline for neutral stats
+                const float MAX_EFFECT = 0.2f; // Maximum effect (20%) for extreme stats (e.g., 20 or 1)
+                const float MIN_EFFECT = -0.2f; // Maximum penalty (20%) for extreme low stats
+
+                if (statComp != null)
+                {
+                    // Get RPG stats
+                    statComp.TryGetStat(MyStringHash.GetOrCompute("Strength"), out strength);
+                    statComp.TryGetStat(MyStringHash.GetOrCompute("Dexterity"), out dexterity);
+                    statComp.TryGetStat(MyStringHash.GetOrCompute("Constitution"), out constitution);
+
+                    // Apply Strength impact: Higher strength reduces metabolic burn during physical activities
+                    if (strength != null)
+                    {
+                        float strengthEffect = CalculateRPGEffect(strength.Value, strength.MaxValue, BASE_STAT, MAX_EFFECT, MIN_EFFECT);
+                        baseMetabolicRate *= (1.0f - strengthEffect); // Reduce or increase burn rate
+
+                        // Show message for strength effect
+                        //ShowEffectMessage(player, "Strength", strength.Value, strengthEffect);
+                    }
+
+                    // Apply Dexterity impact: Higher dexterity makes movement more efficient, lowering stamina consumption
+                    if (dexterity != null)
+                    {
+                        float dexterityEffect = CalculateRPGEffect(dexterity.Value, dexterity.MaxValue, BASE_STAT, MAX_EFFECT * 0.5f, MIN_EFFECT * 0.5f); // Max 10% impact
+                        baseMetabolicRate *= (1.0f - dexterityEffect); // Reduce or increase stamina consumption
+
+                        // Show message for dexterity effect
+                        //ShowEffectMessage(player, "Dexterity", dexterity.Value, dexterityEffect);
+                    }
+
+                    // Apply Constitution impact: Higher constitution reduces fatigue and hunger
+                    if (constitution != null)
+                    {
+                        float constitutionEffect = CalculateRPGEffect(constitution.Value, constitution.MaxValue, BASE_STAT, MAX_EFFECT * 0.75f, MIN_EFFECT * 0.75f); // Max 15% impact
+                        baseMetabolicRate *= (1.0f - constitutionEffect); // Reduce or increase fatigue/hunger impact
+
+                        // Show message for constitution effect
+                        //ShowEffectMessage(player, "Constitution", constitution.Value, constitutionEffect);
+                    }
+                }
+                else
+                {
+                    iSurvivalLog.Error("RPG stats are missing or null.");
+                }
+            }
+
+            // Helper function to calculate RPG effects based on stat values
+            private static float CalculateRPGEffect(float currentStatValue, float maxValue, float baseStat, float maxEffect, float minEffect)
+            {
+                float normalizedStat = MathHelper.Clamp(currentStatValue, 1f, 20f); // Ensure stat is between 1 and 20
+                float statDifference = normalizedStat - baseStat;
+                float effect = statDifference / 10f; // Scale effect based on difference from baseStat (10)
+                return MathHelper.Clamp(effect, minEffect, maxEffect); // Clamp to min/max effect
+            }
+
+
+
 
             public static void ApplyMetabolismEffect(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
@@ -441,6 +585,7 @@ namespace PEPCO.iSurvival.Effects
                 const float dailyCalories = 2000f; // kcal
                 const float dailyFat = 70f; // grams
                 const float dailyCholesterol = 300f; // mg
+                const float dailySugar = 36; // grams
                 const float dailySodium = 2300f; // mg
                 const float dailyCarbohydrates = 275f; // grams
                 const float dailyProtein = 50f; // grams
@@ -458,6 +603,7 @@ namespace PEPCO.iSurvival.Effects
                 float caloriesBurnRate = (dailyCalories / 1440f) * multiplier; // kcal/min
                 float fatBurnRate = (dailyFat / 1440f) * multiplier; // grams/min
                 float cholesterolBurnRate = (dailyCholesterol / 1440f) * multiplier; // mg/min
+                float sugarBurnRate = (dailySugar / 1440f) * multiplier; // grams/min
                 float sodiumBurnRate = (dailySodium / 1440f) * multiplier; // mg/min
                 float carbBurnRate = (dailyCarbohydrates / 1440f) * multiplier; // grams/min
                 float proteinBurnRate = (dailyProtein / 1440f) * multiplier; // grams/min
@@ -470,6 +616,7 @@ namespace PEPCO.iSurvival.Effects
                 ApplyStatChange(stats, "Cholesterol", metabolicRate, -cholesterolBurnRate);
                 ApplyStatChange(stats, "Sodium", metabolicRate, -sodiumBurnRate);
                 ApplyStatChange(stats, "Carbohydrates", metabolicRate, -carbBurnRate);
+                ApplyStatChange(stats, "Sugar", metabolicRate, -sugarBurnRate);
                 ApplyStatChange(stats, "Protein", metabolicRate, -proteinBurnRate);
                 ApplyStatChange(stats, "Vitamins", metabolicRate, -vitaminBurnRate);
                 ApplyStatChange(stats, "Water", metabolicRate, -waterBurnRate);
@@ -511,11 +658,12 @@ namespace PEPCO.iSurvival.Effects
                 double cholesterolPercentage = (stats["Cholesterol"].Value / stats["Cholesterol"].MaxValue) * 100;
                 double sodiumPercentage = (stats["Sodium"].Value / stats["Sodium"].MaxValue) * 100;
                 double carbPercentage = (stats["Carbohydrates"].Value / stats["Carbohydrates"].MaxValue) * 100;
+                double sugarPercentage = (stats["Sugar"].Value / stats["Sugar"].MaxValue) * 100;
                 double proteinPercentage = (stats["Protein"].Value / stats["Protein"].MaxValue) * 100;
                 double vitaminPercentage = (stats["Vitamins"].Value / stats["Vitamins"].MaxValue) * 100;
 
                 // Calculate the average of these values to get the hunger level
-                double averagePercentage = (caloriePercentage + fatPercentage + cholesterolPercentage + sodiumPercentage + carbPercentage + proteinPercentage + vitaminPercentage) / 7.0;
+                double averagePercentage = (caloriePercentage + fatPercentage + cholesterolPercentage + sodiumPercentage + carbPercentage + proteinPercentage + vitaminPercentage + sugarPercentage) / 8.0;
 
                 // Set hunger value directly based on the average percentage
                 Core.iSurvivalSession.ApplyStatChange(hunger, 1, averagePercentage - hunger.Value);
