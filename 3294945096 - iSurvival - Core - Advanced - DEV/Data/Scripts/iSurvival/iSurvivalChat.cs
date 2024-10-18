@@ -143,19 +143,21 @@ namespace PEPCO.iSurvival.Chat
         {
             var statComp = player.Character.Components?.Get<MyEntityStatComponent>();
             
-                MyEntityStat sanity, calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, hunger, water, fatigue, stamina;
+                MyEntityStat calories, fat, cholesterol, sodium, fiber, sugar, starches, protein, vitamins;
 
                 // Retrieve each Food stat from the component
                 statComp.TryGetStat(MyStringHash.GetOrCompute("Calories"), out calories);
                 statComp.TryGetStat(MyStringHash.GetOrCompute("Fat"), out fat);
                 statComp.TryGetStat(MyStringHash.GetOrCompute("Cholesterol"), out cholesterol);
                 statComp.TryGetStat(MyStringHash.GetOrCompute("Sodium"), out sodium);
-                statComp.TryGetStat(MyStringHash.GetOrCompute("Carbohydrates"), out carbohydrates);
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Fiber"), out fiber);
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Sugar"), out sugar);
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Starches"), out starches);
                 statComp.TryGetStat(MyStringHash.GetOrCompute("Protein"), out protein);
                 statComp.TryGetStat(MyStringHash.GetOrCompute("Vitamins"), out vitamins);
                 MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"ShowHunger Test");
 
-                //float fatigueChangeRate = Effects.Processes.FatigueAndStamina.CalculateFatigueChangeRate(calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins);               
+                //float fatigueChangeRate = Effects.Processes.FatigueAndStamina.CalculateFatigueChangeRate(calories, fat, cholesterol, sodium, fiber, sugar, starches, protein, vitamins);               
             
             //MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Hunger Rate: {fatigueChangeRate}");
         }
@@ -314,15 +316,16 @@ namespace PEPCO.iSurvival.Chat
         {
             var statComp = player.Character.Components.Get<MyEntityStatComponent>();
 
-            MyEntityStat calories, fat, cholesterol, sodium, carbohydrates, protein, vitamins, sugar;
+            MyEntityStat calories, fat, cholesterol, sodium, fiber, sugar, starches, protein, vitamins;
 
             // Get all the relevant food stats
             statComp.TryGetStat(MyStringHash.GetOrCompute("Calories"), out calories);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Fat"), out fat);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Cholesterol"), out cholesterol);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Sodium"), out sodium);
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Carbohydrates"), out carbohydrates);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Fiber"), out fiber);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Sugar"), out sugar);
+            statComp.TryGetStat(MyStringHash.GetOrCompute("Starches"), out starches);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Protein"), out protein);
             statComp.TryGetStat(MyStringHash.GetOrCompute("Vitamins"), out vitamins);
 
@@ -331,8 +334,9 @@ namespace PEPCO.iSurvival.Chat
             if (fat != null) fat.Value = fat.MaxValue * (percentage / 100f);
             if (cholesterol != null) cholesterol.Value = cholesterol.MaxValue * (percentage / 100f);
             if (sodium != null) sodium.Value = sodium.MaxValue * (percentage / 100f);
-            if (carbohydrates != null) carbohydrates.Value = carbohydrates.MaxValue * (percentage / 100f);
+            if (fiber != null) fiber.Value = fiber.MaxValue * (percentage / 100f);
             if (sugar != null) sugar.Value = sugar.MaxValue * (percentage / 100f);
+            if (starches != null) starches.Value = starches.MaxValue * (percentage / 100f);
             if (protein != null) protein.Value = protein.MaxValue * (percentage / 100f);
             if (vitamins != null) vitamins.Value = vitamins.MaxValue * (percentage / 100f);
 

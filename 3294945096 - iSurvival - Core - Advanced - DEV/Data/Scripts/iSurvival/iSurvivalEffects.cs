@@ -26,10 +26,6 @@ namespace PEPCO.iSurvival.Effects
     {
         public static void ProcessPlayer(IMyPlayer player, MyEntityStatComponent statComp)
         {
-
-            // Use GetAllStats to retrieve and display the player's stats
-            //PlayerStatsHelper.GetAllStats(player);
-
             // Now retrieve individual stats that we specifically need
             MyEntityStat health;
             statComp.TryGetStat(MyStringHash.GetOrCompute("Health"), out health);
@@ -44,13 +40,20 @@ namespace PEPCO.iSurvival.Effects
                     stats[statName] = stat;
                 }
             }
+
             var fatigue = stats["Fatigue"];
             var hunger = stats["Hunger"];
             var stamina = stats["Stamina"];
 
+            // Check if player is in a cryo block
+            if (Blocks.ProcessBlockstEffects(player, stats))
+            {
+                return; // Stop processing if the player is in a cryo block
+            }
+
+            // Process other stats like fatigue, hunger, etc.
             if (fatigue != null)
             {
-                // BLINK STUFF
                 if (fatigue.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) < 5)
                 {
                     Core.iSurvivalSession.blinkList.Add(player.IdentityId);
@@ -60,33 +63,38 @@ namespace PEPCO.iSurvival.Effects
                         MyAPIGateway.Multiplayer.SendMessageTo(Core.iSurvivalSession.modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
                 }
             }
+
             // If the hunger stat is valid, apply various effects
             if (hunger != null)
             {
-                // Starvation Stuff
+                var starvationCounter = Core.iSurvivalSession.starvationMessageCooldown; // Cooldown timer (in frames)
                 if (hunger.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) > 0)
                 {
+                    Core.iSurvivalSession.starvationMessageCooldown++; // Increase the counter of the display cooldown.
+                    float damageAmount = (1 - (hunger.Value / 20)); // Adjust the multiplier as needed
+                    health.Decrease(damageAmount, null);
 
-                    health.Value = health.Value - (1 - (hunger.Value / 20));
-                    //MyAPIGateway.Utilities.ShowMessage("sitting:", $"Health Damage:{hunger.Value}  | {(1-(hunger.Value / 20))}");
+                    if (starvationCounter >= 2) // When the cooldown counter gets to 5 seconds
+                    {
+                        MyAPIGateway.Utilities.ShowNotification($"You are starving!", 2000, MyFontEnum.Red);
+                        Core.iSurvivalSession.starvationMessageCooldown = 0; // Reset the timer
+                    }
                 }
+
                 // Apply other processes
                 Metabolism.ApplyMetabolismEffect(player, stats);
                 FatigueAndStamina.ProcessFatigue(player, stats);
                 Sanity.ProcessSanity(player, stats);
                 Movement.ProcessMovementEffects(player, stats);
-                Blocks.ProcessBlockstEffects(player, stats);
             }
-
-
-
         }
+
         public static class Blocks
         {
-            public static void ProcessBlockstEffects(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
+            public static bool ProcessBlockstEffects(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
                 var block = player.Controller?.ControlledEntity?.Entity as IMyCubeBlock;
-                if (block == null) return;
+                if (block == null) return false; // Player not in a block
 
                 var fatigue = stats["Fatigue"];
                 var sanity = stats["Sanity"];
@@ -98,8 +106,12 @@ namespace PEPCO.iSurvival.Effects
                 float averageStats = (fatigue.Value + sanity.Value + hunger.Value + water.Value) / 4;
 
                 var blockDef = block.BlockDefinition.SubtypeId.ToString();
-                if (blockDef.Contains("Cryo")) return;
+                if (blockDef.Contains("Cryo"))
+                {
+                    return true; // Player is in a cryo block, stop processing
+                }
 
+                // Process effects for other block types
                 if (blockDef.Contains("Bed"))
                 {
                     Core.iSurvivalSession.ApplyStatChange(stamina, 1, 2);
@@ -108,7 +120,7 @@ namespace PEPCO.iSurvival.Effects
                     {
                         Core.iSurvivalSession.ApplyStatChange(sanity, 1, 0.25);
                     }
-                    return;
+                    return false;
                 }
                 else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
                 {
@@ -132,8 +144,11 @@ namespace PEPCO.iSurvival.Effects
                         Core.iSurvivalSession.ApplyStatChange(stamina, 1, 1);
                     }
                 }
+
+                return false; // Player is not in a cryo block
             }
         }
+
         public static class Blink
         {
             public static void getPoke(byte[] poke)
@@ -229,7 +244,7 @@ namespace PEPCO.iSurvival.Effects
                 {
                     float constitutionEffect = CalculateRPGStatEffect(constitution.Value, 10f, 0.75f); // Max 15% effect
                     changeRate *= (1.0f + constitutionEffect); // Constitution reduces/increases fatigue change rate
-                    ShowEffectMessage(player, "Constitution", constitution.Value, constitutionEffect);
+                    //ShowEffectMessage(player, "Constitution", constitution.Value, constitutionEffect);
                 }
 
                 return changeRate;
@@ -273,7 +288,7 @@ namespace PEPCO.iSurvival.Effects
                     {
                         float dexterityEffect = CalculateRPGStatEffect(dexterity.Value, 10f, 0.75f); // Max 10% effect
                         staminaChangeRate += dexterityEffect * 3f; // Apply to increase stamina recovery
-                        ShowEffectMessage(player, "Dexterity", dexterity.Value, staminaChangeRate);
+                        //ShowEffectMessage(player, "Dexterity", dexterity.Value, staminaChangeRate);
                     }
                 }
 
@@ -585,9 +600,10 @@ namespace PEPCO.iSurvival.Effects
                 const float dailyCalories = 2000f; // kcal
                 const float dailyFat = 70f; // grams
                 const float dailyCholesterol = 300f; // mg
-                const float dailySugar = 36; // grams
                 const float dailySodium = 2300f; // mg
-                const float dailyCarbohydrates = 275f; // grams
+                const float dailyFiber = 30f; // grams
+                const float dailySugar = 36f; // grams
+                const float dailyStarches = 220f; // grams
                 const float dailyProtein = 50f; // grams
                 const float dailyVitamins = 100f; // arbitrary units
                 const float dailyWater = 3.7f; // liters
@@ -602,10 +618,11 @@ namespace PEPCO.iSurvival.Effects
                 // Convert daily values to per-minute burn rates for a 2-hour day
                 float caloriesBurnRate = (dailyCalories / 1440f) * multiplier; // kcal/min
                 float fatBurnRate = (dailyFat / 1440f) * multiplier; // grams/min
-                float cholesterolBurnRate = (dailyCholesterol / 1440f) * multiplier; // mg/min
-                float sugarBurnRate = (dailySugar / 1440f) * multiplier; // grams/min
+                float cholesterolBurnRate = (dailyCholesterol / 1440f) * multiplier; // mg/min                
                 float sodiumBurnRate = (dailySodium / 1440f) * multiplier; // mg/min
-                float carbBurnRate = (dailyCarbohydrates / 1440f) * multiplier; // grams/min
+                float fiberBurnRate = (dailyFiber / 1440f) * multiplier; // grams/min
+                float sugarBurnRate = (dailySugar / 1440f) * multiplier; // grams/min
+                float starchesBurnRate = (dailyStarches / 1440f) * multiplier; // grams/min
                 float proteinBurnRate = (dailyProtein / 1440f) * multiplier; // grams/min
                 float vitaminBurnRate = (dailyVitamins / 1440f) * multiplier; // units/min
                 float waterBurnRate = (dailyWater / 1440f) * multiplier; // liters/min
@@ -615,8 +632,9 @@ namespace PEPCO.iSurvival.Effects
                 ApplyStatChange(stats, "Fat", metabolicRate, -fatBurnRate);
                 ApplyStatChange(stats, "Cholesterol", metabolicRate, -cholesterolBurnRate);
                 ApplyStatChange(stats, "Sodium", metabolicRate, -sodiumBurnRate);
-                ApplyStatChange(stats, "Carbohydrates", metabolicRate, -carbBurnRate);
+                ApplyStatChange(stats, "Fiber", metabolicRate, -fiberBurnRate);
                 ApplyStatChange(stats, "Sugar", metabolicRate, -sugarBurnRate);
+                ApplyStatChange(stats, "Starches", metabolicRate, -starchesBurnRate);
                 ApplyStatChange(stats, "Protein", metabolicRate, -proteinBurnRate);
                 ApplyStatChange(stats, "Vitamins", metabolicRate, -vitaminBurnRate);
                 ApplyStatChange(stats, "Water", metabolicRate, -waterBurnRate);
@@ -657,13 +675,14 @@ namespace PEPCO.iSurvival.Effects
                 double fatPercentage = (stats["Fat"].Value / stats["Fat"].MaxValue) * 100;
                 double cholesterolPercentage = (stats["Cholesterol"].Value / stats["Cholesterol"].MaxValue) * 100;
                 double sodiumPercentage = (stats["Sodium"].Value / stats["Sodium"].MaxValue) * 100;
-                double carbPercentage = (stats["Carbohydrates"].Value / stats["Carbohydrates"].MaxValue) * 100;
+                double fiberPercentage = (stats["Fiber"].Value / stats["Fiber"].MaxValue) * 100;
                 double sugarPercentage = (stats["Sugar"].Value / stats["Sugar"].MaxValue) * 100;
+                double starchesPercentage = (stats["Starches"].Value / stats["Starches"].MaxValue) * 100;
                 double proteinPercentage = (stats["Protein"].Value / stats["Protein"].MaxValue) * 100;
                 double vitaminPercentage = (stats["Vitamins"].Value / stats["Vitamins"].MaxValue) * 100;
 
                 // Calculate the average of these values to get the hunger level
-                double averagePercentage = (caloriePercentage + fatPercentage + cholesterolPercentage + sodiumPercentage + carbPercentage + proteinPercentage + vitaminPercentage + sugarPercentage) / 8.0;
+                double averagePercentage = (caloriePercentage + fatPercentage + cholesterolPercentage + sodiumPercentage + fiberPercentage + sugarPercentage + starchesPercentage + proteinPercentage + vitaminPercentage + sugarPercentage) / 10.0;
 
                 // Set hunger value directly based on the average percentage
                 Core.iSurvivalSession.ApplyStatChange(hunger, 1, averagePercentage - hunger.Value);

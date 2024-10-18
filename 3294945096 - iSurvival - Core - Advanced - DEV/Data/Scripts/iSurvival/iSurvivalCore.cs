@@ -31,7 +31,8 @@ namespace PEPCO.iSurvival.Core
         public static List<long> blinkList = new List<long>();
         public static Random rand = new Random();
 
-
+        //Starvation Stuff
+        public static int starvationMessageCooldown = 0; // Cooldown timer (in frames)
 
 
         public static void ApplyStatChange(MyEntityStat stat, double multiplier, double baseChange)

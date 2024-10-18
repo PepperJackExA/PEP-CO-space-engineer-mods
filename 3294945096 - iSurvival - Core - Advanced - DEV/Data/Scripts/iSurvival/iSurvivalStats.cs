@@ -45,8 +45,9 @@ namespace PEPCO.iSurvival.stats
             { "Fat", new StatSetting(0f, 1f, 1f, 1f) },
             { "Cholesterol", new StatSetting(0f, 1f, 1f, 1f) },
             { "Sodium", new StatSetting(0f, 1f, 1f, 1f) },
-            { "Carbohydrates", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Fiber", new StatSetting(0f, 1f, 1f, 1f) },
             { "Sugar", new StatSetting(0f, 1f, 1f, 1f) },
+            { "Starches", new StatSetting(0f, 1f, 1f, 1f) },
             { "Protein", new StatSetting(0f, 1f, 1f, 1f) },
             { "Vitamins", new StatSetting(0f, 1f, 1f, 1f) },
             { "Hunger", new StatSetting(0f, 1f, 1f, 1f) },
@@ -189,12 +190,12 @@ namespace PEPCO.iSurvival.stats
         }
     }
 
-    public class MyStatPlayerCarbohydrates : BaseHudStat
+    public class MyStatPlayerFiber : BaseHudStat
     {
-        public override string StatSubtype => "Carbohydrates";
-        public MyStatPlayerCarbohydrates()
+        public override string StatSubtype => "Fiber";
+        public MyStatPlayerFiber()
         {
-            Id = MyStringHash.GetOrCompute("player_carbohydrates");
+            Id = MyStringHash.GetOrCompute("player_fiber");
         }
     }
     public class MyStatPlayerSugar : BaseHudStat
@@ -203,6 +204,14 @@ namespace PEPCO.iSurvival.stats
         public MyStatPlayerSugar()
         {
             Id = MyStringHash.GetOrCompute("player_sugar");
+        }
+    }
+    public class MyStatPlayerStarches : BaseHudStat
+    {
+        public override string StatSubtype => "Starches";
+        public MyStatPlayerStarches()
+        {
+            Id = MyStringHash.GetOrCompute("player_starches");
         }
     }
 

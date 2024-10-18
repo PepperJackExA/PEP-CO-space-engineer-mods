@@ -68,11 +68,15 @@
 				</Stat>
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
-					<SubtypeId>Carbohydrates</SubtypeId>
+					<SubtypeId>Fiber</SubtypeId>
 				</Stat>
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
 					<SubtypeId>Sugar</SubtypeId>
+				</Stat>
+				<Stat>
+					<TypeId>MyObjectBuilder_EntityStat</TypeId>
+					<SubtypeId>Starches</SubtypeId>
 				</Stat>
 				<Stat>
 					<TypeId>MyObjectBuilder_EntityStat</TypeId>
@@ -177,20 +181,6 @@
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		<!-- Sanity -->
 		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
 			<Id>
@@ -212,7 +202,7 @@
 			</Id>
 			<Name>Calories</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>1000</DefaultValue>
+			<DefaultValue>2000</DefaultValue>
 			<MaxValue>3000</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
@@ -225,8 +215,8 @@
 			</Id>
 			<Name>Fat</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>25</DefaultValue>
-			<MaxValue>78</MaxValue>
+			<DefaultValue>70</DefaultValue>
+			<MaxValue>105</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -238,8 +228,8 @@
 			</Id>
 			<Name>Cholesterol</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>100</DefaultValue>
-			<MaxValue>300</MaxValue>
+			<DefaultValue>300</DefaultValue>
+			<MaxValue>450</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -251,21 +241,21 @@
 			</Id>
 			<Name>Sodium</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>700</DefaultValue>
-			<MaxValue>2300</MaxValue>
+			<DefaultValue>2300</DefaultValue>
+			<MaxValue>3450</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
-		<!-- Carbohydrates -->
+		<!-- Fiber -->
 		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
 			<Id>
 				<TypeId>MyObjectBuilder_EntityStat</TypeId>
-				<SubtypeId>Carbohydrates</SubtypeId>
+				<SubtypeId>Fiber</SubtypeId>
 			</Id>
-			<Name>Carbohydrates</Name>
+			<Name>Fiber</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>75</DefaultValue>
-			<MaxValue>275</MaxValue>
+			<DefaultValue>30</DefaultValue>
+			<MaxValue>45</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 		<!-- Sugar -->
@@ -276,8 +266,20 @@
 			</Id>
 			<Name>Sugar</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>100</DefaultValue>
-			<MaxValue>400</MaxValue>
+			<DefaultValue>36</DefaultValue>
+			<MaxValue>54</MaxValue>
+			<EnabledInCreative>false</EnabledInCreative>
+		</Stat>
+		<!-- Starches -->
+		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
+			<Id>
+				<TypeId>MyObjectBuilder_EntityStat</TypeId>
+				<SubtypeId>Starches</SubtypeId>
+			</Id>
+			<Name>Starches</Name>
+			<MinValue>0</MinValue>
+			<DefaultValue>220</DefaultValue>
+			<MaxValue>330</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -289,8 +291,8 @@
 			</Id>
 			<Name>Protein</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>10</DefaultValue>
-			<MaxValue>50</MaxValue>
+			<DefaultValue>50</DefaultValue>
+			<MaxValue>75</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
@@ -302,12 +304,12 @@
 			</Id>
 			<Name>Vitamins</Name>
 			<MinValue>0</MinValue>
-			<DefaultValue>10</DefaultValue>
-			<MaxValue>100</MaxValue>
+			<DefaultValue>100</DefaultValue>
+			<MaxValue>150</MaxValue>
 			<EnabledInCreative>false</EnabledInCreative>
 		</Stat>
 
-		<!-- Hunger -->
+		<!-- Hunger: Not a daily intake stat but dynamically changes based on the satisfaction of the nutritional values above. Should be kept in balance by regularly consuming food. -->
 		<Stat xsi:type="MyObjectBuilder_EntityStatDefinition">
 			<Id>
 				<TypeId>MyObjectBuilder_EntityStat</TypeId>

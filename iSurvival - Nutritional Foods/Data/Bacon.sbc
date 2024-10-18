@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Physical Items Section -->
+	<PhysicalItems>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Bacon</SubtypeId>
+			</Id>
+			<DisplayName>Bacon</DisplayName>
+			<Description>A crispy serving of two delicious bacon strips. Perfect for a quick energy boost.</Description>
+			<Icon>Textures\GUI\Icons\Bacon.png</Icon>
+			<Size>
+				<X>0.1</X>
+				<Y>0.1</Y>
+				<Z>0.02</Z>
+			</Size>
+			<Mass>0.05</Mass>
+			<Volume>0.01</Volume>
+			<Model>Models\Components\bacon_model.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Calories" Value="0.05" Time="5"/>
+				<!-- 42 kcal per slice: (42/2000 = 0.021) -->
+				<Stat Name="Fat" Value="0.14" Time="5"/>
+				<!-- 3.3g fat: (3.3g/70g = 0.047) -->
+				<Stat Name="Cholesterol" Value="0.10" Time="5"/>
+				<!-- 9mg cholesterol: (9mg/300mg = 0.03) -->
+				<Stat Name="Sodium" Value="0.17" Time="5"/>
+				<!-- 192mg sodium: (192mg/2300mg = 0.083) -->
+				<Stat Name="Fiber" Value="0.0" Time="5"/>
+				<!-- No fiber -->
+				<Stat Name="Sugar" Value="0.001" Time="5"/>
+				<!-- Trace sugars -->
+				<Stat Name="Starches" Value="0.0" Time="5"/>
+				<!-- No starch -->
+				<Stat Name="Protein" Value="0.05" Time="5"/>
+				<!-- 3g protein: (3g/50g = 0.06) -->
+				<Stat Name="Vitamins" Value="0.01" Time="5"/>
+				<!-- Trace vitamins -->
+				<Stat Name="Water" Value="0.03" Time="5"/>
+				<!-- 30% water content -->
+			</Stats>
+			<MinimalPricePerUnit>2</MinimalPricePerUnit>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+	</PhysicalItems>
+
+</Definitions>
