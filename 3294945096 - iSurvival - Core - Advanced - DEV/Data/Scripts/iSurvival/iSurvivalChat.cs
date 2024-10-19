@@ -9,6 +9,8 @@ using PEPCO.iSurvival.settings;
 using PEPCO.iSurvival.stats;
 using System.Collections.Generic;
 using System.Net;
+using PEPCO.iSurvival.Core;
+using VRageMath;
 
 namespace PEPCO.iSurvival.Chat
 {
@@ -34,6 +36,10 @@ namespace PEPCO.iSurvival.Chat
     { "help", new CommandSetting(true, false, false) }, // Everyone can use, not server restricted
     { "liststats", new CommandSetting(true, false, false) }, // Everyone can use, not server restricted
     { "showhunger", new CommandSetting(true, false, false) }, // Admin only, server only
+    { "rpgstats", new CommandSetting(true, false, false) }, // Show RPG Stats
+    { "addrpgxp", new CommandSetting(true, true, false) }, // Add XP to RPG Leveling
+    { "levelup", new CommandSetting(true, true, false) },  // Level up
+    { "levelupstat", new CommandSetting(true, false, false) }  // Level up
 };
     }
 
@@ -127,6 +133,18 @@ namespace PEPCO.iSurvival.Chat
                     case "showhunger":
                         ShowHunger(thisPlayer);
                         break;
+                    case "rpgstats":
+                        ShowRPGStats(thisPlayer);
+                        break;
+                    case "addrpgxp":
+                        AddRPGXP(thisPlayer, commandParts);
+                        break;
+                    case "levelupstat":
+                        HandleLevelUpStatCommand(thisPlayer, commandParts); // New command to level up RPG stats
+                        break;
+                    case "levelup":
+                        LevelUpPlayer(thisPlayer);
+                        break;
                     default:
                         //UpdateStat(commandParts);
                         MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Unknown command: {command}");
@@ -138,6 +156,168 @@ namespace PEPCO.iSurvival.Chat
                 iSurvivalLog.Error(e);
             }
         }
+        private void HandleLevelUpStatCommand(IMyPlayer player, string[] commandParts)
+        {
+            if (commandParts.Length != 3)
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Usage: /isurvival levelupstat <stat> <points>");
+                return;
+            }
+
+            string statName = commandParts[1].ToLower(); // The stat the player wants to level up
+            int points;
+
+            // Check if the provided points value is a valid integer
+            if (!int.TryParse(commandParts[2], out points) || points <= 0)
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Invalid number of points. Please enter a valid positive number.");
+                return;
+            }
+
+            long playerId = player.IdentityId;
+
+            // Check if the RPG system is initialized for the player
+            if (Core.iSurvivalSession.playerRPGSystems.ContainsKey(playerId))
+            {
+                var rpgLeveling = Core.iSurvivalSession.playerRPGSystems[playerId];
+
+                // Check if the player has enough available stat points to allocate
+                if (rpgLeveling.StatPoints < points)
+                {
+                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Not enough stat points available.");
+                    return;
+                }
+
+                // Retrieve the player's stat component
+                var statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
+                if (statComp == null)
+                {
+                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Stat component not found.");
+                    return;
+                }
+
+                // Define RPG stats to support dynamic lookup
+                Dictionary<string, string> rpgStats = new Dictionary<string, string>()
+        {
+            { "strength", "Strength" },
+            { "dexterity", "Dexterity" },
+            { "constitution", "Constitution" },
+            { "wisdom", "Wisdom" },
+            { "intelligence", "Intelligence" },
+            { "charisma", "Charisma" }
+        };
+
+                // Validate the stat name entered by the player
+                if (!rpgStats.ContainsKey(statName))
+                {
+                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Unknown stat: {statName}");
+                    return;
+                }
+
+                // Retrieve the specific stat based on the stat name provided
+                MyEntityStat targetStat = null;
+                string rpgStatKey = rpgStats[statName];
+                statComp.TryGetStat(MyStringHash.GetOrCompute(rpgStatKey), out targetStat);
+
+                if (targetStat == null)
+                {
+                    MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Stat {statName} not found.");
+                    return;
+                }
+
+                // Use ApplyStatChange to modify the stat value
+                Core.iSurvivalSession.ApplyStatChange(player, targetStat, 1.0, points);
+
+                // Deduct the points from the player's available stat points
+                rpgLeveling.StatPoints -= points;
+
+                // Notify the player of the updated stat
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{points} points added to {statName}. Current value: {targetStat.Value}/{targetStat.MaxValue}.");
+            }
+            else
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "RPG system not initialized for this player.");
+            }
+        }
+
+
+
+
+
+        private void ShowRPGStats(IMyPlayer player)
+        {
+            // Ensure player has an RPG leveling system
+            long playerId = player.IdentityId;
+
+            if (Core.iSurvivalSession.playerRPGSystems.ContainsKey(playerId))
+            {
+                var rpgLeveling = Core.iSurvivalSession.playerRPGSystems[playerId];
+                rpgLeveling.DisplayStats(player);  // Show the player's RPG stats in chat
+            }
+            else
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "RPG system not initialized for this player.");
+            }
+        }
+
+        private void AddRPGXP(IMyPlayer player, string[] commandParts)
+        {
+            // Check if the player provided enough arguments (e.g., /isurvival addrpgxp <xp>)
+            if (commandParts.Length != 2)
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Usage: /isurvival addrpgxp <xp>");
+                return;
+            }
+
+            // Declare xpAmount before calling TryParse (C# 6.0 compatible)
+            float xpAmount;
+            if (!float.TryParse(commandParts[1], out xpAmount))
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Invalid XP amount. Please enter a valid number.");
+                return;
+            }
+
+            // Ensure XP is non-negative
+            if (xpAmount < 0)
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "XP amount must be a positive number.");
+                return;
+            }
+
+            // Get player identity ID and check if the RPG system is initialized
+            long playerId = player.IdentityId;
+
+            if (Core.iSurvivalSession.playerRPGSystems.ContainsKey(playerId))
+            {
+                var rpgLeveling = Core.iSurvivalSession.playerRPGSystems[playerId];
+
+                // Add XP to the player's RPG system
+                rpgLeveling.AddXP(xpAmount);
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"{xpAmount} XP added to your RPG stats.");
+            }
+            else
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "RPG system not initialized for this player.");
+            }
+        }
+
+
+        private void LevelUpPlayer(IMyPlayer player)
+        {
+            long playerId = player.IdentityId;
+
+            if (Core.iSurvivalSession.playerRPGSystems.ContainsKey(playerId))
+            {
+                var rpgLeveling = Core.iSurvivalSession.playerRPGSystems[playerId];
+                rpgLeveling.AddXP(rpgLeveling.XPToNextLevel);  // Add enough XP to force a level-up
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Leveled up!");
+            }
+            else
+            {
+                MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "RPG system not initialized for this player.");
+            }
+        }
+
 
         private void ShowHunger(IMyPlayer player)
         {
@@ -479,6 +659,8 @@ namespace PEPCO.iSurvival.Chat
         void DisplayAvailableCommands()
         {
             MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, "Available commands:");
+
+            // Core Commands
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} heal <stat|all> <percentage>", "Sets the specified stat or all stats to the given percentage.");
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} exempt", "Shows the SteamIDs of all exempt players.");
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} addexemption", "Adds the SteamID of the current user to the list of exempt players.");
@@ -486,7 +668,16 @@ namespace PEPCO.iSurvival.Chat
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} reloadconfig", "Reloads the configuration from the file.");
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} <stat> <property> <value>", "Sets the specified property of a stat (e.g., stamina base 10, hunger multiplier 1.5).");
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} liststats", "Lists all player stat IDs.");
+
+            // RPG Commands
+            MyAPIGateway.Utilities.ShowMessage($"{MainCommand} rpgstats", "Displays the player's RPG stats, such as Strength, Dexterity, etc.");
+            MyAPIGateway.Utilities.ShowMessage($"{MainCommand} addrpgxp <xp>", "Adds the specified amount of RPG XP to the player.");
+            MyAPIGateway.Utilities.ShowMessage($"{MainCommand} levelup", "Forces the player to level up by adding enough XP to reach the next level.");
+            MyAPIGateway.Utilities.ShowMessage($"{MainCommand} levelupstat <stat> <points>", "Allocates the specified number of points to the chosen stat (e.g., strength, dexterity).");
+
+            // Help Command
             MyAPIGateway.Utilities.ShowMessage($"{MainCommand} help", "Displays this help message.");
         }
+
     }
 }
