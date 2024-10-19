@@ -42,11 +42,13 @@ namespace PEPCO.iSurvival.MovementLimiter
 
                 // Initialize the stats
                 var statComp = player.Character.Components?.Get<MyEntityStatComponent>();
-                MyEntityStat fatigue, stamina;
+                MyEntityStat fatigue, stamina, strength, dexterity;
 
                 // Retrieve each stat from the component
                 if (!statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue) ||
-                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina))
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina) || 
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Strength"), out strength) ||
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Dexterity"), out dexterity))
                     continue;
 
                 // Apply speed reduction if both stats are low
@@ -66,8 +68,9 @@ namespace PEPCO.iSurvival.MovementLimiter
                         break;
                     case MyCharacterMovementEnum.Sprinting:
                         // Apply sprinting speed limit (use a higher multiplier for sprinting)
-                        speedLimit = MaxWalkSpeed * 2f * MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f);
-                        //MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Sprinting speedLimit: {speedLimit}");
+                        // Speed boost based on Dexterity
+                        float dexterityBoost = MathHelper.Clamp(dexterity.Value / 20f, 0.1f, 1.5f);
+                        speedLimit = MaxWalkSpeed * 2f * dexterityBoost;
                         break;
                     case MyCharacterMovementEnum.Crouching:
                     case MyCharacterMovementEnum.CrouchRotatingLeft:
@@ -94,7 +97,6 @@ namespace PEPCO.iSurvival.MovementLimiter
                         // Apply walking speed limit
                         speedLimit = MaxWalkSpeed * MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f);
                         //MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Walking speedLimit: {speedLimit}");
-                        break;
                         break;
                     case MyCharacterMovementEnum.Running:
                     case MyCharacterMovementEnum.Backrunning:
