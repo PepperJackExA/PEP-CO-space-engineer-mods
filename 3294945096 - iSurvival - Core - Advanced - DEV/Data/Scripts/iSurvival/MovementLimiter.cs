@@ -18,9 +18,10 @@ namespace PEPCO.iSurvival.MovementLimiter
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
     public class PlayerMovementLimiter : MySessionComponentBase
     {
-        private const float MaxWalkSpeed = 1f; // Desired walking speed limit in m/s
-        private const float MaxFlySpeed = 5f; // Desired flying speed limit in m/s
+        private const float MaxWalkSpeed = 1f; // Walking speed limit in m/s
+        private const float MaxFlySpeed = 5f; // Flying speed limit in m/s
         private const float GridCheckRadius = 100f; // Radius to check for nearby grids
+        private const float WeightImpactFactor = 0.005f; // Factor to decrease speed based on weight
 
         public override void UpdateAfterSimulation()
         {
@@ -40,22 +41,32 @@ namespace PEPCO.iSurvival.MovementLimiter
                 if (physics == null)
                     continue;
 
-                // Initialize the stats
+                // Get player stats
                 var statComp = player.Character.Components?.Get<MyEntityStatComponent>();
                 MyEntityStat fatigue, stamina, strength, dexterity;
 
-                // Retrieve each stat from the component
+                // Retrieve the necessary stats
                 if (!statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue) ||
-                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina) || 
+                    !statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina) ||
                     !statComp.TryGetStat(MyStringHash.GetOrCompute("Strength"), out strength) ||
                     !statComp.TryGetStat(MyStringHash.GetOrCompute("Dexterity"), out dexterity))
                     continue;
 
-                // Apply speed reduction if both stats are low
+                // Apply speed reduction if both stamina and fatigue are low
                 if (fatigue.Value > 20 && stamina.Value > 20)
                     continue;
 
-                // Calculate the current velocity of the player.
+                // Step 1: Calculate player's weight (inventory mass)
+                // GetInventory().CurrentMass returns MyFixedPoint, so we cast it to float
+                float playerWeight = (float)character.GetInventory().CurrentMass;
+
+
+                // Step 2: Check if player is in a gravity field
+                float naturalGravityInterference;  // DECLARE naturalGravityInterference
+                Vector3 gravity = MyAPIGateway.Physics.CalculateNaturalGravityAt(player.GetPosition(), out naturalGravityInterference);
+                bool isInGravity = gravity.LengthSquared() > 0;  // DECLARE isInGravity
+
+                // Step 3: Calculate movement speed based on movement state
                 Vector3 currentVelocity = physics.LinearVelocity;
                 var movementState = player.Character.CurrentMovementState;
                 float speedLimit = MaxWalkSpeed;
@@ -65,117 +76,62 @@ namespace PEPCO.iSurvival.MovementLimiter
                     case MyCharacterMovementEnum.RotatingLeft:
                     case MyCharacterMovementEnum.RotatingRight:
                         continue;
-                        break;
                     case MyCharacterMovementEnum.Sprinting:
-                        // Apply sprinting speed limit (use a higher multiplier for sprinting)
-                        // Speed boost based on Dexterity
                         float dexterityBoost = MathHelper.Clamp(dexterity.Value / 20f, 0.1f, 1.5f);
                         speedLimit = MaxWalkSpeed * 2f * dexterityBoost;
                         break;
-                    case MyCharacterMovementEnum.Crouching:
-                    case MyCharacterMovementEnum.CrouchRotatingLeft:
-                    case MyCharacterMovementEnum.CrouchRotatingRight:
-                        break;
-                    case MyCharacterMovementEnum.CrouchWalking:
-                    case MyCharacterMovementEnum.CrouchBackWalking:
-                    case MyCharacterMovementEnum.CrouchWalkingLeftBack:
-                    case MyCharacterMovementEnum.CrouchWalkingLeftFront:
-                    case MyCharacterMovementEnum.CrouchWalkingRightBack:
-                    case MyCharacterMovementEnum.CrouchWalkingRightFront:
-                    case MyCharacterMovementEnum.CrouchStrafingLeft:
-                    case MyCharacterMovementEnum.CrouchStrafingRight:
-                        // Apply crouching speed limit (lower limit for crouching)
-                        speedLimit = MaxWalkSpeed * 0.5f * MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f);
-                        //MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Crouching speedLimit: {speedLimit}");
-                        break;
                     case MyCharacterMovementEnum.Walking:
-                    case MyCharacterMovementEnum.BackWalking:
-                    case MyCharacterMovementEnum.WalkStrafingLeft:
-                    case MyCharacterMovementEnum.WalkStrafingRight:
-                    case MyCharacterMovementEnum.WalkingRightBack:
-                    case MyCharacterMovementEnum.WalkingRightFront:
-                        // Apply walking speed limit
                         speedLimit = MaxWalkSpeed * MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f);
-                        //MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Walking speedLimit: {speedLimit}");
                         break;
                     case MyCharacterMovementEnum.Running:
-                    case MyCharacterMovementEnum.Backrunning:
-                    case MyCharacterMovementEnum.RunningLeftBack:
-                    case MyCharacterMovementEnum.RunningLeftFront:
-                    case MyCharacterMovementEnum.RunningRightBack:
-                    case MyCharacterMovementEnum.RunningRightFront:
-                    case MyCharacterMovementEnum.RunStrafingLeft:
-                    case MyCharacterMovementEnum.RunStrafingRight:
-                        // Apply running speed limit (increase the limit for running)
                         speedLimit = MaxWalkSpeed * 1.5f * MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f);
-                        //MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Running speedLimit: {speedLimit}");
-                        break;
-                    case MyCharacterMovementEnum.LadderUp:
-                    case MyCharacterMovementEnum.LadderDown:
-                        continue;
                         break;
                     case MyCharacterMovementEnum.Flying:
-                        // Apply flying speed limit
-                        //speedLimit = MaxFlySpeed * MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f);
-                        //MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Flying speedLimit: {speedLimit}");
-                        continue;
-                        break;
-                    case MyCharacterMovementEnum.Falling:
-                        continue;
-                        break;
-                    case MyCharacterMovementEnum.Jump:
-                        continue;
-                        break;
-                    default:
-                        // Handle other movement states or do nothing
-                        continue;
+                        speedLimit = CalculateFlySpeedLimit(playerWeight, isInGravity, stamina.Value);
                         break;
                 }
 
-
-
-
-                // Get the nearby grid velocity and check if it exists.
+                // Get nearby grid velocity if applicable
                 Vector3? nearbyGridVelocity = GetNearbyGridVelocity(character);
 
-                // Calculate the relative velocity based on whether a grid is nearby
+                // Calculate and apply velocity adjustments
                 Vector3 adjustedVelocity;
                 if (nearbyGridVelocity.HasValue)
                 {
-                    // Calculate relative velocity with the grid's velocity
                     Vector3 relativeVelocity = currentVelocity - nearbyGridVelocity.Value;
-
-                    // Clamp the relative velocity based on the speed limit
                     Vector3 clampedRelativeVelocity = ClampVelocityToLimit(relativeVelocity, speedLimit);
-
-                    // Calculate the final velocity by adding the clamped relative velocity to the grid's velocity
                     adjustedVelocity = nearbyGridVelocity.Value + clampedRelativeVelocity;
                 }
                 else
                 {
-                    // If no grid is nearby, clamp the current velocity directly to the speed limit
                     adjustedVelocity = ClampVelocityToLimit(currentVelocity, speedLimit);
                 }
 
-                // Apply the new velocity to the character's physics if there's a significant change
                 if (!adjustedVelocity.Equals(currentVelocity))
                 {
                     physics.LinearVelocity = adjustedVelocity;
-
-                    // Optionally log or notify the client for debugging
-                    //MyAPIGateway.Utilities.ShowMessage(iSurvivalLog.ModName, $"Velocity updated: {adjustedVelocity.Length()} m/s");
                 }
-
             }
+        }
+
+        // Method to calculate max fly speed based on weight and gravity
+        private float CalculateFlySpeedLimit(float weight, bool inGravity, float staminaValue)
+        {
+            float baseFlySpeed = MaxFlySpeed;
+            if (inGravity)
+            {
+                float gravityFactor = 1.0f - MathHelper.Clamp(weight * WeightImpactFactor, 0.0f, 0.5f); // Reduce speed based on weight
+                float staminaFactor = MathHelper.Clamp(staminaValue / 20f, 0.1f, 1f); // Factor in stamina
+                baseFlySpeed *= gravityFactor * staminaFactor;
+            }
+            return baseFlySpeed;
         }
 
         private Vector3? GetNearbyGridVelocity(IMyCharacter character)
         {
-            // Get nearby grids within the check radius.
+            // Get nearby grids within the check radius
             List<MyEntity> nearbyEntities = new List<MyEntity>();
             BoundingSphereD searchSphere = new BoundingSphereD(character.GetPosition(), GridCheckRadius);
-
-            // Use MyGamePruningStructure to get entities in the sphere.
             MyGamePruningStructure.GetAllEntitiesInSphere(ref searchSphere, nearbyEntities);
 
             IMyCubeGrid closestLargestGrid = null;
@@ -186,13 +142,9 @@ namespace PEPCO.iSurvival.MovementLimiter
                 IMyCubeGrid grid = entity as IMyCubeGrid;
                 if (grid != null && grid.Physics != null)
                 {
-                    // Ensure the grid is either a small or large grid.
                     if (grid.GridSizeEnum == MyCubeSize.Large || grid.GridSizeEnum == MyCubeSize.Small)
                     {
-                        // Calculate the distance between the player and the current grid.
                         double distanceToGrid = Vector3D.Distance(character.GetPosition(), grid.GetPosition());
-
-                        // Check if this grid is larger or closer compared to the previously found grid.
                         if (closestLargestGrid == null ||
                             grid.GridSizeEnum == MyCubeSize.Large && closestLargestGrid.GridSizeEnum != MyCubeSize.Large ||
                             (grid.GridSizeEnum == closestLargestGrid.GridSizeEnum && distanceToGrid < closestDistance))
@@ -204,28 +156,16 @@ namespace PEPCO.iSurvival.MovementLimiter
                 }
             }
 
-            // If a closest and largest grid is found, return its velocity.
-            if (closestLargestGrid != null)
-            {
-                return closestLargestGrid.Physics.LinearVelocity;
-            }
-
-            // No suitable grid found within the radius.
-            return null;
+            return closestLargestGrid?.Physics.LinearVelocity;
         }
 
         private Vector3 ClampVelocityToLimit(Vector3 velocity, float speedLimit)
         {
-            // Get the current magnitude of the velocity.
             float currentSpeed = velocity.Length();
-
-            // If the current speed is greater than the speed limit, clamp it.
             if (currentSpeed > speedLimit)
             {
-                // Scale the velocity vector down to the speed limit while preserving the direction.
                 velocity = velocity * (speedLimit / currentSpeed);
             }
-
             return velocity;
         }
     }

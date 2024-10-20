@@ -96,6 +96,12 @@ namespace PEPCO.iSurvival.Core
                 case "calories":
                 case "fat":
                 case "protein":
+                case "cholesterol":
+                case "Sodium":
+                case "Fiber":
+                case "Sugar":
+                case "Starches":
+                case "Vitamins":
                     if (constitution != null) boost += CalculateRPGEffect(constitution.Value, baseStat, 0.1);
                     if (strength != null) boost += CalculateRPGEffect(strength.Value, baseStat, 0.05);
                     if (dexterity != null) boost += CalculateRPGEffect(dexterity.Value, baseStat, 0.05);
@@ -103,6 +109,9 @@ namespace PEPCO.iSurvival.Core
                 case "sanity":
                     if (wisdom != null) boost += CalculateRPGEffect(wisdom.Value, baseStat, 0.2);
                     if (charisma != null) boost += CalculateRPGEffect(charisma.Value, baseStat, 0.1);
+                    break;
+                case "water":
+                    if (constitution != null) boost += CalculateRPGEffect(constitution.Value, baseStat, 0.15);
                     break;
             }
             return boost;

@@ -39,7 +39,7 @@ namespace PEPCO.iSurvival.Chat
     { "rpgstats", new CommandSetting(true, false, false) }, // Show RPG Stats
     { "addrpgxp", new CommandSetting(true, true, false) }, // Add XP to RPG Leveling
     { "levelup", new CommandSetting(true, true, false) },  // Level up
-    { "levelupstat", new CommandSetting(true, false, false) }  // Level up
+    { "levelupstat", new CommandSetting(true, false, false) }  // Level up stat
 };
     }
 
