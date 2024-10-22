@@ -28,17 +28,39 @@ namespace TextEditorExample
             RichHudClient.Init("Text Editor Example", HudInit, ClientReset);
         }
 
+        //private void HudInit()
+        //{
+        //    /* There are three(-ish) ways to register a HUD element to a parent element. By calling the parent's RegisterChild() method
+        //     * and passing in the child element, by calling the child element's Register() method and passing in the parent or by
+        //     * passing the parent into the child's constructor. 
+
+        //     I'm using HighDpiRoot instead of Root to compensate for scaling at resolutions > 1080p.
+        //   */
+        //    textEditor = new TextEditor(HudMain.HighDpiRoot)
+        //    {
+        //        Visible = true, // I don't want this to be visible on init.
+        //    };
+
+        //    editorBinds = BindManager.GetOrCreateGroup("editorBinds");
+        //    editorBinds.RegisterBinds(new BindGroupInitializer()
+        //    {
+        //        { "editorToggle", MyKeys.Home, MyKeys.Control }
+        //    });
+
+        //    editorBinds[0].NewPressed += ToggleEditor;
+        //}
+
         private void HudInit()
         {
             /* There are three(-ish) ways to register a HUD element to a parent element. By calling the parent's RegisterChild() method
              * and passing in the child element, by calling the child element's Register() method and passing in the parent or by
              * passing the parent into the child's constructor. 
              
-             I'm using HighDpiRoot instead of Root to compensate for scaling at resolutions > 1080p.
-           */
+            I'm using HighDpiRoot instead of Root to compensate for scaling at resolutions > 1080p.
+          */
             textEditor = new TextEditor(HudMain.HighDpiRoot)
             {
-                Visible = false, // I don't want this to be visible on init.
+                Visible = true, // I don't want this to be visible on init.
             };
 
             editorBinds = BindManager.GetOrCreateGroup("editorBinds");
