@@ -20,16 +20,14 @@
             <Volume>0.1</Volume>
             <Model>Models\Components\ChipstixCrisps.mwm</Model>
             <PhysicalMaterial>Plastic</PhysicalMaterial>
-            <Stats>
-                <Stat Name="Sanity" Value="-5" Time="5"/>
-                <Stat Name="Calories" Value="150" Time="5"/>
-                <Stat Name="Fat" Value="10" Time="5"/>
-                <Stat Name="Cholesterol" Value="0" Time="5"/>
-                <Stat Name="Sodium" Value="200" Time="5"/>
-                <Stat Name="Carbohydrates" Value="15" Time="5"/>
-                <Stat Name="Protein" Value="2" Time="5"/>
-                <Stat Name="Vitamins" Value="0" Time="5"/>
-            </Stats>
+			<Stats>
+				<Stat Name="Calories" Value="0.1125" Time="1"/>
+				<Stat Name="Fat" Value="0.214" Time="1"/>
+				<Stat Name="Sodium" Value="0.117" Time="1"/>
+				<Stat Name="Fiber" Value="0.075" Time="1"/>
+				<Stat Name="Protein" Value="0.06" Time="1"/>
+				<Stat Name="Sanity" Value="0.1" Time="1"/>
+			</Stats>
             <MinimalPricePerUnit>10</MinimalPricePerUnit>
             <MinimumOfferAmount>20</MinimumOfferAmount>
             <MaximumOfferAmount>200</MaximumOfferAmount>
@@ -52,16 +50,14 @@
             <Volume>0.15</Volume>
             <Model>Models\Components\EnenraEnergyDrink.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
-            <Stats>
-                <Stat Name="Sanity" Value="5" Time="5"/>
-                <Stat Name="Calories" Value="110" Time="5"/>
-                <Stat Name="Fat" Value="0" Time="5"/>
-                <Stat Name="Cholesterol" Value="0" Time="5"/>
-                <Stat Name="Sodium" Value="85" Time="5"/>
-                <Stat Name="Carbohydrates" Value="28" Time="5"/>
-                <Stat Name="Protein" Value="0" Time="5"/>
-                <Stat Name="Vitamins" Value="20" Time="5"/>
-            </Stats>
+			<Stats>
+				<Stat Name="Calories" Value="0.0825" Time="1"/>
+				<Stat Name="Sodium" Value="0.104" Time="1"/>
+				<Stat Name="Sugar" Value="1.125" Time="1"/>
+				<Stat Name="Vitamins" Value="0.225" Time="1"/>
+				<Stat Name="Sanity" Value="0.2" Time="1"/>
+				<!-- Added a temporary sanity boost -->
+			</Stats>
             <MinimalPricePerUnit>15</MinimalPricePerUnit>
             <MinimumOfferAmount>10</MinimumOfferAmount>
             <MaximumOfferAmount>100</MaximumOfferAmount>
@@ -85,17 +81,12 @@
             <Model>Models\Components\MalwareBeer.mwm</Model>
             <PhysicalMaterial>Liquid</PhysicalMaterial>
             <Stats>
-                <Stat Name="Sanity" Value="-5" Time="10"/>
-                <Stat Name="Calories" Value="150" Time="0"/>
-                <Stat Name="Fat" Value="0" Time="0"/>
-                <Stat Name="Cholesterol" Value="0" Time="0"/>
-                <Stat Name="Sodium" Value="14" Time="0"/>
-                <Stat Name="Fiber" Value="0" Time="0"/>
-                <Stat Name="Sugar" Value="1" Time="0"/>
-                <Stat Name="Starches" Value="11" Time="0"/>
-                <Stat Name="Protein" Value="1.6" Time="0"/>
-                <Stat Name="Vitamins" Value="0" Time="0"/>
-                <Stat Name="Water" Value="0.34" Time="0"/>
+                <Stat Name="Calories" Value="0.1125" Time="1"/>
+                <Stat Name="Sodium" Value="0.009" Time="1"/>
+                <Stat Name="Starches" Value="0.0886" Time="1"/>
+                <Stat Name="Protein" Value="0.045" Time="1"/>
+                <Stat Name="Sanity" Value="0.15" Time="1"/>
+                <Stat Name="Water" Value="0.25" Time="1"/>
             </Stats>
             <MinimalPricePerUnit>3</MinimalPricePerUnit>
             <MinimumOfferAmount>100</MinimumOfferAmount>
@@ -187,17 +178,12 @@
             <Model>Models\Components\DigisPizza.mwm</Model>
             <PhysicalMaterial>FoodMaterial</PhysicalMaterial>
             <Stats>
-                <Stat Name="Calories" Value="0.1" Time="1"/>
-                <Stat Name="Fat" Value="0.2" Time="1"/>
-                <Stat Name="Cholesterol" Value="0.12" Time="1"/>
-                <Stat Name="Sodium" Value="0.35" Time="1"/>
-                <Stat Name="Fiber" Value="0.066" Time="1"/>
-                <Stat Name="Sugar" Value="0.1" Time="1"/>
-                <Stat Name="Starches" Value="0.16" Time="1"/>
-                <Stat Name="Protein" Value="0.3" Time="1"/>
-                <Stat Name="Vitamins" Value="0.1" Time="1"/>
-                <Stat Name="Water" Value="0.05" Time="1"/>
-                <Stat Name="Sanity/Happiness" Value="0.25" Time="1"/>
+                <Stat Name="Calories" Value="0.21375" Time="1"/>
+                <Stat Name="Fat" Value="0.214" Time="1"/>
+                <Stat Name="Sodium" Value="0.417" Time="1"/>
+                <Stat Name="Fiber" Value="0.1" Time="1"/>
+                <Stat Name="Protein" Value="0.36" Time="1"/>
+                <Stat Name="Sanity" Value="0.3" Time="1"/> 
             </Stats>
             <MinimalPricePerUnit>12</MinimalPricePerUnit>
             <MinimumOfferAmount>150</MinimumOfferAmount>
