@@ -239,7 +239,7 @@ namespace PEPCO.iSurvival.Core
                 RPGLeveling rpgLeveling = playerRPGSystems[playerId];
 
                 // Add XP to the player (example value of 10 XP per cycle, customize this)
-                rpgLeveling.AddXP(1f);
+                //rpgLeveling.AddXP(1f);
 
 
                 // Process player stats if alive and not recently revived

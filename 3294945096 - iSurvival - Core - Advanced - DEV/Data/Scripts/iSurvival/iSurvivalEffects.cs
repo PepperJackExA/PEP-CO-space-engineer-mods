@@ -73,7 +73,7 @@ namespace PEPCO.iSurvival.Effects
             var rpgLeveling = Core.iSurvivalSession.playerRPGSystems[playerId];
 
             // Add XP to the player (example value of 10 XP per cycle, customize this)
-            rpgLeveling.AddXP(10f);
+            //rpgLeveling.AddXP(10f);
 
             // Process other stats like fatigue, hunger, etc.
             if (fatigue != null)
