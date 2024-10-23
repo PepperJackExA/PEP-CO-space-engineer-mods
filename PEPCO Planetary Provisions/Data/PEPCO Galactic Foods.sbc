@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Physical Items Section -->
+    <PhysicalItems>
+        <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition"> <!--ChipstixCrisps-->
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>ChipstixCrisps</SubtypeId>
+            </Id>
+            <DisplayName>Chipstix Chip Bag</DisplayName>
+            <Description>A bag of crunchy, salted potato chip sticks, perfect for a quick snack.</Description>
+            <Icon>Textures\GUI\Icons\ChipstixCrisps.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.1</Z>
+            </Size>
+            <Mass>0.2</Mass>
+            <Volume>0.1</Volume>
+            <Model>Models\Components\ChipstixCrisps.mwm</Model>
+            <PhysicalMaterial>Plastic</PhysicalMaterial>
+            <Stats>
+                <Stat Name="Sanity" Value="-5" Time="5"/>
+                <Stat Name="Calories" Value="150" Time="5"/>
+                <Stat Name="Fat" Value="10" Time="5"/>
+                <Stat Name="Cholesterol" Value="0" Time="5"/>
+                <Stat Name="Sodium" Value="200" Time="5"/>
+                <Stat Name="Carbohydrates" Value="15" Time="5"/>
+                <Stat Name="Protein" Value="2" Time="5"/>
+                <Stat Name="Vitamins" Value="0" Time="5"/>
+            </Stats>
+            <MinimalPricePerUnit>10</MinimalPricePerUnit>
+            <MinimumOfferAmount>20</MinimumOfferAmount>
+            <MaximumOfferAmount>200</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+        <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition"> <!--EnenraEnergyDrink-->
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>EnenraEnergyDrink</SubtypeId>
+            </Id>
+            <DisplayName>Enenra Energy Drink</DisplayName>
+            <Description>A can of Enenra Energy Drink, designed to give you a burst of energy and keep you going. Popular among space explorers.</Description>
+            <Icon>Textures\GUI\Icons\EnenraEnergyDrink.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>0.3</Mass>
+            <Volume>0.15</Volume>
+            <Model>Models\Components\EnenraEnergyDrink.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <Stats>
+                <Stat Name="Sanity" Value="5" Time="5"/>
+                <Stat Name="Calories" Value="110" Time="5"/>
+                <Stat Name="Fat" Value="0" Time="5"/>
+                <Stat Name="Cholesterol" Value="0" Time="5"/>
+                <Stat Name="Sodium" Value="85" Time="5"/>
+                <Stat Name="Carbohydrates" Value="28" Time="5"/>
+                <Stat Name="Protein" Value="0" Time="5"/>
+                <Stat Name="Vitamins" Value="20" Time="5"/>
+            </Stats>
+            <MinimalPricePerUnit>15</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition"> <!--MalwareBeer-->
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>MalwareBeer</SubtypeId>
+            </Id>
+            <DisplayName>Malware Beer</DisplayName>
+            <Description>A suspicious beer with potential side effects on your solar system... Drink at your own risk!</Description>
+            <Icon>Textures\GUI\Icons\MalwareBeer.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.3</Z>
+            </Size>
+            <Mass>0.35</Mass>
+            <Volume>0.35</Volume>
+            <Model>Models\Components\MalwareBeer.mwm</Model>
+            <PhysicalMaterial>Liquid</PhysicalMaterial>
+            <Stats>
+                <Stat Name="Sanity" Value="-5" Time="10"/>
+                <Stat Name="Calories" Value="150" Time="0"/>
+                <Stat Name="Fat" Value="0" Time="0"/>
+                <Stat Name="Cholesterol" Value="0" Time="0"/>
+                <Stat Name="Sodium" Value="14" Time="0"/>
+                <Stat Name="Fiber" Value="0" Time="0"/>
+                <Stat Name="Sugar" Value="1" Time="0"/>
+                <Stat Name="Starches" Value="11" Time="0"/>
+                <Stat Name="Protein" Value="1.6" Time="0"/>
+                <Stat Name="Vitamins" Value="0" Time="0"/>
+                <Stat Name="Water" Value="0.34" Time="0"/>
+            </Stats>
+            <MinimalPricePerUnit>3</MinimalPricePerUnit>
+            <MinimumOfferAmount>100</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition"> <!--MathsPie-->
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>MathsPie</SubtypeId>
+            </Id>
+            <DisplayName>Math's Chocolate Pie</DisplayName>
+            <Description>A rich and indulgent slice of Math's famous Chocolate Pi(e). Boosts energy and happiness.</Description>
+            <Icon>Textures\GUI\Icons\MathsPie.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.2</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>0.3</Mass>
+            <Volume>0.15</Volume>
+            <Model>Models\Components\MathsPie.mwm</Model>
+            <PhysicalMaterial>EdibleMaterial</PhysicalMaterial>
+            <Stats>
+                <!-- Calories: 450 kcal -->
+                <Stat Name="Calories" Value="0.15" Time="1"/>
+                <!-- (0.15 * 3000) * 1 = 450 -->
+                
+                <!-- Fat: 25g -->
+                <Stat Name="Fat" Value="0.24" Time="1"/>
+                <!-- (0.24 * 104) * 1 = 25 -->
+
+                <!-- Cholesterol: 45mg -->
+                <Stat Name="Cholesterol" Value="0.15" Time="1"/>
+                <!-- (0.15 * 300) * 1 = 45 -->
+
+                <!-- Sodium: 350mg -->
+                <Stat Name="Sodium" Value="0.15" Time="1"/>
+                <!-- (0.15 * 2300) * 1 = 350 -->
+
+                <!-- Fiber: 3g -->
+                <Stat Name="Fiber" Value="0.10" Time="1"/>
+                <!-- (0.10 * 30) * 1 = 3 -->
+
+                <!-- Sugar: 35g -->
+                <Stat Name="Sugar" Value="0.97" Time="1"/>
+                <!-- (0.97 * 36) * 1 = 35 -->
+
+                <!-- Starches: 40g -->
+                <Stat Name="Starches" Value="0.18" Time="1"/>
+                <!-- (0.18 * 220) * 1 = 40 -->
+
+                <!-- Protein: 5g -->
+                <Stat Name="Protein" Value="0.10" Time="1"/>
+                <!-- (0.10 * 50) * 1 = 5 -->
+
+                <!-- Vitamins: 2% DV -->
+                <Stat Name="Vitamins" Value="0.02" Time="1"/>
+                <!-- (0.02 * 100) * 1 = 2 -->
+
+                <!-- Water: 50ml -->
+                <Stat Name="Water" Value="0.01" Time="1"/>
+                <!-- (0.01 * 3700) * 1 = 50 -->
+
+                <!-- Sanity/Happiness Boost -->
+                <Stat Name="Sanity" Value="0.20" Time="1"/>
+                <!-- 20% happiness boost -->
+            </Stats>
+            <MinimalPricePerUnit>150</MinimalPricePerUnit>
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+        <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition"> <!--DigisPizza-->
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>DigisPizza</SubtypeId>
+            </Id>
+            <DisplayName>Digi's Pizza</DisplayName>
+            <Description>A savory slice of pizza that provides an energy boost and restores sanity. High in calories, fats, and protein, it's perfect for quick nourishment.</Description>
+            <Icon>Textures\GUI\Icons\DigisPizza.dds</Icon>
+            <Size>
+                <X>0.2</X>
+                <Y>0.05</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>0.3</Mass>
+            <Volume>0.25</Volume>
+            <Model>Models\Components\DigisPizza.mwm</Model>
+            <PhysicalMaterial>FoodMaterial</PhysicalMaterial>
+            <Stats>
+                <Stat Name="Calories" Value="0.1" Time="1"/>
+                <Stat Name="Fat" Value="0.2" Time="1"/>
+                <Stat Name="Cholesterol" Value="0.12" Time="1"/>
+                <Stat Name="Sodium" Value="0.35" Time="1"/>
+                <Stat Name="Fiber" Value="0.066" Time="1"/>
+                <Stat Name="Sugar" Value="0.1" Time="1"/>
+                <Stat Name="Starches" Value="0.16" Time="1"/>
+                <Stat Name="Protein" Value="0.3" Time="1"/>
+                <Stat Name="Vitamins" Value="0.1" Time="1"/>
+                <Stat Name="Water" Value="0.05" Time="1"/>
+                <Stat Name="Sanity/Happiness" Value="0.25" Time="1"/>
+            </Stats>
+            <MinimalPricePerUnit>12</MinimalPricePerUnit>
+            <MinimumOfferAmount>150</MinimumOfferAmount>
+            <MaximumOfferAmount>1000</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+    </PhysicalItems>
+	
+	
+	<!-- Blueprint Section -->
+    <Blueprints>
+        <Blueprint> <!--ChipstixChipBag-->
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>ChipstixCrisps</SubtypeId>
+            </Id>
+            <DisplayName>Chipstix Chip Bag Blueprint</DisplayName>
+            <Icon>Textures\GUI\Icons\ChipstixCrisps.dds</Icon>
+            <Prerequisites>
+                <Item Amount="5" TypeId="ConsumableItem" SubtypeId="Potato" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Salt" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Oil" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="ConsumableItem" SubtypeId="ChipstixCrisps" />
+            <BaseProductionTimeInSeconds>180</BaseProductionTimeInSeconds>
+        </Blueprint>
+        <Blueprint> <!--EnenraEnergyDrink-->
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>EnenraEnergyDrink</SubtypeId>
+            </Id>
+            <DisplayName>Enenra Energy Drink Blueprint</DisplayName>
+            <Icon>Textures\GUI\Icons\EnenraEnergyDrink.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Water" />
+                <Item Amount="2" TypeId="ConsumableItem" SubtypeId="Sugar" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Caffeine" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="VitaminBlend" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="ConsumableItem" SubtypeId="EnenraEnergyDrink" />
+            <BaseProductionTimeInSeconds>120</BaseProductionTimeInSeconds>
+        </Blueprint>
+        <Blueprint> <!--MalwareBeer-->
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>MalwareBeer</SubtypeId>
+            </Id>
+            <DisplayName>Malware Beer Blueprint</DisplayName>
+            <Icon>Textures/GUI/Icons/MalwareBeer.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Water" />
+                <Item Amount="3" TypeId="ConsumableItem" SubtypeId="Grain" />
+                <Item Amount="2" TypeId="ConsumableItem" SubtypeId="Yeast" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Hops" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="ConsumableItem" SubtypeId="MalwareBeer" />
+            <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+        </Blueprint>
+		<Blueprint> <!--MathsPie-->
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>MathsPie</SubtypeId>
+            </Id>
+            <DisplayName>Math's Chocolate Pie Blueprint</DisplayName>
+            <Icon>Textures/GUI/Icons/MathsPie.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="RawBeef" />
+                <Item Amount="2" TypeId="ConsumableItem" SubtypeId="SugarCane" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Salt" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="ConsumableItem" SubtypeId="MathsPie" />
+            <BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+        </Blueprint>
+		<Blueprint> <!--DigisPizza-->
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>DigisPizza</SubtypeId>
+            </Id>
+            <DisplayName>Digi's Pizza Blueprint</DisplayName>
+            <Icon>Textures/GUI/Icons/DigisPizza.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Dough"/>
+                <Item Amount="0.5" TypeId="ConsumableItem" SubtypeId="Cheese"/>
+                <Item Amount="0.5" TypeId="ConsumableItem" SubtypeId="Sauce"/>
+                <Item Amount="0.3" TypeId="ConsumableItem" SubtypeId="Toppings"/>
+            </Prerequisites>
+            <Result Amount="1" TypeId="ConsumableItem" SubtypeId="DigisPizza" />
+            <BaseProductionTimeInSeconds>900</BaseProductionTimeInSeconds>
+        </Blueprint>
+    </Blueprints> 
+</Definitions>

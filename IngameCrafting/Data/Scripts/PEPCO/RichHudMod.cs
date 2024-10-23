@@ -7,6 +7,18 @@ using VRage.Utils;
 using Draygo.API;
 using static Draygo.API.HudAPIv2.MenuRootCategory;
 using VRage.Game;
+using VRageMath;
+using System.Collections.Generic;
+using VRage.ModAPI;
+using Sandbox.Game.Entities;
+using VRage.Game.Entity;
+using VRage.Render.Scene;
+using Sandbox.Game.Entities.EnvironmentItems;
+using Sandbox.Game.WorldEnvironment;
+using VRage.ObjectBuilders.Definitions;
+using Sandbox.Definitions;
+using Sandbox.Game.WorldEnvironment.ObjectBuilders;
+using VRage.Game.ModAPI;
 
 namespace PEPCO
 {
@@ -63,10 +75,32 @@ namespace PEPCO
             var player = MyAPIGateway.Session?.LocalHumanPlayer;
             if (player != null)
             {
-                player.Character?.GetInventory()?.AddItems(100, ItemOB);
+                List<MyEntity> entities = new List<MyEntity>();
+                var playerPosition = player.GetPosition();
+                BoundingSphereD sphere = new BoundingSphereD(playerPosition, 40d);
+                MyGamePruningStructure.GetAllEntitiesInSphere(ref sphere, entities);
+
+
+                MyAPIGateway.Utilities.ShowMessage("Total", entities.Count.ToString());
+
+
+                foreach (var entity in entities)
+                {
+                    //return the entity type name
+                    var newEnt = entity as Sandbox.Game.WorldEnvironment.MyEnvironmentSector;
+                    if (newEnt != null) {
+                        MyAPIGateway.Utilities.ShowMessage("Entity", newEnt.EnvironmentDefinition.Id.ToString());
+                        MyAPIGateway.Utilities.ShowMessage("Entity", newEnt.EnvironmentDefinition.Id.SubtypeId.ToString());
+                        var c = entity as Sandbox.Game.WorldEnvironment.MyEnvironmentSector;
+                        var assetName = c.Model.ToString();
+                        MyAPIGateway.Utilities.ShowMessage("Entity", assetName);
+                    }
+                }
+
+                //player.Character?.GetInventory()?.AddItems(100, ItemOB);   
             }
 
-            MyAPIGateway.Utilities.ShowMessage("Craft master", "You want to craft a " + item+"?\nYou only get ice. Ouch!");
+            //MyAPIGateway.Utilities.ShowMessage("Craft master", "You want to craft a " + item+"?\nYou only get ice. Ouch!");
         }
     }
 
