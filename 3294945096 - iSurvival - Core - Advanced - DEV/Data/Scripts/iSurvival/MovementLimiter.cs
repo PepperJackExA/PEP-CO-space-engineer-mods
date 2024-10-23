@@ -65,31 +65,28 @@ namespace PEPCO.iSurvival.MovementLimiter
                 Vector3 currentVelocity = physics.LinearVelocity;
                 var movementState = player.Character.CurrentMovementState;
                 float speedLimit = MaxWalkSpeed;
+                float staminaMultiplier = MathHelper.Clamp(stamina.Value / 20f, 0.1f, 2f);
                 switch (movementState)
-                {                   
+                {
                     case MyCharacterMovementEnum.Sprinting:
                         if (fatigue.Value > 20 && stamina.Value > 20) continue;
-                        float dexterityBoost = MathHelper.Clamp(dexterity.Value / 20f, 0.1f, 1.5f);
-                        speedLimit = MaxWalkSpeed * 2f * dexterityBoost;
+                        speedLimit = MaxWalkSpeed + (MaxWalkSpeed * 2 * staminaMultiplier);
                         break;
+
                     case MyCharacterMovementEnum.Walking:
                         if (fatigue.Value > 20 && stamina.Value > 20) continue;
-                        speedLimit = MaxWalkSpeed * MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f);
+                        speedLimit = MaxWalkSpeed + (MaxWalkSpeed * staminaMultiplier);
                         break;
+
                     case MyCharacterMovementEnum.Running:
                         if (fatigue.Value > 20 && stamina.Value > 20) continue;
-                        speedLimit = MaxWalkSpeed * 1.5f * MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f);
+                        speedLimit = MaxWalkSpeed + (MaxWalkSpeed * 1.5f * staminaMultiplier);
                         break;
+
                     case MyCharacterMovementEnum.Flying:
                         // Check if dampeners are enabled (this is a common example of a stabilizer)
                         bool stabilizersEnabled = player.Character.EnabledDamping;
-
-                        // Step 1: Check if stabilizers are disabled, if true skip speed limiting
-                        if (!stabilizersEnabled)  // Assuming stabilizersEnabled is a boolean
-                        {
-                            // Skip speed limiting if stabilizers are off
-                            continue;
-                        }
+                        
                         // Step 2: Check if player is in a gravity field
                         float naturalGravityInterference;  // DECLARE naturalGravityInterference
                         Vector3 gravity = MyAPIGateway.Physics.CalculateNaturalGravityAt(player.GetPosition(), out naturalGravityInterference);
@@ -99,10 +96,12 @@ namespace PEPCO.iSurvival.MovementLimiter
                         {
                             // Set the base fly speed
                             speedLimit = MaxFlySpeed;
-
-                            // Apply weight-based speed reduction if in gravity
                             float gravityFactor = 1.0f - MathHelper.Clamp(playerWeight * WeightImpactFactor, 0.0f, 0.5f);
                             speedLimit *= gravityFactor;
+                            if (!stabilizersEnabled)
+                            {
+                                speedLimit *= 2;
+                            }
                             break;
                         }
                         continue;
