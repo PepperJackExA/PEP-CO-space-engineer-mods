@@ -19,8 +19,8 @@ namespace PEPCO.iSurvival.MovementLimiter
     public class PlayerMovementLimiter : MySessionComponentBase
     {
         private const float MaxWalkSpeed = 1f; // Walking speed limit in m/s
-        private const float MaxFlySpeed = 5f; // Flying speed limit in m/s
-        private const float GridCheckRadius = 100f; // Radius to check for nearby grids
+        private const float MaxFlySpeed = 12.5f; // Flying speed limit in m/s
+        private const float GridCheckRadius = 5f; // Radius to check for nearby grids
         private const float WeightImpactFactor = 0.005f; // Factor to decrease speed based on weight
 
         public override void UpdateAfterSimulation()
@@ -52,43 +52,63 @@ namespace PEPCO.iSurvival.MovementLimiter
                     !statComp.TryGetStat(MyStringHash.GetOrCompute("Dexterity"), out dexterity))
                     continue;
 
-                // Apply speed reduction if both stamina and fatigue are low
-                if (fatigue.Value > 20 && stamina.Value > 20)
-                    continue;
+                
 
                 // Step 1: Calculate player's weight (inventory mass)
                 // GetInventory().CurrentMass returns MyFixedPoint, so we cast it to float
                 float playerWeight = (float)character.GetInventory().CurrentMass;
 
 
-                // Step 2: Check if player is in a gravity field
-                float naturalGravityInterference;  // DECLARE naturalGravityInterference
-                Vector3 gravity = MyAPIGateway.Physics.CalculateNaturalGravityAt(player.GetPosition(), out naturalGravityInterference);
-                bool isInGravity = gravity.LengthSquared() > 0;  // DECLARE isInGravity
+                
 
                 // Step 3: Calculate movement speed based on movement state
                 Vector3 currentVelocity = physics.LinearVelocity;
                 var movementState = player.Character.CurrentMovementState;
                 float speedLimit = MaxWalkSpeed;
                 switch (movementState)
-                {
-                    case MyCharacterMovementEnum.Standing:
-                    case MyCharacterMovementEnum.RotatingLeft:
-                    case MyCharacterMovementEnum.RotatingRight:
-                        continue;
+                {                   
                     case MyCharacterMovementEnum.Sprinting:
+                        if (fatigue.Value > 20 && stamina.Value > 20) continue;
                         float dexterityBoost = MathHelper.Clamp(dexterity.Value / 20f, 0.1f, 1.5f);
                         speedLimit = MaxWalkSpeed * 2f * dexterityBoost;
                         break;
                     case MyCharacterMovementEnum.Walking:
+                        if (fatigue.Value > 20 && stamina.Value > 20) continue;
                         speedLimit = MaxWalkSpeed * MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f);
                         break;
                     case MyCharacterMovementEnum.Running:
+                        if (fatigue.Value > 20 && stamina.Value > 20) continue;
                         speedLimit = MaxWalkSpeed * 1.5f * MathHelper.Clamp(stamina.Value / 20f, 0.1f, 1f);
                         break;
                     case MyCharacterMovementEnum.Flying:
-                        speedLimit = CalculateFlySpeedLimit(playerWeight, isInGravity, stamina.Value);
-                        break;
+                        // Check if dampeners are enabled (this is a common example of a stabilizer)
+                        bool stabilizersEnabled = player.Character.EnabledDamping;
+
+                        // Step 1: Check if stabilizers are disabled, if true skip speed limiting
+                        if (!stabilizersEnabled)  // Assuming stabilizersEnabled is a boolean
+                        {
+                            // Skip speed limiting if stabilizers are off
+                            continue;
+                        }
+                        // Step 2: Check if player is in a gravity field
+                        float naturalGravityInterference;  // DECLARE naturalGravityInterference
+                        Vector3 gravity = MyAPIGateway.Physics.CalculateNaturalGravityAt(player.GetPosition(), out naturalGravityInterference);
+
+                        // Check if gravity strength exceeds the threshold (0.5 in this case)
+                        if (gravity.Length() > 1)
+                        {
+                            // Set the base fly speed
+                            speedLimit = MaxFlySpeed;
+
+                            // Apply weight-based speed reduction if in gravity
+                            float gravityFactor = 1.0f - MathHelper.Clamp(playerWeight * WeightImpactFactor, 0.0f, 0.5f);
+                            speedLimit *= gravityFactor;
+                            break;
+                        }
+                        continue;
+
+                    default:
+                        continue;
                 }
 
                 // Get nearby grid velocity if applicable
@@ -114,18 +134,6 @@ namespace PEPCO.iSurvival.MovementLimiter
             }
         }
 
-        // Method to calculate max fly speed based on weight and gravity
-        private float CalculateFlySpeedLimit(float weight, bool inGravity, float staminaValue)
-        {
-            float baseFlySpeed = MaxFlySpeed;
-            if (inGravity)
-            {
-                float gravityFactor = 1.0f - MathHelper.Clamp(weight * WeightImpactFactor, 0.0f, 0.5f); // Reduce speed based on weight
-                float staminaFactor = MathHelper.Clamp(staminaValue / 20f, 0.1f, 1f); // Factor in stamina
-                baseFlySpeed *= gravityFactor * staminaFactor;
-            }
-            return baseFlySpeed;
-        }
 
         private Vector3? GetNearbyGridVelocity(IMyCharacter character)
         {
