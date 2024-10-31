@@ -122,6 +122,28 @@ GlobalMaxEntities=30
         public double MaxWaterDepth { get; set; } = 100.0;
         public List<CustomEntitySpawner> BlockSpawnSettings { get; set; } = new List<CustomEntitySpawner>();
 
+        //NPC Death Spawning
+        // Settings for the entity that triggers the spawn on death
+        public string NPCDeathEntity { get; set; } = "";
+        public double NPCDeathEntityRadius { get; set; } = 20.0;
+        public int NPCDeathEntityMinAmount { get; set; } = 1;
+        public int NPCDeathEntityMaxAmount { get; set; } = 1;
+
+        // Settings for the entity to spawn upon death of NPCDeathEntity
+        public bool EnableNPCDeathSpawn { get; set; } = false;
+        public string NPCDeathSpawnEntity { get; set; } = "";
+        public int NPCDeathSpawnMinAmount { get; set; } = 1;
+        public int NPCDeathSpawnMaxAmount { get; set; } = 1;
+        public double NPCDeathSpawnRadius { get; set; } = 10.0;
+
+        // Settings for items to spawn upon NPC death
+        public bool EnableNPCDeathItemSpawn { get; set; } = false;
+        public List<string> NPCDeathItemTypes { get; set; } = new List<string>();
+        public List<string> NPCDeathItemIds { get; set; } = new List<string>();
+        public int NPCDeathItemMinAmount { get; set; } = 1;
+        public int NPCDeathItemMaxAmount { get; set; } = 1;
+        public double NPCDeathItemRadius { get; set; } = 5.0;
+
         public string DefaultEntitySpawnerIniContent = @"
 [SmallBlockSmallContainerSpawn]
 BlockId=SmallBlockSmallContainer
@@ -281,12 +303,18 @@ MaxWaterDepth=20.0
                 }
             }
         }
+        public override void LoadData()
+        {
+            MyAPIGateway.Utilities.MessageEntered += OnMessageEntered;
+            MyAPIGateway.Entities.OnEntityRemove += OnEntityRemoved;
+        }
         protected override void UnloadData()
         {
             LogError("Starting UnloadData");
             if (MyAPIGateway.Multiplayer.IsServer)
             {
                 MyAPIGateway.Utilities.MessageEntered -= OnMessageEntered;
+                MyAPIGateway.Entities.OnEntityRemove -= OnEntityRemoved;
                 validBotIds.Clear();
             }
             base.UnloadData();
@@ -331,6 +359,106 @@ MaxWaterDepth=20.0
             scriptPaused = !scriptPaused;
             MyAPIGateway.Utilities.ShowMessage("CES", $"Script is now {(scriptPaused ? "paused" : "resumed")}.");
         }
+
+        //Start NPC Death Spawn
+
+        private void OnEntityRemoved(IMyEntity entity)
+        {
+            MyAPIGateway.Utilities.ShowNotification($"Something was killed", 2000, MyFontEnum.Red);
+
+            // Check if entity is a dead NPC character
+            var character = entity as IMyCharacter;
+            
+            if (character != null && character.IsDead)
+            {
+                string entityName = character.DisplayName;
+                Vector3D position = character.GetPosition();
+                MyAPIGateway.Utilities.ShowNotification($"{entityName} was killed at {position}", 2000, MyFontEnum.Red);
+
+                // Invoke drop method if the character is close to a designated block
+                HandleNPCDeathDrop(character);
+            }
+        }
+
+        private void HandleNPCDeathDrop(IMyCharacter character)
+        {
+            Vector3D characterPosition = character.GetPosition();
+
+            // Iterate over blocks in `BlockSpawnSettings` to check for proximity
+            foreach (var blockSetting in BlockSpawnSettings)
+            {
+                if (blockSetting.Enabled && blockSetting.EnableNPCDeathSpawn)
+                {
+                    BoundingSphereD searchSphere = new BoundingSphereD(characterPosition, blockSetting.NPCDeathEntityRadius);
+                    var blocksInRadius = MyAPIGateway.Entities.GetEntitiesInSphere(ref searchSphere)
+                        .OfType<IMyCubeBlock>()
+                        .Where(b => b.BlockDefinition.SubtypeId == blockSetting.BlockId &&
+                                    Vector3D.Distance(characterPosition, b.GetPosition()) <= blockSetting.NPCDeathEntityRadius)
+                        .ToList();
+
+                    if (blocksInRadius.Any() && IsMatchingNPCDeathEntity(character, blockSetting.NPCDeathEntity))
+                    {
+                        SpawnEntitiesNearPosition(characterPosition, blockSetting);
+
+                        if (blockSetting.EnableNPCDeathItemSpawn)
+                        {
+                            SpawnItemsNearPosition(characterPosition, blockSetting);
+                        }
+                    }
+                }
+            }
+        }
+        private void SpawnItemsNearPosition(Vector3D position, CustomEntitySpawner blockSetting)
+        {
+            for (int i = 0; i < blockSetting.NPCDeathItemTypes.Count; i++)
+            {
+                string itemType = blockSetting.NPCDeathItemTypes[i];
+                string itemId = blockSetting.NPCDeathItemIds[i];
+
+                int spawnAmount = randomGenerator.Next(blockSetting.NPCDeathItemMinAmount, blockSetting.NPCDeathItemMaxAmount + 1);
+
+                for (int j = 0; j < spawnAmount; j++)
+                {
+                    Vector3D dropPosition = position + GetRandomOffsetWithinRadius(blockSetting.NPCDeathItemRadius);
+                    MyFloatingObjects.Spawn(new MyPhysicalInventoryItem((VRage.MyFixedPoint)1, CreatePhysicalObject(itemType, itemId)), dropPosition, Vector3D.Up, Vector3D.Forward);
+                }
+            }
+        }
+
+        private MyObjectBuilder_PhysicalObject CreatePhysicalObject(string itemType, string itemId)
+        {
+            var definitionId = new MyDefinitionId(itemTypeMappings[itemType], itemId);
+            return (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(definitionId);
+        }
+
+        private Vector3D GetRandomOffsetWithinRadius(double radius)
+        {
+            Random random = new Random();
+            double offsetX = (random.NextDouble() * 2 - 1) * radius;
+            double offsetY = (random.NextDouble() * 2 - 1) * radius;
+            double offsetZ = (random.NextDouble() * 2 - 1) * radius;
+            return new Vector3D(offsetX, offsetY, offsetZ);
+        }
+        private bool IsMatchingNPCDeathEntity(IMyCharacter character, string requiredEntitySubtype)
+        {
+            // Check if character matches the required NPCDeathEntity type
+            string entitySubtypeId = (character as MyEntity)?.DefinitionId?.SubtypeId.ToString();
+            return entitySubtypeId != null && entitySubtypeId.Equals(requiredEntitySubtype, StringComparison.OrdinalIgnoreCase);
+        }
+        private void SpawnEntitiesNearPosition(Vector3D position, CustomEntitySpawner blockSetting)
+        {
+            if (string.IsNullOrEmpty(blockSetting.NPCDeathSpawnEntity))
+                return;
+
+            int spawnAmount = randomGenerator.Next(blockSetting.NPCDeathSpawnMinAmount, blockSetting.NPCDeathSpawnMaxAmount + 1);
+            for (int i = 0; i < spawnAmount; i++)
+            {
+                Vector3D spawnPosition = position + GetRandomOffsetWithinRadius(blockSetting.NPCDeathSpawnRadius);
+                MyVisualScriptLogicProvider.SpawnBot(blockSetting.NPCDeathSpawnEntity, spawnPosition);
+            }
+        }
+
+        //END NPC Death Spawn 
 
         private void SpawnEntitiesNearBlocks(ref int entitiesSpawned)
         {
@@ -1182,6 +1310,29 @@ MaxWaterDepth=20.0
                 blockSettings.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
                 blockSettings.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemIds)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
                 blockSettings.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemAmounts)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
+
+                //NPC Death spawns
+                // Settings for the entity that triggers the spawn on death
+                blockSettings.NPCDeathEntity = iniParser.Get(section, nameof(NPCDeathEntity)).ToString();
+                blockSettings.NPCDeathEntityRadius = iniParser.Get(section, nameof(NPCDeathEntityRadius)).ToDouble(20.0);
+                blockSettings.NPCDeathEntityMinAmount = iniParser.Get(section, nameof(NPCDeathEntityMinAmount)).ToInt32(1);
+                blockSettings.NPCDeathEntityMaxAmount = iniParser.Get(section, nameof(NPCDeathEntityMaxAmount)).ToInt32(1);
+
+                // Settings for the entity to spawn upon death of NPCDeathEntity
+                blockSettings.EnableNPCDeathSpawn = iniParser.Get(section, nameof(EnableNPCDeathSpawn)).ToBoolean(false);
+                blockSettings.NPCDeathSpawnEntity = iniParser.Get(section, nameof(NPCDeathSpawnEntity)).ToString();
+                blockSettings.NPCDeathSpawnMinAmount = iniParser.Get(section, nameof(NPCDeathSpawnMinAmount)).ToInt32(1);
+                blockSettings.NPCDeathSpawnMaxAmount = iniParser.Get(section, nameof(NPCDeathSpawnMaxAmount)).ToInt32(1);
+                blockSettings.NPCDeathSpawnRadius = iniParser.Get(section, nameof(NPCDeathSpawnRadius)).ToDouble(10.0);
+
+                // Settings for items to spawn upon NPC death
+                blockSettings.EnableNPCDeathItemSpawn = iniParser.Get(section, nameof(EnableNPCDeathItemSpawn)).ToBoolean(false);
+                blockSettings.NPCDeathItemTypes.AddRange(iniParser.Get(section, nameof(NPCDeathItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.NPCDeathItemIds.AddRange(iniParser.Get(section, nameof(NPCDeathItemIds)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.NPCDeathItemMinAmount = iniParser.Get(section, nameof(NPCDeathItemMinAmount)).ToInt32(1);
+                blockSettings.NPCDeathItemMaxAmount = iniParser.Get(section, nameof(NPCDeathItemMaxAmount)).ToInt32(1);
+                blockSettings.NPCDeathItemRadius = iniParser.Get(section, nameof(NPCDeathItemRadius)).ToDouble(5.0);
+
                 BlockSpawnSettings.Add(blockSettings);
 
             }
@@ -2008,6 +2159,30 @@ MaxWaterDepth=20.0
                 blockSettings.PermanentRequiredItemTypes.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
                 blockSettings.PermanentRequiredItemIds.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemIds)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
                 blockSettings.PermanentRequiredItemAmounts.AddRange(iniParser.Get(section, nameof(blockSettings.PermanentRequiredItemAmounts)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
+                
+                //NPC Death spawns
+                // Settings for the entity that triggers the spawn on death
+                blockSettings.NPCDeathEntity = iniParser.Get(section, nameof(NPCDeathEntity)).ToString();
+                blockSettings.NPCDeathEntityRadius = iniParser.Get(section, nameof(NPCDeathEntityRadius)).ToDouble(20.0);
+                blockSettings.NPCDeathEntityMinAmount = iniParser.Get(section, nameof(NPCDeathEntityMinAmount)).ToInt32(1);
+                blockSettings.NPCDeathEntityMaxAmount = iniParser.Get(section, nameof(NPCDeathEntityMaxAmount)).ToInt32(1);
+
+                // Settings for the entity to spawn upon death of NPCDeathEntity
+                blockSettings.EnableNPCDeathSpawn = iniParser.Get(section, nameof(EnableNPCDeathSpawn)).ToBoolean(false);
+                blockSettings.NPCDeathSpawnEntity = iniParser.Get(section, nameof(NPCDeathSpawnEntity)).ToString();
+                blockSettings.NPCDeathSpawnMinAmount = iniParser.Get(section, nameof(NPCDeathSpawnMinAmount)).ToInt32(1);
+                blockSettings.NPCDeathSpawnMaxAmount = iniParser.Get(section, nameof(NPCDeathSpawnMaxAmount)).ToInt32(1);
+                blockSettings.NPCDeathSpawnRadius = iniParser.Get(section, nameof(NPCDeathSpawnRadius)).ToDouble(10.0);
+
+                // Settings for items to spawn upon NPC death
+                blockSettings.EnableNPCDeathItemSpawn = iniParser.Get(section, nameof(EnableNPCDeathItemSpawn)).ToBoolean(false);
+                blockSettings.NPCDeathItemTypes.AddRange(iniParser.Get(section, nameof(NPCDeathItemTypes)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.NPCDeathItemIds.AddRange(iniParser.Get(section, nameof(NPCDeathItemIds)).ToString().Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries));
+                blockSettings.NPCDeathItemMinAmount = iniParser.Get(section, nameof(NPCDeathItemMinAmount)).ToInt32(1);
+                blockSettings.NPCDeathItemMaxAmount = iniParser.Get(section, nameof(NPCDeathItemMaxAmount)).ToInt32(1);
+                blockSettings.NPCDeathItemRadius = iniParser.Get(section, nameof(NPCDeathItemRadius)).ToDouble(5.0);
+
+
                 BlockSpawnSettings.Add(blockSettings);
 
             }
