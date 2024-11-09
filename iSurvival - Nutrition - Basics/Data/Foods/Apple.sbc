@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- Physical Items Section -->
+    <PhysicalItems>
+        <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>Apple</SubtypeId>
+            </Id>
+            <DisplayName>Apple</DisplayName>
+            <Description>A crisp, juicy apple. Great for a quick snack and offers a natural source of vitamins and sugars.</Description>
+            <Icon>Textures\GUI\Icons\Apple.png</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.1</Z>
+            </Size>
+            <Mass>0.2</Mass>
+            <Volume>0.1</Volume>
+            <Model>Models\Components\apple_model.mwm</Model>
+            <PhysicalMaterial>OrganicMaterial</PhysicalMaterial>
+            <Stats>
+                <!-- Stat calculations based on average nutritional values of an apple -->
+                <Stat Name="Calories" Value="0.04" Time="1"/> <!-- (0.04 * 3000) * 1 = 120 calories -->
+                <Stat Name="Fiber" Value="0.05" Time="1"/> <!-- (0.05 * 45) * 1 = 2.25g fiber -->
+                <Stat Name="Sugar" Value="0.03" Time="1"/> <!-- (0.03 * 54) * 1 = 1.62g sugar -->
+                <Stat Name="Vitamins" Value="0.06" Time="1"/> <!-- (0.06 * 150) * 1 = 9% DV for vitamins -->
+                <Stat Name="Water" Value="0.10" Time="1"/> <!-- (0.10 * 5.55) * 1 = 0.55 liters -->
+                <Stat Name="Sanity" Value="0.02" Time="1"/> <!-- (0.02 * 100) * 1 = 2% sanity boost -->
+            </Stats>
+            <MinimalPricePerUnit>1</MinimalPricePerUnit>
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+    </PhysicalItems>
+
+    <!-- Blueprints Section -->
+    <Blueprints>
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>Apple</SubtypeId>
+            </Id>
+            <DisplayName>Apple Blueprint</DisplayName>
+            <Icon>Textures/GUI/Icons/Apple.png</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Seed" />
+                <Item Amount="5" TypeId="ConsumableItem" SubtypeId="Water" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="ConsumableItem" SubtypeId="Apple" />
+            <BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+        </Blueprint>
+    </Blueprints>
+</Definitions>
