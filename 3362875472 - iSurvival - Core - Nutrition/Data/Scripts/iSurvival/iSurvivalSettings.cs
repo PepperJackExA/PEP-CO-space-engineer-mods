@@ -74,6 +74,11 @@ namespace PEPCO.iSurvival.settings
             const string FileName = "iSurvivalSettings.ini";
             const string IniSection = "Config";
 
+            public float MaxWalkSpeed = 1f;
+            public float MaxFlySpeed = 12.5f;
+            public float GridCheckRadius = 5f;
+            public float WeightImpactFactor = 0.005f;
+
             public List<ulong> playerExceptions = new List<ulong>();
 
             // Loads settings based on whether the session is server or client
@@ -146,6 +151,13 @@ namespace PEPCO.iSurvival.settings
                     }
                 }
 
+                // Load new MovementLimiter settings
+                MaxWalkSpeed = (float)iniParser.Get("MovementLimiter", "MaxWalkSpeed").ToDouble(MaxWalkSpeed);
+                MaxFlySpeed = (float)iniParser.Get("MovementLimiter", "MaxFlySpeed").ToDouble(MaxFlySpeed);
+                GridCheckRadius = (float)iniParser.Get("MovementLimiter", "GridCheckRadius").ToDouble(GridCheckRadius);
+                WeightImpactFactor = (float)iniParser.Get("MovementLimiter", "WeightImpactFactor").ToDouble(WeightImpactFactor);
+
+
                 // Get the player list from the ini and split it to an array
                 playerExceptions = iniParser.Get(IniSection, nameof(playerExceptions)).ToString().Trim().Split('\n')
                     .Select(config =>
@@ -169,6 +181,13 @@ namespace PEPCO.iSurvival.settings
                     iniParser.Set(IniSection, $"{stat.Key}.increaseMultiplier", stat.Value.IncreaseMultiplier);
                     iniParser.Set(IniSection, $"{stat.Key}.decreaseMultiplier", stat.Value.DecreaseMultiplier);
                 }
+
+                // Save new MovementLimiter settings
+                iniParser.Set("MovementLimiter", "MaxWalkSpeed", MaxWalkSpeed);
+                iniParser.Set("MovementLimiter", "MaxFlySpeed", MaxFlySpeed);
+                iniParser.Set("MovementLimiter", "GridCheckRadius", GridCheckRadius);
+                iniParser.Set("MovementLimiter", "WeightImpactFactor", WeightImpactFactor);
+
 
                 iniParser.Set(IniSection, nameof(playerExceptions), string.Join("\n", playerExceptions.Distinct().ToArray()));
                 iniParser.SetComment(IniSection, nameof(playerExceptions), "Add the IDs of players who should be exempt from the iSurvival mod");

@@ -12,16 +12,30 @@ using VRage.Game.ModAPI;
 using VRage.ModAPI;
 using VRage.Utils;
 using VRageMath;
+using static PEPCO.iSurvival.settings.iSurvivalSessionSettings;
 
 namespace PEPCO.iSurvival.MovementLimiter
 {
     [MySessionComponentDescriptor(MyUpdateOrder.AfterSimulation)]
     public class PlayerMovementLimiter : MySessionComponentBase
     {
-        private const float MaxWalkSpeed = 1f; // Walking speed limit in m/s
-        private const float MaxFlySpeed = 12.5f; // Flying speed limit in m/s
-        private const float GridCheckRadius = 5f; // Radius to check for nearby grids
-        private const float WeightImpactFactor = 0.005f; // Factor to decrease speed based on weight
+        private float maxWalkSpeed;
+        private float maxFlySpeed;
+        private float gridCheckRadius;
+        private float weightImpactFactor;
+
+        private iSurvivalSettings settings;
+        public override void LoadData()
+        {
+            settings = new iSurvivalSettings();
+            settings.Load(); // Load settings from the configuration file
+
+            // Assign the configuration values
+            maxWalkSpeed = settings.MaxWalkSpeed;
+            maxFlySpeed = settings.MaxFlySpeed;
+            gridCheckRadius = settings.GridCheckRadius;
+            weightImpactFactor = settings.WeightImpactFactor;
+        }
 
         public override void UpdateAfterSimulation()
         {
@@ -64,23 +78,23 @@ namespace PEPCO.iSurvival.MovementLimiter
                 // Step 3: Calculate movement speed based on movement state
                 Vector3 currentVelocity = physics.LinearVelocity;
                 var movementState = player.Character.CurrentMovementState;
-                float speedLimit = MaxWalkSpeed;
+                float speedLimit = maxWalkSpeed;
                 float staminaMultiplier = MathHelper.Clamp(stamina.Value / 20f, 0.1f, 2f);
                 switch (movementState)
                 {
                     case MyCharacterMovementEnum.Sprinting:
                         if (fatigue.Value > 20 && stamina.Value > 20) continue;
-                        speedLimit = MaxWalkSpeed + (MaxWalkSpeed * 2 * staminaMultiplier);
+                        speedLimit = maxWalkSpeed + (maxWalkSpeed * 2 * staminaMultiplier);
                         break;
 
                     case MyCharacterMovementEnum.Walking:
                         if (fatigue.Value > 20 && stamina.Value > 20) continue;
-                        speedLimit = MaxWalkSpeed + (MaxWalkSpeed * staminaMultiplier);
+                        speedLimit = maxWalkSpeed + (maxWalkSpeed * staminaMultiplier);
                         break;
 
                     case MyCharacterMovementEnum.Running:
                         if (fatigue.Value > 20 && stamina.Value > 20) continue;
-                        speedLimit = MaxWalkSpeed + (MaxWalkSpeed * 1.5f * staminaMultiplier);
+                        speedLimit = maxWalkSpeed + (maxWalkSpeed * 1.5f * staminaMultiplier);
                         break;
 
                     case MyCharacterMovementEnum.Flying:
@@ -95,10 +109,10 @@ namespace PEPCO.iSurvival.MovementLimiter
                         if (gravity.Length() > 1)
                         {
                             // Set the base fly speed
-                            speedLimit = MaxFlySpeed;
+                            speedLimit = maxFlySpeed;
 
                             // Calculate gravity impact on speed based on player weight
-                            float gravityFactor = 1.0f - MathHelper.Clamp(playerWeight * WeightImpactFactor, 0.0f, 0.5f);
+                            float gravityFactor = 1.0f - MathHelper.Clamp(playerWeight * weightImpactFactor, 0.0f, 0.5f);
                             speedLimit *= gravityFactor;
 
                             // Retrieve the player's inventory and check if it exists
@@ -115,7 +129,7 @@ namespace PEPCO.iSurvival.MovementLimiter
                                 }
                                 else
                                 {
-                                    speedLimit = 1.0f + (MaxFlySpeed - 1.0f) * (1.0f - inventoryPercentage);
+                                    speedLimit = 1.0f + (maxFlySpeed - 1.0f) * (1.0f - inventoryPercentage);
                                 }
 
                                 // If stabilizers are disabled and inventory is not full, apply the usual double speed multiplier
@@ -127,7 +141,7 @@ namespace PEPCO.iSurvival.MovementLimiter
                             else
                             {
                                 // Handle case where inventory is null if necessary
-                                speedLimit = MaxFlySpeed;  // Default to max speed if no inventory
+                                speedLimit = maxFlySpeed;  // Default to max speed if no inventory
                             }
 
                             break;
@@ -166,7 +180,7 @@ namespace PEPCO.iSurvival.MovementLimiter
         {
             // Get nearby grids within the check radius
             List<MyEntity> nearbyEntities = new List<MyEntity>();
-            BoundingSphereD searchSphere = new BoundingSphereD(character.GetPosition(), GridCheckRadius);
+            BoundingSphereD searchSphere = new BoundingSphereD(character.GetPosition(), gridCheckRadius);
             MyGamePruningStructure.GetAllEntitiesInSphere(ref searchSphere, nearbyEntities);
 
             IMyCubeGrid closestLargestGrid = null;
