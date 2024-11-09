@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<!-- Physical Items Section -->
+	<PhysicalItems>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>Alfalfa</SubtypeId>
+			</Id>
+			<DisplayName>Alfalfa</DisplayName>
+			<Description>Alfalfa is a nutrient-dense plant rich in vitamins A, C, and K. It is high in fiber and offers a modest protein boost, making it a great addition to a healthy diet.</Description>
+			<Icon>Textures\GUI\Icons\Foods\Alfalfa.png</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.1</Y>
+				<Z>0.1</Z>
+				</Size>
+			<Mass>0.1</Mass>
+			<Volume>0.1</Volume>
+			<Model>Models\Foods\Alfalfa.mwm</Model>
+			<PhysicalMaterial>Organic</PhysicalMaterial>
+			<Stats>
+				<!-- Nutrition Facts Calculation -->
+				<Stat Name="Calories" Value="0.05" Time="1"/>
+				<!-- 0.05 * 3000 = 150 calories, representing the low energy content of alfalfa -->
+				<Stat Name="Fiber" Value="0.4" Time="1"/>
+				<!-- 0.4 * 45 = 18g of fiber, a high fiber content for digestion -->
+				<Stat Name="Protein" Value="0.1" Time="1"/>
+				<!-- 0.1 * 75 = 7.5g of protein, a modest amount -->
+				<Stat Name="Vitamins" Value="0.3" Time="1"/>
+				<!-- 0.3 * 150% = 45% DV for essential vitamins, especially A, C, and K -->
+				<Stat Name="Water" Value="0.15" Time="1"/>
+				<!-- 0.15 * 5.55 = 0.83 liters, representing moisture in fresh alfalfa -->
+				<Stat Name="Sanity" Value="0.005" Time="1"/>
+				<!-- Positive impact on sanity for its freshness and nutrients -->
+			</Stats>
+			<MinimalPricePerUnit>2</MinimalPricePerUnit>
+			<MinimumOfferAmount>30</MinimumOfferAmount>
+			<MaximumOfferAmount>300</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+	</PhysicalItems>
+
+	<!-- Blueprints Section -->
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Alfalfa</SubtypeId>
+			</Id>
+			<DisplayName>Alfalfa Blueprint</DisplayName>
+			<Icon>Textures/GUI/Icons/Foods/Alfalfa.png</Icon>
+			<Prerequisites>
+				<Item Amount="3" TypeId="Component" SubtypeId="AlfalfaSeed" />
+				<Item Amount="2" TypeId="Ore" SubtypeId="Ice" />
+			</Prerequisites>
+			<Result Amount="1" TypeId="ConsumableItem" SubtypeId="Alfalfa" />
+			<BaseProductionTimeInSeconds>120</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>
