@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Components>
+		<!---
+        Farm Items
+        -->
+		<!-- Basic farm items -->		
+		<Component>
+			<Id>
+				<TypeId>Component</TypeId>
+				<SubtypeId>FarmCompost</SubtypeId>
+			</Id>
+			<DisplayName>Farm Compost</DisplayName>
+			<Description>Farm compost used to keep your farms going.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\FarmingCompost.png</Icon>
+			<Size>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</Size>
+			<Mass>8</Mass>
+			<Volume>2</Volume>
+			<Model>Models\Item\FarmingCompost.mwm</Model>
+			<PhysicalMaterial>Organics</PhysicalMaterial>
+			<MaxIntegrity>30</MaxIntegrity>
+			<DropProbability>0.5</DropProbability>
+			<Health>18</Health>
+			<MinimumOfferAmount>1000</MinimumOfferAmount>
+			<MaximumOfferAmount>5000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>1000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
+			<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+		</Component>
+	</Components>
+</Definitions>
