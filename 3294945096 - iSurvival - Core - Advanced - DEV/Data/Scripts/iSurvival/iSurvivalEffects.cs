@@ -377,7 +377,7 @@ namespace PEPCO.iSurvival.Effects
                 staminaChangeRate += EnvironmentalFactors.GetEnvironmentalFactor(player);
 
                 // Apply the stamina change rate
-                Core.iSurvivalSession.ApplyStatChange(player, stamina, 1, staminaChangeRate);
+                Core.iSurvivalSession.ApplyStatChange(player, stamina, 1.25, staminaChangeRate);
             }
 
             // Calculate the effect of an RPG stat

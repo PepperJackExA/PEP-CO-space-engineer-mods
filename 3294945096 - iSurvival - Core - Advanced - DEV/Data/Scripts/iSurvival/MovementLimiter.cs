@@ -96,12 +96,40 @@ namespace PEPCO.iSurvival.MovementLimiter
                         {
                             // Set the base fly speed
                             speedLimit = MaxFlySpeed;
+
+                            // Calculate gravity impact on speed based on player weight
                             float gravityFactor = 1.0f - MathHelper.Clamp(playerWeight * WeightImpactFactor, 0.0f, 0.5f);
                             speedLimit *= gravityFactor;
-                            if (!stabilizersEnabled)
+
+                            // Retrieve the player's inventory and check if it exists
+                            var inventoryComponent = character.GetInventory(0); // Use index 0 for the main inventory
+                            if (inventoryComponent != null)
                             {
-                                speedLimit *= 2;
+                                // Calculate inventory fullness percentage
+                                float inventoryPercentage = (float)inventoryComponent.CurrentVolume / (float)inventoryComponent.MaxVolume;
+
+                                // Adjust the speed limit based on inventory fullness
+                                if (inventoryPercentage >= 1.0f)
+                                {
+                                    speedLimit = 1.0f;  // Full inventory caps speed at 1
+                                }
+                                else
+                                {
+                                    speedLimit = 1.0f + (MaxFlySpeed - 1.0f) * (1.0f - inventoryPercentage);
+                                }
+
+                                // If stabilizers are disabled and inventory is not full, apply the usual double speed multiplier
+                                if (!stabilizersEnabled && inventoryPercentage < 1.0f)
+                                {
+                                    speedLimit *= 2;
+                                }
                             }
+                            else
+                            {
+                                // Handle case where inventory is null if necessary
+                                speedLimit = MaxFlySpeed;  // Default to max speed if no inventory
+                            }
+
                             break;
                         }
                         continue;
