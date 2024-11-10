@@ -81,7 +81,7 @@ GlobalMaxEntities=30
         public List<string> EntityID { get; set; } = new List<string>();
         public List<string> ItemTypes { get; set; } = new List<string>();
         public List<string> ItemIds { get; set; } = new List<string>();
-        public bool StackItems { get; set; } = false;
+        public bool StackItems { get; set; } = true;
         public bool SpawnInsideInventory { get; set; } = false;
         public bool EnableEntitySpawning { get; set; } = false;
         public bool EnableItemSpawning { get; set; } = false;
@@ -604,6 +604,10 @@ MaxWaterDepth=20.0
         private void SpawnItemsAndApplyDamage(IMySlimBlock block, CustomEntitySpawner blockSettings)
         {
             LogError("Starting SpawnItemsAndApplyDamage");
+
+            // Maintain a record of items spawned per block to prevent duplication
+            Dictionary<string, int> spawnedItemsRecord = new Dictionary<string, int>();
+
             for (int i = 0; i < blockSettings.ItemTypes.Count; i++)
             {
                 double itemSpawnAmount = blockSettings.UseWeightedDrops ?
@@ -611,6 +615,14 @@ MaxWaterDepth=20.0
                     blockSettings.MinItemAmount[i] + randomGenerator.NextDouble() * (blockSettings.MaxItemAmount[i] - blockSettings.MinItemAmount[i]);
 
                 int roundedItemSpawnAmount = (int)Math.Round(itemSpawnAmount);
+
+                // Ensure items only spawn if they haven't already been spawned for this cycle
+                string itemKey = $"{block.BlockDefinition.Id.SubtypeName}_{blockSettings.ItemTypes[i]}";
+                if (spawnedItemsRecord.ContainsKey(itemKey) && spawnedItemsRecord[itemKey] >= roundedItemSpawnAmount)
+                {
+                    continue; // Skip if this item type was already spawned as required
+                }
+                spawnedItemsRecord[itemKey] = roundedItemSpawnAmount;
 
                 if (roundedItemSpawnAmount > 0)
                 {
@@ -627,6 +639,7 @@ MaxWaterDepth=20.0
                 }
             }
         }
+
 
 
 
@@ -891,7 +904,7 @@ MaxWaterDepth=20.0
         {
             LogError("Starting SpawnItems");
 
-            for (int i = 0; i < itemSettings.ItemTypes.Count; i++)
+            for (int i = 0; i <= itemSettings.ItemTypes.Count; i++)
             {
                 var itemType = itemSettings.ItemTypes[i];
                 var itemId = itemSettings.ItemIds[i];

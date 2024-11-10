@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Physical Items Section -->
+    <PhysicalItems>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<!--DigisPizza-->
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>DigisPizza</SubtypeId>
+			</Id>
+			<DisplayName>Digi's Pizza</DisplayName>
+			<Description>A savory slice of pizza that provides an energy boost and restores sanity. High in calories, fats, and protein, it's perfect for quick nourishment.</Description>
+			<Icon>Textures\GUI\Icons\DigisPizza.dds</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.05</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>0.3</Mass>
+			<Volume>0.25</Volume>
+			<Model>Models\Components\DigisPizza.mwm</Model>
+			<PhysicalMaterial>FoodMaterial</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Calories" Value="0.21375" Time="1"/>
+				<Stat Name="Fat" Value="0.214" Time="1"/>
+				<Stat Name="Sodium" Value="0.417" Time="1"/>
+				<Stat Name="Fiber" Value="0.1" Time="1"/>
+				<Stat Name="Protein" Value="0.36" Time="1"/>
+				<Stat Name="Sanity" Value="0.3" Time="1"/>
+			</Stats>
+			<MinimalPricePerUnit>12</MinimalPricePerUnit>
+			<MinimumOfferAmount>150</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+    </PhysicalItems>
+	
+	
+	<!-- Blueprint Section -->
+    <Blueprints>
+		<Blueprint>
+			<!--DigisPizza-->
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>DigisPizza</SubtypeId>
+			</Id>
+			<DisplayName>Digi's Pizza Blueprint</DisplayName>
+			<Icon>Textures/GUI/Icons/DigisPizza.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Dough"/>
+				<Item Amount="0.5" TypeId="ConsumableItem" SubtypeId="Cheese"/>
+				<Item Amount="0.5" TypeId="ConsumableItem" SubtypeId="Sauce"/>
+				<Item Amount="0.3" TypeId="ConsumableItem" SubtypeId="Toppings"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="ConsumableItem" SubtypeId="DigisPizza" />
+			<BaseProductionTimeInSeconds>900</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints> 
+</Definitions>
