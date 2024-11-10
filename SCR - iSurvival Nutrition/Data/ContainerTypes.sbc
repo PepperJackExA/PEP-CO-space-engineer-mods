@@ -112,105 +112,13 @@
                         <SubtypeId>Computer</SubtypeId>
                     </Id>
                 </Item>	
-				<!-- INDUSTRIAL OVERHAUL ITEMS -->
-			    <Item AmountMin="1" AmountMax="10">
+				
+                <!-- iSurvival Items -->			    
+                <Item AmountMin="1" AmountMax="10">
                     <Frequency>1</Frequency>
-                    <Id>
-                        <TypeId>Component</TypeId>
-                        <SubtypeId>Lightbulb</SubtypeId>
-                    </Id>
-                </Item>
-				<Item AmountMin="1" AmountMax="10">
-                    <Frequency>1</Frequency>
-                    <Id>
-                        <TypeId>Component</TypeId>
-                        <SubtypeId>Electromagnet</SubtypeId>
-                    </Id>
-                </Item>	
-				<Item AmountMin="1" AmountMax="10">
-                    <Frequency>1</Frequency>
-                    <Id>
-                        <TypeId>Component</TypeId>
-                        <SubtypeId>AdvancedComputer</SubtypeId>
-                    </Id>
-                </Item>	
-				<Item AmountMin="1" AmountMax="10">
-                    <Frequency>1</Frequency>
-                    <Id>
-                        <TypeId>Component</TypeId>
-                        <SubtypeId>CopperWire</SubtypeId>
-                    </Id>
-                </Item>
-                <!-- Eat, Drink, Sleep Repeat ITEMS -->
-			    <Item AmountMin="1" AmountMax="10">
-                    <Frequency>1</Frequency>
-                    <Id>
-                        <TypeId>ConsumableItem</TypeId>
-                        <SubtypeId>CosmicCoffee</SubtypeId>
-                    </Id>
-                </Item>
-				<Item AmountMin="1" AmountMax="10">
-                    <Frequency>1</Frequency>
-                    <Id>
-                        <TypeId>ConsumableItem</TypeId>
-                        <SubtypeId>ClangCola</SubtypeId>
-                    </Id>
-                </Item>	
-				<Item AmountMin="1" AmountMax="10">
-                    <Frequency>1</Frequency>
-                    <Id>
-                        <TypeId>ConsumableItem</TypeId>
-                        <SubtypeId>SparklingWater</SubtypeId>
-                    </Id>
-                </Item>	
-				<Item AmountMin="1" AmountMax="10">
-                    <Frequency>1</Frequency>
-                    <Id>
-                        <TypeId>ConsumableItem</TypeId>
-                        <SubtypeId>LaysChips</SubtypeId>
-                    </Id>
-                </Item>
-                <Item AmountMin="1" AmountMax="1">
-                    <Frequency>0.1</Frequency>
                     <Id>
                         <TypeId>ConsumableItem</TypeId>
                         <SubtypeId>Apple</SubtypeId>
-                    </Id>
-                </Item>
-                <Item AmountMin="1" AmountMax="1">
-                    <Frequency>0.1</Frequency>
-                    <Id>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>Wheat</SubtypeId>
-                    </Id>
-                </Item>
-                <Item AmountMin="1" AmountMax="1">
-                    <Frequency>0.1</Frequency>
-                    <Id>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>Soya</SubtypeId>
-                    </Id>
-                </Item>
-                <Item AmountMin="1" AmountMax="1">
-                    <Frequency>0.1</Frequency>
-                    <Id>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>Pumpkin</SubtypeId>
-                    </Id>
-                </Item>
-                <Item AmountMin="1" AmountMax="1">
-                    <Frequency>0.1</Frequency>
-                    <Id>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>Cabbage</SubtypeId>
-                    </Id>
-                </Item>
-
-                <Item AmountMin="1" AmountMax="1">
-                    <Frequency>0.1</Frequency>
-                    <Id>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>Herbs</SubtypeId>
                     </Id>
                 </Item>
             </Items>
@@ -263,34 +171,13 @@
                         <SubtypeId>Welder3Item</SubtypeId>
                     </Id>
                 </Item>
-				<!-- INDUSTRIAL OVERHAUL ITEMS -->
-				<Item AmountMin="1" AmountMax="10">
-                    <Frequency>1</Frequency>
-                    <Id>
-						<TypeId>Component</TypeId>
-						<SubtypeId>HeatingElement</SubtypeId>
-                    </Id>
-                </Item>
-				<Item AmountMin="1" AmountMax="10">
-                    <Frequency>1</Frequency>
-                    <Id>
-                        <TypeId>Component</TypeId>
-                        <SubtypeId>GoldWire</SubtypeId>
-                    </Id>
-                </Item>				
-                <!-- Eat, Drink, Sleep Repeat ITEMS -->
+				
+                <!-- iSuvival items -->
 				<Item AmountMin="1" AmountMax="10">
                     <Frequency>1</Frequency>
                     <Id>
 						<TypeId>ConsumableItem</TypeId>
-						<SubtypeId>InterBeer</SubtypeId>
-                    </Id>
-                </Item>
-				<Item AmountMin="1" AmountMax="10">
-                    <Frequency>1</Frequency>
-                    <Id>
-                        <TypeId>ConsumableItem</TypeId>
-                        <SubtypeId>PrlnglesChips</SubtypeId>
+						<SubtypeId>Apple</SubtypeId>
                     </Id>
                 </Item>
 			</Items>
