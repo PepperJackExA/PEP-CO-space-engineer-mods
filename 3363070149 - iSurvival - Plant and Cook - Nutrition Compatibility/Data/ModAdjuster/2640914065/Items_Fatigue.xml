@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PhysicalItems>
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+        <Id>
+            <TypeId>ConsumableItem</TypeId>
+            <SubtypeId>EuropaTea</SubtypeId>
+        </Id>
+        <Stats>
+          <Stat Name="Health" Value="0.1" Time="3"/>
+        </Stats>
+    </PhysicalItem>
+            
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>Apple</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of an apple -->
+			<Stat Name="Calories" Value="0.04" Time="1"/>
+			<!-- (0.04 * 3000) * 1 = 120 calories -->
+			<Stat Name="Fiber" Value="0.05" Time="1"/>
+			<!-- (0.05 * 45) * 1 = 2.25g fiber -->
+			<Stat Name="Sugar" Value="0.03" Time="1"/>
+			<!-- (0.03 * 54) * 1 = 1.62g sugar -->
+			<Stat Name="Vitamins" Value="0.06" Time="1"/>
+			<!-- (0.06 * 150) * 1 = 9% DV for vitamins -->
+			<Stat Name="Water" Value="0.10" Time="1"/>
+			<!-- (0.10 * 5.55) * 1 = 0.55 liters -->
+			<Stat Name="Sanity" Value="0.02" Time="1"/>
+			<!-- (0.02 * 100) * 1 = 2% sanity boost -->
+		</Stats>
+		<MinimalPricePerUnit>1</MinimalPricePerUnit>
+		<MinimumOfferAmount>50</MinimumOfferAmount>
+		<MaximumOfferAmount>500</MaximumOfferAmount>
+    </PhysicalItem>
+    
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>AppleJuice</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of apple juice -->
+			<Stat Name="Calories" Value="0.05" Time="1"/>
+			<!-- (0.05 * 3000) * 1 = 150 calories -->
+			<Stat Name="Sugar" Value="0.07" Time="1"/>
+			<!-- (0.07 * 54) * 1 = 3.78g sugar -->
+			<Stat Name="Vitamins" Value="0.1" Time="1"/>
+			<!-- (0.1 * 150) * 1 = 15% DV for vitamins -->
+			<Stat Name="Water" Value="0.1" Time="1"/>
+			<!-- (0.1 * 5.55) * 1 = 0.55 liters -->
+			<Stat Name="Sanity" Value="0.03" Time="1"/>
+			<!-- (0.03 * 100) * 1 = 3% sanity boost -->
+		</Stats>
+		<MinimalPricePerUnit>2</MinimalPricePerUnit>
+		<MinimumOfferAmount>50</MinimumOfferAmount>
+		<MaximumOfferAmount>300</MaximumOfferAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+    </PhysicalItem>
+    
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>ApplePie</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of apple pie -->
+			<Stat Name="Calories" Value="0.25" Time="1"/>
+			<!-- (0.25 * 3000) * 1 = 750 calories -->
+			<Stat Name="Fat" Value="0.1" Time="1"/>
+			<!-- (0.1 * 105) * 1 = 10.5g fat -->
+			<Stat Name="Sugar" Value="0.12" Time="1"/>
+			<!-- (0.12 * 54) * 1 = 6.48g sugar -->
+			<Stat Name="Fiber" Value="0.04" Time="1"/>
+			<!-- (0.04 * 45) * 1 = 1.8g fiber -->
+			<Stat Name="Vitamins" Value="0.05" Time="1"/>
+			<!-- (0.05 * 150) * 1 = 7.5% DV for vitamins -->
+			<Stat Name="Sanity" Value="0.1" Time="1"/>
+			<!-- (0.1 * 100) * 1 = 10% sanity boost -->
+		</Stats>
+		<MinimalPricePerUnit>8</MinimalPricePerUnit>
+		<MinimumOfferAmount>20</MinimumOfferAmount>
+		<MaximumOfferAmount>100</MaximumOfferAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+    </PhysicalItem>      
+    
+
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>Bread</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of bread -->
+			<Stat Name="Calories" Value="0.2" Time="1"/>
+			<!-- (0.2 * 3000) * 1 = 600 calories -->
+			<Stat Name="Starches" Value="0.15" Time="1"/>
+			<!-- (0.15 * 330) * 1 = 49.5g starches -->
+			<Stat Name="Fiber" Value="0.04" Time="1"/>
+			<!-- (0.04 * 45) * 1 = 1.8g fiber -->
+			<Stat Name="Vitamins" Value="0.03" Time="1"/>
+			<!-- (0.03 * 150) * 1 = 4.5% DV for vitamins -->
+			<Stat Name="Sanity" Value="0.02" Time="1"/>
+			<!-- (0.02 * 100) * 1 = 2% sanity boost -->
+		</Stats>
+		<MinimalPricePerUnit>3</MinimalPricePerUnit>
+		<MinimumOfferAmount>30</MinimumOfferAmount>
+		<MaximumOfferAmount>200</MaximumOfferAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+    </PhysicalItem>
+    
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>Burger</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of a cheeseburger -->
+			<Stat Name="Calories" Value="0.35" Time="1"/>
+			<!-- (0.35 * 3000) * 1 = 1050 calories -->
+			<Stat Name="Protein" Value="0.12" Time="1"/>
+			<!-- (0.12 * 75) * 1 = 9g protein -->
+			<Stat Name="Fat" Value="0.18" Time="1"/>
+			<!-- (0.18 * 105) * 1 = 18.9g fat -->
+			<Stat Name="Sodium" Value="0.2" Time="1"/>
+			<!-- (0.2 * 3450) * 1 = 690mg sodium -->
+			<Stat Name="Fiber" Value="0.03" Time="1"/>
+			<!-- (0.03 * 45) * 1 = 1.35g fiber -->
+			<Stat Name="Vitamins" Value="0.06" Time="1"/>
+			<!-- (0.06 * 150) * 1 = 9% DV for vitamins -->
+			<Stat Name="Sanity" Value="0.15" Time="1"/>
+			<!-- (0.15 * 100) * 1 = 15% sanity boost -->
+		</Stats>
+		<MinimalPricePerUnit>10</MinimalPricePerUnit>
+		<MinimumOfferAmount>10</MinimumOfferAmount>
+		<MaximumOfferAmount>50</MaximumOfferAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+    </PhysicalItem>
+
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>Meat</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of raw meat -->
+			<Stat Name="Calories" Value="0.15" Time="1"/>
+			<!-- (0.15 * 3000) * 1 = 450 calories -->
+			<Stat Name="Protein" Value="0.25" Time="1"/>
+			<!-- (0.25 * 75) * 1 = 18.75g protein -->
+			<Stat Name="Fat" Value="0.1" Time="1"/>
+			<!-- (0.1 * 105) * 1 = 10.5g fat -->
+			<Stat Name="Water" Value="0.1" Time="1"/>
+			<!-- (0.1 * 5.55) * 1 = 0.555 liters -->
+			<Stat Name="Sanity" Value="-0.05" Time="1"/>
+			<!-- (Negative sanity for raw consumption) -->
+		</Stats>
+		<MinimalPricePerUnit>3</MinimalPricePerUnit>
+		<MinimumOfferAmount>50</MinimumOfferAmount>
+		<MaximumOfferAmount>200</MaximumOfferAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+    </PhysicalItem>
+    
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>MeatRoasted</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of roasted meat -->
+			<Stat Name="Calories" Value="0.2" Time="1"/>
+			<!-- (0.2 * 3000) * 1 = 600 calories -->
+			<Stat Name="Protein" Value="0.22" Time="1"/>
+			<!-- (0.22 * 75) * 1 = 16.5g protein -->
+			<Stat Name="Fat" Value="0.08" Time="1"/>
+			<!-- (0.08 * 105) * 1 = 8.4g fat -->
+			<Stat Name="Water" Value="0.06" Time="1"/>
+			<!-- (0.06 * 5.55) * 1 = 0.333 liters -->
+			<Stat Name="Sanity" Value="0.1" Time="1"/>
+			<!-- (0.1 * 100) * 1 = 10% sanity boost -->
+		</Stats>
+		<MinimalPricePerUnit>5</MinimalPricePerUnit>
+		<MinimumOfferAmount>30</MinimumOfferAmount>
+		<MaximumOfferAmount>150</MaximumOfferAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+    </PhysicalItem> 
+
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>Soup</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of soup -->
+			<Stat Name="Calories" Value="0.12" Time="1"/>
+			<!-- (0.12 * 3000) * 1 = 360 calories -->
+			<Stat Name="Protein" Value="0.05" Time="1"/>
+			<!-- (0.05 * 75) * 1 = 3.75g protein -->
+			<Stat Name="Sodium" Value="0.1" Time="1"/>
+			<!-- (0.1 * 3450) * 1 = 345mg sodium -->
+			<Stat Name="Fiber" Value="0.04" Time="1"/>
+			<!-- (0.04 * 45) * 1 = 1.8g fiber -->
+			<Stat Name="Vitamins" Value="0.08" Time="1"/>
+			<!-- (0.08 * 150) * 1 = 12% DV for vitamins -->
+			<Stat Name="Water" Value="0.2" Time="1"/>
+			<!-- (0.2 * 5.55) * 1 = 1.11 liters -->
+			<Stat Name="Sanity" Value="0.1" Time="1"/>
+			<!-- (0.1 * 100) * 1 = 10% sanity boost -->
+		</Stats>
+		<MinimalPricePerUnit>4</MinimalPricePerUnit>
+		<MinimumOfferAmount>20</MinimumOfferAmount>
+		<MaximumOfferAmount>100</MaximumOfferAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+    </PhysicalItem>
+    
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>Tofu</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of tofu -->
+			<Stat Name="Calories" Value="0.1" Time="1"/>
+			<!-- (0.1 * 3000) * 1 = 300 calories -->
+			<Stat Name="Protein" Value="0.2" Time="1"/>
+			<!-- (0.2 * 75) * 1 = 15g protein -->
+			<Stat Name="Fat" Value="0.05" Time="1"/>
+			<!-- (0.05 * 105) * 1 = 5.25g fat -->
+			<Stat Name="Fiber" Value="0.03" Time="1"/>
+			<!-- (0.03 * 45) * 1 = 1.35g fiber -->
+			<Stat Name="Vitamins" Value="0.04" Time="1"/>
+			<!-- (0.04 * 150) * 1 = 6% DV for vitamins -->
+			<Stat Name="Water" Value="0.1" Time="1"/>
+			<!-- (0.1 * 5.55) * 1 = 0.555 liters -->
+			<Stat Name="Sanity" Value="0.05" Time="1"/>
+			<!-- (0.05 * 100) * 1 = 5% sanity boost -->
+		</Stats>
+		<MinimalPricePerUnit>3</MinimalPricePerUnit>
+		<MinimumOfferAmount>50</MinimumOfferAmount>
+		<MaximumOfferAmount>200</MaximumOfferAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+    </PhysicalItem> 
+
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>Mushrooms</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of mushrooms -->
+			<Stat Name="Calories" Value="0.03" Time="1"/>
+			<!-- (0.03 * 3000) * 1 = 90 calories -->
+			<Stat Name="Protein" Value="0.03" Time="1"/>
+			<!-- (0.03 * 75) * 1 = 2.25g protein -->
+			<Stat Name="Fiber" Value="0.02" Time="1"/>
+			<!-- (0.02 * 45) * 1 = 0.9g fiber -->
+			<Stat Name="Vitamins" Value="0.1" Time="1"/>
+			<!-- (0.1 * 150) * 1 = 15% DV for vitamins -->
+			<Stat Name="Water" Value="0.09" Time="1"/>
+			<!-- (0.09 * 5.55) * 1 = 0.4995 liters -->
+			<Stat Name="Sanity" Value="0.03" Time="1"/>
+			<!-- (0.03 * 100) * 1 = 3% sanity boost -->
+		</Stats>
+		<MinimalPricePerUnit>2</MinimalPricePerUnit>
+		<MinimumOfferAmount>30</MinimumOfferAmount>
+		<MaximumOfferAmount>150</MaximumOfferAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+    </PhysicalItem>   
+
+    <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+      <Id>
+        <TypeId>ConsumableItem</TypeId>
+        <SubtypeId>ShroomSteak</SubtypeId>
+      </Id>
+		<Stats>
+			<!-- Stat calculations based on average nutritional values of a mushroom steak -->
+			<Stat Name="Calories" Value="0.15" Time="1"/>
+			<!-- (0.15 * 3000) * 1 = 450 calories -->
+			<Stat Name="Protein" Value="0.1" Time="1"/>
+			<!-- (0.1 * 75) * 1 = 7.5g protein -->
+			<Stat Name="Fat" Value="0.03" Time="1"/>
+			<!-- (0.03 * 105) * 1 = 3.15g fat -->
+			<Stat Name="Fiber" Value="0.05" Time="1"/>
+			<!-- (0.05 * 45) * 1 = 2.25g fiber -->
+			<Stat Name="Vitamins" Value="0.12" Time="1"/>
+			<!-- (0.12 * 150) * 1 = 18% DV for vitamins -->
+			<Stat Name="Water" Value="0.08" Time="1"/>
+			<!-- (0.08 * 5.55) * 1 = 0.444 liters -->
+			<Stat Name="Sanity" Value="0.08" Time="1"/>
+			<!-- (0.08 * 100) * 1 = 8% sanity boost -->
+		</Stats>
+		<MinimalPricePerUnit>7</MinimalPricePerUnit>
+		<MinimumOfferAmount>20</MinimumOfferAmount>
+		<MaximumOfferAmount>80</MaximumOfferAmount>
+		<CanPlayerOrder>true</CanPlayerOrder>
+    </PhysicalItem> 
+  </PhysicalItems>
+</Definitions>
