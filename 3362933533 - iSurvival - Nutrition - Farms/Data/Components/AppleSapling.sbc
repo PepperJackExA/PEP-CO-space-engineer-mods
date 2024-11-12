@@ -24,20 +24,22 @@
 		</Component>
 	</Components>
 	<!-- Blueprint Section -->
-	<Blueprint>
-		<Id>
-			<TypeId>BlueprintDefinition</TypeId>
-			<SubtypeId>AppleSapling</SubtypeId>
-		</Id>
-		<DisplayName>Apple Sapling</DisplayName>
-		<Description>A bonsai sized apple tree</Description>
-		<Icon>Textures\GUI\Icons\Items\AppleTreeSapling.png</Icon>
-		<Prerequisites>
-			<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Apple" />
-		</Prerequisites>
-		<Results>
-			<Item Amount="1" TypeId="Component" SubtypeId="AppleSapling" />
-		</Results>
-		<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
-	</Blueprint>
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>AppleSapling</SubtypeId>
+			</Id>
+			<DisplayName>Apple Sapling</DisplayName>
+			<Description>A bonsai sized apple tree</Description>
+			<Icon>Textures\GUI\Icons\Items\AppleTreeSapling.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Apple" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="1" TypeId="Component" SubtypeId="AppleSapling" />
+			</Results>
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
 </Definitions>
