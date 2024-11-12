@@ -37,4 +37,22 @@
 				<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
 			</Component>
 	</Components>
+	<!-- Blueprint Section -->
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Wheat</SubtypeId>
+			</Id>
+			<DisplayName>Wheat</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\HayBale.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="ConsumableItem" SubtypeId="Potato" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Salt" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Oil" />
+			</Prerequisites>
+			<Result Amount="1" TypeId="Component" SubtypeId="Wheat" />
+			<BaseProductionTimeInSeconds>180</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
 </Definitions>
