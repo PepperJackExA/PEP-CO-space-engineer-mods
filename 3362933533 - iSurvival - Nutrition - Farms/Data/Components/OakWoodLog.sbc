@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Components>
+		<Component>
+			<Id>
+				<TypeId>Component</TypeId>
+				<SubtypeId>OakWoodLog</SubtypeId>
+			</Id>
+			<DisplayName>Oak Wood Log</DisplayName>
+			<Description>A sturdy oak log, useful for construction and crafting. Often used in wooden traps and tools.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\OakWoodLog.dds</Icon>
+			<Size>
+				<X>1</X>
+				<Y>5</Y>
+				<Z>1</Z>
+			</Size>
+			<Mass>12.5</Mass>
+			<Volume>5.0</Volume>
+			<Model>Models\Cubes\small\OakWoodLog.mwm</Model>
+			<PhysicalMaterial>Wood</PhysicalMaterial>
+			<MaxIntegrity>100</MaxIntegrity>
+			<DropProbability>1.0</DropProbability>
+			<MinimalPricePerUnit>10</MinimalPricePerUnit>
+			<MinimumOfferAmount>50</MinimumOfferAmount>
+			<MaximumOfferAmount>500</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</Component>
+	</Components>
+
+	<!-- Blueprint Section -->
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>OakWoodLog</SubtypeId>
+			</Id>
+			<DisplayName>Oak Wood Log Blueprint</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\OakWoodLog.dds</Icon>
+			<Prerequisites>
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="TreeBranch" />
+			</Prerequisites>
+			<Result Amount="1" TypeId="Component" SubtypeId="OakWoodLog" />
+			<BaseProductionTimeInSeconds>60</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>
