@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Blueprint Classes -->
+	<BlueprintClasses>
+		<Class>
+			<Id>
+				<TypeId>BlueprintClassDefinition</TypeId>
+				<SubtypeId>Farming</SubtypeId>
+			</Id>
+			<DisplayName>Farming</DisplayName>
+			<Description>Farming</Description>
+			<Icon>Textures\GUI\Icons\buttons\component.dds</Icon>
+			<HighlightIcon>Textures\GUI\Icons\buttons\component.dds</HighlightIcon>
+			<FocusIcon>Textures\GUI\Icons\buttons\component_focus.dds</FocusIcon>
+			<InputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</InputConstraintIcon>
+			<OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+		</Class>
+	</BlueprintClasses>
+</Definitions>

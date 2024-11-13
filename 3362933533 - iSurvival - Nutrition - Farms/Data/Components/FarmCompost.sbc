@@ -31,23 +31,4 @@
 			<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
 		</Component>
 	</Components>
-	
-	<!-- Blueprint Section -->
-	<Blueprints>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>FarmCompost</SubtypeId>
-			</Id>
-			<DisplayName>Farm Compost</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\FarmingCompost.png</Icon>
-			<Prerequisites>
-				<Item Amount="5" TypeId="ConsumableItem" SubtypeId="Potato" />
-				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Salt" />
-				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Oil" />
-			</Prerequisites>
-			<Result Amount="1" TypeId="Component" SubtypeId="FarmCompost" />
-			<BaseProductionTimeInSeconds>180</BaseProductionTimeInSeconds>
-		</Blueprint>
-	</Blueprints>
 </Definitions>

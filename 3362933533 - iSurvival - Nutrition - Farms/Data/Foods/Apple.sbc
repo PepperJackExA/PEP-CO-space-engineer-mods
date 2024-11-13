@@ -38,22 +38,4 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</PhysicalItem>
 	</PhysicalItems>
-	<!-- Blueprint Section -->
-	<Blueprints>
-		<Blueprint>
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>Apple</SubtypeId>
-			</Id>
-			<DisplayName>Apple</DisplayName>
-			<Icon>Textures\GUI\Icons\Items\Apple.png</Icon>
-			<Prerequisites>
-				<Item Amount="5" TypeId="ConsumableItem" SubtypeId="Potato" />
-				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Salt" />
-				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Oil" />
-			</Prerequisites>
-			<Result Amount="1" TypeId="ConsumableItem" SubtypeId="Apple" />
-			<BaseProductionTimeInSeconds>180</BaseProductionTimeInSeconds>
-		</Blueprint>
-	</Blueprints>
 </Definitions>
