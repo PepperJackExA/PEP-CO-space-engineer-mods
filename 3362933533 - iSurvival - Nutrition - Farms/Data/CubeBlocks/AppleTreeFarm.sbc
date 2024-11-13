@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>AppleTreeFarm</SubtypeId>
+			</Id>
+			<DisplayName>Apple Tree Farm</DisplayName>
+			<Description>Apple Tree Farm.  Spawns 1-10 apples every 5 minutes.  Must be tended to or will die.</Description>
+			<Icon>Textures\GUI\Icons\Items\AppleTreeSapling.png</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="5" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Apple\TreeFarm.mwm</Model>
+			<Components>
+				<Component Subtype="AppleSapling" Count="1"/>
+				<Component Subtype="FarmCompost" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="Sapling" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.02" StartY="0.02" EndX="1.98" EndY="1.98"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.25" File="Models\Cubes\Apple\SapTreeFarm.mwm" />
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Apple\SmallTreeFarm.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Apple\MediumTreeFarm.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>AppleTreeFarm</BlockPairName>
+			<PhysicalMaterial>Wood</PhysicalMaterial>
+		</Definition>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>AppleTreeFarmLG</SubtypeId>
+			</Id>
+			<DisplayName>Apple Tree Farm</DisplayName>
+			<Description>Apple Tree Farm.  Spawns 1-10 apples every 5 minutes.  Must be tended to or will die.</Description>
+			<Icon>Textures\GUI\Icons\Items\AppleTreeSapling.png</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Apple\TreeFarm.mwm</Model>
+			<Components>
+				<Component Subtype="AppleSapling" Count="1"/>
+				<Component Subtype="FarmCompost" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="Sapling" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.30" StartY="0.30" EndX="0.70" EndY="0.70"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.25" File="Models\Cubes\Apple\SapTreeFarm.mwm" />
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\Apple\SmallTreeFarm.mwm" />
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Apple\MediumTreeFarm.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>AppleTreeFarm</BlockPairName>
+
+			<PhysicalMaterial>Wood</PhysicalMaterial>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

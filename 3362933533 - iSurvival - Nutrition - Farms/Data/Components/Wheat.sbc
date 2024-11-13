@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Components>
+			<Component>
+				<Id>
+					<TypeId>Component</TypeId>
+					<SubtypeId>Wheat</SubtypeId>
+				</Id>
+				<DisplayName>Wheat</DisplayName>
+				<Description>
+					<![CDATA[Wheat is a versatile and essential crop for your farming needs. It is used in crafting and feeding livestock. Grow Wheat to sustain your cattle and produce Raw Steak and Milk.
+                
+**Usage:**
+- Feeding: Use Wheat in Feed Troughs to ensure your livestock, such as cows, are well-fed and healthy.
+
+                ]]>
+				</Description>
+				<Icon>Textures\GUI\Icons\Items\HayBale.png</Icon>
+				<Size>
+					<X>1</X>
+					<Y>1</Y>
+					<Z>1</Z>
+				</Size>
+				<Mass>0.001</Mass>
+				<Volume>0.001</Volume>
+				<Model>Models\Item\HayBale.mwm</Model>
+				<PhysicalMaterial>Organics</PhysicalMaterial>
+				<MaxIntegrity>30</MaxIntegrity>
+				<DropProbability>0.5</DropProbability>
+				<Health>18</Health>
+				<MinimumOfferAmount>1000</MinimumOfferAmount>
+				<MaximumOfferAmount>5000</MaximumOfferAmount>
+				<MinimumOrderAmount>100</MinimumOrderAmount>
+				<MaximumOrderAmount>1000</MaximumOrderAmount>
+				<CanPlayerOrder>true</CanPlayerOrder>
+				<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
+				<MaximumAcquisitionAmount>1000</MaximumAcquisitionAmount>
+			</Component>
+	</Components>
+	<!-- Blueprint Section -->
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>Wheat</SubtypeId>
+			</Id>
+			<DisplayName>Wheat</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\HayBale.png</Icon>
+			<Prerequisites>
+				<Item Amount="5" TypeId="ConsumableItem" SubtypeId="Potato" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Salt" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Oil" />
+			</Prerequisites>
+			<Result Amount="1" TypeId="Component" SubtypeId="Wheat" />
+			<BaseProductionTimeInSeconds>180</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

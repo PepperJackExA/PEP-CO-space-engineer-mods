@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Physical Items Section -->
+    <PhysicalItems>
+		<PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+			<!--MathsPie-->
+			<Id>
+				<TypeId>ConsumableItem</TypeId>
+				<SubtypeId>MathsPie</SubtypeId>
+			</Id>
+			<DisplayName>Math's Chocolate Pie</DisplayName>
+			<Description>A rich and indulgent slice of Math's famous Chocolate Pi(e). Boosts energy and happiness.</Description>
+			<Icon>Textures\GUI\Icons\MathsPie.dds</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.05</Z>
+			</Size>
+			<Mass>0.3</Mass>
+			<Volume>0.15</Volume>
+			<Model>Models\Components\MathsPie.mwm</Model>
+			<PhysicalMaterial>EdibleMaterial</PhysicalMaterial>
+			<Stats>
+				<!-- Calories: 450 kcal -->
+				<Stat Name="Calories" Value="0.15" Time="1"/>
+				<!-- (0.15 * 3000) * 1 = 450 -->
+
+				<!-- Fat: 25g -->
+				<Stat Name="Fat" Value="0.24" Time="1"/>
+				<!-- (0.24 * 104) * 1 = 25 -->
+
+				<!-- Cholesterol: 45mg -->
+				<Stat Name="Cholesterol" Value="0.15" Time="1"/>
+				<!-- (0.15 * 300) * 1 = 45 -->
+
+				<!-- Sodium: 350mg -->
+				<Stat Name="Sodium" Value="0.15" Time="1"/>
+				<!-- (0.15 * 2300) * 1 = 350 -->
+
+				<!-- Fiber: 3g -->
+				<Stat Name="Fiber" Value="0.10" Time="1"/>
+				<!-- (0.10 * 30) * 1 = 3 -->
+
+				<!-- Sugar: 35g -->
+				<Stat Name="Sugar" Value="0.97" Time="1"/>
+				<!-- (0.97 * 36) * 1 = 35 -->
+
+				<!-- Starches: 40g -->
+				<Stat Name="Starches" Value="0.18" Time="1"/>
+				<!-- (0.18 * 220) * 1 = 40 -->
+
+				<!-- Protein: 5g -->
+				<Stat Name="Protein" Value="0.10" Time="1"/>
+				<!-- (0.10 * 50) * 1 = 5 -->
+
+				<!-- Vitamins: 2% DV -->
+				<Stat Name="Vitamins" Value="0.02" Time="1"/>
+				<!-- (0.02 * 100) * 1 = 2 -->
+
+				<!-- Water: 50ml -->
+				<Stat Name="Water" Value="0.01" Time="1"/>
+				<!-- (0.01 * 3700) * 1 = 50 -->
+
+				<!-- Sanity/Happiness Boost -->
+				<Stat Name="Sanity" Value="0.20" Time="1"/>
+				<!-- 20% happiness boost -->
+			</Stats>
+			<MinimalPricePerUnit>150</MinimalPricePerUnit>
+			<MinimumOfferAmount>50</MinimumOfferAmount>
+			<MaximumOfferAmount>500</MaximumOfferAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</PhysicalItem>
+    </PhysicalItems>
+	
+	
+	<!-- Blueprint Section -->
+    <Blueprints>
+		<Blueprint>
+			<!--MathsPie-->
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>MathsPie</SubtypeId>
+			</Id>
+			<DisplayName>Math's Chocolate Pie Blueprint</DisplayName>
+			<Icon>Textures/GUI/Icons/MathsPie.dds</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="RawBeef" />
+				<Item Amount="2" TypeId="ConsumableItem" SubtypeId="SugarCane" />
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Salt" />
+			</Prerequisites>
+			<Result Amount="1" TypeId="ConsumableItem" SubtypeId="MathsPie" />
+			<BaseProductionTimeInSeconds>600</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints> 
+</Definitions>

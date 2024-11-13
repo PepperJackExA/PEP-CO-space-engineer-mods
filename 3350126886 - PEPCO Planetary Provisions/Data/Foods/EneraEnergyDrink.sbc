@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Physical Items Section -->
+    <PhysicalItems>        
+        <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition"> <!--EnenraEnergyDrink-->
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>EnenraEnergyDrink</SubtypeId>
+            </Id>
+            <DisplayName>Enenra Energy Drink</DisplayName>
+            <Description>A can of Enenra Energy Drink, designed to give you a burst of energy and keep you going. Popular among space explorers.</Description>
+            <Icon>Textures\GUI\Icons\EnenraEnergyDrink.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.2</Z>
+            </Size>
+            <Mass>0.3</Mass>
+            <Volume>0.15</Volume>
+            <Model>Models\Components\EnenraEnergyDrink.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Calories" Value="0.0825" Time="1"/>
+				<Stat Name="Sodium" Value="0.104" Time="1"/>
+				<Stat Name="Sugar" Value="1.125" Time="1"/>
+				<Stat Name="Vitamins" Value="0.225" Time="1"/>
+				<Stat Name="Sanity" Value="0.2" Time="1"/>
+				<!-- Added a temporary sanity boost -->
+			</Stats>
+            <MinimalPricePerUnit>15</MinimalPricePerUnit>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>100</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+    </PhysicalItems>
+	
+	
+	<!-- Blueprint Section -->
+    <Blueprints>
+        <Blueprint> <!--EnenraEnergyDrink-->
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>EnenraEnergyDrink</SubtypeId>
+            </Id>
+            <DisplayName>Enenra Energy Drink Blueprint</DisplayName>
+            <Icon>Textures\GUI\Icons\EnenraEnergyDrink.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Water" />
+                <Item Amount="2" TypeId="ConsumableItem" SubtypeId="Sugar" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Caffeine" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="VitaminBlend" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="ConsumableItem" SubtypeId="EnenraEnergyDrink" />
+            <BaseProductionTimeInSeconds>120</BaseProductionTimeInSeconds>
+        </Blueprint>
+    </Blueprints> 
+</Definitions>

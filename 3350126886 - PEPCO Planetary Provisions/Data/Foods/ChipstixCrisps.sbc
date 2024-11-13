@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Physical Items Section -->
+    <PhysicalItems>
+        <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition"> <!--ChipstixCrisps-->
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>ChipstixCrisps</SubtypeId>
+            </Id>
+            <DisplayName>Chipstix Chip Bag</DisplayName>
+            <Description>A bag of crunchy, salted potato chip sticks, perfect for a quick snack.</Description>
+            <Icon>Textures\GUI\Icons\ChipstixCrisps.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.1</Z>
+            </Size>
+            <Mass>0.2</Mass>
+            <Volume>0.1</Volume>
+            <Model>Models\Components\ChipstixCrisps.mwm</Model>
+            <PhysicalMaterial>Plastic</PhysicalMaterial>
+			<Stats>
+				<Stat Name="Calories" Value="0.1125" Time="1"/>
+				<Stat Name="Fat" Value="0.214" Time="1"/>
+				<Stat Name="Sodium" Value="0.117" Time="1"/>
+				<Stat Name="Fiber" Value="0.075" Time="1"/>
+				<Stat Name="Protein" Value="0.06" Time="1"/>
+				<Stat Name="Sanity" Value="0.1" Time="1"/>
+			</Stats>
+            <MinimalPricePerUnit>10</MinimalPricePerUnit>
+            <MinimumOfferAmount>20</MinimumOfferAmount>
+            <MaximumOfferAmount>200</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+    </PhysicalItems>
+	
+	
+	<!-- Blueprint Section -->
+    <Blueprints>
+        <Blueprint> <!--ChipstixChipBag-->
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>ChipstixCrisps</SubtypeId>
+            </Id>
+            <DisplayName>Chipstix Chip Bag Blueprint</DisplayName>
+            <Icon>Textures\GUI\Icons\ChipstixCrisps.dds</Icon>
+            <Prerequisites>
+                <Item Amount="5" TypeId="ConsumableItem" SubtypeId="Potato" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Salt" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Oil" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="ConsumableItem" SubtypeId="ChipstixCrisps" />
+            <BaseProductionTimeInSeconds>180</BaseProductionTimeInSeconds>
+        </Blueprint>
+    </Blueprints> 
+</Definitions>

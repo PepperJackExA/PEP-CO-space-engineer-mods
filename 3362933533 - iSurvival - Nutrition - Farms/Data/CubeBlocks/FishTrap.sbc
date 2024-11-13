@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+			<Id>
+				<TypeId>Reactor</TypeId>
+				<SubtypeId>FishTrap</SubtypeId>
+			</Id>
+			<DisplayName>Wooden Fish Trap</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\FishTrap.png</Icon>
+			<Description>FishTrap - better then the metal counterpart</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="4" y="2" z="2" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\small\FishTrap.mwm</Model>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<Components>
+				<Component Subtype="OakWoodLog" Count="4" />
+			</Components>
+			<CriticalComponent Subtype="OakWoodLog" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="4.00" EndY="2.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="4.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="4.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="4.00" EndY="2.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\FishTrap.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>FishTrap</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>3</BuildTimeSeconds>
+
+			<ResourceSourceGroup>Farm</ResourceSourceGroup>
+			<MaxPowerOutput>0</MaxPowerOutput>
+
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+
+			<FuelInfos>
+				<FuelInfo>
+					<Id>
+						<TypeId>ConsumableItem</TypeId>
+						<SubtypeId>Worm</SubtypeId>
+					</Id>
+				</FuelInfo>
+				<FuelInfo>
+					<Id>
+						<TypeId>ConsumableItem</TypeId>
+						<SubtypeId>RawFish</SubtypeId>
+					</Id>
+				</FuelInfo>
+			</FuelInfos>
+			<PCU>25</PCU>
+			<IsAirTight>false</IsAirTight>
+		</Definition>
+		
+		
+		<Definition xsi:type="MyObjectBuilder_ReactorDefinition">
+			<Id>
+				<TypeId>Reactor</TypeId>
+				<SubtypeId>MetalFishTrap</SubtypeId>
+			</Id>
+			<DisplayName>Basic Fish Trap</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\FishTrap.png</Icon>
+			<Description>FishTrap</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="4" y="2" z="2" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\Cubes\small\MetalFishTrap.mwm</Model>
+			<SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+			<Components>
+				<Component Subtype="SteelPlate" Count="40" />
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="4.00" EndY="2.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="4.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="4.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="4.00" EndY="2.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\MetalFishTrap.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>BasicFishTrap</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>3</BuildTimeSeconds>
+
+			<ResourceSourceGroup>Farm</ResourceSourceGroup>
+			<MaxPowerOutput>0</MaxPowerOutput>
+
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+
+			<FuelInfos>
+				<FuelInfo>
+					<Id>
+						<TypeId>ConsumableItem</TypeId>
+						<SubtypeId>Worm</SubtypeId>
+					</Id>
+				</FuelInfo>
+				<FuelInfo>
+					<Id>
+						<TypeId>ConsumableItem</TypeId>
+						<SubtypeId>RawFish</SubtypeId>
+					</Id>
+				</FuelInfo>
+			</FuelInfos>
+			<PCU>25</PCU>
+			<IsAirTight>false</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

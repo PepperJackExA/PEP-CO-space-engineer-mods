@@ -81,7 +81,7 @@ GlobalMaxEntities=30
         public List<string> EntityID { get; set; } = new List<string>();
         public List<string> ItemTypes { get; set; } = new List<string>();
         public List<string> ItemIds { get; set; } = new List<string>();
-        public bool StackItems { get; set; } = false;
+        public bool StackItems { get; set; } = true;
         public bool SpawnInsideInventory { get; set; } = false;
         public bool EnableEntitySpawning { get; set; } = false;
         public bool EnableItemSpawning { get; set; } = false;
@@ -272,7 +272,7 @@ MaxWaterDepth=20.0
 
         private void CreateIniFileIfNotExists(string FileName, string content)
         {
-            LogError("Starting CreateIniFileIfNotExists");     
+            LogError("Starting CreateIniFileIfNotExists");
             if (!MyAPIGateway.Utilities.FileExistsInWorldStorage(FileName, typeof(CustomEntitySpawner)))
             {
                 using (var file = MyAPIGateway.Utilities.WriteFileInWorldStorage(FileName, typeof(CustomEntitySpawner)))
@@ -385,7 +385,7 @@ MaxWaterDepth=20.0
 
             float blockHealthPercentage = block.Integrity / block.MaxIntegrity;
             bool isHealthInRange = blockHealthPercentage >= blockSettings.MinHealthPercentage &&
-                                   blockHealthPercentage <= blockSettings.MaxHealthPercentage;
+                blockHealthPercentage <= blockSettings.MaxHealthPercentage;
 
             bool hasRequiredItems = CheckInventoryForRequiredItems(block, blockSettings);
 
@@ -468,9 +468,9 @@ MaxWaterDepth=20.0
                     LogError($"Block {block.BlockDefinition.Id.SubtypeName} is not receiving enough power (Required: {requiredPower}, Current: {currentPower}).");
                     return false;
                 }
-            }            
+            }
             return true;
-        }        
+        }
 
         private bool IsWaterLevelSuitable(IMySlimBlock block, CustomEntitySpawner blockSettings)
         {
@@ -604,29 +604,28 @@ MaxWaterDepth=20.0
         private void SpawnItemsAndApplyDamage(IMySlimBlock block, CustomEntitySpawner blockSettings)
         {
             LogError("Starting SpawnItemsAndApplyDamage");
+
             for (int i = 0; i < blockSettings.ItemTypes.Count; i++)
             {
-                double itemSpawnAmount = blockSettings.UseWeightedDrops ?
-                    GetWeightedRandomNumber(blockSettings.MinItemAmount[i], GenerateProbabilities(blockSettings.MinItemAmount[i], blockSettings.MaxItemAmount[i])) :
-                    blockSettings.MinItemAmount[i] + randomGenerator.NextDouble() * (blockSettings.MaxItemAmount[i] - blockSettings.MinItemAmount[i]);
+                double itemSpawnAmount = blockSettings.UseWeightedDrops
+                    ? GetWeightedRandomNumber(blockSettings.MinItemAmount[i], GenerateProbabilities(blockSettings.MinItemAmount[i], blockSettings.MaxItemAmount[i]))
+                    : blockSettings.MinItemAmount[i] + randomGenerator.NextDouble() * (blockSettings.MaxItemAmount[i] - blockSettings.MinItemAmount[i]);
 
                 int roundedItemSpawnAmount = (int)Math.Round(itemSpawnAmount);
 
                 if (roundedItemSpawnAmount > 0)
                 {
-                    if (blockSettings.RequireEntityCenterOn)
-                    {
-                        CenterSpawnItemsAroundEntities(block, blockSettings, roundedItemSpawnAmount);
-                    }
-                    else
-                    {
-                        SpawnItems(block, blockSettings);
-                    }
-
                     ApplyDamageToBlock(block, blockSettings, roundedItemSpawnAmount);
+
+                    if (blockSettings.RequireEntityCenterOn)
+                        CenterSpawnItemsAroundEntities(block, blockSettings, roundedItemSpawnAmount);
+                    else
+                        SpawnItems(block, blockSettings);
                 }
             }
         }
+
+
 
 
 
@@ -634,22 +633,38 @@ MaxWaterDepth=20.0
         private void ApplyDamageToBlock(IMySlimBlock block, CustomEntitySpawner blockSettings, double amount)
         {
             LogError("Starting ApplyDamageToBlock");
+
             float maxHealth = block.MaxIntegrity;
-            float damageAmount = maxHealth * (blockSettings.DamageAmount / 100.0f) * (float)amount;
+            float damageAmount = maxHealth * (blockSettings.DamageAmount * (float)amount);
+
+            // Calculate the current integrity percentage
+            float integrityPercentage = block.Integrity / maxHealth;
+            LogError($"Integrity Percentage: {integrityPercentage * 100}%");
+
+            // Apply damage and check if components need to be added to stockpile
             if (!blockSettings.Repair)
             {
                 block.DoDamage(damageAmount, MyDamageType.Destruction, true);
             }
             else
             {
-                int damageSteps = (int)Math.Ceiling(blockSettings.DamageAmount * amount);
-                for (int i = 0; i < damageSteps; i++)
+                // Calculate component fill based on integrity percentage
+                int componentFillSteps = (int)Math.Ceiling((1 - integrityPercentage) * block.MaxIntegrity);
+
+                for (int i = 0; i < componentFillSteps; i++)
                 {
-                    block.SpawnFirstItemInConstructionStockpile();
+                    block.SpawnFirstItemInConstructionStockpile();  // Adds the next required component
                 }
-                block.IncreaseMountLevel(blockSettings.DamageAmount * (float)amount, block.OwnerId, null, MyAPIGateway.Session.WelderSpeedMultiplier, true);
+
+                // Adjust the mounting level based on the current integrity and add partial components if needed
+                float fillLevel = (1 - integrityPercentage) * block.MaxIntegrity;
+                block.IncreaseMountLevel(fillLevel, block.OwnerId, null, MyAPIGateway.Session.WelderSpeedMultiplier, true);
+
+                LogError($"Filled component slots based on integrity loss. Integrity now at {integrityPercentage * 100}%");
             }
         }
+
+
 
 
         private bool AreRequiredEntitiesInVicinity(IMySlimBlock block, CustomEntitySpawner blockSettings)
@@ -891,7 +906,7 @@ MaxWaterDepth=20.0
         {
             LogError("Starting SpawnItems");
 
-            for (int i = 0; i < itemSettings.ItemTypes.Count; i++)
+            for (int i = 0; i <= itemSettings.ItemTypes.Count; i++)
             {
                 var itemType = itemSettings.ItemTypes[i];
                 var itemId = itemSettings.ItemIds[i];

@@ -1,0 +1,45 @@
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Physical Items -->
+	<Components>
+		<Component>
+			<Id>
+				<TypeId>Component</TypeId>
+				<SubtypeId>AppleSapling</SubtypeId>
+			</Id>
+			<DisplayName>Apple Sapling</DisplayName>
+			<Description>A young apple tree sapling, ready to be planted. Given time, it will grow into a tree bearing apples.</Description>
+			<Icon>Textures\GUI\Icons\Items\AppleTreeSapling.png</Icon>
+			<Size>
+				<X>0.3</X>
+				<Y>0.3</Y>
+				<Z>0.3</Z>
+			</Size>
+			<Mass>0.5</Mass>
+			<Volume>0.4</Volume>
+			<Model>Models\AppleTreeSapling.mwm</Model>
+			<PhysicalMaterial>Wood</PhysicalMaterial>
+			<MinimalPricePerUnit>5</MinimalPricePerUnit>
+			<MinimumOfferAmount>20</MinimumOfferAmount>
+			<MaximumOfferAmount>100</MaximumOfferAmount>
+		</Component>
+	</Components>
+	<!-- Blueprint Section -->
+	<Blueprints>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>AppleSapling</SubtypeId>
+			</Id>
+			<DisplayName>Apple Sapling</DisplayName>
+			<Description>A bonsai sized apple tree</Description>
+			<Icon>Textures\GUI\Icons\Items\AppleTreeSapling.png</Icon>
+			<Prerequisites>
+				<Item Amount="1" TypeId="ConsumableItem" SubtypeId="Apple" />
+			</Prerequisites>
+			<Results>
+				<Item Amount="1" TypeId="Component" SubtypeId="AppleSapling" />
+			</Results>
+			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+		</Blueprint>
+	</Blueprints>
+</Definitions>

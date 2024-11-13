@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- Physical Items Section -->
+    <PhysicalItems>
+        <PhysicalItem xsi:type="MyObjectBuilder_ConsumableItemDefinition">
+            <Id>
+                <TypeId>ConsumableItem</TypeId>
+                <SubtypeId>RawFish</SubtypeId>
+            </Id>
+            <DisplayName>Raw Fish</DisplayName>
+            <Description>Raw fish, a basic food ingredient rich in protein and omega-3 fatty acids, but requiring cooking for safe consumption.</Description>
+			<Icon>Textures\GUI\Icons\Items\Fish.png</Icon>
+            <Size>
+                <X>0.15</X>
+                <Y>0.05</Y>
+                <Z>0.3</Z>
+            </Size>
+            <Mass>0.2</Mass>
+            <Volume>0.2</Volume>
+            <Model>Models\Item\Fish_pepco.mwm</Model>
+            <PhysicalMaterial>Organic</PhysicalMaterial>
+            <Stats>
+                <Stat Name="Calories" Value="0.25" Time="1"/>
+                <!-- Stat per serving: (0.25 * 3000) * 1 = 750 calories -->
+                <Stat Name="Fat" Value="0.1" Time="1"/>
+                <!-- Stat per serving: (0.1 * 105) * 1 = 10.5g fat -->
+                <Stat Name="Cholesterol" Value="0.05" Time="1"/>
+                <!-- Stat per serving: (0.05 * 450) * 1 = 22.5 mg cholesterol -->
+                <Stat Name="Sodium" Value="0.02" Time="1"/>
+                <!-- Stat per serving: (0.02 * 3450) * 1 = 69 mg sodium -->
+                <Stat Name="Protein" Value="0.3" Time="1"/>
+                <!-- Stat per serving: (0.3 * 75) * 1 = 22.5g protein -->
+                <Stat Name="Vitamins" Value="0.15" Time="1"/>
+                <!-- Stat per serving: (0.15 * 150) * 1 = 22.5% DV vitamins -->
+                <Stat Name="Water" Value="0.2" Time="1"/>
+                <!-- Stat per serving: (0.2 * 5.55) * 1 = 1.11 liters water -->
+                <Stat Name="Sanity" Value="-0.1" Time="1"/>
+                <!-- Consuming raw fish has a small sanity reduction -->
+            </Stats>
+            <MinimalPricePerUnit>75</MinimalPricePerUnit>
+            <MinimumOfferAmount>50</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+        </PhysicalItem>
+    </PhysicalItems>
+
+    <!-- Blueprints Section -->
+    <Blueprints>
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>RawFish</SubtypeId>
+            </Id>
+            <DisplayName>Raw Fish Blueprint</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\Fish.png</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="FishingRod" />
+                <Item Amount="1" TypeId="ConsumableItem" SubtypeId="Bait" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="ConsumableItem" SubtypeId="RawFish" />
+            <BaseProductionTimeInSeconds>120</BaseProductionTimeInSeconds>
+        </Blueprint>
+    </Blueprints>
+</Definitions>
+
+
