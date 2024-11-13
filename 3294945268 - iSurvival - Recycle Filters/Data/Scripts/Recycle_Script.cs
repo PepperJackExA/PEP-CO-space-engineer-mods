@@ -55,13 +55,10 @@ namespace PEPCO.iSurvival.RecycleFilters
                     if (statComp == null)
                         continue;
 
-                    MyEntityStat fatigue, hunger, stamina, health, water, sanity;
-                    if (!statComp.TryGetStat(MyStringHash.GetOrCompute("Fatigue"), out fatigue) ||
+                    MyEntityStat hunger, water;
+                    if (
                         !statComp.TryGetStat(MyStringHash.GetOrCompute("Hunger"), out hunger) ||
-                        !statComp.TryGetStat(MyStringHash.GetOrCompute("Stamina"), out stamina) ||
-                        !statComp.TryGetStat(MyStringHash.GetOrCompute("Health"), out health) ||
-                        !statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water) ||
-                        !statComp.TryGetStat(MyStringHash.GetOrCompute("Sanity"), out sanity))
+                        !statComp.TryGetStat(MyStringHash.GetOrCompute("Water"), out water)
                         continue;
 
                     ProcessOrganicCollection(player, hunger, water);        
