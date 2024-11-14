@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_LightingBlockDefinition">
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>SGCampFire</SubtypeId>
+			</Id>
+			<DisplayName>Camp Fire Light Test</DisplayName>
+			<Icon>Textures\GUI\Icons\CubeBlocks\CampFire.png</Icon>
+			<Description>Description_InteriorLight</Description>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="4" y="1" z="4" />
+			<ModelOffset x="0" y="0" z="0" />
+			<Model>Models\CampFire.mwm</Model>
+			<Components>
+				<Component Subtype="Construction" Count="2" />
+			</Components>
+			<CriticalComponent Subtype="Construction" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="4.00" EndY="4.00"/>
+			</MountPoints>
+			<IsStandAlone>false</IsStandAlone>
+			<HasPhysics>false</HasPhysics>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\InteriorLightConstruction_1.mwm" />
+			</BuildProgressModels>
+			<BlockPairName>CampFire2</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>3</BuildTimeSeconds>
+			<Flare>InteriorLightSmall</Flare>
+			<!--<PointLightEmissiveMaterial>Emissive</PointLightEmissiveMaterial>
+			
+			<SpotLightEmissiveMaterial>EmissiveSpotlight</SpotLightEmissiveMaterial> -->
+			<LightRadius Min="1" Max="20" Default="10" />
+			<LightFalloff Min="0" Max="3" Default="1.3" />
+			<LightIntensity Min="0.5" Max="10" Default="5" />
+			<LightColor r="1" g="0.58" b="0.2" />
+			<ResourceSinkGroup>Utility</ResourceSinkGroup>
+			<RequiredPowerInput>0</RequiredPowerInput>
+			<LightGlare>GlareLsInteriorLight</LightGlare>
+			<DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
+			<DamagedSound>ParticleElectrical</DamagedSound>
+			<DestroyEffect>BlockDestroyed_Small</DestroyEffect>
+			<DestroySound>PoofExplosionCat1</DestroySound>
+			<PCU>20</PCU>
+			<IsAirTight>false</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+	<EntityComponents>
+		<EntityComponent xsi:type="MyObjectBuilder_InventoryComponentDefinition">
+			<Id>
+				<TypeId>Inventory</TypeId>
+				<SubtypeId>CampFire</SubtypeId>
+			</Id>
+			<Size x="1" y="1" z="1" />			
+		</EntityComponent>
+	</EntityComponents>
+	<EntityContainers>
+		<Container>
+			<Id>
+				<TypeId>InteriorLight</TypeId>
+				<SubtypeId>SGCampFire</SubtypeId>
+			</Id>
+			<DefaultComponents>
+				<Component BuilderType="MyObjectBuilder_Inventory" SubtypeId="CampFire" ForceCreate="true" />
+			</DefaultComponents>
+		</Container>
+	</EntityContainers>
+</Definitions>
