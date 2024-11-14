@@ -332,13 +332,13 @@ MaxWaterDepth=20.0
             MyAPIGateway.Utilities.ShowMessage("CES", $"Script is now {(scriptPaused ? "paused" : "resumed")}.");
         }
 
+        // Dictionary to track the last spawn time for each block
+        private Dictionary<long, DateTime> lastSpawnTimes = new Dictionary<long, DateTime>();
+
         private void SpawnEntitiesNearBlocks(ref int entitiesSpawned)
         {
             if (scriptPaused) return;
-            //LogError("Starting SpawnEntitiesNearBlocks");
 
-
-            long baseUpdateCycles = totalUpdateTicks / BaseUpdateInterval;
             List<IMyPlayer> players = new List<IMyPlayer>();
             MyAPIGateway.Players.GetPlayers(players);
 
@@ -356,17 +356,45 @@ MaxWaterDepth=20.0
                     {
                         foreach (var blockSettings in BlockSpawnSettings)
                         {
+                            // Check if the block matches the block type and subtype in blockSettings
                             if (block.FatBlock.BlockDefinition.TypeIdString == blockSettings.BlockType &&
-                                block.FatBlock.BlockDefinition.SubtypeId == blockSettings.BlockId &&
-                                IsValidBlockForSpawning(block, blockSettings, baseUpdateCycles, players))
+                                block.FatBlock.BlockDefinition.SubtypeId == blockSettings.BlockId)
                             {
-                                ProcessBlockSpawning(block, blockSettings, ref entitiesSpawned);
+                                // Get the block's EntityId as a unique identifier
+                                long blockId = block.FatBlock.EntityId;
+
+                                // Check if this block has a last spawn time; if not, initialize it as the current time (as if just placed)
+                                if (!lastSpawnTimes.ContainsKey(blockId))
+                                {
+                                    lastSpawnTimes[blockId] = DateTime.Now;
+                                }
+
+                                // Calculate time since last spawn for this specific block
+                                double secondsSinceLastSpawn = (DateTime.Now - lastSpawnTimes[blockId]).TotalSeconds;
+
+                                // Check if the block meets the spawning conditions
+                                bool conditionsMet = IsValidBlockForSpawning(block, blockSettings, totalUpdateTicks, players);
+
+                                if (conditionsMet && secondsSinceLastSpawn >= blockSettings.SpawnTriggerInterval)
+                                {
+                                    // Conditions are met, and it's time to spawn
+                                    ProcessBlockSpawning(block, blockSettings, ref entitiesSpawned);
+                                    lastSpawnTimes[blockId] = DateTime.Now; // Reset last spawn time for this block after successful spawn
+                                }
+                                else if (!conditionsMet)
+                                {
+                                    // Conditions are not met, so reset the timer for this block
+                                    lastSpawnTimes[blockId] = DateTime.Now; // Start a new countdown since conditions are not met
+                                }
                             }
                         }
                     }
                 }
             }
         }
+
+
+
 
         private bool IsValidBlockForSpawning(IMySlimBlock block, CustomEntitySpawner blockSettings, long baseUpdateCycles, List<IMyPlayer> players)
         {
@@ -906,7 +934,7 @@ MaxWaterDepth=20.0
         {
             LogError("Starting SpawnItems");
 
-            for (int i = 0; i <= itemSettings.ItemTypes.Count; i++)
+            for (int i = 0; i < itemSettings.ItemTypes.Count; i++)
             {
                 var itemType = itemSettings.ItemTypes[i];
                 var itemId = itemSettings.ItemIds[i];
