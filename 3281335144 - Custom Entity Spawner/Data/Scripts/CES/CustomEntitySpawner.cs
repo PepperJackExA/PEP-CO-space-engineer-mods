@@ -287,6 +287,9 @@ MaxWaterDepth=20.0
             if (MyAPIGateway.Multiplayer.IsServer)
             {
                 MyAPIGateway.Utilities.MessageEntered -= OnMessageEntered;
+                lastSpawnTimes.Clear();
+                BlockSpawnSettings.Clear();
+
                 validBotIds.Clear();
             }
             base.UnloadData();
@@ -401,7 +404,8 @@ MaxWaterDepth=20.0
             bool isEnabled = blockSettings.Enabled;
             bool isBlockEnabled = IsBlockFunctional(block, blockSettings);
             bool isBlockPowered = IsBlockPowered(block, blockSettings);
-            bool isSpawnTrigger = baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0;
+            //bool isSpawnTrigger = baseUpdateCycles % blockSettings.SpawnTriggerInterval == 0;
+
             bool isWaterSuitable = IsWaterLevelSuitable(block, blockSettings);
             bool isEnvironmentSuitable = IsEnvironmentSuitable(block, blockSettings);
             bool isPlayerInRange = IsPlayerInRange(block, players, blockSettings.PlayerDistanceCheck);
@@ -421,7 +425,7 @@ MaxWaterDepth=20.0
             if (!isEnabled) LogError("Block is disabled for spawning.");
             if (!isBlockEnabled) LogError("Block is Turned Off in game.");
             if (!isBlockPowered) LogError("Block is not powered");
-            if (!isSpawnTrigger) LogError("Spawn trigger interval not met.");
+            //if (!isSpawnTrigger) LogError("Spawn trigger interval not met.");
             if (!isWaterSuitable) LogError("Water level is not suitable.");
             if (!isEnvironmentSuitable) LogError("Environment is not suitable.");
             if (!isPlayerInRange) LogError("No player in range.");
@@ -434,7 +438,7 @@ MaxWaterDepth=20.0
             return isEnabled &&
                    isBlockEnabled &&
                    isBlockPowered &&
-                   isSpawnTrigger &&
+                   //isSpawnTrigger &&
                    isWaterSuitable &&
                    isEnvironmentSuitable &&
                    isPlayerInRange &&
@@ -602,6 +606,10 @@ MaxWaterDepth=20.0
                         SpawnItemsAndApplyDamage(block, blockSettings);
                     }
                 }
+                else
+        {
+            LogError("Required items not found in inventory. Skipping spawn cycle.");
+        }
             }
         }
 
@@ -622,7 +630,7 @@ MaxWaterDepth=20.0
                         SpawnEntities(block, blockSettings, entitySpawnAmount);
                     }
 
-                    ApplyDamageToBlock(block, blockSettings, entitySpawnAmount);
+                    ApplyDamageToBlock(block, blockSettings, 1);
                     entitiesSpawned++;
                     entitiesSpawnedThisCycle = true;
                 }
@@ -643,7 +651,7 @@ MaxWaterDepth=20.0
 
                 if (roundedItemSpawnAmount > 0)
                 {
-                    ApplyDamageToBlock(block, blockSettings, roundedItemSpawnAmount);
+                    ApplyDamageToBlock(block, blockSettings, 1);
 
                     if (blockSettings.RequireEntityCenterOn)
                         CenterSpawnItemsAroundEntities(block, blockSettings, roundedItemSpawnAmount);
@@ -944,6 +952,15 @@ MaxWaterDepth=20.0
                 double amount = itemSettings.UseWeightedDrops
                     ? GetWeightedRandomNumber(minAmount, GenerateProbabilities(minAmount, maxAmount))
                     : GetRandomDouble(minAmount, maxAmount);
+
+                // Round down if the item type is not Ore
+                if (itemType != "MyObjectBuilder_Ore")
+                {
+                    amount = Math.Floor(amount);
+                }
+
+                // Skip spawning if amount is zero after rounding
+                if (amount <= 0) continue;
 
                 if (itemSettings.SpawnInsideInventory)
                 {
