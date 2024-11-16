@@ -18,6 +18,8 @@ using VRage.ObjectBuilders;
 using Sandbox.Game.Entities.Character;
 using Jakaria.API;
 using Sandbox.Game.EntityComponents;
+using IMyCubeGrid = VRage.Game.ModAPI.IMyCubeGrid;
+
 
 namespace PEPCO.iSurvival.CustomEntitySpawner
 {
@@ -575,13 +577,13 @@ MaxWaterDepth=20.0
         {
             LogError("Starting ProcessBlockSpawning");
             bool entitiesSpawnedThisCycle = false;
-
+           
             if (blockSettings.EnableEntitySpawning || blockSettings.EnableItemSpawning)
             {
-                // Check if required items are present before removing them
-                if (CheckInventoryForRequiredItems(block, blockSettings))
-                {
-                    RemoveItemsFromInventory(block, blockSettings);
+                        // Check if required items are present before removing them
+                        if (CheckInventoryForRequiredItems(block, blockSettings))
+                        {
+                    
 
                     if (blockSettings.EnableEntitySpawning)
                     {
@@ -619,6 +621,8 @@ MaxWaterDepth=20.0
             for (int i = 0; i < 1; i++) // Default spawn iterations
             {
                 int entitySpawnAmount = randomGenerator.Next(blockSettings.MinEntityAmount, blockSettings.MaxEntityAmount + 1);
+                ApplyDamageToBlock(block, blockSettings, 1);
+                RemoveItemsFromInventory(block, blockSettings);
                 if (entitySpawnAmount > 0)
                 {
                     if (blockSettings.RequireEntityCenterOn)
@@ -630,7 +634,7 @@ MaxWaterDepth=20.0
                         SpawnEntities(block, blockSettings, entitySpawnAmount);
                     }
 
-                    ApplyDamageToBlock(block, blockSettings, 1);
+                    
                     entitiesSpawned++;
                     entitiesSpawnedThisCycle = true;
                 }
@@ -648,11 +652,10 @@ MaxWaterDepth=20.0
                     : blockSettings.MinItemAmount[i] + randomGenerator.NextDouble() * (blockSettings.MaxItemAmount[i] - blockSettings.MinItemAmount[i]);
 
                 int roundedItemSpawnAmount = (int)Math.Round(itemSpawnAmount);
-
+                ApplyDamageToBlock(block, blockSettings, 1);
                 if (roundedItemSpawnAmount > 0)
                 {
-                    ApplyDamageToBlock(block, blockSettings, 1);
-
+                    
                     if (blockSettings.RequireEntityCenterOn)
                         CenterSpawnItemsAroundEntities(block, blockSettings, roundedItemSpawnAmount);
                     else
@@ -942,6 +945,8 @@ MaxWaterDepth=20.0
         {
             LogError("Starting SpawnItems");
 
+            var inventory = block.FatBlock.GetInventory() as IMyInventory;
+
             for (int i = 0; i < itemSettings.ItemTypes.Count; i++)
             {
                 var itemType = itemSettings.ItemTypes[i];
@@ -952,23 +957,36 @@ MaxWaterDepth=20.0
                 double amount = itemSettings.UseWeightedDrops
                     ? GetWeightedRandomNumber(minAmount, GenerateProbabilities(minAmount, maxAmount))
                     : GetRandomDouble(minAmount, maxAmount);
+                
+                // Use robust detection for "MyObjectBuilder_Ore"
+                bool isOre = string.Equals(itemType.Trim(), "MyObjectBuilder_Ore", StringComparison.OrdinalIgnoreCase);
 
-                // Round down if the item type is not Ore
-                if (itemType != "MyObjectBuilder_Ore")
+                // Only round non-Ore items
+                if (!isOre)
                 {
+                    MyAPIGateway.Utilities.ShowMessage("Ore", $" {itemType} was checked pre rounded {amount}");
+
                     amount = Math.Floor(amount);
                 }
 
-                // Skip spawning if amount is zero after rounding
-                if (amount <= 0) continue;
+                // Always consume required items, even if the spawn amount is zero
+                bool inventoryFull = !HasInventorySpace(inventory, new MyDefinitionId(MyObjectBuilderType.Parse(itemType), itemId), amount);
 
-                if (itemSettings.SpawnInsideInventory)
+                if (inventoryFull && amount > 0)
                 {
-                    PlaceItemInCargo(block, itemType, itemId, amount, itemSettings.StackItems);
+                    LogError($"Insufficient space in inventory for {amount} of {itemType}:{itemId}. Skipping spawn.");
+                    continue;
                 }
-                else
+
+                RemoveItemsFromInventory(block, itemSettings); // Consume required items regardless of inventory state or spawn amount
+
+                if (amount > 0) // Only spawn if the calculated amount is greater than zero
                 {
-                    if (position.HasValue)
+                    if (itemSettings.SpawnInsideInventory && !inventoryFull)
+                    {
+                        PlaceItemInCargo(block, itemType, itemId, amount, itemSettings.StackItems);
+                    }
+                    else if (position.HasValue)
                     {
                         SpawnItemNearPosition(position.Value, itemType, itemId, amount, itemSettings.StackItems, itemSettings);
                     }
@@ -979,6 +997,7 @@ MaxWaterDepth=20.0
                 }
             }
         }
+
         private double GetRandomDouble(double minAmount, double maxAmount)
         {
             return minAmount + (randomGenerator.NextDouble() * (maxAmount - minAmount));
@@ -1115,6 +1134,51 @@ MaxWaterDepth=20.0
         private string IniSection = "Config";
 
         public bool scriptPaused = false;
+        private bool HasInventorySpace(IMyInventory inventory, MyDefinitionId itemTypeId, double itemAmount)
+        {
+            if (inventory == null)
+            {
+                LogError("Inventory is null. Cannot check space.");
+                return false;
+            }
+
+            // Convert the item amount to MyFixedPoint for compatibility
+            VRage.MyFixedPoint fixedAmount = (VRage.MyFixedPoint)itemAmount;
+
+            // Determine the item type (component, ore, etc.) and create MyItemType
+            VRage.Game.ModAPI.Ingame.MyItemType itemType;
+            if (itemTypeId.TypeId == typeof(MyObjectBuilder_Component))
+            {
+                itemType = VRage.Game.ModAPI.Ingame.MyItemType.MakeComponent(itemTypeId.SubtypeId.ToString());
+            }
+            else if (itemTypeId.TypeId == typeof(MyObjectBuilder_Ore))
+            {
+                itemType = VRage.Game.ModAPI.Ingame.MyItemType.MakeOre(itemTypeId.SubtypeId.ToString());
+            }
+            else if (itemTypeId.TypeId == typeof(MyObjectBuilder_Ingot))
+            {
+                itemType = VRage.Game.ModAPI.Ingame.MyItemType.MakeIngot(itemTypeId.SubtypeId.ToString());
+            }
+            else
+            {
+                LogError($"Unsupported item type: {itemTypeId.TypeId}");
+                return false;
+            }
+
+            // Check if there's enough space in the inventory for the item
+            bool canAdd = inventory.CanItemsBeAdded(fixedAmount, itemType);
+
+            if (!canAdd)
+            {
+                //MyAPIGateway.Utilities.ShowMessage("Test", $"Not enough space in inventory for {itemAmount} of {itemTypeId.SubtypeId.String}.");
+                LogError($"Not enough space in inventory for {itemAmount} of {itemTypeId.SubtypeId.String}.");
+                
+            }
+
+            return canAdd;
+        }
+
+
 
 
         public void UpdateBlockSettings(long entityId, CustomEntitySpawner blockSettings)
