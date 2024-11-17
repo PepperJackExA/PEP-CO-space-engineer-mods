@@ -850,8 +850,19 @@ MaxWaterDepth=20.0
 
             for (int i = 0; i < blockSettings.RequiredItemTypes.Count; i++)
             {
-                var requiredItemType = new MyDefinitionId(itemTypeMappings[blockSettings.RequiredItemTypes[i]], blockSettings.RequiredItemIds[i]);
-                var totalAmountToRemove = (VRage.MyFixedPoint)(blockSettings.RequiredItemAmounts[i]);
+                var itemTypeString = blockSettings.RequiredItemTypes[i];
+                var itemId = blockSettings.RequiredItemIds[i];
+                var requiredItemType = new MyDefinitionId(itemTypeMappings[itemTypeString], itemId);
+
+                // Check if the item is Ore
+                bool isOre = string.Equals(itemTypeString.Trim(), "MyObjectBuilder_Ore", StringComparison.OrdinalIgnoreCase);
+
+                // Round up to the next whole number for non-Ore items
+                double rawAmount = blockSettings.RequiredItemAmounts[i];
+                double adjustedAmount = isOre ? rawAmount : Math.Ceiling(rawAmount);
+
+                var totalAmountToRemove = (VRage.MyFixedPoint)adjustedAmount;
+
                 if (totalAmountToRemove > 0)
                 {
                     if (inventory.ContainItems(totalAmountToRemove, requiredItemType))
@@ -866,6 +877,7 @@ MaxWaterDepth=20.0
                 }
             }
         }
+
         private void CenterSpawnAroundEntities(IMySlimBlock block, CustomEntitySpawner settings, int spawnAmount)
         {
             LogError("Starting CenterSpawnAroundEntities");
