@@ -26,7 +26,6 @@ namespace PEPCO.iSurvival.Effects
     public static class Processes
     {
         private static Dictionary<long, Dictionary<string, int>> playerStatLastValues = new Dictionary<long, Dictionary<string, int>>();
-
         public static void ProcessPlayer(IMyPlayer player, MyEntityStatComponent statComp)
         {
             if (!playerStatLastValues.ContainsKey(player.IdentityId))
@@ -99,7 +98,6 @@ namespace PEPCO.iSurvival.Effects
             Sanity.ProcessSanity(player, stats);
             Movement.ProcessMovementEffects(player, stats);
         }
-
         private static void ProcessStatEffect(IMyPlayer player, string statName, MyEntityStat stat, Dictionary<string, int> playerStatValues,
             Func<MyEntityStat, double> chanceCalculation, int criticalThreshold, int warningThreshold, string criticalMessage, string warningMessage, ref int warningCooldown)
         {
@@ -143,7 +141,6 @@ namespace PEPCO.iSurvival.Effects
             }
 
         }
-
         private static void ProcessHunger(IMyPlayer player, MyEntityStat hunger, Dictionary<string, int> playerStatValues)
         {
             // Exit early if the hunger stat is null
@@ -177,9 +174,6 @@ namespace PEPCO.iSurvival.Effects
                 }
             }
         }
-
-
-
         public static class Blocks
         {
             public static bool ProcessBlockstEffects(IMyPlayer player, Dictionary<string, MyEntityStat> stats, string blockName = null)
@@ -187,61 +181,92 @@ namespace PEPCO.iSurvival.Effects
                 var block = player.Controller?.ControlledEntity?.Entity as IMyCubeBlock;
                 if (block == null) return false; // Player not in a block
 
-                var fatigue = stats["Fatigue"];
-                var sanity = stats["Sanity"];
-                var hunger = stats["Hunger"];
-                var calories = stats["Calories"];
-                var water = stats["Water"];
-                var stamina = stats["Stamina"];
-                var strength = stats["Strength"];
-                var dexterity = stats["Dexterity"];
-                var constitution = stats["Constitution"];
+                // Safely retrieve required stats with default values for null cases
+                var requiredStats = new[] { "Fatigue", "Sanity", "Hunger", "Calories", "Water", "Stamina", "Strength", "Dexterity", "Constitution" };
+                var statValues = requiredStats.ToDictionary(
+                    stat => stat,
+                    stat => stats.ContainsKey(stat) && stats[stat] != null ? stats[stat].Value : 0f // Handle null stats gracefully
+                );
 
-                float averageStats = (fatigue.Value + sanity.Value + hunger.Value + water.Value) / 4;
+                // Average stats calculation (ensure valid stats)
+                float averageStats = (statValues["Fatigue"] + statValues["Sanity"] + statValues["Hunger"] + statValues["Water"]) / 4;
 
-                var blockDef = block.BlockDefinition.SubtypeId.ToString();
-                var blockDisplayName = block.DisplayNameText; // Get block's display name
+                // Get block details
+                string blockDef = block.BlockDefinition.SubtypeId.ToString();
+                string blockDisplayName = block.DisplayNameText;
 
-                // Check if blockName matches the display name of the block (if blockName is provided)
+                // Check if blockName matches the display name (if provided)
                 if (!string.IsNullOrEmpty(blockName) && blockDisplayName != blockName)
                 {
-                    return false; // Block name doesn't match
+                    return false;
                 }
 
+                // Cryo block behavior
                 if (blockDef.Contains("Cryo"))
                 {
                     return true; // Player is in a cryo block, stop processing
                 }
 
+                // Bed behavior
                 if (blockDef.Contains("Bed"))
                 {
-                    Core.iSurvivalSession.ApplyStatChange(player, stamina, 1, 2);
-                    Core.iSurvivalSession.ApplyStatChange(player, fatigue, 1, 2);
-                    Core.iSurvivalSession.ApplyStatChange(player, sanity, 1, 1); // Beds provide a moderate sanity boost
+                    ApplyChangesForBed(player, stats);
                     return true;
                 }
 
-                else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
+                // Toilet or Bathroom behavior
+                if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
                 {
-                    Core.iSurvivalSession.ApplyStatChange(player, fatigue, 1, 1);
-                    Core.iSurvivalSession.ApplyStatChange(player,stamina, 1, 2);
-                    if (hunger.Value > 20 && calories.Value > 1)
-                    {
-                        Core.iSurvivalSession.ApplyStatChange(player,sanity, 1, 0.5);
-                        Core.iSurvivalSession.ApplyStatChange(player,calories, 1, -10);
-                        player.Character.GetInventory(0).AddItems((MyFixedPoint)(((100 - averageStats) / 100)), (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic")));
-                    }
+                    ApplyChangesForToilet(player, stats, statValues, averageStats);
                 }
-                if (fatigue.Value < 25) Core.iSurvivalSession.ApplyStatChange(player,fatigue, 1, 0.25);
-                if (stamina.Value < 100) Core.iSurvivalSession.ApplyStatChange(player,stamina, 1, 2);
-                if (strength.Value > 10) Core.iSurvivalSession.ApplyStatChange(player,strength, 1, -0.001f);
-                if (dexterity.Value > 10) Core.iSurvivalSession.ApplyStatChange(player,dexterity, 1, -0.001f);
-                if (constitution.Value > 10) Core.iSurvivalSession.ApplyStatChange(player,constitution, 1, -0.001f);
 
+                // General behavior
+                ApplyGeneralStatChanges(player, stats, statValues);
 
-                return false; // Player is not in a cryo block or named block
+                return false;
             }
 
+
+            private static void ApplyChangesForBed(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
+            {
+                Core.iSurvivalSession.ApplyStatChange(player, stats["Stamina"], 1, 2);
+                Core.iSurvivalSession.ApplyStatChange(player, stats["Fatigue"], 1, 2);
+                Core.iSurvivalSession.ApplyStatChange(player, stats["Sanity"], 1, 1); // Beds provide a moderate sanity boost
+            }
+
+            private static void ApplyChangesForToilet(IMyPlayer player, Dictionary<string, MyEntityStat> stats, Dictionary<string, float> statValues, float averageStats)
+            {
+                Core.iSurvivalSession.ApplyStatChange(player, stats["Fatigue"], 1, 1);
+                Core.iSurvivalSession.ApplyStatChange(player, stats["Stamina"], 1, 2);
+
+                if (statValues["Hunger"] > 20 && statValues["Calories"] > 1)
+                {
+                    Core.iSurvivalSession.ApplyStatChange(player, stats["Sanity"], 1, 0.5);
+                    Core.iSurvivalSession.ApplyStatChange(player, stats["Calories"], 1, -10);
+                    player.Character.GetInventory(0).AddItems(
+                        (MyFixedPoint)((100 - averageStats) / 100),
+                        (MyObjectBuilder_PhysicalObject)MyObjectBuilderSerializer.CreateNewObject(new MyDefinitionId(typeof(MyObjectBuilder_Ore), "Organic"))
+                    );
+                }
+            }
+
+            private static void ApplyGeneralStatChanges(IMyPlayer player, Dictionary<string, MyEntityStat> stats, Dictionary<string, float> statValues)
+            {
+                if (statValues["Fatigue"] < 25)
+                    Core.iSurvivalSession.ApplyStatChange(player, stats["Fatigue"], 1, 0.25);
+
+                if (statValues["Stamina"] < 100)
+                    Core.iSurvivalSession.ApplyStatChange(player, stats["Stamina"], 1, 2);
+
+                if (statValues["Strength"] > 10)
+                    Core.iSurvivalSession.ApplyStatChange(player, stats["Strength"], 1, -0.001f);
+
+                if (statValues["Dexterity"] > 10)
+                    Core.iSurvivalSession.ApplyStatChange(player, stats["Dexterity"], 1, -0.001f);
+
+                if (statValues["Constitution"] > 10)
+                    Core.iSurvivalSession.ApplyStatChange(player, stats["Constitution"], 1, -0.001f);
+            }
         }
         public static class Blink
         {
@@ -420,307 +445,166 @@ namespace PEPCO.iSurvival.Effects
                 }
             }
         }
-
-
         public static class FatigueAndStamina
         {
             public static void ProcessFatigue(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
-                var fatigue = stats["Fatigue"];
-                var stamina = stats["Stamina"];
+                if (stats == null || player?.Character == null) return;
+
+                var fatigue = stats.GetValueOrDefault("Fatigue");
+                var stamina = stats.GetValueOrDefault("Stamina");
                 if (fatigue == null || stamina == null) return;
 
-                // Calculate fatigue change rate (based on nutrition, RPG stats, environment)
-                float fatigueChangeRate = CalculateFatigueChangeRate(player, stats);
+                // Calculate dynamic fatigue impact based on current stamina usage and environment
+                float dynamicFatigueImpact = CalculateDynamicFatigueImpact(player, stats, stamina);
 
-                // Stabilize fatigue toward 50% of max
-                fatigueChangeRate += StabilizeStat(fatigue, stats);
+                // Update fatigue directly
+                MyAPIGateway.Utilities.ShowMessage("Fatigue", $"{dynamicFatigueImpact/10}");
+                Core.iSurvivalSession.ApplyStatChange(player, fatigue, 1, dynamicFatigueImpact / 10f);
 
-                // Apply the fatigue change over time
-                Core.iSurvivalSession.ApplyStatChange(player, fatigue, 1, fatigueChangeRate / 60f);
-
-                // Adjust stamina using RPG stats like Strength and Dexterity, environmental factors
-                ProcessStamina(player, stats);
+                // Process stamina changes
+                ProcessStamina(player, stats, fatigue);
             }
 
-            private static float StabilizeStat(MyEntityStat stat, Dictionary<string, MyEntityStat> stats)
+            private static float CalculateDynamicFatigueImpact(IMyPlayer player, Dictionary<string, MyEntityStat> stats, MyEntityStat stamina)
             {
-                float target = stat.MaxValue * 0.5f; // Target 50% of max
-                float currentValue = stat.Value;
+                float fatigueChangeRate = 0f;
 
-                // If already near target, minimal adjustment
-                if (Math.Abs(currentValue - target) < 0.01f) return 0f;
+                // Stamina usage contributes directly to fatigue
+                float staminaUsageRate = (stamina.MaxValue - stamina.Value) / stamina.MaxValue; // Normalize stamina usage (0-1)
+                fatigueChangeRate += staminaUsageRate * 1f; // Scale fatigue increase based on stamina usage
+                MyAPIGateway.Utilities.ShowMessage("Fatigue Weather", $"{fatigueChangeRate} * {EnvironmentalFactors.GetEnvironmentalFactor(player)}");
 
-                float changeRate = 0f;
+                // Environmental factors dynamically affect fatigue
+                fatigueChangeRate *= EnvironmentalFactors.GetEnvironmentalFactor(player);
+                MyAPIGateway.Utilities.ShowMessage("Fatigue Post Weather", $"{EnvironmentalFactors.GetEnvironmentalFactor(player)}");
 
-                if (currentValue < target)
+
+                // Sanity dynamically impacts fatigue
+                var sanity = stats.GetValueOrDefault("Sanity");
+                if (sanity != null && sanity.MaxValue > 0)
                 {
-                    // Below target: nutrients are consumed to restore
-                    changeRate += ConsumeNutrientsForStat(stats, stat);
+                    float sanityMultiplier = GetSanityEfficiency(sanity);
+                    fatigueChangeRate *= sanityMultiplier;
+                    MyAPIGateway.Utilities.ShowMessage("Fatigue Sanity Factor", $"{fatigueChangeRate} (Sanity Multiplier: {sanityMultiplier})");
+                }
+
+                // Nutrition dynamically influences fatigue recovery
+                //foreach (var stat in stats)
+                //{
+                //    fatigueChangeRate += CalculateNutritionImpactOnFatigue(stat.Value);
+                //}
+
+                return -fatigueChangeRate;
+            }
+            private static float GetSanityEfficiency(MyEntityStat sanity)
+            {
+                if (sanity == null || sanity.MaxValue <= 0)
+                    return 1.0f; // Default multiplier if sanity stat is unavailable
+
+                // Normalize sanity value (0 to 1 scale)
+                float normalizedSanity = sanity.Value / sanity.MaxValue;
+
+                // Dynamic multiplier based on sanity
+                if (normalizedSanity >= 0.5f)
+                {
+                    // Higher sanity decreases multiplier (less fatigue impact)
+                    return MathHelper.Clamp(1.0f - (normalizedSanity - 0.5f) * 0.5f, 0.75f, 1.0f);
                 }
                 else
                 {
-                    // Above target: slow decay toward equilibrium
-                    changeRate -= 0.1f;
+                    // Lower sanity increases multiplier (greater fatigue impact)
+                    return MathHelper.Clamp(1.0f + (0.5f - normalizedSanity) * 0.5f, 1.0f, 1.5f);
                 }
-
-                return changeRate;
             }
 
-            private static float ConsumeNutrientsForStat(Dictionary<string, MyEntityStat> stats, MyEntityStat stat)
+            private static float CalculateNutritionImpactOnFatigue(MyEntityStat stat)
             {
-                float nutrientImpact = 0f;
+                if (stat == null || stat.MaxValue == 0) return 0f;
 
-                // Use Calories
-                if (stats.ContainsKey("Calories"))
-                {
-                    var calories = stats["Calories"];
-                    if (calories.Value > 0)
-                    {
-                        float caloriesConsumed = Math.Min(0.1f, calories.Value); // Consume up to 0.1 per tick
-                        calories.Decrease(caloriesConsumed, null);
-                        nutrientImpact += caloriesConsumed * 10f; // Calories have high impact
-                    }
-                }
-
-                // Use Sugar
-                if (stats.ContainsKey("Sugar"))
-                {
-                    var sugar = stats["Sugar"];
-                    if (sugar.Value > 0)
-                    {
-                        float sugarConsumed = Math.Min(0.05f, sugar.Value); // Consume up to 0.05 per tick
-                        sugar.Decrease(sugarConsumed, null);
-                        nutrientImpact += sugarConsumed * 15f; // Quick energy boost
-                    }
-                }
-
-                // Use Protein
-                if (stats.ContainsKey("Protein"))
-                {
-                    var protein = stats["Protein"];
-                    if (protein.Value > 0)
-                    {
-                        float proteinConsumed = Math.Min(0.03f, protein.Value); // Consume up to 0.03 per tick
-                        protein.Decrease(proteinConsumed, null);
-                        nutrientImpact += proteinConsumed * 8f; // Muscle recovery effect
-                    }
-                }
-
-                return nutrientImpact;
+                // Higher values of the stat reduce fatigue dynamically
+                float normalizedStat = stat.Value / stat.MaxValue; // Normalize between 0-1
+                return (1.0f - normalizedStat) * 0.1f; // Scale fatigue reduction inversely with stat value
             }
 
-            public static float CalculateFatigueChangeRate(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
+            public static void ProcessStamina(IMyPlayer player, Dictionary<string, MyEntityStat> stats, MyEntityStat fatigue)
             {
-                float changeRate = 0f;
+                var stamina = stats.GetValueOrDefault("Stamina");
+                if (stamina == null) return;
 
-                // Process each nutritional stat with appropriate weighting
-                if (stats.ContainsKey("Calories"))
-                    changeRate += GetFatigueChangeRateFromNutrition(stats["Calories"], weight: 0.4f); // High impact
-
-                if (stats.ContainsKey("Fat"))
-                    changeRate += GetFatigueChangeRateFromNutrition(stats["Fat"], weight: 0.2f); // Moderate impact
-
-                if (stats.ContainsKey("Cholesterol"))
-                    changeRate += GetFatigueChangeRateFromNutrition(stats["Cholesterol"], weight: 0.05f); // Minor impact
-
-                if (stats.ContainsKey("Sodium"))
-                    changeRate += GetFatigueChangeRateFromNutrition(stats["Sodium"], weight: 0.2f); // Hydration balance
-
-                if (stats.ContainsKey("Fiber"))
-                    changeRate += GetFatigueChangeRateFromNutrition(stats["Fiber"], weight: 0.1f); // Indirect impact
-
-                if (stats.ContainsKey("Sugar"))
-                    changeRate += GetFatigueChangeRateFromNutrition(stats["Sugar"], weight: 0.3f); // Short-term energy
-
-                if (stats.ContainsKey("Starches"))
-                    changeRate += GetFatigueChangeRateFromNutrition(stats["Starches"], weight: 0.25f); // Long-term energy
-
-                if (stats.ContainsKey("Protein"))
-                    changeRate += GetFatigueChangeRateFromNutrition(stats["Protein"], weight: 0.2f); // Muscle recovery
-
-                if (stats.ContainsKey("Vitamins"))
-                    changeRate += GetFatigueChangeRateFromNutrition(stats["Vitamins"], weight: 0.1f); // Metabolic efficiency
-
-                // Apply Constitution's impact on fatigue
-                var statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
-                MyEntityStat constitution;
-                if (statComp != null && statComp.TryGetStat(MyStringHash.GetOrCompute("Constitution"), out constitution))
-                {
-                    float constitutionEffect = CalculateRPGStatEffect(constitution.Value, 10f, 0.75f); // Max 15% effect
-                    changeRate *= (1.0f + constitutionEffect); // Constitution reduces/increases fatigue change rate
-                }
-
-                // Apply environmental and movement factors
-                changeRate += EnvironmentalFactors.GetEnvironmentalFactor(player);
-
-                // Prevent over-saturation effects
-                if (stats.ContainsKey("Fatigue"))
-                {
-                    var fatigueStat = stats["Fatigue"];
-                    if (fatigueStat.Value < 0.2f * fatigueStat.MaxValue)
-                    {
-                        changeRate *= 0.5f; // Dampens change rate when fatigue is minimal
-                    }
-                }
-
-                return changeRate;
-            }
-
-            // Helper Method: Calculate Fatigue Impact from Nutrition
-            private static float GetFatigueChangeRateFromNutrition(MyEntityStat stat, float weight)
-            {
-                // Normalize the stat value to a range of 0-1
-                float normalizedStat = stat.Value / stat.MaxValue;
-
-                // Higher stat reduces fatigue rate, so invert normalized value
-                return (1.0f - normalizedStat) * weight;
-            }
-
-            // Adjust stamina change rate based on RPG stats (Strength, Dexterity), environmental factors
-            public static void ProcessStamina(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
-            {
-                var stamina = stats["Stamina"];
-                var fatigue = stats["Fatigue"];
-                if (stamina == null || fatigue == null) return;
-
-                // Default stamina change rate
                 float staminaChangeRate = 0f;
 
-                // Apply RPG stat effects (Strength for stamina drain, Dexterity for stamina recovery)
+                // RPG stats dynamically influence stamina recovery
                 var statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
-                MyEntityStat strength, dexterity;
                 if (statComp != null)
                 {
-                    // Strength reduces stamina drain during physical activities
-                    statComp.TryGetStat(MyStringHash.GetOrCompute("Strength"), out strength);
-                    if (strength != null)
-                    {
-                        float strengthEffect = CalculateRPGStatEffect(strength.Value, 10f, 0.75f); // Max 20% effect
-                        staminaChangeRate += strengthEffect * 5f; // Apply to reduce stamina drain
-                    }
-
-                    // Dexterity improves stamina recovery when moving efficiently
-                    statComp.TryGetStat(MyStringHash.GetOrCompute("Dexterity"), out dexterity);
-                    if (dexterity != null)
-                    {
-                        float dexterityEffect = CalculateRPGStatEffect(dexterity.Value, 10f, 0.75f); // Max 10% effect
-                        staminaChangeRate += dexterityEffect * 3f; // Apply to increase stamina recovery
-                    }
+                    staminaChangeRate += CalculateDynamicRPGStatEffects(statComp);
                 }
 
-                // Environmental factors such as weather or terrain affect stamina recovery/drain
+                // Fatigue dynamically impacts stamina recovery efficiency
+                float fatigueFactor = 1.0f - (fatigue.Value / fatigue.MaxValue); // Higher fatigue reduces recovery
+                staminaChangeRate *= fatigueFactor;
+
+                // Environmental effects dynamically adjust stamina recovery
                 staminaChangeRate += EnvironmentalFactors.GetEnvironmentalFactor(player);
 
-                // Fatigue's impact on stamina recovery
-                float fatigueLevel = fatigue.Value / fatigue.MaxValue; // Normalize fatigue (0-1)
-                if (fatigueLevel > 0.8f)
-                {
-                    staminaChangeRate += 2f; // Well-rested, faster stamina recovery
-                }
-                else if (fatigueLevel > 0.5f)
-                {
-                    staminaChangeRate += 1f; // Moderately rested, normal stamina recovery
-                }
-                else if (fatigueLevel > 0.2f)
-                {
-                    staminaChangeRate -= 1f; // Tired, slower stamina recovery
-                }
-                else
-                {
-                    staminaChangeRate -= 2f; // Critically fatigued, very slow stamina recovery
-                }
-
-                // Nutrient effects on stamina recovery
-                staminaChangeRate += CalculateNutrientImpactOnStamina(stats);
-
-                // Adjust stamina recovery as it approaches max value (100)
-                float staminaLevel = stamina.Value / stamina.MaxValue; // Normalize stamina (0-1)
-                if (staminaLevel > 0.9f)
-                {
-                    staminaChangeRate *= 0.5f; // Slow recovery near full stamina
-                }
+                // Nutrients dynamically enhance stamina recovery
+                staminaChangeRate += CalculateDynamicNutrientImpactOnStamina(stats);
 
                 // Prevent over-recovery
-                if (stamina.Value >= stamina.MaxValue)
+                float staminaLevel = stamina.Value / stamina.MaxValue;
+                if (staminaLevel > 0.9f)
                 {
-                    staminaChangeRate = 0f; // No recovery above max
+                    staminaChangeRate *= 0.5f; // Slow recovery near max stamina
                 }
 
-                // Apply the stamina change rate
-                Core.iSurvivalSession.ApplyStatChange(player, stamina, 1.25, staminaChangeRate);
+                if (stamina.Value >= stamina.MaxValue)
+                {
+                    staminaChangeRate = 0f; // Prevent recovery above max
+                }
+
+                Core.iSurvivalSession.ApplyStatChange(player, stamina, 1, staminaChangeRate);
             }
 
+            private static float CalculateDynamicRPGStatEffects(MyEntityStatComponent statComp)
+            {
+                float staminaChangeRate = 0f;
 
-            private static float CalculateNutrientImpactOnStamina(Dictionary<string, MyEntityStat> stats)
+                // Strength dynamically reduces stamina drain
+                MyEntityStat strength;
+                if (statComp.TryGetStat(MyStringHash.GetOrCompute("Strength"), out strength))
+                {
+                    staminaChangeRate += (strength.Value / strength.MaxValue) * 5f; // Scale recovery with strength
+                }
+
+                // Dexterity dynamically increases stamina recovery
+                MyEntityStat dexterity;
+                if (statComp.TryGetStat(MyStringHash.GetOrCompute("Dexterity"), out dexterity))
+                {
+                    staminaChangeRate += (dexterity.Value / dexterity.MaxValue) * 3f; // Scale recovery with dexterity
+                }
+
+
+                return staminaChangeRate;
+            }
+
+            private static float CalculateDynamicNutrientImpactOnStamina(Dictionary<string, MyEntityStat> stats)
             {
                 float nutrientImpact = 0f;
 
-                // Sugar: Quick boost to stamina recovery
-                if (stats.ContainsKey("Sugar"))
+                foreach (var stat in stats)
                 {
-                    var sugar = stats["Sugar"];
-                    float sugarLevel = sugar.Value / sugar.MaxValue;
-                    if (sugarLevel > 0.5f)
-                    {
-                        nutrientImpact += 2f; // High sugar gives a significant boost
-                    }
-                    else if (sugarLevel > 0.2f)
-                    {
-                        nutrientImpact += 1f; // Moderate sugar gives a smaller boost
-                    }
-                    else
-                    {
-                        nutrientImpact -= 0.5f; // Low sugar negatively impacts stamina recovery
-                    }
-                }
+                    if (stat.Value == null || stat.Value.MaxValue == 0) continue;
 
-                // Protein: Sustained recovery support
-                if (stats.ContainsKey("Protein"))
-                {
-                    var protein = stats["Protein"];
-                    float proteinLevel = protein.Value / protein.MaxValue;
-                    if (proteinLevel > 0.5f)
-                    {
-                        nutrientImpact += 1.5f; // High protein supports stamina recovery
-                    }
-                    else if (proteinLevel < 0.2f)
-                    {
-                        nutrientImpact -= 0.5f; // Low protein slightly reduces recovery
-                    }
-                }
-
-                // Starches: Balanced energy for consistent stamina recovery
-                if (stats.ContainsKey("Starches"))
-                {
-                    var starches = stats["Starches"];
-                    float starchesLevel = starches.Value / starches.MaxValue;
-                    if (starchesLevel > 0.5f)
-                    {
-                        nutrientImpact += 1f; // Balanced recovery boost
-                    }
-                }
-
-                // Calories: Baseline stamina recovery support
-                if (stats.ContainsKey("Calories"))
-                {
-                    var calories = stats["Calories"];
-                    float calorieLevel = calories.Value / calories.MaxValue;
-                    nutrientImpact += calorieLevel * 0.5f; // Scales recovery based on calorie availability
+                    // Higher nutrient levels dynamically boost stamina recovery
+                    float normalizedStat = stat.Value.Value / stat.Value.MaxValue; // Normalize between 0-1
+                    nutrientImpact += normalizedStat * 0.2f; // Adjust scale as needed
                 }
 
                 return nutrientImpact;
             }
-
-
-            // Calculate the effect of an RPG stat
-            private static float CalculateRPGStatEffect(float currentStatValue, float baseStat, float maxEffect)
-            {
-                float normalizedStat = MathHelper.Clamp(currentStatValue, 1f, 20f); // Ensure stat is between 1 and 20
-                float statDifference = normalizedStat - baseStat;
-                return MathHelper.Clamp(statDifference / 10f, -maxEffect, maxEffect); // Scale based on difference from baseStat
-            }
         }
+
 
         public class RPGLeveling
         {
@@ -822,7 +706,6 @@ namespace PEPCO.iSurvival.Effects
                 return sb.ToString();
             }
         }
-
         public static class Movement
         {
             public static void ProcessMovementEffects(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
