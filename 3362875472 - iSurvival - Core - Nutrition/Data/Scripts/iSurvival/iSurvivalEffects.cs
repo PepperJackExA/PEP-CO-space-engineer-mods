@@ -19,13 +19,24 @@ using PEPCO.iSurvival.settings;
 using VRage.ObjectBuilders;
 using VRage;
 using Sandbox.Game.World;
+using static PEPCO.iSurvival.Effects.Processes;
 
 namespace PEPCO.iSurvival.Effects
 {
     public static class Processes
     {
+        private static Dictionary<long, Dictionary<string, int>> playerStatLastValues = new Dictionary<long, Dictionary<string, int>>();
+
         public static void ProcessPlayer(IMyPlayer player, MyEntityStatComponent statComp)
         {
+            // Ensure the player has a tracking entry
+            if (!playerStatLastValues.ContainsKey(player.IdentityId))
+            {
+                playerStatLastValues[player.IdentityId] = new Dictionary<string, int>();
+            }
+
+            var playerStatValues = playerStatLastValues[player.IdentityId];
+
             // Now retrieve individual stats that we specifically need
             MyEntityStat health;
             statComp.TryGetStat(MyStringHash.GetOrCompute("Health"), out health);
@@ -44,6 +55,7 @@ namespace PEPCO.iSurvival.Effects
             var fatigue = stats["Fatigue"];
             var hunger = stats["Hunger"];
             var stamina = stats["Stamina"];
+            var sanity = stats["Sanity"];
 
 
             // Check if player is in a cryo block
@@ -75,7 +87,8 @@ namespace PEPCO.iSurvival.Effects
             // Add XP to the player (example value of 10 XP per cycle, customize this)
             //rpgLeveling.AddXP(10f);
 
-            // Process other stats like fatigue, hunger, etc.
+            // Process Fatigue
+            // fatigue blink effect
             if (fatigue != null)
             {
                 if (fatigue.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) < 5)
@@ -87,30 +100,123 @@ namespace PEPCO.iSurvival.Effects
                         MyAPIGateway.Multiplayer.SendMessageTo(Core.iSurvivalSession.modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
                 }
             }
-
-            // If the hunger stat is valid, apply various effects
-            if (hunger != null)
+            // fatigue low warning message
+            if (fatigue != null)
             {
-                var starvationCounter = Core.iSurvivalSession.starvationMessageCooldown; // Cooldown timer (in frames)
-                if (hunger.Value < 20 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) > 0)
-                {
-                    Core.iSurvivalSession.starvationMessageCooldown++; // Increase the counter of the display cooldown.
-                    float damageAmount = (1 - (hunger.Value / 20)); // Adjust the multiplier as needed
-                    health.Decrease(damageAmount, null);
+                int currentFatigueValue = (int)Math.Floor(fatigue.Value);
 
-                    if (starvationCounter >= 2) // When the cooldown counter gets to 5 seconds
+                // Check if the whole number has changed
+                if (!playerStatValues.ContainsKey("Fatigue") || playerStatValues["Fatigue"] != currentFatigueValue)
+                {
+                    playerStatValues["Fatigue"] = currentFatigueValue; // Update the tracked value
+
+                    // Display appropriate message based on the fatigue level
+                    if (currentFatigueValue < 20)
                     {
-                        MyAPIGateway.Utilities.ShowNotification($"You are starving!", 2000, MyFontEnum.Red);
-                        Core.iSurvivalSession.starvationMessageCooldown = 0; // Reset the timer
+                        MyAPIGateway.Utilities.ShowNotification("You are severely fatigued. Rest to recover.", 3000, MyFontEnum.Red);
+                    }
+                    else if (currentFatigueValue < 50)
+                    {
+                        MyAPIGateway.Utilities.ShowNotification("You are getting tired. Consider resting soon.", 2000, MyFontEnum.White);
                     }
                 }
+            }
+            // Process Sanity
+            // Sanity blink effect
+            if (sanity != null)
+            {
+                if (sanity.Value < 50 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) < 1)
+                {
+                    Core.iSurvivalSession.blinkList.Add(player.IdentityId);
+                    if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
+                        Effects.Processes.Blink.blink(true);
+                    else if (MyAPIGateway.Multiplayer.IsServer)
+                        MyAPIGateway.Multiplayer.SendMessageTo(Core.iSurvivalSession.modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
+                }
+            }
+            // Sanity low warning message
+            if (sanity != null)
+            {
+                int currentSanityValue = (int)Math.Floor(sanity.Value);
 
+                // Check if the whole number has changed
+                if (!playerStatValues.ContainsKey("Sanity") || playerStatValues["Sanity"] != currentSanityValue)
+                {
+                    playerStatValues["Sanity"] = currentSanityValue; // Update the tracked value
+
+                    // Display appropriate message based on the sanity level
+                    if (currentSanityValue < 5)
+                    {
+                        var insanityCounter = Core.iSurvivalSession.insanityMessageCooldown; // Cooldown timer (in frames)
+                        if (sanity.Value < 5 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) > 0)
+                        {
+                            Core.iSurvivalSession.insanityMessageCooldown++; // Increase the counter of the display cooldown.
+                            float damageAmount = (1 - (hunger.Value / 20)); // Adjust the multiplier as needed
+                            fatigue.Decrease(damageAmount, null);
+                            stamina.Increase(damageAmount * 4, null);  // Get some of that crazy energy
+
+                            if (insanityCounter >= 2) // When the cooldown counter gets to 5 seconds
+                            {
+                                MyAPIGateway.Utilities.ShowNotification($"You are going insane!", 2000, MyFontEnum.Red);
+                                Core.iSurvivalSession.insanityMessageCooldown = 0; // Reset the timer
+                            }
+                        }
+                    }
+                    else if (currentSanityValue < 20)
+                    {
+                        MyAPIGateway.Utilities.ShowNotification("Your sanity is critically low! Seek comfort or rest.", 3000, MyFontEnum.Red);
+                    }
+                    else if (currentSanityValue < 50)
+                    {
+                        MyAPIGateway.Utilities.ShowNotification("Your sanity is decreasing. Avoid stressful situations.", 2000, MyFontEnum.White);
+                    }
+                }
+            }
+
+            // Process Hunger
+            // Low Hunger warning message
+            if (hunger != null)
+            {
+                int currentHungerValue = (int)Math.Floor(hunger.Value);
+
+                // Check if the whole number has changed
+                if (!playerStatValues.ContainsKey("Hunger") || playerStatValues["Hunger"] != currentHungerValue)
+                {
+                    playerStatValues["Hunger"] = currentHungerValue; // Update the tracked value
+
+                    // Display appropriate message based on the hunger level
+                    if (currentHungerValue < 5)
+                    {
+                        var starvationCounter = Core.iSurvivalSession.starvationMessageCooldown; // Cooldown timer (in frames)
+                        if (hunger.Value < 5 && Core.iSurvivalSession.rand.Next((int)fatigue.Value) > 0)
+                        {
+                            Core.iSurvivalSession.starvationMessageCooldown++; // Increase the counter of the display cooldown.
+                            float damageAmount = (1 - (hunger.Value / 20)); // Adjust the multiplier as needed
+                            health.Decrease(damageAmount, null);
+
+                            if (starvationCounter >= 2) // When the cooldown counter gets to 5 seconds
+                            {
+                                MyAPIGateway.Utilities.ShowNotification($"You are starving!", 2000, MyFontEnum.Red);
+                                Core.iSurvivalSession.starvationMessageCooldown = 0; // Reset the timer
+                            }
+                        }
+                    }
+                    else if (currentHungerValue < 10)
+                    {
+                        MyAPIGateway.Utilities.ShowNotification("You are starving! Find food immediately!", 3000, MyFontEnum.Red);
+                    }
+                    else if (currentHungerValue < 30)
+                    {
+                        MyAPIGateway.Utilities.ShowNotification("You are hungry. Should think of eating soon.", 2000, MyFontEnum.White);
+                    }
+                }
                 // Apply other processes
                 Metabolism.ApplyMetabolismEffect(player, stats);
                 FatigueAndStamina.ProcessFatigue(player, stats);
                 Sanity.ProcessSanity(player, stats);
                 Movement.ProcessMovementEffects(player, stats);
             }
+            
         }
 
         public static class Blocks
@@ -146,17 +252,14 @@ namespace PEPCO.iSurvival.Effects
                     return true; // Player is in a cryo block, stop processing
                 }
 
-                // Process effects for other block types
                 if (blockDef.Contains("Bed"))
                 {
-                    Core.iSurvivalSession.ApplyStatChange(player,stamina, 1, 2);
-                    Core.iSurvivalSession.ApplyStatChange(player,fatigue, 1, 2);
-                    if (sanity.Value < averageStats)
-                    {
-                        Core.iSurvivalSession.ApplyStatChange(player,sanity, 1, 0.25);
-                    }
+                    Core.iSurvivalSession.ApplyStatChange(player, stamina, 1, 2);
+                    Core.iSurvivalSession.ApplyStatChange(player, fatigue, 1, 2);
+                    Core.iSurvivalSession.ApplyStatChange(player, sanity, 1, 1); // Beds provide a moderate sanity boost
                     return true;
                 }
+
                 else if (blockDef.Contains("Toilet") || blockDef.Contains("Bathroom"))
                 {
                     Core.iSurvivalSession.ApplyStatChange(player, fatigue, 1, 1);
@@ -169,7 +272,7 @@ namespace PEPCO.iSurvival.Effects
                     }
                 }
                 if (fatigue.Value < 25) Core.iSurvivalSession.ApplyStatChange(player,fatigue, 1, 0.25);
-                if (stamina.Value < 25) Core.iSurvivalSession.ApplyStatChange(player,stamina, 1, 1);
+                if (stamina.Value < 100) Core.iSurvivalSession.ApplyStatChange(player,stamina, 1, 2);
                 if (strength.Value > 10) Core.iSurvivalSession.ApplyStatChange(player,strength, 1, -0.001f);
                 if (dexterity.Value > 10) Core.iSurvivalSession.ApplyStatChange(player,dexterity, 1, -0.001f);
                 if (constitution.Value > 10) Core.iSurvivalSession.ApplyStatChange(player,constitution, 1, -0.001f);
@@ -221,10 +324,9 @@ namespace PEPCO.iSurvival.Effects
                 float sanityChangeRate = 0f;
 
                 var fatigue = stats["Fatigue"];
-                var wisdom = stats.ContainsKey("Wisdom") ? stats["Wisdom"] : null;
-                var charisma = stats.ContainsKey("Charisma") ? stats["Charisma"] : null;
-
-                // Environmental factors
+                var wisdom = stats["Wisdom"];
+                var charisma = stats["Charisma"];
+                var hunger = stats["Hunger"];
                 var environmentFactor = EnvironmentalFactors.GetEnvironmentalFactor(player);
                 float oxygenFactor = EnvironmentalFactors.OxygenLevelEnvironmentalFactor(player);
                 oxygenFactor = MathHelper.Clamp(oxygenFactor, 0.1f, 2f);
@@ -240,6 +342,12 @@ namespace PEPCO.iSurvival.Effects
                 // Fatigue’s impact on sanity
                 sanityChangeRate += GetFatigueImpactOnSanity(fatigue);
 
+                // Hunger's impact on sanity
+                if (hunger.Value < 20)
+                {
+                    sanityChangeRate -= 2f; // Starvation significantly reduces sanity
+                }
+
                 return sanityChangeRate;
             }
 
@@ -247,7 +355,6 @@ namespace PEPCO.iSurvival.Effects
             {
                 if (wisdom == null) return 0f;
                 float wisdomLevel = wisdom.Value / wisdom.MaxValue;
-                // Wisdom provides mental resilience, so higher wisdom reduces sanity loss
                 return wisdomLevel > 0.5f ? wisdomLevel * 1.2f : wisdomLevel * 0.5f;
             }
 
@@ -255,7 +362,6 @@ namespace PEPCO.iSurvival.Effects
             {
                 if (charisma == null) return 0f;
                 float charismaLevel = charisma.Value / charisma.MaxValue;
-                // Charisma helps in social resilience, slightly affecting sanity
                 return charismaLevel > 0.5f ? charismaLevel * 0.8f : charismaLevel * 0.4f;
             }
 
@@ -264,7 +370,6 @@ namespace PEPCO.iSurvival.Effects
                 if (fatigue == null) return 0f;
 
                 float fatigueLevel = fatigue.Value / fatigue.MaxValue;
-                // More nuanced impact based on multiple fatigue ranges
                 if (fatigueLevel > 0.8f)
                 {
                     return 1.5f; // Very low fatigue, sanity stays high
@@ -283,6 +388,7 @@ namespace PEPCO.iSurvival.Effects
                 }
             }
         }
+
         public static class FatigueAndStamina
         {
             public static void ProcessFatigue(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
@@ -305,18 +411,33 @@ namespace PEPCO.iSurvival.Effects
             {
                 float changeRate = 0f;
 
-                // Check nutritional stats (Calories, Protein, etc.) and adjust fatigue based on these
+                // Process each nutritional stat with appropriate weighting
                 if (stats.ContainsKey("Calories"))
-                {
-                    var caloriesStat = stats["Calories"];
-                    changeRate += GetFatigueChangeRateFromNutrition(caloriesStat);
-                }
+                    changeRate += GetFatigueChangeRateFromNutrition(stats["Calories"], weight: 0.4f); // High impact
+
+                if (stats.ContainsKey("Fat"))
+                    changeRate += GetFatigueChangeRateFromNutrition(stats["Fat"], weight: 0.2f); // Moderate impact
+
+                if (stats.ContainsKey("Cholesterol"))
+                    changeRate += GetFatigueChangeRateFromNutrition(stats["Cholesterol"], weight: 0.05f); // Minor impact
+
+                if (stats.ContainsKey("Sodium"))
+                    changeRate += GetFatigueChangeRateFromNutrition(stats["Sodium"], weight: 0.2f); // Hydration balance
+
+                if (stats.ContainsKey("Fiber"))
+                    changeRate += GetFatigueChangeRateFromNutrition(stats["Fiber"], weight: 0.1f); // Indirect impact
+
+                if (stats.ContainsKey("Sugar"))
+                    changeRate += GetFatigueChangeRateFromNutrition(stats["Sugar"], weight: 0.3f); // Short-term energy
+
+                if (stats.ContainsKey("Starches"))
+                    changeRate += GetFatigueChangeRateFromNutrition(stats["Starches"], weight: 0.25f); // Long-term energy
 
                 if (stats.ContainsKey("Protein"))
-                {
-                    var proteinStat = stats["Protein"];
-                    changeRate += GetFatigueChangeRateFromNutrition(proteinStat);
-                }
+                    changeRate += GetFatigueChangeRateFromNutrition(stats["Protein"], weight: 0.2f); // Muscle recovery
+
+                if (stats.ContainsKey("Vitamins"))
+                    changeRate += GetFatigueChangeRateFromNutrition(stats["Vitamins"], weight: 0.1f); // Metabolic efficiency
 
                 // Apply Constitution's impact on fatigue
                 var statComp = player.Character?.Components?.Get<MyEntityStatComponent>();
@@ -328,10 +449,31 @@ namespace PEPCO.iSurvival.Effects
                 }
 
                 // Apply environmental and movement factors
-                changeRate += EnvironmentalFactors.GetEnvironmentalFactor(player);  // Example: Storm increases fatigue
+                changeRate += EnvironmentalFactors.GetEnvironmentalFactor(player);
+
+                // Prevent over-saturation effects
+                if (stats.ContainsKey("Fatigue"))
+                {
+                    var fatigueStat = stats["Fatigue"];
+                    if (fatigueStat.Value < 0.2f * fatigueStat.MaxValue)
+                    {
+                        changeRate *= 0.5f; // Dampens change rate when fatigue is minimal
+                    }
+                }
 
                 return changeRate;
             }
+
+            // Helper Method: Calculate Fatigue Impact from Nutrition
+            private static float GetFatigueChangeRateFromNutrition(MyEntityStat stat, float weight)
+            {
+                // Normalize the stat value to a range of 0-1
+                float normalizedStat = stat.Value / stat.MaxValue;
+
+                // Higher stat reduces fatigue rate, so invert normalized value
+                return (1.0f - normalizedStat) * weight;
+            }
+
 
             private static float GetFatigueChangeRateFromNutrition(MyEntityStat nutritionStat)
             {
@@ -815,7 +957,8 @@ namespace PEPCO.iSurvival.Effects
                 const float dailyWater = 3.7f; // liters
 
                 var fatigue = stats.ContainsKey("Fatigue") ? stats["Fatigue"] : null;
-                float fatigueMultiplier = CalculateFatigueEffect(fatigue);
+                var sanity = stats.ContainsKey("Sanity") ? stats["Sanity"] : null;
+                float fatigueMultiplier = CalculateFatigueEffect(fatigue, sanity);
 
                 // Adjust for 2-hour day (120 minutes)
                 float dayAdjustmentFactor = 1440f / 120f;
@@ -853,19 +996,19 @@ namespace PEPCO.iSurvival.Effects
                     Core.iSurvivalSession.ApplyStatChange(player,stats[statName], rate, change);
                 }
             }
-
-            private static float CalculateFatigueEffect(MyEntityStat fatigue)
+            private static float CalculateFatigueEffect(MyEntityStat fatigue, MyEntityStat sanity)
             {
-                if (fatigue == null)
-                    return 1.0f; // No fatigue impact if fatigue stat is missing
+                if (fatigue == null || sanity == null)
+                    return 1.0f;
 
-                // Calculate fatigue level: higher values mean more rested, so more efficient
                 float fatigueLevel = fatigue.Value / fatigue.MaxValue;
+                float sanityLevel = sanity.Value / sanity.MaxValue;
 
-                // Lower fatigue reduces stamina gain, higher fatigue enhances it
-                // When fatigue is high (well-rested), the effect is closer to 1.5
-                // When fatigue is low (tired), the effect is closer to 0.3
-                return MathHelper.Clamp(fatigueLevel, 0.3f, 1.5f);
+                // Lower sanity reduces fatigue recovery efficiency
+                float sanityFactor = sanityLevel > 0.5f ? 1.0f : MathHelper.Lerp(0.5f, 1.0f, sanityLevel / 0.5f);
+
+                // Adjust fatigue recovery multiplier
+                return MathHelper.Clamp(fatigueLevel * sanityFactor, 0.3f, 1.5f);
             }
 
             public static void UpdateHunger(IMyPlayer player, MyEntityStat hunger, Dictionary<string, MyEntityStat> stats)

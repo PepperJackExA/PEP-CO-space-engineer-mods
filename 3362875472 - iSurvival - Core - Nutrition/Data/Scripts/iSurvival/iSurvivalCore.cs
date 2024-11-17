@@ -36,6 +36,9 @@ namespace PEPCO.iSurvival.Core
         //Starvation Stuff
         public static int starvationMessageCooldown = 0; // Cooldown timer (in frames)
 
+        //Insanity Stuff
+        public static int insanityMessageCooldown = 0; // Cooldown timer (in frames)
+
 
         public static Dictionary<long, RPGLeveling> playerRPGSystems = new Dictionary<long, RPGLeveling>();
 
