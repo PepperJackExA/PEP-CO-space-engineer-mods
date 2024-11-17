@@ -29,171 +29,69 @@ namespace PEPCO.iSurvival.Effects
 
         public static void ProcessPlayer(IMyPlayer player, MyEntityStatComponent statComp)
         {
-            // Ensure the player has a tracking entry
             if (!playerStatLastValues.ContainsKey(player.IdentityId))
             {
                 playerStatLastValues[player.IdentityId] = new Dictionary<string, int>();
             }
-
             var playerStatValues = playerStatLastValues[player.IdentityId];
 
-            // Now retrieve individual stats that we specifically need
-            MyEntityStat health;
-            statComp.TryGetStat(MyStringHash.GetOrCompute("Health"), out health);
 
-            // Use TryGetStat for each stat and store them in a dictionary
-            var stats = new Dictionary<string, MyEntityStat>();
-            foreach (var statName in StatManager._statSettings.Keys)
-            {
-                MyEntityStat stat;
-                if (statComp.TryGetStat(MyStringHash.GetOrCompute(statName), out stat))
+            // Retrieve all relevant stats at once
+            var stats = StatManager._statSettings.Keys.ToDictionary(
+                statName => statName,
+                statName =>
                 {
-                    stats[statName] = stat;
+                    MyEntityStat stat;
+                    statComp.TryGetStat(MyStringHash.GetOrCompute(statName), out stat);
+                    return stat;
                 }
-            }
+            );
 
-            var fatigue = stats.ContainsKey("Fatigue") ? stats["Fatigue"] : null;
-            var hunger = stats.ContainsKey("Hunger") ? stats["Hunger"] : null;
-            var stamina = stats.ContainsKey("Stamina") ? stats["Stamina"] : null;
-            var sanity = stats.ContainsKey("Sanity") ? stats["Sanity"] : null;
 
-            // Check if player is in a cryo block
+
             if (Blocks.ProcessBlockstEffects(player, stats))
-            {
                 return; // Stop processing if the player is in a cryo block
-            }
 
-            // Initialize the player's RPG stats dictionary
-            Dictionary<string, MyEntityStat> playerRPGStats = new Dictionary<string, MyEntityStat>();
-
-            playerRPGStats["Strength"] = stats.ContainsKey("Strength") ? stats["Strength"] : null;
-            playerRPGStats["Dexterity"] = stats.ContainsKey("Dexterity") ? stats["Dexterity"] : null;
-            playerRPGStats["Constitution"] = stats.ContainsKey("Constitution") ? stats["Constitution"] : null;
-            playerRPGStats["Wisdom"] = stats.ContainsKey("Wisdom") ? stats["Wisdom"] : null;
-            playerRPGStats["Intelligence"] = stats.ContainsKey("Intelligence") ? stats["Intelligence"] : null;
-            playerRPGStats["Charisma"] = stats.ContainsKey("Charisma") ? stats["Charisma"] : null;
+            var fatigue = stats.GetValueOrDefault("Fatigue");
+            var hunger = stats.GetValueOrDefault("Hunger");
+            var sanity = stats.GetValueOrDefault("Sanity");
 
             // Initialize or retrieve the player's RPG leveling system
             long playerId = player.IdentityId;
-
-            if (!Core.iSurvivalSession.playerRPGSystems.ContainsKey(playerId))
+            RPGLeveling rpgLeveling;
+            if (!Core.iSurvivalSession.playerRPGSystems.TryGetValue(playerId, out rpgLeveling))
             {
-                Core.iSurvivalSession.playerRPGSystems[playerId] = new RPGLeveling(playerRPGStats);
+                // Filter stats to only include non-null values and initialize the RPG leveling system
+                rpgLeveling = new RPGLeveling(
+                    stats.Where(statEntry => statEntry.Value != null)
+                         .ToDictionary(kv => kv.Key, kv => kv.Value)
+                );
+                Core.iSurvivalSession.playerRPGSystems[playerId] = rpgLeveling;
             }
 
-            var rpgLeveling = Core.iSurvivalSession.playerRPGSystems[playerId];
-
-            // Add XP to the player (example value of 10 XP per cycle, customize this)
-            //rpgLeveling.AddXP(10f);
 
             // Process Fatigue
-            if (fatigue != null)
-            {
-                // Calculate the dynamic probability
-                double chance = (fatigue.MaxValue / Math.Max(fatigue.Value, 1)) / 100.0;
-                MyAPIGateway.Utilities.ShowMessage("fatigue", $"{chance}");
-                // Fatigue blink effect
-                if (fatigue.Value < 10 && Core.iSurvivalSession.rand.NextDouble() < chance)
-                {
-                    Core.iSurvivalSession.blinkList.Add(player.IdentityId);
-                    if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
-                        Effects.Processes.Blink.blink(true);
-                    else if (MyAPIGateway.Multiplayer.IsServer)
-                        MyAPIGateway.Multiplayer.SendMessageTo(Core.iSurvivalSession.modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
-                }
-
-                // Fatigue low warning message
-                int currentFatigueValue = (int)Math.Floor(fatigue.Value);
-
-                // Check if the whole number has changed
-                if (!playerStatValues.ContainsKey("Fatigue") || playerStatValues["Fatigue"] > currentFatigueValue)
-                {
-                    playerStatValues["Fatigue"] = currentFatigueValue; // Update the tracked value
-
-                    // Display appropriate message based on the fatigue level
-                    if (currentFatigueValue < 20)
-                    {
-                        MyAPIGateway.Utilities.ShowNotification("You are severely fatigued. Rest to recover.", 10000, MyFontEnum.Red);
-                    }
-                    else if (currentFatigueValue < 30)
-                    {
-                        MyAPIGateway.Utilities.ShowNotification("You are tired. Consider resting soon.", 10000, MyFontEnum.White);
-                    }
-                }
-            }
+            ProcessStatEffect(player, "Fatigue", fatigue, playerStatValues,
+                chanceCalculation: val => (val.MaxValue / Math.Max(val.Value, 1)) / 100.0,
+                criticalThreshold: 10,
+                warningThreshold: 30,
+                criticalMessage: "You are severely fatigued. Rest to recover.",
+                warningMessage: "You are tired. Consider resting soon.",
+                warningCooldown: ref Core.iSurvivalSession.insanityMessageCooldown
+            );
 
             // Process Sanity
-            if (sanity != null)
-            {
-                // Calculate the dynamic probability
-                double chance = (sanity.MaxValue / Math.Max(sanity.Value, 1)) / 200.0;
-                MyAPIGateway.Utilities.ShowMessage("sanity", $"{chance}");
-                // Sanity blink effect
-                if (sanity.Value < 30 && Core.iSurvivalSession.rand.NextDouble() < chance)
-                    {
-                    Core.iSurvivalSession.blinkList.Add(player.IdentityId);
-                    if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
-                        Effects.Processes.Blink.blink(true);
-                    else if (MyAPIGateway.Multiplayer.IsServer)
-                        MyAPIGateway.Multiplayer.SendMessageTo(Core.iSurvivalSession.modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
-                }
-
-                // Sanity low warning message
-                int currentSanityValue = (int)Math.Floor(sanity.Value);
-
-                // Check if the whole number has changed
-                if (!playerStatValues.ContainsKey("Sanity") || playerStatValues["Sanity"] > currentSanityValue)
-                {
-                    playerStatValues["Sanity"] = currentSanityValue; // Update the tracked value
-
-                    // Display appropriate message based on the sanity level
-                    if (currentSanityValue < 5)
-                    {
-                        Core.iSurvivalSession.insanityMessageCooldown++;
-                        if (Core.iSurvivalSession.insanityMessageCooldown >= 120) // Cooldown in frames
-                        {
-                            MyAPIGateway.Utilities.ShowNotification("You are going insane!", 2000, MyFontEnum.Red);
-                            Core.iSurvivalSession.insanityMessageCooldown = 0;
-                        }
-                    }
-                    else if (currentSanityValue < 10)
-                    {
-                        MyAPIGateway.Utilities.ShowNotification("Your sanity is critically low! Seek comfort or rest.", 10000, MyFontEnum.Red);
-                    }
-                    else if (currentSanityValue < 20)
-                    {
-                        MyAPIGateway.Utilities.ShowNotification("Your sanity low. Avoid stressful situations.", 10000, MyFontEnum.White);
-                    }
-                }
-            }
+            ProcessStatEffect(player, "Sanity", sanity, playerStatValues,
+                chanceCalculation: val => (val.MaxValue / Math.Max(val.Value, 1)) / 200.0,
+                criticalThreshold: 5,
+                warningThreshold: 20,
+                criticalMessage: "You are going insane!",
+                warningMessage: "Your sanity is critically low! Seek comfort or rest.",
+                warningCooldown: ref Core.iSurvivalSession.insanityMessageCooldown
+            );
 
             // Process Hunger
-            if (hunger != null)
-            {
-                // Hunger low warning message
-                int currentHungerValue = (int)Math.Floor(hunger.Value);
-
-                // Check if the whole number has changed
-                if (!playerStatValues.ContainsKey("Hunger") || playerStatValues["Hunger"] > currentHungerValue)
-                {
-                    playerStatValues["Hunger"] = currentHungerValue; // Update the tracked value
-
-                    // Display appropriate message based on the hunger level
-                    if (currentHungerValue < 5)
-                    {
-                        Core.iSurvivalSession.starvationMessageCooldown++;
-                        if (Core.iSurvivalSession.starvationMessageCooldown >= 120) // Cooldown in frames
-                        {
-                            MyAPIGateway.Utilities.ShowNotification("You are starving!", 10000, MyFontEnum.Red);
-                            Core.iSurvivalSession.starvationMessageCooldown = 0;
-                        }
-                    }
-                    else if (currentHungerValue < 20)
-                    {
-                        MyAPIGateway.Utilities.ShowNotification("You are hungry. Should think of eating soon.", 10000, MyFontEnum.White);
-                    }
-                }
-            }
+            ProcessHunger(player, hunger, playerStatValues);
 
             // Apply other processes
             Metabolism.ApplyMetabolismEffect(player, stats);
@@ -201,6 +99,85 @@ namespace PEPCO.iSurvival.Effects
             Sanity.ProcessSanity(player, stats);
             Movement.ProcessMovementEffects(player, stats);
         }
+
+        private static void ProcessStatEffect(IMyPlayer player, string statName, MyEntityStat stat, Dictionary<string, int> playerStatValues,
+            Func<MyEntityStat, double> chanceCalculation, int criticalThreshold, int warningThreshold, string criticalMessage, string warningMessage, ref int warningCooldown)
+        {
+            if (stat == null) return;
+
+            double chance = chanceCalculation(stat);
+            if (stat.Value < criticalThreshold && Core.iSurvivalSession.rand.NextDouble() < chance)
+            {
+                Core.iSurvivalSession.blinkList.Add(player.IdentityId);
+                if (player.IdentityId == MyVisualScriptLogicProvider.GetLocalPlayerId())
+                    Effects.Processes.Blink.blink(true);
+                else if (MyAPIGateway.Multiplayer.IsServer)
+                    MyAPIGateway.Multiplayer.SendMessageTo(Core.iSurvivalSession.modId, Encoding.ASCII.GetBytes("blink"), MyVisualScriptLogicProvider.GetSteamId(player.IdentityId), true);
+            }
+
+            int currentValue = (int)Math.Floor(stat.Value);
+
+            // Check if the current value has changed or decreased from the last recorded value
+            int lastValue;
+            if (!playerStatValues.TryGetValue(statName, out lastValue) || lastValue > currentValue)
+
+            {
+                // Update the last recorded value for this stat
+                playerStatValues[statName] = currentValue;
+
+                // Check for critical thresholds and display appropriate notifications
+                if (currentValue < criticalThreshold)
+                {
+                    // Trigger a critical notification if the cooldown has elapsed
+                    if (++warningCooldown >= 120)
+                    {
+                        MyAPIGateway.Utilities.ShowNotification(criticalMessage, 2000, MyFontEnum.Red);
+                        warningCooldown = 0; // Reset the cooldown
+                    }
+                }
+                else if (currentValue < warningThreshold)
+                {
+                    // Display a warning notification
+                    MyAPIGateway.Utilities.ShowNotification(warningMessage, 10000, MyFontEnum.White);
+                }
+            }
+
+        }
+
+        private static void ProcessHunger(IMyPlayer player, MyEntityStat hunger, Dictionary<string, int> playerStatValues)
+        {
+            // Exit early if the hunger stat is null
+            if (hunger == null) return;
+
+            // Calculate the current hunger value as an integer
+            int currentValue = (int)Math.Floor(hunger.Value);
+
+            // Check if the hunger value has decreased or if it's being tracked for the first time
+            int lastValue;
+            if (!playerStatValues.TryGetValue("Hunger", out lastValue) || lastValue > currentValue)
+
+            {
+                // Update the tracked hunger value
+                playerStatValues["Hunger"] = currentValue;
+
+                // Handle starvation notification
+                if (currentValue < 5)
+                {
+                    // Increment the starvation cooldown and show a notification if the cooldown threshold is reached
+                    if (++Core.iSurvivalSession.starvationMessageCooldown >= 120)
+                    {
+                        MyAPIGateway.Utilities.ShowNotification("You are starving!", 10000, MyFontEnum.Red);
+                        Core.iSurvivalSession.starvationMessageCooldown = 0; // Reset the cooldown
+                    }
+                }
+                // Handle hunger warning notification
+                else if (currentValue < 20)
+                {
+                    MyAPIGateway.Utilities.ShowNotification("You are hungry. Should think of eating soon.", 10000, MyFontEnum.White);
+                }
+            }
+        }
+
 
 
         public static class Blocks
