@@ -25,6 +25,7 @@ using static PEPCO.iSurvival.Effects.Processes;
 
 
 using VRage.ModAPI;
+using VRage.Game.Entity;
 
 namespace PEPCO.iSurvival.Effects
 {
@@ -179,6 +180,102 @@ namespace PEPCO.iSurvival.Effects
                 }
             }
         }
+        public static class Combat
+        {
+            public static void CombatEffect(IMyPlayer player, ref float sanityChangeRate)
+            {
+                
+                IMyFaction playerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(player.IdentityId);
+                // Detection of nearby entities or hazards
+                List<MyEntity> nearbyEntities = new List<MyEntity>();
+                double detectionRadius = 100.0; // Detection radius in meters
+                BoundingSphereD detectionSphere = new BoundingSphereD(player.GetPosition(), detectionRadius);
+                MyGamePruningStructure.GetAllEntitiesInSphere(ref detectionSphere, nearbyEntities);
+
+                foreach (var entity in nearbyEntities)
+                {
+                    if (entity is IMyCharacter)
+                    {
+                        IMyCharacter character = (IMyCharacter)entity;
+                        IMyPlayer characterPlayer = MyAPIGateway.Players.GetPlayerControllingEntity(character);
+                        long characterIdentityId = characterPlayer?.IdentityId ?? 0;
+
+                        IMyFaction characterFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(characterIdentityId);
+
+                        if (characterFaction != null && characterFaction.FactionId == playerFaction.FactionId)
+                        {
+                            sanityChangeRate += 0.5f; // Boost sanity when near allies
+                            //MyAPIGateway.Utilities.ShowMessage("Detection", "Detected a faction-aligned character nearby. Sanity boosted by 0.5.");
+                        }
+                        else if (characterFaction != null && MyAPIGateway.Session.Factions.AreFactionsEnemies(playerFaction.FactionId, characterFaction.FactionId))
+                        {
+                            sanityChangeRate -= 1.0f; // Decrease sanity due to enemy presence
+                            //MyAPIGateway.Utilities.ShowMessage("Detection", "Detected an enemy character nearby. Sanity reduced by 1.0.");
+                        }
+                        else
+                        {
+                            //MyAPIGateway.Utilities.ShowMessage("Detection", "Detected a neutral character nearby. No effect on sanity.");
+                        }
+                    }
+                    else if (entity is IMyCubeGrid)
+                    {
+                        IMyCubeGrid grid = (IMyCubeGrid)entity;
+
+                        if (grid.Physics != null)
+                        {
+                            // Count blocks manually
+                            List<IMySlimBlock> blocks = new List<IMySlimBlock>();
+                            grid.GetBlocks(blocks);
+
+                            int blockCount = blocks.Count;
+                            MyAPIGateway.Utilities.ShowMessage("Detection", $"Grid '{grid.DisplayName}' with {blockCount} blocks.");
+                            if (blockCount > 20) // Only trigger if grid has more than 20 blocks
+                            {
+                                bool isFriendlyGrid = false;
+
+                                foreach (long ownerId in grid.BigOwners)
+                                {
+                                    IMyFaction ownerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(ownerId);
+                                    if (ownerFaction != null && ownerFaction.FactionId == playerFaction.FactionId)
+                                    {
+                                        isFriendlyGrid = true;
+                                        break;
+                                    }
+                                }
+
+                                if (isFriendlyGrid)
+                                {
+                                    sanityChangeRate += 0.3f; // Friendly grids provide slight comfort
+                                    MyAPIGateway.Utilities.ShowMessage("Detection", $"Detected friendly grid '{grid.DisplayName}' with more than 20 blocks. Sanity boosted by 0.3.");
+                                }
+                                else
+                                {
+                                    sanityChangeRate -= 0.3f; // Non-friendly grids cause minor stress
+                                    MyAPIGateway.Utilities.ShowMessage("Detection", $"Detected non-friendly grid '{grid.DisplayName}' with more than 20 blocks. Sanity reduced by 0.3.");
+                                }
+                            }
+                            else
+                            {
+                                MyAPIGateway.Utilities.ShowMessage("Detection", $"Skipped grid '{grid.DisplayName}' with less than or equal to 20 blocks.");
+                            }
+                        }
+                    }
+                    else if (entity is IMyMeteor)
+                    {
+                        sanityChangeRate -= 1.0f; // Reduce sanity due to environmental threats
+                        MyAPIGateway.Utilities.ShowMessage("Detection", "Detected a meteor nearby. Sanity reduced by 1.0.");
+                    }
+                    else
+                    {
+                        // Optionally handle unknown entity types
+                        // MyAPIGateway.Utilities.ShowMessage("Detection", $"Detected an unknown entity of type {entity.GetType().Name}.");
+                    }
+                }
+            }
+        }
+
+
+
 
         public static class Blocks
         {
@@ -282,11 +379,10 @@ namespace PEPCO.iSurvival.Effects
                 float sanityChangeRate = CalculateSanityChangeRate(player, stats);
                 Core.iSurvivalSession.ApplyStatChange(player, sanity, 1, sanityChangeRate / 60f);
             }
-
             private static float CalculateSanityChangeRate(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
             {
                 float sanityChangeRate = -6f;
-                
+
                 // Retrieve stats with safe checks
                 var fatigue = stats.GetValueOrDefault("Fatigue");
                 var stamina = stats.GetValueOrDefault("Stamina");
@@ -298,34 +394,29 @@ namespace PEPCO.iSurvival.Effects
                 var sanity = stats.GetValueOrDefault("Sanity");
                 var water = stats.GetValueOrDefault("Water");
 
+
                 if (sanity.Value < sanity.MaxValue * 0.1)
                 {
                     Core.iSurvivalSession.ApplyStatChange(player, fatigue, 1, -(fatigue.MaxValue * 0.001f)); // Reduce fatigue
                     sanityChangeRate += 1;
                 }
-                if (sanity.Value > sanity.MaxValue * 0.5) 
+                if (sanity.Value > sanity.MaxValue * 0.5)
                 {
                     Core.iSurvivalSession.ApplyStatChange(player, fatigue, 1, +(fatigue.MaxValue * 0.001f)); // Restore fatigue
-                    sanityChangeRate -= 1; 
+                    sanityChangeRate -= 1;
                 }
                 float environmentFactor = EnvironmentalFactors.GetEnvironmentalFactor(player); // Range: 0.5 - 1.5
                 float oxygenFactor = MathHelper.Clamp(EnvironmentalFactors.OxygenLevelEnvironmentalFactor(player), 0.1f, 2f);
 
                 sanityChangeRate += charisma.Value / 10;
                 sanityChangeRate += wisdom.Value / 10;
-                MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (rpg)", $"{sanityChangeRate}");
-                sanityChangeRate += fatigue.Value / fatigue.MaxValue*2;
-               
-                MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (fatigue)", $"{sanityChangeRate}");
+                sanityChangeRate += fatigue.Value / fatigue.MaxValue * 2;
                 sanityChangeRate += oxygenFactor;
-                MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (oxygenFactor)", $"{sanityChangeRate}");
-
                 sanityChangeRate += environmentFactor;
-                MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (environmentFactor)", $"{sanityChangeRate}");
+
                 if (water != null && water.Value < water.MaxValue * 0.3f)
                 {
                     sanityChangeRate -= 0.5f; // Decrease sanity rate due to dehydration
-                    MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (hydration)", $"{sanityChangeRate}");
                 }
 
                 if (sanity.Value < sanity.MaxValue)
@@ -334,152 +425,22 @@ namespace PEPCO.iSurvival.Effects
                     {
                         Core.iSurvivalSession.ApplyStatChange(player, sugar, 1, -(sugar.MaxValue * 0.001f)); // Reduce sugar
                         sanityChangeRate += 1f;
-                        MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (sugar)", $"{sanityChangeRate}");
-
                     }
                     if (calories.Value > calories.MaxValue * 0.5)
                     {
                         Core.iSurvivalSession.ApplyStatChange(player, calories, 1, -(calories.MaxValue * 0.001f)); // Reduce sugar
                         sanityChangeRate += 0.5f;
-                        MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (hunger)", $"{sanityChangeRate}");
-
                     }
-
-                }
-                Vector3D playerPosition = player.GetPosition();
-                int friendlyPlayers = GetPlayerCountInRadius(player.GetPosition(), 100, player, MyRelationsBetweenFactions.Friends, true);
-                if (friendlyPlayers == 0)
-                {
-                    sanityChangeRate -= 0.5f; // Isolation decreases sanity
-                    MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (isolation)", $"{sanityChangeRate}");
-                }
-                else
-                {
-                    MyAPIGateway.Utilities.ShowMessage("Friendly Players", $"There are {friendlyPlayers} friendly players within 100 meters.");
-                    sanityChangeRate += friendlyPlayers * 0.5f; // Proximity to others increases sanity
-                    MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (proximity)", $"{sanityChangeRate}");
                 }
 
-                int hostilePlayers = GetPlayerCountInRadius(player.GetPosition(), 1000, player, MyRelationsBetweenFactions.Enemies, false);
-                
-                if (hostilePlayers > 0)
-                {
-                    MyAPIGateway.Utilities.ShowMessage("Hostile Players", $"There are {hostilePlayers} hostile players within 100 meters.");
-                    sanityChangeRate -= hostilePlayers * 1f; // Combat stress reduces sanity
-                    MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (combat stress)", $"{sanityChangeRate}");
-                }
-
-                int enemyGrids = GetEnemyGridCountInRadius(player.GetPosition(), 1000, player);
-                if (enemyGrids > 0)
-                {
-                    MyAPIGateway.Utilities.ShowMessage("Enemy Grids", $"There are {enemyGrids} enemy grids within 100 meters.");
-                    sanityChangeRate -= enemyGrids * 1f; // Special item boosts sanity
-                    MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (enemy grid)", $"{sanityChangeRate}");
-                }
-
+                Combat.CombatEffect(player, ref sanityChangeRate);
 
                 // Debugging final sanityChangeRate
                 MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (Final)", $"{sanityChangeRate}");
 
                 return sanityChangeRate;
-
-
             }
         }
-        public static int GetPlayerCountInRadius(Vector3D position, double radius, IMyPlayer referencePlayer, MyRelationsBetweenFactions desiredRelation, bool excludeDeadPlayers = false)
-        {
-            var entities = new HashSet<IMyEntity>();
-            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCharacter);
-
-            int playerCount = 0;
-            foreach (var entity in entities)
-            {
-                var character = entity as IMyCharacter;
-                if (character?.ControllerInfo?.ControllingIdentityId != null) // Ensures it's a player
-                {
-                    var targetPlayer = MyAPIGateway.Players.GetPlayerControllingEntity(character);
-                    if (targetPlayer == null || Vector3D.Distance(character.GetPosition(), position) > radius)
-                    {
-                        continue; // Skip if no controlling player or out of range
-                    }
-
-                    if (excludeDeadPlayers && character.IsDead)
-                    {
-                        continue; // Skip dead players if exclusion is enabled
-                    }
-
-                    // Faction relationship check
-                    if (IsFactionRelationship(referencePlayer, targetPlayer, desiredRelation))
-                    {
-                        playerCount++;
-                    }
-                }
-            }
-            return playerCount;
-        }
-
-        // Helper function to check faction relationship
-        private static bool IsFactionRelationship(IMyPlayer playerA, IMyPlayer playerB, MyRelationsBetweenFactions desiredRelation)
-        {
-            var factionA = MyAPIGateway.Session.Factions.TryGetPlayerFaction(playerA.IdentityId);
-            var factionB = MyAPIGateway.Session.Factions.TryGetPlayerFaction(playerB.IdentityId);
-
-            if (factionA == null || factionB == null)
-            {
-                return desiredRelation == MyRelationsBetweenFactions.Neutral; // Consider neutral if either player is not in a faction
-            }
-
-            var relationship = MyAPIGateway.Session.Factions.GetRelationBetweenFactions(factionA.FactionId, factionB.FactionId);
-            return relationship == desiredRelation;
-        }
-
-        public static int GetEnemyGridCountInRadius(Vector3D position, double radius, IMyPlayer referencePlayer)
-        {
-            var entities = new HashSet<IMyEntity>();
-            MyAPIGateway.Entities.GetEntities(entities, e => e is IMyCubeGrid);
-
-            int enemyGridCount = 0;
-            foreach (var entity in entities)
-            {
-                var grid = entity as IMyCubeGrid;
-                if (grid == null) continue;
-
-                // Ensure the grid is within the radius
-                if (Vector3D.Distance(grid.GetPosition(), position) > radius)
-                {
-                    continue;
-                }
-
-                // Check if the grid is hostile
-                if (IsGridHostileToPlayer(grid, referencePlayer))
-                {
-                    enemyGridCount++;
-                }
-            }
-            return enemyGridCount;
-        }
-
-        // Helper function to check if a grid is hostile
-        private static bool IsGridHostileToPlayer(IMyCubeGrid grid, IMyPlayer player)
-        {
-            var gridOwners = grid.BigOwners;
-            if (gridOwners.Count == 0)
-            {
-                return false; // Consider grids with no owners as neutral
-            }
-
-            var gridFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(gridOwners[0]);
-            var playerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(player.IdentityId);
-
-            if (gridFaction == null || playerFaction == null)
-            {
-                return false; // Neutral if either has no faction
-            }
-
-            var relationship = MyAPIGateway.Session.Factions.GetRelationBetweenFactions(gridFaction.FactionId, playerFaction.FactionId);
-            return relationship == MyRelationsBetweenFactions.Enemies;
-        }
-
         public static class FatigueAndStamina
         {
             public static void ProcessFatigue(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
