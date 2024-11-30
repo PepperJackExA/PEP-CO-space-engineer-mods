@@ -227,12 +227,44 @@ namespace PEPCO.iSurvival.Effects
                             List<IMySlimBlock> blocks = new List<IMySlimBlock>();
                             grid.GetBlocks(blocks);
 
+                            
+
                             int blockCount = blocks.Count;
                             MyAPIGateway.Utilities.ShowMessage("Detection", $"Grid '{grid.DisplayName}' with {blockCount} blocks.");
                             if (blockCount > 20) // Only trigger if grid has more than 20 blocks
                             {
                                 bool isFriendlyGrid = false;
+                                bool hasUsablePower = false;
+                                float totalPowerOutput = 0.0f;
+                                bool hasWeapons = false;
 
+                                foreach (var block in blocks)
+                                {
+
+                                    var fatBlock = block.FatBlock;
+
+                                    // Check if the block is a power producer
+                                    var powerProducer = fatBlock as IMyPowerProducer;
+                                    if (powerProducer != null)
+                                    {
+                                        // Check the current power output of the power producer
+                                        totalPowerOutput += powerProducer.CurrentOutput;
+
+                                        if (totalPowerOutput > 0)
+                                        {
+                                            hasUsablePower = true;
+                                        }
+                                    }
+
+                                    // Check if the block is a weapon block
+                                    if (block.FatBlock is IMyLargeTurretBase || block.FatBlock is IMySmallGatlingGun || block.FatBlock is IMySmallMissileLauncher)
+                                    {
+                                        hasWeapons = true;
+                                    }
+
+                                    // Early exit if both power and weapons are found
+                                    if (hasUsablePower && hasWeapons) break;
+                                }
                                 foreach (long ownerId in grid.BigOwners)
                                 {
                                     IMyFaction ownerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(ownerId);
@@ -245,13 +277,34 @@ namespace PEPCO.iSurvival.Effects
 
                                 if (isFriendlyGrid)
                                 {
-                                    sanityChangeRate += 0.3f; // Friendly grids provide slight comfort
-                                    MyAPIGateway.Utilities.ShowMessage("Detection", $"Detected friendly grid '{grid.DisplayName}' with more than 20 blocks. Sanity boosted by 0.3.");
+                                    
+                                    //sanityChangeRate += 0.3f; // Friendly grids provide slight comfort
+                                    //MyAPIGateway.Utilities.ShowMessage("Detection", $"Detected friendly grid '{grid.DisplayName}' with more than 20 blocks. Sanity boosted by 0.3.");
+                                    if (hasUsablePower)
+                                    {
+                                        sanityChangeRate += 0.2f; // Bonus for friendly powered grids
+                                        MyAPIGateway.Utilities.ShowMessage("Detection", $"Friendly grid '{grid.DisplayName}' has power. Additional sanity boosted by 0.2.");
+                                        if (hasWeapons)
+                                        {
+                                            sanityChangeRate += 0.5f; // Bonus for friendly armed grids
+                                            MyAPIGateway.Utilities.ShowMessage("Detection", $"Friendly grid '{grid.DisplayName}' is armed. Additional sanity boosted by 0.5.");
+                                        }
+                                    }                                    
                                 }
                                 else
                                 {
-                                    sanityChangeRate -= 0.3f; // Non-friendly grids cause minor stress
-                                    MyAPIGateway.Utilities.ShowMessage("Detection", $"Detected non-friendly grid '{grid.DisplayName}' with more than 20 blocks. Sanity reduced by 0.3.");
+                                    //sanityChangeRate -= 0.3f; // Non-friendly grids cause minor stress
+                                    //MyAPIGateway.Utilities.ShowMessage("Detection", $"Detected non-friendly grid '{grid.DisplayName}' with more than 20 blocks. Sanity reduced by 0.3.");
+                                    if (hasUsablePower)
+                                    {
+                                        sanityChangeRate -= 0.5f; // Penalty for powered enemy grids
+                                        MyAPIGateway.Utilities.ShowMessage("Detection", $"Non-friendly grid '{grid.DisplayName}' has power. Sanity reduced by an additional 0.5.");
+                                        if (hasWeapons)
+                                        {
+                                            sanityChangeRate -= 1.0f; // Major penalty for armed enemy grids
+                                            MyAPIGateway.Utilities.ShowMessage("Detection", $"Non-friendly grid '{grid.DisplayName}' is armed. Sanity reduced by an additional 1.0.");
+                                        }
+                                    }                                    
                                 }
                             }
                             else
