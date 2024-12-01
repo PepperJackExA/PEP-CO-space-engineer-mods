@@ -21,11 +21,10 @@ using VRage;
 using Sandbox.Game.World;
 using VRage.Scripting;
 using static PEPCO.iSurvival.Effects.Processes;
-
-
-
 using VRage.ModAPI;
 using VRage.Game.Entity;
+using VRage.Game.ModAPI.Ingame;
+
 
 namespace PEPCO.iSurvival.Effects
 {
@@ -56,7 +55,6 @@ namespace PEPCO.iSurvival.Effects
 
             if (Blocks.ProcessBlockstEffects(player, stats))
                 return; // Stop processing if the player is in a cryo block
-
             var fatigue = stats.GetValueOrDefault("Fatigue");
             var hunger = stats.GetValueOrDefault("Hunger");
             var sanity = stats.GetValueOrDefault("Sanity");
@@ -101,7 +99,7 @@ namespace PEPCO.iSurvival.Effects
             // Apply other processes
             Metabolism.ApplyMetabolismEffect(player, stats);
             FatigueAndStamina.ProcessFatigue(player, stats);
-            Sanity.ProcessSanity(player, stats);
+            Sanity.ProcessSanity(player, stats, statComp);
             Movement.ProcessMovementEffects(player, stats);
         }
         private static void ProcessStatEffect(IMyPlayer player, string statName, MyEntityStat stat, Dictionary<string, int> playerStatValues,
@@ -182,150 +180,315 @@ namespace PEPCO.iSurvival.Effects
         }
         public static class Combat
         {
-            public static void CombatEffect(IMyPlayer player, ref float sanityChangeRate)
+            public static void CombatEffect(IMyPlayer player, ref float sanityChangeRate, MyEntityStatComponent statComp)
             {
-                
                 IMyFaction playerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(player.IdentityId);
-                // Detection of nearby entities or hazards
                 List<MyEntity> nearbyEntities = new List<MyEntity>();
-                double detectionRadius = 100.0; // Detection radius in meters
+
+                double detectionRadius = 2000.0; // Detection radius in meters
                 BoundingSphereD detectionSphere = new BoundingSphereD(player.GetPosition(), detectionRadius);
                 MyGamePruningStructure.GetAllEntitiesInSphere(ref detectionSphere, nearbyEntities);
 
+                // Track total detected allies and enemies
+                int totalDetectedAllies = 0;
+                int totalDetectedEnemies = 0;
+
+                // Global sanity gain and drain effects
+                float totalSanityGain = 0.0f;
+                float totalSanityDrain = 0.0f;
+
+                // Retrieve global sanity stat
+                MyEntityStat sanity = GetGlobalSanityStat(statComp);
+
+                // First pass: Count allies and enemies
                 foreach (var entity in nearbyEntities)
                 {
-                    if (entity is IMyCharacter)
+                    var character = entity as IMyCharacter;
+                    if (character != null)
                     {
-                        IMyCharacter character = (IMyCharacter)entity;
                         IMyPlayer characterPlayer = MyAPIGateway.Players.GetPlayerControllingEntity(character);
-                        long characterIdentityId = characterPlayer?.IdentityId ?? 0;
+                        if (characterPlayer == null || characterPlayer.IdentityId == player.IdentityId) continue;
 
-                        IMyFaction characterFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(characterIdentityId);
+                        IMyFaction characterFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(characterPlayer.IdentityId);
 
-                        if (characterFaction != null && characterFaction.FactionId == playerFaction.FactionId)
+                        if (characterFaction != null)
                         {
-                            sanityChangeRate += 0.5f; // Boost sanity when near allies
-                            //MyAPIGateway.Utilities.ShowMessage("Detection", "Detected a faction-aligned character nearby. Sanity boosted by 0.5.");
-                        }
-                        else if (characterFaction != null && MyAPIGateway.Session.Factions.AreFactionsEnemies(playerFaction.FactionId, characterFaction.FactionId))
-                        {
-                            sanityChangeRate -= 1.0f; // Decrease sanity due to enemy presence
-                            //MyAPIGateway.Utilities.ShowMessage("Detection", "Detected an enemy character nearby. Sanity reduced by 1.0.");
-                        }
-                        else
-                        {
-                            //MyAPIGateway.Utilities.ShowMessage("Detection", "Detected a neutral character nearby. No effect on sanity.");
-                        }
-                    }
-                    else if (entity is IMyCubeGrid)
-                    {
-                        IMyCubeGrid grid = (IMyCubeGrid)entity;
-
-                        if (grid.Physics != null)
-                        {
-                            // Count blocks manually
-                            List<IMySlimBlock> blocks = new List<IMySlimBlock>();
-                            grid.GetBlocks(blocks);
-
-                            
-
-                            int blockCount = blocks.Count;
-                            MyAPIGateway.Utilities.ShowMessage("Detection", $"Grid '{grid.DisplayName}' with {blockCount} blocks.");
-                            if (blockCount > 20) // Only trigger if grid has more than 20 blocks
+                            if (characterFaction.FactionId == playerFaction.FactionId)
                             {
-                                bool isFriendlyGrid = false;
-                                bool hasUsablePower = false;
-                                float totalPowerOutput = 0.0f;
-                                bool hasWeapons = false;
-
-                                foreach (var block in blocks)
-                                {
-
-                                    var fatBlock = block.FatBlock;
-
-                                    // Check if the block is a power producer
-                                    var powerProducer = fatBlock as IMyPowerProducer;
-                                    if (powerProducer != null)
-                                    {
-                                        // Check the current power output of the power producer
-                                        totalPowerOutput += powerProducer.CurrentOutput;
-
-                                        if (totalPowerOutput > 0)
-                                        {
-                                            hasUsablePower = true;
-                                        }
-                                    }
-
-                                    // Check if the block is a weapon block
-                                    if (block.FatBlock is IMyLargeTurretBase || block.FatBlock is IMySmallGatlingGun || block.FatBlock is IMySmallMissileLauncher)
-                                    {
-                                        hasWeapons = true;
-                                    }
-
-                                    // Early exit if both power and weapons are found
-                                    if (hasUsablePower && hasWeapons) break;
-                                }
-                                foreach (long ownerId in grid.BigOwners)
-                                {
-                                    IMyFaction ownerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(ownerId);
-                                    if (ownerFaction != null && ownerFaction.FactionId == playerFaction.FactionId)
-                                    {
-                                        isFriendlyGrid = true;
-                                        break;
-                                    }
-                                }
-
-                                if (isFriendlyGrid)
-                                {
-                                    
-                                    //sanityChangeRate += 0.3f; // Friendly grids provide slight comfort
-                                    //MyAPIGateway.Utilities.ShowMessage("Detection", $"Detected friendly grid '{grid.DisplayName}' with more than 20 blocks. Sanity boosted by 0.3.");
-                                    if (hasUsablePower)
-                                    {
-                                        sanityChangeRate += 0.2f; // Bonus for friendly powered grids
-                                        MyAPIGateway.Utilities.ShowMessage("Detection", $"Friendly grid '{grid.DisplayName}' has power. Additional sanity boosted by 0.2.");
-                                        if (hasWeapons)
-                                        {
-                                            sanityChangeRate += 0.5f; // Bonus for friendly armed grids
-                                            MyAPIGateway.Utilities.ShowMessage("Detection", $"Friendly grid '{grid.DisplayName}' is armed. Additional sanity boosted by 0.5.");
-                                        }
-                                    }                                    
-                                }
-                                else
-                                {
-                                    //sanityChangeRate -= 0.3f; // Non-friendly grids cause minor stress
-                                    //MyAPIGateway.Utilities.ShowMessage("Detection", $"Detected non-friendly grid '{grid.DisplayName}' with more than 20 blocks. Sanity reduced by 0.3.");
-                                    if (hasUsablePower)
-                                    {
-                                        sanityChangeRate -= 0.5f; // Penalty for powered enemy grids
-                                        MyAPIGateway.Utilities.ShowMessage("Detection", $"Non-friendly grid '{grid.DisplayName}' has power. Sanity reduced by an additional 0.5.");
-                                        if (hasWeapons)
-                                        {
-                                            sanityChangeRate -= 1.0f; // Major penalty for armed enemy grids
-                                            MyAPIGateway.Utilities.ShowMessage("Detection", $"Non-friendly grid '{grid.DisplayName}' is armed. Sanity reduced by an additional 1.0.");
-                                        }
-                                    }                                    
-                                }
+                                totalDetectedAllies++;
                             }
-                            else
+                            else if (MyAPIGateway.Session.Factions.AreFactionsEnemies(playerFaction.FactionId, characterFaction.FactionId))
                             {
-                                MyAPIGateway.Utilities.ShowMessage("Detection", $"Skipped grid '{grid.DisplayName}' with less than or equal to 20 blocks.");
+                                totalDetectedEnemies++;
                             }
                         }
-                    }
-                    else if (entity is IMyMeteor)
-                    {
-                        sanityChangeRate -= 1.0f; // Reduce sanity due to environmental threats
-                        MyAPIGateway.Utilities.ShowMessage("Detection", "Detected a meteor nearby. Sanity reduced by 1.0.");
-                    }
-                    else
-                    {
-                        // Optionally handle unknown entity types
-                        // MyAPIGateway.Utilities.ShowMessage("Detection", $"Detected an unknown entity of type {entity.GetType().Name}.");
                     }
                 }
+
+                // Second pass: Apply sanity effects with diminishing returns
+                foreach (var entity in nearbyEntities)
+                {
+                    var character = entity as IMyCharacter;
+                    if (character != null)
+                    {
+                        ApplyCharacterSanityEffects(playerFaction, character, player, totalDetectedAllies, totalDetectedEnemies, ref totalSanityGain, ref totalSanityDrain, sanity);
+                        continue;
+                    }
+
+                    var grid = entity as VRage.Game.ModAPI.IMyCubeGrid;
+                    if (grid != null)
+                    {
+                        ApplyGridSanityEffects(player, playerFaction, grid, ref totalSanityGain, ref totalSanityDrain, sanity);
+                        continue;
+                    }
+
+                    var meteor = entity as IMyMeteor;
+                    if (meteor != null)
+                    {
+                        totalSanityDrain += 1.0f; // Environmental threat
+                        MyAPIGateway.Utilities.ShowMessage("Detection", "Detected a meteor nearby. Sanity reduced by 1.0.");
+                        continue;
+                    }
+                }
+
+                // Apply total sanity gain and drain
+                sanityChangeRate += totalSanityGain;
+                sanityChangeRate -= totalSanityDrain;
+
+                //MyAPIGateway.Utilities.ShowMessage("Detection", $"Global sanity gain: {totalSanityGain:F2}, sanity drain: {totalSanityDrain:F2}.");
             }
+
+            private static MyEntityStat GetGlobalSanityStat(MyEntityStatComponent statComp)
+            {
+                MyEntityStat sanity;
+                statComp.TryGetStat(MyStringHash.GetOrCompute("Sanity"), out sanity);
+                return sanity;
+            }
+            // Helper method to calculate diminishing returns multiplier
+            private static float CalculateDiminishingReturnsMultiplier(int totalDetected, float baseValue = 1.0f)
+            {
+                if (totalDetected <= 0)
+                    return 0.0f; // No entities detected, no effect
+
+                float totalEffect = 0.0f;
+                for (int i = 1; i <= totalDetected; i++)
+                {
+                    totalEffect += baseValue / i; // Each entity contributes less
+                }
+                return totalEffect;
+            }
+            private static void ApplyCharacterSanityEffects(
+                IMyFaction playerFaction,
+                IMyCharacter character,
+                IMyPlayer player,
+                int totalDetectedAllies,
+                int totalDetectedEnemies,
+                ref float totalSanityGain,
+                ref float totalSanityDrain,
+                MyEntityStat sanity
+            )
+            {
+                IMyPlayer characterPlayer = MyAPIGateway.Players.GetPlayerControllingEntity(character);
+                if (characterPlayer == null || characterPlayer.IdentityId == player.IdentityId)
+                {
+                    return;
+                }
+
+                long characterIdentityId = characterPlayer.IdentityId;
+                IMyFaction characterFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(characterIdentityId);
+
+                double distance = Vector3D.Distance(player.GetPosition(), character.GetPosition());
+                float distanceMultiplier = GetDistanceMultiplier(distance);
+
+                if (characterFaction != null && characterFaction.FactionId == playerFaction.FactionId)
+                {
+                    // Calculate diminishing returns multipliers
+                    float sanityGain = CalculateDiminishingReturnsMultiplier(totalDetectedAllies, 0.5f); // Base value = 0.5f per weapon
+                    sanityGain *= distanceMultiplier; // Scale by distance
+                    sanityGain *= (1 - (sanity.Value / 100.0f)); // Sanity gain slows as sanity value improves
+
+                    totalSanityGain += sanityGain;
+
+                    //MyAPIGateway.Utilities.ShowMessage("Detection", $"Ally detected at {distance:F2}m. Sanity increased by {sanityGain:F2}.");
+                }
+                else if (characterFaction != null && MyAPIGateway.Session.Factions.AreFactionsEnemies(playerFaction.FactionId, characterFaction.FactionId))
+                {
+
+                    float sanityDrain = CalculateDiminishingReturnsMultiplier(totalDetectedEnemies, 0.5f); // Base value = 0.5f per weapon
+                    sanityDrain *= distanceMultiplier;
+                    sanityDrain *= (1 + (sanity.Value / 100.0f)); // Sanity drain slows as sanity value worsens
+
+                    totalSanityDrain += sanityDrain;
+
+                    //MyAPIGateway.Utilities.ShowMessage("Detection", $"Enemy detected at {distance:F2}m. Sanity decreased by {sanityDrain:F2}.");
+                }
+            }
+            
+            private static void ApplyGridSanityEffects(
+    IMyPlayer player,
+    IMyFaction playerFaction,
+    VRage.Game.ModAPI.IMyCubeGrid grid,
+    ref float totalSanityGain,
+    ref float totalSanityDrain,
+    MyEntityStat sanity
+)
+            {
+                if (grid.Physics == null) return;
+
+                double nearestDistance = GetNearestDistanceToGrid(player.GetPosition(), grid);
+                float distanceMultiplier = GetDistanceMultiplier(nearestDistance);
+
+                List<VRage.Game.ModAPI.IMySlimBlock> blocks = new List<VRage.Game.ModAPI.IMySlimBlock>();
+                grid.GetBlocks(blocks);
+
+                bool hasUsablePower;
+                int weaponCount = AnalyzeGridBlocks(blocks, out hasUsablePower);
+
+                // Determine if the grid is friendly
+                bool isFriendlyGrid = false;
+                foreach (long ownerId in grid.BigOwners)
+                {
+                    IMyFaction ownerFaction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(ownerId);
+                    if (ownerFaction != null && ownerFaction.FactionId == playerFaction.FactionId)
+                    {
+                        isFriendlyGrid = true;
+                        break;
+                    }
+                }
+
+                // Apply sanity effects with diminishing returns
+                if (isFriendlyGrid && hasUsablePower && weaponCount > 0)
+                {
+                    float sanityGain = CalculateDiminishingReturnsMultiplier(weaponCount, 0.5f); // Base value = 0.5f per weapon
+                    sanityGain *= distanceMultiplier; // Scale by distance
+                    sanityGain *= (1 - (sanity.Value / 100.0f)); // Sanity gain slows as sanity value improves
+
+                    totalSanityGain += sanityGain;
+
+                    //MyAPIGateway.Utilities.ShowMessage("Detection", $"Friendly grid detected with {weaponCount} weapons. Sanity increased by {sanityGain:F2}.");
+                }
+                else if (hasUsablePower && weaponCount > 0)
+                {
+                    float sanityDrain = CalculateDiminishingReturnsMultiplier(weaponCount, 0.5f); // Base value = 0.5f per weapon
+                    sanityDrain *= distanceMultiplier;
+                    sanityDrain *= (1 + (sanity.Value / 100.0f)); // Sanity drain slows as sanity value worsens
+
+                    totalSanityDrain += sanityDrain;
+
+                    //MyAPIGateway.Utilities.ShowMessage("Detection", $"Enemy grid detected with {weaponCount} weapons. Sanity decreased by {sanityDrain:F2}.");
+                }
+            }
+
+
+            // Helper function to calculate the nearest distance to a grid
+            private static double GetNearestDistanceToGrid(Vector3D playerPosition, VRage.Game.ModAPI.IMyCubeGrid grid)
+            {
+                List<Vector3D> blockPositions = new List<Vector3D>();
+
+                grid.GetBlocks(new List<VRage.Game.ModAPI.IMySlimBlock>(), block =>
+                {
+                    if (block.FatBlock != null)
+                    {
+                        blockPositions.Add(block.FatBlock.GetPosition());
+                    }
+                    return false;
+                });
+
+                // Find the minimum distance between the player and any block on the grid
+                double nearestDistance = double.MaxValue;
+
+                foreach (var blockPosition in blockPositions)
+                {
+                    double distance = Vector3D.Distance(playerPosition, blockPosition);
+                    if (distance < nearestDistance)
+                    {
+                        nearestDistance = distance;
+                    }
+                }
+
+                return nearestDistance;
+            }
+
+
+            private static float GetDistanceMultiplier(double distance)
+            {
+                if (distance <= 10)
+                {
+                    return 10.0f;
+                }
+                else if (distance <= 600)
+                {
+                    return 2.0f;
+                }
+                else if (distance <= 2000)
+                {
+                    return 1.0f;
+                }
+                else
+                {
+                    return 0.5f; // For distances >2000 (shouldn't happen in this case)
+                }
+            }
+
+            private static int AnalyzeGridBlocks(List<VRage.Game.ModAPI.IMySlimBlock> blocks, out bool hasUsablePower)
+            {
+                float totalPowerOutput = 0.0f;
+                int weaponCount = 0;
+                hasUsablePower = false;
+
+                foreach (var block in blocks)
+                {
+                    var fatBlock = block.FatBlock;
+
+                    // Check if the block is a power producer
+                    var powerProducer = fatBlock as IMyPowerProducer;
+                    if (powerProducer != null)
+                    {
+                        totalPowerOutput += powerProducer.CurrentOutput;
+                        if (totalPowerOutput > 0)
+                        {
+                            hasUsablePower = true;
+                        }
+                    }
+
+                    // Check if the block is a weapon block and the grid has power
+                    if (hasUsablePower && (fatBlock is IMyLargeTurretBase || fatBlock is IMySmallGatlingGun || fatBlock is IMySmallMissileLauncher))
+                    {
+                        var weaponBlock = fatBlock as IMyTerminalBlock;
+                        if (weaponBlock != null && HasAmmo(weaponBlock))
+                        {
+                            weaponCount++;
+                        }
+                    }
+                }
+
+                return weaponCount;
+            }
+
+
+            private static bool HasAmmo(IMyTerminalBlock weaponBlock)
+            {
+                var inventory = weaponBlock.GetInventory();
+                if (inventory != null)
+                {
+                    var items = new List<MyInventoryItem>();
+                    inventory.GetItems(items);
+
+                    foreach (var item in items)
+                    {
+                        if (item.Type.TypeId.ToString().Contains("Ammo"))
+                        {
+                            return true;
+                        }
+                    }
+                }
+
+                return false;
+            }
+
         }
+
+
 
 
 
@@ -334,7 +497,7 @@ namespace PEPCO.iSurvival.Effects
         {
             public static bool ProcessBlockstEffects(IMyPlayer player, Dictionary<string, MyEntityStat> stats, string blockName = null)
             {
-                var block = player.Controller?.ControlledEntity?.Entity as IMyCubeBlock;
+                var block = player.Controller?.ControlledEntity?.Entity as VRage.Game.ModAPI.IMyCubeBlock;
                 if (block == null) return false; // Player not in a block
 
                 var fatigue = stats["Fatigue"];
@@ -424,15 +587,15 @@ namespace PEPCO.iSurvival.Effects
         }
         public static class Sanity
         {
-            public static void ProcessSanity(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
+            public static void ProcessSanity(IMyPlayer player, Dictionary<string, MyEntityStat> stats, MyEntityStatComponent statComp)
             {
                 var sanity = stats["Sanity"];
                 if (sanity == null) return;
 
-                float sanityChangeRate = CalculateSanityChangeRate(player, stats);
+                float sanityChangeRate = CalculateSanityChangeRate(player, stats, statComp);
                 Core.iSurvivalSession.ApplyStatChange(player, sanity, 1, sanityChangeRate / 60f);
             }
-            private static float CalculateSanityChangeRate(IMyPlayer player, Dictionary<string, MyEntityStat> stats)
+            private static float CalculateSanityChangeRate(IMyPlayer player, Dictionary<string, MyEntityStat> stats, MyEntityStatComponent statComp)
             {
                 float sanityChangeRate = -6f;
 
@@ -485,11 +648,10 @@ namespace PEPCO.iSurvival.Effects
                         sanityChangeRate += 0.5f;
                     }
                 }
-
-                Combat.CombatEffect(player, ref sanityChangeRate);
+                Combat.CombatEffect(player, ref sanityChangeRate, statComp);
 
                 // Debugging final sanityChangeRate
-                MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (Final)", $"{sanityChangeRate}");
+                //MyAPIGateway.Utilities.ShowMessage("SanityChangeRate (Final)", $"{sanityChangeRate}");
 
                 return sanityChangeRate;
             }
